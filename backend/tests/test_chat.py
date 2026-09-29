@@ -4,6 +4,7 @@ import httpx
 import pytest
 
 from outwise.main import create_app
+from outwise.knowledge.models import KnowledgeItem, RetrievedKnowledgeItem
 from outwise.services.model import (
     ModelGenerationError,
     ModelLoadError,
@@ -26,11 +27,35 @@ class StubModelService:
         return self.answer
 
 
+class StubRetrievalService:
+    def __init__(self, results: list[RetrievedKnowledgeItem] | None = None) -> None:
+        item = KnowledgeItem(
+            id="fixture-lost",
+            text="Stop moving and assess your last known location.",
+            title="Synthetic lost guidance",
+            source_name="Stored fixture source",
+            source_url="fixture://outwise/navigation/lost",
+            license="CC0-1.0",
+            language="en",
+            topic="navigation",
+        )
+        self.results = results if results is not None else [
+            RetrievedKnowledgeItem(item=item, score=1.0)
+        ]
+
+    def retrieve(
+        self, query: str, *, top_k: int = 3
+    ) -> list[RetrievedKnowledgeItem]:
+        return self.results[:top_k]
+
+
 def test_chat_endpoint_returns_model_answer() -> None:
     model_service = StubModelService()
 
     async def post_message() -> httpx.Response:
-        transport = httpx.ASGITransport(app=create_app(model_service))
+        transport = httpx.ASGITransport(
+            app=create_app(model_service, StubRetrievalService())
+        )
         async with httpx.AsyncClient(
             transport=transport, base_url="http://testserver"
         ) as client:
@@ -41,13 +66,26 @@ def test_chat_endpoint_returns_model_answer() -> None:
     response = asyncio.run(post_message())
 
     assert response.status_code == 200
-    assert response.json() == {"answer": "Prioriter varme og finn ly."}
-    assert model_service.prompt == "Jeg har gått meg vill."
+    assert response.json() == {
+        "answer": "Prioriter varme og finn ly.",
+        "sources": [
+            {
+                "title": "Synthetic lost guidance",
+                "name": "Stored fixture source",
+                "url": "fixture://outwise/navigation/lost",
+            }
+        ],
+    }
+    assert model_service.prompt is not None
+    assert "Jeg har gått meg vill." in model_service.prompt
+    assert "Stop moving and assess your last known location." in model_service.prompt
 
 
 def test_chat_endpoint_rejects_blank_message() -> None:
     async def post_message() -> httpx.Response:
-        transport = httpx.ASGITransport(app=create_app(StubModelService()))
+        transport = httpx.ASGITransport(
+            app=create_app(StubModelService(), StubRetrievalService())
+        )
         async with httpx.AsyncClient(
             transport=transport, base_url="http://testserver"
         ) as client:
@@ -60,7 +98,9 @@ def test_chat_endpoint_rejects_blank_message() -> None:
 
 def test_chat_endpoint_allows_local_frontend_origin() -> None:
     async def preflight() -> httpx.Response:
-        transport = httpx.ASGITransport(app=create_app(StubModelService()))
+        transport = httpx.ASGITransport(
+            app=create_app(StubModelService(), StubRetrievalService())
+        )
         async with httpx.AsyncClient(
             transport=transport, base_url="http://testserver"
         ) as client:
@@ -116,7 +156,9 @@ def test_chat_endpoint_maps_model_errors(
     model_service.error = error
 
     async def post_message() -> httpx.Response:
-        transport = httpx.ASGITransport(app=create_app(model_service))
+        transport = httpx.ASGITransport(
+            app=create_app(model_service, StubRetrievalService())
+        )
         async with httpx.AsyncClient(
             transport=transport, base_url="http://testserver"
         ) as client:
@@ -126,3 +168,23 @@ def test_chat_endpoint_maps_model_errors(
 
     assert response.status_code == expected_status
     assert response.json()["detail"].startswith(expected_detail)
+
+
+def test_chat_endpoint_returns_no_sources_and_skips_model_on_no_match() -> None:
+    model_service = StubModelService()
+
+    async def post_message() -> httpx.Response:
+        transport = httpx.ASGITransport(
+            app=create_app(model_service, StubRetrievalService([]))
+        )
+        async with httpx.AsyncClient(
+            transport=transport, base_url="http://testserver"
+        ) as client:
+            return await client.post("/api/chat", json={"message": "Ukjent tema"})
+
+    response = asyncio.run(post_message())
+
+    assert response.status_code == 200
+    assert response.json()["sources"] == []
+    assert "ingen relevant informasjon" in response.json()["answer"]
+    assert model_service.prompt is None

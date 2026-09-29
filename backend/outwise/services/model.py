@@ -223,6 +223,18 @@ def _extract_generated_text(output: str, prompt: str) -> str:
             generated = generated.split(suffix, maxsplit=1)[0]
         return generated.strip()
 
+    # Current llama.cpp builds abbreviate long displayed prompts even when
+    # --no-display-prompt is requested. The generated text follows this marker.
+    # Handle it before the generic fallback so runtime framing is never exposed
+    # as the user's answer for RAG-sized prompts.
+    truncated_prompt_marker = "(truncated)\n"
+    marker_position = normalized.rfind(truncated_prompt_marker)
+    if marker_position >= 0:
+        generated = normalized[marker_position + len(truncated_prompt_marker) :]
+        for suffix in ("\n\n[ Prompt:", "\n\n\nExiting...", "\n\nExiting..."):
+            generated = generated.split(suffix, maxsplit=1)[0]
+        return generated.strip()
+
     completion_marker = f"user\n{normalized_prompt}\nassistant\n"
     marker_position = normalized.rfind(completion_marker)
     if marker_position >= 0:

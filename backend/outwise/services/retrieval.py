@@ -35,6 +35,8 @@ _STOP_WORDS = {
     "of",
     "on",
     "or",
+    "outdoor",
+    "outdoors",
     "should",
     "the",
     "to",

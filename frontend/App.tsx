@@ -13,12 +13,13 @@ import {
   View,
 } from 'react-native';
 
-import { sendChatMessage } from './api';
+import { ChatSource, sendChatMessage } from './api';
 
 type Message = {
   id: number;
   role: 'assistant' | 'user';
   text: string;
+  sources?: ChatSource[];
 };
 
 const initialMessages: Message[] = [
@@ -50,10 +51,15 @@ export default function App() {
     setIsSending(true);
 
     try {
-      const answer = await sendChatMessage(message);
+      const response = await sendChatMessage(message);
       setMessages((current) => [
         ...current,
-        { id: Date.now() + 1, role: 'assistant', text: answer },
+        {
+          id: Date.now() + 1,
+          role: 'assistant',
+          text: response.answer,
+          sources: response.sources,
+        },
       ]);
     } catch (caught) {
       setError(
@@ -109,6 +115,20 @@ export default function App() {
                   <Text style={[styles.messageText, isUser && styles.userMessageText]}>
                     {message.text}
                   </Text>
+                  {!isUser && message.sources && message.sources.length > 0 && (
+                    <View style={styles.sources}>
+                      <Text style={styles.sourcesHeading}>KILDER</Text>
+                      {message.sources.map((source) => (
+                        <View key={`${source.name}:${source.url}`} style={styles.sourceItem}>
+                          <Text style={styles.sourceTitle}>{source.title}</Text>
+                          <Text style={styles.sourceName}>{source.name}</Text>
+                          <Text selectable style={styles.sourceUrl}>
+                            {source.url}
+                          </Text>
+                        </View>
+                      ))}
+                    </View>
+                  )}
                 </View>
               );
             })}
@@ -262,6 +282,35 @@ const styles = StyleSheet.create({
   },
   userMessageText: {
     color: '#FFFFFF',
+  },
+  sources: {
+    marginTop: 12,
+    paddingTop: 10,
+    borderTopWidth: 1,
+    borderTopColor: '#C9D3C9',
+    gap: 8,
+  },
+  sourcesHeading: {
+    color: '#42604E',
+    fontSize: 10,
+    fontWeight: '800',
+    letterSpacing: 1,
+  },
+  sourceItem: {
+    gap: 2,
+  },
+  sourceTitle: {
+    color: '#203D2C',
+    fontSize: 13,
+    fontWeight: '700',
+  },
+  sourceName: {
+    color: '#526158',
+    fontSize: 12,
+  },
+  sourceUrl: {
+    color: '#39734C',
+    fontSize: 11,
   },
   loadingBubble: {
     flexDirection: 'row',

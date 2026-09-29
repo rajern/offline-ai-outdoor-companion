@@ -92,6 +92,22 @@ def test_generate_extracts_text_from_llama_cli_output() -> None:
     assert service.generate(prompt) == "Outwise works."
 
 
+def test_generate_extracts_text_after_llama_truncates_a_long_displayed_prompt() -> None:
+    model_path = existing_test_file()
+    runtime_path = existing_test_file()
+    prompt = "Long grounded prompt that llama.cpp abbreviates"
+    output = (
+        "Loading model...\n\n> Long grounded prompt ... (truncated)\n"
+        "Use the retrieved instructions.\n\n\nExiting...\n"
+    )
+    service = ModelService(
+        settings(model_path, runtime_path),
+        StubRunner(ProcessResult(0, output, "")),
+    )
+
+    assert service.generate(prompt) == "Use the retrieved instructions."
+
+
 def test_missing_model_is_reported_before_runtime_lookup() -> None:
     runner = StubRunner(ProcessResult(0, "unused", ""))
     service = ModelService(

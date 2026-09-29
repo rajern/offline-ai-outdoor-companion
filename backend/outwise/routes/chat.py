@@ -1,5 +1,3 @@
-from typing import Protocol
-
 from fastapi import APIRouter, Depends, HTTPException, Request, status
 from pydantic import BaseModel, Field, field_validator
 
@@ -10,6 +8,7 @@ from outwise.services.model import (
     ModelRuntimeNotFoundError,
     ModelTimeoutError,
 )
+from outwise.services.orchestrator import Orchestrator
 
 
 class ChatRequest(BaseModel):
@@ -24,28 +23,31 @@ class ChatRequest(BaseModel):
         return message
 
 
+class ChatSource(BaseModel):
+    title: str
+    name: str
+    url: str
+
+
 class ChatResponse(BaseModel):
     answer: str
-
-
-class ModelGenerator(Protocol):
-    def generate(self, prompt: str) -> str: ...
+    sources: list[ChatSource] = Field(default_factory=list)
 
 
 router = APIRouter(prefix="/api", tags=["chat"])
 
 
-def get_model_service(request: Request) -> ModelGenerator:
-    return request.app.state.model_service
+def get_orchestrator(request: Request) -> Orchestrator:
+    return request.app.state.orchestrator
 
 
 @router.post("/chat", response_model=ChatResponse)
 def chat(
     request: ChatRequest,
-    model_service: ModelGenerator = Depends(get_model_service),
+    orchestrator: Orchestrator = Depends(get_orchestrator),
 ) -> ChatResponse:
     try:
-        answer = model_service.generate(request.message)
+        result = orchestrator.answer(request.message)
     except (ModelNotFoundError, ModelRuntimeNotFoundError) as exc:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
@@ -68,4 +70,14 @@ def chat(
             ),
         ) from exc
 
-    return ChatResponse(answer=answer)
+    return ChatResponse(
+        answer=result.answer,
+        sources=[
+            ChatSource(
+                title=source.title,
+                name=source.source_name,
+                url=source.source_url,
+            )
+            for source in result.sources
+        ],
+    )
