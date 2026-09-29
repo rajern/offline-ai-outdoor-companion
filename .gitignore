@@ -5,3 +5,4 @@ node_modules/
 .expo/
 frontend/dist/
 *.gguf
+models/

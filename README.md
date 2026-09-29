@@ -50,6 +50,7 @@ The project is planned in three milestones:
 - [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — system architecture
 - [`docs/DATA.md`](docs/DATA.md) — knowledge and data strategy
 - [`docs/PLAN.md`](docs/PLAN.md) — milestone plan
+- [`docs/MODEL_SETUP.md`](docs/MODEL_SETUP.md) — local model installation and prompt test
 - [`TASKS.md`](TASKS.md) — implementation tasks
 - [`AGENTS.md`](AGENTS.md) — instructions for coding agents
 
