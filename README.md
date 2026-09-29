@@ -33,12 +33,11 @@ The user describes the situation in natural language. Outwise retrieves relevant
 
 ## Project status
 
-Completed:
-
-**Milestone 1 — Foundation + Local AI**
-
-The mobile-first web UI, FastAPI backend and local Qwen inference now work end
-to end. Milestone 2 (local RAG and the real knowledge base) has not started.
+Milestone 1 is complete: the mobile-first web UI, FastAPI backend and local Qwen
+inference work end to end. Milestone 2 is in progress: the normalized knowledge
+contract, synthetic fixtures and independent local retrieval service are in
+place, but retrieval is not yet connected to the chat flow and no real knowledge
+sources have been approved.
 
 The project is planned in three milestones:
 

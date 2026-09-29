@@ -34,6 +34,14 @@ class SourceIdentity:
 
 
 @dataclass(frozen=True)
+class RetrievedKnowledgeItem:
+    """A normalized knowledge item together with its retrieval score."""
+
+    item: KnowledgeItem
+    score: float
+
+
+@dataclass(frozen=True)
 class RetrievalEvaluation:
     id: str
     question: str

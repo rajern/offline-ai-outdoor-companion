@@ -1,8 +1,8 @@
 # Outwise backend
 
 The backend exposes the local HTTP API used by the Outwise frontend. It also
-contains a dedicated `ModelService` for local Qwen inference through llama.cpp.
-Retrieval and safety integrations are not part of this milestone.
+contains dedicated services for local Qwen inference and local knowledge
+retrieval. RAG orchestration and safety integration are separate later tasks.
 
 ## Setup (Windows PowerShell)
 
@@ -55,6 +55,25 @@ generation failures are exposed as distinct `ModelServiceError` subclasses.
 
 The HTTP chat route uses this service while keeping llama.cpp details outside the
 route and frontend.
+
+## Local retrieval service
+
+`RetrievalService` loads the normalized JSON knowledge contract and ranks chunks
+with a deterministic BM25-style lexical score. It has no model, UI, source-format
+or network dependency:
+
+```python
+from outwise.services.retrieval import RetrievalService
+
+retriever = RetrievalService.from_json("../knowledge/fixtures/development-knowledge.json")
+results = retriever.retrieve("How should I treat drinking water?", top_k=3)
+```
+
+Each result contains the original `KnowledgeItem` with all source metadata plus
+its score. Blank queries and non-positive `top_k` values raise `ValueError`; a
+query with no lexical overlap returns an empty list. The current lexical method
+is intentionally small and replaceable, and may miss cross-language queries or
+semantic matches that use entirely different vocabulary.
 
 ## Test
 
