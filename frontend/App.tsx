@@ -1,5 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
+import { useState } from 'react';
 import {
+  ActivityIndicator,
   KeyboardAvoidingView,
   Platform,
   SafeAreaView,
@@ -11,7 +13,57 @@ import {
   View,
 } from 'react-native';
 
+import { sendChatMessage } from './api';
+
+type Message = {
+  id: number;
+  role: 'assistant' | 'user';
+  text: string;
+};
+
+const initialMessages: Message[] = [
+  {
+    id: 1,
+    role: 'assistant',
+    text: 'Beskriv situasjonen din. Jeg hjelper deg med å prioritere hva du bør gjøre først.',
+  },
+];
+
 export default function App() {
+  const [messages, setMessages] = useState<Message[]>(initialMessages);
+  const [draft, setDraft] = useState('');
+  const [isSending, setIsSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const submitMessage = async () => {
+    const message = draft.trim();
+    if (!message || isSending) {
+      return;
+    }
+
+    setMessages((current) => [
+      ...current,
+      { id: Date.now(), role: 'user', text: message },
+    ]);
+    setDraft('');
+    setError(null);
+    setIsSending(true);
+
+    try {
+      const answer = await sendChatMessage(message);
+      setMessages((current) => [
+        ...current,
+        { id: Date.now() + 1, role: 'assistant', text: answer },
+      ]);
+    } catch {
+      setError('Kunne ikke kontakte den lokale Outwise-serveren. Kontroller at backend kjører.');
+    } finally {
+      setIsSending(false);
+    }
+  };
+
+  const canSend = draft.trim().length > 0 && !isSending;
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <StatusBar style="dark" />
@@ -37,41 +89,58 @@ export default function App() {
           >
             <Text style={styles.dateLabel}>NY SAMTALE</Text>
 
-            <View style={[styles.messageBubble, styles.assistantBubble]}>
-              <Text style={styles.senderLabel}>OUTWISE</Text>
-              <Text style={styles.messageText}>
-                Beskriv situasjonen din. Jeg hjelper deg med å prioritere hva du bør gjøre først.
-              </Text>
-            </View>
+            {messages.map((message) => {
+              const isUser = message.role === 'user';
+              return (
+                <View
+                  key={message.id}
+                  style={[
+                    styles.messageBubble,
+                    isUser ? styles.userBubble : styles.assistantBubble,
+                  ]}
+                >
+                  <Text style={[styles.senderLabel, isUser && styles.userSenderLabel]}>
+                    {isUser ? 'DEG' : 'OUTWISE'}
+                  </Text>
+                  <Text style={[styles.messageText, isUser && styles.userMessageText]}>
+                    {message.text}
+                  </Text>
+                </View>
+              );
+            })}
 
-            <View style={[styles.messageBubble, styles.userBubble]}>
-              <Text style={[styles.senderLabel, styles.userSenderLabel]}>DEG</Text>
-              <Text style={[styles.messageText, styles.userMessageText]}>
-                Jeg har vrikket ankelen, og det begynner å bli mørkt.
-              </Text>
-            </View>
+            {isSending && (
+              <View style={[styles.messageBubble, styles.assistantBubble, styles.loadingBubble]}>
+                <ActivityIndicator color="#39734C" size="small" />
+                <Text style={styles.loadingText}>Outwise svarer …</Text>
+              </View>
+            )}
 
-            <View style={styles.placeholderCard}>
-              <Text style={styles.placeholderTitle}>Frontend klar</Text>
-              <Text style={styles.placeholderText}>
-                Svar fra den lokale modellen kobles til i en senere oppgave.
-              </Text>
-            </View>
+            {error && (
+              <View accessibilityRole="alert" style={styles.errorCard}>
+                <Text style={styles.errorText}>{error}</Text>
+              </View>
+            )}
           </ScrollView>
 
           <View style={styles.composer}>
             <TextInput
               accessibilityLabel="Beskriv situasjonen"
+              editable={!isSending}
               multiline
+              onChangeText={setDraft}
+              onSubmitEditing={() => void submitMessage()}
               placeholder="Beskriv hva som har skjedd …"
               placeholderTextColor="#6D756F"
               style={styles.input}
+              value={draft}
             />
             <TouchableOpacity
               accessibilityLabel="Send melding"
               accessibilityRole="button"
-              disabled
-              style={styles.sendButton}
+              disabled={!canSend}
+              onPress={() => void submitMessage()}
+              style={[styles.sendButton, !canSend && styles.sendButtonDisabled]}
             >
               <Text style={styles.sendButtonText}>Send</Text>
             </TouchableOpacity>
@@ -190,22 +259,24 @@ const styles = StyleSheet.create({
   userMessageText: {
     color: '#FFFFFF',
   },
-  placeholderCard: {
-    marginTop: 6,
-    padding: 14,
+  loadingBubble: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+  },
+  loadingText: {
+    color: '#42604E',
+    fontSize: 14,
+  },
+  errorCard: {
+    padding: 12,
     borderWidth: 1,
-    borderColor: '#CCD4CC',
+    borderColor: '#CC9A91',
     borderRadius: 12,
-    backgroundColor: '#F1F3ED',
+    backgroundColor: '#F8E9E5',
   },
-  placeholderTitle: {
-    marginBottom: 4,
-    color: '#34453A',
-    fontSize: 13,
-    fontWeight: '700',
-  },
-  placeholderText: {
-    color: '#59645C',
+  errorText: {
+    color: '#7A3025',
     fontSize: 13,
     lineHeight: 19,
   },
@@ -237,6 +308,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 18,
     borderRadius: 14,
+    backgroundColor: '#1E513B',
+  },
+  sendButtonDisabled: {
     backgroundColor: '#8A988F',
   },
   sendButtonText: {

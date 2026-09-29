@@ -26,6 +26,15 @@ Invoke-RestMethod http://127.0.0.1:8000/health
 
 The response should be `{"status":"ok"}`.
 
+The temporary chat boundary is `POST /api/chat`:
+
+```powershell
+Invoke-RestMethod -Method Post -Uri http://127.0.0.1:8000/api/chat `
+  -ContentType "application/json" -Body '{"message":"Jeg har gått meg vill."}'
+```
+
+The response contains an `answer` field. The mock implementation is replaced by local model inference in a later task while retaining this HTTP contract.
+
 ## Test
 
 ```powershell

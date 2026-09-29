@@ -11,7 +11,12 @@ pnpm install
 pnpm web
 ```
 
-Open the URL printed by Expo. The frontend currently renders a static placeholder chat and does not call a backend or AI model.
+Open the URL printed by Expo. Start the backend on `http://127.0.0.1:8000` before sending a message. To use a different local address, set `EXPO_PUBLIC_API_URL` before starting Expo:
+
+```powershell
+$env:EXPO_PUBLIC_API_URL = "http://127.0.0.1:8000"
+pnpm web
+```
 
 ## Checks
 
