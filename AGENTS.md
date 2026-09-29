@@ -49,6 +49,25 @@ For each task:
 
 If the task reveals a decision that is not covered by the existing documentation and materially affects architecture or product behaviour, stop and surface the decision instead of choosing silently.
 
+## Human approval checkpoints
+
+Some tasks contain decisions that must be approved by the project owner before work continues.
+
+When a task is marked as a **Human approval checkpoint**:
+
+- complete only the work explicitly allowed before the checkpoint
+- stop before making or implementing the protected decision
+- clearly summarize what requires approval
+- wait for explicit approval from the project owner
+- do not continue to dependent tasks until approval is given
+- do not treat existing documentation, silence or previous general approval as approval for the checkpoint
+
+Human approval is required for decisions involving:
+- final knowledge sources and licensing
+- safety policy and high-risk behaviour
+- final safety/legal messaging
+- final MVP readiness and public release
+
 ## Parallel work
 
 Tasks may be developed in parallel when they do not depend on each other and do not require editing the same core files.

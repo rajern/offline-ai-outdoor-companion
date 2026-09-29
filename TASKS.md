@@ -200,20 +200,26 @@ Requirements:
 
 ---
 
-## M2-04 — Select and approve real knowledge sources
+## M2-04 — Approve real knowledge sources
 
 **Dependencies:** M2-03
 
-Research and select the real knowledge sources used by the MVP.
+**Human approval checkpoint**
 
-Evaluate each candidate source for:
-- relevance
-- authority and reliability
+The final knowledge sources must be researched, reviewed and approved by the project owner before ingestion work begins.
+
+Do not autonomously select or approve the final source set.
+
+The approved source documentation should record:
+- source and URL
+- intended knowledge coverage
+- authority/reliability
 - licence and redistribution rights
 - attribution requirements
 - language
-- structure and ease of ingestion
-- coverage of the MVP knowledge areas
+- ingestion method
+
+Codex must not begin M2-05 until the project owner has explicitly approved and documented the final source set.
 
 Prefer:
 - downloadable datasets
@@ -228,6 +234,7 @@ Avoid large manual copy/paste or article-by-article scraping workflows.
 - licence/usage status is recorded for every selected source
 - required attribution is known
 - the selected sources cover the intended MVP knowledge areas sufficiently
+- the project owner has explicitly approved the documented source set
 
 ---
 
@@ -268,6 +275,19 @@ Requirements:
 - sources are displayed correctly
 - the knowledge base and retrieval flow work with internet disabled
 - no unapproved source material is required for the MVP
+
+### Human quality review
+
+After the technical implementation is complete, stop for a manual product review before Milestone 3 begins.
+
+The project owner should test representative real-world questions and review:
+- retrieval relevance
+- answer quality
+- source correctness
+- obvious knowledge gaps
+
+Do not begin Milestone 3 until this review has been explicitly approved.
+
 ---
 
 # Milestone 3 — Safety + Finished MVP
@@ -275,6 +295,14 @@ Requirements:
 ## M3-01 — Implement the safety layer
 
 **Dependencies:** M2-06
+
+**Human approval checkpoint**
+
+Before implementing the safety layer, define the proposed safety rules and behaviour for the main high-risk situations.
+
+Present the proposed rules to the project owner for review.
+
+Do not implement the final safety behaviour until the project owner has explicitly approved the policy.
 
 Implement the first explicit safety layer outside the LLM itself.
 
@@ -295,6 +323,10 @@ Requirements:
 ## M3-02 — Add safety and legal messaging
 
 **Dependencies:** M3-01
+
+**Human approval checkpoint**
+
+Codex may draft the safety and legal messaging, but the final wording must be reviewed and explicitly approved by the project owner before it is treated as complete or shown as final product copy.
 
 Add clear product messaging about the intended use and limitations of Outwise.
 
@@ -378,6 +410,12 @@ Focus on:
 - sources shown to the user match the retrieved source metadata
 - known limitations are documented
 
+### Human product review
+
+After automated and technical validation, the project owner should manually test the finished core scenarios and review the product from an end-user perspective.
+
+Any major issues found should be resolved before M3-06 is completed.
+
 ---
 
 ## M3-06 — Prepare the public MVP
@@ -399,6 +437,12 @@ Requirements:
 - the repository accurately reflects the finished MVP
 - the MVP is ready to demonstrate publicly
 - all three milestones are complete
+
+### Final approval
+
+**Human approval checkpoint**
+
+Codex may prepare the repository and MVP for release, but must not treat the project as finally approved or release-ready until the project owner has completed the final review and explicitly approved it.
 
 
 ---
