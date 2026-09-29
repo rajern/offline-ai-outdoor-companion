@@ -35,9 +35,8 @@ The user describes the situation in natural language. Outwise retrieves relevant
 
 Milestone 1 is complete: the mobile-first web UI, FastAPI backend and local Qwen
 inference work end to end. Milestone 2 is in progress: the normalized knowledge
-contract, synthetic fixtures and independent local retrieval service are in
-place, but retrieval is not yet connected to the chat flow and no real knowledge
-sources have been approved.
+contract, synthetic fixtures and local RAG flow work end to end with stored
+source metadata. No real knowledge sources have been approved or ingested.
 
 The project is planned in three milestones:
 

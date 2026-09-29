@@ -94,7 +94,7 @@ def test_empty_store_returns_empty_list() -> None:
 
 def test_generic_outdoors_word_does_not_add_unrelated_results() -> None:
     results = fixture_retriever().retrieve(
-        "I twisted my ankle outdoors. What should I do?"
+        "I twisted my ankle outdoors. What should I do first?"
     )
 
     assert [result.item.id for result in results] == ["fixture-first-aid-ankle-001"]

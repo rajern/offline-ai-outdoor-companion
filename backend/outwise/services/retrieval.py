@@ -22,6 +22,7 @@ _STOP_WORDS = {
     "by",
     "can",
     "do",
+    "first",
     "for",
     "from",
     "how",
