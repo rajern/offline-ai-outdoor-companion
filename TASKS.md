@@ -64,7 +64,7 @@ Requirements:
 
 ## M1-04 — Local model setup
 
-**Dependencies:** M1-02
+**Dependencies:** None
 
 Set up local inference with:
 
