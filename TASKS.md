@@ -1,0 +1,419 @@
+# Outwise — Tasks
+
+This file contains the active implementation tasks.
+
+Only near-term work should live here.  
+Completed work may be archived or removed as the project progresses.
+
+---
+
+# Milestone 1 — Foundation + Local AI
+
+## M1-01 — Scaffold frontend
+
+**Dependencies:** None
+
+Create the Expo + React Native + TypeScript frontend with web support.
+
+Requirements:
+- project runs locally on Windows
+- mobile-first layout
+- basic placeholder chat screen
+- no AI logic in the frontend
+
+**Done when:**
+- frontend starts successfully
+- app renders in the browser
+- layout works at phone-sized width
+
+---
+
+## M1-02 — Scaffold backend
+
+**Dependencies:** None
+
+Create the Python + FastAPI backend.
+
+Requirements:
+- simple health endpoint
+- basic project structure following `ARCHITECTURE.md`
+- no model integration yet
+
+**Done when:**
+- backend starts locally
+- health endpoint responds successfully
+
+---
+
+## M1-03 — Connect frontend and backend
+
+**Dependencies:** M1-01, M1-02
+
+Create the minimal API boundary between the frontend and backend.
+
+Requirements:
+- frontend can send a message
+- backend can return a temporary/mock response
+- loading and basic error states work
+
+**Done when:**
+- a message entered in the UI reaches FastAPI
+- the returned response appears in the chat
+
+---
+
+## M1-04 — Local model setup
+
+**Dependencies:** M1-02
+
+Set up local inference with:
+
+- Qwen3.5-2B
+- Q4_K_M
+- GGUF
+- llama.cpp
+
+Create the minimum scripts/instructions required to obtain and run the model locally.
+
+Do not commit the model file to Git.
+
+**Done when:**
+- the model can be downloaded/setup reproducibly
+- a local prompt produces a valid response without internet access
+
+---
+
+## M1-05 — Implement ModelService
+
+**Dependencies:** M1-04
+
+Connect the backend to the local model through a dedicated model service.
+
+Requirements:
+- llama.cpp-specific logic remains behind the model service
+- backend can submit a prompt and receive generated text
+- useful model/loading errors are surfaced
+
+**Done when:**
+- FastAPI can obtain a real response from the local Qwen model
+
+---
+
+## M1-06 — Complete local AI vertical slice
+
+**Dependencies:** M1-03, M1-05
+
+Replace the mock response with real local inference.
+
+Flow:
+
+    User
+      ↓
+    Mobile-first UI
+      ↓
+    FastAPI
+      ↓
+    ModelService
+      ↓
+    Local Qwen model
+      ↓
+    Response in UI
+
+**Done when:**
+- user can chat with the local model through the frontend
+- the full flow works with internet disabled after setup
+- no cloud AI/API is used
+- major setup and runtime errors are handled clearly
+
+
+# Milestone 2 — RAG + Real Knowledge Base
+
+## M2-01 — Define knowledge fixtures and data contract
+
+**Dependencies:** M1-06
+
+Create a small development knowledge set using synthetic or clearly reusable fixture content.
+
+Requirements:
+- follow the common structure defined in `docs/DATA.md`
+- include source metadata with every item
+- cover several MVP knowledge areas
+- keep fixture data intentionally small
+
+**Done when:**
+- fixture knowledge can be loaded reproducibly
+- every item contains the required source metadata
+- no unverified external copyrighted content is committed
+
+---
+
+## M2-02 — Implement local retrieval
+
+**Dependencies:** M2-01
+
+Implement the local retrieval layer.
+
+Requirements:
+- retrieve relevant knowledge chunks from the local knowledge store
+- keep retrieval logic separate from the model service
+- return both retrieved text and source metadata
+- remain fully local and offline
+
+**Done when:**
+- a query returns relevant fixture chunks
+- source identity is preserved
+- retrieval can be called independently from the LLM
+
+---
+
+## M2-03 — Integrate RAG into the request flow
+
+**Dependencies:** M2-02, M1-06
+
+Connect retrieval to the orchestrator and local model.
+
+Expected flow:
+
+    User
+      ↓
+    Orchestrator
+      ↓
+    Retrieval
+      ↓
+    Relevant chunks + source metadata
+      ↓
+    Local Qwen model
+      ↓
+    Natural answer + sources
+
+Requirements:
+- the model receives only the relevant retrieved context
+- the model may combine several retrieved chunks into one natural response
+- displayed sources must come from stored metadata, not generated URLs or citations
+
+**Done when:**
+- the user can ask a question through the UI
+- relevant local knowledge is retrieved
+- Qwen uses the retrieved context
+- the UI displays the supporting sources
+- the full flow works offline
+
+---
+
+## M2-04 — Select and approve real knowledge sources
+
+**Dependencies:** M2-03
+
+Research and select the real knowledge sources used by the MVP.
+
+Evaluate each candidate source for:
+- relevance
+- authority and reliability
+- licence and redistribution rights
+- attribution requirements
+- language
+- structure and ease of ingestion
+- coverage of the MVP knowledge areas
+
+Prefer:
+- downloadable datasets
+- structured APIs
+- manuals or document collections
+- sources that can be ingested automatically
+
+Avoid large manual copy/paste or article-by-article scraping workflows.
+
+**Done when:**
+- the final source set for the MVP is documented
+- licence/usage status is recorded for every selected source
+- required attribution is known
+- the selected sources cover the intended MVP knowledge areas sufficiently
+
+---
+
+## M2-05 — Build ingestion for approved sources
+
+**Dependencies:** M2-04
+
+Create reproducible ingestion pipelines for the approved real sources.
+
+Requirements:
+- convert each source into the common Outwise data contract
+- preserve provenance and licence metadata
+- automate parsing, normalization and chunking
+- generate the required local retrieval assets
+- keep source-specific logic outside the retrieval layer
+
+**Done when:**
+- the real knowledge base can be rebuilt from approved sources without manual copy/paste
+- the output follows the Outwise data contract
+- provenance is preserved throughout the pipeline
+
+---
+
+## M2-06 — Replace fixtures with the real knowledge base
+
+**Dependencies:** M2-05
+
+Replace development fixtures in the main RAG flow with the approved Outwise knowledge base.
+
+Requirements:
+- keep fixtures available for testing
+- use the real knowledge base in the normal application flow
+- verify retrieval across the main MVP knowledge areas
+- verify that source metadata is shown correctly
+
+**Done when:**
+- the application answers using the real local knowledge base
+- sources are displayed correctly
+- the knowledge base and retrieval flow work with internet disabled
+- no unapproved source material is required for the MVP
+---
+
+# Milestone 3 — Safety + Finished MVP
+
+## M3-01 — Implement the safety layer
+
+**Dependencies:** M2-06
+
+Implement the first explicit safety layer outside the LLM itself.
+
+Requirements:
+- detect situations that require stronger safety handling
+- prioritize emergency or professional help where appropriate
+- avoid unsupported high-risk guidance
+- surface uncertainty when reliable grounding is missing
+- keep safety logic separate from model and retrieval implementations
+
+**Done when:**
+- safety handling can be triggered independently of the LLM prompt
+- high-risk scenarios receive the intended safety treatment
+- unsupported answers are not silently presented as confident guidance
+
+---
+
+## M3-02 — Add safety and legal messaging
+
+**Dependencies:** M3-01
+
+Add clear product messaging about the intended use and limitations of Outwise.
+
+Requirements:
+- explain that Outwise is an information and preparedness tool
+- clarify that it is not a replacement for emergency services or professional medical help
+- make important limitations visible without blocking normal use
+- include appropriate source and attribution information where required
+
+**Done when:**
+- safety/legal messaging is visible in the relevant parts of the product
+- the wording is consistent with `docs/PRODUCT.md` and `docs/DECISIONS.md`
+- no feature is presented as providing guaranteed medical or emergency outcomes
+
+---
+
+## M3-03 — Refine the mobile-first product experience
+
+**Dependencies:** M2-06
+
+Turn the technical application into a coherent Outwise experience.
+
+Requirements:
+- refine the phone-sized layout
+- add the agreed scenario shortcuts
+- improve chat, source display, loading and error states
+- keep the interface simple and usable under stress
+- avoid adding post-MVP features
+
+**Done when:**
+- the main user flows are clear without explanation
+- the UI works well at phone-sized dimensions
+- answers and supporting sources are easy to inspect
+
+---
+
+## M3-04 — Add offline readiness and reliability checks
+
+**Dependencies:** M3-01, M3-03
+
+Make offline operation explicit and testable.
+
+Requirements:
+- clearly indicate whether required local assets are available
+- fail clearly if model or knowledge assets are missing
+- verify that the normal user flow has no hidden internet dependency
+- test the application with internet access disabled
+
+**Done when:**
+- the application clearly reports its offline-ready state
+- the full core flow works with internet disabled
+- missing assets produce understandable errors rather than silent failures
+
+---
+
+## M3-05 — Validate core MVP scenarios
+
+**Dependencies:** M3-01, M3-04
+
+Run the completed system through representative scenarios from the MVP scope.
+
+Include examples covering:
+- injury / basic first aid
+- getting lost
+- cold or exposure
+- shelter / warmth
+- water / hygiene
+- emergency signalling
+- unsupported or uncertain questions
+
+Focus on:
+- retrieval relevance
+- grounding
+- source correctness
+- safety behaviour
+- clarity of the final response
+
+**Done when:**
+- the main MVP scenarios work end to end
+- obvious retrieval or safety failures are fixed
+- sources shown to the user match the retrieved source metadata
+- known limitations are documented
+
+---
+
+## M3-06 — Prepare the public MVP
+
+**Dependencies:** M3-05
+
+Prepare Outwise as a complete public learning project.
+
+Requirements:
+- clean up setup and run instructions
+- update README with the final MVP behaviour
+- document model and knowledge setup
+- document important limitations
+- ensure the public repository contains no prohibited or unlicensed assets
+- add a simple demo or screenshots if useful
+
+**Done when:**
+- a new developer can understand and run the project from the repository
+- the repository accurately reflects the finished MVP
+- the MVP is ready to demonstrate publicly
+- all three milestones are complete
+
+
+---
+# Parallelization
+
+The following work can initially run in parallel:
+
+- `M1-01` Frontend
+- `M1-02` Backend
+- `M1-04` Local model setup
+
+After these are complete:
+
+- `M1-03` depends on frontend + backend
+- `M1-05` depends on model setup
+- `M1-06` integrates both tracks
+
+Do not begin Milestone 2 tasks until the Milestone 1 vertical slice works end to end.
