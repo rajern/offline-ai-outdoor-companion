@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "id": "fixture-first-aid-ankle-001",
+      "text": "Stop and assess the ankle before continuing. Protect it from further strain, rest it, cool it through a cloth for short periods, apply gentle compression if available, and elevate it. Do not continue walking if the ankle is badly deformed, numb, or unable to bear weight.",
+      "title": "Synthetic guidance: ankle injury",
+      "source_name": "Outwise synthetic development fixtures",
+      "source_url": "fixture://outwise/first-aid/ankle",
+      "license": "CC0-1.0",
+      "language": "en",
+      "topic": "first-aid",
+      "section": "Soft-tissue injuries",
+      "document_id": "outwise-fixtures-v1",
+      "metadata": {"synthetic": true}
+    },
+    {
+      "id": "fixture-cold-exposure-001",
+      "text": "Reduce further heat loss: move out of wind and precipitation, replace wet layers when possible, insulate the person from the ground, and add dry insulation around the head and torso. Handle a severely cold or confused person gently and seek emergency help when communication is possible.",
+      "title": "Synthetic guidance: cold exposure",
+      "source_name": "Outwise synthetic development fixtures",
+      "source_url": "fixture://outwise/exposure/cold",
+      "license": "CC0-1.0",
+      "language": "en",
+      "topic": "cold-exposure",
+      "section": "Preventing further heat loss",
+      "document_id": "outwise-fixtures-v1",
+      "metadata": {"synthetic": true}
+    },
+    {
+      "id": "fixture-lost-001",
+      "text": "If you are lost, stop before moving farther away. Stay calm, observe your surroundings, review your last known location and route, and make a plan. If remaining where you are is safe, staying visible and conserving energy can make you easier to find.",
+      "title": "Synthetic guidance: lost outdoors",
+      "source_name": "Outwise synthetic development fixtures",
+      "source_url": "fixture://outwise/navigation/lost",
+      "license": "CC0-1.0",
+      "language": "en",
+      "topic": "navigation",
+      "section": "Immediate priorities",
+      "document_id": "outwise-fixtures-v1",
+      "metadata": {"synthetic": true}
+    },
+    {
+      "id": "fixture-shelter-001",
+      "text": "Choose shelter away from exposed ridges, unstable trees, flood channels, and falling rock. Block wind first, insulate the sleeping area from the ground, and keep ventilation if a flame or stove is used nearby.",
+      "title": "Synthetic guidance: emergency shelter",
+      "source_name": "Outwise synthetic development fixtures",
+      "source_url": "fixture://outwise/shelter/site-selection",
+      "license": "CC0-1.0",
+      "language": "en",
+      "topic": "shelter",
+      "section": "Site selection",
+      "document_id": "outwise-fixtures-v1",
+      "metadata": {"synthetic": true}
+    },
+    {
+      "id": "fixture-water-001",
+      "text": "Prefer water that can be treated. Remove visible debris, then use a suitable filter, disinfectant, or a rolling boil according to the equipment instructions. Keep untreated water and dirty containers separate from treated water.",
+      "title": "Synthetic guidance: safer drinking water",
+      "source_name": "Outwise synthetic development fixtures",
+      "source_url": "fixture://outwise/water/treatment",
+      "license": "CC0-1.0",
+      "language": "en",
+      "topic": "water-hygiene",
+      "section": "Treatment and storage",
+      "document_id": "outwise-fixtures-v1",
+      "metadata": {"synthetic": true}
+    },
+    {
+      "id": "fixture-weather-001",
+      "text": "When weather deteriorates, reassess the route early. Avoid exposed terrain during thunder, high wind, or poor visibility; turn back or seek a safer sheltered position before conditions remove your options.",
+      "title": "Synthetic guidance: deteriorating weather",
+      "source_name": "Outwise synthetic development fixtures",
+      "source_url": "fixture://outwise/weather/deterioration",
+      "license": "CC0-1.0",
+      "language": "en",
+      "topic": "weather-hazards",
+      "section": "Route decisions",
+      "document_id": "outwise-fixtures-v1",
+      "metadata": {"synthetic": true}
+    },
+    {
+      "id": "fixture-signalling-001",
+      "text": "Use repeated, conspicuous signals and make your position easier to detect. A whistle, contrasting material in an open area, or a light after dark can conserve energy compared with continuous shouting. Signal from a safe location.",
+      "title": "Synthetic guidance: emergency signalling",
+      "source_name": "Outwise synthetic development fixtures",
+      "source_url": "fixture://outwise/signalling/visibility",
+      "license": "CC0-1.0",
+      "language": "en",
+      "topic": "emergency-signalling",
+      "section": "Visible and audible signals",
+      "document_id": "outwise-fixtures-v1",
+      "metadata": {"synthetic": true}
+    },
+    {
+      "id": "fixture-preparedness-001",
+      "text": "Before a trip, share the planned route and expected return time with a reliable contact. Carry clothing and basic supplies suitable for a delay, and know how to use the equipment before relying on it outdoors.",
+      "title": "Synthetic guidance: trip preparedness",
+      "source_name": "Outwise synthetic development fixtures",
+      "source_url": "fixture://outwise/preparedness/trip-plan",
+      "license": "CC0-1.0",
+      "language": "en",
+      "topic": "preparedness",
+      "section": "Before departure",
+      "document_id": "outwise-fixtures-v1",
+      "metadata": {"synthetic": true}
+    }
+  ]
+}

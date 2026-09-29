@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "eval-ankle-dark",
+      "question": "I twisted my ankle and it hurts to put weight on it. What should I do first?",
+      "relevant_item_ids": ["fixture-first-aid-ankle-001"],
+      "expected_sources": [
+        {
+          "source_name": "Outwise synthetic development fixtures",
+          "source_url": "fixture://outwise/first-aid/ankle"
+        }
+      ]
+    },
+    {
+      "id": "eval-lost-cold",
+      "question": "I am lost, wet and getting cold. Should I keep walking?",
+      "relevant_item_ids": ["fixture-lost-001", "fixture-cold-exposure-001"],
+      "expected_sources": [
+        {
+          "source_name": "Outwise synthetic development fixtures",
+          "source_url": "fixture://outwise/navigation/lost"
+        },
+        {
+          "source_name": "Outwise synthetic development fixtures",
+          "source_url": "fixture://outwise/exposure/cold"
+        }
+      ]
+    },
+    {
+      "id": "eval-water-treatment",
+      "question": "How can I reduce the risk from stream water before drinking it?",
+      "relevant_item_ids": ["fixture-water-001"],
+      "expected_sources": [
+        {
+          "source_name": "Outwise synthetic development fixtures",
+          "source_url": "fixture://outwise/water/treatment"
+        }
+      ]
+    },
+    {
+      "id": "eval-signalling-after-dark",
+      "question": "How can rescuers notice me without exhausting myself by shouting?",
+      "relevant_item_ids": ["fixture-signalling-001"],
+      "expected_sources": [
+        {
+          "source_name": "Outwise synthetic development fixtures",
+          "source_url": "fixture://outwise/signalling/visibility"
+        }
+      ]
+    }
+  ]
+}

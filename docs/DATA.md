@@ -54,6 +54,12 @@ Optional metadata may include:
 - `document_id`
 - additional source-specific metadata
 
+The executable version 1 contract lives in `backend/outwise/knowledge/models.py`.
+Normalized JSON files use a top-level `schema_version` and `items` list.
+Source-specific values belong in the optional `metadata` object rather than in
+new top-level fields, so retrieval can remain source-independent. Development
+examples and their retrieval regression set live in `knowledge/fixtures/`.
+
 Retrieval should only depend on this normalized format, not on the original source format.
 
 ## Ingestion
