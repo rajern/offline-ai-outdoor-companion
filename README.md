@@ -33,9 +33,12 @@ The user describes the situation in natural language. Outwise retrieves relevant
 
 ## Project status
 
-Currently building:
+Completed:
 
 **Milestone 1 — Foundation + Local AI**
+
+The mobile-first web UI, FastAPI backend and local Qwen inference now work end
+to end. Milestone 2 (local RAG and the real knowledge base) has not started.
 
 The project is planned in three milestones:
 

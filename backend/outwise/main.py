@@ -1,12 +1,14 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from outwise.routes.chat import router as chat_router
+from outwise.routes.chat import ModelGenerator, router as chat_router
 from outwise.routes.health import router as health_router
+from outwise.services.model import ModelService
 
 
-def create_app() -> FastAPI:
+def create_app(model_service: ModelGenerator | None = None) -> FastAPI:
     app = FastAPI(title="Outwise API", version="0.1.0")
+    app.state.model_service = model_service or ModelService()
     app.add_middleware(
         CORSMiddleware,
         allow_origin_regex=r"^https?://(localhost|127\.0\.0\.1)(:\d+)?$",

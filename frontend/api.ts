@@ -5,16 +5,32 @@ type ChatResponse = {
 };
 
 export async function sendChatMessage(message: string): Promise<string> {
-  const response = await fetch(`${API_BASE_URL}/api/chat`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ message }),
-  });
+  let response: Response;
+  try {
+    response = await fetch(`${API_BASE_URL}/api/chat`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ message }),
+    });
+  } catch {
+    throw new Error(
+      'Kunne ikke kontakte den lokale Outwise-serveren. Kontroller at backend kjører.',
+    );
+  }
 
   if (!response.ok) {
-    throw new Error(`Backend returned ${response.status}`);
+    let detail = `Backend returnerte status ${response.status}.`;
+    try {
+      const body = (await response.json()) as { detail?: unknown };
+      if (typeof body.detail === 'string' && body.detail.length > 0) {
+        detail = body.detail;
+      }
+    } catch {
+      // Keep the status-based fallback if the backend did not return JSON.
+    }
+    throw new Error(detail);
   }
 
   const body = (await response.json()) as ChatResponse;

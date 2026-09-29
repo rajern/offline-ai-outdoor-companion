@@ -55,8 +55,12 @@ export default function App() {
         ...current,
         { id: Date.now() + 1, role: 'assistant', text: answer },
       ]);
-    } catch {
-      setError('Kunne ikke kontakte den lokale Outwise-serveren. Kontroller at backend kjører.');
+    } catch (caught) {
+      setError(
+        caught instanceof Error
+          ? caught.message
+          : 'Outwise kunne ikke hente et svar fra den lokale modellen.',
+      );
     } finally {
       setIsSending(false);
     }
