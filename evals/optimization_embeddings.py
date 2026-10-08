@@ -57,7 +57,7 @@ class Gemma:
 
 
 class Qwen:
-    def __init__(self,logs):
+    def __init__(self,logs,*,threads=4,cpu_only=True,model_path=None):
         self.url='http://127.0.0.1:8137'
         self.log=(logs/'qwen-embedding-server.log').open('ab')
         (logs/'slots').mkdir(exist_ok=True)
@@ -65,11 +65,13 @@ class Qwen:
         import socket
         with socket.socket() as check:
             check.bind(('127.0.0.1',8137))
-        command=[str(LLAMA),'-m',str(MODELS/'Qwen3-Embedding-0.6B-GGUF/Qwen3-Embedding-0.6B-Q4_K_M.gguf'),
+        command=[str(LLAMA),'-m',str(model_path or MODELS/'Qwen3-Embedding-0.6B-GGUF/Qwen3-Embedding-0.6B-Q4_K_M.gguf'),
                  '--embedding','--pooling','last','--ctx-size','8192','--batch-size','8192','--ubatch-size','8192',
-                 '--parallel','1','--threads','4','--threads-batch','4','--n-gpu-layers','0','--host','127.0.0.1','--port','8137',
+                 '--parallel','1','--threads',str(threads),'--threads-batch',str(threads),'--n-gpu-layers','0','--host','127.0.0.1','--port','8137',
                  '--flash-attn','off','--cache-type-k','f32','--cache-type-v','f32',
                  '--no-webui','--no-cache-prompt','--cache-ram','0','--slots','--slot-save-path',str(logs/'slots')]
+        # Zero GPU layers alone still permits operation/KV offload in this build.
+        if cpu_only:command.extend(['--device','none','--no-op-offload','--no-kv-offload'])
         (logs/'server-command.json').write_text(json.dumps(command,indent=2)+'\n',encoding='utf-8',newline='\n')
         self.process=subprocess.Popen(command,stdout=self.log,stderr=self.log,creationflags=subprocess.CREATE_NO_WINDOW if os.name=='nt' else 0)
         for _ in range(120):
