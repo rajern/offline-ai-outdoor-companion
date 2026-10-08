@@ -6,6 +6,7 @@ from pathlib import Path
 import subprocess
 import sys
 import time
+import gc
 import urllib.request
 import numpy as np
 
@@ -34,7 +35,8 @@ class MiniLM:
         b=self.model.embed([p['text'] for p in items])
         return normalize((a+b)/2)
     def queries(self,texts):return self.model.embed(texts)
-    def close(self):pass
+    def close(self):
+        del self.model;gc.collect()
 
 
 class Gemma:
@@ -53,7 +55,8 @@ class Gemma:
         return self.model.encode(text,batch_size=2,prompt='',normalize_embeddings=True,show_progress_bar=False)
     def queries(self,texts):
         return self.model.encode(texts,batch_size=2,prompt='task: search result | query: ',normalize_embeddings=True,show_progress_bar=False)
-    def close(self):pass
+    def close(self):
+        del self.model;gc.collect()
 
 
 class Qwen:
@@ -66,7 +69,7 @@ class Qwen:
         with socket.socket() as check:
             check.bind(('127.0.0.1',8137))
         command=[str(LLAMA),'-m',str(model_path or MODELS/'Qwen3-Embedding-0.6B-GGUF/Qwen3-Embedding-0.6B-Q4_K_M.gguf'),
-                 '--embedding','--pooling','last','--ctx-size','8192','--batch-size','8192','--ubatch-size','8192',
+                 '--embedding','--pooling','last','--ctx-size','2048','--batch-size','1024','--ubatch-size','1024',
                  '--parallel','1','--threads',str(threads),'--threads-batch',str(threads),'--n-gpu-layers','0','--host','127.0.0.1','--port','8137',
                  '--flash-attn','off','--cache-type-k','f32','--cache-type-v','f32',
                  '--no-webui','--no-cache-prompt','--cache-ram','0','--slots','--slot-save-path',str(logs/'slots')]
@@ -75,7 +78,8 @@ class Qwen:
         (logs/'server-command.json').write_text(json.dumps(command,indent=2)+'\n',encoding='utf-8',newline='\n')
         self.process=subprocess.Popen(command,stdout=self.log,stderr=self.log,creationflags=subprocess.CREATE_NO_WINDOW if os.name=='nt' else 0)
         for _ in range(120):
-            if self.process.poll() is not None:raise RuntimeError('Qwen embedding server failed; inspect local log')
+            if self.process.poll() is not None:
+                self.log.close();raise RuntimeError('Qwen embedding server failed; inspect local log')
             try:
                 with urllib.request.urlopen(self.url+'/health',timeout=1) as response:
                     if response.status==200:break
