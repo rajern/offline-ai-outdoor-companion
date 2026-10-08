@@ -5,11 +5,14 @@ plan, conditional on scorer and runtime checks. This supersedes the older
 foundation preparation-only gate. Original gold, references and V1/V2 outputs
 remain unchanged. Holdout, production settings and answer generation are excluded.
 
-**Current status: Qwen stability blocker resolved; optimization not started.**
+**Current status: resumed optimization blocked by available RAM before phase A.**
 Explicit CPU isolation passes the unchanged repeatability probe and a bounded
 four-query/24-synthetic-passage ranking check. See the
-[stability report](qwen_embedding_stability_report.v1.md). Full orchestration and
-resources remain unverified; the latest task stops after diagnostics. No development
+[stability report](qwen_embedding_stability_report.v1.md). The owner subsequently
+authorized A → B → C without intermediate approvals. Orchestration is implemented
+and technically tested, but model preflight stopped when MiniLM left only 244.6 MiB
+available RAM (reserve: 256 MiB). See the [resumed report](retrieval_optimization_report.v2.md).
+No development
 retrieval or configuration comparison was run. The preceding failure is preserved in the
 [report](retrieval_optimization_report.v1.md) and
 [machine-readable results](retrieval_optimization_preflight_results.v1.json).
@@ -65,14 +68,14 @@ peak working sets, not simultaneous sampled RSS; raw records remain unchanged.
 
 `retrieval_optimization.v1.json` defines the planned 3 + 25 + 3 configurations,
 threshold calculation and P1/P2/P3 rules. `run_retrieval_optimization_v1.py` is a
-**phase-A prototype**, with tested atomic packing and stop gates. It refuses to
+**staged A/B/C runner**, with tested atomic packing, threshold freeze and stop gates. It refuses to
 freeze while the latest probe of any named model fails. It preserves the existing MiniLM
 document vectors and would tokenize the unchanged grounded prompt using the
 locked GGUF/tokenizer, without generation. The proposed snapshot workspace
 explicitly copies only development/code/corpus inputs; it contains no holdout.
 Python workers reject attempts to open or traverse the holdout. This is a process
 guard, not an OS security boundary. The experiment workspace has not been created
-because the preflight gate failed.
+because the resource preflight failed.
 
 The Qwen adapter now explicitly disables devices, operation offload and KV
 offload; zero GPU layers alone did not isolate the old runtime. The unchanged
@@ -80,9 +83,28 @@ original probe passes in attempt 06. `diagnose_qwen_stability.py` refuses to
 overwrite its frozen local plan and records repeats, token IDs, cosine, ranking,
 top-k membership and boundary crossings. No judge or optimizer is called.
 
-Before resuming, verify available RAM (only 51 MB remained in the last probe). Full phase
-B/C orchestration, actual embedding truncation/resource accounting and finalist
-source checks remain unfinished. Do not bypass the gate to run two models, select
+The runner now accounts exact embedding inputs, uses serial short-lived model
+workers, verifies source/context/prompt hashes and tokenizer caches, and freezes
+the per-model top16 linear percentiles before B. Qwen retains the CPU flags;
+proposed capacities are context 2048, batch/ubatch 1024. The intermediate 2048/2048
+buffer probe passed unchanged numerical tolerance, but the final 1024-batch model
+preflight was not reached. Full real-corpus execution and finalist source checks
+are consequently unverified. 43 local technical tests passed; a mocked full driver
+checks exactly 31 configurations. These tests are not model-quality evaluations.
+
+Before resuming, free sufficient host RAM. Operational limits were fixed before
+quality results: 256 MiB available reserve and 4 GiB process-tree RSS. Preserve
+the failed preflight and explicitly retry only after the resource state changes:
+
+```powershell
+knowledge/local/optimization-env/Scripts/python.exe evals/run_retrieval_optimization_v1.py run --retry-technical
+```
+
+This preserves each failed attempt and archives the preceding summary. It cannot
+replace preflight identities after experiment freeze. After a successful freeze,
+ordinary `run` verifies identities and resumes existing indices, contexts and
+sealed scores; review, failed judge calls or quota errors remain blocking.
+Do not bypass the gate to run two models, select
 a winner or implement production changes. Exact backend Sol revision remains
 unreported by CLI JSONL, as in V2; requested/catalog model and Medium are verified.
 No subscription-limit share or unlimited capacity is inferred from token counts.

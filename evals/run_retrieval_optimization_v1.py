@@ -345,16 +345,19 @@ def probe_model(name):
     if not success:raise RuntimeError('Model technical/resource preflight failed: '+name)
 
 
-def technical():
+def technical(*,retry=False):
     import run_judge_regression_v3 as regression
     regression.verify()
     target=BASE/'technical-preflight';target.mkdir(exist_ok=True)
     code_hashes={str(p.relative_to(s.ROOT)):file_hash(p) for p in CODE}
     if (target/'summary.json').exists():
         record=s.runtime.read(target/'summary.json')
-        if record['code_hashes']!=code_hashes:raise RuntimeError('Technical preflight frozen under different code; use a new version, never overwrite')
-        if record['passed']:return
-        raise RuntimeError('Existing technical blocker must be explicitly reconciled')
+        if record['passed'] and record['code_hashes']==code_hashes:return
+        if not retry:raise RuntimeError('Recorded technical blocker/code change; free RAM then explicitly use --retry-technical before freeze')
+        if RUN.exists():raise RuntimeError('Cannot replace technical identities after the experiment freeze')
+        history=target/'summary-history';history.mkdir(exist_ok=True)
+        saved=history/(s.digest(record)+'.json')
+        if not saved.exists():s.runtime.write(saved,record)
     # Check auth/identity and sealed existing results without a new judge call.
     with s.runtime.JudgeLock():
         s.runtime.recover_active();pre=s.runtime.preflight();ident=s.identity(pre)
@@ -377,7 +380,7 @@ def technical():
         'code_hashes':code_hashes,'results':results,'cached_regression_checks':cached,'actual_judge_calls':0,
         'judge_identity':ident,'resource_limits':{'ram_reserve':RAM_RESERVE,'rss_limit':RSS_LIMIT},
         'failure':failure,'holdout_accessed':False}
-    s.runtime.write(target/'summary.json',summary)
+    s.runtime.write(target/'summary.json',summary,replace=retry)
     if not summary['passed']:raise RuntimeError('Technical preflight blocked: '+str(failure))
 
 
@@ -433,8 +436,8 @@ def configuration(config_id):
     return {**known[0],'model':b['model'],'k':b['k'],'threshold':b['threshold']}
 
 
-def run_all():
-    technical()
+def run_all(*,retry_technical=False):
+    technical(retry=retry_technical)
     if not RUN.exists():freeze()
     if not (RUN/'started.json').exists():
         s.runtime.write(RUN/'started.json',{'started_at':s.runtime.now(),
@@ -465,10 +468,11 @@ if __name__=='__main__':
     parser.add_argument('--model',choices=['minilm','gemma2','qwen3-q4'])
     parser.add_argument('--config-id')
     parser.add_argument('--worker',action='store_true',help=argparse.SUPPRESS)
+    parser.add_argument('--retry-technical',action='store_true',help='Explicit resource-preflight retry before freeze; preserve all previous attempts')
     args=parser.parse_args()
     def dispatch():
-        if args.command=='run':run_all()
-        elif args.command=='technical':technical()
+        if args.command=='run':run_all(retry_technical=args.retry_technical)
+        elif args.command=='technical':technical(retry=args.retry_technical)
         elif args.command=='probe':probe_model(args.model)
         elif args.command=='freeze':freeze()
         elif args.command=='verify':verify()

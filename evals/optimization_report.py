@@ -74,7 +74,7 @@ def export(base,run,*,status,error=None):
     s.runtime.write(s.ROOT/'evals/retrieval_optimization_results.v2.json',data,replace=True)
     lines=['# Retrieval optimization — resumed M2-06','',f'2026-10-08. **Status: {status}. {data["completed_configurations"]}/31 configurations complete.**','']
     if error:lines+=['Execution stopped at the documented gate: '+error,'']
-    lines+=['Gold, original references and V3 scoring are unchanged. Qwen uses explicit CPU isolation; context capacity is 2048 and batch/ubatch 1024 to reduce memory. Exact model-input lengths are checked before embedding; no Qwen input is silently truncated.','',
+    lines+=['Gold, original references and V3 scoring are unchanged. The proposed Qwen runtime retains explicit CPU isolation; context capacity is 2048 and batch/ubatch 1024 to reduce memory. Code checks exact model-input lengths before embedding and refuses overflow. A failed early preflight does not verify the input audit or runtime of later models.','',
         'The runner implements the frozen A → B → C sequence, linear pooled top16 percentile thresholds, whole-passage packing, exact-context cache reuse, exclusive execution and checked resume. A stage choice conservatively protects every covered requirement and every misleading/conflict/geography finding per case; unresolved or material tradeoffs stop advancement.','',
         '## All planned configurations','',
         '| Configuration | Model | k | Threshold | Packing | Retrieved / judged | Status | Micro25 / macro25 / complete25 |','|---|---|---:|---|---|---|---|---|']

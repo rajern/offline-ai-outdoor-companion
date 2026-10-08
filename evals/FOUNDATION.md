@@ -6,7 +6,10 @@ below is retained as history. Separate adjudication and scorer regression passed
 the previous execution stopped at the Qwen Q4 runtime probe. Bounded follow-up
 diagnostics now pass with explicit CPU isolation; see
 [`qwen_embedding_stability_report.v1.md`](qwen_embedding_stability_report.v1.md).
-The latest task stops after diagnostics, with no optimization started. See the earlier
+The owner then authorized the existing 31-stage optimization. The resumed task
+stopped before phase A at the RAM preflight; see
+[`retrieval_optimization_report.v2.md`](retrieval_optimization_report.v2.md).
+No optimization configurations were run. See the earlier
 [`retrieval_optimization_report.v1.md`](retrieval_optimization_report.v1.md).
 This grants no control-set access or final product/safety approval.
 

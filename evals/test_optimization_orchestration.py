@@ -71,5 +71,61 @@ class OrchestrationTests(unittest.TestCase):
             (target/'stdout.txt').write_text('[1,3]',encoding='utf-8')
             with self.assertRaisesRegex(ValueError,'hash'):counter.count(text)
 
+    def test_technical_retry_cannot_change_identities_after_experiment_freeze(self):
+        with tempfile.TemporaryDirectory(dir=r.s.runtime.LOCAL) as folder:
+            base=Path(folder);run=base/'experiment';run.mkdir()
+            path=base/'technical-preflight/summary.json'
+            record={'passed':False,'code_hashes':{},'failure':'memory reserve'}
+            r.s.runtime.write(path,record)
+            with patch.object(r,'BASE',base),patch.object(r,'RUN',run),patch.object(r,'CODE',[]), \
+                 patch('run_judge_regression_v3.verify'):
+                with self.assertRaisesRegex(RuntimeError,'after the experiment freeze'):r.technical(retry=True)
+            self.assertEqual(r.s.runtime.read(path),record)
+
+    def test_explicit_prefreeze_retry_preserves_previous_failure(self):
+        with tempfile.TemporaryDirectory(dir=r.s.runtime.LOCAL) as folder:
+            base=Path(folder);run=base/'experiment'
+            old={'passed':False,'code_hashes':{},'failure':'memory reserve'}
+            r.s.runtime.write(base/'technical-preflight/summary.json',old)
+            r.s.runtime.write(base/'regression/judge-identity.json',{})
+            r.s.runtime.write(base/'regression/plan.json',[])
+            def fake_worker(command,model):
+                r.s.runtime.write(base/'technical-preflight'/model/'attempt-01/result.json',{'model':model,'success':True})
+            with patch.object(r,'BASE',base),patch.object(r,'RUN',run),patch.object(r,'CODE',[]), \
+                 patch('run_judge_regression_v3.verify'),patch.object(r.s.runtime,'preflight',return_value={}), \
+                 patch.object(r.s,'identity',return_value={}),patch.object(r.s.runtime,'recover_active'), \
+                 patch.object(r,'worker',side_effect=fake_worker):
+                r.technical(retry=True)
+            history=list((base/'technical-preflight/summary-history').glob('*.json'))
+            self.assertEqual(len(history),1)
+            self.assertEqual(r.s.runtime.read(history[0]),old)
+            self.assertTrue(r.s.runtime.read(base/'technical-preflight/summary.json')['passed'])
+            self.assertFalse(run.exists())
+
+    def test_full_driver_runs_exactly_31_and_freezes_threshold_before_phase_b(self):
+        with tempfile.TemporaryDirectory(dir=r.s.runtime.LOCAL) as folder:
+            base=Path(folder);run=base/'experiment';calls=[]
+            plan={'phase_a':[{'id':'A-'+m,'model':m,'k':8,'threshold':None,'packing':'P2'} for m in ['minilm','gemma2','qwen3-q4']],
+                'phase_b':[{'id':f'B-k{k}-{t}','k':k,'threshold_name':t,'packing':'P2'} for k in [3,5,8,12,16] for t in ['none','p10','p30','p50','p70']],
+                'phase_c':[{'id':'C-'+p,'packing':p} for p in ['P1','P2','P3']]}
+            def freeze():
+                run.mkdir();r.s.runtime.write(run/'plan.json',plan)
+            def fake_worker(command,model=None,config_id=None):
+                calls.append((command,model,config_id))
+                if config_id and config_id.startswith('B-'):self.assertTrue((run/'thresholds.json').exists())
+                if command=='retrieve':r.s.runtime.write(run/'configurations'/config_id/'retrieved-all.json',[])
+            def choice(stage,ids):
+                return {'id':ids[0],'model':'minilm','k':8,'threshold':None,'packing':'P2'}
+            with patch.object(r,'BASE',base),patch.object(r,'RUN',run),patch.object(r,'technical'), \
+                 patch.object(r,'freeze',side_effect=freeze),patch.object(r,'verify'), \
+                 patch.object(r,'worker',side_effect=fake_worker),patch.object(r,'stage_choice',side_effect=choice), \
+                 patch.object(r,'verify_rows',return_value=[{'candidates_top16':[{'score':i/20} for i in range(16)]}]*25):
+                r.run_all()
+            retrieved=[c[2] for c in calls if c[0]=='retrieve'];scored=[c[2] for c in calls if c[0]=='score']
+            self.assertEqual(retrieved,scored)
+            self.assertEqual(len(retrieved),31)
+            self.assertEqual(len(set(retrieved)),31)
+            self.assertEqual([sum(c.startswith(prefix) for c in retrieved) for prefix in ['A-','B-','C-']],[3,25,3])
+
 
 if __name__=='__main__':unittest.main()

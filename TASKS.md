@@ -288,6 +288,14 @@ unchanged original check in a new process and stable synthetic top-k membership.
 See `evals/qwen_embedding_stability_report.v1.md`. No optimization was started;
 full orchestration and resources remain unverified. M2-06 stays open.
 
+The owner then authorized resuming all 31 configurations after technical checks.
+A/B/C orchestration, memory guards and checked resume are implemented; 43 local
+tests pass, including a mocked exact-31 driver. Real execution stopped before
+phase A when MiniLM left only 244.6 MiB available RAM, below the frozen 256 MiB
+reserve. No new judge calls or configurations were run. See
+`evals/retrieval_optimization_report.v2.md`. Live full-flow validation, resource
+capacity and finalist source review remain unverified; M2-06 stays open.
+
 Replace development fixtures in the main RAG flow with the approved Outwise knowledge base.
 
 Requirements:

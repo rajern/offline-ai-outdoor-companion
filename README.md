@@ -59,7 +59,10 @@ preflight before any configuration ran. See the
 The bounded follow-up fixed Qwen repeatability with explicit CPU isolation;
 the unchanged original check passes. See the
 [stability report](evals/qwen_embedding_stability_report.v1.md).
-Optimization has not started, and full orchestration/resources remain unverified.
+The owner authorized resuming the 31-configuration plan. Orchestration is now
+implemented and technically tested, but execution stopped at the available-RAM
+preflight before any configuration ran. See the
+[resumed report](evals/retrieval_optimization_report.v2.md).
 
 ## Local setup
 

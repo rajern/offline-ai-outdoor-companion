@@ -6,9 +6,11 @@ Den eldre status-/godkjenningsporten nedenfor beskriver overleveringen før denn
 instruksjonen. Scorerregresjonen består. Etterfølgende avgrenset diagnostikk
 rettet Qwen Q4s reproducerbarhet med eksplisitt CPU-isolasjon; se
 [`stabilitetsrapporten`](../evals/qwen_embedding_stability_report.v1.md).
-Siste oppdrag stopper etter diagnostikk, uten å starte fase A/B/C. Full
-orkestrering og ressurskapasitet er fortsatt uferdig. Ingen av de 31
-konfigurasjonene er kjørt. Se den tidligere
+Eieren har deretter godkjent gjenopptakelse av A/B/C etter tekniske kontroller,
+uten mellomgodkjenninger. Orkestreringen er implementert og teknisk testet;
+minnekontrollen stoppet allerede ved MiniLM (244,6 MiB ledig, krav 256 MiB).
+Full faktisk gjennomføring er dermed uverifisert. Ingen av de 31 konfigurasjonene
+er kjørt. Se [ny rapport](../evals/retrieval_optimization_report.v2.md) og den tidligere
 [`evals/retrieval_optimization_report.v1.md`](../evals/retrieval_optimization_report.v1.md).
 Holdout, produksjonsendring og svargenerering er fortsatt utelukket.
 

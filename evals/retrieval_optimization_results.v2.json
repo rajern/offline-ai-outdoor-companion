@@ -1,0 +1,715 @@
+{
+  "date": "2026-10-08",
+  "status": "blocked",
+  "error": "Available-RAM reserve failed while loading MiniLM: 244.6 MiB available < 256 MiB required.",
+  "planned_configurations": 31,
+  "completed_configurations": 0,
+  "development_cases": 25,
+  "legacy_cases": 15,
+  "technical_preflight": {
+    "passed": false,
+    "code_hashes": {
+      "evals\\retrieval_optimization_scoring.py": "bbef04365c179eb9eb6ee5f196620449af8bacf1737d3f5f51ac7fd8b01c203c",
+      "evals\\codex_judge_runtime.py": "b2aafbb822cf2736eb8b71e53b55fc7dc174cb54283d34933b2934814dd5c60f",
+      "evals\\retrieval_judge_pilot.py": "245880c6f4f5a11e356da9646d71a9d10ba721e80a2cd409b92b42b45e71812e",
+      "evals\\automatic_retrieval_scoring.py": "8e40cfd2cdba52c7666e7a846494be674f8238f935f69209e7159323a3ce4d5a",
+      "evals\\eval_foundation.py": "6cc3e4215ca5e215616b2417f48931df1add60a84875141d890057863e4f76d9",
+      "evals\\run_retrieval_optimization_v1.py": "75e28a93f3cb83300d772110e638cc9f353079e04b1203da70035226eb291e52",
+      "evals\\optimization_embeddings.py": "6d3e83f5f41617a7d82a86e6eb0d4af8341b1ced8e6f1fb992c466d828401593",
+      "evals\\optimization_resources.py": "911245eb0d4679caf303240d7e9ebfc8aa6eefdc503d781c3d190ede805cb552",
+      "evals\\optimization_report.py": "7e420d2202290d3fc27ed94992480b742403a7163f80759841d6f5b6ffcdb3e8",
+      "evals\\retrieval_optimization.v1.json": "968cd0065cb9c5b952854d8ca5ed6477c5a32d77cf66914296d6a20a46b3d936",
+      "evals\\retrieval_judge_prompt.v3.md": "1e7ef4df845219735008d4a8a2fa2b62ab03e427d70bb2c8d1e1648a14858336",
+      "evals\\retrieval_judge_output.schema.v2.json": "a1881edcdd6b33bbc333cf7f86a9a1fad9ee0e7a1ebac6bdbf72194eb01c7aaf",
+      "evals\\retrieval_adjudication.v1.json": "9f9a8c7b5f4ffd2b0078238df7c75d699d74a0a9406eb4f917c8e55043a18cbd"
+    },
+    "results": [
+      {
+        "model": "minilm",
+        "success": false,
+        "resources": {
+          "elapsed_seconds": 4.4904655000000275,
+          "peak_process_tree_rss_bytes": 644067328,
+          "minimum_available_ram_bytes": 256479232,
+          "cpu_seconds": 4.296875,
+          "sample_interval_seconds": 0.1,
+          "memory_method": "sampled simultaneous process-tree RSS"
+        },
+        "error": "Resource guard: process RSS limit or available RAM reserve exceeded",
+        "error_type": "RuntimeError"
+      }
+    ],
+    "cached_regression_checks": 22,
+    "actual_judge_calls": 0,
+    "judge_identity": {
+      "prompt_sha256": "1e7ef4df845219735008d4a8a2fa2b62ab03e427d70bb2c8d1e1648a14858336",
+      "schema_sha256": "a1881edcdd6b33bbc333cf7f86a9a1fad9ee0e7a1ebac6bdbf72194eb01c7aaf",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "authentication": "chatgpt_subscription",
+      "cli_version": "codex-cli 0.162.0-alpha.2",
+      "catalog_model": "gpt-6.1-sol",
+      "actual_server_revision": null,
+      "settings": {
+        "ephemeral": true,
+        "tools": false,
+        "timeout_seconds": 240,
+        "forced_auth_method": "chatgpt"
+      },
+      "code_hashes": {
+        "evals\\retrieval_optimization_scoring.py": "bbef04365c179eb9eb6ee5f196620449af8bacf1737d3f5f51ac7fd8b01c203c",
+        "evals\\codex_judge_runtime.py": "b2aafbb822cf2736eb8b71e53b55fc7dc174cb54283d34933b2934814dd5c60f",
+        "evals\\retrieval_judge_pilot.py": "245880c6f4f5a11e356da9646d71a9d10ba721e80a2cd409b92b42b45e71812e",
+        "evals\\automatic_retrieval_scoring.py": "8e40cfd2cdba52c7666e7a846494be674f8238f935f69209e7159323a3ce4d5a",
+        "evals\\eval_foundation.py": "6cc3e4215ca5e215616b2417f48931df1add60a84875141d890057863e4f76d9"
+      },
+      "validator_versions": {
+        "jsonschema": "4.26.0",
+        "PyYAML": "6.0.3"
+      }
+    },
+    "resource_limits": {
+      "ram_reserve": 268435456,
+      "rss_limit": 4294967296
+    },
+    "failure": "probe-minilm failed; inspect knowledge\\local\\diagnostics\\retrieval-optimization-v1-2026-10-08\\worker-logs\\probe-minilm-001.log",
+    "holdout_accessed": false
+  },
+  "configurations": [
+    {
+      "configuration": {
+        "id": "A-minilm",
+        "phase": "A",
+        "model": "minilm",
+        "k": 8,
+        "threshold": null,
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "A-gemma2",
+        "phase": "A",
+        "model": "gemma2",
+        "k": 8,
+        "threshold": null,
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "A-qwen3-q4",
+        "phase": "A",
+        "model": "qwen3-q4",
+        "k": 8,
+        "threshold": null,
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k3-none",
+        "phase": "B",
+        "model": null,
+        "k": 3,
+        "threshold_name": "none",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k3-p10",
+        "phase": "B",
+        "model": null,
+        "k": 3,
+        "threshold_name": "p10",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k3-p30",
+        "phase": "B",
+        "model": null,
+        "k": 3,
+        "threshold_name": "p30",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k3-p50",
+        "phase": "B",
+        "model": null,
+        "k": 3,
+        "threshold_name": "p50",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k3-p70",
+        "phase": "B",
+        "model": null,
+        "k": 3,
+        "threshold_name": "p70",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k5-none",
+        "phase": "B",
+        "model": null,
+        "k": 5,
+        "threshold_name": "none",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k5-p10",
+        "phase": "B",
+        "model": null,
+        "k": 5,
+        "threshold_name": "p10",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k5-p30",
+        "phase": "B",
+        "model": null,
+        "k": 5,
+        "threshold_name": "p30",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k5-p50",
+        "phase": "B",
+        "model": null,
+        "k": 5,
+        "threshold_name": "p50",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k5-p70",
+        "phase": "B",
+        "model": null,
+        "k": 5,
+        "threshold_name": "p70",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k8-none",
+        "phase": "B",
+        "model": null,
+        "k": 8,
+        "threshold_name": "none",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k8-p10",
+        "phase": "B",
+        "model": null,
+        "k": 8,
+        "threshold_name": "p10",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k8-p30",
+        "phase": "B",
+        "model": null,
+        "k": 8,
+        "threshold_name": "p30",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k8-p50",
+        "phase": "B",
+        "model": null,
+        "k": 8,
+        "threshold_name": "p50",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k8-p70",
+        "phase": "B",
+        "model": null,
+        "k": 8,
+        "threshold_name": "p70",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k12-none",
+        "phase": "B",
+        "model": null,
+        "k": 12,
+        "threshold_name": "none",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k12-p10",
+        "phase": "B",
+        "model": null,
+        "k": 12,
+        "threshold_name": "p10",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k12-p30",
+        "phase": "B",
+        "model": null,
+        "k": 12,
+        "threshold_name": "p30",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k12-p50",
+        "phase": "B",
+        "model": null,
+        "k": 12,
+        "threshold_name": "p50",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k12-p70",
+        "phase": "B",
+        "model": null,
+        "k": 12,
+        "threshold_name": "p70",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k16-none",
+        "phase": "B",
+        "model": null,
+        "k": 16,
+        "threshold_name": "none",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k16-p10",
+        "phase": "B",
+        "model": null,
+        "k": 16,
+        "threshold_name": "p10",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k16-p30",
+        "phase": "B",
+        "model": null,
+        "k": 16,
+        "threshold_name": "p30",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k16-p50",
+        "phase": "B",
+        "model": null,
+        "k": 16,
+        "threshold_name": "p50",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "B-k16-p70",
+        "phase": "B",
+        "model": null,
+        "k": 16,
+        "threshold_name": "p70",
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "C-P1",
+        "phase": "C",
+        "model": null,
+        "k": null,
+        "threshold": null,
+        "packing": "P1"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "C-P2",
+        "phase": "C",
+        "model": null,
+        "k": null,
+        "threshold": null,
+        "packing": "P2"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    },
+    {
+      "configuration": {
+        "id": "C-P3",
+        "phase": "C",
+        "model": null,
+        "k": null,
+        "threshold": null,
+        "packing": "P3"
+      },
+      "status": "not_run",
+      "retrieved_cases": 0,
+      "judged_cases": 0,
+      "full25": null,
+      "legacy15": null,
+      "resources": null,
+      "review_cases": [],
+      "partial_decisions": []
+    }
+  ],
+  "indices": {},
+  "provisional_stage_choices": {},
+  "thresholds": null,
+  "consumption": {
+    "actual_calls": 0,
+    "successful_calls": 0,
+    "cache_hits": 0,
+    "avoided_calls": 0,
+    "usage": {},
+    "sum_call_seconds": 0,
+    "unknown_usage_calls": 0,
+    "errors": [],
+    "billing": "ChatGPT subscription",
+    "paid_api_calls": 0,
+    "estimated_api_cost_usd": null
+  },
+  "holdout_accessed": false,
+  "production_changed": false,
+  "generation_calls": 0,
+  "recommendation": null,
+  "historical_legacy15_reference": {
+    "B8_original_manual_coverage": "34/51",
+    "complete_supported_cases": "7/13",
+    "scope": "original 15 only; historical manual judgments differ from current V3 and adjudication; not a controlled delta"
+  },
+  "limitations": [
+    "Development/calibration, not independent product/safety validation.",
+    "No mobile hardware benchmark; CPU/RAM and tokenizer measure this Windows machine.",
+    "Exact judge server revision not exposed by CLI; frozen requested/catalog identity is gpt-6.1-sol Medium.",
+    "Orchestration code changed after the recorded failed preflight only to add tested explicit retry and preserve the prior failure; the exact tested source is saved. No new live trial was made after the memory stop."
+  ],
+  "baseline_commit": "1593c4e",
+  "preflight_code_commit": "fbddec4",
+  "code_snapshot": "knowledge/local/diagnostics/retrieval-optimization-v1-2026-10-08/technical-preflight/code-at-attempt-01",
+  "post_stop_machine_memory": [
+    {
+      "total": 14702026752,
+      "available": 385740800,
+      "used": 14316285952
+    },
+    {
+      "total": 14702026752,
+      "available": 445313024,
+      "used": 14256713728
+    },
+    {
+      "total": 14702026752,
+      "available": 487043072,
+      "used": 14214983680
+    }
+  ],
+  "local_tests": {
+    "orchestration_and_resume": 12,
+    "packing": 5,
+    "qwen_stability_adapter": 5,
+    "scoring_cache": 7,
+    "judge_runtime": 14,
+    "total_passed": 43,
+    "full_driver": "mocked 31, not actual retrieval configurations"
+  },
+  "intermediate_qwen_buffer_probe": {
+    "configuration": "context 2048 / batch 2048 / ubatch 2048, strict CPU",
+    "original_tolerance_pass": true,
+    "elapsed_seconds": 5.183554099872708,
+    "peak_process_tree_rss_bytes": 1272336384,
+    "minimum_available_ram_bytes": 206307328,
+    "embedding_requests": 6,
+    "final_1024_batch_runtime_verified": false
+  },
+  "scorer_corrections": "Unchanged V3/adjudication: universal applicable implication for case05; call AND guidance for case08 with route3 disabled; paragraph-level municipal-care irrelevance for case09.",
+  "remaining_verification": [
+    "Final low-buffer Qwen original repeatability and complete input audit.",
+    "Gemma/MiniLM source-input and long-input accounting after resource guard passes.",
+    "All real retrieval configurations, stage choices, full context/token/provenance audit and final source review."
+  ],
+  "resume": "Free sufficient RAM, then explicitly run --retry-technical before freeze; archives previous summary and appends attempts.",
+  "no_quality_results_observed": true
+}

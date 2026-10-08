@@ -5,8 +5,11 @@ optimization are authorized after the specified scorer/runtime prechecks. This
 supersedes the preparation-only scope below; original gold/references remain
 immutable. Subsequent bounded diagnostics resolved the Qwen repeatability blocker
 with explicit CPU isolation; see `qwen_embedding_stability_report.v1.md`. The
-latest owner task stops after diagnostics: do not start optimization in that task.
-Full orchestration/resources remain unverified. See `RETRIEVAL_OPTIMIZATION.md`. Holdout,
+owner subsequently authorized resuming the existing 31 configurations after
+technical/resource checks, without intermediate approvals. The resumed task
+stopped before phase A at the available-RAM guard; see
+`retrieval_optimization_report.v2.md` and `RETRIEVAL_OPTIMIZATION.md`. Full live
+execution and finalist review remain unverified. Holdout,
 production changes and answer generation remain excluded.
 
 Read `FOUNDATION.md` before future retrieval optimization. Default input is the
