@@ -1,0 +1,86 @@
+{
+  "version": "2.0.0",
+  "scope": "Original pilot case 08 only; no extra judge calls",
+  "reviewer": "Codex development agent, not independent human expert",
+  "status": "Owner adjudication needed; original gold/references/certificates unchanged",
+  "records": [
+    {
+      "case_id": "case-08",
+      "configuration": "A",
+      "pilot_context_id": "context-26",
+      "context_sha256": "f406ab72251554e04c309ef6f340d593a0383a34ecdfa639bd217af6a38d092b",
+      "item": 1,
+      "historical_reference_covered": true,
+      "developer_source_review": "not_covered",
+      "missing_component": "Veiledning fra 113.",
+      "reference_issue": true,
+      "existing_certificate_decision": "covered",
+      "certificate_issue": true,
+      "basis": "Only the call instruction is delivered; the outbound article link does not supply guidance text."
+    },
+    {
+      "case_id": "case-08",
+      "configuration": "B",
+      "pilot_context_id": "context-06",
+      "context_sha256": "7ac902bfd6f2263a0aee1d4fcbd3fea037c71425ca8fb6bb4fe39ee675237c8e",
+      "item": 1,
+      "historical_reference_covered": true,
+      "developer_source_review": "not_covered",
+      "missing_component": "Veiledning fra 113.",
+      "reference_issue": true,
+      "existing_certificate_decision": "covered",
+      "certificate_issue": true,
+      "basis": "Only the call instruction is delivered; the outbound article link does not supply guidance text."
+    },
+    {
+      "case_id": "case-08",
+      "configuration": "B8",
+      "pilot_context_id": "context-01",
+      "context_sha256": "bf8de2e3bf8a207826b720c34d8f809f34d4e4a663771ac1fbb6a483bda83a3a",
+      "item": 1,
+      "historical_reference_covered": true,
+      "developer_source_review": "covered",
+      "missing_component": null,
+      "reference_issue": false,
+      "existing_certificate_decision": "covered",
+      "certificate_issue": false,
+      "basis": "Delivered block 7 explicitly supplies unconsciousness call and subsequent help."
+    },
+    {
+      "case_id": "case-08",
+      "configuration": "C8",
+      "pilot_context_id": "context-23",
+      "context_sha256": "72321569487035210c9e36f8a0ffd18e05e6d1c2805b68818041b4608de1409f",
+      "item": 1,
+      "historical_reference_covered": true,
+      "developer_source_review": "not_covered",
+      "missing_component": "Veiledning fra 113.",
+      "reference_issue": true,
+      "existing_certificate_decision": "covered",
+      "certificate_issue": true,
+      "basis": "Only the call instruction is delivered; the outbound article link does not supply guidance text."
+    },
+    {
+      "case_id": "case-08",
+      "configuration": "C8U8",
+      "pilot_context_id": "context-03",
+      "context_sha256": "9b6424be4ed3f5b525fcc748399eae1ea1c13b47324ad62736f2c74a527378a4",
+      "item": 1,
+      "historical_reference_covered": true,
+      "developer_source_review": "covered",
+      "missing_component": null,
+      "reference_issue": false,
+      "existing_certificate_decision": "covered",
+      "certificate_issue": false,
+      "basis": "Delivered block 7 explicitly supplies unconsciousness call and subsequent help."
+    }
+  ],
+  "certificate_route_issue": {
+    "file": "evals/retrieval_evidence_certificates.v1.json",
+    "case_id": "case-08",
+    "item": 1,
+    "alternative_index_1based": 3,
+    "finding": "The third route proves calling 113 for unconsciousness but omits the guidance conjunct.",
+    "future_use": "Do not accept this route as a whole-item positive proof before owner-reviewed correction."
+  }
+}
