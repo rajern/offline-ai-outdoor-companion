@@ -283,6 +283,11 @@ local runtime did not pass embedding repeatability. No configurations were run;
 full experiment execution remains unfinished. See
 `evals/retrieval_optimization_report.v1.md`. M2-06 is not complete.
 
+Bounded Qwen stability follow-up passed with explicit CPU isolation, including the
+unchanged original check in a new process and stable synthetic top-k membership.
+See `evals/qwen_embedding_stability_report.v1.md`. No optimization was started;
+full orchestration and resources remain unverified. M2-06 stays open.
+
 Replace development fixtures in the main RAG flow with the approved Outwise knowledge base.
 
 Requirements:

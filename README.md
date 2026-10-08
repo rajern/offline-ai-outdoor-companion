@@ -56,6 +56,11 @@ corrections passed, but local Qwen Q4 embedding repeatability blocked the model
 preflight before any configuration ran. See the
 [optimization preflight report](evals/retrieval_optimization_report.v1.md).
 
+The bounded follow-up fixed Qwen repeatability with explicit CPU isolation;
+the unchanged original check passes. See the
+[stability report](evals/qwen_embedding_stability_report.v1.md).
+Optimization has not started, and full orchestration/resources remain unverified.
+
 ## Local setup
 
 Follow `backend/README.md`, `frontend/README.md` and `docs/MODEL_SETUP.md`.

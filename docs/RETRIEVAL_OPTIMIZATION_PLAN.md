@@ -3,8 +3,12 @@
 **Eieroppdatering, 2026-10-08:** Oppdraget i chatten godkjenner eksisterende
 25 utviklingscaser og betinget kjøring av planen etter scorer-/runtimekontroll.
 Den eldre status-/godkjenningsporten nedenfor beskriver overleveringen før denne
-instruksjonen. Scorerregresjonen består, men Qwen Q4-runtime blokkerer fase A;
-ingen av de 31 konfigurasjonene er kjørt. Se
+instruksjonen. Scorerregresjonen består. Etterfølgende avgrenset diagnostikk
+rettet Qwen Q4s reproducerbarhet med eksplisitt CPU-isolasjon; se
+[`stabilitetsrapporten`](../evals/qwen_embedding_stability_report.v1.md).
+Siste oppdrag stopper etter diagnostikk, uten å starte fase A/B/C. Full
+orkestrering og ressurskapasitet er fortsatt uferdig. Ingen av de 31
+konfigurasjonene er kjørt. Se den tidligere
 [`evals/retrieval_optimization_report.v1.md`](../evals/retrieval_optimization_report.v1.md).
 Holdout, produksjonsendring og svargenerering er fortsatt utelukket.
 

@@ -5,9 +5,12 @@ plan, conditional on scorer and runtime checks. This supersedes the older
 foundation preparation-only gate. Original gold, references and V1/V2 outputs
 remain unchanged. Holdout, production settings and answer generation are excluded.
 
-**Current status: blocked before phase A.** Qwen Q4_K_M / installed llama.cpp
-did not pass the synthetic embedding repeatability probe. No development
-retrieval or configuration comparison was run. See the
+**Current status: Qwen stability blocker resolved; optimization not started.**
+Explicit CPU isolation passes the unchanged repeatability probe and a bounded
+four-query/24-synthetic-passage ranking check. See the
+[stability report](qwen_embedding_stability_report.v1.md). Full orchestration and
+resources remain unverified; the latest task stops after diagnostics. No development
+retrieval or configuration comparison was run. The preceding failure is preserved in the
 [report](retrieval_optimization_report.v1.md) and
 [machine-readable results](retrieval_optimization_preflight_results.v1.json).
 
@@ -63,7 +66,7 @@ peak working sets, not simultaneous sampled RSS; raw records remain unchanged.
 `retrieval_optimization.v1.json` defines the planned 3 + 25 + 3 configurations,
 threshold calculation and P1/P2/P3 rules. `run_retrieval_optimization_v1.py` is a
 **phase-A prototype**, with tested atomic packing and stop gates. It refuses to
-freeze while any named model probe fails. It preserves the existing MiniLM
+freeze while the latest probe of any named model fails. It preserves the existing MiniLM
 document vectors and would tokenize the unchanged grounded prompt using the
 locked GGUF/tokenizer, without generation. The proposed snapshot workspace
 explicitly copies only development/code/corpus inputs; it contains no holdout.
@@ -71,7 +74,13 @@ Python workers reject attempts to open or traverse the holdout. This is a proces
 guard, not an OS security boundary. The experiment workspace has not been created
 because the preflight gate failed.
 
-Before resuming, resolve and narrowly verify the Qwen runtime problem. Full phase
+The Qwen adapter now explicitly disables devices, operation offload and KV
+offload; zero GPU layers alone did not isolate the old runtime. The unchanged
+original probe passes in attempt 06. `diagnose_qwen_stability.py` refuses to
+overwrite its frozen local plan and records repeats, token IDs, cosine, ranking,
+top-k membership and boundary crossings. No judge or optimizer is called.
+
+Before resuming, verify available RAM (only 51 MB remained in the last probe). Full phase
 B/C orchestration, actual embedding truncation/resource accounting and finalist
 source checks remain unfinished. Do not bypass the gate to run two models, select
 a winner or implement production changes. Exact backend Sol revision remains

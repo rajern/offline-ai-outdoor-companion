@@ -1,0 +1,508 @@
+{
+  "date": "2026-10-08",
+  "baseline_commit": "7854769",
+  "implementation_commit": "c7d3c3b",
+  "recommendation": "A",
+  "scope": "embedding stability only; no retrieval quality evaluation",
+  "confirmed": "Explicit CPU isolation with device none / no operation offload / no KV offload eliminated the measured variation.",
+  "most_likely_cause": "Previously allowed accelerator/offload path; exact flag, kernel and hardware attribution not isolated.",
+  "historical_unfixed_top_k_impact": "not measured; old logs preserve vector variability only",
+  "plan_sha256": "60f1374853f1134d06cdbaacb23eea3a6ed4107a8a8df34847247300bd2927a5",
+  "runtime": {
+    "build": 11193,
+    "commit": "4e7481175",
+    "sha256": "eba08aa1a6ad397e8954874ca58f62271cf15ab45a85d6f1f59176a47cabd6c2"
+  },
+  "settings": {
+    "model_sha256": "470901844f8cb73a3e0479ea1dd57ad1baba7072481f1897b2dc4b132b9051a7",
+    "pooling": "last",
+    "threads": 4,
+    "threads_batch": 4,
+    "ctx_size": 8192,
+    "batch_size": 8192,
+    "ubatch_size": 8192,
+    "parallel": 1,
+    "device": "none",
+    "operation_offload": false,
+    "kv_offload": false,
+    "flash_attention": "off",
+    "cache_type_k": "f32",
+    "cache_type_v": "f32",
+    "cache_prompt": false,
+    "cache_ram": 0,
+    "slot_erased_each_request": true
+  },
+  "fixture": {
+    "queries": 4,
+    "passages": 24,
+    "synthetic": true,
+    "topics": [
+      "cold/wind",
+      "cooking",
+      "water",
+      "thunder"
+    ],
+    "definition": "evals/diagnose_qwen_stability.py; no approved-source redistribution"
+  },
+  "diagnostic": {
+    "condition": "q4-strict-cpu-4threads",
+    "threads": 4,
+    "strict_cpu": true,
+    "model_sha256": "470901844f8cb73a3e0479ea1dd57ad1baba7072481f1897b2dc4b132b9051a7",
+    "snapshot_count": 4,
+    "embedding_requests": 124,
+    "original_test_per_process": [
+      {
+        "passed": true,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "passed": true,
+        "max_absolute_difference": 0.0
+      }
+    ],
+    "identical_token_ids_all_runs": true,
+    "token_counts": [
+      16,
+      19,
+      17,
+      19,
+      20,
+      21,
+      16,
+      17,
+      18,
+      19,
+      18,
+      18,
+      21,
+      19,
+      17,
+      17,
+      17,
+      18,
+      18,
+      21,
+      17,
+      16,
+      17,
+      20,
+      32,
+      24,
+      39,
+      34
+    ],
+    "reported_token_counts_match": true,
+    "raw_l2_norm_range": [
+      0.9999999403953552,
+      1.0
+    ],
+    "elapsed_seconds": 21.31010300014168,
+    "peak_simultaneous_process_tree_rss_bytes": 2687823872,
+    "minimum_machine_available_ram_bytes": 309284864,
+    "cpu_seconds": 72.890625,
+    "pair_count": 6,
+    "query_pair_count": 24,
+    "max_absolute_component_delta": 0.0,
+    "minimum_repeat_cosine": 1.0,
+    "all_pairs_original_tolerance_pass": true,
+    "max_score_delta": 0.0,
+    "order_changes": 0,
+    "top_k_membership_changes": {
+      "3": 0,
+      "5": 0,
+      "8": 0,
+      "16": 0
+    },
+    "threshold_changes": {
+      "3": 0,
+      "5": 0,
+      "8": 0,
+      "16": 0
+    },
+    "vs_first_condition_query_max_delta": 0.0
+  },
+  "first_reference_boundary_checks": [
+    {
+      "query_index": 0,
+      "order_changed": false,
+      "max_score_delta": 0.0,
+      "top_k": {
+        "3": {
+          "membership_changed": false,
+          "order_changed": false,
+          "entered_indices": [],
+          "left_indices": [],
+          "reference_boundary_gap": 0.04349103569984436,
+          "diagnostic_threshold": 0.46645230054855347,
+          "threshold_flip_indices": [],
+          "flip_distances_from_threshold": []
+        },
+        "5": {
+          "membership_changed": false,
+          "order_changed": false,
+          "entered_indices": [],
+          "left_indices": [],
+          "reference_boundary_gap": 0.005943894386291504,
+          "diagnostic_threshold": 0.43007951974868774,
+          "threshold_flip_indices": [],
+          "flip_distances_from_threshold": []
+        },
+        "8": {
+          "membership_changed": false,
+          "order_changed": false,
+          "entered_indices": [],
+          "left_indices": [],
+          "reference_boundary_gap": 0.0011706054210662842,
+          "diagnostic_threshold": 0.4010387063026428,
+          "threshold_flip_indices": [],
+          "flip_distances_from_threshold": []
+        },
+        "16": {
+          "membership_changed": false,
+          "order_changed": false,
+          "entered_indices": [],
+          "left_indices": [],
+          "reference_boundary_gap": 0.0019982457160949707,
+          "diagnostic_threshold": 0.2867969870567322,
+          "threshold_flip_indices": [],
+          "flip_distances_from_threshold": []
+        }
+      }
+    },
+    {
+      "query_index": 1,
+      "order_changed": false,
+      "max_score_delta": 0.0,
+      "top_k": {
+        "3": {
+          "membership_changed": false,
+          "order_changed": false,
+          "entered_indices": [],
+          "left_indices": [],
+          "reference_boundary_gap": 0.0008518099784851074,
+          "diagnostic_threshold": 0.6441209316253662,
+          "threshold_flip_indices": [],
+          "flip_distances_from_threshold": []
+        },
+        "5": {
+          "membership_changed": false,
+          "order_changed": false,
+          "entered_indices": [],
+          "left_indices": [],
+          "reference_boundary_gap": 0.0637175440788269,
+          "diagnostic_threshold": 0.5879619121551514,
+          "threshold_flip_indices": [],
+          "flip_distances_from_threshold": []
+        },
+        "8": {
+          "membership_changed": false,
+          "order_changed": false,
+          "entered_indices": [],
+          "left_indices": [],
+          "reference_boundary_gap": 0.05205151438713074,
+          "diagnostic_threshold": 0.35918092727661133,
+          "threshold_flip_indices": [],
+          "flip_distances_from_threshold": []
+        },
+        "16": {
+          "membership_changed": false,
+          "order_changed": false,
+          "entered_indices": [],
+          "left_indices": [],
+          "reference_boundary_gap": 0.001257568597793579,
+          "diagnostic_threshold": 0.255143940448761,
+          "threshold_flip_indices": [],
+          "flip_distances_from_threshold": []
+        }
+      }
+    },
+    {
+      "query_index": 2,
+      "order_changed": false,
+      "max_score_delta": 0.0,
+      "top_k": {
+        "3": {
+          "membership_changed": false,
+          "order_changed": false,
+          "entered_indices": [],
+          "left_indices": [],
+          "reference_boundary_gap": 0.03627389669418335,
+          "diagnostic_threshold": 0.4739266335964203,
+          "threshold_flip_indices": [],
+          "flip_distances_from_threshold": []
+        },
+        "5": {
+          "membership_changed": false,
+          "order_changed": false,
+          "entered_indices": [],
+          "left_indices": [],
+          "reference_boundary_gap": 0.007466614246368408,
+          "diagnostic_threshold": 0.4472569525241852,
+          "threshold_flip_indices": [],
+          "flip_distances_from_threshold": []
+        },
+        "8": {
+          "membership_changed": false,
+          "order_changed": false,
+          "entered_indices": [],
+          "left_indices": [],
+          "reference_boundary_gap": 0.006989389657974243,
+          "diagnostic_threshold": 0.40128445625305176,
+          "threshold_flip_indices": [],
+          "flip_distances_from_threshold": []
+        },
+        "16": {
+          "membership_changed": false,
+          "order_changed": false,
+          "entered_indices": [],
+          "left_indices": [],
+          "reference_boundary_gap": 0.03186604380607605,
+          "diagnostic_threshold": 0.3133946657180786,
+          "threshold_flip_indices": [],
+          "flip_distances_from_threshold": []
+        }
+      }
+    },
+    {
+      "query_index": 3,
+      "order_changed": false,
+      "max_score_delta": 0.0,
+      "top_k": {
+        "3": {
+          "membership_changed": false,
+          "order_changed": false,
+          "entered_indices": [],
+          "left_indices": [],
+          "reference_boundary_gap": 0.014599055051803589,
+          "diagnostic_threshold": 0.4099559187889099,
+          "threshold_flip_indices": [],
+          "flip_distances_from_threshold": []
+        },
+        "5": {
+          "membership_changed": false,
+          "order_changed": false,
+          "entered_indices": [],
+          "left_indices": [],
+          "reference_boundary_gap": 0.00791943073272705,
+          "diagnostic_threshold": 0.39185601472854614,
+          "threshold_flip_indices": [],
+          "flip_distances_from_threshold": []
+        },
+        "8": {
+          "membership_changed": false,
+          "order_changed": false,
+          "entered_indices": [],
+          "left_indices": [],
+          "reference_boundary_gap": 0.0006802976131439209,
+          "diagnostic_threshold": 0.3777385950088501,
+          "threshold_flip_indices": [],
+          "flip_distances_from_threshold": []
+        },
+        "16": {
+          "membership_changed": false,
+          "order_changed": false,
+          "entered_indices": [],
+          "left_indices": [],
+          "reference_boundary_gap": 0.0020343661308288574,
+          "diagnostic_threshold": 0.25580817461013794,
+          "threshold_flip_indices": [],
+          "flip_distances_from_threshold": []
+        }
+      }
+    }
+  ],
+  "comparison_structure": {
+    "same_process_vector_pairs": 2,
+    "cross_process_vector_pairs": 4,
+    "query_pair_comparisons": 24,
+    "top_k_membership_comparisons": 96,
+    "all_frozen_document_index_score_deltas_zero": true,
+    "threshold_rule": "Per pair, midpoint of reference kth and (k+1)th scores; diagnostic only, not optimization thresholds."
+  },
+  "original_preflight_attempt_06": {
+    "model": "qwen3-q4",
+    "success": true,
+    "elapsed_seconds": 3.885778399882838,
+    "peak_process_tree_rss_bytes": 2682691584,
+    "min_machine_available_ram_bytes": 51093504,
+    "cpu_seconds": 7.890625,
+    "machine_ram_bytes": 14702026752,
+    "cpu_logical": 16,
+    "cpu_physical": 8,
+    "memory_measurement": "maximum sampled simultaneous process-tree RSS, 100 ms; earlier attempts used sum of per-process peak working sets",
+    "versions": {
+      "numpy": "2.5.3",
+      "fastembed": "0.7.4",
+      "onnxruntime": "1.30.0",
+      "torch": "2.14.1",
+      "transformers": "5.19.0",
+      "sentence-transformers": "6.1.0",
+      "psutil": "7.2.2"
+    },
+    "generation_calls": 0,
+    "development_retrieval_calls": 0,
+    "model_identity": {
+      "source_repository": "Qwen/Qwen3-Embedding-0.6B-GGUF",
+      "source_revision": "370f27d7550e0def9b39c1f16d3fbaa13aa67728",
+      "source_sha256": "421a27e58d165478cc7acb984a688c2aa41404968b0203e7cd743ece44c54340",
+      "quantization": "Q4_K_M",
+      "runtime_sha256": "5d950b6969d584eae771bef2b0f98c6644a207b7d73a1a65094407a288c51e01",
+      "output_sha256": "470901844f8cb73a3e0479ea1dd57ad1baba7072481f1897b2dc4b132b9051a7",
+      "size": 396474560
+    },
+    "dimensions": 1024,
+    "repeatability_verified": true,
+    "synthetic_probe_only": true,
+    "model_size_bytes": null
+  },
+  "total_embedding_requests": 130,
+  "elapsed_seconds_sum": 25.19588140002452,
+  "cpu_seconds_sum": 80.78125,
+  "not_run": [
+    "single-thread hypothesis",
+    "F16 reference",
+    "phase A",
+    "phase B",
+    "phase C",
+    "judge",
+    "answer generation",
+    "holdout"
+  ],
+  "local_tests": {
+    "stability": 5,
+    "packing_and_gates": 5,
+    "scoring_cache_and_adjudication": 7,
+    "total_passed": 17
+  },
+  "limitations": [
+    "Short synthetic fixture only; no long-source or full-corpus ranking guarantee.",
+    "Whole-machine available RAM fell to 51093504 bytes; full experiment resources remain unestablished.",
+    "No unfixed-runtime rank measurement or one-flag ablation; neither needed to deploy the small explicit CPU correction.",
+    "The diagnostic source snapshot used explicit CPU kwargs; the default correction was then independently verified by original preflight.",
+    "Initial sandbox localhost startup timed out before embedding calls; its separate original log and plan remain saved."
+  ],
+  "holdout_accessed": false,
+  "judge_calls": 0,
+  "api_calls": 0,
+  "optimization_configurations_run": 0,
+  "production_changed": false,
+  "historical_records_overwritten": false,
+  "artifacts": [
+    {
+      "path": "knowledge/local/diagnostics/qwen-stability-v1-2026-10-08-cpu/code-at-diagnostic-start/diagnose_qwen_stability.py",
+      "sha256": "af5ef6c646edf3c09b5858d68b3acf95704c642324635fc8849ef65800652aa8",
+      "bytes": 13281
+    },
+    {
+      "path": "knowledge/local/diagnostics/qwen-stability-v1-2026-10-08-cpu/code-at-diagnostic-start/optimization_embeddings.py",
+      "sha256": "35ab33983f7b25570c6667a7d451c1e2c6054dd853a81ccf77c2b2d65d6cae1a",
+      "bytes": 5678
+    },
+    {
+      "path": "knowledge/local/diagnostics/qwen-stability-v1-2026-10-08-cpu/plan.json",
+      "sha256": "60f1374853f1134d06cdbaacb23eea3a6ed4107a8a8df34847247300bd2927a5",
+      "bytes": 8928
+    },
+    {
+      "path": "knowledge/local/diagnostics/qwen-stability-v1-2026-10-08-cpu/q4-strict-cpu-4threads/process-0/original-test.npz",
+      "sha256": "1642e336c95e6aab9481d54bed6f11c148507506ec2f23b9f5abd935cf5c87a4",
+      "bytes": 25334
+    },
+    {
+      "path": "knowledge/local/diagnostics/qwen-stability-v1-2026-10-08-cpu/q4-strict-cpu-4threads/process-0/qwen-embedding-server.log",
+      "sha256": "60fdf53d4eda4a398e9b17a0943eb3ea922e3f94bd4f1e9a68ca9ee633579c77",
+      "bytes": 18509
+    },
+    {
+      "path": "knowledge/local/diagnostics/qwen-stability-v1-2026-10-08-cpu/q4-strict-cpu-4threads/process-0/server-command.json",
+      "sha256": "1e6f056079559e8eede55804032210a6c153c22539db647ea82e12cfc83dcf81",
+      "bytes": 1157
+    },
+    {
+      "path": "knowledge/local/diagnostics/qwen-stability-v1-2026-10-08-cpu/q4-strict-cpu-4threads/process-0/snapshot-0.npz",
+      "sha256": "c95c8324989d455102b6ec522eadc8ca0bf9e53b7a33226aace05c28c08dd9b1",
+      "bytes": 230516
+    },
+    {
+      "path": "knowledge/local/diagnostics/qwen-stability-v1-2026-10-08-cpu/q4-strict-cpu-4threads/process-0/snapshot-1.npz",
+      "sha256": "c95c8324989d455102b6ec522eadc8ca0bf9e53b7a33226aace05c28c08dd9b1",
+      "bytes": 230516
+    },
+    {
+      "path": "knowledge/local/diagnostics/qwen-stability-v1-2026-10-08-cpu/q4-strict-cpu-4threads/process-0/tokens-0.json",
+      "sha256": "807ae13399eb40d77558eb80561fa34a9afff08fffc37b1a2abbe3bbdfc15f7d",
+      "bytes": 9931
+    },
+    {
+      "path": "knowledge/local/diagnostics/qwen-stability-v1-2026-10-08-cpu/q4-strict-cpu-4threads/process-0/tokens-1.json",
+      "sha256": "807ae13399eb40d77558eb80561fa34a9afff08fffc37b1a2abbe3bbdfc15f7d",
+      "bytes": 9931
+    },
+    {
+      "path": "knowledge/local/diagnostics/qwen-stability-v1-2026-10-08-cpu/q4-strict-cpu-4threads/process-1/original-test.npz",
+      "sha256": "1642e336c95e6aab9481d54bed6f11c148507506ec2f23b9f5abd935cf5c87a4",
+      "bytes": 25334
+    },
+    {
+      "path": "knowledge/local/diagnostics/qwen-stability-v1-2026-10-08-cpu/q4-strict-cpu-4threads/process-1/qwen-embedding-server.log",
+      "sha256": "f9ca0452d35ad5b57f8ecdeb9236fa983474bd40bd615d79c564c428529e41b9",
+      "bytes": 18508
+    },
+    {
+      "path": "knowledge/local/diagnostics/qwen-stability-v1-2026-10-08-cpu/q4-strict-cpu-4threads/process-1/server-command.json",
+      "sha256": "ec90349e79aaadbff49ea9c393997b263126ad3ac15dec9ce2ed85dba906d211",
+      "bytes": 1157
+    },
+    {
+      "path": "knowledge/local/diagnostics/qwen-stability-v1-2026-10-08-cpu/q4-strict-cpu-4threads/process-1/snapshot-0.npz",
+      "sha256": "c95c8324989d455102b6ec522eadc8ca0bf9e53b7a33226aace05c28c08dd9b1",
+      "bytes": 230516
+    },
+    {
+      "path": "knowledge/local/diagnostics/qwen-stability-v1-2026-10-08-cpu/q4-strict-cpu-4threads/process-1/snapshot-1.npz",
+      "sha256": "c95c8324989d455102b6ec522eadc8ca0bf9e53b7a33226aace05c28c08dd9b1",
+      "bytes": 230516
+    },
+    {
+      "path": "knowledge/local/diagnostics/qwen-stability-v1-2026-10-08-cpu/q4-strict-cpu-4threads/process-1/tokens-0.json",
+      "sha256": "807ae13399eb40d77558eb80561fa34a9afff08fffc37b1a2abbe3bbdfc15f7d",
+      "bytes": 9931
+    },
+    {
+      "path": "knowledge/local/diagnostics/qwen-stability-v1-2026-10-08-cpu/q4-strict-cpu-4threads/process-1/tokens-1.json",
+      "sha256": "807ae13399eb40d77558eb80561fa34a9afff08fffc37b1a2abbe3bbdfc15f7d",
+      "bytes": 9931
+    },
+    {
+      "path": "knowledge/local/diagnostics/qwen-stability-v1-2026-10-08-cpu/q4-strict-cpu-4threads/result.json",
+      "sha256": "a699888c266dada4c39ed8211e26e65ddf7c2000817925a0596a5defb42736da",
+      "bytes": 87053
+    },
+    {
+      "path": "knowledge/local/diagnostics/qwen-stability-v1-2026-10-08-cpu/summary.json",
+      "sha256": "aa8125bfde883474f9cb2c760df39ca030ce882a7476c9c2658442841ab4f0e3",
+      "bytes": 96841
+    },
+    {
+      "path": "knowledge/local/diagnostics/retrieval-optimization-v1-2026-10-08/model-preflight/qwen3-q4/attempt-06/probe-settings.json",
+      "sha256": "a4efd4a73e535f6c1ae70f4b80b464cfe63283142c9d4e735c5e629091b9f380",
+      "bytes": 339
+    },
+    {
+      "path": "knowledge/local/diagnostics/retrieval-optimization-v1-2026-10-08/model-preflight/qwen3-q4/attempt-06/qwen-embedding-server.log",
+      "sha256": "d5c73c84c45d5270f40a4a4822ca82196a76959f9f3b14bee7eff175377ce041",
+      "bytes": 3106
+    },
+    {
+      "path": "knowledge/local/diagnostics/retrieval-optimization-v1-2026-10-08/model-preflight/qwen3-q4/attempt-06/result.json",
+      "sha256": "10009ce4fcf5dc3cad6df7c3b87a9f244cc4c0cf5473a90c8bcf2d94ead373eb",
+      "bytes": 1284
+    },
+    {
+      "path": "knowledge/local/diagnostics/retrieval-optimization-v1-2026-10-08/model-preflight/qwen3-q4/attempt-06/server-command.json",
+      "sha256": "1b5ebe2c0fab8b7aea7486d69d6ccae11221dca81f560ad9c7bbb1117620eb0d",
+      "bytes": 1165
+    }
+  ]
+}

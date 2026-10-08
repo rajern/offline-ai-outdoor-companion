@@ -3,7 +3,10 @@
 Owner update, 2026-10-08: the existing 25-case development set is approved for the
 conditional optimization task. The original preparation-stage approval wording
 below is retained as history. Separate adjudication and scorer regression passed;
-execution is blocked by the Qwen Q4 runtime probe. See
+the previous execution stopped at the Qwen Q4 runtime probe. Bounded follow-up
+diagnostics now pass with explicit CPU isolation; see
+[`qwen_embedding_stability_report.v1.md`](qwen_embedding_stability_report.v1.md).
+The latest task stops after diagnostics, with no optimization started. See the earlier
 [`retrieval_optimization_report.v1.md`](retrieval_optimization_report.v1.md).
 This grants no control-set access or final product/safety approval.
 

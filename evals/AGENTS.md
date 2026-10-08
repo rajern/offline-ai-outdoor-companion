@@ -3,8 +3,10 @@
 Owner task, 2026-10-08: the existing 25 development cases and conditional 31-step
 optimization are authorized after the specified scorer/runtime prechecks. This
 supersedes the preparation-only scope below; original gold/references remain
-immutable. Current execution is blocked before phase A by the Qwen embedding
-runtime probe. See `RETRIEVAL_OPTIMIZATION.md` and the preflight report. Holdout,
+immutable. Subsequent bounded diagnostics resolved the Qwen repeatability blocker
+with explicit CPU isolation; see `qwen_embedding_stability_report.v1.md`. The
+latest owner task stops after diagnostics: do not start optimization in that task.
+Full orchestration/resources remain unverified. See `RETRIEVAL_OPTIMIZATION.md`. Holdout,
 production changes and answer generation remain excluded.
 
 Read `FOUNDATION.md` before future retrieval optimization. Default input is the
