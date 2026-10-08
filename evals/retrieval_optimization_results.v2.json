@@ -3,7 +3,7 @@
   "status": "running",
   "error": null,
   "planned_configurations": 31,
-  "completed_configurations": 0,
+  "completed_configurations": 1,
   "development_cases": 25,
   "legacy_cases": 15,
   "technical_preflight": {
@@ -2733,12 +2733,227 @@
         "threshold": null,
         "packing": "P2"
       },
-      "status": "partially_scored",
+      "status": "complete",
       "retrieved_cases": 25,
-      "judged_cases": 11,
-      "full25": null,
-      "legacy15": null,
-      "resources": null,
+      "judged_cases": 25,
+      "full25": {
+        "cases": 25,
+        "supported_cases": 22,
+        "gap_cases": 3,
+        "must_have_total": 72,
+        "covered": 56,
+        "micro_coverage": 0.7777777777777778,
+        "macro_coverage": 0.7568181818181817,
+        "complete_cases": 14,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 22,
+          "potentially_misleading": 1,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-25",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "legacy15": {
+        "cases": 15,
+        "supported_cases": 13,
+        "gap_cases": 2,
+        "must_have_total": 51,
+        "covered": 39,
+        "micro_coverage": 0.7647058823529411,
+        "macro_coverage": 0.7423076923076923,
+        "complete_cases": 8,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 13,
+          "potentially_misleading": 1,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "resources": {
+        "prompt_tokens": [
+          1976,
+          1084,
+          1524,
+          1409,
+          1623,
+          1374,
+          1686,
+          1446,
+          1265,
+          1023,
+          1536,
+          1699,
+          1063,
+          1983,
+          1741,
+          1631,
+          1352,
+          1864,
+          1136,
+          1416,
+          1529,
+          1158,
+          1826,
+          1450,
+          1399
+        ],
+        "context_tokens": [
+          1797,
+          886,
+          1334,
+          1222,
+          1436,
+          1191,
+          1496,
+          1247,
+          1085,
+          842,
+          1337,
+          1505,
+          866,
+          1793,
+          1564,
+          1438,
+          1152,
+          1673,
+          942,
+          1222,
+          1321,
+          973,
+          1631,
+          1246,
+          1208
+        ],
+        "passages": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          7,
+          8,
+          8,
+          8,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "budget_excluded_packets": 2,
+        "ranking_seconds": 0.02199270000028264,
+        "retrieval_and_packing_seconds": 160.0640560999991
+      },
       "review_cases": [],
       "partial_decisions": [
         {
@@ -2921,6 +3136,214 @@
             "covered",
             "covered"
           ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "certificate_judge_disagreement": [],
+          "requires_review": false
+        },
+        {
+          "case_id": "case-12",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "certificate_judge_disagreement": [],
+          "requires_review": false
+        },
+        {
+          "case_id": "case-13",
+          "decisions": [
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": true,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "certificate_judge_disagreement": [],
+          "requires_review": false
+        },
+        {
+          "case_id": "case-14",
+          "decisions": [
+            "covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "certificate_judge_disagreement": [],
+          "requires_review": false
+        },
+        {
+          "case_id": "case-15",
+          "decisions": [],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "certificate_judge_disagreement": [],
+          "requires_review": false
+        },
+        {
+          "case_id": "case-16",
+          "decisions": [
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "certificate_judge_disagreement": [],
+          "requires_review": false
+        },
+        {
+          "case_id": "case-17",
+          "decisions": [
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "certificate_judge_disagreement": [],
+          "requires_review": false
+        },
+        {
+          "case_id": "case-18",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "certificate_judge_disagreement": [],
+          "requires_review": false
+        },
+        {
+          "case_id": "case-19",
+          "decisions": [
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "certificate_judge_disagreement": [],
+          "requires_review": false
+        },
+        {
+          "case_id": "case-20",
+          "decisions": [
+            "not_covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "certificate_judge_disagreement": [],
+          "requires_review": false
+        },
+        {
+          "case_id": "case-21",
+          "decisions": [
+            "covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "certificate_judge_disagreement": [],
+          "requires_review": false
+        },
+        {
+          "case_id": "case-22",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "certificate_judge_disagreement": [],
+          "requires_review": false
+        },
+        {
+          "case_id": "case-23",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "certificate_judge_disagreement": [],
+          "requires_review": false
+        },
+        {
+          "case_id": "case-24",
+          "decisions": [
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "certificate_judge_disagreement": [],
+          "requires_review": false
+        },
+        {
+          "case_id": "case-25",
+          "decisions": [],
           "flags": {
             "irrelevant": true,
             "potentially_misleading": false,
@@ -4958,26 +5381,21 @@
   "provisional_stage_choices": {},
   "thresholds": null,
   "consumption": {
-    "actual_calls": 12,
-    "successful_calls": 11,
+    "actual_calls": 25,
+    "successful_calls": 25,
     "cache_hits": 0,
     "avoided_calls": 0,
     "usage": {
-      "input_tokens": 83373,
-      "cached_input_tokens": 0,
+      "input_tokens": 188409,
+      "cached_input_tokens": 10368,
       "cache_write_input_tokens": 0,
-      "output_tokens": 20149,
-      "reasoning_output_tokens": 1861,
-      "total_tokens": 103522
+      "output_tokens": 46382,
+      "reasoning_output_tokens": 5382,
+      "total_tokens": 234791
     },
-    "sum_call_seconds": 520.4707144999993,
-    "unknown_usage_calls": 1,
-    "errors": [
-      {
-        "cache_key": "e6ed38a04a6aebf504b1703ed3fd7f0d597a7c66004b4571de5b54428cec9c8c",
-        "status": "incomplete"
-      }
-    ],
+    "sum_call_seconds": 1343.2780729999995,
+    "unknown_usage_calls": 0,
+    "errors": [],
     "billing": "ChatGPT subscription",
     "paid_api_calls": 0,
     "estimated_api_cost_usd": null

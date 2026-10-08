@@ -1,6 +1,6 @@
 # Retrieval optimization — resumed M2-06
 
-2026-10-08. **Status: running. 0/31 configurations complete.**
+2026-10-08. **Status: running. 1/31 configurations complete.**
 
 Gold, original references and V3 scoring are unchanged. The proposed Qwen runtime retains explicit CPU isolation; context capacity is 2048 and batch/ubatch 1024 to reduce memory. Code checks exact model-input lengths before embedding and refuses overflow. A failed early preflight does not verify the input audit or runtime of later models.
 
@@ -10,7 +10,7 @@ The runner implements the frozen A → B → C sequence, linear pooled top16 per
 
 | Configuration | Model | k | Threshold | Packing | Retrieved / judged | Status | Micro25 / macro25 / complete25 |
 |---|---|---:|---|---|---|---|---|
-| A-minilm | minilm | 8 | None | P2 | 25 / 11 | partially_scored | unavailable |
+| A-minilm | minilm | 8 | None | P2 | 25 / 25 | complete | 0.7777777777777778 / 0.7568181818181817 / 14 |
 | A-gemma2 | gemma2 | 8 | None | P2 | 0 / 0 | not_run | unavailable |
 | A-qwen3-q4 | qwen3-q4 | 8 | None | P2 | 0 / 0 | not_run | unavailable |
 | B-k3-none | pending stage choice | 3 | none | P2 | 0 / 0 | not_run | unavailable |
@@ -54,7 +54,7 @@ Technical preflight passed: **True**. Existing sealed regression cache checks: 2
 
 Operational limits were fixed before quality results: 256 MiB available-RAM reserve and 4 GiB process-tree RSS cap. Models run sequentially in separate workers. Measurements are sampled every 100 ms; they do not establish mobile feasibility.
 
-Codex judge: 12 actual calls, 11 successful, 0 experiment cache hits, 1 calls with unknown usage. Tokens: `{"input_tokens": 83373, "cached_input_tokens": 0, "cache_write_input_tokens": 0, "output_tokens": 20149, "reasoning_output_tokens": 1861, "total_tokens": 103522}`. Sum call time: 520.47 s. ChatGPT subscription only; paid API calls: 0.
+Codex judge: 25 actual calls, 25 successful, 0 experiment cache hits, 0 calls with unknown usage. Tokens: `{"input_tokens": 188409, "cached_input_tokens": 10368, "cache_write_input_tokens": 0, "output_tokens": 46382, "reasoning_output_tokens": 5382, "total_tokens": 234791}`. Sum call time: 1343.28 s. ChatGPT subscription only; paid API calls: 0.
 
 ## Recommendation and review
 
@@ -62,8 +62,6 @@ No retrieval winner is recommended from incomplete or blocked results. Resolve t
 
 Raw contexts, judge input/output, sources, vectors and worker logs remain ignored under `knowledge/local/diagnostics/retrieval-optimization-v1-2026-10-08/`. Public artifacts contain configuration definitions, hashes and summaries. Original preflight/stability reports remain historical records. No holdout, answer generation, new source or production change was performed.
 
-## Audited operational correction
+## Phase A baseline completed
 
-After all three sequential preflight checks passed, the first source check falsely rejected a missing `published_at` field versus its dataclass default `null`. One verifier line now compares canonical KnowledgeItem records. All 25 saved contexts, 198 excerpts and 980 result-file hashes were rechecked without retrieval or inference. Changed text, URL, metadata, ID and date remain rejected in the 13 passing orchestration tests. The original freeze and technical summary are archived separately; no gold, judge, packing, model or resource setting changed. See [correction audit](retrieval_optimization_serialization_correction.v1.json).
-
-This is a progress snapshot. An incomplete consumption entry may be the currently active call, not a failed call. Aggregate comparisons and recommendation remain unavailable until the stage completes.
+MiniLM has all 25 development judgments completed, with the 15-case slice retained separately. Gemma runs next in a separate process. No stage choice is available yet. The audited one-line source-default correction preserved the original freeze, all 25 contexts and 980 result hashes before scoring; see [correction record](retrieval_optimization_serialization_correction.v1.json).
