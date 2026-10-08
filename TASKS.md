@@ -304,6 +304,16 @@ pass, including default/mutation checks. Phase A resumed without repeating
 model probes/retrieval. No scoring, gold or model setting changed; M2-06 remains
 open pending actual results and source review.
 
+Phase A is now complete: 3/31 configurations, 25 cases each, 75 successful judge
+calls and 714,931 reported subscription tokens. MiniLM/Gemma/Qwen micro25 is
+77.8%/70.8%/51.4%, with 14/13/10 complete supported cases. Final integrity checks
+of all 75 cached results passed without inference. Stage choice stopped because
+per-item safety tradeoffs prevent a dominating model; case 13 also needs semantic
+review. B/C are not run, numeric thresholds are not calculated, and no production
+model/configuration is selected. See `evals/retrieval_optimization_report.v3.md`.
+Owner review and a provisional phase B model choice are required. M2-06 remains
+open; do not repeat completed A calls or start M3.
+
 Replace development fixtures in the main RAG flow with the approved Outwise knowledge base.
 
 Requirements:

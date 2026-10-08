@@ -18,7 +18,13 @@ records the exact runner hashes before/after and 980 preserved result files.
 No gold, judge, packing, resource or model settings changed; no judge call had
 occurred before the correction. See
 [`correction record`](retrieval_optimization_serialization_correction.v1.json).
-The run resumed from those contexts. See the earlier
+The run resumed from those contexts and completed phase A: all three models,
+25 cases each, 75 successful subscription judge calls. Structural/source/cache
+integrity checks passed. No model dominates on the frozen per-item safety rule;
+case 13 also needs semantic review. Phase B/C remain unexecuted. See
+[`phase A report`](retrieval_optimization_report.v3.md). The owner must choose a
+provisional phase B model after reviewing the tradeoffs; do not retune gold or
+judge from these observations. See the earlier
 [`retrieval_optimization_report.v1.md`](retrieval_optimization_report.v1.md).
 This grants no control-set access or final product/safety approval.
 

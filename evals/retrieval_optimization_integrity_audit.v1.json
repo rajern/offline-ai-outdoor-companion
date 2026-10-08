@@ -1,0 +1,65 @@
+{
+  "version": "1.0.0",
+  "at": "2026-10-08T19:31:55.221110+00:00",
+  "integrity_passed": true,
+  "independent_semantic_validation": false,
+  "configuration_checks": [
+    {
+      "configuration": "A-minilm",
+      "verified_contexts": 25,
+      "sealed_judge_results": 25,
+      "maximum_prompt_tokens": 1983,
+      "llm_review_cases": 0
+    },
+    {
+      "configuration": "A-gemma2",
+      "verified_contexts": 25,
+      "sealed_judge_results": 25,
+      "maximum_prompt_tokens": 2000,
+      "llm_review_cases": 0
+    },
+    {
+      "configuration": "A-qwen3-q4",
+      "verified_contexts": 25,
+      "sealed_judge_results": 25,
+      "maximum_prompt_tokens": 1989,
+      "llm_review_cases": 0
+    }
+  ],
+  "vector_checks": [
+    {
+      "model": "minilm",
+      "unique_document_vectors": 190,
+      "unique_query_vectors": 25,
+      "dimensions": 384,
+      "normalized_finite_and_source_order_valid": true
+    },
+    {
+      "model": "gemma2",
+      "unique_document_vectors": 190,
+      "unique_query_vectors": 25,
+      "dimensions": 768,
+      "normalized_finite_and_source_order_valid": true
+    },
+    {
+      "model": "qwen3-q4",
+      "unique_document_vectors": 190,
+      "unique_query_vectors": 25,
+      "dimensions": 1024,
+      "normalized_finite_and_source_order_valid": true
+    }
+  ],
+  "new_judge_calls": 0,
+  "sealed_cache_rechecks": 75,
+  "preserved_before_correction_files": 980,
+  "protected_source_gold_judge_model_hashes_valid": true,
+  "operational_runner_correction_only": true,
+  "human_review_cases": [
+    "case-13"
+  ],
+  "eligible_for_final_selection": false,
+  "holdout_accessed": false,
+  "production_changed": false,
+  "generation_calls": 0,
+  "paid_api_calls": 0
+}

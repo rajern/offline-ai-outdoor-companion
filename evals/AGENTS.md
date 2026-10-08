@@ -11,8 +11,12 @@ initially stopped before phase A at the available-RAM guard. After the owner fre
 RAM, all three sequential resource/input probes passed with the original limits.
 The 25 MiniLM contexts were preserved after a one-line correction for missing
 source defaults; see `retrieval_optimization_serialization_correction.v1.json`.
-Phase A resumed without repeating model probes or retrieval. Full live
-execution and finalist review remain unverified. Holdout,
+Phase A completed all three configurations / 75 judgments. The integrity audit
+passed without inference. Stage selection stopped on real per-item coverage and
+safety tradeoffs; case 13 additionally needs semantic review. See
+`retrieval_optimization_report.v3.md`. B/C are not run. Do not repeat A or modify
+gold/judge based on results; obtain the owner's provisional model decision and
+case 13 review before advancing. Finalist review remains unfinished. Holdout,
 production changes and answer generation remain excluded.
 
 Read `FOUNDATION.md` before future retrieval optimization. Default input is the

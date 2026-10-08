@@ -1,0 +1,1403 @@
+{
+  "at": "2026-10-08T19:45:45.840013+00:00",
+  "status": "blocked_before_phase_b",
+  "selection_ready": false,
+  "scope": "3 of 31 configurations complete; all 25 cases each; no extra parameter configurations.",
+  "metrics": {
+    "minilm": {
+      "full25": {
+        "cases": 25,
+        "supported_cases": 22,
+        "gap_cases": 3,
+        "must_have_total": 72,
+        "covered": 56,
+        "micro_coverage": 0.7777777777777778,
+        "macro_coverage": 0.7568181818181817,
+        "complete_cases": 14,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 22,
+          "potentially_misleading": 1,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-25",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "legacy15": {
+        "cases": 15,
+        "supported_cases": 13,
+        "gap_cases": 2,
+        "must_have_total": 51,
+        "covered": 39,
+        "micro_coverage": 0.7647058823529411,
+        "macro_coverage": 0.7423076923076923,
+        "complete_cases": 8,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 13,
+          "potentially_misleading": 1,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      }
+    },
+    "gemma2": {
+      "full25": {
+        "cases": 25,
+        "supported_cases": 22,
+        "gap_cases": 3,
+        "must_have_total": 72,
+        "covered": 51,
+        "micro_coverage": 0.7083333333333334,
+        "macro_coverage": 0.740909090909091,
+        "complete_cases": 13,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 22,
+          "potentially_misleading": 0,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-25",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "legacy15": {
+        "cases": 15,
+        "supported_cases": 13,
+        "gap_cases": 2,
+        "must_have_total": 51,
+        "covered": 34,
+        "micro_coverage": 0.6666666666666666,
+        "macro_coverage": 0.6897435897435897,
+        "complete_cases": 7,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 13,
+          "potentially_misleading": 0,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      }
+    },
+    "qwen3-q4": {
+      "full25": {
+        "cases": 25,
+        "supported_cases": 22,
+        "gap_cases": 3,
+        "must_have_total": 72,
+        "covered": 37,
+        "micro_coverage": 0.5138888888888888,
+        "macro_coverage": 0.5492424242424243,
+        "complete_cases": 10,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 21,
+          "potentially_misleading": 0,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-25",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "legacy15": {
+        "cases": 15,
+        "supported_cases": 13,
+        "gap_cases": 2,
+        "must_have_total": 51,
+        "covered": 20,
+        "micro_coverage": 0.39215686274509803,
+        "macro_coverage": 0.36538461538461536,
+        "complete_cases": 3,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 13,
+          "potentially_misleading": 0,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      }
+    }
+  },
+  "quality_ranking": [
+    "minilm",
+    "gemma2",
+    "qwen3-q4"
+  ],
+  "model_storage_ranking": [
+    "minilm",
+    "qwen3-q4",
+    "gemma2"
+  ],
+  "pairwise": [
+    {
+      "candidate": "minilm",
+      "against": "gemma2",
+      "gains": [
+        {
+          "case_id": "case-03",
+          "item": 1
+        },
+        {
+          "case_id": "case-04",
+          "item": 1
+        },
+        {
+          "case_id": "case-04",
+          "item": 2
+        },
+        {
+          "case_id": "case-04",
+          "item": 3
+        },
+        {
+          "case_id": "case-04",
+          "item": 4
+        },
+        {
+          "case_id": "case-04",
+          "item": 5
+        },
+        {
+          "case_id": "case-05",
+          "item": 1
+        },
+        {
+          "case_id": "case-05",
+          "item": 2
+        },
+        {
+          "case_id": "case-05",
+          "item": 3
+        },
+        {
+          "case_id": "case-05",
+          "item": 4
+        },
+        {
+          "case_id": "case-05",
+          "item": 5
+        },
+        {
+          "case_id": "case-05",
+          "item": 6
+        },
+        {
+          "case_id": "case-10",
+          "item": 1
+        },
+        {
+          "case_id": "case-19",
+          "item": 2
+        },
+        {
+          "case_id": "case-23",
+          "item": 2
+        },
+        {
+          "case_id": "case-23",
+          "item": 3
+        }
+      ],
+      "losses": [
+        {
+          "case_id": "case-01",
+          "item": 1
+        },
+        {
+          "case_id": "case-01",
+          "item": 2
+        },
+        {
+          "case_id": "case-01",
+          "item": 3
+        },
+        {
+          "case_id": "case-03",
+          "item": 3
+        },
+        {
+          "case_id": "case-03",
+          "item": 4
+        },
+        {
+          "case_id": "case-03",
+          "item": 5
+        },
+        {
+          "case_id": "case-08",
+          "item": 2
+        },
+        {
+          "case_id": "case-08",
+          "item": 4
+        },
+        {
+          "case_id": "case-17",
+          "item": 1
+        },
+        {
+          "case_id": "case-20",
+          "item": 1
+        },
+        {
+          "case_id": "case-21",
+          "item": 2
+        }
+      ],
+      "new_safety_flags": [
+        {
+          "case_id": "case-13",
+          "flag": "potentially_misleading"
+        }
+      ]
+    },
+    {
+      "candidate": "minilm",
+      "against": "qwen3-q4",
+      "gains": [
+        {
+          "case_id": "case-01",
+          "item": 4
+        },
+        {
+          "case_id": "case-03",
+          "item": 1
+        },
+        {
+          "case_id": "case-03",
+          "item": 2
+        },
+        {
+          "case_id": "case-05",
+          "item": 1
+        },
+        {
+          "case_id": "case-05",
+          "item": 2
+        },
+        {
+          "case_id": "case-05",
+          "item": 3
+        },
+        {
+          "case_id": "case-05",
+          "item": 4
+        },
+        {
+          "case_id": "case-05",
+          "item": 5
+        },
+        {
+          "case_id": "case-05",
+          "item": 6
+        },
+        {
+          "case_id": "case-06",
+          "item": 2
+        },
+        {
+          "case_id": "case-06",
+          "item": 3
+        },
+        {
+          "case_id": "case-08",
+          "item": 1
+        },
+        {
+          "case_id": "case-09",
+          "item": 1
+        },
+        {
+          "case_id": "case-09",
+          "item": 2
+        },
+        {
+          "case_id": "case-09",
+          "item": 3
+        },
+        {
+          "case_id": "case-10",
+          "item": 1
+        },
+        {
+          "case_id": "case-11",
+          "item": 1
+        },
+        {
+          "case_id": "case-11",
+          "item": 2
+        },
+        {
+          "case_id": "case-12",
+          "item": 1
+        },
+        {
+          "case_id": "case-12",
+          "item": 2
+        },
+        {
+          "case_id": "case-12",
+          "item": 3
+        },
+        {
+          "case_id": "case-23",
+          "item": 2
+        },
+        {
+          "case_id": "case-23",
+          "item": 3
+        }
+      ],
+      "losses": [
+        {
+          "case_id": "case-08",
+          "item": 2
+        },
+        {
+          "case_id": "case-08",
+          "item": 4
+        },
+        {
+          "case_id": "case-20",
+          "item": 1
+        },
+        {
+          "case_id": "case-21",
+          "item": 2
+        }
+      ],
+      "new_safety_flags": [
+        {
+          "case_id": "case-13",
+          "flag": "potentially_misleading"
+        }
+      ]
+    },
+    {
+      "candidate": "gemma2",
+      "against": "minilm",
+      "gains": [
+        {
+          "case_id": "case-01",
+          "item": 1
+        },
+        {
+          "case_id": "case-01",
+          "item": 2
+        },
+        {
+          "case_id": "case-01",
+          "item": 3
+        },
+        {
+          "case_id": "case-03",
+          "item": 3
+        },
+        {
+          "case_id": "case-03",
+          "item": 4
+        },
+        {
+          "case_id": "case-03",
+          "item": 5
+        },
+        {
+          "case_id": "case-08",
+          "item": 2
+        },
+        {
+          "case_id": "case-08",
+          "item": 4
+        },
+        {
+          "case_id": "case-17",
+          "item": 1
+        },
+        {
+          "case_id": "case-20",
+          "item": 1
+        },
+        {
+          "case_id": "case-21",
+          "item": 2
+        }
+      ],
+      "losses": [
+        {
+          "case_id": "case-03",
+          "item": 1
+        },
+        {
+          "case_id": "case-04",
+          "item": 1
+        },
+        {
+          "case_id": "case-04",
+          "item": 2
+        },
+        {
+          "case_id": "case-04",
+          "item": 3
+        },
+        {
+          "case_id": "case-04",
+          "item": 4
+        },
+        {
+          "case_id": "case-04",
+          "item": 5
+        },
+        {
+          "case_id": "case-05",
+          "item": 1
+        },
+        {
+          "case_id": "case-05",
+          "item": 2
+        },
+        {
+          "case_id": "case-05",
+          "item": 3
+        },
+        {
+          "case_id": "case-05",
+          "item": 4
+        },
+        {
+          "case_id": "case-05",
+          "item": 5
+        },
+        {
+          "case_id": "case-05",
+          "item": 6
+        },
+        {
+          "case_id": "case-10",
+          "item": 1
+        },
+        {
+          "case_id": "case-19",
+          "item": 2
+        },
+        {
+          "case_id": "case-23",
+          "item": 2
+        },
+        {
+          "case_id": "case-23",
+          "item": 3
+        }
+      ],
+      "new_safety_flags": []
+    },
+    {
+      "candidate": "gemma2",
+      "against": "qwen3-q4",
+      "gains": [
+        {
+          "case_id": "case-01",
+          "item": 1
+        },
+        {
+          "case_id": "case-01",
+          "item": 2
+        },
+        {
+          "case_id": "case-01",
+          "item": 3
+        },
+        {
+          "case_id": "case-01",
+          "item": 4
+        },
+        {
+          "case_id": "case-03",
+          "item": 2
+        },
+        {
+          "case_id": "case-03",
+          "item": 3
+        },
+        {
+          "case_id": "case-03",
+          "item": 4
+        },
+        {
+          "case_id": "case-03",
+          "item": 5
+        },
+        {
+          "case_id": "case-06",
+          "item": 2
+        },
+        {
+          "case_id": "case-06",
+          "item": 3
+        },
+        {
+          "case_id": "case-08",
+          "item": 1
+        },
+        {
+          "case_id": "case-09",
+          "item": 1
+        },
+        {
+          "case_id": "case-09",
+          "item": 2
+        },
+        {
+          "case_id": "case-09",
+          "item": 3
+        },
+        {
+          "case_id": "case-11",
+          "item": 1
+        },
+        {
+          "case_id": "case-11",
+          "item": 2
+        },
+        {
+          "case_id": "case-12",
+          "item": 1
+        },
+        {
+          "case_id": "case-12",
+          "item": 2
+        },
+        {
+          "case_id": "case-12",
+          "item": 3
+        },
+        {
+          "case_id": "case-17",
+          "item": 1
+        }
+      ],
+      "losses": [
+        {
+          "case_id": "case-04",
+          "item": 1
+        },
+        {
+          "case_id": "case-04",
+          "item": 2
+        },
+        {
+          "case_id": "case-04",
+          "item": 3
+        },
+        {
+          "case_id": "case-04",
+          "item": 4
+        },
+        {
+          "case_id": "case-04",
+          "item": 5
+        },
+        {
+          "case_id": "case-19",
+          "item": 2
+        }
+      ],
+      "new_safety_flags": []
+    },
+    {
+      "candidate": "qwen3-q4",
+      "against": "minilm",
+      "gains": [
+        {
+          "case_id": "case-08",
+          "item": 2
+        },
+        {
+          "case_id": "case-08",
+          "item": 4
+        },
+        {
+          "case_id": "case-20",
+          "item": 1
+        },
+        {
+          "case_id": "case-21",
+          "item": 2
+        }
+      ],
+      "losses": [
+        {
+          "case_id": "case-01",
+          "item": 4
+        },
+        {
+          "case_id": "case-03",
+          "item": 1
+        },
+        {
+          "case_id": "case-03",
+          "item": 2
+        },
+        {
+          "case_id": "case-05",
+          "item": 1
+        },
+        {
+          "case_id": "case-05",
+          "item": 2
+        },
+        {
+          "case_id": "case-05",
+          "item": 3
+        },
+        {
+          "case_id": "case-05",
+          "item": 4
+        },
+        {
+          "case_id": "case-05",
+          "item": 5
+        },
+        {
+          "case_id": "case-05",
+          "item": 6
+        },
+        {
+          "case_id": "case-06",
+          "item": 2
+        },
+        {
+          "case_id": "case-06",
+          "item": 3
+        },
+        {
+          "case_id": "case-08",
+          "item": 1
+        },
+        {
+          "case_id": "case-09",
+          "item": 1
+        },
+        {
+          "case_id": "case-09",
+          "item": 2
+        },
+        {
+          "case_id": "case-09",
+          "item": 3
+        },
+        {
+          "case_id": "case-10",
+          "item": 1
+        },
+        {
+          "case_id": "case-11",
+          "item": 1
+        },
+        {
+          "case_id": "case-11",
+          "item": 2
+        },
+        {
+          "case_id": "case-12",
+          "item": 1
+        },
+        {
+          "case_id": "case-12",
+          "item": 2
+        },
+        {
+          "case_id": "case-12",
+          "item": 3
+        },
+        {
+          "case_id": "case-23",
+          "item": 2
+        },
+        {
+          "case_id": "case-23",
+          "item": 3
+        }
+      ],
+      "new_safety_flags": []
+    },
+    {
+      "candidate": "qwen3-q4",
+      "against": "gemma2",
+      "gains": [
+        {
+          "case_id": "case-04",
+          "item": 1
+        },
+        {
+          "case_id": "case-04",
+          "item": 2
+        },
+        {
+          "case_id": "case-04",
+          "item": 3
+        },
+        {
+          "case_id": "case-04",
+          "item": 4
+        },
+        {
+          "case_id": "case-04",
+          "item": 5
+        },
+        {
+          "case_id": "case-19",
+          "item": 2
+        }
+      ],
+      "losses": [
+        {
+          "case_id": "case-01",
+          "item": 1
+        },
+        {
+          "case_id": "case-01",
+          "item": 2
+        },
+        {
+          "case_id": "case-01",
+          "item": 3
+        },
+        {
+          "case_id": "case-01",
+          "item": 4
+        },
+        {
+          "case_id": "case-03",
+          "item": 2
+        },
+        {
+          "case_id": "case-03",
+          "item": 3
+        },
+        {
+          "case_id": "case-03",
+          "item": 4
+        },
+        {
+          "case_id": "case-03",
+          "item": 5
+        },
+        {
+          "case_id": "case-06",
+          "item": 2
+        },
+        {
+          "case_id": "case-06",
+          "item": 3
+        },
+        {
+          "case_id": "case-08",
+          "item": 1
+        },
+        {
+          "case_id": "case-09",
+          "item": 1
+        },
+        {
+          "case_id": "case-09",
+          "item": 2
+        },
+        {
+          "case_id": "case-09",
+          "item": 3
+        },
+        {
+          "case_id": "case-11",
+          "item": 1
+        },
+        {
+          "case_id": "case-11",
+          "item": 2
+        },
+        {
+          "case_id": "case-12",
+          "item": 1
+        },
+        {
+          "case_id": "case-12",
+          "item": 2
+        },
+        {
+          "case_id": "case-12",
+          "item": 3
+        },
+        {
+          "case_id": "case-17",
+          "item": 1
+        }
+      ],
+      "new_safety_flags": []
+    }
+  ],
+  "requirements_missing_in_all_three": [
+    {
+      "case_id": "case-06",
+      "item": 1
+    },
+    {
+      "case_id": "case-06",
+      "item": 4
+    },
+    {
+      "case_id": "case-13",
+      "item": 1
+    },
+    {
+      "case_id": "case-13",
+      "item": 2
+    },
+    {
+      "case_id": "case-17",
+      "item": 2
+    }
+  ],
+  "resources": {
+    "minilm": {
+      "model_weight_bytes": 235052644,
+      "document_vector_bytes": 291968,
+      "cached_query_vector_bytes": 38528,
+      "dimensions": 384,
+      "index_resources": {
+        "elapsed_seconds": 5.8417193000000225,
+        "peak_process_tree_rss_bytes": 914571264,
+        "minimum_available_ram_bytes": 3421073408,
+        "cpu_seconds": 7.625,
+        "sample_interval_seconds": 0.1,
+        "memory_method": "sampled simultaneous process-tree RSS"
+      },
+      "document_embeddings_reused": true,
+      "embedding_inputs_audited": 405,
+      "truncated_embedding_inputs": 108,
+      "tokens_removed": 8340,
+      "truncated_query_inputs": 0,
+      "maximum_embedding_input_tokens": 128,
+      "context_tokens_mean": 1296.28,
+      "prompt_tokens_mean": 1487.72,
+      "prompt_tokens_min": 1023,
+      "prompt_tokens_max": 1983,
+      "passages_total": 198,
+      "passages_min": 7,
+      "passages_max": 8,
+      "budget_excluded_packets": 2,
+      "ranking_total_seconds": 0.02199270000028264,
+      "packing_and_token_audit_seconds": 160.0640560999991
+    },
+    "gemma2": {
+      "model_weight_bytes": 1488915288,
+      "document_vector_bytes": 583808,
+      "cached_query_vector_bytes": 76928,
+      "dimensions": 768,
+      "index_resources": {
+        "elapsed_seconds": 70.11452959999997,
+        "peak_process_tree_rss_bytes": 2017325056,
+        "minimum_available_ram_bytes": 4594647040,
+        "cpu_seconds": 220.9375,
+        "sample_interval_seconds": 0.1,
+        "memory_method": "sampled simultaneous process-tree RSS"
+      },
+      "document_embeddings_reused": false,
+      "embedding_inputs_audited": 215,
+      "truncated_embedding_inputs": 0,
+      "tokens_removed": 0,
+      "truncated_query_inputs": 0,
+      "maximum_embedding_input_tokens": 419,
+      "context_tokens_mean": 1479.32,
+      "prompt_tokens_mean": 1670.76,
+      "prompt_tokens_min": 1151,
+      "prompt_tokens_max": 2000,
+      "passages_total": 193,
+      "passages_min": 6,
+      "passages_max": 8,
+      "budget_excluded_packets": 7,
+      "ranking_total_seconds": 0.009853699998529919,
+      "packing_and_token_audit_seconds": 131.26177159999725
+    },
+    "qwen3-q4": {
+      "model_weight_bytes": 396474560,
+      "document_vector_bytes": 778368,
+      "cached_query_vector_bytes": 102528,
+      "dimensions": 1024,
+      "index_resources": {
+        "elapsed_seconds": 130.9484736000004,
+        "peak_process_tree_rss_bytes": 1777733632,
+        "minimum_available_ram_bytes": 4802777088,
+        "cpu_seconds": 510.859375,
+        "sample_interval_seconds": 0.1,
+        "memory_method": "sampled simultaneous process-tree RSS"
+      },
+      "document_embeddings_reused": false,
+      "embedding_inputs_audited": 215,
+      "truncated_embedding_inputs": 0,
+      "tokens_removed": 0,
+      "truncated_query_inputs": 0,
+      "maximum_embedding_input_tokens": 431,
+      "context_tokens_mean": 1478.16,
+      "prompt_tokens_mean": 1669.6,
+      "prompt_tokens_min": 1249,
+      "prompt_tokens_max": 1989,
+      "passages_total": 191,
+      "passages_min": 6,
+      "passages_max": 8,
+      "budget_excluded_packets": 9,
+      "ranking_total_seconds": 0.011201600002095802,
+      "packing_and_token_audit_seconds": 140.59101270000247
+    }
+  },
+  "consumption": {
+    "actual_calls": 75,
+    "successful_calls": 75,
+    "cache_hits": 0,
+    "avoided_calls": 0,
+    "usage": {
+      "input_tokens": 573954,
+      "cached_input_tokens": 72576,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 140977,
+      "reasoning_output_tokens": 15802,
+      "total_tokens": 714931
+    },
+    "sum_call_seconds": 3921.554289900002,
+    "unknown_usage_calls": 0,
+    "errors": [],
+    "billing": "ChatGPT subscription",
+    "paid_api_calls": 0,
+    "estimated_api_cost_usd": null
+  },
+  "quota_snapshot": {
+    "at": "2026-10-08T19:35:50.532Z",
+    "source": "Codex desktop account limits; shared account usage, not experiment-only",
+    "ordinary_usage_allowed": true,
+    "five_hour_used_percent": 58,
+    "weekly_used_percent": 51,
+    "rate_limit_reached_type": null,
+    "paid_api_calls": 0
+  },
+  "integrity_audit": {
+    "version": "1.0.0",
+    "at": "2026-10-08T19:31:55.221110+00:00",
+    "integrity_passed": true,
+    "independent_semantic_validation": false,
+    "configuration_checks": [
+      {
+        "configuration": "A-minilm",
+        "verified_contexts": 25,
+        "sealed_judge_results": 25,
+        "maximum_prompt_tokens": 1983,
+        "llm_review_cases": 0
+      },
+      {
+        "configuration": "A-gemma2",
+        "verified_contexts": 25,
+        "sealed_judge_results": 25,
+        "maximum_prompt_tokens": 2000,
+        "llm_review_cases": 0
+      },
+      {
+        "configuration": "A-qwen3-q4",
+        "verified_contexts": 25,
+        "sealed_judge_results": 25,
+        "maximum_prompt_tokens": 1989,
+        "llm_review_cases": 0
+      }
+    ],
+    "vector_checks": [
+      {
+        "model": "minilm",
+        "unique_document_vectors": 190,
+        "unique_query_vectors": 25,
+        "dimensions": 384,
+        "normalized_finite_and_source_order_valid": true
+      },
+      {
+        "model": "gemma2",
+        "unique_document_vectors": 190,
+        "unique_query_vectors": 25,
+        "dimensions": 768,
+        "normalized_finite_and_source_order_valid": true
+      },
+      {
+        "model": "qwen3-q4",
+        "unique_document_vectors": 190,
+        "unique_query_vectors": 25,
+        "dimensions": 1024,
+        "normalized_finite_and_source_order_valid": true
+      }
+    ],
+    "new_judge_calls": 0,
+    "sealed_cache_rechecks": 75,
+    "preserved_before_correction_files": 980,
+    "protected_source_gold_judge_model_hashes_valid": true,
+    "operational_runner_correction_only": true,
+    "human_review_cases": [
+      "case-13"
+    ],
+    "eligible_for_final_selection": false,
+    "holdout_accessed": false,
+    "production_changed": false,
+    "generation_calls": 0,
+    "paid_api_calls": 0
+  },
+  "experiment_elapsed_seconds_including_pause": 4877.47935,
+  "source_review": {
+    "case05": "New MiniLM cliff-overhang positive has explicit delivered source support; earlier implicit-support calibration remains unchanged.",
+    "case08": "MiniLM/Gemma positives explicitly include calling and guidance. Qwen calling/listening evidence without delivered guidance is not credited; disabled certificate route remains disabled.",
+    "case09": "All three saved judgments specifically identify delivered institutional care/evacuation as irrelevant; checked offline without inference.",
+    "case13": {
+      "at": "2026-10-08T19:21:21.944319+00:00",
+      "case_id": "case-13",
+      "scope": "Read-only source/flag comparison; no score override, new inference or judge/gold adaptation.",
+      "shared_exact_passages_minilm_gemma": 6,
+      "shared_phone_113_passages": 5,
+      "model_results": {
+        "minilm": {
+          "decisions": [
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": true,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "context_sha256": "08067e23ca62c0a7fe5d442dbc96caa87a548f11b251944d7c40be5a1d8b3aef"
+        },
+        "gemma2": {
+          "decisions": [
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "context_sha256": "0d3327b71ae52710abc95b8ba18b9a03a18a4c672ede7a34281632e6138f63a8"
+        },
+        "qwen3-q4": {
+          "decisions": [
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "context_sha256": "36d207cb8a47612118c35c5036a4c0ae3f40dcf9305949687fd866c35005dbaf"
+        }
+      },
+      "requires_owner_semantic_review": true,
+      "basis": "MiniLM and Gemma both lack beacon must-haves and share identical phone passages, but receive different potentially_misleading labels. Full contexts/orders differ; this is a review concern, not a demonstrated false label or an adjudication."
+    }
+  },
+  "candidate_for_owner_review": {
+    "model": "minilm",
+    "scope": "Provisional embedding candidate for phase B only, not a completed retrieval recommendation.",
+    "basis": "Best aggregate coverage and smallest existing implementation; loses 11 requirements covered by Gemma and 4 by Qwen. Case13 classification needs review.",
+    "condition": "Owner reviews per-case safety tradeoffs and case13, then explicitly chooses the provisional phase B model; raw scores/gold/judge settings remain frozen."
+  },
+  "phase_b_executed": false,
+  "thresholds_calculated": false,
+  "phase_c_executed": false,
+  "production_changed": false,
+  "holdout_accessed": false,
+  "generation_calls": 0,
+  "paid_api_calls": 0
+}

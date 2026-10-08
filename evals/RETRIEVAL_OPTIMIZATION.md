@@ -5,7 +5,7 @@ plan, conditional on scorer and runtime checks. This supersedes the older
 foundation preparation-only gate. Original gold, references and V1/V2 outputs
 remain unchanged. Holdout, production settings and answer generation are excluded.
 
-**Current status: resource preflight passed after RAM was freed; phase A resumed.**
+**Current status: phase A complete; blocked before phase B by coverage/safety tradeoffs.**
 Explicit CPU isolation passes the unchanged repeatability probe and a bounded
 four-query/24-synthetic-passage ranking check. See the
 [stability report](qwen_embedding_stability_report.v1.md). The owner subsequently
@@ -24,8 +24,18 @@ The old freeze and passed preflight are preserved with a separate correction
 manifest; only the runner verification-line identity was amended before any
 judge call. All 980 existing index/context/token-cache files retain their hashes.
 Ordinary `run` resumes them without another model probe or retrieval call.
-No scoring, gold, model, packing or resource settings changed. Final results and
-source review remain pending. The preceding failure is preserved in the
+No scoring, gold, model, packing or resource settings changed. Phase A then
+completed all three 25-case evaluations. MiniLM/Gemma/Qwen micro25 is
+77.8%/70.8%/51.4%; complete supported cases are 14/13/10 of 22. All 75 judge calls
+succeeded (714,931 total reported tokens); 75 sealed-cache integrity checks made
+no new calls. No configuration dominates the other models on every covered
+requirement and safety flag. MiniLM loses 11 requirements to Gemma, despite its
+higher aggregate; case 13's misleading classification also requires review.
+The owner must review these tradeoffs and choose a provisional model before B.
+No B/C configurations or numeric thresholds were run/calculated. See the
+[complete phase A report](retrieval_optimization_report.v3.md) and
+[comparison](retrieval_optimization_comparison.v1.json). M2-06 remains open.
+The preceding failure is preserved in the
 [report](retrieval_optimization_report.v1.md) and
 [machine-readable results](retrieval_optimization_preflight_results.v1.json).
 
@@ -86,8 +96,8 @@ document vectors and would tokenize the unchanged grounded prompt using the
 locked GGUF/tokenizer, without generation. The proposed snapshot workspace
 explicitly copies only development/code/corpus inputs; it contains no holdout.
 Python workers reject attempts to open or traverse the holdout. This is a process
-guard, not an OS security boundary. The experiment workspace has not been created
-because the resource preflight failed.
+guard, not an OS security boundary. The experiment workspace now exists with
+the selected development/code/corpus snapshots, without holdout.
 
 The Qwen adapter now explicitly disables devices, operation offload and KV
 offload; zero GPU layers alone did not isolate the old runtime. The unchanged
@@ -100,11 +110,15 @@ workers, verifies source/context/prompt hashes and tokenizer caches, and freezes
 the per-model top16 linear percentiles before B. Qwen retains the CPU flags;
 proposed capacities are context 2048, batch/ubatch 1024. The intermediate 2048/2048
 buffer probe passed unchanged numerical tolerance, but the final 1024-batch model
-preflight was not reached. Full real-corpus execution and finalist source checks
-are consequently unverified. 43 local technical tests passed; a mocked full driver
-checks exactly 31 configurations. These tests are not model-quality evaluations.
+preflight was not reached at the original RAM stop. After RAM was freed, it
+passed and all three real-corpus A runs completed. Final B/C execution and
+finalist approval remain unfinished. The earlier 43 technical tests and mocked
+exact-31 driver are historical. Thirteen orchestration tests passed after the
+source-default correction, and the complete 75-record final integrity audit
+passed. These checks are not independent semantic or model-quality validation.
 
-Before resuming, free sufficient host RAM. Operational limits were fixed before
+Historical pre-freeze resource retry procedure (the RAM blocker is now resolved):
+free sufficient host RAM. Operational limits were fixed before
 quality results: 256 MiB available reserve and 4 GiB process-tree RSS. Preserve
 the failed preflight and explicitly retry only after the resource state changes:
 
@@ -116,6 +130,11 @@ This preserves each failed attempt and archives the preceding summary. It cannot
 replace preflight identities after experiment freeze. After a successful freeze,
 ordinary `run` verifies identities and resumes existing indices, contexts and
 sealed scores; review, failed judge calls or quota errors remain blocking.
+At the current phase A stop, an ordinary `run` will again stop at the same stage
+choice without repeating the finished scores. Do not use a technical retry or
+new judge calibration to bypass this decision. Obtain the owner's explicit
+provisional model choice and semantic case 13 review, and record any authorized
+operational adaptation separately while preserving the A results.
 Do not bypass the gate to run two models, select
 a winner or implement production changes. Exact backend Sol revision remains
 unreported by CLI JSONL, as in V2; requested/catalog model and Medium are verified.

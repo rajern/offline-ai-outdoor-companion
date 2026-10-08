@@ -1,6 +1,8 @@
 # Retrieval optimization — resumed M2-06
 
-2026-10-08. **Status: running. 2/31 configurations complete.**
+2026-10-08. **Status: blocked. 3/31 configurations complete.**
+
+Execution stopped at the documented gate: Material per-case coverage/safety tradeoffs: no configuration dominates; owner decision required
 
 Gold, original references and V3 scoring are unchanged. The proposed Qwen runtime retains explicit CPU isolation; context capacity is 2048 and batch/ubatch 1024 to reduce memory. Code checks exact model-input lengths before embedding and refuses overflow. A failed early preflight does not verify the input audit or runtime of later models.
 
@@ -12,7 +14,7 @@ The runner implements the frozen A → B → C sequence, linear pooled top16 per
 |---|---|---:|---|---|---|---|---|
 | A-minilm | minilm | 8 | None | P2 | 25 / 25 | complete | 0.7777777777777778 / 0.7568181818181817 / 14 |
 | A-gemma2 | gemma2 | 8 | None | P2 | 25 / 25 | complete | 0.7083333333333334 / 0.740909090909091 / 13 |
-| A-qwen3-q4 | qwen3-q4 | 8 | None | P2 | 0 / 0 | not_run | unavailable |
+| A-qwen3-q4 | qwen3-q4 | 8 | None | P2 | 25 / 25 | complete | 0.5138888888888888 / 0.5492424242424243 / 10 |
 | B-k3-none | pending stage choice | 3 | none | P2 | 0 / 0 | not_run | unavailable |
 | B-k3-p10 | pending stage choice | 3 | p10 | P2 | 0 / 0 | not_run | unavailable |
 | B-k3-p30 | pending stage choice | 3 | p30 | P2 | 0 / 0 | not_run | unavailable |
@@ -54,14 +56,10 @@ Technical preflight passed: **True**. Existing sealed regression cache checks: 2
 
 Operational limits were fixed before quality results: 256 MiB available-RAM reserve and 4 GiB process-tree RSS cap. Models run sequentially in separate workers. Measurements are sampled every 100 ms; they do not establish mobile feasibility.
 
-Codex judge: 50 actual calls, 50 successful, 0 experiment cache hits, 0 calls with unknown usage. Tokens: `{"input_tokens": 381099, "cached_input_tokens": 41472, "cache_write_input_tokens": 0, "output_tokens": 95221, "reasoning_output_tokens": 10859, "total_tokens": 476320}`. Sum call time: 2691.05 s. ChatGPT subscription only; paid API calls: 0.
+Codex judge: 75 actual calls, 75 successful, 0 experiment cache hits, 0 calls with unknown usage. Tokens: `{"input_tokens": 573954, "cached_input_tokens": 72576, "cache_write_input_tokens": 0, "output_tokens": 140977, "reasoning_output_tokens": 15802, "total_tokens": 714931}`. Sum call time: 3921.55 s. ChatGPT subscription only; paid API calls: 0.
 
 ## Recommendation and review
 
 No retrieval winner is recommended from incomplete or blocked results. Resolve the concrete blocker before continuing the frozen plan; do not change gold, judge or parameters based on these observations.
 
 Raw contexts, judge input/output, sources, vectors and worker logs remain ignored under `knowledge/local/diagnostics/retrieval-optimization-v1-2026-10-08/`. Public artifacts contain configuration definitions, hashes and summaries. Original preflight/stability reports remain historical records. No holdout, answer generation, new source or production change was performed.
-
-## Phase A progress
-
-MiniLM and EmbeddingGemma 2 each have all 25 development judgments completed, with their legacy15 slices retained separately. Qwen Q4 runs next, sequentially with the frozen CPU flags and capacities. No stage choice is available yet. The one-line source-default verifier correction preserved the original freeze, all 25 MiniLM contexts and 980 result hashes before scoring; see [correction record](retrieval_optimization_serialization_correction.v1.json).

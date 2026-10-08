@@ -16,7 +16,14 @@ er lagret. En énlinjes rettelse sammenligner kilder gjennom datamodellens samme
 standardfelter; den opprinnelige frysen og alle resultathasher er bevart i et
 separat [rettelseslag](../evals/retrieval_optimization_serialization_correction.v1.json).
 Scoring, gold og modellinnstillinger er uendret; ingen dommerkall var gjort før
-rettelsen. Kjøringen er gjenopptatt fra lagrede kontekster. Se
+rettelsen. Kjøringen er gjenopptatt fra lagrede kontekster. Fase A er nå fullført:
+3 av 31 konfigurasjoner, 75 vellykkede dommerkall. Den frosne valgregelen stopper
+før B fordi ingen modell beholder alle krav og sikkerhetsflagg mot de andre;
+MiniLMs høyere totalscore skjuler 11 tapte krav mot Gemma. Case 13 trenger også
+semantisk review. B/C og numeriske thresholds er ikke kjørt/beregnet. Eieren må
+gjennomgå avveiningene og velge en foreløpig modell før videreføring; ingen
+etterfølgende fasit- eller dommerkalibrering er tillatt uten en dokumentert
+beslutning. Se [fase A-rapport](../evals/retrieval_optimization_report.v3.md),
 [ny rapport](../evals/retrieval_optimization_report.v2.md) og den tidligere
 [`evals/retrieval_optimization_report.v1.md`](../evals/retrieval_optimization_report.v1.md).
 Holdout, produksjonsendring og svargenerering er fortsatt utelukket.
