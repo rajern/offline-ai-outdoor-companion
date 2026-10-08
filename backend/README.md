@@ -15,6 +15,9 @@ python -m venv .venv
 
 ## Run
 
+Prepare the approved local knowledge assets from the repository root with
+`.\scripts\setup-knowledge.ps1` before using chat. This is separate from Qwen setup.
+
 ```powershell
 .\.venv\Scripts\python -m uvicorn outwise.main:app --reload
 ```
@@ -36,7 +39,7 @@ Invoke-RestMethod -Method Post -Uri http://127.0.0.1:8000/api/chat `
 
 The response contains an `answer` and a `sources` list. Source titles, names and
 URLs come directly from retrieved knowledge metadata, never from model output.
-If retrieval finds no relevant fixture, the API returns an explicit unsupported
+If retrieval finds no relevant knowledge, the API returns an explicit unsupported
 answer with no sources and does not call the model. Model setup, loading, timeout
 and generation failures are returned as explicit HTTP errors.
 
@@ -75,14 +78,24 @@ results = retriever.retrieve("How should I treat drinking water?", top_k=3)
 
 Each result contains the original `KnowledgeItem` with all source metadata plus
 its score. Blank queries and non-positive `top_k` values raise `ValueError`; a
-query with no lexical overlap returns an empty list. The current lexical method
+query with no lexical overlap returns an empty list. The fixture lexical method
 is intentionally small and replaceable, and may miss cross-language queries or
 semantic matches that use entirely different vocabulary.
 
-The normal request flow currently loads
-`../knowledge/fixtures/development-knowledge.json`. Set
-`OUTWISE_KNOWLEDGE_PATH` to another normalized version-1 knowledge JSON file to
-override it locally. Fixture content is development data, not production advice.
+The normal request flow loads `../knowledge/local/knowledge.json` and its paired
+embedding index/model. `SemanticRetrievalService` runs local multilingual cosine
+search with NO/general geography filtering. Missing or mismatched assets return
+a clear HTTP 503 setup error; the application never silently uses fixtures.
+
+Set `OUTWISE_KNOWLEDGE_PATH` to a different prepared knowledge JSON to use its
+paired local assets. For explicit fixture development only, set
+`OUTWISE_KNOWLEDGE_MODE=fixtures`; this uses the small lexical retriever and
+`../knowledge/fixtures/development-knowledge.json`. Remove the variable to
+return to real knowledge. Fixture content is not production advice.
+
+Sources also expose stored licence, content owner, retrieval/update dates and
+reuse notices when present. Norwegian Bokmål is the default answer language.
+See `../docs/KNOWLEDGE_SETUP.md` for reproducible setup and owner review.
 
 ## Test
 

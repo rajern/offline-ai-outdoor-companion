@@ -1,0 +1,1012 @@
+{
+  "purpose": "Authoring/source QA only; NEVER use for optimization or judge calibration",
+  "control_sha256": "0129246dc331473315f844a1b563cca710718968d5dd7d35099dd8459f7f4026",
+  "set_version": "1.0.0",
+  "control_cases": 10,
+  "supported": 9,
+  "gaps": 1,
+  "required_items": 24,
+  "source_support": {
+    "control-01": [
+      {
+        "item": 1,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-01",
+              "section": "Hjerte- og lungeredning på voksne / Legg personen på gulvet og sjekk pusten",
+              "quote": "Personen må ligge på ryggen på hardt underlag når du skal gjøre HLR."
+            },
+            "locations": [
+              {
+                "locator_id": "source-01-004",
+                "field": "text",
+                "start_char": 0,
+                "end_char": 68,
+                "passage_sha256": "6aab7fd56b15a4b75ae509da7821f7ef09f6c7cdea80a2f463be47d71f6ee90e",
+                "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-01",
+              "section": "Hjerte- og lungeredning på voksne / 30 brystkompresjoner",
+              "quote": "Legg dine hender oppå hverandre midt på brystkassen til personen."
+            },
+            "locations": [
+              {
+                "locator_id": "source-01-005",
+                "field": "text",
+                "start_char": 45,
+                "end_char": 110,
+                "passage_sha256": "23637a3c27adb07cd272a4fcf1d1073183306423aeecfe1ac0e8e24ee8622905",
+                "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 2,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-01",
+              "section": "Hjerte- og lungeredning på voksne / 30 brystkompresjoner",
+              "quote": "Gi 30 brystkompresjoner."
+            },
+            "locations": [
+              {
+                "locator_id": "source-01-005",
+                "field": "text",
+                "start_char": 111,
+                "end_char": 135,
+                "passage_sha256": "23637a3c27adb07cd272a4fcf1d1073183306423aeecfe1ac0e8e24ee8622905",
+                "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-01",
+              "section": "Hjerte- og lungeredning på voksne / 30 brystkompresjoner",
+              "quote": "Takten skal være 100-120 trykk per minutt."
+            },
+            "locations": [
+              {
+                "locator_id": "source-01-005",
+                "field": "text",
+                "start_char": 136,
+                "end_char": 178,
+                "passage_sha256": "23637a3c27adb07cd272a4fcf1d1073183306423aeecfe1ac0e8e24ee8622905",
+                "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-01",
+              "section": "Hjerte- og lungeredning på voksne / 30 brystkompresjoner",
+              "quote": "Du skal trykke hardt ned, 5-6 cm, bruk strake armer for å trykke hardt nok."
+            },
+            "locations": [
+              {
+                "locator_id": "source-01-005",
+                "field": "text",
+                "start_char": 235,
+                "end_char": 310,
+                "passage_sha256": "23637a3c27adb07cd272a4fcf1d1073183306423aeecfe1ac0e8e24ee8622905",
+                "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-01",
+              "section": "Hjerte- og lungeredning på voksne / 30 brystkompresjoner",
+              "quote": "Pass på å slippe helt opp mellom hver brystkompresjon slik at du ikke lener deg på brystkassen."
+            },
+            "locations": [
+              {
+                "locator_id": "source-01-005",
+                "field": "text",
+                "start_char": 311,
+                "end_char": 406,
+                "passage_sha256": "23637a3c27adb07cd272a4fcf1d1073183306423aeecfe1ac0e8e24ee8622905",
+                "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 3,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-01",
+              "section": "Hjerte- og lungeredning på voksne / To innblåsinger",
+              "quote": "Hold fri luftvei ved å bøye hodet til personen litt bakover og løfte haken frem."
+            },
+            "locations": [
+              {
+                "locator_id": "source-01-006",
+                "field": "text",
+                "start_char": 0,
+                "end_char": 80,
+                "passage_sha256": "5a79ea74c8a079e55e984d039918f0a675b55bdfc30b60ea38e3323155feb7ab",
+                "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-01",
+              "section": "Hjerte- og lungeredning på voksne / To innblåsinger",
+              "quote": "Hold for nesen og dekk hele personens munn med din munn."
+            },
+            "locations": [
+              {
+                "locator_id": "source-01-006",
+                "field": "text",
+                "start_char": 81,
+                "end_char": 137,
+                "passage_sha256": "5a79ea74c8a079e55e984d039918f0a675b55bdfc30b60ea38e3323155feb7ab",
+                "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-01",
+              "section": "Hjerte- og lungeredning på voksne / To innblåsinger",
+              "quote": "Gjør to forsiktige innblåsinger."
+            },
+            "locations": [
+              {
+                "locator_id": "source-01-006",
+                "field": "text",
+                "start_char": 138,
+                "end_char": 170,
+                "passage_sha256": "5a79ea74c8a079e55e984d039918f0a675b55bdfc30b60ea38e3323155feb7ab",
+                "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-01",
+              "section": "Hjerte- og lungeredning på voksne / To innblåsinger",
+              "quote": "Det er nok luft når du ser at brystet hever seg."
+            },
+            "locations": [
+              {
+                "locator_id": "source-01-006",
+                "field": "text",
+                "start_char": 299,
+                "end_char": 347,
+                "passage_sha256": "5a79ea74c8a079e55e984d039918f0a675b55bdfc30b60ea38e3323155feb7ab",
+                "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 4,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-01",
+              "section": "Hjerte- og lungeredning på voksne / HLR 30 + 2",
+              "quote": "Fortsett å veksle mellom 30 brystkompresjoner og to innblåsinger til ambulansepersonellet overtar."
+            },
+            "locations": [
+              {
+                "locator_id": "source-01-007",
+                "field": "text",
+                "start_char": 0,
+                "end_char": 98,
+                "passage_sha256": "b8e6f4047effa7761dae20480e1b0a509377b1fb21808ea9776352460f16916c",
+                "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "control-02": [
+      {
+        "item": 1,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-05",
+              "section": "Slik gir du førstehjelp ved nedkjøling / Sjekk pusten hos den nedkjølte",
+              "quote": "Det kan være vanskelig å finne ut om en bevisstløs person puster, fordi vi puster mye saktere når vi er nedkjølt."
+            },
+            "locations": [
+              {
+                "locator_id": "source-05-005",
+                "field": "text",
+                "start_char": 0,
+                "end_char": 113,
+                "passage_sha256": "4f226e4933b4b84f1244fbef4ae4e88e2e25dce0db8ea3aef5b861aba31f86fa",
+                "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-05",
+              "section": "Slik gir du førstehjelp ved nedkjøling / Sjekk pusten hos den nedkjølte",
+              "quote": "Det kan være nødvendig at du holder fri luftvei og sjekker pusten i et helt minutt, før du kan konkludere med at en person ikke puster."
+            },
+            "locations": [
+              {
+                "locator_id": "source-05-005",
+                "field": "text",
+                "start_char": 114,
+                "end_char": 249,
+                "passage_sha256": "4f226e4933b4b84f1244fbef4ae4e88e2e25dce0db8ea3aef5b861aba31f86fa",
+                "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 2,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-05",
+              "section": "Slik gir du førstehjelp ved nedkjøling",
+              "quote": "Prøv å behandle alvorlig nedkjølte skånsomt, uten for mye bevegelser og helst mens de ligger."
+            },
+            "locations": [
+              {
+                "locator_id": "source-05-004",
+                "field": "text",
+                "start_char": 408,
+                "end_char": 501,
+                "passage_sha256": "f15596b4a1e9f5e8e9b4856f4984145eaa1c7e20e6fba419afb01c103802341e",
+                "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 3,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-05",
+              "section": "Hjertestans på grunn av nedkjøling",
+              "quote": "Har en person fått hjertestans på grunn av nedkjøling, må du starte hjerte- og lungeredning."
+            },
+            "locations": [
+              {
+                "locator_id": "source-05-006",
+                "field": "text",
+                "start_char": 0,
+                "end_char": 92,
+                "passage_sha256": "bb78b8a69b3a27ceabf8f4c8eb559e0718d13fbbaf11e01bb91066bdefcb28c3",
+                "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-05",
+              "section": "Hjertestans på grunn av nedkjøling",
+              "quote": "Hold på med hjerte- og lungeredning helt til helsepersonell overtar."
+            },
+            "locations": [
+              {
+                "locator_id": "source-05-006",
+                "field": "text",
+                "start_char": 218,
+                "end_char": 286,
+                "passage_sha256": "bb78b8a69b3a27ceabf8f4c8eb559e0718d13fbbaf11e01bb91066bdefcb28c3",
+                "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "control-03": [
+      {
+        "item": 1,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-21",
+              "section": "Prevention steps and strategies / Treat your water / Disinfect",
+              "quote": "If you are pregnant, have thyroid problems, or have a hypersensitivity to iodine, avoid drinking water disinfected with iodine."
+            },
+            "locations": [
+              {
+                "locator_id": "source-21-012",
+                "field": "text",
+                "start_char": 517,
+                "end_char": 644,
+                "passage_sha256": "6711419f7aec934440eb8b494b8b50b86ed5cf40a2f17740ccf6b89a4e98cb4f",
+                "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+                "jurisdiction": "general"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 2,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-21",
+              "section": "Prevention steps and strategies / Treat your water / Disinfect",
+              "quote": "No one should drink water disinfected with iodine for more than a few weeks at a time."
+            },
+            "locations": [
+              {
+                "locator_id": "source-21-012",
+                "field": "text",
+                "start_char": 645,
+                "end_char": 731,
+                "passage_sha256": "6711419f7aec934440eb8b494b8b50b86ed5cf40a2f17740ccf6b89a4e98cb4f",
+                "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+                "jurisdiction": "general"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "control-04": [
+      {
+        "item": 1,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-19",
+              "section": "Redde andre",
+              "quote": "Hvis man ikke har 100 % kontroll på situasjonen må man (om mulig) ringe 113 (ambulanse/kommunikasjonssentralen) før man begynner redningen."
+            },
+            "locations": [
+              {
+                "locator_id": "source-19-001",
+                "field": "text",
+                "start_char": 167,
+                "end_char": 306,
+                "passage_sha256": "1f46528a891a3ba5eb48c5724b55ae97a1969ce0bf7ecec1be020fc8d796d863",
+                "source_url": "https://www.varsom.no/is/isskolen/redning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 2,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-19",
+              "section": "Redde andre",
+              "quote": "Det viktigste å huske på er at man må prøve å unngå at enda en person havner i vannet, noe som gjør situasjonen mye mer uoversiktlig."
+            },
+            "locations": [
+              {
+                "locator_id": "source-19-001",
+                "field": "text",
+                "start_char": 307,
+                "end_char": 440,
+                "passage_sha256": "1f46528a891a3ba5eb48c5724b55ae97a1969ce0bf7ecec1be020fc8d796d863",
+                "source_url": "https://www.varsom.no/is/isskolen/redning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-19",
+              "section": "Redde andre",
+              "quote": "Hold derfor avstand og bruk hjelpemidler som gjør at redningsmannskapene ikke trenger å være på farlig tynn is."
+            },
+            "locations": [
+              {
+                "locator_id": "source-19-001",
+                "field": "text",
+                "start_char": 441,
+                "end_char": 552,
+                "passage_sha256": "1f46528a891a3ba5eb48c5724b55ae97a1969ce0bf7ecec1be020fc8d796d863",
+                "source_url": "https://www.varsom.no/is/isskolen/redning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-19",
+              "section": "Redde andre",
+              "quote": "Redningsmannskapene kan gå så langt ut som isen bærer godt."
+            },
+            "locations": [
+              {
+                "locator_id": "source-19-001",
+                "field": "text",
+                "start_char": 591,
+                "end_char": 650,
+                "passage_sha256": "1f46528a891a3ba5eb48c5724b55ae97a1969ce0bf7ecec1be020fc8d796d863",
+                "source_url": "https://www.varsom.no/is/isskolen/redning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 3,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-19",
+              "section": "Redde andre",
+              "quote": "Kast ut et tau (kasteline eller tau med kraftig pinne i enden)."
+            },
+            "locations": [
+              {
+                "locator_id": "source-19-001",
+                "field": "text",
+                "start_char": 1024,
+                "end_char": 1087,
+                "passage_sha256": "1f46528a891a3ba5eb48c5724b55ae97a1969ce0bf7ecec1be020fc8d796d863",
+                "source_url": "https://www.varsom.no/is/isskolen/redning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "control-05": [
+      {
+        "item": 1,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-16",
+              "section": "Bruk bratthets- og utløpssonekart",
+              "quote": "Skredterreng er både løsne og utløpsområder."
+            },
+            "locations": [
+              {
+                "locator_id": "source-16-005",
+                "field": "text",
+                "start_char": 0,
+                "end_char": 44,
+                "passage_sha256": "7c9c67abdab76454785611fbe1cacb3c7669bec62912720022e0af191db7b007",
+                "source_url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 2,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-16",
+              "section": "Bruk bratthets- og utløpssonekart",
+              "quote": "Du kan se terreng over 27 grader bratt, og utløpsområdene under slikt terreng på kart i Varsom-regobs app."
+            },
+            "locations": [
+              {
+                "locator_id": "source-16-005",
+                "field": "text",
+                "start_char": 45,
+                "end_char": 151,
+                "passage_sha256": "7c9c67abdab76454785611fbe1cacb3c7669bec62912720022e0af191db7b007",
+                "source_url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 3,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-16",
+              "section": "Turplanleggingen starter hjemme - bruk snøskredvarselet og planlegg turen",
+              "quote": "Varsom.no publiserer et regionalt varsel. Du må bruke dette som utgangspunkt for lokale vurderinger."
+            },
+            "locations": [
+              {
+                "locator_id": "source-16-002",
+                "field": "text",
+                "start_char": 120,
+                "end_char": 220,
+                "passage_sha256": "65175e7b6ac1a4b0918c60811d08808f4e2bc35e6b5957b9be809905292387e0",
+                "source_url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-16",
+              "section": "Turplanleggingen starter hjemme - bruk snøskredvarselet og planlegg turen",
+              "quote": "Husk at forholdene kan skifte raskt og være annerledes enn varslet."
+            },
+            "locations": [
+              {
+                "locator_id": "source-16-002",
+                "field": "text",
+                "start_char": 221,
+                "end_char": 288,
+                "passage_sha256": "65175e7b6ac1a4b0918c60811d08808f4e2bc35e6b5957b9be809905292387e0",
+                "source_url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "control-06": [
+      {
+        "item": 1,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-02",
+              "section": "Behandling av mindre blødingar og sår / Bit frå dyr og menneske",
+              "quote": "Dersom du blir biten eller klora av eit dyr, kan du få infeksjon i såret."
+            },
+            "locations": [
+              {
+                "locator_id": "source-02-013",
+                "field": "text",
+                "start_char": 0,
+                "end_char": 73,
+                "passage_sha256": "c381c9437e745810bcf980a9051ed1fac2ea2b12d0a63c3f7f146ceb6473e857",
+                "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-02",
+              "section": "Behandling av mindre blødingar og sår / Bit frå dyr og menneske",
+              "quote": "Du kan òg risikere å få stivkrampe."
+            },
+            "locations": [
+              {
+                "locator_id": "source-02-013",
+                "field": "text",
+                "start_char": 74,
+                "end_char": 109,
+                "passage_sha256": "c381c9437e745810bcf980a9051ed1fac2ea2b12d0a63c3f7f146ceb6473e857",
+                "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 2,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-02",
+              "section": "Behandling av mindre blødingar og sår / Bit frå dyr og menneske",
+              "quote": "Reins derfor såret nøye så fort som mogleg og kontakt lege."
+            },
+            "locations": [
+              {
+                "locator_id": "source-02-013",
+                "field": "text",
+                "start_char": 110,
+                "end_char": 169,
+                "passage_sha256": "c381c9437e745810bcf980a9051ed1fac2ea2b12d0a63c3f7f146ceb6473e857",
+                "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-02",
+              "section": "Behandling av mindre blødingar og sår / Bit frå dyr og menneske",
+              "quote": "Legen kan informere deg om vidare behandling og vurdere om du må ta stivkrampevaksine ."
+            },
+            "locations": [
+              {
+                "locator_id": "source-02-013",
+                "field": "text",
+                "start_char": 170,
+                "end_char": 257,
+                "passage_sha256": "c381c9437e745810bcf980a9051ed1fac2ea2b12d0a63c3f7f146ceb6473e857",
+                "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "control-07": [
+      {
+        "item": 1,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-11",
+              "section": "Buy a beacon / Owning a PLB",
+              "quote": "All PLBs must be registered."
+            },
+            "locations": [
+              {
+                "locator_id": "source-11-011",
+                "field": "text",
+                "start_char": 0,
+                "end_char": 28,
+                "passage_sha256": "263530a4a2b35f85698e4c95ec701c3a74ef85b1d23069cf9efb19097dc22d2d",
+                "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/distress-beacon/",
+                "jurisdiction": "NZ"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-11",
+              "section": "Buy a beacon / Owning a PLB",
+              "quote": "It’s also required by law."
+            },
+            "locations": [
+              {
+                "locator_id": "source-11-011",
+                "field": "text",
+                "start_char": 74,
+                "end_char": 100,
+                "passage_sha256": "263530a4a2b35f85698e4c95ec701c3a74ef85b1d23069cf9efb19097dc22d2d",
+                "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/distress-beacon/",
+                "jurisdiction": "NZ"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 2,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-11",
+              "section": "Buy a beacon / Owning a PLB",
+              "quote": "Registering your PLB is fast, easy and free."
+            },
+            "locations": [
+              {
+                "locator_id": "source-11-011",
+                "field": "text",
+                "start_char": 29,
+                "end_char": 73,
+                "passage_sha256": "263530a4a2b35f85698e4c95ec701c3a74ef85b1d23069cf9efb19097dc22d2d",
+                "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/distress-beacon/",
+                "jurisdiction": "NZ"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-11",
+              "section": "Buy a beacon / Owning a PLB",
+              "quote": "Once registered there are no ongoing subscription fees."
+            },
+            "locations": [
+              {
+                "locator_id": "source-11-011",
+                "field": "text",
+                "start_char": 187,
+                "end_char": 242,
+                "passage_sha256": "263530a4a2b35f85698e4c95ec701c3a74ef85b1d23069cf9efb19097dc22d2d",
+                "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/distress-beacon/",
+                "jurisdiction": "NZ"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "control-08": [
+      {
+        "item": 1,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-21",
+              "section": "Prevention steps and strategies / Treat your water / Using UV light",
+              "quote": "Portable units that deliver ultraviolet (UV) light can kill parasites, bacteria, and viruses in small amounts of clear water."
+            },
+            "locations": [
+              {
+                "locator_id": "source-21-013",
+                "field": "text",
+                "start_char": 0,
+                "end_char": 125,
+                "passage_sha256": "687703a4f3bd4c8971660971407bd474a64e91f77d740d4d92be4f5fa0160fe0",
+                "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+                "jurisdiction": "general"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 2,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-21",
+              "section": "Prevention steps and strategies / Treat your water / Using UV light",
+              "quote": "Filter water before using UV light."
+            },
+            "locations": [
+              {
+                "locator_id": "source-21-013",
+                "field": "text",
+                "start_char": 126,
+                "end_char": 161,
+                "passage_sha256": "687703a4f3bd4c8971660971407bd474a64e91f77d740d4d92be4f5fa0160fe0",
+                "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+                "jurisdiction": "general"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-21",
+              "section": "Prevention steps and strategies / Treat your water / Using UV light",
+              "quote": "UV light does not work well in cloudy water because small particles can block germs from the light."
+            },
+            "locations": [
+              {
+                "locator_id": "source-21-013",
+                "field": "text",
+                "start_char": 162,
+                "end_char": 261,
+                "passage_sha256": "687703a4f3bd4c8971660971407bd474a64e91f77d740d4d92be4f5fa0160fe0",
+                "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+                "jurisdiction": "general"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "control-09": [],
+    "control-10": [
+      {
+        "item": 1,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-10",
+              "section": "Five simple steps / 4. Share your plans and take ways to get help",
+              "quote": "Telling a trusted person your trip details and taking a distress beacon can save your life."
+            },
+            "locations": [
+              {
+                "locator_id": "source-10-005",
+                "field": "text",
+                "start_char": 0,
+                "end_char": 91,
+                "passage_sha256": "d6dd33fc465820119d53ec4b1609f042c9e5563bbe752335e08473de1c32d554",
+                "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+                "jurisdiction": "NZ"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-10",
+              "section": "Five simple steps / 4. Share your plans and take ways to get help",
+              "quote": "Send this information to a trusted person directly, or use the Outdoors Intentions form or Plan My Walk"
+            },
+            "locations": [
+              {
+                "locator_id": "source-10-005",
+                "field": "text",
+                "start_char": 158,
+                "end_char": 261,
+                "passage_sha256": "d6dd33fc465820119d53ec4b1609f042c9e5563bbe752335e08473de1c32d554",
+                "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+                "jurisdiction": "NZ"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 2,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-10",
+              "section": "Five simple steps / 4. Share your plans and take ways to get help",
+              "quote": "Leave a date and time to raise the alarm if you haven't returned."
+            },
+            "locations": [
+              {
+                "locator_id": "source-10-005",
+                "field": "text",
+                "start_char": 92,
+                "end_char": 157,
+                "passage_sha256": "d6dd33fc465820119d53ec4b1609f042c9e5563bbe752335e08473de1c32d554",
+                "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+                "jurisdiction": "NZ"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 3,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-09",
+              "section": "Reduce your risk of getting lost",
+              "quote": "Sharing your plans with a trusted person before you leave. Give them plenty of detail and ask them to call 111 if you don’t return as planned."
+            },
+            "locations": [
+              {
+                "locator_id": "source-09-006",
+                "field": "text",
+                "start_char": 348,
+                "end_char": 490,
+                "passage_sha256": "51f4266d8e7a44643703c85f41ac6fd46af13cf97f5fc5c3683ea4413125d7b2",
+                "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+                "jurisdiction": "NZ"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "top_question_overlap_pairs": [
+    {
+      "a": "case-18",
+      "b": "control-04",
+      "word_jaccard": 0.2391304347826087
+    },
+    {
+      "a": "case-01",
+      "b": "case-04",
+      "word_jaccard": 0.22857142857142856
+    },
+    {
+      "a": "case-04",
+      "b": "case-12",
+      "word_jaccard": 0.2222222222222222
+    },
+    {
+      "a": "case-22",
+      "b": "control-10",
+      "word_jaccard": 0.2222222222222222
+    },
+    {
+      "a": "case-19",
+      "b": "control-05",
+      "word_jaccard": 0.21951219512195122
+    },
+    {
+      "a": "case-01",
+      "b": "case-07",
+      "word_jaccard": 0.21052631578947367
+    },
+    {
+      "a": "case-04",
+      "b": "case-08",
+      "word_jaccard": 0.20454545454545456
+    },
+    {
+      "a": "case-03",
+      "b": "case-24",
+      "word_jaccard": 0.20408163265306123
+    },
+    {
+      "a": "case-06",
+      "b": "case-08",
+      "word_jaccard": 0.2
+    },
+    {
+      "a": "case-23",
+      "b": "case-24",
+      "word_jaccard": 0.2
+    },
+    {
+      "a": "case-19",
+      "b": "case-23",
+      "word_jaccard": 0.1956521739130435
+    },
+    {
+      "a": "case-03",
+      "b": "case-04",
+      "word_jaccard": 0.1951219512195122
+    },
+    {
+      "a": "case-03",
+      "b": "control-08",
+      "word_jaccard": 0.1951219512195122
+    },
+    {
+      "a": "case-04",
+      "b": "case-14",
+      "word_jaccard": 0.1951219512195122
+    },
+    {
+      "a": "case-02",
+      "b": "case-13",
+      "word_jaccard": 0.19148936170212766
+    },
+    {
+      "a": "case-03",
+      "b": "case-06",
+      "word_jaccard": 0.19047619047619047
+    },
+    {
+      "a": "case-09",
+      "b": "case-10",
+      "word_jaccard": 0.19047619047619047
+    },
+    {
+      "a": "case-09",
+      "b": "control-10",
+      "word_jaccard": 0.19047619047619047
+    },
+    {
+      "a": "case-16",
+      "b": "control-06",
+      "word_jaccard": 0.19047619047619047
+    },
+    {
+      "a": "case-01",
+      "b": "case-03",
+      "word_jaccard": 0.1891891891891892
+    }
+  ],
+  "no_exact_question_duplicates": true,
+  "retrieval_calls": 0,
+  "scoring_calls": 0,
+  "semantic_overlap_review": "Different information needs; owner review required. No source/ranking-driven gold changes."
+}

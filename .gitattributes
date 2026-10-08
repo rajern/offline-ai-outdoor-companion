@@ -1,0 +1,4 @@
+# Evaluation identities are byte-hashed: preserve exact bytes without conversion.
+.gitattributes -text
+evals/** -text
+knowledge/manifests/* -text

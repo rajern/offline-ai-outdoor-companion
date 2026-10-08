@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {"id": "injury", "area": 1, "question": "Jeg har tråkket over og ankelen er hoven og vond. Hvordan behandler jeg dette?", "expected_documents": ["source-04"]},
+    {"id": "cold", "area": 2, "question": "Jeg er våt, fryser og skjelver kraftig etter turen. Hva gjør jeg ved nedkjøling?", "expected_documents": ["source-05"]},
+    {"id": "lost", "area": 3, "question": "Jeg har gått meg vill og vet ikke hvor stien er. Hva bør jeg gjøre nå?", "expected_documents": ["source-09"]},
+    {"id": "warmth", "area": 4, "question": "Hvordan kan jeg beskytte en nedkjølt person mot vind og kulde og holde personen varm?", "expected_documents": ["source-05"]},
+    {"id": "water", "area": 5, "question": "Kan jeg drikke klart vann fra en bekk? Hvordan renser jeg drikkevannet på tur?", "expected_documents": ["source-21"]},
+    {"id": "lightning", "area": 6, "question": "Jeg er på en fjelltopp og hører torden. Hvor bør jeg søke ly for lyn?", "expected_documents": ["source-22"]},
+    {"id": "rescue", "area": 7, "question": "Når bør jeg aktivere nødpeilesenderen min for å få hjelp?", "expected_documents": ["source-11"]},
+    {"id": "preparedness", "area": 8, "question": "Hva bør jeg pakke av varme klær, ekstra mat og nødutstyr før en lang fjelltur?", "expected_documents": ["source-10", "source-12"]},
+    {"id": "river", "area": 6, "question": "Elven er rask og vannet er uklart. Hvordan vurderer jeg om elvekryssingen er trygg?", "expected_documents": ["source-14"]},
+    {"id": "avalanche", "area": 6, "question": "Jeg ser ferske snøskred og hører drønn i snøen. Hvilke faretegn skal jeg se etter?", "expected_documents": ["source-15"]},
+    {"id": "ice", "area": 6, "question": "Noen har gått gjennom isen. Hvordan kan jeg redde dem fra land uten å sette meg selv i fare?", "expected_documents": ["source-19"]},
+    {"id": "cross-language-medical", "area": 1, "question": "I sprained my ankle and it is swollen. What should I do?", "expected_documents": ["source-04"]},
+    {"id": "unsupported", "area": null, "question": "Hvordan konfigurerer jeg en kvantedatamaskin?", "expected_documents": []}
+  ]
+}

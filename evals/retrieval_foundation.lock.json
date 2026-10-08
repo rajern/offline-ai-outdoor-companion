@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "version": "1.0.0",
+  "status": "pending_owner_review",
+  "gold_legacy_immutable": "04ad519f56cfff4fc4158af1975363a142b06d84c84d8f7e842a1095d07868c4",
+  "corpus_sha256": "bd954cd27111854db2a54a8b05335dac8be7776301060da2cce3dfedb2a33d20",
+  "source_manifest_sha256": "f5e740eb53e8970cfd88868bc211be346bba1644c317894dfa0a728f90911530",
+  "development_count": 25,
+  "control_count": 10,
+  "control_version": "1.0.0",
+  "holdout_process": "Author-created; no retrieval run; later optimizer cannot read; explicit final-run authorization required",
+  "files": {
+    "evals/retrieval_cases.v1.yaml": {
+      "sha256": "04ad519f56cfff4fc4158af1975363a142b06d84c84d8f7e842a1095d07868c4"
+    },
+    "evals/retrieval_development_additions.v2.yaml": {
+      "sha256": "45bf60d20f6751ebd59859f2796ac6767cc25444926023a1fb369a0f26f17fbd"
+    },
+    "evals/retrieval_development.v2.yaml": {
+      "sha256": "9f18ea8ae8a4886415ec9daaefab378cf0a4075bd94d2c736bd2336130c41ea8"
+    },
+    "evals/retrieval_evidence_certificates.v1.json": {
+      "sha256": "e82e7089fdc6552cc64a0aa97bad2c99a7d8accaec340edc74c9a530ff7b272d"
+    },
+    "evals/automatic_retrieval_scoring.py": {
+      "sha256": "8e40cfd2cdba52c7666e7a846494be674f8238f935f69209e7159323a3ce4d5a"
+    },
+    "evals/eval_foundation.py": {
+      "sha256": "6cc3e4215ca5e215616b2417f48931df1add60a84875141d890057863e4f76d9"
+    },
+    "evals/retrieval_judge_rubric.v1.md": {
+      "sha256": "08b6d58cc233df83da79dcfc6dadb5a0aeebcf9f4ce21a5623464cca3985d441"
+    },
+    "evals/holdout/retrieval_control.v1.yaml": {
+      "sha256": "0129246dc331473315f844a1b563cca710718968d5dd7d35099dd8459f7f4026"
+    }
+  }
+}

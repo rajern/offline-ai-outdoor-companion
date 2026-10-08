@@ -1,3 +1,5 @@
+import os
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -11,6 +13,7 @@ from outwise.services.orchestrator import (
     knowledge_path_from_environment,
 )
 from outwise.services.retrieval import RetrievalService
+from outwise.services.semantic_retrieval import LocalKnowledgeRetriever
 
 
 def create_app(
@@ -19,9 +22,14 @@ def create_app(
 ) -> FastAPI:
     app = FastAPI(title="Outwise API", version="0.1.0")
     resolved_model_service = model_service or ModelService()
-    resolved_retrieval_service = retrieval_service or RetrievalService.from_json(
-        knowledge_path_from_environment()
-    )
+    if retrieval_service is not None:
+        resolved_retrieval_service = retrieval_service
+    elif os.environ.get("OUTWISE_KNOWLEDGE_MODE", "real") == "real":
+        resolved_retrieval_service = LocalKnowledgeRetriever(knowledge_path_from_environment())
+    elif os.environ.get("OUTWISE_KNOWLEDGE_MODE") == "fixtures":
+        resolved_retrieval_service = RetrievalService.from_json(knowledge_path_from_environment())
+    else:
+        raise ValueError("OUTWISE_KNOWLEDGE_MODE must be real or fixtures")
     app.state.orchestrator = Orchestrator(
         resolved_retrieval_service, resolved_model_service
     )

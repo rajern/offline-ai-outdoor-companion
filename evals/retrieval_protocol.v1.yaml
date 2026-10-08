@@ -1,0 +1,55 @@
+schema_version: 1
+protocol_id: outwise-retrieval-protocol-v1
+version: 1.0.0
+purpose: One controlled retrieval-only comparison; no answer generation.
+gold:
+  path: evals/retrieval_cases.v1.yaml
+  sha256: 04ad519f56cfff4fc4158af1975363a142b06d84c84d8f7e842a1095d07868c4
+  status_note: Latest owner request authorizes this run; existing gold review labels remain unchanged.
+corpus:
+  path: knowledge/local/knowledge.json
+  sha256: bd954cd27111854db2a54a8b05335dac8be7776301060da2cce3dfedb2a33d20
+controls:
+  semantic_seeds: 3
+  minimum_cosine: 0.35
+  jurisdiction: NO
+  embeddings: Existing production parent index; no re-embedding, child ranking or lexical fusion.
+  tokenizer: Existing locked Qwen3.5-2B GGUF via llama-tokenize --stdin --ids --offline; tokenization only.
+  budget_tokens: 2000
+  budget_scope: Complete unmodified production grounded prompt, including question and instructions; no chat-template overhead.
+  budget_reason: Same explicit diagnostic budget as the preceding context-packing experiment, within the 4096-token model window.
+  context_tokens: Serialized knowledge blocks only, separately from complete prompt tokens.
+  seed_ranking: Call current production retrieve(question, top_k=3) once per case; share identical ordered seeds between A and B.
+configurations:
+  A: Exact three production results, unchanged. Assert prompt fits common budget; do not silently truncate baseline.
+  B: >-
+    Only replace each of the same three seeds with narrow same-document section context.
+    Use existing generic nearest-branch rule from compare_retrieval_refinement.py:
+    expand a heading with descendants; otherwise its immediate ancestor if non-root
+    or if the root has at most one direct branch. A multi-branch root includes only
+    its own heading continuations. Preserve corpus order within each packet.
+    Apply the same NO/general geography filter to every added passage.
+    Deduplicate packets/passages. Admit packets atomically only if the entire
+    resulting prompt fits the common budget; continue to the next original seed
+    after a skipped packet. No refill from below rank three, reranking, truncation,
+    source-specific expansion, query rewriting or gold-informed packing.
+scoring:
+  method: Human-readable item-by-item semantic assessment of actual delivered context with inspectable evidence quotes/offsets.
+  must_have: Binary full coverage per item; partial facts, missing conditions and missing conjunctions score zero. Equivalent applicable passages may collectively satisfy an item.
+  micro_coverage: Sum of fully covered must-have items / total must-have items across supported_context cases.
+  macro_coverage: Arithmetic mean of individual supported_context case coverage fractions.
+  complete_pass: All must-have items present; optional facts and extra sources cannot compensate.
+  irrelevant: Substantive retrieved advice/content unrelated to the scenario or gold need, including distracting procedures; exclude titles, provenance and routine navigation/footer boilerplate.
+  potentially_misleading: Wrong-situation actionable instructions or conflicting/incomplete procedural context identified against the frozen case criteria. Retained explicit conditions do not automatically constitute a conflict.
+  noise_report: Separate case rates for irrelevant, potentially misleading, and either; denominators are supported_context cases. Evidence required.
+  burn_cream: Case 07 cream/ointment conflict excluded from pass/fail and noise; retained as non-scoring source uncertainty.
+  jurisdiction_leakage: Inspect actual content as well as metadata for wrong-country operational/legal/service material; report cases and passages. NZ publisher attribution alone is not leakage.
+  size: Report delivered chunk count, unique section count, admitted packet count and exact context/prompt tokens; aggregate mean, median and maximum.
+  insufficient_coverage: Cases 14/15 excluded from micro/macro/pass/noise denominators; report supported subset, unrelated/inapplicable context and missing KB coverage separately. Empty gold list is never a pass.
+  no_abstention_score: No evaluation of retrieval or LLM refusal/abstention; only information actually supplied.
+  uncertainty: Flag semantic judgement disputes conservatively; never adjust gold or thresholds based on observed results.
+stability:
+  - Save gold/protocol/corpus/index/config/runner/tokenizer hashes before retrieval.
+  - Preserve ranked seeds, query vectors, raw delivered contexts, packet budget traces, tokenization outputs and evidence annotations.
+  - Freeze protocol and gold throughout this round; no additional configurations or optimization.
+  - Stop for owner review. No production changes or generation evaluation.

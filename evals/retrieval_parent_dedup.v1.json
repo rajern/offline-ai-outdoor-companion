@@ -1,0 +1,31 @@
+{
+  "experiment_id": "outwise-retrieval-parent-dedup-v1",
+  "version": "1.0.0",
+  "baseline": "Saved C8 from retrieval-child-search-v1-2026-10-07",
+  "candidate": "C8U8: eight unique original parent passages by their best child cosine",
+  "changed_variable": "Deduplicate by original parent ID before the top-8 cutoff, instead of after selecting eight children",
+  "selection": "Read the exact saved, ranked C8 candidate scores. Apply the same NO/general eligibility and >=0.35 cutoff. Preserve descending cosine/ascending child ID order, retain only the first child of each original parent, and take the first eight distinct parents. Different parents in the same packing branch still consume separate slots. No branch/document dedup, no score averaging, no gold-aware selection.",
+  "gold_sha256": "04ad519f56cfff4fc4158af1975363a142b06d84c84d8f7e842a1095d07868c4",
+  "corpus_sha256": "bd954cd27111854db2a54a8b05335dac8be7776301060da2cce3dfedb2a33d20",
+  "child_inputs_sha256": "a384f19c8b793ec2b57f76910779ccbe2d22b757e68db06d88ec1e4e9b628453",
+  "child_vectors_sha256": "9ccf08bd69d30a37be0d9c507456241648e8be915be658844f6f6a39b5e4fbe6",
+  "packing_script_sha256": "e75d882ee9f5a6792749fb212c23cd5c8744838da6ffcdbe9c62f3a573b3b736",
+  "controls": {
+    "top_k": 8,
+    "minimum_cosine": 0.35,
+    "jurisdiction": "NO",
+    "complete_prompt_budget": 2000,
+    "packing": "Exact unchanged run_retrieval_eval_v1.packed_b; same original full parents and narrow section expansion, corpus order, atomic budget admission, dedup, no refill beyond the selected eight parents",
+    "context_tokenizer": "Same llama-tokenize executable and locked Qwen GGUF, tokenization only; exact-hash saved token IDs reused where available",
+    "index_and_queries": "Reuse all saved C8 child inputs/vectors, all-candidate cosine scores and 15 original query vectors. No baseline rerun, re-embedding or child repartitioning.",
+    "scoring": "Frozen information-based protocol; must-have items binary with all conditions; optional facts/source count do not improve scores; no exact chunk-ID pass; supporting sources optional if required information already present",
+    "special_cases": "Burn cream conflict excluded; sleeping mat optional; cases 14/15 insufficient coverage reported separately, no generation/abstention score",
+    "embedding_calls": 0,
+    "generation_calls": 0,
+    "new_chunking_variants": 0,
+    "production_changes": false,
+    "gold_changes": false
+  },
+  "freeze": "Save protocol, runner and all protected/baseline input hashes before packing C8U8; do not tune after inspecting results",
+  "stop": "Exactly one experiment on all 15 questions, report results and stop for owner review"
+}

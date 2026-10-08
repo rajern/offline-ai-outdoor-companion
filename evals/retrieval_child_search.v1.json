@@ -1,0 +1,46 @@
+{
+  "experiment_id": "outwise-retrieval-child-search-v1",
+  "version": "1.0.0",
+  "baseline": "knowledge/local/diagnostics/retrieval-topk-ablation-v1-2026-10-07/B8",
+  "baseline_reuse": "Saved contexts, scoring and metrics; do not retrieve B8 again",
+  "gold_sha256": "04ad519f56cfff4fc4158af1975363a142b06d84c84d8f7e842a1095d07868c4",
+  "corpus_sha256": "bd954cd27111854db2a54a8b05335dac8be7776301060da2cce3dfedb2a33d20",
+  "packing_script_sha256": "e75d882ee9f5a6792749fb212c23cd5c8744838da6ffcdbe9c62f3a573b3b736",
+  "controls": {
+    "top_k": 8,
+    "threshold": 0.35,
+    "jurisdiction": "NO",
+    "complete_prompt_budget": 2000,
+    "packing": "Unchanged run_retrieval_eval_v1.packed_b; child hit maps to its full original parent; same original parent corpus and section branch expansion",
+    "selection": "First 8 threshold/geography-eligible child hits, sorted by cosine then child ID. Duplicate parent/branch hits consume child slots; unchanged packer deduplicates. NO refill to 8 unique parents.",
+    "query_vectors": "Reuse all 15 saved original queries/vectors; no rewriting or embedding query changes",
+    "embedding_model": "Existing locked local paraphrase-multilingual-MiniLM-L12-v2 ONNX; same tokenizer, CPU provider, threads=4, batch_size=16, pooling and normalisation",
+    "embedding_format": "Normalise title/section/text vector and body-only vector separately, average, then normalise; production text-context-mean-v1",
+    "unchanged_children": "If full parent fits both views, retain exact text and reuse its existing stored vector, avoiding irrelevant batch/runtime recomputation differences",
+    "context_tokenizer": "Same llama-tokenize binary and locked Qwen GGUF; tokenization only",
+    "no_generation": true,
+    "no_production_changes": true,
+    "no_gold_changes": true
+  },
+  "chunking": {
+    "scope": "Split only within existing passages; never merge or alter original source text or metadata",
+    "effective_max_sequence_length": 128,
+    "length_rule": "Both complete body-only and unchanged title + '. ' + section + '. ' + body inputs must fit <=128 including special tokens. Actual FastEmbed loader tokenizer plus untruncated/no-padding diagnostic clone used for verification.",
+    "boundary_preference": "Greedily use the last fitting paragraph/newline or sentence end; if none fit, last fitting word end; token-offset end only when a single word exceeds capacity",
+    "overlap_max_body_tokens": 16,
+    "overlap_rule": "For split parents, retain the longest trailing word-aligned substring of the previous child with <=16 body tokens excluding specials. Drop overlap only if it prevents forward progress. No overlap across parents.",
+    "metadata_overflow": "Abort if unchanged metadata leaves no room; do not shorten titles or sections",
+    "provenance": "Every child stores original parent/source/document/section, exact start/end character offsets, exact text, embedding inputs and token IDs",
+    "coverage_validation": "Every original character is covered by child spans; every span exactly equals the original substring; zero actual truncated embedding inputs required",
+    "variants": 1,
+    "tuning_after_results": false
+  },
+  "scoring": {
+    "protocol": "Same frozen information-based rules as B8; strict binary items with all required conditions; supporting sources optional; cream conflict excluded; sleeping mat optional",
+    "supported_cases": 13,
+    "gap_cases": ["case-14", "case-15"],
+    "ranking_diagnosis": "Use prior corpus-evidence locations for audit, not chunk-ID pass criteria. Report both best child of relevant parent and child(s) actually containing required text; all-child and projected unique-parent ranks separately. No projected-parent rerun or third variant.",
+    "distinguish": ["search improvement", "packing/order/budget failure", "remaining ranking/threshold failure"],
+    "stop": "One C8 run, return report and one proposed next experiment; owner review required"
+  }
+}

@@ -70,6 +70,7 @@ def test_generate_returns_stdout_and_builds_llama_command() -> None:
     assert runner.command[runner.command.index("--prompt") + 1] == "How do I stay warm?"
     assert runner.command[runner.command.index("--predict") + 1] == "42"
     assert runner.command[runner.command.index("--ctx-size") + 1] == "2048"
+    assert runner.command[runner.command.index("--temp") + 1] == "0.2"
     assert "--reasoning" in runner.command
     assert "--no-show-timings" in runner.command
 

@@ -1,0 +1,892 @@
+{
+  "status": "source_and_schema_checks_passed_pending_owner_review",
+  "development_case_count": 25,
+  "unchanged_legacy_cases": 15,
+  "new_development_cases": 10,
+  "development_supported": 22,
+  "development_gaps": 3,
+  "new_required_items": 21,
+  "source_document_count": 22,
+  "base_gold_sha256": "04ad519f56cfff4fc4158af1975363a142b06d84c84d8f7e842a1095d07868c4",
+  "corpus_sha256": "bd954cd27111854db2a54a8b05335dac8be7776301060da2cce3dfedb2a33d20",
+  "manifest_sha256": "f5e740eb53e8970cfd88868bc211be346bba1644c317894dfa0a728f90911530",
+  "development_sha256": "9f18ea8ae8a4886415ec9daaefab378cf0a4075bd94d2c736bd2336130c41ea8",
+  "certificates_sha256": "e82e7089fdc6552cc64a0aa97bad2c99a7d8accaec340edc74c9a530ff7b272d",
+  "source_support": {
+    "case-16": [
+      {
+        "item": 1,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-02",
+              "section": "Behandling av mindre blødingar og sår / Skrubbsår og rifter",
+              "quote": "Vask såret og huda rundt såret i lunka vatn eller sårvatn."
+            },
+            "locations": [
+              {
+                "locator_id": "source-02-012",
+                "field": "text",
+                "start_char": 0,
+                "end_char": 58,
+                "passage_sha256": "fc18d788c317efc447acc4d78489d02cfdf461c9b151ed9e231777ae1336668c",
+                "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-02",
+              "section": "Behandling av mindre blødingar og sår / Skrubbsår og rifter",
+              "quote": "Er det rusk og skit i såret, bør du bruke vatn med ei mild og nøytral såpe, utan parfyme."
+            },
+            "locations": [
+              {
+                "locator_id": "source-02-012",
+                "field": "text",
+                "start_char": 59,
+                "end_char": 148,
+                "passage_sha256": "fc18d788c317efc447acc4d78489d02cfdf461c9b151ed9e231777ae1336668c",
+                "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 2,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-02",
+              "section": "Behandling av mindre blødingar og sår / Skrubbsår og rifter",
+              "quote": "Små sår gror best utan plaster, men bruk plaster eller bandasje dersom du trur det kan kome skit i såret."
+            },
+            "locations": [
+              {
+                "locator_id": "source-02-012",
+                "field": "text",
+                "start_char": 284,
+                "end_char": 389,
+                "passage_sha256": "fc18d788c317efc447acc4d78489d02cfdf461c9b151ed9e231777ae1336668c",
+                "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-17": [
+      {
+        "item": 1,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-08",
+              "section": "Symptomer på allergisk sjokk",
+              "quote": "En alvorlig allergisk reaksjon utvikler seg raskt."
+            },
+            "locations": [
+              {
+                "locator_id": "source-08-004",
+                "field": "text",
+                "start_char": 0,
+                "end_char": 50,
+                "passage_sha256": "c1991659051fe3843f0eba27d9af0ca3019e63225b156853e88676876aa35d8f",
+                "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-08",
+              "section": "Symptomer på allergisk sjokk",
+              "quote": "Har du anafylaksi får du raskt symptomer fra flere organsystemer, for eksempel:"
+            },
+            "locations": [
+              {
+                "locator_id": "source-08-004",
+                "field": "text",
+                "start_char": 471,
+                "end_char": 550,
+                "passage_sha256": "c1991659051fe3843f0eba27d9af0ca3019e63225b156853e88676876aa35d8f",
+                "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-08",
+              "section": "Symptomer på allergisk sjokk",
+              "quote": "hud og slimhinner hovner opp"
+            },
+            "locations": [
+              {
+                "locator_id": "source-08-004",
+                "field": "text",
+                "start_char": 600,
+                "end_char": 628,
+                "passage_sha256": "c1991659051fe3843f0eba27d9af0ca3019e63225b156853e88676876aa35d8f",
+                "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-08",
+              "section": "Symptomer på allergisk sjokk",
+              "quote": "pustebesvær, hoste og en følelse av at halsen blir trangere"
+            },
+            "locations": [
+              {
+                "locator_id": "source-08-004",
+                "field": "text",
+                "start_char": 653,
+                "end_char": 712,
+                "passage_sha256": "c1991659051fe3843f0eba27d9af0ca3019e63225b156853e88676876aa35d8f",
+                "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-08",
+              "section": "Årsaker til anafylaksi",
+              "quote": "insektstikk (bie- og vepsestikk)"
+            },
+            "locations": [
+              {
+                "locator_id": "source-08-005",
+                "field": "text",
+                "start_char": 107,
+                "end_char": 139,
+                "passage_sha256": "89c47d1bf18fefa0d474a59538fe90678a312cf9624933558301cea1aa597066",
+                "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 2,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-08",
+              "section": "Allergisk sjokk og anafylaksi",
+              "quote": "Alvorlig allergisk reaksjon (anafylaksi) kan være livstruende og krever akutt behandling."
+            },
+            "locations": [
+              {
+                "locator_id": "source-08-001",
+                "field": "text",
+                "start_char": 0,
+                "end_char": 89,
+                "passage_sha256": "0b4695c6f00a9cb43275a79786d11d1b2acdfd4ea024b426a3d9c70059d10d05",
+                "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-08",
+              "section": "Allergisk sjokk og anafylaksi",
+              "quote": "Ved mistanke om anafylaksi, ring 113 øyeblikkelig."
+            },
+            "locations": [
+              {
+                "locator_id": "source-08-001",
+                "field": "text",
+                "start_char": 170,
+                "end_char": 220,
+                "passage_sha256": "0b4695c6f00a9cb43275a79786d11d1b2acdfd4ea024b426a3d9c70059d10d05",
+                "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-18": [
+      {
+        "item": 1,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-19",
+              "section": "Redde seg selv",
+              "quote": "Når du går gjennom isen må du kjempe for å unngå at hodet kommer under vann."
+            },
+            "locations": [
+              {
+                "locator_id": "source-19-003",
+                "field": "text",
+                "start_char": 0,
+                "end_char": 76,
+                "passage_sha256": "d02b23db23e2516fa8249fcc0292ef69a9dfe3982a2ef03c4e0eec92585ac768",
+                "source_url": "https://www.varsom.no/is/isskolen/redning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-19",
+              "section": "Redde seg selv",
+              "quote": "Snu deg rundt og prøv å komme opp den veien du kom i fra."
+            },
+            "locations": [
+              {
+                "locator_id": "source-19-003",
+                "field": "text",
+                "start_char": 113,
+                "end_char": 170,
+                "passage_sha256": "d02b23db23e2516fa8249fcc0292ef69a9dfe3982a2ef03c4e0eec92585ac768",
+                "source_url": "https://www.varsom.no/is/isskolen/redning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 2,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-19",
+              "section": "Redde seg selv",
+              "quote": "Først bør man bryte seg vei inn til sikker is."
+            },
+            "locations": [
+              {
+                "locator_id": "source-19-003",
+                "field": "text",
+                "start_char": 636,
+                "end_char": 682,
+                "passage_sha256": "d02b23db23e2516fa8249fcc0292ef69a9dfe3982a2ef03c4e0eec92585ac768",
+                "source_url": "https://www.varsom.no/is/isskolen/redning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-19",
+              "section": "Redde seg selv",
+              "quote": "Svøm oppreist i vannet og legg albuene oppå isen for å brekke dårlig is langs kanten med tyngden din."
+            },
+            "locations": [
+              {
+                "locator_id": "source-19-003",
+                "field": "text",
+                "start_char": 786,
+                "end_char": 887,
+                "passage_sha256": "d02b23db23e2516fa8249fcc0292ef69a9dfe3982a2ef03c4e0eec92585ac768",
+                "source_url": "https://www.varsom.no/is/isskolen/redning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 3,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-19",
+              "section": "Redde seg selv",
+              "quote": "Når kanten er solid er du klar for å komme deg opp."
+            },
+            "locations": [
+              {
+                "locator_id": "source-19-003",
+                "field": "text",
+                "start_char": 888,
+                "end_char": 939,
+                "passage_sha256": "d02b23db23e2516fa8249fcc0292ef69a9dfe3982a2ef03c4e0eec92585ac768",
+                "source_url": "https://www.varsom.no/is/isskolen/redning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-19",
+              "section": "Redde seg selv",
+              "quote": "Legg deg i svømmestilling og få armene opp på isen."
+            },
+            "locations": [
+              {
+                "locator_id": "source-19-004",
+                "field": "text",
+                "start_char": 256,
+                "end_char": 307,
+                "passage_sha256": "29d3ebcfef54d771a4b172a76ba4f75ff294df3dd01f7848b7f7983ce36c0519",
+                "source_url": "https://www.varsom.no/is/isskolen/redning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-19",
+              "section": "Redde seg selv",
+              "quote": "Bruk armene aktivt til å dra deg inn på isen som en sel, både med svømmetak med beina og med å dra deg inn etter ispiggene."
+            },
+            "locations": [
+              {
+                "locator_id": "source-19-004",
+                "field": "text",
+                "start_char": 308,
+                "end_char": 431,
+                "passage_sha256": "29d3ebcfef54d771a4b172a76ba4f75ff294df3dd01f7848b7f7983ce36c0519",
+                "source_url": "https://www.varsom.no/is/isskolen/redning/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-19": [
+      {
+        "item": 1,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-17",
+              "section": "Kameratredning",
+              "quote": "Når du drar ut i skredterreng tar du alltid med deg sender/mottager, spade og søkestang. Alltid!"
+            },
+            "locations": [
+              {
+                "locator_id": "source-17-001",
+                "field": "text",
+                "start_char": 0,
+                "end_char": 96,
+                "passage_sha256": "b1eaf34485627687fb40b02fa4926082dbd2c5d5cbb7fc2e57a20af6a43aae8b",
+                "source_url": "https://www.varsom.no/snoskred/snoskredskolen/kameratredning",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-17",
+              "section": "Det samme gjelder de andre i følget ditt. Alltid!",
+              "quote": "Det samme gjelder de andre i følget ditt. Alltid!",
+              "location": "section_heading"
+            },
+            "locations": [
+              {
+                "locator_id": "source-17-002",
+                "field": "section",
+                "start_char": 0,
+                "end_char": 49,
+                "passage_sha256": "f9bd92555d793cb236147868a131bebd7beaa08aebccb3274843aca0b150c15b",
+                "source_url": "https://www.varsom.no/snoskred/snoskredskolen/kameratredning",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 2,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-17",
+              "section": "Det samme gjelder de andre i følget ditt. Alltid!",
+              "quote": "Men du må kunne bruke utstyret også, selv under de verst tenkelige forhold."
+            },
+            "locations": [
+              {
+                "locator_id": "source-17-002",
+                "field": "text",
+                "start_char": 0,
+                "end_char": 75,
+                "passage_sha256": "f9bd92555d793cb236147868a131bebd7beaa08aebccb3274843aca0b150c15b",
+                "source_url": "https://www.varsom.no/snoskred/snoskredskolen/kameratredning",
+                "jurisdiction": "NO"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-17",
+              "section": "Det samme gjelder de andre i følget ditt. Alltid!",
+              "quote": "Derfor må du øve med utstyret ditt."
+            },
+            "locations": [
+              {
+                "locator_id": "source-17-002",
+                "field": "text",
+                "start_char": 76,
+                "end_char": 111,
+                "passage_sha256": "f9bd92555d793cb236147868a131bebd7beaa08aebccb3274843aca0b150c15b",
+                "source_url": "https://www.varsom.no/snoskred/snoskredskolen/kameratredning",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-20": [
+      {
+        "item": 1,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-10",
+              "section": "Five simple steps / 1. Choose the right trip for you",
+              "quote": "Learn about the route and make sure you have the skills for it."
+            },
+            "locations": [
+              {
+                "locator_id": "source-10-002",
+                "field": "text",
+                "start_char": 0,
+                "end_char": 63,
+                "passage_sha256": "23fd0d056b8679041daa0897f56477933c513c7cfcbad80483e574819e7e9f28",
+                "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+                "jurisdiction": "general"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 2,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-10",
+              "section": "Five simple steps / 2. Understand the weather",
+              "quote": "It can change fast. Check the forecast and change your plans if needed."
+            },
+            "locations": [
+              {
+                "locator_id": "source-10-003",
+                "field": "text",
+                "start_char": 0,
+                "end_char": 71,
+                "passage_sha256": "5a090cdf31a64407a862d43138e2252016d09a37c1a9725b97623009b286f2b0",
+                "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+                "jurisdiction": "general"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-21": [
+      {
+        "item": 1,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-21",
+              "section": "Prevention steps and strategies / Treat your water / Filter",
+              "quote": "A filter with an absolute pore (hole) size of 0.3 micron or smaller will remove bacteria and parasites, but not viruses."
+            },
+            "locations": [
+              {
+                "locator_id": "source-21-011",
+                "field": "text",
+                "start_char": 218,
+                "end_char": 338,
+                "passage_sha256": "77d661a4392a715f0464c210e2229efe8394ec4b45c9c2794ddcc7a84ddd8ae1",
+                "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+                "jurisdiction": "general"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 2,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-21",
+              "section": "Prevention steps and strategies / Treat your water",
+              "quote": "The next best option is to filter water and then disinfect the filtered water."
+            },
+            "locations": [
+              {
+                "locator_id": "source-21-009",
+                "field": "text",
+                "start_char": 70,
+                "end_char": 148,
+                "passage_sha256": "81a6f7d4c87d9683243e79bdff9981cd9b31436c4b4a2bd3ab0a5e0323342bcc",
+                "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+                "jurisdiction": "general"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-21",
+              "section": "Prevention steps and strategies / Treat your water",
+              "quote": "Follow the instructions on any products you use to make sure they work properly to remove germs."
+            },
+            "locations": [
+              {
+                "locator_id": "source-21-009",
+                "field": "text",
+                "start_char": 149,
+                "end_char": 245,
+                "passage_sha256": "81a6f7d4c87d9683243e79bdff9981cd9b31436c4b4a2bd3ab0a5e0323342bcc",
+                "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+                "jurisdiction": "general"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-22": [
+      {
+        "item": 1,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-09",
+              "section": "Map apps",
+              "quote": "Choose a reliable option that:"
+            },
+            "locations": [
+              {
+                "locator_id": "source-09-005",
+                "field": "text",
+                "start_char": 78,
+                "end_char": 108,
+                "passage_sha256": "2b2457565f1ea8b5807cc7afb8cf2d99d7cc444a1b6e3de284c098eb00b286d4",
+                "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+                "jurisdiction": "NZ"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-09",
+              "section": "Map apps",
+              "quote": "works offline"
+            },
+            "locations": [
+              {
+                "locator_id": "source-09-005",
+                "field": "text",
+                "start_char": 109,
+                "end_char": 122,
+                "passage_sha256": "2b2457565f1ea8b5807cc7afb8cf2d99d7cc444a1b6e3de284c098eb00b286d4",
+                "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+                "jurisdiction": "NZ"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-09",
+              "section": "Map apps",
+              "quote": "shows all New Zealand backcountry areas"
+            },
+            "locations": [
+              {
+                "locator_id": "source-09-005",
+                "field": "text",
+                "start_char": 123,
+                "end_char": 162,
+                "passage_sha256": "2b2457565f1ea8b5807cc7afb8cf2d99d7cc444a1b6e3de284c098eb00b286d4",
+                "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+                "jurisdiction": "NZ"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-09",
+              "section": "Map apps",
+              "quote": "includes a topographic map view"
+            },
+            "locations": [
+              {
+                "locator_id": "source-09-005",
+                "field": "text",
+                "start_char": 163,
+                "end_char": 194,
+                "passage_sha256": "2b2457565f1ea8b5807cc7afb8cf2d99d7cc444a1b6e3de284c098eb00b286d4",
+                "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+                "jurisdiction": "NZ"
+              }
+            ]
+          },
+          {
+            "evidence": {
+              "source_id": "source-09",
+              "section": "Map apps",
+              "quote": "shows tracks, terrain and other important features clearly"
+            },
+            "locations": [
+              {
+                "locator_id": "source-09-005",
+                "field": "text",
+                "start_char": 195,
+                "end_char": 253,
+                "passage_sha256": "2b2457565f1ea8b5807cc7afb8cf2d99d7cc444a1b6e3de284c098eb00b286d4",
+                "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+                "jurisdiction": "NZ"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 2,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-09",
+              "section": "Map apps",
+              "quote": "We recommend downloading maps and checking they work offline before your trip."
+            },
+            "locations": [
+              {
+                "locator_id": "source-09-005",
+                "field": "text",
+                "start_char": 327,
+                "end_char": 405,
+                "passage_sha256": "2b2457565f1ea8b5807cc7afb8cf2d99d7cc444a1b6e3de284c098eb00b286d4",
+                "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+                "jurisdiction": "NZ"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 3,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-09",
+              "section": "Map apps",
+              "quote": "If you’re relying on your phone for navigation, make sure you will have enough battery life and carry a paper backup in case your phone gets damaged or runs out of charge."
+            },
+            "locations": [
+              {
+                "locator_id": "source-09-005",
+                "field": "text",
+                "start_char": 406,
+                "end_char": 577,
+                "passage_sha256": "2b2457565f1ea8b5807cc7afb8cf2d99d7cc444a1b6e3de284c098eb00b286d4",
+                "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+                "jurisdiction": "NZ"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-23": [
+      {
+        "item": 1,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-22",
+              "section": "Lightning: What You Need to Know",
+              "quote": "Stay in safe shelter at least 30 minutes after you hear the last sound of thunder."
+            },
+            "locations": [
+              {
+                "locator_id": "source-22-002",
+                "field": "text",
+                "start_char": 287,
+                "end_char": 369,
+                "passage_sha256": "f49586ecca906122f7ddf068a01347846fc715a0e647d623add87f478f9648bf",
+                "source_url": "https://www.weather.gov/safety/lightning-tips",
+                "jurisdiction": "general"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 2,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-22",
+              "section": "Indoor Lightning Safety",
+              "quote": "Stay off corded phones, computers and other electrical equipment that put you in direct contact with electricity."
+            },
+            "locations": [
+              {
+                "locator_id": "source-22-003",
+                "field": "text",
+                "start_char": 0,
+                "end_char": 113,
+                "passage_sha256": "c366948e6c336fa6be3437481ed1fb593c3e491b96ec06a4859c02eb96321f95",
+                "source_url": "https://www.weather.gov/safety/lightning-tips",
+                "jurisdiction": "general"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 3,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-22",
+              "section": "Indoor Lightning Safety",
+              "quote": "Avoid plumbing, including sinks, baths and faucets."
+            },
+            "locations": [
+              {
+                "locator_id": "source-22-003",
+                "field": "text",
+                "start_char": 114,
+                "end_char": 165,
+                "passage_sha256": "c366948e6c336fa6be3437481ed1fb593c3e491b96ec06a4859c02eb96321f95",
+                "source_url": "https://www.weather.gov/safety/lightning-tips",
+                "jurisdiction": "general"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-24": [
+      {
+        "item": 1,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-20",
+              "section": "Under en flom eller et skred",
+              "quote": "Frarådes det å oppholde seg i nærheten av og kryssing av elver og bekker med stor vannføring eller isgang."
+            },
+            "locations": [
+              {
+                "locator_id": "source-20-005",
+                "field": "text",
+                "start_char": 0,
+                "end_char": 106,
+                "passage_sha256": "1ccf12647dbf2411cc420ce9d9ef45f5221154cb36ab957368ff27fb6536d6c9",
+                "source_url": "https://www.varsom.no/flom-og-jordskred/om-flom-og-jordskred/rad-og-forebygging/rad-til-privatpersoner/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": 2,
+        "source_support": [
+          {
+            "evidence": {
+              "source_id": "source-20",
+              "section": "Under en flom eller et skred",
+              "quote": "Unngå bratte skråninger med løsmasser, og elver og bekker med stor vannføring, fordi erosjon langs elve- og bekkeløp kan utløse skred."
+            },
+            "locations": [
+              {
+                "locator_id": "source-20-005",
+                "field": "text",
+                "start_char": 107,
+                "end_char": 241,
+                "passage_sha256": "1ccf12647dbf2411cc420ce9d9ef45f5221154cb36ab957368ff27fb6536d6c9",
+                "source_url": "https://www.varsom.no/flom-og-jordskred/om-flom-og-jordskred/rad-og-forebygging/rad-til-privatpersoner/",
+                "jurisdiction": "NO"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-25": []
+  },
+  "top_lexical_overlap_pairs_development_only": [
+    {
+      "a": "case-01",
+      "b": "case-04",
+      "word_jaccard": 0.22857142857142856
+    },
+    {
+      "a": "case-04",
+      "b": "case-12",
+      "word_jaccard": 0.2222222222222222
+    },
+    {
+      "a": "case-01",
+      "b": "case-07",
+      "word_jaccard": 0.21052631578947367
+    },
+    {
+      "a": "case-04",
+      "b": "case-08",
+      "word_jaccard": 0.20454545454545456
+    },
+    {
+      "a": "case-03",
+      "b": "case-24",
+      "word_jaccard": 0.20408163265306123
+    },
+    {
+      "a": "case-06",
+      "b": "case-08",
+      "word_jaccard": 0.2
+    },
+    {
+      "a": "case-23",
+      "b": "case-24",
+      "word_jaccard": 0.2
+    },
+    {
+      "a": "case-19",
+      "b": "case-23",
+      "word_jaccard": 0.1956521739130435
+    },
+    {
+      "a": "case-03",
+      "b": "case-04",
+      "word_jaccard": 0.1951219512195122
+    },
+    {
+      "a": "case-04",
+      "b": "case-14",
+      "word_jaccard": 0.1951219512195122
+    },
+    {
+      "a": "case-02",
+      "b": "case-13",
+      "word_jaccard": 0.19148936170212766
+    },
+    {
+      "a": "case-03",
+      "b": "case-06",
+      "word_jaccard": 0.19047619047619047
+    }
+  ],
+  "similarity_limit": "Word Jaccard is only descriptive; semantic distinctness manually reviewed, not statistically guaranteed",
+  "control_read_for_authoring_qa_only": true,
+  "retrieval_calls": 0,
+  "generation_calls": 0
+}

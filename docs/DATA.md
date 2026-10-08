@@ -105,6 +105,11 @@ Before a real source is included, verify:
 
 Approved production sources should be recorded in this file or an associated manifest.
 
+The owner-approved 22-URL allowlist and publisher reuse requirements are recorded
+in `knowledge/manifests/approved-sources.json` (approval: 2026-10-06).
+`docs/KNOWLEDGE_SETUP.md` describes frozen HTML ingestion, hashes, attribution,
+local multilingual retrieval, geography filtering and reproducible offline builds.
+
 ## Development data
 
 RAG development should begin with a very small fixture dataset.

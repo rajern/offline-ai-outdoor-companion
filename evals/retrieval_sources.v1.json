@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "version": "1.0.0",
+  "manifest_sha256": "f5e740eb53e8970cfd88868bc211be346bba1644c317894dfa0a728f90911530",
+  "sources": {
+    "source-01": {
+      "title": "Hjerte- og lungeredning (HLR)",
+      "url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+      "publisher": "Helsenorge",
+      "language": "nb",
+      "license": "Helsenorge text reuse with attribution",
+      "license_url": "https://www.nhn.no/tjenester/helsenorge/helseinformasjon/vil-du-bruka-innhaldet-pa-helsenorge",
+      "attribution_requirements": "Helsenorge, article content owner, original URL and retrieval date. Whole-article copies must state the copying date and that the original may have been updated. No images/video/third-party media.",
+      "content_owners": [
+        "Nasjonalt senter for prehospital akuttmedisin (NAKOS)"
+      ],
+      "copied_at": [
+        "2026-10-06T18:14:42.254034+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-02": {
+      "title": "Førstehjelp ved blødninger og sår",
+      "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+      "publisher": "Helsenorge",
+      "language": "nb",
+      "license": "Helsenorge text reuse with attribution",
+      "license_url": "https://www.nhn.no/tjenester/helsenorge/helseinformasjon/vil-du-bruka-innhaldet-pa-helsenorge",
+      "attribution_requirements": "Helsenorge, article content owner, original URL and retrieval date. Whole-article copies must state the copying date and that the original may have been updated. No images/video/third-party media.",
+      "content_owners": [
+        "Nasjonalt senter for prehospital akuttmedisin (NAKOS)"
+      ],
+      "copied_at": [
+        "2026-10-06T18:15:28.181110+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-03": {
+      "title": "Førstehjelp ved brannskader",
+      "url": "https://www.helsenorge.no/forstehjelp/brannskader-overflatiske/",
+      "publisher": "Helsenorge",
+      "language": "nb",
+      "license": "Helsenorge text reuse with attribution",
+      "license_url": "https://www.nhn.no/tjenester/helsenorge/helseinformasjon/vil-du-bruka-innhaldet-pa-helsenorge",
+      "attribution_requirements": "Helsenorge, article content owner, original URL and retrieval date. Whole-article copies must state the copying date and that the original may have been updated. No images/video/third-party media.",
+      "content_owners": [
+        "Medisinsk og helsefaglig redaksjon, Fellesinnhold spesialisthelsetjenesten"
+      ],
+      "copied_at": [
+        "2026-10-06T18:15:57.216057+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-04": {
+      "title": "Førstehjelp ved forstuing og brudd",
+      "url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/",
+      "publisher": "Helsenorge",
+      "language": "nb",
+      "license": "Helsenorge text reuse with attribution",
+      "license_url": "https://www.nhn.no/tjenester/helsenorge/helseinformasjon/vil-du-bruka-innhaldet-pa-helsenorge",
+      "attribution_requirements": "Helsenorge, article content owner, original URL and retrieval date. Whole-article copies must state the copying date and that the original may have been updated. No images/video/third-party media.",
+      "content_owners": [
+        "Nasjonalt senter for prehospital akuttmedisin (NAKOS)"
+      ],
+      "copied_at": [
+        "2026-10-06T18:15:57.499292+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-05": {
+      "title": "Førstehjelp ved nedkjøling",
+      "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/",
+      "publisher": "Helsenorge",
+      "language": "nb",
+      "license": "Helsenorge text reuse with attribution",
+      "license_url": "https://www.nhn.no/tjenester/helsenorge/helseinformasjon/vil-du-bruka-innhaldet-pa-helsenorge",
+      "attribution_requirements": "Helsenorge, article content owner, original URL and retrieval date. Whole-article copies must state the copying date and that the original may have been updated. No images/video/third-party media.",
+      "content_owners": [
+        "Nasjonalt senter for prehospital akuttmedisin (NAKOS)"
+      ],
+      "copied_at": [
+        "2026-10-06T18:15:57.687137+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-06": {
+      "title": "Heteslag og råd ved hetebølger",
+      "url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/heteslag-og-rad-ved-hetebolger/",
+      "publisher": "Helsenorge",
+      "language": "nb",
+      "license": "Helsenorge text reuse with attribution",
+      "license_url": "https://www.nhn.no/tjenester/helsenorge/helseinformasjon/vil-du-bruka-innhaldet-pa-helsenorge",
+      "attribution_requirements": "Helsenorge, article content owner, original URL and retrieval date. Whole-article copies must state the copying date and that the original may have been updated. No images/video/third-party media.",
+      "content_owners": [
+        "Helsedirektoratet , Folkehelseinstituttet"
+      ],
+      "copied_at": [
+        "2026-10-06T18:15:57.896304+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-07": {
+      "title": "Førstehjelp ved bevisstløshet",
+      "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/",
+      "publisher": "Helsenorge",
+      "language": "nb",
+      "license": "Helsenorge text reuse with attribution",
+      "license_url": "https://www.nhn.no/tjenester/helsenorge/helseinformasjon/vil-du-bruka-innhaldet-pa-helsenorge",
+      "attribution_requirements": "Helsenorge, article content owner, original URL and retrieval date. Whole-article copies must state the copying date and that the original may have been updated. No images/video/third-party media.",
+      "content_owners": [
+        "Nasjonalt senter for prehospital akuttmedisin (NAKOS)"
+      ],
+      "copied_at": [
+        "2026-10-06T18:15:58.077982+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-08": {
+      "title": "Allergisk sjokk / anafylaksi",
+      "url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+      "publisher": "Helsenorge",
+      "language": "nb",
+      "license": "Helsenorge text reuse with attribution",
+      "license_url": "https://www.nhn.no/tjenester/helsenorge/helseinformasjon/vil-du-bruka-innhaldet-pa-helsenorge",
+      "attribution_requirements": "Helsenorge, article content owner, original URL and retrieval date. Whole-article copies must state the copying date and that the original may have been updated. No images/video/third-party media.",
+      "content_owners": [
+        "Oslo universitetssykehus HF"
+      ],
+      "copied_at": [
+        "2026-10-06T18:15:58.280037+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-09": {
+      "title": "Maps / what to do if you get lost",
+      "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+      "publisher": "Department of Conservation (NZ)",
+      "language": "en",
+      "license": "CC-BY-4.0",
+      "license_url": "https://www.doc.govt.nz/footer-links/copyright/",
+      "attribution_requirements": "Source: Department of Conservation (NZ); original URL; CC BY 4.0 link; indicate extraction/chunking. No logos, design or third-party material.",
+      "content_owners": [
+        "Department of Conservation (NZ)"
+      ],
+      "copied_at": [
+        "2026-10-06T18:15:58.752975+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-10": {
+      "title": "Land Safety Code",
+      "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+      "publisher": "Department of Conservation (NZ)",
+      "language": "en",
+      "license": "CC-BY-4.0",
+      "license_url": "https://www.doc.govt.nz/footer-links/copyright/",
+      "attribution_requirements": "Source: Department of Conservation (NZ); original URL; CC BY 4.0 link; indicate extraction/chunking. No logos, design or third-party material.",
+      "content_owners": [
+        "Department of Conservation (NZ)"
+      ],
+      "copied_at": [
+        "2026-10-06T18:15:59.183295+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-11": {
+      "title": "Distress beacon",
+      "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/distress-beacon/",
+      "publisher": "Department of Conservation (NZ)",
+      "language": "en",
+      "license": "CC-BY-4.0",
+      "license_url": "https://www.doc.govt.nz/footer-links/copyright/",
+      "attribution_requirements": "Source: Department of Conservation (NZ); original URL; CC BY 4.0 link; indicate extraction/chunking. No logos, design or third-party material.",
+      "content_owners": [
+        "Department of Conservation (NZ)"
+      ],
+      "copied_at": [
+        "2026-10-06T18:15:59.623341+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-12": {
+      "title": "Overnight and multi-day tramp gear list",
+      "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/walking-and-tramping-gear-lists/multi-day-tramp-gear-list/",
+      "publisher": "Department of Conservation (NZ)",
+      "language": "en",
+      "license": "CC-BY-4.0",
+      "license_url": "https://www.doc.govt.nz/footer-links/copyright/",
+      "attribution_requirements": "Source: Department of Conservation (NZ); original URL; CC BY 4.0 link; indicate extraction/chunking. No logos, design or third-party material.",
+      "content_owners": [
+        "Department of Conservation (NZ)"
+      ],
+      "copied_at": [
+        "2026-10-06T18:16:00.138310+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-13": {
+      "title": "Fires on public conservation land",
+      "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/fires/",
+      "publisher": "Department of Conservation (NZ)",
+      "language": "en",
+      "license": "CC-BY-4.0",
+      "license_url": "https://www.doc.govt.nz/footer-links/copyright/",
+      "attribution_requirements": "Source: Department of Conservation (NZ); original URL; CC BY 4.0 link; indicate extraction/chunking. No logos, design or third-party material.",
+      "content_owners": [
+        "Department of Conservation (NZ)"
+      ],
+      "copied_at": [
+        "2026-10-06T18:16:00.575928+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-14": {
+      "title": "River crossing safety",
+      "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/river-crossing-safety/",
+      "publisher": "Department of Conservation (NZ)",
+      "language": "en",
+      "license": "CC-BY-4.0",
+      "license_url": "https://www.doc.govt.nz/footer-links/copyright/",
+      "attribution_requirements": "Source: Department of Conservation (NZ); original URL; CC BY 4.0 link; indicate extraction/chunking. No logos, design or third-party material.",
+      "content_owners": [
+        "Department of Conservation (NZ)"
+      ],
+      "copied_at": [
+        "2026-10-06T18:16:01.058969+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-15": {
+      "title": "Skredfarevurdering og faretegn",
+      "url": "https://www.varsom.no/snoskred/snoskredskolen/skredfarevurdering-og-faretegn/",
+      "publisher": "Varsom / NVE",
+      "language": "nb",
+      "license": "Varsom credited text reuse",
+      "license_url": "https://www.varsom.no/om-varsom/tilgjengelighetserklaering/",
+      "attribution_requirements": "Varsom / NVE and original URL. Direct quotations must be marked as quotations with a direct link. Text only.",
+      "content_owners": [
+        "Varsom / NVE"
+      ],
+      "copied_at": [
+        "2026-10-06T18:16:01.200424+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-16": {
+      "title": "Ferdsel i skredterreng",
+      "url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+      "publisher": "Varsom / NVE",
+      "language": "nb",
+      "license": "Varsom credited text reuse",
+      "license_url": "https://www.varsom.no/om-varsom/tilgjengelighetserklaering/",
+      "attribution_requirements": "Varsom / NVE and original URL. Direct quotations must be marked as quotations with a direct link. Text only.",
+      "content_owners": [
+        "Varsom / NVE"
+      ],
+      "copied_at": [
+        "2026-10-06T18:16:01.340145+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-17": {
+      "title": "Kameratredning",
+      "url": "https://www.varsom.no/snoskred/snoskredskolen/kameratredning",
+      "publisher": "Varsom / NVE",
+      "language": "nb",
+      "license": "Varsom credited text reuse",
+      "license_url": "https://www.varsom.no/om-varsom/tilgjengelighetserklaering/",
+      "attribution_requirements": "Varsom / NVE and original URL. Direct quotations must be marked as quotations with a direct link. Text only.",
+      "content_owners": [
+        "Varsom / NVE"
+      ],
+      "copied_at": [
+        "2026-10-06T18:16:01.478923+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-18": {
+      "title": "Isskolen",
+      "url": "https://www.varsom.no/is/isskolen/",
+      "publisher": "Varsom / NVE",
+      "language": "nb",
+      "license": "Varsom credited text reuse",
+      "license_url": "https://www.varsom.no/om-varsom/tilgjengelighetserklaering/",
+      "attribution_requirements": "Varsom / NVE and original URL. Direct quotations must be marked as quotations with a direct link. Text only.",
+      "content_owners": [
+        "Varsom / NVE"
+      ],
+      "copied_at": [
+        "2026-10-06T18:16:01.614855+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-19": {
+      "title": "Redning gjennom is",
+      "url": "https://www.varsom.no/is/isskolen/redning/",
+      "publisher": "Varsom / NVE",
+      "language": "nb",
+      "license": "Varsom credited text reuse",
+      "license_url": "https://www.varsom.no/om-varsom/tilgjengelighetserklaering/",
+      "attribution_requirements": "Varsom / NVE and original URL. Direct quotations must be marked as quotations with a direct link. Text only.",
+      "content_owners": [
+        "Varsom / NVE"
+      ],
+      "copied_at": [
+        "2026-10-06T18:16:01.779639+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-20": {
+      "title": "Råd til privatpersoner ved flom og jordskred",
+      "url": "https://www.varsom.no/flom-og-jordskred/om-flom-og-jordskred/rad-og-forebygging/rad-til-privatpersoner/",
+      "publisher": "Varsom / NVE",
+      "language": "nb",
+      "license": "Varsom credited text reuse",
+      "license_url": "https://www.varsom.no/om-varsom/tilgjengelighetserklaering/",
+      "attribution_requirements": "Varsom / NVE and original URL. Direct quotations must be marked as quotations with a direct link. Text only.",
+      "content_owners": [
+        "Varsom / NVE"
+      ],
+      "copied_at": [
+        "2026-10-06T18:16:02.058859+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-21": {
+      "title": "About Water Treatment Options When Hiking, Camping, or Traveling",
+      "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+      "publisher": "CDC",
+      "language": "en",
+      "license": "CDC public domain subject to agency terms",
+      "license_url": "https://www.cdc.gov/other/agencymaterials.html",
+      "attribution_requirements": "Source: CDC; original URL; material available free on CDC website; no CDC/HHS/U.S. Government endorsement; preserve substantive meaning; modified material is not official CDC content. Exclude third-party material and logos.",
+      "content_owners": [
+        "CDC"
+      ],
+      "copied_at": [
+        "2026-10-06T18:16:02.580380+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    },
+    "source-22": {
+      "title": "Lightning Tips",
+      "url": "https://www.weather.gov/safety/lightning-tips",
+      "publisher": "NOAA/National Weather Service",
+      "language": "en",
+      "license": "NWS public domain subject to reuse terms",
+      "license_url": "https://www.weather.gov/disclaimer",
+      "attribution_requirements": "Source: NOAA/National Weather Service; original URL; no endorsement; modified content is not official NWS material; exclude third-party media.",
+      "content_owners": [
+        "NOAA/National Weather Service"
+      ],
+      "copied_at": [
+        "2026-10-06T18:16:02.977173+00:00"
+      ],
+      "changes": "Source-based gold paraphrases and clearly marked quote excerpts; no media, endorsements or full article copies. Original may have been updated."
+    }
+  }
+}

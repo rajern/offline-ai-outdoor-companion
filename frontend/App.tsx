@@ -125,6 +125,22 @@ export default function App() {
                           <Text selectable style={styles.sourceUrl}>
                             {source.url}
                           </Text>
+                          {source.content_owner && (
+                            <Text style={styles.sourceName}>{source.content_owner}</Text>
+                          )}
+                          <Text style={styles.sourceName}>{source.license}</Text>
+                          {source.licence_url && (
+                            <Text selectable style={styles.sourceUrl}>{source.licence_url}</Text>
+                          )}
+                          {source.retrieved_at && (
+                            <Text style={styles.sourceName}>Hentet: {source.retrieved_at.slice(0, 10)}</Text>
+                          )}
+                          {source.source_updated_at && (
+                            <Text style={styles.sourceName}>Kilden oppdatert: {source.source_updated_at}</Text>
+                          )}
+                          {source.notice && (
+                            <Text style={styles.sourceName}>{source.notice}</Text>
+                          )}
                         </View>
                       ))}
                     </View>

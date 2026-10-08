@@ -1,0 +1,906 @@
+# Information-based retrieval gold definitions, not generated answers or eval results.
+# Source IDs refer to approved documents, never to required chunk identities.
+schema_version: 1
+set_id: outwise-retrieval-v1
+set_version: 1.0.0
+created_at: '2026-10-07'
+status: pending_owner_review
+purpose: Evaluate local retrieval independently of LLM answer generation.
+question_language: nb
+default_jurisdiction: 'NO'
+corpus_snapshot:
+  path: knowledge/local/knowledge.json
+  sha256: bd954cd27111854db2a54a8b05335dac8be7776301060da2cce3dfedb2a33d20
+  document_count: 22
+  chunk_count: 190
+  approved_manifest: knowledge/manifests/approved-sources.json
+  manifest_sha256: f5e740eb53e8970cfd88868bc211be346bba1644c317894dfa0a728f90911530
+  source_approval_date: '2026-10-06'
+  inspection_scope: All 22 approved documents in the frozen local corpus; no retrieval outputs used.
+review:
+  pilot_cases: Previously owner-reviewed; cases 01-05 incorporate the two final requested changes.
+  additional_cases: Cases 06-15 are proposals awaiting explicit owner review.
+  safety_policy: These gold definitions do not approve or implement M3 safety policy.
+rules:
+  information_based: >-
+    A supported-context pass requires all must-have information, including conditions and
+    limitations, in geographically applicable retrieved passages. Semantically equivalent
+    passages or combinations count; exact wording, document identity and chunk IDs do not
+    define success. Returning the correct document without the necessary instructions is
+    insufficient. The source and section references below are evidence locations, not an
+    exhaustive whitelist of acceptable passages.
+  supporting_sources: >-
+    Supporting sources are never required for a retrieval pass if the preferred/primary
+    source already covers all must-have information. Supporting sources may improve
+    context, but retrieval quality should not be rewarded merely for returning more
+    sources or more text.
+  supporting_sources_when_needed: >-
+    If primary passages omit a must-have fact, another approved, geographically applicable
+    passage may supply it. The information is required, not the identity of that secondary
+    source. Optional information never substitutes for missing must-have information.
+  geography: >-
+    Apply each case's jurisdiction. General passages and applicable Norwegian passages can
+    support NO cases. NZ-specific services, laws and operational rules cannot support a
+    Norwegian answer. An approved document may contain both general and country-specific
+    sections. This file defines expectations; it does not modify geography filtering.
+  insufficient_coverage: >-
+    Cases marked insufficient_coverage have no full-answer gold context in this snapshot.
+    Their must-have list describes only the supported subset, if any. Do not count them as
+    ordinary retrieval passes or failures for a complete answer, including when that list
+    is empty. Record the coverage gap, any supported subset, and misleading/inapplicable
+    context separately. A missing fact is not a retrievable passage. Assessing whether an
+    LLM acknowledges the gap belongs to a separate generation eval, not this set.
+  stability: >-
+    Freeze approved questions, must-have criteria and gap definitions during comparisons.
+    Record set and corpus hashes for future runs. Bump the set version for approved semantic
+    changes and re-review coverage if the corpus changes. Do not tune gold to retrieval results.
+  scope: No retrieval runs, answer generation, model experiments or production changes are authorized by this file.
+
+# Titles and URLs are stored once; each case resolves relevant_sources through this map.
+# Publisher attribution is preserved for the source-based paraphrases below. Licence and
+# reuse details remain in the owner-approved manifest; no raw article copies are included.
+sources:
+  source-01:
+    title: Hjerte- og lungeredning (HLR)
+    publisher: Helsenorge
+    url: https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/
+    language: 'no'
+  source-02:
+    title: Førstehjelp ved blødninger og sår
+    publisher: Helsenorge
+    url: https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/
+    language: 'no'
+  source-03:
+    title: Førstehjelp ved brannskader
+    publisher: Helsenorge
+    url: https://www.helsenorge.no/forstehjelp/brannskader-overflatiske/
+    language: 'no'
+  source-04:
+    title: Førstehjelp ved forstuing og brudd
+    publisher: Helsenorge
+    url: https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/
+    language: 'no'
+  source-05:
+    title: Førstehjelp ved nedkjøling
+    publisher: Helsenorge
+    url: https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/
+    language: 'no'
+  source-06:
+    title: Heteslag og råd ved hetebølger
+    publisher: Helsenorge
+    url: https://www.helsenorge.no/forstehjelp/behandling-av-skader/heteslag-og-rad-ved-hetebolger/
+    language: 'no'
+  source-07:
+    title: Førstehjelp ved bevisstløshet
+    publisher: Helsenorge
+    url: https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/
+    language: 'no'
+  source-09:
+    title: Maps / what to do if you get lost
+    publisher: Department of Conservation (NZ)
+    url: https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/
+    language: en
+  source-10:
+    title: Land Safety Code
+    publisher: Department of Conservation (NZ)
+    url: https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code
+    language: en
+  source-11:
+    title: Distress beacon
+    publisher: Department of Conservation (NZ)
+    url: https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/distress-beacon/
+    language: en
+  source-12:
+    title: Overnight and multi-day tramp gear list
+    publisher: Department of Conservation (NZ)
+    url: https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/walking-and-tramping-gear-lists/multi-day-tramp-gear-list/
+    language: en
+  source-13:
+    title: Fires on public conservation land
+    publisher: Department of Conservation (NZ)
+    url: https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/fires/
+    language: en
+  source-14:
+    title: River crossing safety
+    publisher: Department of Conservation (NZ)
+    url: https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/river-crossing-safety/
+    language: en
+  source-15:
+    title: Skredfarevurdering og faretegn
+    publisher: Varsom / NVE
+    url: https://www.varsom.no/snoskred/snoskredskolen/skredfarevurdering-og-faretegn/
+    language: 'no'
+  source-16:
+    title: Ferdsel i skredterreng
+    publisher: Varsom / NVE
+    url: https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/
+    language: 'no'
+  source-19:
+    title: Redning gjennom is
+    publisher: Varsom / NVE
+    url: https://www.varsom.no/is/isskolen/redning/
+    language: 'no'
+  source-20:
+    title: Råd til privatpersoner ved flom og jordskred
+    publisher: Varsom / NVE
+    url: https://www.varsom.no/flom-og-jordskred/om-flom-og-jordskred/rad-og-forebygging/rad-til-privatpersoner/
+    language: 'no'
+  source-21:
+    title: About Water Treatment Options When Hiking, Camping, or Traveling
+    publisher: CDC
+    url: https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html
+    language: en
+  source-22:
+    title: Lightning Tips
+    publisher: NOAA / National Weather Service
+    url: https://www.weather.gov/safety/lightning-tips
+    language: en
+
+cases:
+  - id: case-01
+    title: Ankelskade med mulig brudd
+    origin: approved_pilot
+    review_status: owner_reviewed_with_requested_revisions
+    areas: [injury, first_aid]
+    difficulty: harder
+    question: Jeg tråkket over på tur. Ankelen har hovnet opp, og jeg klarer ikke å stå på foten. Hva bør jeg gjøre nå?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: supported_context
+    relevant_sources: [source-04, source-05]
+    preferred_source_sections:
+      - source_id: source-04
+        sections:
+          - Hva er brudd?
+          - 'Hva er brudd? / Førstehjelp ved brudd:'
+        sufficiency: Together sufficient for all must-have information.
+    supporting_sources:
+      - source_id: source-04
+        sections: ['Hva er forstuing? / Førstehjelp ved forstuing:', Legevakt]
+        contribution: Ro/avlastning, supplerende forstuingsråd og kontaktinformasjon.
+        sufficient_alone: false
+      - source_id: source-05
+        sections: [Førstehjelp ved nedkjøling]
+        contribution: Forebygge nedkjøling hos skadde.
+        sufficient_alone: false
+    must_have_information:
+      - Manglende evne til å stå på den skadde foten gir grunn til å mistenke brudd.
+      - Forstuing og brudd kan være vanskelig å skille.
+      - Mistanke om brudd krever vurdering av lege eller legevakt.
+      - Hold området i ro og unngå belastning/unødvendig bevegelse; bevegelse kan forverre skaden og smerten.
+    acceptable_source_sections_or_chunks:
+      - Passasjer om bruddmistanke og førstehjelp ved brudd dekker samlet kravene.
+      - RICE kan bidra med ro/avlastning, men erstatter ikke bruddmistanke og medisinsk vurdering.
+      - All approved, applicable passages collectively covering the must-have facts count; supporting sources are not required if primary context is complete.
+    optional_useful_information:
+      - Holde den skadde varm.
+      - Foreløpig støtte/spjelking uten press på skadestedet.
+      - 116 117 og relevant nødtelefoninformasjon.
+      - Supplerende forstuingsråd uten å erstatte bruddveiledningen.
+    irrelevant_or_potentially_misleading_information:
+      - Beskrivelse av forstuet ankel alene, eller RICE alene uten bruddmistanke og medisinsk vurdering.
+      - Gradvis økt belastning som om personen allerede var i bedring.
+      - Håndleddsbrudd, gipsbehandling og generelle navigasjonsråd.
+    knowledge_gap:
+      status: bounded_limitations
+      details:
+        - Innledende førstehjelp og behov for medisinsk vurdering er godt dekket.
+        - Konkret evakuering/transport når personen ikke kan gå fra et avsides tursted, er ikke godt dekket.
+    gold_uncertainty:
+      requires_owner_judgement: false
+      notes: []
+    why_this_case_is_useful: Skiller vurdering og behandling av mulig brudd fra treff som bare nevner ankel/forstuing.
+
+  - id: case-02
+    title: Gjennomvåt og kald turkamerat
+    origin: approved_pilot
+    review_status: owner_reviewed_with_requested_revisions
+    areas: [cold, exposure, first_aid]
+    difficulty: straightforward
+    question: Vi har gått lenge i regn og vind. Turkameraten min er gjennomvåt og skjelver kraftig, men er våken og snakker normalt. Vi har sovepose og fjellduk. Hvordan hjelper jeg ham nå?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: supported_context
+    relevant_sources: [source-05, source-12, source-19]
+    preferred_source_sections:
+      - source_id: source-05
+        sections: [Slik gir du førstehjelp ved nedkjøling]
+        sufficiency: Sufficient alone for all must-have information.
+    supporting_sources:
+      - source_id: source-12
+        sections: [Personal equipment]
+        contribution: Generelt utstyr for sovepose, isolasjon og nødly; ikke behandling.
+        sufficient_alone: false
+      - source_id: source-19
+        sections: [Etter redningen]
+        contribution: Vått tøy av, tørt tøy på og isolasjon etter isredning; konteksten må bevares.
+        sufficient_alone: false
+      - source_id: source-05
+        sections: [Symptomer på nedkjøling]
+        contribution: Symptomoversikt; ikke erstatning for førstehjelp.
+        sufficient_alone: false
+    must_have_information:
+      - Fjern vått tøy og begrens videre varmetap.
+      - Pakk personen inn i isolerende materiale med vind- og damptett beskyttelse mot vind og fukt.
+      - Tilfør varme; eksterne varmekilder skal ikke ligge direkte mot huden.
+      - Overvåk bevissthet og pust.
+      - Ring 113 for veiledning, slik førstehjelpskilden anbefaler.
+    acceptable_source_sections_or_chunks:
+      - Helsenorges førstehjelpsseksjon er tilstrekkelig alene.
+      - Likeverdige passasjer eller kombinasjoner som dekker alle must-have-punktene kan godtas; støttepassasjer er ikke påkrevd.
+      - Utstyrslister, symptomer eller etterbehandling ved isredning alene dekker ikke kravene.
+    optional_useful_information:
+      - Få personen innendørs eller i ly dersom mulig.
+      - Våkenhet og skjelving er forenlig med mildere nedkjøling i symptomoversikten.
+      - Knytte tilgjengelig sovepose/fjellduk til isolasjon og vindbeskyttelse.
+      - Alternativ innpakking dersom isolerende materiale mangler.
+    irrelevant_or_potentially_misleading_information:
+      - HLR/bevisstløshet som hovedkontekst når personen er våken og snakker normalt.
+      - Heteslag/dehydrering eller utstyrslister uten behandlingsråd.
+      - Bare beskrivelser av hvor farlig nedkjøling er.
+      - Ukritisk generalisering av råd om bevegelse fra etterbehandling ved isredning.
+    knowledge_gap:
+      status: bounded_limitations
+      details:
+        - Grunnleggende førstehjelp er godt dekket; detaljerte evakueringsbeslutninger fra avsides tursteder er ikke godt dekket.
+    gold_uncertainty:
+      requires_owner_judgement: false
+      notes: []
+    why_this_case_is_useful: Finner praktisk behandling av kuldeeksponering fremfor bare symptomer eller utstyr.
+
+  - id: case-03
+    title: Drikkevann fra bekk med ukjent høyde
+    origin: approved_pilot
+    review_status: owner_reviewed_with_requested_revisions
+    areas: [water]
+    difficulty: harder
+    question: Vi har gått tomme for drikkevann på tur. Bekken ser helt ren ut, og vi har stormkjøkken. Kan vi bruke vannet derfra, og hva bør vi gjøre med det først?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: supported_context
+    relevant_sources: [source-21, source-12]
+    preferred_source_sections:
+      - source_id: source-21
+        sections:
+          - Exposure / Clear water can be unsafe
+          - Key points
+          - Overview
+          - Prevention steps and strategies / Treat your water
+          - Prevention steps and strategies / Treat your water / Boil
+        sufficiency: Clear-water risk, treatment need, chemical limitation and full boiling rule together suffice; Key points and Overview are alternatives for treatment need.
+    supporting_sources:
+      - source_id: source-12
+        sections: [Personal equipment / Cooking and food equipment]
+        contribution: Utstyr til koking/vannbehandling; ikke selve prosedyren.
+        sufficient_alone: false
+    must_have_information:
+      - Vann som ser rent ut, kan inneholde sykdomsfremkallende mikroorganismer.
+      - Vann med usikker trygghet bør behandles.
+      - For klart vann ved høyder opptil og med 6 500 fot skal vannet fosskoke i ett minutt for å drepe mikroorganismer.
+      - Over 6 500 fot skal klart vann fosskoke i tre minutter for å drepe mikroorganismer.
+      - Koking/desinfisering gjør ikke vann med skadelige kjemikalier eller giftstoffer trygt; ved mistanke om slik forurensning må en annen vannkilde brukes.
+    acceptable_source_sections_or_chunks:
+      - Passasjer som samlet dekker klart/usikkert vann, begge høydebetingelsene for koking og begrensningen ved kjemisk forurensning.
+      - CDC er tilstrekkelig uten DOC; en generell oppsummering uten kokeprosedyre og begrensninger er ikke tilstrekkelig.
+      - Likeverdige opplysninger og korrekte enhetsomregninger kan godtas; eksakt ordlyd eller chunk-identitet kreves ikke.
+    optional_useful_information:
+      - Avkjøl vannet før bruk for å unngå brannskader.
+      - Filtrering etterfulgt av desinfisering som alternativ metode.
+      - Utstyrsanbefalinger fra DOC.
+    irrelevant_or_potentially_misleading_information:
+      - Håndvask, toalettavfall eller sykdomssymptomer som hovedkontekst.
+      - Filterdetaljer som erstatter kokeprosedyren når stormkjøkken er tilgjengelig.
+      - Klart vann fremstilt som sikkert eller koking fremstilt som fjerning av all forurensning.
+      - Ettminuttsregelen uten høydeforbehold; høyden er ikke oppgitt.
+    knowledge_gap:
+      status: bounded_limitations
+      details:
+        - Generell behandling mot mikroorganismer er dekket; faktisk lokal/kjemisk forurensning kan ikke avgjøres.
+        - Turstedets høyde er ukjent i spørsmålet, ikke en manglende regel i kunnskapsbasen. Retrieval må gi begge reglene; senere LLM må håndtere ukjent høyde.
+    gold_uncertainty:
+      requires_owner_judgement: false
+      notes: []
+    why_this_case_is_useful: Norsk spørsmål mot engelsk prosedyre med nødvendige betingelser og behandlingsbegrensninger.
+
+  - id: case-04
+    title: Mistet stien i tåke
+    origin: approved_pilot
+    review_status: owner_reviewed_with_requested_revisions
+    areas: [lost, navigation, emergency_signalling]
+    difficulty: harder
+    question: Vi har mistet den merkede stien i tåka. Vi er usikre på hvor vi tok feil, og ser ikke noe vi kjenner igjen. Hva bør vi gjøre nå?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: supported_context
+    relevant_sources: [source-09, source-11, source-10, source-12]
+    preferred_source_sections:
+      - source_id: source-09
+        sections: [Reduce your risk of getting lost / If you get lost]
+        sufficiency: The general section is sufficient alone; other sections contain NZ-specific material.
+    supporting_sources:
+      - source_id: source-11
+        sections: [Why you should take one, Call for help early]
+        contribution: Kun betinget støtte hvis nødpeiler finnes og situasjonen tilsier bruk.
+        sufficient_alone: false
+      - source_id: source-10
+        sections: [Five simple steps / 2. Understand the weather, Five simple steps / 3. Pack warm clothes and extra food]
+        contribution: Generell beredskap; hovedsakelig forebyggende.
+        sufficient_alone: false
+      - source_id: source-12
+        sections: [Personal equipment]
+        contribution: Kart/kompass, nødly og annet utstyr; ingen konkret returmetode.
+        sufficient_alone: false
+    must_have_information:
+      - Ikke fortsett inn i ukjent terreng i håp om å finne veien.
+      - Stopp og vurder situasjonen.
+      - Bli der dere er dersom dere ikke er sikre på veien ut.
+      - Ivareta gruppens sikkerhet og varme, og lag ly ved behov.
+      - Søk hjelp og gjør dere synlige.
+    acceptable_source_sections_or_chunks:
+      - If you get lost dekker alle kravene alene; flere kilder er ikke nødvendig.
+      - Andre geografisk anvendelige passasjer kan kollektivt dekke kravene.
+      - Land Safety Code, utstyrslister og nødpeilerråd alene erstatter ikke handlinger etter å ha gått seg bort.
+    optional_useful_information:
+      - Spise og drikke; førstehjelp ved skade.
+      - Tilgjengelig kart-/navigasjonsutstyr som kan brukes forsvarlig.
+      - Betinget bruk av nødpeiler.
+      - Rådet om samlet gruppe finnes i Land Safety Code, men den aktuelle lokale passasjen er merket NZ og er ikke et obligatorisk norsk gold-kriterium.
+    irrelevant_or_potentially_misleading_information:
+      - Forhåndsnedlasting av kart/deling av turplan som hovedsvar.
+      - New Zealand-spesifikke nødnumre, kart og tjenester.
+      - En bestemt retning eller bare å gå samme vei tilbake uten posisjons-/rutegrunnlag.
+      - Nødpeilerinstruksjoner som dominerer uten opplysninger om tilgjengelig utstyr.
+    knowledge_gap:
+      status: bounded_limitations
+      details:
+        - Innledende handlinger er godt dekket; faktisk posisjon og konkret returvei kan ikke bestemmes.
+        - Detaljerte teknikker for ruterekonstruksjon/navigasjon tilbake er begrenset.
+    gold_uncertainty:
+      requires_owner_judgement: false
+      notes: []
+    why_this_case_is_useful: Norsk spørsmål mot engelsk handlingsseksjon, med skille mellom aktive råd, forebygging og geografisk støy.
+
+  - id: case-05
+    title: Torden på fjellrygg
+    origin: approved_pilot
+    review_status: owner_reviewed_with_requested_revisions
+    areas: [natural_hazard, weather, shelter]
+    difficulty: harder
+    question: På vei over en fjellrygg begynner det å tordne. Vi ser et lite overheng der vi kan vente, men bilen står nede ved parkeringen. Hva bør vi gjøre?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: supported_context
+    relevant_sources: [source-22, source-10]
+    preferred_source_sections:
+      - source_id: source-22
+        sections: ['Lightning: What You Need to Know', Last Resort Outdoor Risk Reduction Tips]
+        sufficiency: Together sufficient for all must-have information.
+    supporting_sources:
+      - source_id: source-10
+        sections: [Five simple steps / 2. Understand the weather]
+        contribution: Generell vær-/beredskapskontekst; ingen lynspesifikke handlinger.
+        sufficient_alone: false
+    must_have_information:
+      - Hørbar torden betyr at lyn er nær nok til å være farlig.
+      - Ingen utendørsplass skal behandles som trygg under tordenvær.
+      - Kom bort fra rygger, topper og annet høyt terreng.
+      - Et klippeoverheng er ikke trygt ly mot lyn.
+      - Ordentlig ly er en egnet solid bygning med elektrisitet/røranlegg eller et lukket kjøretøy med metalltak og vinduene oppe.
+      - Hvis ordentlig ly ikke kan nås, reduserer utendørstiltak bare risikoen; de gjør ikke stedet trygt.
+    acceptable_source_sections_or_chunks:
+      - De to lynseksjonene dekker kravene samlet uten DOC-støtte.
+      - Likeverdige passasjer eller kombinasjoner må dekke både handlingene og begrensningene; generelle ly-råd alene er utilstrekkelige.
+    optional_useful_information:
+      - Vent minst 30 minutter etter siste torden før dere forlater ordentlig ly.
+      - Ikke ligg flatt; unngå enslige trær.
+      - Hold avstand til vann og ledende gjenstander der relevant.
+    irrelevant_or_potentially_misleading_information:
+      - Regn-/vindly som fremstiller overhenget som trygt mot lyn, eller råd om å vente under det.
+      - Værplanlegging før turen eller innendørsråd som hovedkontekst.
+      - Påstander om at en bestemt utendørsposisjon er trygg.
+    knowledge_gap:
+      status: bounded_limitations
+      details:
+        - Generell lynsikkerhet er dekket; sikreste nedstigningsrute, gjennomførbarhet av å nå bilen nå og tidsbruk til ly kan ikke bestemmes.
+    gold_uncertainty:
+      requires_owner_judgement: false
+      notes: []
+    why_this_case_is_useful: Farespesifikt engelsk kildestoff må overstyre misvisende generelle ly-råd og bevare usikkerhet.
+
+  - id: case-06
+    title: Blødning som ikke stopper
+    origin: additional_proposal
+    review_status: pending_owner_review
+    areas: [injury, first_aid, emergency_prioritisation]
+    difficulty: harder
+    question: Turkameraten min skar seg dypt i leggen på en skarp stein. Det blør mye og trekker gjennom tøyet vi har lagt på. Hva skal vi gjøre først?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: supported_context
+    relevant_sources: [source-02, source-05]
+    preferred_source_sections:
+      - source_id: source-02
+        sections:
+          - Førstehjelp ved ytre blødingar / Når skal du ringje 113?
+          - 'Førstehjelp ved ytre blødingar / Kva kan du gjere sjølv? / Avgrens blødinga:'
+          - 'Førstehjelp ved ytre blødingar / Kva kan du gjere sjølv? / Bandasjar med press mot blødinga:'
+          - 'Førstehjelp ved ytre blødingar / Kva kan du gjere sjølv? / Overvak og hald kroppstemperaturen oppe:'
+        sufficiency: Together sufficient for all must-have information.
+    supporting_sources:
+      - source_id: source-05
+        sections: [Førstehjelp ved nedkjøling]
+        contribution: Betydningen av å forebygge nedkjøling hos skadde.
+        sufficient_alone: false
+    must_have_information:
+      - Ring 113 ved større blødning eller blødning som ikke lar seg stoppe.
+      - Press ren bandasje eller rent tøy direkte mot blødningen med fingrene for å begrense den.
+      - Ved gjennomblødning legges ny bandasje utenpå med større press; den beskrevne handlingen er ikke å fjerne den første bandasjen.
+      - Hold personen varm og overvåk tilstanden; gi beskjed til 113 ved sløvhet eller andre endringer.
+    acceptable_source_sections_or_chunks:
+      - Passasjer om større ytre blødning, direkte trykk, gjennomblødning og overvåking/varme dekker kravene samlet.
+      - Helsenorges blødningsartikkel er tilstrekkelig uten støttekilden; tilsvarende kildestøttet informasjon i andre aktuelle passasjer teller.
+      - Instruksjoner for små sår alene er utilstrekkelige for denne pågående store blødningen.
+    optional_useful_information:
+      - Legge personen ned og heve den blødende kroppsdelen over hjertehøyde dersom mulig.
+      - Ikke fjerne fastsittende gjenstander hvis slike finnes i såret.
+      - Kildens beskrivelse av ekstra trykk med en hard gjenstand på bandasjen.
+    irrelevant_or_potentially_misleading_information:
+      - Skrubbsårrengjøring eller råd om små kutt som hovedkontekst.
+      - Kun å vente 5-10 minutter som ved mindre blødning uten nødvendig varsling/trykk for større blødning.
+      - Indre blødning som erstatning for instruksjoner om direkte trykk mot det synlige såret.
+      - Turniképrosedyrer eller andre tiltak som ikke er dokumentert i den godkjente lokale teksten.
+    knowledge_gap:
+      status: bounded_limitations
+      details:
+        - Innledende håndtering av stor ytre blødning er dekket; detaljert evakuering fra turstedet og turnikéteknikk er ikke dekket.
+    gold_uncertainty:
+      requires_owner_judgement: false
+      notes: []
+    why_this_case_is_useful: Skiller akutt blødningskontroll fra mindre sår og finner nødvendig informasjon fordelt over flere seksjoner.
+
+  - id: case-07
+    title: Skåldet hånd ved matlaging
+    origin: additional_proposal
+    review_status: pending_owner_review
+    areas: [injury, first_aid]
+    difficulty: straightforward
+    question: Jeg er voksen og sølte akkurat kokende vann over hånda da vi laget kaffe på tur. Huden er rød og vond, og det begynner å komme blemmer. Hva gjør jeg nå?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: supported_context
+    relevant_sources: [source-03]
+    preferred_source_sections:
+      - source_id: source-03
+        sections: [Førstehjelp ved brannskader, 'Når bør du oppsøke helsehjelp?']
+        sufficiency: Treatment section and medical-help criteria together suffice for adult cooling, no ice/ice-cold water, intact blisters and medical assessment of a hand burn. Cream/ointment advice is outside retrieval gold and does not affect pass/fail.
+    supporting_sources: []
+    must_have_information:
+      - Avkjøl skadestedet med rennende, litt kjølig vann omkring 20 grader i inntil 20 minutter for en voksen.
+      - Ikke bruk is eller iskaldt vann; is kan skade huden ytterligere.
+      - Ikke stikk hull på blemmene.
+      - Kontakt lege når hånden er brannskadet, slik kildens kriterier angir.
+    acceptable_source_sections_or_chunks:
+      - Passasjer med voksen avkjøling, forbud mot is/å punktere blemmer og kriteriet om lege ved håndskade er samlet tilstrekkelige.
+      - Behandling og helsehjelp må begge dekkes; ingen ekstra kilder er påkrevd.
+      - Krem-/salveråd inngår ikke i retrieval-gold. Tilstedeværelse, fravær eller motstrid i slike råd påvirker ikke retrieval-pass/fail; ingen avklaring av kremvalg kreves for pass.
+    optional_useful_information:
+      - Ikke bruke vått håndkle/klut som avkjøling.
+      - Etter avkjøling dekke med ren bandasje.
+      - Ikke dra av klær som sitter fast i huden.
+      - Smertestillende etter kildens omtale, uten at dette erstatter førstehjelp og legekontakt.
+    irrelevant_or_potentially_misleading_information:
+      - Isråd fra forstuingsbehandling brukt på brannskaden.
+      - Kun definisjoner av overfladisk/dyp brannskade uten behandlingsinstruksjoner.
+      - Barnespesifikk avkjøling som hovedinstruksjon for en voksen.
+    knowledge_gap:
+      status: bounded_limitations
+      details:
+        - Avkjøling og behov for lege ved håndskade er dekket; tekst alene avgjør ikke faktisk skadedybde eller evakuering.
+        - Førstehjelpsseksjonen anbefaler bakteriedrepende krem, men sier også at området ikke skal smøres med krem. Entydig kremveiledning mangler i denne teksten; konflikten er utenfor gold og påvirker ikke retrieval-success.
+    gold_uncertainty:
+      requires_owner_judgement: false
+      notes:
+        - Eierens QA-bestilling avklarer gold-avgrensningen til voksen avkjøling, ikke is/iskaldt vann, ikke punktere blemmer og medisinsk vurdering av håndskade. Krem-/salvekonflikten består, men krever ingen avklaring for retrieval-pass/fail og er ikke endelig behandlingspolicy.
+    why_this_case_is_useful: Finner konkret handling og legekontakt fremfor symptomer; tester også risiko for feil råd fra en annen skadetype.
+
+  - id: case-08
+    title: Bevisstløs person som ser ut til å puste
+    origin: additional_proposal
+    review_status: pending_owner_review
+    areas: [first_aid, emergency_prioritisation]
+    difficulty: harder
+    question: En voksen i turfølget sank plutselig sammen på rasteplassen og svarer ikke når vi snakker til henne. Brystet beveger seg jevnt, men vi er usikre på hva vi skal gjøre. Hvordan hjelper vi henne?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: supported_context
+    relevant_sources: [source-07, source-01, source-05]
+    preferred_source_sections:
+      - source_id: source-07
+        sections:
+          - Slik hjelper du en bevisstløs person / Undersøk om den skadde lever og puster
+          - Slik hjelper du en bevisstløs person / Gi fri luftvei
+          - Slik hjelper du en bevisstløs person / Sjekk for normal pust
+          - Slik legger du en person i sideleie
+        sufficiency: Together sufficient for the initial actions and breathing-dependent decision.
+    supporting_sources:
+      - source_id: source-01
+        sections: [Førstehjelp ved bevisstløshet, Hjerte- og lungeredning på voksne / Legg personen på gulvet og sjekk pusten]
+        contribution: 113, luftvei og pustesjekk kan dekke deler av kravene, men alene ikke alle sideleie-/overvåkingsrådene.
+        sufficient_alone: false
+      - source_id: source-05
+        sections: [Førstehjelp ved nedkjøling]
+        contribution: Forebygge nedkjøling hos skadde/syke.
+        sufficient_alone: false
+    must_have_information:
+      - Ring 113 ved bevisstløshet og få veiledning.
+      - Gi fri luftvei med haken frem og hodet litt bakover; vurder normal pust ved å se, lytte og føle i inntil 10 sekunder i denne situasjonen uten oppgitt nedkjøling.
+      - Ved bevisstløshet med normal pust legges personen i stabilt sideleie med fri luftvei og munnen vinklet nedover.
+      - Overvåk at pusten forblir normal; manglende eller unormal pust krever HLR, og usikkerhet avklares med 113.
+    acceptable_source_sections_or_chunks:
+      - Passasjer må samlet dekke varsling, luftvei/pustesjekk, sideleie og betingelsen for HLR.
+      - Den foretrukne artikkelen kan dekke alt uten støttekilder. Alternative passasjer kan bidra med samme informasjon.
+      - Generelle HLR-kompresjoner uten pustevurdering/sideleie er ikke tilstrekkelige.
+    optional_useful_information:
+      - Vurdere egen sikkerhet på stedet.
+      - Detaljert plassering av armer og knær under vending til sideleie.
+      - Dekke personen til og isolere mot underlaget.
+      - Høyttalerfunksjon for å få veiledning med hendene fri.
+    irrelevant_or_potentially_misleading_information:
+      - HLR fremstilt som automatisk riktig fordi personen er bevisstløs, uten å skille normal fra unormal pust.
+      - Barne-/spedbarnsprosedyrer som hovedkontekst.
+      - Pustesjekk i ett minutt ved nedkjøling brukt uten opplysninger om nedkjøling.
+      - Diagnoser for årsaken til kollaps som teksten ikke kan fastslå.
+    knowledge_gap:
+      status: bounded_limitations
+      details:
+        - Første handlinger er dekket; årsaken til kollaps og faktisk pust kan ikke bestemmes fra spørsmålet alene.
+    gold_uncertainty:
+      requires_owner_judgement: false
+      notes: []
+    why_this_case_is_useful: Tester betinget førstehjelp og skiller pustevurdering/sideleie fra nærliggende men potensielt feil HLR-kontekst.
+
+  - id: case-09
+    title: Forebygge oppheting på varm tur
+    origin: additional_proposal
+    review_status: pending_owner_review
+    areas: [heat, exposure, preparedness]
+    difficulty: straightforward
+    question: Vi skal gå en lang tur midt på en veldig varm sommerdag. Hva bør vi gjøre underveis for å unngå å bli dårlige av varmen?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: supported_context
+    relevant_sources: [source-06, source-10]
+    preferred_source_sections:
+      - source_id: source-06
+        sections: [Råd for å unngå oppheting og dehydrering]
+        sufficiency: Sufficient alone for the preventive actions.
+    supporting_sources:
+      - source_id: source-06
+        sections: [Symptom på heteslag (overoppheting) og dehydrering]
+        contribution: Faresymptomer og helsehjelp hvis forebygging ikke er nok.
+        sufficient_alone: false
+      - source_id: source-10
+        sections: [Five simple steps / 2. Understand the weather]
+        contribution: Vær kan kreve endret plan, uten temperaturspesifikke tiltak.
+        sufficient_alone: false
+    must_have_information:
+      - Drikk rikelig med vann eller annen alkoholfri drikke.
+      - Reduser fysisk aktivitet i varmen.
+      - Sørg for avkjøling, eksempelvis kjølig vann/våte håndklær eller opphold i kjølige omgivelser når tilgjengelig.
+    acceptable_source_sections_or_chunks:
+      - Kildens forebyggende tiltaksseksjon dekker kravene alene; symptomer og værplanlegging er valgfri støtte.
+      - Likeverdige, kildebelagte passasjer om drikke, redusert aktivitet og avkjøling teller samlet.
+    optional_useful_information:
+      - Lette, luftige og lyse klær.
+      - Kildens symptomoversikt og råd om helsehjelp ved symptomer, 113 ved alvorlige tilfeller.
+      - Utsatte grupper kan trenge ekstra oppmerksomhet.
+    irrelevant_or_potentially_misleading_information:
+      - Definisjonen av hetebølge som hovedkontekst uten tiltak.
+      - Kulde-/hypotermibehandling eller råd om å øke aktivitet for å produsere varme.
+      - Faste liter-per-time-doser eller varmegrenser for tur som ikke finnes i teksten.
+    knowledge_gap:
+      status: bounded_limitations
+      details:
+        - Generelle forebyggende tiltak er dekket; individuelle væskemengder, sikker turbelastning og aktuelle lokale værforhold er ikke bestemt av kilden.
+    gold_uncertainty:
+      requires_owner_judgement: false
+      notes: []
+    why_this_case_is_useful: Enkel tiltaksretrieval for varme, adskilt fra akutt kuldebehandling og sykdomsdefinisjoner.
+
+  - id: case-10
+    title: Beredskap for uventet natt ute
+    origin: additional_proposal
+    review_status: pending_owner_review
+    areas: [shelter, warmth, survival, preparedness]
+    difficulty: harder
+    question: Hva bør jeg ha i sekken for å holde varmen og få ly hvis en dagstur i fjellet tar så lang tid at jeg må bli ute til neste morgen?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: supported_context
+    relevant_sources: [source-12, source-10, source-05]
+    preferred_source_sections:
+      - source_id: source-12
+        sections: [Personal equipment]
+        sufficiency: Covers sleeping insulation and emergency shelter, but not alone all warm-clothing information in NO/general sections. If camping contains optional tent/sleeping-mat detail; sleeping-mat coverage is not required.
+      - source_id: source-10
+        sections: [Five simple steps / 3. Pack warm clothes and extra food]
+        sufficiency: The general heading and text supply warm clothing and preparation for an unexpected night; together with the gear sections sufficient.
+    supporting_sources:
+      - source_id: source-05
+        sections: [Slik gir du førstehjelp ved nedkjøling]
+        contribution: Prinsippet om varm isolerende og vind-/damptett innpakking; behandling er sekundært til pakkespørsmålet.
+        sufficient_alone: false
+    must_have_information:
+      - Ha med varmt tøy og forbered deg på dårlig vær/en uventet natt ute.
+      - Ha med sovepose eller overlevelses-/isoleringsutstyr slik utstyrslisten beskriver.
+      - Ha med nødly, telt eller tilsvarende kildebelagt informasjon om ly for beskyttelse.
+    acceptable_source_sections_or_chunks:
+      - Passasjer som samlet dekker varmt tøy/beredskap for kulde og dårlig vær, sove-/isoleringsutstyr og nødly/telt eller tilsvarende ly er tilstrekkelige.
+      - Liggeunderlag er valgfri nyttig informasjon; fravær av liggeunderlag eller If camping-seksjonen hindrer ikke pass når de tre must-have-punktene er dekket.
+      - Ingen bestemt utstyrstype, produsent eller temperaturklassifisering kreves; informasjonen, ikke antallet dokumenter, avgjør.
+      - Andre anvendelige passasjer kan erstatte deler av primærkombinasjonen. Ekstra hypotermibehandling gir ikke bonus for mer tekst.
+    optional_useful_information:
+      - Liggeunderlag som nyttig camping-/soveutstyr, omtalt i Personal equipment / If camping.
+      - Hodelykt og reservebatterier.
+      - Ekstra mat, vann og vannbehandlingsutstyr.
+      - Førstehjelpsutstyr, kart/kompass og nødpeiler.
+    irrelevant_or_potentially_misleading_information:
+      - Hele flerdagerslisten inkludert ørepropper, stearinlys og annet uten relevans til varme/ly.
+      - HLR eller akutthypotermi som erstatning for beredskapsutstyret.
+      - NZ-spesifikke hytte-/bekledningsføringer brukt som norske forhold.
+      - Detaljerte gapahuk-, bål- eller bushcraft-prosedyrer som ikke finnes i den lokale teksten.
+    knowledge_gap:
+      status: bounded_limitations
+      details:
+        - Generelle utstyrskategorier er dekket; et garantert tilstrekkelig minimumssett, temperaturvalg og bygging av improvisert ly er ikke dekket.
+    gold_uncertainty:
+      requires_owner_judgement: false
+      notes: []
+    why_this_case_is_useful: Norsk spørsmål mot engelske utstyrskategorier, med relevant kombinasjon av ly og varme uten krav om hele sjekklisten.
+
+  - id: case-11
+    title: Toaletthygiene ved teltleir
+    origin: additional_proposal
+    review_status: pending_owner_review
+    areas: [hygiene, water]
+    difficulty: harder
+    question: Vi telter ved et vann uten toalett. Hvordan håndterer vi toalettbesøk uten å forurense vannet vi henter, og hva kan vi bruke på hendene før matlaging når vi mangler såpe og vaskevann?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: supported_context
+    relevant_sources: [source-21, source-12]
+    preferred_source_sections:
+      - source_id: source-21
+        sections: [Prevention steps and strategies / Bury your poop, Prevention steps and strategies / Wash your hands]
+        sufficiency: Together sufficient for the general hygiene procedure and hand-sanitizer alternative.
+    supporting_sources:
+      - source_id: source-12
+        sections: [Personal equipment / Optional personal equipment, Personal equipment / Toiletries]
+        contribution: Liten spade/pose for toalettavfall og råd om å unngå såpe i vann; gir ikke hele prosedyren.
+        sufficient_alone: false
+    must_have_information:
+      - Ved toalettbesøk uten toalett anbefaler kilden å grave ned avføring i jord, minst 8 tommer dypt og minst 200 fot fra innsjøer, elver og annet naturlig vann.
+      - Toalettavfall legges nedstrøms stedet der man selv eller andre henter vann.
+      - Håndhygiene før matlaging/spising og etter toalettbesøk er nødvendig; uten såpe og vann brukes hånddesinfeksjon med minst 60 prosent alkohol.
+    acceptable_source_sections_or_chunks:
+      - Passasjer om avfallsdybde, avstand, plassering i forhold til vannhenting og hånddesinfeksjon dekker kravene samlet.
+      - Korrekte omtrentlige omregninger til cirka 20 cm og 60 m er akseptable; eksakte imperialord kreves ikke.
+      - CDC dekker alt uten utstyrsstøtte fra DOC; bare en spadeanbefaling eller generell hygieneoppfordring er utilstrekkelig.
+    optional_useful_information:
+      - Liten spade eller oppsamling av toalettavfall i egnet beholder/pose slik DOC omtaler.
+      - Ikke bruke såpe eller vaske seg direkte i innsjøer/bekker.
+      - Generell forklaring på hvordan avføring kan spre mikroorganismer til vann.
+    irrelevant_or_potentially_misleading_information:
+      - Koke-/filterinstruksjoner som erstatter tiltak for toalettavfall og hender.
+      - Sykdomssymptomer eller høyrisikogrupper uten hygieneinstruksjoner.
+      - Antydning om at enhver hånddesinfeksjon er tilstrekkelig uansett alkoholinnhold.
+    knowledge_gap:
+      status: bounded_limitations
+      details:
+        - Generell smitteforebygging er dekket; lokale regler/områdespesifikke miljøkrav og om stedet egner seg for nedgraving er ikke avgjort.
+    gold_uncertainty:
+      requires_owner_judgement: false
+      notes: []
+    why_this_case_is_useful: Kombinerer to engelske prosedyreseksjoner for et norsk hygienespørsmål, uten å duplisere drikkevannskoking.
+
+  - id: case-12
+    title: Høy elv ved stiens kryssing
+    origin: additional_proposal
+    review_status: pending_owner_review
+    areas: [natural_hazard, survival]
+    difficulty: harder
+    question: Vi kommer ikke videre på stien uten å krysse en elv. Det har regnet hele dagen, elva er høy og brun, og vi har aldri vadet før. Kan vi prøve, eller bør vi gjøre noe annet?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: supported_context
+    relevant_sources: [source-14, source-20]
+    preferred_source_sections:
+      - source_id: source-14
+        sections: [Know the signs of an unsafe river, Do not cross if there is any doubt, Be ready to wait or turn back]
+        sufficiency: The general sections collectively cover warning signs, lack of skills and not crossing/waiting/turning back.
+    supporting_sources:
+      - source_id: source-20
+        sections: [Under en flom eller et skred]
+        contribution: Norske råd fraråder nærhet til/kryssing av elver med stor vannføring.
+        sufficient_alone: false
+    must_have_information:
+      - Misfarget/brunt vann er et av kildens tegn på utrygg elv; slike tegn betyr at kryssing ikke skal forsøkes.
+      - Ikke kryss ved flom, tvil om sikkerheten eller manglende ferdigheter/erfaring for sikker kryssing.
+      - Vær forberedt på å vente eller snu fremfor å presse gjennom kryssingen.
+    acceptable_source_sections_or_chunks:
+      - Generelle elvepassasjer som dekker den konkrete advarselen, ferdighetskravet og alternativene vente/snu er samlet tilstrekkelige.
+      - Norsk flomveiledning kan dekke deler av informasjonen, men er ikke obligatorisk når DOCs generelle primærpassasjer dekker alt.
+      - En kryssingsteknikk uten kriteriene for ikke å krysse er utilstrekkelig.
+    optional_useful_information:
+      - Andre faresignaler som rask strøm, drivgods og kraftig lyd.
+      - Trygge inn-/utgangspunkter som ytterligere betingelse for kryssing.
+      - Nødly og ekstra mat dersom det blir venting.
+    irrelevant_or_potentially_misleading_information:
+      - Mutual support-metoden som oppfordring til å vade under de beskrevne forholdene.
+      - NZ-spesifikke elveprognoser, DOC-kontorer og kontakttelefoner.
+      - Vannrensing eller råd om å krysse på et bestemt sted uten lokalt grunnlag.
+    knowledge_gap:
+      status: bounded_limitations
+      details:
+        - Beslutningen om ikke å presse en utrygg kryssing er dekket; konkret alternativ rute, ventetid til trygg elv og detaljert vadeteknikk er ikke dekket.
+    gold_uncertainty:
+      requires_owner_judgement: false
+      notes: []
+    why_this_case_is_useful: Norsk scenario krever engelske generelle stoppkriterier, ikke teknikk eller NZ-spesifikke tjenester.
+
+  - id: case-13
+    title: Nødpeiler når telefonen ikke virker
+    origin: additional_proposal
+    review_status: pending_owner_review
+    areas: [emergency_signalling, emergency_prioritisation]
+    difficulty: straightforward
+    question: Turkameraten min er alvorlig skadet etter et fall, og jeg er redd livet er i fare. Vi har ingen mobildekning, men jeg har en nødpeiler. Bør jeg vente og se om det blir bedre før jeg bruker den?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: supported_context
+    relevant_sources: [source-11, source-07]
+    preferred_source_sections:
+      - source_id: source-11
+        sections: [Call for help early]
+        sufficiency: Sufficient alone for when to activate rather than delay.
+    supporting_sources:
+      - source_id: source-11
+        sections: [Why you should take one]
+        contribution: Satellittvarsling og omtrentlig posisjon til redningstjenesten.
+        sufficient_alone: false
+      - source_id: source-07
+        sections: [Slik hjelper du en bevisstløs person]
+        contribution: Generell egen sikkerhet på skadestedet, ikke nødpeilerbeslutningen.
+        sufficient_alone: false
+    must_have_information:
+      - Aktiver nødpeileren ved en livstruende situasjon; forhold kan raskt bli verre, og tidligere aktivering kan gi tidligere hjelp.
+      - Er man usikker på når nødpeileren skal aktiveres, anbefaler kilden å aktivere og få hjelp fremfor å vente.
+    acceptable_source_sections_or_chunks:
+      - Den generelle aktiveringsseksjonen er tilstrekkelig alene; tekniske detaljer og andre kilder kreves ikke.
+      - Passasjer med samme aktiveringsvilkår og anbefaling ved tvil teller; bare en produktbeskrivelse er utilstrekkelig.
+    optional_useful_information:
+      - Nødpeileren gir redningsmannskapene omtrentlig posisjon via satellittvarsling.
+      - Ivareta egen sikkerhet på skadestedet.
+    irrelevant_or_potentially_misleading_information:
+      - Kjøp, abonnement, registrering eller kassering som hovedkontekst i den aktive nødsituasjonen.
+      - NZ Rescue Coordination Centre, NZ-dekning eller registreringslov brukt som norske operasjonelle regler.
+      - Bare å ringe 113 som erstatning for tilgjengelig nødpeiler når mobildekning mangler.
+      - Oppdiktede knappetrykk eller utstyrsspesifikke prosedyrer.
+    knowledge_gap:
+      status: bounded_limitations
+      details:
+        - Når nødpeiler skal brukes er dekket; skadediagnose, modellspesifikk aktivering og norsk redningsorganisering er ikke dekket av denne generelle teksten.
+    gold_uncertainty:
+      requires_owner_judgement: false
+      notes: []
+    why_this_case_is_useful: Norsk situasjon uten mobildekning krever engelsk aktiveringsråd, ikke utstyrskatalog eller landspesifikke tjenester.
+
+  - id: case-14
+    title: Drønn og sprekker på topptur
+    origin: additional_proposal
+    review_status: pending_owner_review
+    areas: [natural_hazard, avalanche]
+    difficulty: harder
+    question: Vi er på topptur og hørte et kraftig drønn i snøen. Nå ser vi sprekker rundt skiene. Hva betyr det, og hvordan kommer vi oss trygt ut herfra?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: insufficient_coverage
+    relevant_sources: [source-15, source-16]
+    preferred_source_sections:
+      - source_id: source-15
+        sections:
+          - Skredfarevurdering og faretegn
+          - OBS! Det kan være vanskelig å observere faretegn dersom du ferdes i oppgåtte eller oppkjørte spor.
+        sufficiency: Partial background only; no explicit interpretation of drønn or shooting cracks in the ingested text.
+      - source_id: source-16
+        sections: [Ferdsel i skredterreng, Husk å lage reserveplaner.]
+        sufficiency: Partial avoidance/replanning principles only, not an operational retreat procedure.
+    supporting_sources: []
+    must_have_information:
+      - Støttet del av spørsmålet er at faretegn signaliserer skredfare og kan kreve endring av turplanen.
+      - Støttet del er at skredfarevurdering krever kunnskap/erfaring, og at ferdsel i skredterreng bør unngås eller begrenses uten tilstrekkelig kompetanse.
+    acceptable_source_sections_or_chunks:
+      - De foretrukne passasjene kan dekke den støttede delmengden, men ingen passasjekombinasjon i denne lokale basen dekker hele spørsmålet.
+      - Registrer insufficient_coverage, ikke full retrieval-pass selv om begge støttede punkter finnes.
+      - Lenker/overskrifter til faretegn og andre undervisningssider er ikke selve instruksjonen; innhold fra ikke-ingesterte lenker kan ikke regnes som gold.
+    optional_useful_information:
+      - Regionalt skredvarsel er bare utgangspunkt for lokale vurderinger; forhold kan avvike og endres raskt.
+      - Skredterreng inkluderer både løsne- og utløpsområder.
+    irrelevant_or_potentially_misleading_information:
+      - Kameratredning og søketeknikk som hovedkontekst når ingen er oppgitt skredtatt.
+      - En detaljert tolkning av drønn/sprekker eller retrettprosedyre som ikke finnes i lokalteksten.
+      - En bestemt trygg retning, helning eller rute uten situasjonsgrunnlag.
+      - En skredvarsel-lenke behandlet som et faktisk, aktuelt lokalt varsel.
+    knowledge_gap:
+      status: insufficient_coverage
+      details:
+        - Drønn og sprekker blir ikke eksplisitt forklart i de ingesterte godkjente tekstene.
+        - Konkrete handlings-/retrettinstruksjoner for denne situasjonen mangler; tursted og faktisk snø-/terrengsituasjon er også ukjent.
+        - Generelle faretegn- og planleggingsråd kan ikke erstatte disse manglene. Ikke forvent at LLM fyller dem fra egen kunnskap.
+    gold_uncertainty:
+      requires_owner_judgement: false
+      notes:
+        - Mangelen er observert i lokalteksten, ikke avledet fra retrieval-resultater. Eier skal gjennomgå avgrensningen før casen fryses.
+    why_this_case_is_useful: Hindrer at riktig skredartikkel eller brede råd forveksles med tilstrekkelig dekning av konkrete faretegn og retrett.
+
+  - id: case-15
+    title: Bålregler på norsk teltsted
+    origin: additional_proposal
+    review_status: pending_owner_review
+    areas: [fire, preparedness, geography]
+    difficulty: harder
+    question: Vi telter ved et vann i Norge i juli og vil lage et lite bål til matlaging. Er det lov her, og hvilke regler gjelder?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: insufficient_coverage
+    relevant_sources: [source-13, source-12]
+    preferred_source_sections: []
+    supporting_sources:
+      - source_id: source-12
+        sections: [Personal equipment / Cooking and food equipment]
+        contribution: Generelle kokeutstyrskategorier; sier ingenting om norsk lovlighet for bål eller kokeutstyr her og nå.
+        sufficient_alone: false
+    must_have_information: []
+    acceptable_source_sections_or_chunks:
+      - Ingen godkjent geografisk anvendelig passasje dekker norske bålregler/lokal lovlighet; korrekt forventet resultat er insufficient_coverage.
+      - Den tomme must-have-listen betyr at relevant norsk rettslig informasjon mangler, ikke automatisk pass.
+      - DOCs Fires on public conservation land er godkjent, men de lokale passasjene er NZ-spesifikke og kan ikke gi norsk gold.
+      - Generelt kokeutstyr kan være valgfri støtte, men dekker ikke lovligheten og skal ikke gi bonus for flere treff.
+    optional_useful_information:
+      - Generelle utstyrskategorier som kokeapparat/drivstoff og vannbehandlingsutstyr, uten påstand om tillatt bruk.
+    irrelevant_or_potentially_misleading_information:
+      - NZ-regler om DOC-hytter, tillatte ildsteder, bålstørrelse/avstand og FENZ-tillatelser fremstilt som norske regler.
+      - Påstanden om at gassapparat vanligvis kan brukes fra NZ-kilden som norsk tillatelse.
+      - En universell tillatelse basert på at bålet er lite eller at stedet er ved vann.
+      - Norske kalenderregler, unntak eller aktuelle lokale forbud hentet fra modellminne fremfor godkjent kilde.
+    knowledge_gap:
+      status: insufficient_coverage
+      details:
+        - Norske nasjonale bålregler og unntak er ikke dekket av den godkjente lokale kunnskapsbasen.
+        - Aktuelle lokale forbud, verne-/grunneierregler, brannfare og nøyaktig tursted er ikke dekket/oppgitt.
+        - Hele DOC-brannartikkelen er merket NZ i den lokale basen; korrekt geografi må bevares selv om teksten er tematisk relevant.
+    gold_uncertainty:
+      requires_owner_judgement: false
+      notes:
+        - Dette er en dokumentert jurisdiksjons-/dekningsmangel, ikke et forslag til norske regler. Eier skal godkjenne negativcasen før bruk.
+    why_this_case_is_useful: Tester at tematisk riktig men jurisdiksjonsfeil kildestoff ikke blir godkjent som norsk veiledning.

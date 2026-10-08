@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException, Request, status
 from pydantic import BaseModel, Field, field_validator
+from outwise.knowledge.embeddings import KnowledgeAssetsError
 
 from outwise.services.model import (
     ModelGenerationError,
@@ -27,6 +28,12 @@ class ChatSource(BaseModel):
     title: str
     name: str
     url: str
+    license: str
+    content_owner: str | None = None
+    licence_url: str | None = None
+    retrieved_at: str | None = None
+    source_updated_at: str | None = None
+    notice: str | None = None
 
 
 class ChatResponse(BaseModel):
@@ -41,13 +48,16 @@ def get_orchestrator(request: Request) -> Orchestrator:
     return request.app.state.orchestrator
 
 
-@router.post("/chat", response_model=ChatResponse)
+@router.post("/chat", response_model=ChatResponse, response_model_exclude_none=True)
 def chat(
     request: ChatRequest,
     orchestrator: Orchestrator = Depends(get_orchestrator),
 ) -> ChatResponse:
     try:
         result = orchestrator.answer(request.message)
+    except KnowledgeAssetsError as exc:
+        raise HTTPException(status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                            detail="Den lokale kunnskapsbasen er ikke klar. Kjør scripts/setup-knowledge.ps1 og start backend på nytt.") from exc
     except (ModelNotFoundError, ModelRuntimeNotFoundError) as exc:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
@@ -77,6 +87,12 @@ def chat(
                 title=source.title,
                 name=source.source_name,
                 url=source.source_url,
+                license=source.license,
+                content_owner=source.content_owner,
+                licence_url=source.licence_url,
+                retrieved_at=source.retrieved_at,
+                source_updated_at=source.source_updated_at,
+                notice=source.notice,
             )
             for source in result.sources
         ],

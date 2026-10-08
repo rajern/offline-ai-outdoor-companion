@@ -7,3 +7,5 @@ node_modules/
 frontend/dist/
 *.gguf
 models/
+knowledge/local/
+.pytest_cache/

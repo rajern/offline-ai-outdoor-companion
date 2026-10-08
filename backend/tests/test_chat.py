@@ -73,6 +73,7 @@ def test_chat_endpoint_returns_model_answer() -> None:
                 "title": "Synthetic lost guidance",
                 "name": "Stored fixture source",
                 "url": "fixture://outwise/navigation/lost",
+                "license": "CC0-1.0",
             }
         ],
     }
@@ -188,3 +189,39 @@ def test_chat_endpoint_returns_no_sources_and_skips_model_on_no_match() -> None:
     assert response.json()["sources"] == []
     assert "ingen relevant informasjon" in response.json()["answer"]
     assert model_service.prompt is None
+
+
+def test_missing_real_knowledge_returns_setup_error_without_fixture_fallback(monkeypatch, tmp_path) -> None:
+    monkeypatch.setenv("OUTWISE_KNOWLEDGE_PATH", str(tmp_path / "missing.json"))
+    monkeypatch.setenv("OUTWISE_KNOWLEDGE_MODE", "real")
+    model = StubModelService()
+
+    async def post_message():
+        transport = httpx.ASGITransport(app=create_app(model))
+        async with httpx.AsyncClient(transport=transport, base_url="http://testserver") as client:
+            return await client.post("/api/chat", json={"message": "Jeg har gått meg vill"})
+
+    response = asyncio.run(post_message())
+    assert response.status_code == 503
+    assert "kunnskapsbasen" in response.json()["detail"]
+    assert model.prompt is None
+
+
+def test_real_source_owner_license_and_reuse_notice_survive_api():
+    retriever = StubRetrievalService()
+    from dataclasses import replace
+    item = replace(retriever.results[0].item, source_name="CDC", source_url="https://www.cdc.gov/example",
+                   license="CDC public domain", metadata={"content_owner": "CDC", "retrieved_at": "2026-10-06",
+                   "licence_url": "https://www.cdc.gov/other/agencymaterials.html"})
+    retriever.results = [RetrievedKnowledgeItem(item=item, score=1)]
+
+    async def post_message():
+        transport = httpx.ASGITransport(app=create_app(StubModelService(), retriever))
+        async with httpx.AsyncClient(transport=transport, base_url="http://testserver") as client:
+            return await client.post("/api/chat", json={"message": "Vann"})
+
+    source = asyncio.run(post_message()).json()["sources"][0]
+    assert source["content_owner"] == "CDC"
+    assert source["retrieved_at"] == "2026-10-06"
+    assert source["license"] == "CDC public domain"
+    assert "gratis" in source["notice"] and "HHS" in source["notice"]

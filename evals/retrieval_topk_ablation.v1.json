@@ -1,0 +1,39 @@
+{
+  "experiment_id": "outwise-retrieval-topk-ablation-v1",
+  "version": "1.0.0",
+  "purpose": "One owner-authorized B3 versus B8 retrieval-only comparison",
+  "gold_path": "evals/retrieval_cases.v1.yaml",
+  "gold_sha256": "04ad519f56cfff4fc4158af1975363a142b06d84c84d8f7e842a1095d07868c4",
+  "corpus_sha256": "bd954cd27111854db2a54a8b05335dac8be7776301060da2cce3dfedb2a33d20",
+  "inherited_protocol": "evals/retrieval_protocol.v1.yaml",
+  "inherited_protocol_sha256": "0103124bae370c7c087e9156afcf82e30f865edb040ce5fa658f70257cdd1165",
+  "unchanged_packing_implementation": "evals/run_retrieval_eval_v1.py:packed_b",
+  "packing_script_sha256": "e75d882ee9f5a6792749fb212c23cd5c8744838da6ffcdbe9c62f3a573b3b736",
+  "configurations": {"B3": {"semantic_seed_top_k": 3}, "B8": {"semantic_seed_top_k": 8}},
+  "changed_variable": "Number of original semantic seed hits scanned, and nothing else",
+  "controls": {
+    "jurisdiction": "NO",
+    "minimum_cosine": 0.35,
+    "context_budget_tokens": 2000,
+    "budget_scope": "Complete unmodified grounded prompt; serialized context tokens reported separately; chat-template overhead excluded as before",
+    "ranking": "Exact production float32 cosine, NO/general filter, descending score and ascending ID tie-break; original saved query vectors and unchanged index",
+    "packing": "Same narrow branch expansion, corpus order, deduplication and atomic whole-packet admission; skip an over-budget packet and continue through remaining original seeds; no eviction, truncation or below-top-k refill",
+    "tokenizer": "Existing llama-tokenize and locked Qwen GGUF; tokenization only",
+    "token_cache": "Reuse prior token IDs only when exact input/hash, tokenizer binary and GGUF hashes match",
+    "corpus": "Same 190 passages and 22 approved documents",
+    "no_new_embeddings": true,
+    "no_generation": true,
+    "no_production_edits": true,
+    "no_gold_edits": true
+  },
+  "scoring": {
+    "must_have": "Same strict binary information-based rules and existing semantic judgements. Partial facts or missing conditions count zero. Optional facts/source count do not improve score.",
+    "B3": "Reproduce old B exactly, including context/counts, and preserve old manual scoring unchanged",
+    "B8": "Inspect delivered context and manually annotate new evidence/noise; existing facts and rules unchanged",
+    "supported_metrics": "Micro coverage, average per-case coverage, complete passes, irrelevant/misleading context separately, geography leakage, chunk/section counts and exact tokens",
+    "gaps": "Cases 14/15 reported separately, never added to supported coverage/pass denominators; no abstention score",
+    "burn_cream": "Cream/ointment conflict in case 07 excluded from success/noise decisions",
+    "budget_diagnosis": "Record every rejected packet, its candidate token count, would-add passage IDs and relevant missing information if any; no unbudgeted third configuration"
+  },
+  "stop": "Return results for owner review; do not optimize, change production or begin generation evaluation"
+}

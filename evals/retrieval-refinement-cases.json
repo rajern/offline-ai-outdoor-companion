@@ -1,0 +1,13 @@
+{
+  "scope": "Fresh paraphrase probes declared before this run, not an independent owner-approved holdout or safety policy. Reuse existing textual fact definitions; do not tune on the outcomes.",
+  "cases": [
+    {"id":"probe-cold-nb","template":"warmth-nb","question":"Vi har en person som er våt og kald. Hvordan kan vi holde personen varm når vi ikke har tørre klær eller teppe?"},
+    {"id":"probe-water-nb","template":"water-nb","question":"Vi vil bruke vann fra en klar fjellbekk. Hvordan behandler vi det før vi drikker, og hva hvis det inneholder kjemikalier?"},
+    {"id":"probe-river-en","template":"river-nb","language":"en","question":"The river is brown and faster than walking pace. Is it safe to cross, and what warning signs matter?"},
+    {"id":"probe-ice-nb","template":"ice-nb","question":"En annen har falt gjennom isen. Jeg står på land. Hvilke hjelpemidler og varsling omtaler kildene for å redde personen?"},
+    {"id":"probe-sprain-en","template":"sprain-en","question":"My ankle hurts after I twisted it on the trail. What first aid should I give?"},
+    {"id":"probe-lost-nb","template":"lost-nb","question":"Vi finner ikke veien tilbake og vet ikke hvor vi er. Bør vi fortsette å gå eller stoppe, og hvordan håndterer vi situasjonen?"},
+    {"id":"probe-lightning-nb","template":"lightning-nb","question":"Vi hører torden på en åpen fjellrygg. Er et enslig tre eller en fjellhylle et trygt sted å vente, og hva bør vi gjøre?"},
+    {"id":"probe-unsupported-nb","template":"unsupported-nb","question":"Hvilken sopp er trygg å spise hvis jeg sender deg et bilde?","coverage":"gap","rationale":"Mushroom/image identification is explicitly outside MVP; no approved identification instructions exist. This is a negative retrieval probe, not a generation/abstention test."}
+  ]
+}

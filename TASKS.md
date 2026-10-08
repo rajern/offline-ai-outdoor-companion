@@ -202,6 +202,8 @@ Requirements:
 
 ## M2-04 — Approve real knowledge sources
 
+**Status:** Complete — owner approved the 22-URL source manifest on 2026-10-06.
+
 **Dependencies:** M2-03
 
 **Human approval checkpoint**
@@ -240,6 +242,8 @@ Avoid large manual copy/paste or article-by-article scraping workflows.
 
 ## M2-05 — Build ingestion for approved sources
 
+**Status:** Complete — frozen ingestion, local embedding assets and offline rebuild verified on 2026-10-06.
+
 **Dependencies:** M2-04
 
 Create reproducible ingestion pipelines for the approved real sources.
@@ -261,6 +265,11 @@ Requirements:
 ## M2-06 — Replace fixtures with the real knowledge base
 
 **Dependencies:** M2-05
+
+**Status:** In progress — real-KB integration is implemented, but answer-quality
+validation is blocked. Technical tests pass; manual checks found irrelevant
+retrieved context and unsupported or garbled Norwegian answers. See
+`docs/KNOWLEDGE_SETUP.md`. Do not mark complete or begin M3 yet.
 
 Replace development fixtures in the main RAG flow with the approved Outwise knowledge base.
 

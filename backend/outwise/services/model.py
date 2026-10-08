@@ -124,7 +124,7 @@ class ModelService:
             "--ctx-size",
             str(self.settings.context_size),
             "--temp",
-            "0.7",
+            "0.2",
             "--top-p",
             "0.8",
             "--top-k",

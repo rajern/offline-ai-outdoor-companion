@@ -34,9 +34,23 @@ The user describes the situation in natural language. Outwise retrieves relevant
 ## Project status
 
 Milestone 1 is complete: the mobile-first web UI, FastAPI backend and local Qwen
-inference work end to end. Milestone 2 is in progress: the normalized knowledge
-contract, synthetic fixtures and local RAG flow work end to end with stored
-source metadata. No real knowledge sources have been approved or ingested.
+inference work end to end. The project owner approved 22 real knowledge URLs
+on 2026-10-06. Their text is ingested locally with frozen snapshots, provenance,
+licence metadata and multilingual retrieval. The normal RAG flow uses these
+assets; synthetic fixtures remain available for tests.
+
+M2-05 is complete. M2-06 integration is implemented, but answer-quality checks
+found irrelevant context and unsupported or garbled Norwegian advice. It is
+not complete or suitable for real outdoor decisions. Milestone 2 also requires
+an owner quality review before Milestone 3. Safety policy, final product
+messaging and release approval remain separate checkpoints.
+
+## Local setup
+
+Follow `backend/README.md`, `frontend/README.md` and `docs/MODEL_SETUP.md`.
+Then run `.\scripts\setup-knowledge.ps1` from the repository root to prepare
+the approved offline knowledge assets. `docs/KNOWLEDGE_SETUP.md` explains
+offline rebuilds, source reuse requirements and quality review.
 
 The project is planned in three milestones:
 
@@ -52,6 +66,7 @@ The project is planned in three milestones:
 - [`docs/DATA.md`](docs/DATA.md) — knowledge and data strategy
 - [`docs/PLAN.md`](docs/PLAN.md) — milestone plan
 - [`docs/MODEL_SETUP.md`](docs/MODEL_SETUP.md) — local model installation and prompt test
+- [`docs/KNOWLEDGE_SETUP.md`](docs/KNOWLEDGE_SETUP.md) — approved sources, ingestion and offline retrieval
 - [`TASKS.md`](TASKS.md) — implementation tasks
 - [`AGENTS.md`](AGENTS.md) — instructions for coding agents
 

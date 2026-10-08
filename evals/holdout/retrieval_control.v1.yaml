@@ -1,0 +1,375 @@
+# Procedural holdout: authoring/source QA only; NEVER used/run during development.
+schema_version: 1
+set_id: outwise-retrieval-control-v1
+set_version: 1.0.0
+created_at: '2026-10-08'
+status: pending_owner_review
+access: final_selection_only_with_explicit_owner_authorization
+question_language: nb
+default_jurisdiction: 'NO'
+corpus_sha256: bd954cd27111854db2a54a8b05335dac8be7776301060da2cce3dfedb2a33d20
+cases:
+  - id: control-01
+    title: Gjennomføre voksen-HLR etter pustevurdering
+    origin: procedural_holdout
+    review_status: pending_owner_review
+    areas: [first_aid, rescue]
+    difficulty: harder
+    question: Vi har ringt 113. En voksen ligger bevisstløs, og vi har sjekket at hun ikke puster normalt. Vi får beskjed om å starte HLR. Hvordan gjør vi selve kompresjonene og innblåsingene mens vi venter?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: supported_context
+    relevant_sources: [source-01]
+    preferred_source_sections:
+      - source_id: source-01
+        sections: [Hjerte- og lungeredning på voksne / Legg personen på gulvet og sjekk pusten, Hjerte- og lungeredning på voksne / 30 brystkompresjoner, Hjerte- og lungeredning på voksne / To innblåsinger, Hjerte- og lungeredning på voksne / HLR 30 + 2]
+        sufficiency: Actual adult compression/ventilation instructions rather than normal-breath side position.
+    supporting_sources: []
+    must_have_information:
+      - Personen skal ligge på ryggen på hardt underlag; hendene plasseres oppå hverandre midt på brystkassen.
+      - Gi 30 kompresjoner med 100-120 per minutt og 5-6 cm dybde, med full avlastning mellom trykkene.
+      - Gi to forsiktige innblåsinger med fri luftvei, nesen lukket og munn dekket; brystheving viser tilstrekkelig luft.
+      - Fortsett å veksle 30 kompresjoner og to innblåsinger til ambulansepersonell overtar.
+    must_have_evidence:
+      - item: 1
+        all_of:
+          - {source_id: source-01, section: Hjerte- og lungeredning på voksne / Legg personen på gulvet og sjekk pusten, quote: 'Personen må ligge på ryggen på hardt underlag når du skal gjøre HLR.'}
+          - {source_id: source-01, section: Hjerte- og lungeredning på voksne / 30 brystkompresjoner, quote: 'Legg dine hender oppå hverandre midt på brystkassen til personen.'}
+      - item: 2
+        all_of:
+          - {source_id: source-01, section: Hjerte- og lungeredning på voksne / 30 brystkompresjoner, quote: 'Gi 30 brystkompresjoner.'}
+          - {source_id: source-01, section: Hjerte- og lungeredning på voksne / 30 brystkompresjoner, quote: 'Takten skal være 100-120 trykk per minutt.'}
+          - {source_id: source-01, section: Hjerte- og lungeredning på voksne / 30 brystkompresjoner, quote: 'Du skal trykke hardt ned, 5-6 cm, bruk strake armer for å trykke hardt nok.'}
+          - {source_id: source-01, section: Hjerte- og lungeredning på voksne / 30 brystkompresjoner, quote: 'Pass på å slippe helt opp mellom hver brystkompresjon slik at du ikke lener deg på brystkassen.'}
+      - item: 3
+        all_of:
+          - {source_id: source-01, section: Hjerte- og lungeredning på voksne / To innblåsinger, quote: 'Hold fri luftvei ved å bøye hodet til personen litt bakover og løfte haken frem.'}
+          - {source_id: source-01, section: Hjerte- og lungeredning på voksne / To innblåsinger, quote: 'Hold for nesen og dekk hele personens munn med din munn.'}
+          - {source_id: source-01, section: Hjerte- og lungeredning på voksne / To innblåsinger, quote: 'Gjør to forsiktige innblåsinger.'}
+          - {source_id: source-01, section: Hjerte- og lungeredning på voksne / To innblåsinger, quote: 'Det er nok luft når du ser at brystet hever seg.'}
+      - item: 4
+        all_of:
+          - {source_id: source-01, section: Hjerte- og lungeredning på voksne / HLR 30 + 2, quote: 'Fortsett å veksle mellom 30 brystkompresjoner og to innblåsinger til ambulansepersonellet overtar.'}
+    acceptable_source_sections_or_chunks: [Alle utførelseskrav må dekkes med voksenbetingelse; sideleie/113 alene eller barneprosedyrer er utilstrekkelige.]
+    optional_useful_information: [Telefon på høyttaler., 113 veileder om hjertestarter når flere kan hjelpe.]
+    irrelevant_or_potentially_misleading_information: [Barne-/babykompresjoner eller normal-pust-sideleie som erstatning for voksen-HLR., En faktisk levert ratio uten dybde/tempo/full avlastning gir ikke full kompresjonsscore.]
+    knowledge_gap: {status: bounded_limitations, details: [Kildeinstruksjonen er dekket; brukerens praktiske utførelse og faktiske tilstand kan ikke vurderes.]}
+    gold_uncertainty: {requires_owner_judgement: false, notes: []}
+    why_this_case_is_useful: Annet informasjonsbehov enn utviklingscasets voksen pustevurdering og sideleie; detaljerte kvantitative konjunksjoner.
+
+  - id: control-02
+    title: Pustevurdering hos sterkt nedkjølt
+    origin: procedural_holdout
+    review_status: pending_owner_review
+    areas: [cold, exposure, first_aid]
+    difficulty: harder
+    question: En turkamerat ble funnet bevisstløs etter å ha ligget lenge i kulda. Vi ser nesten ingen pust og har ringt 113. Gjelder en rask pustesjekk her, og hvordan bør vi håndtere personen?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: supported_context
+    relevant_sources: [source-05]
+    preferred_source_sections:
+      - source_id: source-05
+        sections: [Slik gir du førstehjelp ved nedkjøling, Slik gir du førstehjelp ved nedkjøling / Sjekk pusten hos den nedkjølte, Hjertestans på grunn av nedkjøling]
+        sufficiency: Cold-specific assessment duration and handling/HLR endpoint together suffice.
+    supporting_sources: []
+    must_have_information:
+      - Pust kan være svært langsom ved nedkjøling; hold fri luftvei og det kan være nødvendig å sjekke et helt minutt før man konkluderer med at personen ikke puster.
+      - Alvorlig nedkjølte behandles skånsomt med minst mulig bevegelse, helst liggende.
+      - Ved hjertestans som skyldes nedkjøling startes HLR og den fortsettes til helsepersonell overtar.
+    must_have_evidence:
+      - item: 1
+        all_of:
+          - {source_id: source-05, section: Slik gir du førstehjelp ved nedkjøling / Sjekk pusten hos den nedkjølte, quote: 'Det kan være vanskelig å finne ut om en bevisstløs person puster, fordi vi puster mye saktere når vi er nedkjølt.'}
+          - {source_id: source-05, section: Slik gir du førstehjelp ved nedkjøling / Sjekk pusten hos den nedkjølte, quote: 'Det kan være nødvendig at du holder fri luftvei og sjekker pusten i et helt minutt, før du kan konkludere med at en person ikke puster.'}
+      - item: 2
+        all_of:
+          - {source_id: source-05, section: Slik gir du førstehjelp ved nedkjøling, quote: 'Prøv å behandle alvorlig nedkjølte skånsomt, uten for mye bevegelser og helst mens de ligger.'}
+      - item: 3
+        all_of:
+          - {source_id: source-05, section: Hjertestans på grunn av nedkjøling, quote: 'Har en person fått hjertestans på grunn av nedkjøling, må du starte hjerte- og lungeredning.'}
+          - {source_id: source-05, section: Hjertestans på grunn av nedkjøling, quote: 'Hold på med hjerte- og lungeredning helt til helsepersonell overtar.'}
+    acceptable_source_sections_or_chunks: [Kuldens særlige pustevurdering og skånsom håndtering må faktisk finnes; generell 10-sekundersregel alene er feil for dette behovet.]
+    optional_useful_information: [Isolerende vind-/damptett innpakking og varme uten direkte hudkontakt., Opplysninger om kuldevarighet/temperatur/hendelsesforløp.]
+    irrelevant_or_potentially_misleading_information: [Bevegelsesråd fra våken isredning brukt på alvorlig nedkjølt bevisstløs., Ti sekunder fremstilt som tilstrekkelig regel for den beskrevne kuldesituasjonen.]
+    knowledge_gap: {status: bounded_limitations, details: [Unntaket er dekket; faktisk hjertestans og temperatur kan ikke diagnostiseres fra spørsmålet.]}
+    gold_uncertainty: {requires_owner_judgement: false, notes: [Sikkerhetskritisk unntak må eiergjennomgås før senere bruk.]}
+    why_this_case_is_useful: Tester betinget unntak, ikke repetisjon av våken skjelvende person eller normal temperatur/sideleie.
+
+  - id: control-03
+    title: Jodbehandlet vann ved graviditet
+    origin: procedural_holdout
+    review_status: pending_owner_review
+    areas: [water, preparedness]
+    difficulty: straightforward
+    question: Jeg er gravid og skal på campingtur. En venn tilbyr gamle jodtabletter til drikkevannet. Er vann behandlet med jod et egnet valg for meg, og hva sier kilden om slik bruk over tid?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: supported_context
+    relevant_sources: [source-21]
+    preferred_source_sections:
+      - source_id: source-21
+        sections: [Prevention steps and strategies / Treat your water / Disinfect]
+        sufficiency: Contraindicated groups and long-use limit explicitly appear.
+    supporting_sources: []
+    must_have_information:
+      - Gravide skal unngå vann desinfisert med jod.
+      - Ingen bør drikke joddesinfisert vann i mer enn noen få uker om gangen.
+    must_have_evidence:
+      - item: 1
+        all_of:
+          - {source_id: source-21, section: Prevention steps and strategies / Treat your water / Disinfect, quote: 'If you are pregnant, have thyroid problems, or have a hypersensitivity to iodine, avoid drinking water disinfected with iodine.'}
+      - item: 2
+        all_of:
+          - {source_id: source-21, section: Prevention steps and strategies / Treat your water / Disinfect, quote: 'No one should drink water disinfected with iodine for more than a few weeks at a time.'}
+    acceptable_source_sections_or_chunks: [Begge forbehold må bevares; generelle desinfeksjonsfordeler eller tablettnavn alene gir ikke pass.]
+    optional_useful_information: [Personer med stoffskifteproblemer eller overfølsomhet for jod skal også unngå jodbehandlet vann., Andre generelle mikrobetiltak som koking eller filtrering fulgt av egnet desinfisering, uten å fastslå egnethet av det konkrete gamle produktet.]
+    irrelevant_or_potentially_misleading_information: [Jodets effekt på bakterier brukt som tilstrekkelig trygghetsargument for gravid., Tablettdose/holdbarhetsgaranti uten produktgrunnlag.]
+    knowledge_gap: {status: bounded_limitations, details: [Gruppespesifikke forbehold er dekket; tablettenes tilstand og utløpsdato er ukjent.]}
+    gold_uncertainty: {requires_owner_judgement: false, notes: []}
+    why_this_case_is_useful: Negasjoner og målgruppeforbehold i engelsk kilde, annet behov enn filtreringssekvens.
+
+  - id: control-04
+    title: Hjelpe annen person gjennom isen
+    origin: procedural_holdout
+    review_status: pending_owner_review
+    areas: [ice, rescue, natural_hazard]
+    difficulty: harder
+    question: Jeg står på isen og ser en annen som har falt i vannet noen meter unna. Jeg har kasteline, men vet ikke om isen mellom oss holder. Hvordan prøver jeg å hjelpe uten å havne i vannet selv?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: supported_context
+    relevant_sources: [source-19]
+    preferred_source_sections:
+      - source_id: source-19
+        sections: [Redde andre]
+        sufficiency: Caller uncertainty, distance and reaching aids jointly sufficient for initial safe help.
+    supporting_sources: []
+    must_have_information:
+      - Uten full kontroll på situasjonen ringes 113 før redningen hvis mulig.
+      - Unngå at enda en person havner i vannet; hold avstand og bruk hjelpemidler fra is som bærer godt fremfor farlig tynn is.
+      - Kasteline/tau kan kastes ut for å nå personen; lang grein eller stige er et alternativ.
+    must_have_evidence:
+      - item: 1
+        all_of:
+          - {source_id: source-19, section: Redde andre, quote: 'Hvis man ikke har 100 % kontroll på situasjonen må man (om mulig) ringe 113 (ambulanse/kommunikasjonssentralen) før man begynner redningen.'}
+      - item: 2
+        all_of:
+          - {source_id: source-19, section: Redde andre, quote: 'Det viktigste å huske på er at man må prøve å unngå at enda en person havner i vannet, noe som gjør situasjonen mye mer uoversiktlig.'}
+          - {source_id: source-19, section: Redde andre, quote: 'Hold derfor avstand og bruk hjelpemidler som gjør at redningsmannskapene ikke trenger å være på farlig tynn is.'}
+          - {source_id: source-19, section: Redde andre, quote: 'Redningsmannskapene kan gå så langt ut som isen bærer godt.'}
+      - item: 3
+        all_of:
+          - {source_id: source-19, section: Redde andre, quote: 'Kast ut et tau (kasteline eller tau med kraftig pinne i enden).'}
+    acceptable_source_sections_or_chunks: [Minst én relevant rekkeviddemetode sammen med varsling og hjelperens sikkerhet; flere teknikker eller kilder kreves ikke.]
+    optional_useful_information: [Lang grein/stige., Kilden omtaler siste-utvei-kjede som risikabel, ikke normal metode.]
+    irrelevant_or_potentially_misleading_information: [Egenredning i vannet som erstatning for hjelperens fremgangsmåte., Liggende menneskekjede uten siste-utvei-/risikoforbehold., Lokalt garantert bæreevne uten måling.]
+    knowledge_gap: {status: bounded_limitations, details: [Innledende råd er dekket; faktisk istykkelse og trygg rekkevidde er ukjent.]}
+    gold_uncertainty: {requires_owner_judgement: false, notes: []}
+    why_this_case_is_useful: Annen aktør og risikobetingelse enn egenredningscaset, ikke bare ny ordlyd.
+
+  - id: control-05
+    title: Utløpsområde under bratt fjellside
+    origin: procedural_holdout
+    review_status: pending_owner_review
+    areas: [avalanche, navigation, preparedness]
+    difficulty: harder
+    question: Vi planlegger en skitur som går på flata nedenfor en bratt fjellside. Betyr flatt terreng at vi er utenfor skredterreng, og hvordan bør vi bruke kart og regionalt skredvarsel i planleggingen?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: supported_context
+    relevant_sources: [source-16]
+    preferred_source_sections:
+      - source_id: source-16
+        sections: [Bruk bratthets- og utløpssonekart, Turplanleggingen starter hjemme - bruk snøskredvarselet og planlegg turen]
+        sufficiency: Release/runout distinction and regional-to-local planning limitations.
+    supporting_sources: []
+    must_have_information:
+      - Skredterreng omfatter både løsneområder og utløpsområder nedenfor; bare egen flat helning er ikke nok til å avklare risiko.
+      - Bratthets-/utløpskart kan vise terreng over 27 grader og utløpsområder under slikt terreng.
+      - Regionalt skredvarsel er utgangspunkt for lokale vurderinger; forhold kan skifte raskt og være annerledes enn varslet.
+    must_have_evidence:
+      - item: 1
+        all_of:
+          - {source_id: source-16, section: Bruk bratthets- og utløpssonekart, quote: 'Skredterreng er både løsne og utløpsområder.'}
+      - item: 2
+        all_of:
+          - {source_id: source-16, section: Bruk bratthets- og utløpssonekart, quote: 'Du kan se terreng over 27 grader bratt, og utløpsområdene under slikt terreng på kart i Varsom-regobs app.'}
+      - item: 3
+        all_of:
+          - {source_id: source-16, section: Turplanleggingen starter hjemme - bruk snøskredvarselet og planlegg turen, quote: 'Varsom.no publiserer et regionalt varsel. Du må bruke dette som utgangspunkt for lokale vurderinger.'}
+          - {source_id: source-16, section: Turplanleggingen starter hjemme - bruk snøskredvarselet og planlegg turen, quote: 'Husk at forholdene kan skifte raskt og være annerledes enn varslet.'}
+    acceptable_source_sections_or_chunks: [Generell terrengdefinisjon og kart-/varselbegrensninger må dekkes; ingen aktuell rute eller faregrad er gold.]
+    optional_useful_information: [Planlegg annen vei hvis turens skredterreng er i varslets mest utsatte terreng., Reserveplaner og gruppeavklaring.]
+    irrelevant_or_potentially_misleading_information: [Flatt terreng eller 27-graders kartgrense som garanti mot skred., Utstyrsliste eller kameratredning som erstatning for terrengforståelse., Statisk lenke fremstilt som aktuelt varsel.]
+    knowledge_gap: {status: bounded_limitations, details: [Begrepene er dekket; faktisk utløpssone for denne turen og dagens fare er ukjent.]}
+    gold_uncertainty: {requires_owner_judgement: false, notes: [27 grader er kartets visningsgrense i kilden, ikke gold for en sikker helningsgrense.]}
+    why_this_case_is_useful: Romlig risikobegrep og kvalifikasjoner, klart forskjellig fra redningsutstyr og drønn/retrett-gap.
+
+  - id: control-06
+    title: Hundebitt med lite synlig skade
+    origin: procedural_holdout
+    review_status: pending_owner_review
+    areas: [injury, first_aid]
+    difficulty: straightforward
+    question: En hund bet meg i hånda ved rasteplassen. Såret er lite og blør ikke mye. Holder det å sette på et plaster og fortsette turen?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: supported_context
+    relevant_sources: [source-02]
+    preferred_source_sections:
+      - source_id: source-02
+        sections: [Behandling av mindre blødingar og sår / Bit frå dyr og menneske]
+        sufficiency: Bite-specific cleaning, physician contact and risks suffice.
+    supporting_sources: []
+    must_have_information:
+      - Dyrebitt kan gi infeksjon og risiko for stivkrampe selv om skaden ser liten ut.
+      - Rens såret nøye så raskt som mulig og kontakt lege for videre vurdering, inkludert eventuell stivkrampevaksine.
+    must_have_evidence:
+      - item: 1
+        all_of:
+          - {source_id: source-02, section: Behandling av mindre blødingar og sår / Bit frå dyr og menneske, quote: 'Dersom du blir biten eller klora av eit dyr, kan du få infeksjon i såret.'}
+          - {source_id: source-02, section: Behandling av mindre blødingar og sår / Bit frå dyr og menneske, quote: 'Du kan òg risikere å få stivkrampe.'}
+      - item: 2
+        all_of:
+          - {source_id: source-02, section: Behandling av mindre blødingar og sår / Bit frå dyr og menneske, quote: 'Reins derfor såret nøye så fort som mogleg og kontakt lege.'}
+          - {source_id: source-02, section: Behandling av mindre blødingar og sår / Bit frå dyr og menneske, quote: 'Legen kan informere deg om vidare behandling og vurdere om du må ta stivkrampevaksine .'}
+    acceptable_source_sections_or_chunks: [Bittspesifikk risiko og legekontakt kreves; skrubbsårrengjøring alene er utilstrekkelig.]
+    optional_useful_information: [Menneskebitt behandles etter samme kildeprinsipp, men er ikke nødvendig for spørsmålet.]
+    irrelevant_or_potentially_misleading_information: [Vanlig lite skrubbsår/plaster som full bittbehandling., Automatisk vaksine- eller antibiotikadose uten lege-/pasientgrunnlag.]
+    knowledge_gap: {status: bounded_limitations, details: [Risiko og første handlinger er dekket; tidligere vaksinasjon og behov for konkrete medisiner er ikke avgjort.]}
+    gold_uncertainty: {requires_owner_judgement: false, notes: []}
+    why_this_case_is_useful: Samme dokument som skrubbsår, men et annet medisinsk informasjonsbehov og annen eskalering.
+
+  - id: control-07
+    title: Registrere PLB før tur i New Zealand
+    origin: procedural_holdout
+    review_status: pending_owner_review
+    areas: [emergency_signalling, preparedness, geography]
+    difficulty: straightforward
+    question: Jeg har kjøpt en PLB til en tur i New Zealand. Må jeg registrere den før jeg drar, koster registreringen noe, og trenger den et løpende abonnement?
+    question_language: nb
+    jurisdiction: NZ
+    expected_result: supported_context
+    relevant_sources: [source-11]
+    preferred_source_sections:
+      - source_id: source-11
+        sections: [Buy a beacon / Owning a PLB]
+        sufficiency: NZ registration law and costs, distinct from emergency activation.
+    supporting_sources: []
+    must_have_information:
+      - PLB skal registreres, og kilden sier dette er lovpålagt i New Zealand.
+      - Registreringen er gratis; etter registrering er det ingen løpende abonnementsavgift for PLB ifølge kilden.
+    must_have_evidence:
+      - item: 1
+        all_of:
+          - {source_id: source-11, section: Buy a beacon / Owning a PLB, quote: 'All PLBs must be registered.'}
+          - {source_id: source-11, section: Buy a beacon / Owning a PLB, quote: 'It’s also required by law.'}
+      - item: 2
+        all_of:
+          - {source_id: source-11, section: Buy a beacon / Owning a PLB, quote: 'Registering your PLB is fast, easy and free.'}
+          - {source_id: source-11, section: Buy a beacon / Owning a PLB, quote: 'Once registered there are no ongoing subscription fees.'}
+    acceptable_source_sections_or_chunks: [NZ-lokal PLB-registrering/kostnad er korrekt her; kilden er ikke norsk lovgrunnlag og SEND-abonnement er ikke PLB-avgift.]
+    optional_useful_information: [Registrering gir søkerne informasjon som kan hjelpe ved redning.]
+    irrelevant_or_potentially_misleading_information: [SEND-abonnement brukt som om det er nødvendig for PLB., Norsk eller global registreringslov utledet fra NZ-tekst., Aktiveringsråd som erstatning for registreringsspørsmålet.]
+    knowledge_gap: {status: bounded_limitations, details: [Frosne NZ-kilderegler er dekket; aktuell skjema-/portalstatus og andre lands krav er ikke gold.]}
+    gold_uncertainty: {requires_owner_judgement: false, notes: [Faktisk nyere lov må vurderes ved produktbruk; gold gjelder godkjent snapshot, ikke juridisk rådgivning nå.]}
+    why_this_case_is_useful: Anvendelig positiv geografi og produktskille uten å duplisere nødaktiveringsbeslutningen.
+
+  - id: control-08
+    title: UV-behandling av grumsete vann
+    origin: procedural_holdout
+    review_status: pending_owner_review
+    areas: [water]
+    difficulty: straightforward
+    question: Jeg har en liten UV-penn til drikkevann. Etter regnet er vannet i bekken grumsete. Kan jeg bruke pennen rett i vannet, eller må jeg gjøre noe først?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: supported_context
+    relevant_sources: [source-21]
+    preferred_source_sections:
+      - source_id: source-21
+        sections: [Prevention steps and strategies / Treat your water / Using UV light]
+        sufficiency: Clear/small-volume scope, prefilter and particles limitation.
+    supporting_sources: []
+    must_have_information:
+      - Portable UV-enheter kan drepe parasitter, bakterier og virus i små mengder klart vann.
+      - Filtrer vannet før UV-behandling; UV virker dårlig i grumsete vann fordi partikler kan skjerme mikroorganismer.
+    must_have_evidence:
+      - item: 1
+        all_of:
+          - {source_id: source-21, section: Prevention steps and strategies / Treat your water / Using UV light, quote: 'Portable units that deliver ultraviolet (UV) light can kill parasites, bacteria, and viruses in small amounts of clear water.'}
+      - item: 2
+        all_of:
+          - {source_id: source-21, section: Prevention steps and strategies / Treat your water / Using UV light, quote: 'Filter water before using UV light.'}
+          - {source_id: source-21, section: Prevention steps and strategies / Treat your water / Using UV light, quote: 'UV light does not work well in cloudy water because small particles can block germs from the light.'}
+    acceptable_source_sections_or_chunks: [UV-spesifikke betingelser og forfiltrering kreves; generell desinfeksjonssekvens uten UV/grumsetforbehold er utilstrekkelig.]
+    optional_useful_information: [Følg produktinstruksjoner; bruksmengde/tid for akkurat denne pennen er ukjent.]
+    irrelevant_or_potentially_misleading_information: [Ubetinget effekt i grumsete vann., Sol-desinfeksjon via lenke som ikke inngår i KB., Jodrestriksjoner som hovedsvar på UV-spørsmål.]
+    knowledge_gap: {status: bounded_limitations, details: [Metodebegrensning er dekket; pennmodellens dose/tid er ikke det.]}
+    gold_uncertainty: {requires_owner_judgement: false, notes: []}
+    why_this_case_is_useful: Ulike behandlingsmetoder må skilles; klarhet/volum er reelle vilkår, ikke valgfri bonus.
+
+  - id: control-09
+    title: Smertestillende dose til barn på tur
+    origin: procedural_holdout
+    review_status: pending_owner_review
+    areas: [injury, first_aid, knowledge_gap]
+    difficulty: harder
+    question: Barnet mitt på sju år veier 24 kilo og har vondt etter et fall. Jeg har paracetamoltabletter i sekken. Hvor mange milligram kan jeg gi og når kan neste dose tas?
+    question_language: nb
+    jurisdiction: 'NO'
+    expected_result: insufficient_coverage
+    relevant_sources: [source-03, source-04]
+    preferred_source_sections: []
+    supporting_sources:
+      - {source_id: source-03, sections: [Førstehjelp ved brannskader], contribution: Generell omtale av smertestillende ved brannskade, ikke barnedose ved fall., sufficient_alone: false}
+    must_have_information: []
+    must_have_evidence: []
+    acceptable_source_sections_or_chunks: [Ingen godkjent tekst gir vektbasert paracetamoldose til barn eller intervall/maksimal døgndose; tom liste er ikke pass.]
+    optional_useful_information: [Skadevurdering er et separat behov; den besvarer ikke doseringsspørsmålet.]
+    irrelevant_or_potentially_misleading_information: [Bare ordet paracetamol som tilstrekkelig doseringsgrunnlag., Voksne standarddoser eller mg/kg fra modellminne., Brannskadetekst brukt som dosefasit for barn med fallskade.]
+    knowledge_gap: {status: insufficient_coverage, details: [Kjernebehovet barnedose og doseintervall mangler fra alle 22 godkjente lokale kilder., Tablettstyrke er også ukjent; ikke opprett et kunstig gold-svar.]}
+    gold_uncertainty: {requires_owner_judgement: false, notes: [Kunnskapshull i kildegrunnlag, ikke nytt medikament-/safety-policyvalg.]}
+    why_this_case_is_useful: Et medisinsk dose-gap utenfor dokumentert dekning, forskjellig fra geografisk bål-gap og bushcraft-gap.
+
+  - id: control-10
+    title: Turmelding til kontaktperson i New Zealand
+    origin: procedural_holdout
+    review_status: pending_owner_review
+    areas: [preparedness, emergency_signalling, geography]
+    difficulty: straightforward
+    question: Jeg skal gå en tur alene i New Zealand. En venn hjemme skal vite hvor jeg går. Hva bør vi avtale på forhånd så noen faktisk reagerer hvis jeg ikke kommer tilbake?
+    question_language: nb
+    jurisdiction: NZ
+    expected_result: supported_context
+    relevant_sources: [source-10, source-09]
+    preferred_source_sections:
+      - source_id: source-10
+        sections: [Five simple steps / 4. Share your plans and take ways to get help]
+        sufficiency: Trusted recipient, trip detail and date/time for alarm, complemented by explicit local emergency contact in Maps.
+      - source_id: source-09
+        sections: [Reduce your risk of getting lost]
+        sufficiency: Explicit instruction to contact 111 on failure to return.
+    supporting_sources: []
+    must_have_information:
+      - Del detaljer om turplanen direkte med en betrodd person.
+      - Avtal dato og tidspunkt for å slå alarm dersom du ikke er tilbake som planlagt.
+      - Kilden anbefaler at kontaktpersonen ringer 111 i New Zealand ved manglende retur; nummeret er ikke norsk nødnummer.
+    must_have_evidence:
+      - item: 1
+        all_of:
+          - {source_id: source-10, section: Five simple steps / 4. Share your plans and take ways to get help, quote: 'Telling a trusted person your trip details and taking a distress beacon can save your life.'}
+          - {source_id: source-10, section: Five simple steps / 4. Share your plans and take ways to get help, quote: 'Send this information to a trusted person directly, or use the Outdoors Intentions form or Plan My Walk'}
+      - item: 2
+        all_of:
+          - {source_id: source-10, section: Five simple steps / 4. Share your plans and take ways to get help, quote: "Leave a date and time to raise the alarm if you haven't returned."}
+      - item: 3
+        all_of:
+          - {source_id: source-09, section: Reduce your risk of getting lost, quote: 'Sharing your plans with a trusted person before you leave. Give them plenty of detail and ask them to call 111 if you don’t return as planned.'}
+    acceptable_source_sections_or_chunks: [Informasjonen kan leveres fra flere NZ-anvendelige passasjer; ekstra sekundærkilde kreves bare dersom nødvendig informasjon ellers mangler, ikke for kildeantall.]
+    optional_useful_information: [Nødpeiler omtalt som beredskap., Lokale turmeldingsverktøy er valgfrie.]
+    irrelevant_or_potentially_misleading_information: [Norske 113/116117 som NZ-lokal alarmkontakt., Bare «share plans» uten avtalt varslingstid., Akutte bortkommet-handlinger som erstatning for kontaktpersonavtalen.]
+    knowledge_gap: {status: bounded_limitations, details: [Plan/varsling er dekket; garantert responstid og faktisk turposisjon er ikke kjent.]}
+    gold_uncertainty: {requires_owner_judgement: false, notes: []}
+    why_this_case_is_useful: Tester når landspesifikk telefon-/prosessinformasjon faktisk er relevant; adskilt fra generell turvalg/værplanlegging.

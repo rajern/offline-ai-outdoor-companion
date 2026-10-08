@@ -1,0 +1,3460 @@
+{
+  "status": "not_ready_for_unattended_full_scoring",
+  "date": "2026-10-08",
+  "method": "Frozen source-authored positive certificates; no gold/output-based certificate tuning",
+  "rules_sha256": "e82e7089fdc6552cc64a0aa97bad2c99a7d8accaec340edc74c9a530ff7b272d",
+  "development_set_sha256": "9f18ea8ae8a4886415ec9daaefab378cf0a4075bd94d2c736bd2336130c41ea8",
+  "historical_gold_sha256": "04ad519f56cfff4fc4158af1975363a142b06d84c84d8f7e842a1095d07868c4",
+  "corpus_sha256": "bd954cd27111854db2a54a8b05335dac8be7776301060da2cce3dfedb2a33d20",
+  "inputs_sha256": {
+    "knowledge/local/diagnostics/retrieval-eval-v1-2026-10-07/retrieved-all.json": "bc81701f40fc2f419e791569fafa7f5fbd368fdf0d6b39e5dbd1fa6b85eae30f",
+    "knowledge/local/diagnostics/retrieval-eval-v1-2026-10-07/scoring.json": "d069ab1ce8c2a606fd77ce0f164d01d1f269a4c3da8aad41ac7ebe3087f87c8e",
+    "knowledge/local/diagnostics/retrieval-topk-ablation-v1-2026-10-07/retrieved-all.json": "2a3fac96e8c9e5d9dc27fd81cd95955f8cebfac99f0fe8d23ba7d95e968785eb",
+    "knowledge/local/diagnostics/retrieval-topk-ablation-v1-2026-10-07/scoring.json": "6b19eb5d3bc270312283ed7ea848144e222945b7c414b9537ceefee59c5d9e3d",
+    "knowledge/local/diagnostics/retrieval-child-search-v1-2026-10-07/retrieved-all.json": "c48d4e48dfc162d9ffe5ff9e4b266da4c504ee4caadff5be55c7c1843bae6317",
+    "knowledge/local/diagnostics/retrieval-child-search-v1-2026-10-07/scoring.json": "52b93298c54fbb8f3056d38d2546baf95d4570d52e5c1f4f176a311ba3ef2369",
+    "knowledge/local/diagnostics/retrieval-parent-dedup-v1-2026-10-07/retrieved-all.json": "aababba527800da4a73f281b4c1e15cacefec1d8521746b15fc0bddd9bf2a9e0",
+    "knowledge/local/diagnostics/retrieval-parent-dedup-v1-2026-10-07/scoring.json": "4d410b3ba1cdcf25d7c7c761115249656acbb6bf90e3db0025ade2900e0c83cb"
+  },
+  "configurations": {
+    "A": {
+      "supported_item_decisions": 51,
+      "correct_positive_certificates": 20,
+      "false_positive_certificates": 0,
+      "unresolved_manual_positive": 0,
+      "unresolved_manual_negative": 31,
+      "manual_covered": 20,
+      "resolution_rate": 0.39215686274509803,
+      "precision_of_certified_positives": 1.0,
+      "recall_of_manual_positives": 1.0,
+      "manual_complete_passes": 2,
+      "automatic_complete_pass_lower_bound": 2,
+      "manual_irrelevant_cases": 11,
+      "manual_potentially_misleading_cases": 4,
+      "manual_jurisdiction_leakage_cases": 0,
+      "bounds": {
+        "covered_cases": 13,
+        "must_have_total": 51,
+        "certified_found": 20,
+        "must_have_coverage_lower_bound": 0.39215686274509803,
+        "must_have_coverage_upper_bound": 1.0,
+        "average_case_coverage_lower_bound": 0.3769230769230769,
+        "complete_case_pass_lower_bound": 2,
+        "unknown_items": 31,
+        "noise_and_geography_final_metrics": "unavailable_without_semantic_review; not zero",
+        "context_tokens": {
+          "median": 474
+        },
+        "complete_prompt_tokens": {
+          "median": 654
+        },
+        "budget_rejected_packets": 0
+      }
+    },
+    "B": {
+      "supported_item_decisions": 51,
+      "correct_positive_certificates": 21,
+      "false_positive_certificates": 0,
+      "unresolved_manual_positive": 0,
+      "unresolved_manual_negative": 30,
+      "manual_covered": 21,
+      "resolution_rate": 0.4117647058823529,
+      "precision_of_certified_positives": 1.0,
+      "recall_of_manual_positives": 1.0,
+      "manual_complete_passes": 2,
+      "automatic_complete_pass_lower_bound": 2,
+      "manual_irrelevant_cases": 12,
+      "manual_potentially_misleading_cases": 4,
+      "manual_jurisdiction_leakage_cases": 0,
+      "bounds": {
+        "covered_cases": 13,
+        "must_have_total": 51,
+        "certified_found": 21,
+        "must_have_coverage_lower_bound": 0.4117647058823529,
+        "must_have_coverage_upper_bound": 1.0,
+        "average_case_coverage_lower_bound": 0.39615384615384613,
+        "complete_case_pass_lower_bound": 2,
+        "unknown_items": 30,
+        "noise_and_geography_final_metrics": "unavailable_without_semantic_review; not zero",
+        "context_tokens": {
+          "median": 666
+        },
+        "complete_prompt_tokens": {
+          "median": 865
+        },
+        "budget_rejected_packets": 0
+      }
+    },
+    "B8": {
+      "supported_item_decisions": 51,
+      "correct_positive_certificates": 34,
+      "false_positive_certificates": 0,
+      "unresolved_manual_positive": 0,
+      "unresolved_manual_negative": 17,
+      "manual_covered": 34,
+      "resolution_rate": 0.6666666666666666,
+      "precision_of_certified_positives": 1.0,
+      "recall_of_manual_positives": 1.0,
+      "manual_complete_passes": 7,
+      "automatic_complete_pass_lower_bound": 7,
+      "manual_irrelevant_cases": 12,
+      "manual_potentially_misleading_cases": 5,
+      "manual_jurisdiction_leakage_cases": 0,
+      "bounds": {
+        "covered_cases": 13,
+        "must_have_total": 51,
+        "certified_found": 34,
+        "must_have_coverage_lower_bound": 0.6666666666666666,
+        "must_have_coverage_upper_bound": 1.0,
+        "average_case_coverage_lower_bound": 0.6538461538461539,
+        "complete_case_pass_lower_bound": 7,
+        "unknown_items": 17,
+        "noise_and_geography_final_metrics": "unavailable_without_semantic_review; not zero",
+        "context_tokens": {
+          "median": 1524
+        },
+        "complete_prompt_tokens": {
+          "median": 1723
+        },
+        "budget_rejected_packets": 5
+      }
+    },
+    "C8": {
+      "supported_item_decisions": 51,
+      "correct_positive_certificates": 33,
+      "false_positive_certificates": 0,
+      "unresolved_manual_positive": 0,
+      "unresolved_manual_negative": 18,
+      "manual_covered": 33,
+      "resolution_rate": 0.6470588235294118,
+      "precision_of_certified_positives": 1.0,
+      "recall_of_manual_positives": 1.0,
+      "manual_complete_passes": 6,
+      "automatic_complete_pass_lower_bound": 6,
+      "manual_irrelevant_cases": 13,
+      "manual_potentially_misleading_cases": 5,
+      "manual_jurisdiction_leakage_cases": 0,
+      "bounds": {
+        "covered_cases": 13,
+        "must_have_total": 51,
+        "certified_found": 33,
+        "must_have_coverage_lower_bound": 0.6470588235294118,
+        "must_have_coverage_upper_bound": 1.0,
+        "average_case_coverage_lower_bound": 0.6282051282051282,
+        "complete_case_pass_lower_bound": 6,
+        "unknown_items": 18,
+        "noise_and_geography_final_metrics": "unavailable_without_semantic_review; not zero",
+        "context_tokens": {
+          "median": 1550
+        },
+        "complete_prompt_tokens": {
+          "median": 1744
+        },
+        "budget_rejected_packets": 5
+      }
+    },
+    "C8U8": {
+      "supported_item_decisions": 51,
+      "correct_positive_certificates": 34,
+      "false_positive_certificates": 0,
+      "unresolved_manual_positive": 0,
+      "unresolved_manual_negative": 17,
+      "manual_covered": 34,
+      "resolution_rate": 0.6666666666666666,
+      "precision_of_certified_positives": 1.0,
+      "recall_of_manual_positives": 1.0,
+      "manual_complete_passes": 6,
+      "automatic_complete_pass_lower_bound": 6,
+      "manual_irrelevant_cases": 13,
+      "manual_potentially_misleading_cases": 5,
+      "manual_jurisdiction_leakage_cases": 0,
+      "bounds": {
+        "covered_cases": 13,
+        "must_have_total": 51,
+        "certified_found": 34,
+        "must_have_coverage_lower_bound": 0.6666666666666666,
+        "must_have_coverage_upper_bound": 1.0,
+        "average_case_coverage_lower_bound": 0.6474358974358975,
+        "complete_case_pass_lower_bound": 6,
+        "unknown_items": 17,
+        "noise_and_geography_final_metrics": "unavailable_without_semantic_review; not zero",
+        "context_tokens": {
+          "median": 1582
+        },
+        "complete_prompt_tokens": {
+          "median": 1761
+        },
+        "budget_rejected_packets": 8
+      }
+    }
+  },
+  "per_case": [
+    {
+      "configuration": "A",
+      "case_id": "case-01",
+      "expected_result": "supported_context",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "302b0dfae4aaf2820440d238ae9b37d712cf188b6da5314b5105000419902e57"
+    },
+    {
+      "configuration": "A",
+      "case_id": "case-02",
+      "expected_result": "supported_context",
+      "manual_found": 5,
+      "automatic_certified": 5,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Fjern vått tøy raskt og systematisk"
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Pakk personen inn i varmt, isolerende tøy eller materiale - slik at det blir vindtett og damptett"
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Tilfør varme, som flasker med varmt vann (ikke direkte på huden)"
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Overvåk bevissthet og pust"
+          ]
+        },
+        {
+          "item": 5,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Ring 113 for å få veiledning"
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": false,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "a704e276bc0730d46c342addf280df0bc2fa09f149b126833d884287bddae38f"
+    },
+    {
+      "configuration": "A",
+      "case_id": "case-03",
+      "expected_result": "supported_context",
+      "manual_found": 2,
+      "automatic_certified": 2,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Water containing germs that can make you sick—including bacteria, viruses, and parasites—sometimes looks clean."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "If you are not sure whether the water you are using is safe to drink, treat it to remove germs."
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 5,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "6c473a016c7acc948f010f36f2dc59d05fc736b6ff5b6e5f57e6bb657e6ca524"
+    },
+    {
+      "configuration": "A",
+      "case_id": "case-04",
+      "expected_result": "supported_context",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 5,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": false,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "configuration": "A",
+      "case_id": "case-05",
+      "expected_result": "supported_context",
+      "manual_found": 3,
+      "automatic_certified": 3,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "If you hear thunder, lightning is close enough to strike you."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "NO PLACE outside is safe when thunderstorms are in the area!!"
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 5,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "When you hear thunder, immediately move to safe shelter: a substantial building with electricity or plumbing or an enclosed, metal-topped vehicle with windows up."
+          ]
+        },
+        {
+          "item": 6,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "7ada0cb9e3c2150b0db9b20e2326a76e3cbb8e1020bd90563f0674979bcc1f19"
+    },
+    {
+      "configuration": "A",
+      "case_id": "case-06",
+      "expected_result": "supported_context",
+      "manual_found": 2,
+      "automatic_certified": 2,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Trykk bandasje eller reint tøy direkte mot blødinga og bruk fingrane til å presse mot såret for å redusere blødinga mest mogleg."
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Blør det gjennom bandasjen, legg du ein ny bandasje utanpå, med større press mot blødinga."
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "1bd599d2757296ddee498ed588db9f4a26c090976001ff806e43eefa46eed629"
+    },
+    {
+      "configuration": "A",
+      "case_id": "case-07",
+      "expected_result": "supported_context",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "e7b0432256b43eb8fdcab2b99b7b3f9f3f934ef6bc45cd73ad253d6550e05dbb"
+    },
+    {
+      "configuration": "A",
+      "case_id": "case-08",
+      "expected_result": "supported_context",
+      "manual_found": 2,
+      "automatic_certified": 2,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Ring 113 hvis en person:",
+            "er bevisstløs eller vanskelig å vekke, og du må riste og rope for å holde hen våken"
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Har du holdt fri luftvei og sett at den bevisstløse puster normalt, skal du legge den bevisstløse i sideleie:",
+            "Bøy hodet bakover og pass på at personens munn er vinklet nedover.",
+            "Personen skal ligge på siden, og ikke skli over i mageleie.",
+            "Luftveien er fri ved at tungen sklir fremover slik at luft kan passere og væske renner ut."
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "f406ab72251554e04c309ef6f340d593a0383a34ecdfa639bd217af6a38d092b"
+    },
+    {
+      "configuration": "A",
+      "case_id": "case-09",
+      "expected_result": "supported_context",
+      "manual_found": 3,
+      "automatic_certified": 3,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "drikk rikeleg med vatn eller anna alkoholfri drikke"
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "reduser fysisk aktivitet"
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "dusj eller bad i kjølig vatn, eventuelt legg våte handklede på huda"
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "42601b4ff75e5281eeabf777bcddbb586650b08d48d09b2caafcbf1ae39836b4"
+    },
+    {
+      "configuration": "A",
+      "case_id": "case-10",
+      "expected_result": "supported_context",
+      "manual_found": 1,
+      "automatic_certified": 1,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "3. Pack warm clothes and extra food",
+            "Prepare for bad weather and an unexpected night out."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "6dc562fd0b6fcc0a2c81c3943844ebf117261a5c3132752e64d4b9cb82dcf123"
+    },
+    {
+      "configuration": "A",
+      "case_id": "case-11",
+      "expected_result": "supported_context",
+      "manual_found": 1,
+      "automatic_certified": 1,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Wash your hands before handling food, eating, and after using the toilet.",
+            "If soap and water are not available, use a hand sanitizer that contains at least 60% alcohol ."
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "565daf2ae782cbdf3c7ba43821d28c01356ac4ef805111fe198a1bdec39ce87b"
+    },
+    {
+      "configuration": "A",
+      "case_id": "case-12",
+      "expected_result": "supported_context",
+      "manual_found": 1,
+      "automatic_certified": 1,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "You may encounter a dangerous river and need to turn back or wait until the river is safe to cross."
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "dec64616ec69d1342851bb1a3ddbd9ca668c1e814efa04ba24e2cbb7cb0ca756"
+    },
+    {
+      "configuration": "A",
+      "case_id": "case-13",
+      "expected_result": "supported_context",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "d8041c3ba88ad3fdf491c8774a3c638f54ee8a9ec158b7d0bc0714b41fad47e2"
+    },
+    {
+      "configuration": "A",
+      "case_id": "case-14",
+      "expected_result": "insufficient_coverage",
+      "manual_found": 1,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "c9ac529b163a8ff708cedc3e7afde5c368f066787834d2754d493218b21a9e2b"
+    },
+    {
+      "configuration": "A",
+      "case_id": "case-15",
+      "expected_result": "insufficient_coverage",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "c2addab2f4f94113ec95c27e7cebf3ca59f7dd5b0ac468046441efa78cc4a7b9"
+    },
+    {
+      "configuration": "B",
+      "case_id": "case-01",
+      "expected_result": "supported_context",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "0ae123848e1cdf40ed7e4442dc3c1249e469ed712158d26d998ecf1c88411112"
+    },
+    {
+      "configuration": "B",
+      "case_id": "case-02",
+      "expected_result": "supported_context",
+      "manual_found": 5,
+      "automatic_certified": 5,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Fjern vått tøy raskt og systematisk"
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Pakk personen inn i varmt, isolerende tøy eller materiale - slik at det blir vindtett og damptett"
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Tilfør varme, som flasker med varmt vann (ikke direkte på huden)"
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Overvåk bevissthet og pust"
+          ]
+        },
+        {
+          "item": 5,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Ring 113 for å få veiledning"
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "0ce738a10b805fd8b364f3290263b850c6635b7010a56b8355e728b4bf0ff61e"
+    },
+    {
+      "configuration": "B",
+      "case_id": "case-03",
+      "expected_result": "supported_context",
+      "manual_found": 2,
+      "automatic_certified": 2,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Water containing germs that can make you sick—including bacteria, viruses, and parasites—sometimes looks clean."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "If you are not sure whether the water you are using is safe to drink, treat it to remove germs."
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 5,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "861bc97fdd312a9b4c3cb76b72b8e3f2c155ec3ebca68a4e50b5ba068584df8d"
+    },
+    {
+      "configuration": "B",
+      "case_id": "case-04",
+      "expected_result": "supported_context",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 5,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": false,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "configuration": "B",
+      "case_id": "case-05",
+      "expected_result": "supported_context",
+      "manual_found": 3,
+      "automatic_certified": 3,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "If you hear thunder, lightning is close enough to strike you."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "NO PLACE outside is safe when thunderstorms are in the area!!"
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 5,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "When you hear thunder, immediately move to safe shelter: a substantial building with electricity or plumbing or an enclosed, metal-topped vehicle with windows up."
+          ]
+        },
+        {
+          "item": 6,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "7ada0cb9e3c2150b0db9b20e2326a76e3cbb8e1020bd90563f0674979bcc1f19"
+    },
+    {
+      "configuration": "B",
+      "case_id": "case-06",
+      "expected_result": "supported_context",
+      "manual_found": 3,
+      "automatic_certified": 3,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Trykk bandasje eller reint tøy direkte mot blødinga og bruk fingrane til å presse mot såret for å redusere blødinga mest mogleg."
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Blør det gjennom bandasjen, legg du ein ny bandasje utanpå, med større press mot blødinga."
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Pakk personen som er skadd, inn i varmt tøy eller teppe for å unngå nedkjøling .",
+            "Overvak og ring 113 om personen blir sløvare eller noko endrar seg."
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "706dee6210a83670f76ae56b3fbc634a342cc6a3a6a584da2700f79e51ddddf1"
+    },
+    {
+      "configuration": "B",
+      "case_id": "case-07",
+      "expected_result": "supported_context",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "ada009bfb55ed632f83dea2338bd223dd8d9d6dd6ee1028a967f188cc28eeb50"
+    },
+    {
+      "configuration": "B",
+      "case_id": "case-08",
+      "expected_result": "supported_context",
+      "manual_found": 2,
+      "automatic_certified": 2,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Ring 113 hvis en person:",
+            "er bevisstløs eller vanskelig å vekke, og du må riste og rope for å holde hen våken"
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Har du holdt fri luftvei og sett at den bevisstløse puster normalt, skal du legge den bevisstløse i sideleie:",
+            "Bøy hodet bakover og pass på at personens munn er vinklet nedover.",
+            "Personen skal ligge på siden, og ikke skli over i mageleie.",
+            "Luftveien er fri ved at tungen sklir fremover slik at luft kan passere og væske renner ut."
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "7ac902bfd6f2263a0aee1d4fcbd3fea037c71425ca8fb6bb4fe39ee675237c8e"
+    },
+    {
+      "configuration": "B",
+      "case_id": "case-09",
+      "expected_result": "supported_context",
+      "manual_found": 3,
+      "automatic_certified": 3,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "drikk rikeleg med vatn eller anna alkoholfri drikke"
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "reduser fysisk aktivitet"
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "dusj eller bad i kjølig vatn, eventuelt legg våte handklede på huda"
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "42601b4ff75e5281eeabf777bcddbb586650b08d48d09b2caafcbf1ae39836b4"
+    },
+    {
+      "configuration": "B",
+      "case_id": "case-10",
+      "expected_result": "supported_context",
+      "manual_found": 1,
+      "automatic_certified": 1,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "3. Pack warm clothes and extra food",
+            "Prepare for bad weather and an unexpected night out."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "6dc562fd0b6fcc0a2c81c3943844ebf117261a5c3132752e64d4b9cb82dcf123"
+    },
+    {
+      "configuration": "B",
+      "case_id": "case-11",
+      "expected_result": "supported_context",
+      "manual_found": 1,
+      "automatic_certified": 1,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Wash your hands before handling food, eating, and after using the toilet.",
+            "If soap and water are not available, use a hand sanitizer that contains at least 60% alcohol ."
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "a2f684aa04da088ea477f51534ddb644f8fab1a9991a0f27d5775aa33ba5d222"
+    },
+    {
+      "configuration": "B",
+      "case_id": "case-12",
+      "expected_result": "supported_context",
+      "manual_found": 1,
+      "automatic_certified": 1,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "You may encounter a dangerous river and need to turn back or wait until the river is safe to cross."
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "b9a2b7d9efe0c03cea8409fd01544b9258eb85053e3f34a8c5bee7a8d42c446b"
+    },
+    {
+      "configuration": "B",
+      "case_id": "case-13",
+      "expected_result": "supported_context",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "1b76903c277cb07cded4d8c4918c724b28af5c6edeac69bf33ad0bd58e0d4cf6"
+    },
+    {
+      "configuration": "B",
+      "case_id": "case-14",
+      "expected_result": "insufficient_coverage",
+      "manual_found": 1,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "c2b3274311e71518ed6d269a01b9735c142327f3ebab53166930218a2f5a3c65"
+    },
+    {
+      "configuration": "B",
+      "case_id": "case-15",
+      "expected_result": "insufficient_coverage",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "adb82c3e74dd033540e77d98638ce11b113b6be60959a9c74c4f309f1aa68d97"
+    },
+    {
+      "configuration": "B8",
+      "case_id": "case-01",
+      "expected_result": "supported_context",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "0ae123848e1cdf40ed7e4442dc3c1249e469ed712158d26d998ecf1c88411112"
+    },
+    {
+      "configuration": "B8",
+      "case_id": "case-02",
+      "expected_result": "supported_context",
+      "manual_found": 5,
+      "automatic_certified": 5,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Fjern vått tøy raskt og systematisk"
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Pakk personen inn i varmt, isolerende tøy eller materiale - slik at det blir vindtett og damptett"
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Tilfør varme, som flasker med varmt vann (ikke direkte på huden)"
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Overvåk bevissthet og pust"
+          ]
+        },
+        {
+          "item": 5,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Ring 113 for å få veiledning"
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "0f04f3aeae2eaca897c4511aed5636879c426213f733e7914d1d88ea26524da3"
+    },
+    {
+      "configuration": "B8",
+      "case_id": "case-03",
+      "expected_result": "supported_context",
+      "manual_found": 5,
+      "automatic_certified": 5,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Water containing germs that can make you sick—including bacteria, viruses, and parasites—sometimes looks clean."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "If you are not sure whether the water you are using is safe to drink, treat it to remove germs."
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "To kill germs, bring clear water to a rolling boil for 1 minute.",
+            "At elevations above 6,500 feet, boil for 3 minutes."
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "To kill germs, bring clear water to a rolling boil for 1 minute.",
+            "At elevations above 6,500 feet, boil for 3 minutes."
+          ]
+        },
+        {
+          "item": 5,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "You cannot make water containing harmful chemicals, toxins, or radioactive materials safe by boiling or disinfecting it.",
+            "Use bottled water or a different source of water instead."
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "675e5d6b96196f1f8c7ab94a1a9733bbc18a26a033a24f8d49f317c956afeab0"
+    },
+    {
+      "configuration": "B8",
+      "case_id": "case-04",
+      "expected_result": "supported_context",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 5,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": false,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "configuration": "B8",
+      "case_id": "case-05",
+      "expected_result": "supported_context",
+      "manual_found": 6,
+      "automatic_certified": 6,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "If you hear thunder, lightning is close enough to strike you."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "NO PLACE outside is safe when thunderstorms are in the area!!"
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Immediately get off elevated areas such as hills, mountain ridges or peaks"
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Never use a cliff or rocky overhang for shelter"
+          ]
+        },
+        {
+          "item": 5,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "When you hear thunder, immediately move to safe shelter: a substantial building with electricity or plumbing or an enclosed, metal-topped vehicle with windows up."
+          ]
+        },
+        {
+          "item": 6,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "If you are caught outside with no safe shelter anywhere nearby the following actions may reduce your risk:",
+            "NO PLACE outside is safe when thunderstorms are in the area!!"
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "9e17e7491dd0412128604ecf129463ef78761dc70284eee390e0668ed4b397df"
+    },
+    {
+      "configuration": "B8",
+      "case_id": "case-06",
+      "expected_result": "supported_context",
+      "manual_found": 3,
+      "automatic_certified": 3,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Trykk bandasje eller reint tøy direkte mot blødinga og bruk fingrane til å presse mot såret for å redusere blødinga mest mogleg."
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Blør det gjennom bandasjen, legg du ein ny bandasje utanpå, med større press mot blødinga."
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Pakk personen som er skadd, inn i varmt tøy eller teppe for å unngå nedkjøling .",
+            "Overvak og ring 113 om personen blir sløvare eller noko endrar seg."
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "324d151c9dd968ec3d787247f119d8e02d4ada7e7ce36b1df0670d0163f63811"
+    },
+    {
+      "configuration": "B8",
+      "case_id": "case-07",
+      "expected_result": "supported_context",
+      "manual_found": 1,
+      "automatic_certified": 1,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 4,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Kontakt lege hvis:",
+            "ansikt, hender, føtter eller kjønnsorganer er skadet"
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "33695370efb3ba47e60183d8d6cb82b3bbd604c577fd726316f0ded5bc548323"
+    },
+    {
+      "configuration": "B8",
+      "case_id": "case-08",
+      "expected_result": "supported_context",
+      "manual_found": 2,
+      "automatic_certified": 2,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Finner du en bevisstløs person må du ringe 113.",
+            "De vil hjelpe deg med å gi fri luftvei og legge personen i sideleie."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Har du holdt fri luftvei og sett at den bevisstløse puster normalt, skal du legge den bevisstløse i sideleie:",
+            "Bøy hodet bakover og pass på at personens munn er vinklet nedover.",
+            "Personen skal ligge på siden, og ikke skli over i mageleie.",
+            "Luftveien er fri ved at tungen sklir fremover slik at luft kan passere og væske renner ut."
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "bf8de2e3bf8a207826b720c34d8f809f34d4e4a663771ac1fbb6a483bda83a3a"
+    },
+    {
+      "configuration": "B8",
+      "case_id": "case-09",
+      "expected_result": "supported_context",
+      "manual_found": 3,
+      "automatic_certified": 3,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "drikk rikeleg med vatn eller anna alkoholfri drikke"
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "reduser fysisk aktivitet"
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "dusj eller bad i kjølig vatn, eventuelt legg våte handklede på huda"
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "3402a7c98c390627fad0c7fc6393f9e8260ec5261f4dc432f72bfd5d6840931a"
+    },
+    {
+      "configuration": "B8",
+      "case_id": "case-10",
+      "expected_result": "supported_context",
+      "manual_found": 3,
+      "automatic_certified": 3,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "3. Pack warm clothes and extra food",
+            "Prepare for bad weather and an unexpected night out."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Sleeping bag – 3–4 season"
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Emergency shelter"
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "41352b4a1b21db19abe427152e9ae30918a7815d0ebede3898b7306f6021d111"
+    },
+    {
+      "configuration": "B8",
+      "case_id": "case-11",
+      "expected_result": "supported_context",
+      "manual_found": 3,
+      "automatic_certified": 3,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Aim to bury your poop deep in the soil, at least 8 inches, and at least 200 feet away from lakes, rivers, and other natural waters."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Make sure to bury poop downstream from where you or others collect water."
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Wash your hands before handling food, eating, and after using the toilet.",
+            "If soap and water are not available, use a hand sanitizer that contains at least 60% alcohol ."
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "fed6c09b6c15833646d2baba132fdaa4f351aaa73bc9fd02f892bf2dd32a5f6d"
+    },
+    {
+      "configuration": "B8",
+      "case_id": "case-12",
+      "expected_result": "supported_context",
+      "manual_found": 3,
+      "automatic_certified": 3,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "When you arrive at a river crossing, look for the warning signs of an unsafe river.",
+            "If any are present, do not attempt a crossing.",
+            "Murky: the water is discoloured, often brown."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Do not cross if:",
+            "the river is flooded.",
+            "you do not have the skills or experience to cross safely.",
+            "If in doubt? Stay out."
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "You may encounter a dangerous river and need to turn back or wait until the river is safe to cross."
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "ec0bac9e1e3ea8a94c3ab7106f274c05f27fc399ae34856ca79cbc3c9e97d751"
+    },
+    {
+      "configuration": "B8",
+      "case_id": "case-13",
+      "expected_result": "supported_context",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "4ffe25189768f44c3c0e5bb4217a589d0ab2af6316a6918f69bcf696156b3873"
+    },
+    {
+      "configuration": "B8",
+      "case_id": "case-14",
+      "expected_result": "insufficient_coverage",
+      "manual_found": 1,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "bc899c025322f695647af91c23c9f1db9ad02e720d6bfe99fba68c2117336cba"
+    },
+    {
+      "configuration": "B8",
+      "case_id": "case-15",
+      "expected_result": "insufficient_coverage",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "e30fd88426e6e15c8b4384e4270de64a1849c7acbe004d40ce1ce81e49b9cf22"
+    },
+    {
+      "configuration": "C8",
+      "case_id": "case-01",
+      "expected_result": "supported_context",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "7064ee80c157ad9b451933b7e4572efcd65ec7fbe58de9de449db6034e113801"
+    },
+    {
+      "configuration": "C8",
+      "case_id": "case-02",
+      "expected_result": "supported_context",
+      "manual_found": 5,
+      "automatic_certified": 5,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Fjern vått tøy raskt og systematisk"
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Pakk personen inn i varmt, isolerende tøy eller materiale - slik at det blir vindtett og damptett"
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Tilfør varme, som flasker med varmt vann (ikke direkte på huden)"
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Overvåk bevissthet og pust"
+          ]
+        },
+        {
+          "item": 5,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Ring 113 for å få veiledning"
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "a229661f930655a321eee37c19b4f671265e3bfa66d6bde5c7506807c4af1626"
+    },
+    {
+      "configuration": "C8",
+      "case_id": "case-03",
+      "expected_result": "supported_context",
+      "manual_found": 5,
+      "automatic_certified": 5,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Water containing germs that can make you sick—including bacteria, viruses, and parasites—sometimes looks clean."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "If you are not sure whether the water you are using is safe to drink, treat it to remove germs."
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "To kill germs, bring clear water to a rolling boil for 1 minute.",
+            "At elevations above 6,500 feet, boil for 3 minutes."
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "To kill germs, bring clear water to a rolling boil for 1 minute.",
+            "At elevations above 6,500 feet, boil for 3 minutes."
+          ]
+        },
+        {
+          "item": 5,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "You cannot make water containing harmful chemicals, toxins, or radioactive materials safe by boiling or disinfecting it.",
+            "Use bottled water or a different source of water instead."
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "b4a04ba8e9145a19ebd3b4f54db0103c19995e3be164ae6cdc6c57c19ab19a24"
+    },
+    {
+      "configuration": "C8",
+      "case_id": "case-04",
+      "expected_result": "supported_context",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 5,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "d08ceae247705b4a5bc9771858df57df52a1eaa423e4397ac723328a3b219caa"
+    },
+    {
+      "configuration": "C8",
+      "case_id": "case-05",
+      "expected_result": "supported_context",
+      "manual_found": 6,
+      "automatic_certified": 6,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "If you hear thunder, lightning is close enough to strike you."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "NO PLACE outside is safe when thunderstorms are in the area!!"
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Immediately get off elevated areas such as hills, mountain ridges or peaks"
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Never use a cliff or rocky overhang for shelter"
+          ]
+        },
+        {
+          "item": 5,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "When you hear thunder, immediately move to safe shelter: a substantial building with electricity or plumbing or an enclosed, metal-topped vehicle with windows up."
+          ]
+        },
+        {
+          "item": 6,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "If you are caught outside with no safe shelter anywhere nearby the following actions may reduce your risk:",
+            "NO PLACE outside is safe when thunderstorms are in the area!!"
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "8c2d2d7e2b318fa43e6e1d341cd11d99ba1f4b71f036f98afec166c1a3a243ed"
+    },
+    {
+      "configuration": "C8",
+      "case_id": "case-06",
+      "expected_result": "supported_context",
+      "manual_found": 3,
+      "automatic_certified": 3,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Trykk bandasje eller reint tøy direkte mot blødinga og bruk fingrane til å presse mot såret for å redusere blødinga mest mogleg."
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Blør det gjennom bandasjen, legg du ein ny bandasje utanpå, med større press mot blødinga."
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Pakk personen som er skadd, inn i varmt tøy eller teppe for å unngå nedkjøling .",
+            "Overvak og ring 113 om personen blir sløvare eller noko endrar seg."
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "45337843a93d28ebfc8f29a18c663359eb55bc64ba09f753d0c4f48c4436690d"
+    },
+    {
+      "configuration": "C8",
+      "case_id": "case-07",
+      "expected_result": "supported_context",
+      "manual_found": 1,
+      "automatic_certified": 1,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 4,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Kontakt lege hvis:",
+            "ansikt, hender, føtter eller kjønnsorganer er skadet"
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "33695370efb3ba47e60183d8d6cb82b3bbd604c577fd726316f0ded5bc548323"
+    },
+    {
+      "configuration": "C8",
+      "case_id": "case-08",
+      "expected_result": "supported_context",
+      "manual_found": 2,
+      "automatic_certified": 2,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Ring 113 hvis en person:",
+            "er bevisstløs eller vanskelig å vekke, og du må riste og rope for å holde hen våken"
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Har du holdt fri luftvei og sett at den bevisstløse puster normalt, skal du legge den bevisstløse i sideleie:",
+            "Bøy hodet bakover og pass på at personens munn er vinklet nedover.",
+            "Personen skal ligge på siden, og ikke skli over i mageleie.",
+            "Luftveien er fri ved at tungen sklir fremover slik at luft kan passere og væske renner ut."
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "72321569487035210c9e36f8a0ffd18e05e6d1c2805b68818041b4608de1409f"
+    },
+    {
+      "configuration": "C8",
+      "case_id": "case-09",
+      "expected_result": "supported_context",
+      "manual_found": 3,
+      "automatic_certified": 3,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "drikk rikeleg med vatn eller anna alkoholfri drikke"
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "reduser fysisk aktivitet"
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "dusj eller bad i kjølig vatn, eventuelt legg våte handklede på huda"
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "7e254822b7445b06acf50e54d2233c274f6aff829e666dd004ee1b6bdf782e10"
+    },
+    {
+      "configuration": "C8",
+      "case_id": "case-10",
+      "expected_result": "supported_context",
+      "manual_found": 3,
+      "automatic_certified": 3,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "3. Pack warm clothes and extra food",
+            "Prepare for bad weather and an unexpected night out."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Sleeping bag – 3–4 season"
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Emergency shelter"
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "568c51c524a2b7f8049cbe2d39b7e295c717a63d5c5d0e690a751fafbd0ca65e"
+    },
+    {
+      "configuration": "C8",
+      "case_id": "case-11",
+      "expected_result": "supported_context",
+      "manual_found": 3,
+      "automatic_certified": 3,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Aim to bury your poop deep in the soil, at least 8 inches, and at least 200 feet away from lakes, rivers, and other natural waters."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Make sure to bury poop downstream from where you or others collect water."
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Wash your hands before handling food, eating, and after using the toilet.",
+            "If soap and water are not available, use a hand sanitizer that contains at least 60% alcohol ."
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "9896ec60cc49d1974d06fe0020c64127bddfec10d94758f0a0ed306ba9a71d66"
+    },
+    {
+      "configuration": "C8",
+      "case_id": "case-12",
+      "expected_result": "supported_context",
+      "manual_found": 2,
+      "automatic_certified": 2,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Do not cross if:",
+            "the river is flooded.",
+            "you do not have the skills or experience to cross safely.",
+            "If in doubt? Stay out."
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "You may encounter a dangerous river and need to turn back or wait until the river is safe to cross."
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "c6018f696b63b3a8208276f02eccfb416cf25980667b99d19d4de9bf8d06118d"
+    },
+    {
+      "configuration": "C8",
+      "case_id": "case-13",
+      "expected_result": "supported_context",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "5c8f55789847bfb50a8377b4c66d0d5b3742ae748a3f9d58361a573badcc614e"
+    },
+    {
+      "configuration": "C8",
+      "case_id": "case-14",
+      "expected_result": "insufficient_coverage",
+      "manual_found": 1,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "0854682320148253b70123b52745ae61868351f0064bf4ce94b89e1a76b137ad"
+    },
+    {
+      "configuration": "C8",
+      "case_id": "case-15",
+      "expected_result": "insufficient_coverage",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "66a13dbf4dd515a956ddf3bb74c9b0fc9be743bc5f768a28b0735325276d8ce5"
+    },
+    {
+      "configuration": "C8U8",
+      "case_id": "case-01",
+      "expected_result": "supported_context",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "7064ee80c157ad9b451933b7e4572efcd65ec7fbe58de9de449db6034e113801"
+    },
+    {
+      "configuration": "C8U8",
+      "case_id": "case-02",
+      "expected_result": "supported_context",
+      "manual_found": 5,
+      "automatic_certified": 5,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Fjern vått tøy raskt og systematisk"
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Pakk personen inn i varmt, isolerende tøy eller materiale - slik at det blir vindtett og damptett"
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Tilfør varme, som flasker med varmt vann (ikke direkte på huden)"
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Overvåk bevissthet og pust"
+          ]
+        },
+        {
+          "item": 5,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Ring 113 for å få veiledning"
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "a229661f930655a321eee37c19b4f671265e3bfa66d6bde5c7506807c4af1626"
+    },
+    {
+      "configuration": "C8U8",
+      "case_id": "case-03",
+      "expected_result": "supported_context",
+      "manual_found": 5,
+      "automatic_certified": 5,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Water containing germs that can make you sick—including bacteria, viruses, and parasites—sometimes looks clean."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "If you are not sure whether the water you are using is safe to drink, treat it to remove germs."
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "To kill germs, bring clear water to a rolling boil for 1 minute.",
+            "At elevations above 6,500 feet, boil for 3 minutes."
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "To kill germs, bring clear water to a rolling boil for 1 minute.",
+            "At elevations above 6,500 feet, boil for 3 minutes."
+          ]
+        },
+        {
+          "item": 5,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "You cannot make water containing harmful chemicals, toxins, or radioactive materials safe by boiling or disinfecting it.",
+            "Use bottled water or a different source of water instead."
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "b4a04ba8e9145a19ebd3b4f54db0103c19995e3be164ae6cdc6c57c19ab19a24"
+    },
+    {
+      "configuration": "C8U8",
+      "case_id": "case-04",
+      "expected_result": "supported_context",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 5,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "d08ceae247705b4a5bc9771858df57df52a1eaa423e4397ac723328a3b219caa"
+    },
+    {
+      "configuration": "C8U8",
+      "case_id": "case-05",
+      "expected_result": "supported_context",
+      "manual_found": 6,
+      "automatic_certified": 6,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "If you hear thunder, lightning is close enough to strike you."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "NO PLACE outside is safe when thunderstorms are in the area!!"
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Immediately get off elevated areas such as hills, mountain ridges or peaks"
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Never use a cliff or rocky overhang for shelter"
+          ]
+        },
+        {
+          "item": 5,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "When you hear thunder, immediately move to safe shelter: a substantial building with electricity or plumbing or an enclosed, metal-topped vehicle with windows up."
+          ]
+        },
+        {
+          "item": 6,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "If you are caught outside with no safe shelter anywhere nearby the following actions may reduce your risk:",
+            "NO PLACE outside is safe when thunderstorms are in the area!!"
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "8c2d2d7e2b318fa43e6e1d341cd11d99ba1f4b71f036f98afec166c1a3a243ed"
+    },
+    {
+      "configuration": "C8U8",
+      "case_id": "case-06",
+      "expected_result": "supported_context",
+      "manual_found": 3,
+      "automatic_certified": 3,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Trykk bandasje eller reint tøy direkte mot blødinga og bruk fingrane til å presse mot såret for å redusere blødinga mest mogleg."
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Blør det gjennom bandasjen, legg du ein ny bandasje utanpå, med større press mot blødinga."
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Pakk personen som er skadd, inn i varmt tøy eller teppe for å unngå nedkjøling .",
+            "Overvak og ring 113 om personen blir sløvare eller noko endrar seg."
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "45337843a93d28ebfc8f29a18c663359eb55bc64ba09f753d0c4f48c4436690d"
+    },
+    {
+      "configuration": "C8U8",
+      "case_id": "case-07",
+      "expected_result": "supported_context",
+      "manual_found": 1,
+      "automatic_certified": 1,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 3,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 4,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Kontakt lege hvis:",
+            "ansikt, hender, føtter eller kjønnsorganer er skadet"
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "33695370efb3ba47e60183d8d6cb82b3bbd604c577fd726316f0ded5bc548323"
+    },
+    {
+      "configuration": "C8U8",
+      "case_id": "case-08",
+      "expected_result": "supported_context",
+      "manual_found": 3,
+      "automatic_certified": 3,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Finner du en bevisstløs person må du ringe 113.",
+            "De vil hjelpe deg med å gi fri luftvei og legge personen i sideleie."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Gi fri luftvei ved å dra personens hake fremover i et underbitt.",
+            "Bøy personens hode litt bakover og hold grepet (hodet og haken).",
+            "Sjekk pusten ved å legge kinnet ditt nært munn og nese, og hør og føl etter varm luftstrøm.",
+            "Se mot bryst og mage etter pustebevegelser.",
+            "Bruk inntil 10 sekunder for å bestemme om det er normal pust eller ikke."
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Har du holdt fri luftvei og sett at den bevisstløse puster normalt, skal du legge den bevisstløse i sideleie:",
+            "Bøy hodet bakover og pass på at personens munn er vinklet nedover.",
+            "Personen skal ligge på siden, og ikke skli over i mageleie.",
+            "Luftveien er fri ved at tungen sklir fremover slik at luft kan passere og væske renner ut."
+          ]
+        },
+        {
+          "item": 4,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "9b6424be4ed3f5b525fcc748399eae1ea1c13b47324ad62736f2c74a527378a4"
+    },
+    {
+      "configuration": "C8U8",
+      "case_id": "case-09",
+      "expected_result": "supported_context",
+      "manual_found": 3,
+      "automatic_certified": 3,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "drikk rikeleg med vatn eller anna alkoholfri drikke"
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "reduser fysisk aktivitet"
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "dusj eller bad i kjølig vatn, eventuelt legg våte handklede på huda"
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "3402a7c98c390627fad0c7fc6393f9e8260ec5261f4dc432f72bfd5d6840931a"
+    },
+    {
+      "configuration": "C8U8",
+      "case_id": "case-10",
+      "expected_result": "supported_context",
+      "manual_found": 3,
+      "automatic_certified": 3,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "3. Pack warm clothes and extra food",
+            "Prepare for bad weather and an unexpected night out."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Sleeping bag – 3–4 season"
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Emergency shelter"
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "568c51c524a2b7f8049cbe2d39b7e295c717a63d5c5d0e690a751fafbd0ca65e"
+    },
+    {
+      "configuration": "C8U8",
+      "case_id": "case-11",
+      "expected_result": "supported_context",
+      "manual_found": 3,
+      "automatic_certified": 3,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Aim to bury your poop deep in the soil, at least 8 inches, and at least 200 feet away from lakes, rivers, and other natural waters."
+          ]
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Make sure to bury poop downstream from where you or others collect water."
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Wash your hands before handling food, eating, and after using the toilet.",
+            "If soap and water are not available, use a hand sanitizer that contains at least 60% alcohol ."
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "ea0f19972f083616aa9a674ac06e6f7864913e7d7d8e5eae8fa04485d07ffd6b"
+    },
+    {
+      "configuration": "C8U8",
+      "case_id": "case-12",
+      "expected_result": "supported_context",
+      "manual_found": 2,
+      "automatic_certified": 2,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "Do not cross if:",
+            "the river is flooded.",
+            "you do not have the skills or experience to cross safely.",
+            "If in doubt? Stay out."
+          ]
+        },
+        {
+          "item": 3,
+          "manual_covered": true,
+          "decision": "covered",
+          "evidence": [
+            "You may encounter a dangerous river and need to turn back or wait until the river is safe to cross."
+          ]
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "c6018f696b63b3a8208276f02eccfb416cf25980667b99d19d4de9bf8d06118d"
+    },
+    {
+      "configuration": "C8U8",
+      "case_id": "case-13",
+      "expected_result": "supported_context",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "5c8f55789847bfb50a8377b4c66d0d5b3742ae748a3f9d58361a573badcc614e"
+    },
+    {
+      "configuration": "C8U8",
+      "case_id": "case-14",
+      "expected_result": "insufficient_coverage",
+      "manual_found": 1,
+      "automatic_certified": 0,
+      "items": [
+        {
+          "item": 1,
+          "manual_covered": true,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        },
+        {
+          "item": 2,
+          "manual_covered": false,
+          "decision": "needs_review",
+          "evidence": [],
+          "reason": "No complete registered sufficient route; equivalent/partial/missing content requires semantic review"
+        }
+      ],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "0854682320148253b70123b52745ae61868351f0064bf4ce94b89e1a76b137ad"
+    },
+    {
+      "configuration": "C8U8",
+      "case_id": "case-15",
+      "expected_result": "insufficient_coverage",
+      "manual_found": 0,
+      "automatic_certified": 0,
+      "items": [],
+      "manual_noise_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "jurisdiction_leakage": false
+      },
+      "automatic_noise_and_geography": "needs_review for nonempty contexts; no final classification calibrated",
+      "context_sha256": "66a13dbf4dd515a956ddf3bb74c9b0fc9be743bc5f768a28b0735325276d8ce5"
+    }
+  ],
+  "holdout_accessed": false,
+  "new_questions_retrieved": 0,
+  "retrieval_calls": 0,
+  "generation_judge_calls": 0,
+  "optimization_iterations": 0,
+  "limits": [
+    "Same previously seen 15 cases and correlated contexts; not independent accuracy validation",
+    "Positive certificates incomplete; no automatic negative, noise or geography-zero certification",
+    "No paraphrase/unit-conversion entailment model, judge calibration or inter-rater study",
+    "Certificates frozen before comparison; do not tune against mismatches in this task"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-08",
+  "status": "pending_owner_review",
+  "checks": {
+    "legacy_gold_and_corpus_hashes": "unchanged",
+    "first_15_case_definitions": "exactly_equal",
+    "source_manifest_hash": "unchanged",
+    "new_development_evidence": "all_21_items_supported",
+    "locked_artifact_hashes": "all_match",
+    "historical_calibration_inputs": "all_hashes_match",
+    "duplicate_questions": "none_in_source_authoring_QA",
+    "existing_backend_and_eval_tests": {
+      "passed": 80
+    },
+    "new_scoring_tests": {
+      "passed": 11
+    },
+    "frontend_typecheck": "passed",
+    "frontend_web_build": "passed"
+  },
+  "scope": {
+    "production_changes_this_task": false,
+    "gold_changes_existing_15": false,
+    "retrieval_calls": 0,
+    "control_retrieval_calls": 0,
+    "generation_or_judge_calls": 0,
+    "optimization_iterations": 0,
+    "control_access": "Source authoring QA and hash verification only; never calibrated or retrieved"
+  },
+  "python_runtimes": {
+    "tests": "existing backend .venv Python 3.11",
+    "calibration": "bundled Python 3.12.14 with existing PyYAML; no new dependencies"
+  },
+  "files_sha256": {
+    ".gitattributes": "31f9ecd3f19408aadc8388fd9c54b5ba834b50f8fe8647ce022f234a0de38718",
+    "evals/AGENTS.md": "d07201ad1d944d20c630eb3406f21fdcaca57204e23b23c55bf80fe5be6fe59d",
+    "evals/FOUNDATION.md": "03ab713fefcde193d1ee88a8bb4bf703e9f8d815f0c31e768091b810e7b0545d",
+    "evals/README.md": "6f4b82321d8eeda2acffcd7db0edff19ca7a817ca7fc78c92b2c9615a589f22a",
+    "evals/author_evidence_certificates.py": "52ad19635b8660a4b3920d7974deffb7326f0eb06dddfc91b19613210aefc036",
+    "evals/automatic_retrieval_scoring.py": "8e40cfd2cdba52c7666e7a846494be674f8238f935f69209e7159323a3ce4d5a",
+    "evals/eval_foundation.py": "6cc3e4215ca5e215616b2417f48931df1add60a84875141d890057863e4f76d9",
+    "evals/holdout/AGENTS.md": "438231e963802b779c0335867dd0c88fc4c7983c93e24bde9874c20e9562a50c",
+    "evals/holdout/README.md": "92f66d265e14d1eb46b533895f0fb8d9b351030b1d64126878435fd8719bce98",
+    "evals/holdout/authoring_qa.v1.json": "ed2eb94e068876ff728eed9319d3ce0ca93d6769a07082bd30821b3b98f26c72",
+    "evals/holdout/retrieval_control.v1.yaml": "0129246dc331473315f844a1b563cca710718968d5dd7d35099dd8459f7f4026",
+    "evals/prepare_eval_foundation.py": "6e74e47ee95526a6b60aa82976c563a693403cf5b962e51f7ce95af163d66350",
+    "evals/retrieval_cases.v1.yaml": "04ad519f56cfff4fc4158af1975363a142b06d84c84d8f7e842a1095d07868c4",
+    "evals/retrieval_development.v2.yaml": "9f18ea8ae8a4886415ec9daaefab378cf0a4075bd94d2c736bd2336130c41ea8",
+    "evals/retrieval_development_additions.v2.yaml": "45bf60d20f6751ebd59859f2796ac6767cc25444926023a1fb369a0f26f17fbd",
+    "evals/retrieval_development_qa.v2.json": "4aad70d802ca182a60e2d439027a574f5d48248e44f8599008ac7940470f1d82",
+    "evals/retrieval_evidence_certificates.v1.json": "e82e7089fdc6552cc64a0aa97bad2c99a7d8accaec340edc74c9a530ff7b272d",
+    "evals/retrieval_foundation.lock.json": "3b550911587ddb1187fe8998fb2d96492ec275a9b4602263302f65982c54c677",
+    "evals/retrieval_judge_rubric.v1.md": "08b6d58cc233df83da79dcfc6dadb5a0aeebcf9f4ce21a5623464cca3985d441",
+    "evals/retrieval_scoring_calibration.v1.json": "116f54b27a86839e2b9edd014516ea4ffd117e146be35b21b4419e3f3e36f772",
+    "evals/retrieval_sources.v1.json": "cbd20b94fb409dac9d1e6fcce5bc4b3c6217eb00067b658ccd1dc56b7073a43e",
+    "evals/test_eval_foundation.py": "964eb23f8e8fbeb1b878fc1c2cd05ae16fa39658e069ee0c52e54b00159089f2"
+  },
+  "local_reproduction": "Requires ignored frozen local corpus and saved historical context/tokenization files identified in calibration inputs_sha256; not redistributed to GitHub"
+}

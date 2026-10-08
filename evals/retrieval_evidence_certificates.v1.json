@@ -1,0 +1,958 @@
+{
+  "schema_version": 1,
+  "version": "1.0.0",
+  "status": "pending_owner_review",
+  "base_gold_sha256": "04ad519f56cfff4fc4158af1975363a142b06d84c84d8f7e842a1095d07868c4",
+  "corpus_sha256": "bd954cd27111854db2a54a8b05335dac8be7776301060da2cce3dfedb2a33d20",
+  "policy": "Conservative source-authored sufficient certificates. No IDs decide coverage. All atoms required; absence -> needs_review; no semantic fail inferred. Alternatives not exhaustive. Never use holdout.",
+  "rules": {
+    "case-01": [
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-04",
+                "section": "Hva er brudd?",
+                "quote": "Hvis den skadde ikke klarer å stå på foten eller vri på armen, bør du mistenke brudd."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-04",
+                "section": "Hva er brudd?",
+                "quote": "Det er ikke alltid så lett å avgjøre om det er brudd eller ikke."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-04",
+                "section": "Hva er brudd?",
+                "quote": "Ta den skadde til lege eller legevakt hvis du mistenker brudd."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-04",
+                "section": "Hva er brudd? / Førstehjelp ved brudd:",
+                "quote": "Hold det skadede området helt i ro. Bevegelse kan gjøre skaden verre og øke smerten."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-02": [
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-05",
+                "section": "Slik gir du førstehjelp ved nedkjøling",
+                "quote": "Fjern vått tøy raskt og systematisk"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-05",
+                "section": "Slik gir du førstehjelp ved nedkjøling",
+                "quote": "Pakk personen inn i varmt, isolerende tøy eller materiale - slik at det blir vindtett og damptett"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-05",
+                "section": "Slik gir du førstehjelp ved nedkjøling",
+                "quote": "Tilfør varme, som flasker med varmt vann (ikke direkte på huden)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-05",
+                "section": "Slik gir du førstehjelp ved nedkjøling",
+                "quote": "Overvåk bevissthet og pust"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-05",
+                "section": "Slik gir du førstehjelp ved nedkjøling",
+                "quote": "Ring 113 for å få veiledning"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-03": [
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-21",
+                "section": "Exposure / Clear water can be unsafe",
+                "quote": "Water containing germs that can make you sick—including bacteria, viruses, and parasites—sometimes looks clean."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-21",
+                "section": "Key points",
+                "quote": "If you are not sure whether the water you are using is safe to drink, treat it to remove germs."
+              }
+            ]
+          },
+          {
+            "all_of": [
+              {
+                "source_id": "source-21",
+                "section": "Overview",
+                "quote": "If you are not sure if water is safe to drink, boil it or use another method to remove germs."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-21",
+                "section": "Prevention steps and strategies / Treat your water / Boil",
+                "quote": "To kill germs, bring clear water to a rolling boil for 1 minute."
+              },
+              {
+                "source_id": "source-21",
+                "section": "Prevention steps and strategies / Treat your water / Boil",
+                "quote": "At elevations above 6,500 feet, boil for 3 minutes."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-21",
+                "section": "Prevention steps and strategies / Treat your water / Boil",
+                "quote": "To kill germs, bring clear water to a rolling boil for 1 minute."
+              },
+              {
+                "source_id": "source-21",
+                "section": "Prevention steps and strategies / Treat your water / Boil",
+                "quote": "At elevations above 6,500 feet, boil for 3 minutes."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-21",
+                "section": "Prevention steps and strategies / Treat your water",
+                "quote": "You cannot make water containing harmful chemicals, toxins, or radioactive materials safe by boiling or disinfecting it."
+              },
+              {
+                "source_id": "source-21",
+                "section": "Prevention steps and strategies / Treat your water",
+                "quote": "Use bottled water or a different source of water instead."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-04": [
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-09",
+                "section": "Reduce your risk of getting lost / If you get lost",
+                "quote": "Don’t keep going into unfamiliar terrain hoping to find your way."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-09",
+                "section": "Reduce your risk of getting lost / If you get lost",
+                "quote": "Stop and assess the situation."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-09",
+                "section": "Reduce your risk of getting lost / If you get lost",
+                "quote": "Unless you are certain of the way out, stay where you are."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-09",
+                "section": "Reduce your risk of getting lost / If you get lost",
+                "quote": "Make yourself and your group safe and comfortable – get warm, eat and drink, make a shelter, use first aid if needed."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-09",
+                "section": "Reduce your risk of getting lost / If you get lost",
+                "quote": "Call for help and make yourself visible."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-05": [
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-22",
+                "section": "Lightning: What You Need to Know",
+                "quote": "If you hear thunder, lightning is close enough to strike you."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-22",
+                "section": "Lightning: What You Need to Know",
+                "quote": "NO PLACE outside is safe when thunderstorms are in the area!!"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-22",
+                "section": "Last Resort Outdoor Risk Reduction Tips",
+                "quote": "Immediately get off elevated areas such as hills, mountain ridges or peaks"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-22",
+                "section": "Last Resort Outdoor Risk Reduction Tips",
+                "quote": "Never use a cliff or rocky overhang for shelter"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-22",
+                "section": "Lightning: What You Need to Know",
+                "quote": "When you hear thunder, immediately move to safe shelter: a substantial building with electricity or plumbing or an enclosed, metal-topped vehicle with windows up."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-22",
+                "section": "Last Resort Outdoor Risk Reduction Tips",
+                "quote": "If you are caught outside with no safe shelter anywhere nearby the following actions may reduce your risk:"
+              },
+              {
+                "source_id": "source-22",
+                "section": "Lightning: What You Need to Know",
+                "quote": "NO PLACE outside is safe when thunderstorms are in the area!!"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-06": [
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-02",
+                "section": "Førstehjelp ved ytre blødingar / Når skal du ringje 113?",
+                "quote": "Ring 113 ved større blødingar og blødingar du ikkje klarer å stoppe."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-02",
+                "section": "Førstehjelp ved ytre blødingar / Kva kan du gjere sjølv? / Avgrens blødinga:",
+                "quote": "Trykk bandasje eller reint tøy direkte mot blødinga og bruk fingrane til å presse mot såret for å redusere blødinga mest mogleg."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-02",
+                "section": "Førstehjelp ved ytre blødingar / Kva kan du gjere sjølv? / Bandasjar med press mot blødinga:",
+                "quote": "Blør det gjennom bandasjen, legg du ein ny bandasje utanpå, med større press mot blødinga."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-02",
+                "section": "Førstehjelp ved ytre blødingar / Kva kan du gjere sjølv? / Overvak og hald kroppstemperaturen oppe:",
+                "quote": "Pakk personen som er skadd, inn i varmt tøy eller teppe for å unngå nedkjøling ."
+              },
+              {
+                "source_id": "source-02",
+                "section": "Førstehjelp ved ytre blødingar / Kva kan du gjere sjølv? / Overvak og hald kroppstemperaturen oppe:",
+                "quote": "Overvak og ring 113 om personen blir sløvare eller noko endrar seg."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-07": [
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-03",
+                "section": "Førstehjelp ved brannskader",
+                "quote": "Avkjøl det skadede området med rennende vann i inntil 20 minutter."
+              },
+              {
+                "source_id": "source-03",
+                "section": "Førstehjelp ved brannskader",
+                "quote": "Vannet skal være litt kjølig (cirka 20 grader), men ikke iskaldt."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-03",
+                "section": "Førstehjelp ved brannskader",
+                "quote": "Vannet skal være litt kjølig (cirka 20 grader), men ikke iskaldt."
+              },
+              {
+                "source_id": "source-03",
+                "section": "Førstehjelp ved brannskader",
+                "quote": "Ikke bruk is, da dette kan skade huden ytterligere."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-03",
+                "section": "Førstehjelp ved brannskader",
+                "quote": "Ikke stikk hull på blemmer."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-03",
+                "section": "Når bør du oppsøke helsehjelp?",
+                "quote": "Kontakt lege hvis:"
+              },
+              {
+                "source_id": "source-03",
+                "section": "Når bør du oppsøke helsehjelp?",
+                "quote": "ansikt, hender, føtter eller kjønnsorganer er skadet"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-08": [
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-07",
+                "section": "Førstehjelp ved bevisstløshet",
+                "quote": "Finner du en bevisstløs person må du ringe 113."
+              },
+              {
+                "source_id": "source-07",
+                "section": "Førstehjelp ved bevisstløshet",
+                "quote": "De vil hjelpe deg med å gi fri luftvei og legge personen i sideleie."
+              }
+            ]
+          },
+          {
+            "all_of": [
+              {
+                "source_id": "source-01",
+                "section": "Hjerte- og lungeredning (HLR)",
+                "quote": "Ring 113 dersom du finner en bevisstløs person."
+              },
+              {
+                "source_id": "source-01",
+                "section": "Hjerte- og lungeredning (HLR)",
+                "quote": "Medisinsk personell på 113 vil veilede og hjelpe deg helt til ambulansen kommer."
+              }
+            ]
+          },
+          {
+            "all_of": [
+              {
+                "source_id": "source-07",
+                "section": "Slik hjelper du en bevisstløs person / Undersøk om den skadde lever og puster",
+                "quote": "Ring 113 hvis en person:"
+              },
+              {
+                "source_id": "source-07",
+                "section": "Slik hjelper du en bevisstløs person / Undersøk om den skadde lever og puster",
+                "quote": "er bevisstløs eller vanskelig å vekke, og du må riste og rope for å holde hen våken"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-01",
+                "section": "Hjerte- og lungeredning på voksne / Legg personen på gulvet og sjekk pusten",
+                "quote": "Gi fri luftvei ved å dra personens hake fremover i et underbitt."
+              },
+              {
+                "source_id": "source-01",
+                "section": "Hjerte- og lungeredning på voksne / Legg personen på gulvet og sjekk pusten",
+                "quote": "Bøy personens hode litt bakover og hold grepet (hodet og haken)."
+              },
+              {
+                "source_id": "source-01",
+                "section": "Hjerte- og lungeredning på voksne / Legg personen på gulvet og sjekk pusten",
+                "quote": "Sjekk pusten ved å legge kinnet ditt nært munn og nese, og hør og føl etter varm luftstrøm."
+              },
+              {
+                "source_id": "source-01",
+                "section": "Hjerte- og lungeredning på voksne / Legg personen på gulvet og sjekk pusten",
+                "quote": "Se mot bryst og mage etter pustebevegelser."
+              },
+              {
+                "source_id": "source-01",
+                "section": "Hjerte- og lungeredning på voksne / Legg personen på gulvet og sjekk pusten",
+                "quote": "Bruk inntil 10 sekunder for å bestemme om det er normal pust eller ikke."
+              }
+            ]
+          },
+          {
+            "all_of": [
+              {
+                "source_id": "source-07",
+                "section": "Slik hjelper du en bevisstløs person / Gi fri luftvei",
+                "quote": "Dra personens hake fremover i et underbitt"
+              },
+              {
+                "source_id": "source-07",
+                "section": "Slik hjelper du en bevisstløs person / Gi fri luftvei",
+                "quote": "Bøy hodet litt bakover og hold grepet (hodet og haken)"
+              },
+              {
+                "source_id": "source-07",
+                "section": "Slik hjelper du en bevisstløs person / Sjekk for normal pust",
+                "quote": "Legg kinnet ditt nært munn og nese, og hør og føl etter varm luftstrøm."
+              },
+              {
+                "source_id": "source-07",
+                "section": "Slik hjelper du en bevisstløs person / Sjekk for normal pust",
+                "quote": "Se mot bryst og mage etter pustebevegelser."
+              },
+              {
+                "source_id": "source-07",
+                "section": "Slik hjelper du en bevisstløs person / Sjekk for normal pust",
+                "quote": "Bruk inntil 10 sekunder for å bestemme om det er normal pust eller ikke."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-07",
+                "section": "Slik legger du en person i sideleie",
+                "quote": "Har du holdt fri luftvei og sett at den bevisstløse puster normalt, skal du legge den bevisstløse i sideleie:"
+              },
+              {
+                "source_id": "source-07",
+                "section": "Slik legger du en person i sideleie",
+                "quote": "Bøy hodet bakover og pass på at personens munn er vinklet nedover."
+              },
+              {
+                "source_id": "source-07",
+                "section": "Slik legger du en person i sideleie",
+                "quote": "Personen skal ligge på siden, og ikke skli over i mageleie."
+              },
+              {
+                "source_id": "source-07",
+                "section": "Slik legger du en person i sideleie",
+                "quote": "Luftveien er fri ved at tungen sklir fremover slik at luft kan passere og væske renner ut."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-07",
+                "section": "Slik hjelper du en bevisstløs person / Sjekk for normal pust",
+                "quote": "Er det ingen eller unormal pust må du starte hjerte- og lungeredning ."
+              },
+              {
+                "source_id": "source-07",
+                "section": "Slik hjelper du en bevisstløs person / Sjekk for normal pust",
+                "quote": "Er du usikker, be 113 høre lydene ved å holde telefonen nær personens munn."
+              },
+              {
+                "source_id": "source-07",
+                "section": "Slik hjelper du en bevisstløs person / Sjekk for normal pust",
+                "quote": "Forsikre deg om at pusten forblir normal, mens du holder fri luftvei og overvåker pusten."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-09": [
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-06",
+                "section": "Råd for å unngå oppheting og dehydrering",
+                "quote": "drikk rikeleg med vatn eller anna alkoholfri drikke"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-06",
+                "section": "Råd for å unngå oppheting og dehydrering",
+                "quote": "reduser fysisk aktivitet"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-06",
+                "section": "Råd for å unngå oppheting og dehydrering",
+                "quote": "dusj eller bad i kjølig vatn, eventuelt legg våte handklede på huda"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-10": [
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-10",
+                "section": "Five simple steps / 3. Pack warm clothes and extra food",
+                "quote": "3. Pack warm clothes and extra food",
+                "location": "section_heading"
+              },
+              {
+                "source_id": "source-10",
+                "section": "Five simple steps / 3. Pack warm clothes and extra food",
+                "quote": "Prepare for bad weather and an unexpected night out."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-12",
+                "section": "Personal equipment",
+                "quote": "Sleeping bag – 3–4 season"
+              }
+            ]
+          },
+          {
+            "all_of": [
+              {
+                "source_id": "source-12",
+                "section": "Personal equipment",
+                "quote": "Survival kit including survival blanket, whistle, paper, pencil, high energy snack food"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-12",
+                "section": "Personal equipment",
+                "quote": "Emergency shelter"
+              }
+            ]
+          },
+          {
+            "all_of": [
+              {
+                "source_id": "source-12",
+                "section": "Personal equipment / If camping",
+                "quote": "Tent"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-11": [
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-21",
+                "section": "Prevention steps and strategies / Bury your poop",
+                "quote": "Aim to bury your poop deep in the soil, at least 8 inches, and at least 200 feet away from lakes, rivers, and other natural waters."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-21",
+                "section": "Prevention steps and strategies / Bury your poop",
+                "quote": "Make sure to bury poop downstream from where you or others collect water."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-21",
+                "section": "Prevention steps and strategies / Wash your hands",
+                "quote": "Wash your hands before handling food, eating, and after using the toilet."
+              },
+              {
+                "source_id": "source-21",
+                "section": "Prevention steps and strategies / Wash your hands",
+                "quote": "If soap and water are not available, use a hand sanitizer that contains at least 60% alcohol ."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-12": [
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-14",
+                "section": "Know the signs of an unsafe river",
+                "quote": "When you arrive at a river crossing, look for the warning signs of an unsafe river."
+              },
+              {
+                "source_id": "source-14",
+                "section": "Know the signs of an unsafe river",
+                "quote": "If any are present, do not attempt a crossing."
+              },
+              {
+                "source_id": "source-14",
+                "section": "Know the signs of an unsafe river",
+                "quote": "Murky: the water is discoloured, often brown."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-14",
+                "section": "Do not cross if there is any doubt",
+                "quote": "Do not cross if:"
+              },
+              {
+                "source_id": "source-14",
+                "section": "Do not cross if there is any doubt",
+                "quote": "the river is flooded."
+              },
+              {
+                "source_id": "source-14",
+                "section": "Do not cross if there is any doubt",
+                "quote": "you do not have the skills or experience to cross safely."
+              },
+              {
+                "source_id": "source-14",
+                "section": "Do not cross if there is any doubt",
+                "quote": "If in doubt? Stay out."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-14",
+                "section": "Be ready to wait or turn back",
+                "quote": "You may encounter a dangerous river and need to turn back or wait until the river is safe to cross."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-13": [
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-11",
+                "section": "Call for help early",
+                "quote": "If you or someone else is in a life-threatening situation, set your beacon off ."
+              },
+              {
+                "source_id": "source-11",
+                "section": "Call for help early",
+                "quote": "Situations can deteriorate rapidly."
+              },
+              {
+                "source_id": "source-11",
+                "section": "Call for help early",
+                "quote": "The sooner you activate it, the faster help can be sent to your location."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-11",
+                "section": "Call for help early",
+                "quote": "If you are unsure about when to activate the beacon, it is better to activate it and get help."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-14": [
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-15",
+                "section": "Skredfarevurdering og faretegn",
+                "quote": "Faretegn (også kalt alarmtegn) er naturens måte å fortelle deg at det er skredfare i området."
+              },
+              {
+                "source_id": "source-16",
+                "section": "Husk å lage reserveplaner.",
+                "quote": "Dersom faretegn og skredfarevurderinger forteller deg at den planlagte turen bør endres så er dette en enklere beslutning å ta dersom du og turfølget ditt allerede har planlagt og snakket sammen om dette."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "alternatives": [
+          {
+            "all_of": [
+              {
+                "source_id": "source-15",
+                "section": "OBS! Det kan være vanskelig å observere faretegn dersom du ferdes i oppgåtte eller oppkjørte spor.",
+                "quote": "Skredfarevurdering krever erfaring og kunnskap"
+              },
+              {
+                "source_id": "source-15",
+                "section": "OBS! Det kan være vanskelig å observere faretegn dersom du ferdes i oppgåtte eller oppkjørte spor.",
+                "quote": "Unngå eller begrens ferdsel i skredterreng hvis du ikke har tilstrekkelig med kunnskap og erfaring."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "case-15": []
+  }
+}

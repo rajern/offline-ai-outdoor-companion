@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "ingestion_method": "Fetch only listed HTML URLs; publisher-specific article extraction, heading-preserving normalization and chunking. Exclude media and linked pages; retain provenance and content-owner metadata.",
+  "coverage_categories": {
+    "1": "Injuries and basic first aid",
+    "2": "Cold, heat and exposure",
+    "3": "Lost / navigation",
+    "4": "Shelter, warmth and fire (exposure protection, equipment and fire safety; not detailed bushcraft)",
+    "5": "Water and hygiene",
+    "6": "Natural hazards and extreme weather",
+    "7": "Emergency signalling / rescue",
+    "8": "General survival / prioritisation"
+  },
+  "approval": {
+    "status": "approved",
+    "date": "2026-10-06",
+    "by": "project owner",
+    "evidence": "Owner approved the 22-URL candidate and proposed clarifications in this chat: 'ja det høres bra ut. kjør nå'.",
+    "default_jurisdiction": "NO",
+    "answer_language": "nb",
+    "quality_review": "Required after M2-06; M3 not authorized.",
+    "safety_policy": "Proposed prioritisation remains subject to separate M3-01 approval."
+  },
+  "publishers": {
+    "helsenorge": {
+      "name": "Helsenorge",
+      "authority": "Norwegian national public health information service; article-level named content owners provide and quality-assure the text.",
+      "language": "nb",
+      "license": "Helsenorge text reuse with attribution",
+      "licence_url": "https://www.nhn.no/tjenester/helsenorge/helseinformasjon/vil-du-bruka-innhaldet-pa-helsenorge",
+      "rights_markers": [
+        "vidareformidle",
+        "kjelder"
+      ],
+      "attribution_requirements": "Helsenorge, article content owner, original URL and retrieval date. Whole-article copies must state the copying date and that the original may have been updated. No images/video/third-party media.",
+      "jurisdiction": "NO"
+    },
+    "doc": {
+      "name": "Department of Conservation (NZ)",
+      "authority": "New Zealand government conservation and outdoor authority; local operational rules are not Norwegian guidance.",
+      "language": "en",
+      "license": "CC-BY-4.0",
+      "licence_url": "https://www.doc.govt.nz/footer-links/copyright/",
+      "rights_markers": [
+        "CC BY 4.0",
+        "third party"
+      ],
+      "attribution_requirements": "Source: Department of Conservation (NZ); original URL; CC BY 4.0 link; indicate extraction/chunking. No logos, design or third-party material.",
+      "jurisdiction": "NZ"
+    },
+    "varsom": {
+      "name": "Varsom / NVE",
+      "authority": "NVE and Norwegian public-sector partners; Norwegian natural-hazard education, not cached live warnings.",
+      "language": "nb",
+      "license": "Varsom credited text reuse",
+      "licence_url": "https://www.varsom.no/om-varsom/tilgjengelighetserklaering/",
+      "rights_markers": [
+        "benyttes fritt",
+        "kreditering"
+      ],
+      "attribution_requirements": "Varsom / NVE and original URL. Direct quotations must be marked as quotations with a direct link. Text only.",
+      "jurisdiction": "NO"
+    },
+    "cdc": {
+      "name": "CDC",
+      "authority": "United States Centers for Disease Control and Prevention; public-health guidance on water treatment.",
+      "language": "en",
+      "license": "CDC public domain subject to agency terms",
+      "licence_url": "https://www.cdc.gov/other/agencymaterials.html",
+      "rights_markers": [
+        "public domain",
+        "endorsement"
+      ],
+      "attribution_requirements": "Source: CDC; original URL; material available free on CDC website; no CDC/HHS/U.S. Government endorsement; preserve substantive meaning; modified material is not official CDC content. Exclude third-party material and logos.",
+      "jurisdiction": "US"
+    },
+    "nws": {
+      "name": "NOAA/National Weather Service",
+      "authority": "United States National Weather Service (NOAA); lightning safety guidance, not cached forecasts.",
+      "language": "en",
+      "license": "NWS public domain subject to reuse terms",
+      "licence_url": "https://www.weather.gov/disclaimer",
+      "rights_markers": [
+        "public domain",
+        "endorsement"
+      ],
+      "attribution_requirements": "Source: NOAA/National Weather Service; original URL; no endorsement; modified content is not official NWS material; exclude third-party media.",
+      "jurisdiction": "US"
+    }
+  },
+  "sources": [
+    {
+      "id": "source-01",
+      "title": "Hjerte- og lungeredning (HLR)",
+      "url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+      "coverage": [
+        1,
+        7
+      ],
+      "publisher": "helsenorge"
+    },
+    {
+      "id": "source-02",
+      "title": "Førstehjelp ved blødninger og sår",
+      "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+      "coverage": [
+        1
+      ],
+      "publisher": "helsenorge"
+    },
+    {
+      "id": "source-03",
+      "title": "Førstehjelp ved brannskader",
+      "url": "https://www.helsenorge.no/forstehjelp/brannskader-overflatiske/",
+      "coverage": [
+        1
+      ],
+      "publisher": "helsenorge"
+    },
+    {
+      "id": "source-04",
+      "title": "Førstehjelp ved forstuing og brudd",
+      "url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/",
+      "coverage": [
+        1
+      ],
+      "publisher": "helsenorge"
+    },
+    {
+      "id": "source-05",
+      "title": "Førstehjelp ved nedkjøling",
+      "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/",
+      "coverage": [
+        1,
+        2,
+        4
+      ],
+      "publisher": "helsenorge"
+    },
+    {
+      "id": "source-06",
+      "title": "Heteslag og råd ved hetebølger",
+      "url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/heteslag-og-rad-ved-hetebolger/",
+      "coverage": [
+        2
+      ],
+      "publisher": "helsenorge"
+    },
+    {
+      "id": "source-07",
+      "title": "Førstehjelp ved bevisstløshet",
+      "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/",
+      "coverage": [
+        1,
+        7
+      ],
+      "publisher": "helsenorge"
+    },
+    {
+      "id": "source-08",
+      "title": "Allergisk sjokk / anafylaksi",
+      "url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+      "coverage": [
+        1
+      ],
+      "publisher": "helsenorge"
+    },
+    {
+      "id": "source-09",
+      "title": "Maps / what to do if you get lost",
+      "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+      "coverage": [
+        3,
+        7,
+        8
+      ],
+      "publisher": "doc"
+    },
+    {
+      "id": "source-10",
+      "title": "Land Safety Code",
+      "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+      "coverage": [
+        3,
+        8
+      ],
+      "publisher": "doc"
+    },
+    {
+      "id": "source-11",
+      "title": "Distress beacon",
+      "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/distress-beacon/",
+      "coverage": [
+        7,
+        8
+      ],
+      "publisher": "doc"
+    },
+    {
+      "id": "source-12",
+      "title": "Overnight and multi-day tramp gear list",
+      "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/walking-and-tramping-gear-lists/multi-day-tramp-gear-list/",
+      "coverage": [
+        4,
+        5,
+        8
+      ],
+      "publisher": "doc"
+    },
+    {
+      "id": "source-13",
+      "title": "Fires on public conservation land",
+      "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/fires/",
+      "coverage": [
+        4,
+        6
+      ],
+      "publisher": "doc"
+    },
+    {
+      "id": "source-14",
+      "title": "River crossing safety",
+      "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/river-crossing-safety/",
+      "coverage": [
+        6,
+        8
+      ],
+      "publisher": "doc"
+    },
+    {
+      "id": "source-15",
+      "title": "Skredfarevurdering og faretegn",
+      "url": "https://www.varsom.no/snoskred/snoskredskolen/skredfarevurdering-og-faretegn/",
+      "coverage": [
+        6,
+        8
+      ],
+      "publisher": "varsom"
+    },
+    {
+      "id": "source-16",
+      "title": "Ferdsel i skredterreng",
+      "url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+      "coverage": [
+        6,
+        8
+      ],
+      "publisher": "varsom"
+    },
+    {
+      "id": "source-17",
+      "title": "Kameratredning",
+      "url": "https://www.varsom.no/snoskred/snoskredskolen/kameratredning",
+      "coverage": [
+        6,
+        7
+      ],
+      "publisher": "varsom"
+    },
+    {
+      "id": "source-18",
+      "title": "Isskolen",
+      "url": "https://www.varsom.no/is/isskolen/",
+      "coverage": [
+        6,
+        8
+      ],
+      "publisher": "varsom"
+    },
+    {
+      "id": "source-19",
+      "title": "Redning gjennom is",
+      "url": "https://www.varsom.no/is/isskolen/redning/",
+      "coverage": [
+        2,
+        6,
+        7
+      ],
+      "publisher": "varsom"
+    },
+    {
+      "id": "source-20",
+      "title": "Råd til privatpersoner ved flom og jordskred",
+      "url": "https://www.varsom.no/flom-og-jordskred/om-flom-og-jordskred/rad-og-forebygging/rad-til-privatpersoner/",
+      "coverage": [
+        6,
+        8
+      ],
+      "publisher": "varsom"
+    },
+    {
+      "id": "source-21",
+      "title": "About Water Treatment Options When Hiking, Camping, or Traveling",
+      "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+      "coverage": [
+        5
+      ],
+      "publisher": "cdc"
+    },
+    {
+      "id": "source-22",
+      "title": "Lightning Tips",
+      "url": "https://www.weather.gov/safety/lightning-tips",
+      "coverage": [
+        6
+      ],
+      "publisher": "nws"
+    }
+  ]
+}

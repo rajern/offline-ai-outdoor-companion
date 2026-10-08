@@ -4,6 +4,12 @@ export type ChatSource = {
   title: string;
   name: string;
   url: string;
+  license: string;
+  content_owner?: string;
+  licence_url?: string;
+  retrieved_at?: string;
+  source_updated_at?: string;
+  notice?: string;
 };
 
 export type ChatResponse = {
