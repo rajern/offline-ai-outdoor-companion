@@ -1,0 +1,1402 @@
+{
+  "date": "2026-10-08",
+  "baseline_commit": "5653392",
+  "status": "blocked_before_phase_A",
+  "blocker": "Qwen Q4_K_M / llama.cpp b11193 did not pass input repeatability; cause unresolved.",
+  "development_cases_authorized": 25,
+  "original_gold_and_historical_results_unchanged": true,
+  "regression": {
+    "planned_contexts": 22,
+    "completed": 22,
+    "matches": 22,
+    "actual_judge_calls": 19,
+    "cache_hits": 3,
+    "usage": {
+      "input_tokens": 124688,
+      "cached_input_tokens": 27648,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 15445,
+      "reasoning_output_tokens": 1284,
+      "total_tokens": 140133
+    },
+    "elapsed_seconds": 471.5844079996459,
+    "calibration_only": true,
+    "api_calls": 0,
+    "holdout_accessed": false,
+    "passed": true,
+    "results": [
+      {
+        "cache_key": "b482e01bcb9f1a06f8db6b688f3bb0c2fbb7fa4333c201a472f49951b26d0123",
+        "cache_hit": false,
+        "calls": 1,
+        "usage": {
+          "input_tokens": 6588,
+          "cached_input_tokens": 3456,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1021,
+          "reasoning_output_tokens": 80,
+          "total_tokens": 7609
+        },
+        "elapsed_seconds": 29.720658999867737,
+        "case_id": "case-05",
+        "configuration": "A",
+        "test_id": null,
+        "decisions": [
+          "covered",
+          "covered",
+          "not_covered",
+          "covered",
+          "covered",
+          "not_covered"
+        ],
+        "flags": {
+          "irrelevant": true,
+          "potentially_misleading": false,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "7822f86eaef81016d0b7dfd3a2c8d5df3c358dda1f6f705d2f2744bdc79c7824",
+        "cache_hit": false,
+        "calls": 1,
+        "usage": {
+          "input_tokens": 7020,
+          "cached_input_tokens": 3456,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1349,
+          "reasoning_output_tokens": 182,
+          "total_tokens": 8369
+        },
+        "elapsed_seconds": 38.64680010010488,
+        "case_id": "case-08",
+        "configuration": "A",
+        "test_id": null,
+        "decisions": [
+          "not_covered",
+          "not_covered",
+          "covered",
+          "not_covered"
+        ],
+        "flags": {
+          "irrelevant": true,
+          "potentially_misleading": false,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "c745a2c682cb6ddec8351e25d8adc8e9a9ceca5a4341a328c93c27f392939aa3",
+        "cache_hit": false,
+        "calls": 1,
+        "usage": {
+          "input_tokens": 6631,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 726,
+          "reasoning_output_tokens": 56,
+          "total_tokens": 7357
+        },
+        "elapsed_seconds": 28.360472900094464,
+        "case_id": "case-09",
+        "configuration": "A",
+        "test_id": null,
+        "decisions": [
+          "covered",
+          "covered",
+          "covered"
+        ],
+        "flags": {
+          "irrelevant": true,
+          "potentially_misleading": false,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "b482e01bcb9f1a06f8db6b688f3bb0c2fbb7fa4333c201a472f49951b26d0123",
+        "cache_hit": true,
+        "calls": 0,
+        "usage": {},
+        "elapsed_seconds": 0,
+        "case_id": "case-05",
+        "configuration": "B",
+        "test_id": null,
+        "decisions": [
+          "covered",
+          "covered",
+          "not_covered",
+          "covered",
+          "covered",
+          "not_covered"
+        ],
+        "flags": {
+          "irrelevant": true,
+          "potentially_misleading": false,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "0a51c976e7978e2d2054ad7feee2c94dafb93cc20f1ab7f4392cfa2da7c0ff51",
+        "cache_hit": false,
+        "calls": 1,
+        "usage": {
+          "input_tokens": 7106,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1321,
+          "reasoning_output_tokens": 90,
+          "total_tokens": 8427
+        },
+        "elapsed_seconds": 32.67646980006248,
+        "case_id": "case-08",
+        "configuration": "B",
+        "test_id": null,
+        "decisions": [
+          "not_covered",
+          "not_covered",
+          "covered",
+          "not_covered"
+        ],
+        "flags": {
+          "irrelevant": true,
+          "potentially_misleading": false,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "c745a2c682cb6ddec8351e25d8adc8e9a9ceca5a4341a328c93c27f392939aa3",
+        "cache_hit": true,
+        "calls": 0,
+        "usage": {},
+        "elapsed_seconds": 0,
+        "case_id": "case-09",
+        "configuration": "B",
+        "test_id": null,
+        "decisions": [
+          "covered",
+          "covered",
+          "covered"
+        ],
+        "flags": {
+          "irrelevant": true,
+          "potentially_misleading": false,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "99b175b507bbd7e2adf7b91c8bb57f42500ea6b3d8e562bc70173b50bb622622",
+        "cache_hit": false,
+        "calls": 1,
+        "usage": {
+          "input_tokens": 7882,
+          "cached_input_tokens": 3456,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2069,
+          "reasoning_output_tokens": 181,
+          "total_tokens": 9951
+        },
+        "elapsed_seconds": 46.49177130009048,
+        "case_id": "case-08",
+        "configuration": "B8",
+        "test_id": null,
+        "decisions": [
+          "covered",
+          "not_covered",
+          "covered",
+          "not_covered"
+        ],
+        "flags": {
+          "irrelevant": true,
+          "potentially_misleading": false,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "945a511c6ad3ca33dd81ca15484a1410bd1ce64a2688e6dc019121627133e43a",
+        "cache_hit": false,
+        "calls": 1,
+        "usage": {
+          "input_tokens": 7779,
+          "cached_input_tokens": 3456,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1870,
+          "reasoning_output_tokens": 76,
+          "total_tokens": 9649
+        },
+        "elapsed_seconds": 41.62685179989785,
+        "case_id": "case-09",
+        "configuration": "B8",
+        "test_id": null,
+        "decisions": [
+          "covered",
+          "covered",
+          "covered"
+        ],
+        "flags": {
+          "irrelevant": true,
+          "potentially_misleading": false,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "5a1325f7eb848d022b6d08e35c0b8eadfcae95f5bd8313e715afc717c204edd3",
+        "cache_hit": false,
+        "calls": 1,
+        "usage": {
+          "input_tokens": 7339,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1643,
+          "reasoning_output_tokens": 165,
+          "total_tokens": 8982
+        },
+        "elapsed_seconds": 54.26084390003234,
+        "case_id": "case-08",
+        "configuration": "C8",
+        "test_id": null,
+        "decisions": [
+          "not_covered",
+          "not_covered",
+          "covered",
+          "not_covered"
+        ],
+        "flags": {
+          "irrelevant": true,
+          "potentially_misleading": false,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "af050e1e233c09c5f1661a6f353539967ab66e8b7db959b07ca66b37a5f3f02b",
+        "cache_hit": false,
+        "calls": 1,
+        "usage": {
+          "input_tokens": 7681,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1889,
+          "reasoning_output_tokens": 135,
+          "total_tokens": 9570
+        },
+        "elapsed_seconds": 56.76674719993025,
+        "case_id": "case-09",
+        "configuration": "C8",
+        "test_id": null,
+        "decisions": [
+          "covered",
+          "covered",
+          "covered"
+        ],
+        "flags": {
+          "irrelevant": true,
+          "potentially_misleading": false,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "d96c2cc3134fba9995feeeff131d6499039a1aedaeb9bbeabdd245a8b6e2615d",
+        "cache_hit": false,
+        "calls": 1,
+        "usage": {
+          "input_tokens": 7717,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1748,
+          "reasoning_output_tokens": 142,
+          "total_tokens": 9465
+        },
+        "elapsed_seconds": 51.29222250008024,
+        "case_id": "case-08",
+        "configuration": "C8U8",
+        "test_id": null,
+        "decisions": [
+          "covered",
+          "covered",
+          "covered",
+          "not_covered"
+        ],
+        "flags": {
+          "irrelevant": true,
+          "potentially_misleading": false,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "945a511c6ad3ca33dd81ca15484a1410bd1ce64a2688e6dc019121627133e43a",
+        "cache_hit": true,
+        "calls": 0,
+        "usage": {},
+        "elapsed_seconds": 0,
+        "case_id": "case-09",
+        "configuration": "C8U8",
+        "test_id": null,
+        "decisions": [
+          "covered",
+          "covered",
+          "covered"
+        ],
+        "flags": {
+          "irrelevant": true,
+          "potentially_misleading": false,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "5e94c8d970ca12252db1ebb2722adf224252b011de2327454d3eef351bad8829",
+        "cache_hit": false,
+        "calls": 1,
+        "usage": {
+          "input_tokens": 5881,
+          "cached_input_tokens": 3456,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 119,
+          "reasoning_output_tokens": 0,
+          "total_tokens": 6000
+        },
+        "elapsed_seconds": 8.558237999910489,
+        "case_id": "synthetic-02",
+        "configuration": null,
+        "test_id": "stress-02",
+        "decisions": [
+          "not_covered"
+        ],
+        "flags": {
+          "irrelevant": false,
+          "potentially_misleading": false,
+          "contradictory": false,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "3244724910dd239dd75683e02ae719a8f855b0e5df5a2bb6fa87bb49cef5234a",
+        "cache_hit": false,
+        "calls": 1,
+        "usage": {
+          "input_tokens": 5885,
+          "cached_input_tokens": 3456,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 238,
+          "reasoning_output_tokens": 33,
+          "total_tokens": 6123
+        },
+        "elapsed_seconds": 9.916445000097156,
+        "case_id": "synthetic-03",
+        "configuration": null,
+        "test_id": "stress-03",
+        "decisions": [
+          "not_covered"
+        ],
+        "flags": {
+          "irrelevant": false,
+          "potentially_misleading": true,
+          "contradictory": true,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "6cc6cbc9ce88c8e3b1a60732000120a1e46c771af2fdabe22d09498012666d3c",
+        "cache_hit": false,
+        "calls": 1,
+        "usage": {
+          "input_tokens": 5895,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 259,
+          "reasoning_output_tokens": 25,
+          "total_tokens": 6154
+        },
+        "elapsed_seconds": 11.40314819989726,
+        "case_id": "synthetic-04",
+        "configuration": null,
+        "test_id": "stress-04",
+        "decisions": [
+          "not_covered"
+        ],
+        "flags": {
+          "irrelevant": false,
+          "potentially_misleading": true,
+          "contradictory": true,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "dc545649520ea2c8ed08f1f4b75b619eb97102c64e1ae0992da6206491a427bb",
+        "cache_hit": false,
+        "calls": 1,
+        "usage": {
+          "input_tokens": 5892,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 191,
+          "reasoning_output_tokens": 38,
+          "total_tokens": 6083
+        },
+        "elapsed_seconds": 10.164131599944085,
+        "case_id": "synthetic-05",
+        "configuration": null,
+        "test_id": "stress-05",
+        "decisions": [
+          "not_covered"
+        ],
+        "flags": {
+          "irrelevant": true,
+          "potentially_misleading": false,
+          "contradictory": false,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "588d12968368f835349455388369d1ef84bcadfa20f0a9dfa9c9e5a2383f77fe",
+        "cache_hit": false,
+        "calls": 1,
+        "usage": {
+          "input_tokens": 5893,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 263,
+          "reasoning_output_tokens": 44,
+          "total_tokens": 6156
+        },
+        "elapsed_seconds": 12.27438519988209,
+        "case_id": "synthetic-06",
+        "configuration": null,
+        "test_id": "stress-06",
+        "decisions": [
+          "not_covered"
+        ],
+        "flags": {
+          "irrelevant": true,
+          "potentially_misleading": false,
+          "contradictory": false,
+          "jurisdiction_leakage": true
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "97e84a4fa8dc8ea95795653010e6c75a87ecec7829c70a32c3aaf873666a82dc",
+        "cache_hit": false,
+        "calls": 1,
+        "usage": {
+          "input_tokens": 5900,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 124,
+          "reasoning_output_tokens": 0,
+          "total_tokens": 6024
+        },
+        "elapsed_seconds": 6.689136300003156,
+        "case_id": "synthetic-07",
+        "configuration": null,
+        "test_id": "stress-07",
+        "decisions": [
+          "covered"
+        ],
+        "flags": {
+          "irrelevant": false,
+          "potentially_misleading": false,
+          "contradictory": false,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "ce2489bfbffd6005ae307b6c5918ecb87f6d74cb24388b9d535a3fe6f0792ba3",
+        "cache_hit": false,
+        "calls": 1,
+        "usage": {
+          "input_tokens": 5898,
+          "cached_input_tokens": 3456,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 139,
+          "reasoning_output_tokens": 0,
+          "total_tokens": 6037
+        },
+        "elapsed_seconds": 8.691906299907714,
+        "case_id": "synthetic-09",
+        "configuration": null,
+        "test_id": "stress-09",
+        "decisions": [
+          "covered"
+        ],
+        "flags": {
+          "irrelevant": true,
+          "potentially_misleading": false,
+          "contradictory": false,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "50a10b9f74fc5710d2babbf1a61d54702dfc4d4188d5dc936bffe04e868eb915",
+        "cache_hit": false,
+        "calls": 1,
+        "usage": {
+          "input_tokens": 5915,
+          "cached_input_tokens": 3456,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 225,
+          "reasoning_output_tokens": 0,
+          "total_tokens": 6140
+        },
+        "elapsed_seconds": 9.548663699999452,
+        "case_id": "synthetic-10",
+        "configuration": null,
+        "test_id": "stress-10",
+        "decisions": [
+          "covered"
+        ],
+        "flags": {
+          "irrelevant": false,
+          "potentially_misleading": true,
+          "contradictory": true,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "1079cac2fc2dccf37d8e4848649bbd93cacfc849fc901c441726979d3193aa2f",
+        "cache_hit": false,
+        "calls": 1,
+        "usage": {
+          "input_tokens": 5869,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 118,
+          "reasoning_output_tokens": 16,
+          "total_tokens": 5987
+        },
+        "elapsed_seconds": 7.025956599973142,
+        "case_id": "synthetic-12",
+        "configuration": null,
+        "test_id": "stress-12",
+        "decisions": [],
+        "flags": {
+          "irrelevant": true,
+          "potentially_misleading": false,
+          "contradictory": false,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      },
+      {
+        "cache_key": "1c126276661bcae36855736a9e3a8a493e6cdd0f89943b80c30ce75941fbe9eb",
+        "cache_hit": false,
+        "calls": 1,
+        "usage": {
+          "input_tokens": 5917,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 133,
+          "reasoning_output_tokens": 21,
+          "total_tokens": 6050
+        },
+        "elapsed_seconds": 7.469558599870652,
+        "case_id": "case-07",
+        "configuration": null,
+        "test_id": "stress-14",
+        "decisions": [
+          "covered"
+        ],
+        "flags": {
+          "irrelevant": false,
+          "potentially_misleading": false,
+          "contradictory": false,
+          "jurisdiction_leakage": false
+        },
+        "requires_review": false,
+        "match": true,
+        "proof_conflicts": []
+      }
+    ]
+  },
+  "models": {
+    "minilm": {
+      "probes": [
+        {
+          "model": "minilm",
+          "success": true,
+          "elapsed_seconds": 2.8056383000221103,
+          "min_machine_available_ram_bytes": 916078592,
+          "cpu_seconds": 3.046875,
+          "machine_ram_bytes": 14702026752,
+          "cpu_logical": 16,
+          "cpu_physical": 8,
+          "versions": {
+            "numpy": "2.5.3",
+            "fastembed": "0.7.4",
+            "onnxruntime": "1.30.0",
+            "torch": "2.14.1",
+            "transformers": "5.19.0",
+            "sentence-transformers": "6.1.0",
+            "psutil": "7.2.2"
+          },
+          "generation_calls": 0,
+          "development_retrieval_calls": 0,
+          "model_identity": {
+            "model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+            "repository": "qdrant/paraphrase-multilingual-MiniLM-L12-v2-onnx-Q",
+            "revision": "faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+            "license": "Apache-2.0",
+            "files": {
+              "model_optimized.onnx": "634d0f66c29dc934c8fa72b8a4fe91dd4d420a22f1d82a241058d4316e659a99",
+              "config.json": "c8ec081fdad2df991bf5abbf18418fec7a5cdaa421f60ffb060a30040b8c376f",
+              "tokenizer.json": "fa685fc160bbdbab64058d4fc91b60e62d207e8dc60b9af5c002c5ab946ded00",
+              "tokenizer_config.json": "0666eebf692422757e1dddf3c9fb1ded73ba3dc726c5828671fc89e45bf3609f",
+              "special_tokens_map.json": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835"
+            }
+          },
+          "dimensions": 384,
+          "repeatability_verified": true,
+          "synthetic_probe_only": true,
+          "model_size_bytes": null,
+          "attempt": "attempt-01",
+          "sum_of_process_peak_working_sets_bytes": 657530880,
+          "memory_caution": "Sum of each process peak working set, not a measured simultaneous RSS peak or model-only RAM; includes imports/runtime."
+        }
+      ],
+      "passed": true
+    },
+    "gemma2": {
+      "probes": [
+        {
+          "model": "gemma2",
+          "success": false,
+          "elapsed_seconds": 16.820255700033158,
+          "min_machine_available_ram_bytes": 236359680,
+          "cpu_seconds": 20.1875,
+          "machine_ram_bytes": 14702026752,
+          "cpu_logical": 16,
+          "cpu_physical": 8,
+          "versions": {
+            "numpy": "2.5.3",
+            "fastembed": "0.7.4",
+            "onnxruntime": "1.30.0",
+            "torch": "2.14.1",
+            "transformers": "5.19.0",
+            "sentence-transformers": "6.1.0",
+            "psutil": "7.2.2"
+          },
+          "generation_calls": 0,
+          "development_retrieval_calls": 0,
+          "error_type": "ModuleNotFoundError",
+          "error": "Could not import module 'EmbeddingGemma2Processor'. Are this object's requirements defined correctly? Set the logging verbosity to DEBUG for the original import error.",
+          "attempt": "attempt-01",
+          "sum_of_process_peak_working_sets_bytes": 1414758400,
+          "memory_caution": "Sum of each process peak working set, not a measured simultaneous RSS peak or model-only RAM; includes imports/runtime."
+        },
+        {
+          "model": "gemma2",
+          "success": true,
+          "elapsed_seconds": 18.409706700127572,
+          "min_machine_available_ram_bytes": 247902208,
+          "cpu_seconds": 27.3125,
+          "machine_ram_bytes": 14702026752,
+          "cpu_logical": 16,
+          "cpu_physical": 8,
+          "versions": {
+            "numpy": "2.5.3",
+            "fastembed": "0.7.4",
+            "onnxruntime": "1.30.0",
+            "torch": "2.14.1",
+            "transformers": "5.19.0",
+            "sentence-transformers": "6.1.0",
+            "psutil": "7.2.2"
+          },
+          "generation_calls": 0,
+          "development_retrieval_calls": 0,
+          "model_identity": {
+            "repository": "google/embeddinggemma-2",
+            "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+            "dimensions": 768,
+            "dtype": "float32",
+            "modalities": "text only",
+            "parameters": 271002624
+          },
+          "dimensions": 768,
+          "repeatability_verified": true,
+          "synthetic_probe_only": true,
+          "model_size_bytes": 1488915288,
+          "attempt": "attempt-02",
+          "sum_of_process_peak_working_sets_bytes": 1466482688,
+          "memory_caution": "Sum of each process peak working set, not a measured simultaneous RSS peak or model-only RAM; includes imports/runtime."
+        }
+      ],
+      "passed": true
+    },
+    "qwen3-q4": {
+      "probes": [
+        {
+          "model": "qwen3-q4",
+          "success": false,
+          "elapsed_seconds": 3.911933699855581,
+          "min_machine_available_ram_bytes": 411250688,
+          "cpu_seconds": 7.375,
+          "machine_ram_bytes": 14702026752,
+          "cpu_logical": 16,
+          "cpu_physical": 8,
+          "versions": {
+            "numpy": "2.5.3",
+            "fastembed": "0.7.4",
+            "onnxruntime": "1.30.0",
+            "torch": "2.14.1",
+            "transformers": "5.19.0",
+            "sentence-transformers": "6.1.0",
+            "psutil": "7.2.2"
+          },
+          "generation_calls": 0,
+          "development_retrieval_calls": 0,
+          "error_type": "ValueError",
+          "error": "Embedding dimensions or repeatability inconsistent",
+          "attempt": "attempt-01",
+          "sum_of_process_peak_working_sets_bytes": 1948975104,
+          "memory_caution": "Sum of each process peak working set, not a measured simultaneous RSS peak or model-only RAM; includes imports/runtime."
+        },
+        {
+          "model": "qwen3-q4",
+          "success": false,
+          "elapsed_seconds": 2.7903630000073463,
+          "min_machine_available_ram_bytes": 718389248,
+          "cpu_seconds": 6.328125,
+          "machine_ram_bytes": 14702026752,
+          "cpu_logical": 16,
+          "cpu_physical": 8,
+          "versions": {
+            "numpy": "2.5.3",
+            "fastembed": "0.7.4",
+            "onnxruntime": "1.30.0",
+            "torch": "2.14.1",
+            "transformers": "5.19.0",
+            "sentence-transformers": "6.1.0",
+            "psutil": "7.2.2"
+          },
+          "generation_calls": 0,
+          "development_retrieval_calls": 0,
+          "error_type": "ValueError",
+          "error": "Embedding dimensions or repeatability inconsistent",
+          "attempt": "attempt-02",
+          "sum_of_process_peak_working_sets_bytes": 1916301312,
+          "memory_caution": "Sum of each process peak working set, not a measured simultaneous RSS peak or model-only RAM; includes imports/runtime."
+        },
+        {
+          "model": "qwen3-q4",
+          "success": false,
+          "elapsed_seconds": 1.7532462000381202,
+          "min_machine_available_ram_bytes": 1444814848,
+          "cpu_seconds": 2.5625,
+          "machine_ram_bytes": 14702026752,
+          "cpu_logical": 16,
+          "cpu_physical": 8,
+          "versions": {
+            "numpy": "2.5.3",
+            "fastembed": "0.7.4",
+            "onnxruntime": "1.30.0",
+            "torch": "2.14.1",
+            "transformers": "5.19.0",
+            "sentence-transformers": "6.1.0",
+            "psutil": "7.2.2"
+          },
+          "generation_calls": 0,
+          "development_retrieval_calls": 0,
+          "error_type": "HTTPError",
+          "error": "HTTP Error 501: Not Implemented",
+          "attempt": "attempt-03",
+          "sum_of_process_peak_working_sets_bytes": 1875480576,
+          "memory_caution": "Sum of each process peak working set, not a measured simultaneous RSS peak or model-only RAM; includes imports/runtime."
+        },
+        {
+          "model": "qwen3-q4",
+          "success": false,
+          "elapsed_seconds": 3.0594395000953227,
+          "min_machine_available_ram_bytes": 1359470592,
+          "cpu_seconds": 7.125,
+          "machine_ram_bytes": 14702026752,
+          "cpu_logical": 16,
+          "cpu_physical": 8,
+          "versions": {
+            "numpy": "2.5.3",
+            "fastembed": "0.7.4",
+            "onnxruntime": "1.30.0",
+            "torch": "2.14.1",
+            "transformers": "5.19.0",
+            "sentence-transformers": "6.1.0",
+            "psutil": "7.2.2"
+          },
+          "generation_calls": 0,
+          "development_retrieval_calls": 0,
+          "error_type": "ValueError",
+          "error": "Embedding dimensions or repeatability inconsistent",
+          "attempt": "attempt-04",
+          "sum_of_process_peak_working_sets_bytes": 1916788736,
+          "memory_caution": "Sum of each process peak working set, not a measured simultaneous RSS peak or model-only RAM; includes imports/runtime."
+        },
+        {
+          "model": "qwen3-q4",
+          "success": false,
+          "elapsed_seconds": 4.059336100006476,
+          "min_machine_available_ram_bytes": 208105472,
+          "cpu_seconds": 8.734375,
+          "machine_ram_bytes": 14702026752,
+          "cpu_logical": 16,
+          "cpu_physical": 8,
+          "versions": {
+            "numpy": "2.5.3",
+            "fastembed": "0.7.4",
+            "onnxruntime": "1.30.0",
+            "torch": "2.14.1",
+            "transformers": "5.19.0",
+            "sentence-transformers": "6.1.0",
+            "psutil": "7.2.2"
+          },
+          "generation_calls": 0,
+          "development_retrieval_calls": 0,
+          "error_type": "ValueError",
+          "error": "Embedding dimensions or repeatability inconsistent",
+          "attempt": "attempt-05",
+          "sum_of_process_peak_working_sets_bytes": 3062169600,
+          "memory_caution": "Sum of each process peak working set, not a measured simultaneous RSS peak or model-only RAM; includes imports/runtime."
+        }
+      ],
+      "passed": false
+    }
+  },
+  "model_metadata": {
+    "google/embeddinggemma-2": {
+      "sha": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+      "gated": false,
+      "license": "apache-2.0",
+      "files": [
+        {
+          "name": ".gitattributes",
+          "size": 1301,
+          "lfs": null
+        },
+        {
+          "name": "1_Pooling/config.json",
+          "size": 90,
+          "lfs": null
+        },
+        {
+          "name": "2_Normalize/config.json",
+          "size": 97,
+          "lfs": null
+        },
+        {
+          "name": "README.md",
+          "size": 21730,
+          "lfs": null
+        },
+        {
+          "name": "chat_template.jinja",
+          "size": 1016,
+          "lfs": null
+        },
+        {
+          "name": "config.json",
+          "size": 4455,
+          "lfs": null
+        },
+        {
+          "name": "config_sentence_transformers.json",
+          "size": 1565,
+          "lfs": null
+        },
+        {
+          "name": "model.safetensors",
+          "size": 1488915288,
+          "lfs": {
+            "sha256": "197a32965d4b1105faf060417baa899e193fb73cd401f42ec9295234d5553d79",
+            "size": 1488915288,
+            "pointerSize": 135
+          }
+        },
+        {
+          "name": "modules.json",
+          "size": 413,
+          "lfs": null
+        },
+        {
+          "name": "preprocessor_config.json",
+          "size": 511,
+          "lfs": null
+        },
+        {
+          "name": "processor_config.json",
+          "size": 1788,
+          "lfs": null
+        },
+        {
+          "name": "sentence_bert_config.json",
+          "size": 747,
+          "lfs": null
+        },
+        {
+          "name": "tokenizer.json",
+          "size": 32170510,
+          "lfs": {
+            "sha256": "4d777ef5bdc1aa36227abdfb77c3e49e7b9c892d16e1b6bda41c393504828be4",
+            "size": 32170510,
+            "pointerSize": 133
+          }
+        },
+        {
+          "name": "tokenizer.model",
+          "size": 4689013,
+          "lfs": {
+            "sha256": "e594c8a90eb08d8bda498ff4747977dc827ae0c3c56b5c0d41a605a22d02ef03",
+            "size": 4689013,
+            "pointerSize": 132
+          }
+        },
+        {
+          "name": "tokenizer_config.json",
+          "size": 1599,
+          "lfs": null
+        }
+      ]
+    },
+    "Qwen/Qwen3-Embedding-0.6B-GGUF": {
+      "sha": "370f27d7550e0def9b39c1f16d3fbaa13aa67728",
+      "gated": false,
+      "license": "apache-2.0",
+      "files": [
+        {
+          "name": ".gitattributes",
+          "size": 1652,
+          "lfs": null
+        },
+        {
+          "name": "Qwen3-Embedding-0.6B-Q8_0.gguf",
+          "size": 639150592,
+          "lfs": {
+            "sha256": "06507c7b42688469c4e7298b0a1e16deff06caf291cf0a5b278c308249c3e439",
+            "size": 639150592,
+            "pointerSize": 134
+          }
+        },
+        {
+          "name": "Qwen3-Embedding-0.6B-f16.gguf",
+          "size": 1197629632,
+          "lfs": {
+            "sha256": "421a27e58d165478cc7acb984a688c2aa41404968b0203e7cd743ece44c54340",
+            "size": 1197629632,
+            "pointerSize": 135
+          }
+        },
+        {
+          "name": "README.md",
+          "size": 11889,
+          "lfs": null
+        }
+      ],
+      "config.json_http_error": 404
+    }
+  },
+  "qwen_quantization": {
+    "source_repository": "Qwen/Qwen3-Embedding-0.6B-GGUF",
+    "source_revision": "370f27d7550e0def9b39c1f16d3fbaa13aa67728",
+    "source_sha256": "421a27e58d165478cc7acb984a688c2aa41404968b0203e7cd743ece44c54340",
+    "quantization": "Q4_K_M",
+    "runtime_sha256": "5d950b6969d584eae771bef2b0f98c6644a207b7d73a1a65094407a288c51e01",
+    "output_sha256": "470901844f8cb73a3e0479ea1dd57ad1baba7072481f1897b2dc4b132b9051a7",
+    "size": 396474560
+  },
+  "qwen_repeat_diagnosis": {
+    "a_shape": [
+      2,
+      1024
+    ],
+    "b_shape": [
+      2,
+      1024
+    ],
+    "max_absolute_repeat_difference": 0.014057911932468414,
+    "repeat_cosine": [
+      0.9968706369400024,
+      1.0
+    ],
+    "immediate_repeat_difference": 0.005459528416395187,
+    "immediate_repeat_cosine": 0.9993242025375366
+  },
+  "qwen_independent_process_diagnosis": {
+    "max_absolute_difference": 0.0011265948414802551,
+    "cosine": 0.9999723434448242,
+    "same_input_independent_processes": true
+  },
+  "actual_judge_calls": 19,
+  "cache_hits": 3,
+  "unplanned_judge_calls_observed": 0,
+  "usage_unknown": 0,
+  "api_calls": 0,
+  "optimization_configurations_run": 0,
+  "development_retrieval_calls": 0,
+  "generation_calls": 0,
+  "holdout_accessed": false,
+  "production_changed": false,
+  "configurations": [
+    {
+      "id": "A-minilm",
+      "phase": "A",
+      "model": "minilm",
+      "top_k": 8,
+      "threshold": null,
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "A-gemma2",
+      "phase": "A",
+      "model": "gemma2",
+      "top_k": 8,
+      "threshold": null,
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "A-qwen3-q4",
+      "phase": "A",
+      "model": "qwen3-q4",
+      "top_k": 8,
+      "threshold": null,
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k3-none",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 3,
+      "threshold_name": "none",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k3-p10",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 3,
+      "threshold_name": "p10",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k3-p30",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 3,
+      "threshold_name": "p30",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k3-p50",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 3,
+      "threshold_name": "p50",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k3-p70",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 3,
+      "threshold_name": "p70",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k5-none",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 5,
+      "threshold_name": "none",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k5-p10",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 5,
+      "threshold_name": "p10",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k5-p30",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 5,
+      "threshold_name": "p30",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k5-p50",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 5,
+      "threshold_name": "p50",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k5-p70",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 5,
+      "threshold_name": "p70",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k8-none",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 8,
+      "threshold_name": "none",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k8-p10",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 8,
+      "threshold_name": "p10",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k8-p30",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 8,
+      "threshold_name": "p30",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k8-p50",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 8,
+      "threshold_name": "p50",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k8-p70",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 8,
+      "threshold_name": "p70",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k12-none",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 12,
+      "threshold_name": "none",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k12-p10",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 12,
+      "threshold_name": "p10",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k12-p30",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 12,
+      "threshold_name": "p30",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k12-p50",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 12,
+      "threshold_name": "p50",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k12-p70",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 12,
+      "threshold_name": "p70",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k16-none",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 16,
+      "threshold_name": "none",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k16-p10",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 16,
+      "threshold_name": "p10",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k16-p30",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 16,
+      "threshold_name": "p30",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k16-p50",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 16,
+      "threshold_name": "p50",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "B-k16-p70",
+      "phase": "B",
+      "model": "pending_phase_A",
+      "top_k": 16,
+      "threshold_name": "p70",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "C-P1",
+      "phase": "C",
+      "model": "pending_phase_A",
+      "top_k": "pending_phase_B",
+      "threshold": "pending_phase_B",
+      "packing": "P1",
+      "status": "not_run"
+    },
+    {
+      "id": "C-P2",
+      "phase": "C",
+      "model": "pending_phase_A",
+      "top_k": "pending_phase_B",
+      "threshold": "pending_phase_B",
+      "packing": "P2",
+      "status": "not_run"
+    },
+    {
+      "id": "C-P3",
+      "phase": "C",
+      "model": "pending_phase_A",
+      "top_k": "pending_phase_B",
+      "threshold": "pending_phase_B",
+      "packing": "P3",
+      "status": "not_run"
+    }
+  ],
+  "regression_freeze_code_hashes": {
+    "evals\\retrieval_optimization_scoring.py": "bbef04365c179eb9eb6ee5f196620449af8bacf1737d3f5f51ac7fd8b01c203c",
+    "evals\\codex_judge_runtime.py": "b2aafbb822cf2736eb8b71e53b55fc7dc174cb54283d34933b2934814dd5c60f",
+    "evals\\retrieval_judge_pilot.py": "245880c6f4f5a11e356da9646d71a9d10ba721e80a2cd409b92b42b45e71812e",
+    "evals\\automatic_retrieval_scoring.py": "8e40cfd2cdba52c7666e7a846494be674f8238f935f69209e7159323a3ce4d5a",
+    "evals\\eval_foundation.py": "6cc3e4215ca5e215616b2417f48931df1add60a84875141d890057863e4f76d9",
+    "evals\\retrieval_judge_prompt.v3.md": "1e7ef4df845219735008d4a8a2fa2b62ab03e427d70bb2c8d1e1648a14858336",
+    "evals\\retrieval_judge_output.schema.v2.json": "a1881edcdd6b33bbc333cf7f86a9a1fad9ee0e7a1ebac6bdbf72194eb01c7aaf",
+    "evals\\retrieval_adjudication.v1.json": "9f9a8c7b5f4ffd2b0078238df7c75d699d74a0a9406eb4f917c8e55043a18cbd",
+    "evals\\run_judge_regression_v3.py": "6c3ceb0b073925aa60d64ac093449ec8dfda510753d9e313530f44004b6f79e4",
+    "evals\\retrieval_judge_stress.v2.json": "b4357bc4b0d4c77b65229fdd103e31d2bd50db9379be477e30b91ea382fa4720"
+  },
+  "current_eval_code_hashes": {
+    "evals\\retrieval_optimization_scoring.py": "bbef04365c179eb9eb6ee5f196620449af8bacf1737d3f5f51ac7fd8b01c203c",
+    "evals\\codex_judge_runtime.py": "b2aafbb822cf2736eb8b71e53b55fc7dc174cb54283d34933b2934814dd5c60f",
+    "evals\\retrieval_judge_pilot.py": "245880c6f4f5a11e356da9646d71a9d10ba721e80a2cd409b92b42b45e71812e",
+    "evals\\automatic_retrieval_scoring.py": "8e40cfd2cdba52c7666e7a846494be674f8238f935f69209e7159323a3ce4d5a",
+    "evals\\eval_foundation.py": "6cc3e4215ca5e215616b2417f48931df1add60a84875141d890057863e4f76d9",
+    "evals\\optimization_embeddings.py": "1e00277d664d528783f0a342a7cc12de766c4a40e02f07efbe708e8db1c919c4",
+    "evals\\preflight_retrieval_optimization.py": "794b277ac6ff883b2fc049df10d246c6f1c9952ad03a01e11b34216fd0360498",
+    "evals\\run_retrieval_optimization_v1.py": "7e9dd162363eaa7b7583832b16d698949f468d3f06dac19618ed484ddfd2e667"
+  },
+  "readiness": {
+    "blinded_adapter": true,
+    "exact_identity_cache": true,
+    "hybrid_review_guard": true,
+    "phase_A_runner": "prototype, packing/gate tested, not run on development contexts",
+    "phase_B_C_execution": "not yet implemented; blocked pending reliable three-model preflight",
+    "full_retrieval_resource_and_truncation_measurements": "pending"
+  }
+}

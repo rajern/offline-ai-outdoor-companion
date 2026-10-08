@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "authorization": "Owner task on 2026-10-08 authorizes 25 unchanged development cases and 31 configurations after scorer/model prechecks.",
+  "development": "evals/retrieval_development.v2.yaml",
+  "adjudication": "evals/retrieval_adjudication.v1.json",
+  "judge_prompt": "evals/retrieval_judge_prompt.v3.md",
+  "judge_schema": "evals/retrieval_judge_output.schema.v2.json",
+  "judge_model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "authentication": "chatgpt_subscription",
+  "api_calls_permitted": false,
+  "models": ["minilm", "gemma2", "qwen3-q4"],
+  "embedding_threads": 4,
+  "phase_a": {"top_k": 8, "threshold": null, "packing": "P2", "configurations": 3},
+  "phase_b": {"top_k": [3,5,8,12,16], "threshold": ["none","p10","p30","p50","p70"], "packing": "P2", "configurations": 25},
+  "phase_c": {"packing": ["P1","P2","P3"], "configurations": 3},
+  "budget_tokens": 2000,
+  "budget_scope": "Complete unmodified _build_grounded_prompt, no chat-template overhead; locked llama-tokenize and Qwen3.5-2B GGUF; tokenization only.",
+  "threshold_calibration": "Pool the 16 highest-ranked unique geographically allowed parent cosine scores for each of the 25 development questions; numpy.percentile method=linear; accept scores >= threshold. Freeze values before phase B packing/scoring.",
+  "packing": {
+    "P1": "Existing narrow branch expansion, adapted only to the explicit case jurisdiction; full packets atomic, corpus order, duplicate packets/passages skipped, continue ranked top-k seeds after budget rejection, no refill below k.",
+    "P2": "Ranked unique full parent passages, atomic whole-parent budget admission, no expansion/truncation/refill below k.",
+    "P3": "Ranked seeds; remove exact normalized-text duplicates. Expand a narrow branch only when it has at most 3 consecutive corpus passages and shares a non-root heading or consists only of continuations of one exact heading. Preserve the entire branch in source order atomically. Otherwise keep the whole parent. No fallback splitting after budget rejection; no gold, extra LLM, query rewriting or weights."
+  },
+  "selection": "Present separate quality and resource rankings. A provisional stage choice must be fully resolved and cannot lose a covered safety-related requirement or introduce a misleading/conflict/geography flag versus another eligible candidate. Prefer complete cases, micro then macro coverage; exact quality/flag ties prefer smaller index/model and CPU/RAM. Material tradeoffs stop for owner review; no posthoc percentage tolerance.",
+  "stop": "Any judge/proof disagreement, unresolved review/uncertain, false positive without source support, identity/provenance/token failure, incompatible runtime, quota or material selection tradeoff stops advancement.",
+  "holdout_accessed": false,
+  "production_changes_permitted": false,
+  "generation_permitted": false
+}

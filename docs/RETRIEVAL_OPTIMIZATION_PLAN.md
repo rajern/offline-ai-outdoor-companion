@@ -1,5 +1,13 @@
 # Outwise — Retrieval Optimization Plan
 
+**Eieroppdatering, 2026-10-08:** Oppdraget i chatten godkjenner eksisterende
+25 utviklingscaser og betinget kjøring av planen etter scorer-/runtimekontroll.
+Den eldre status-/godkjenningsporten nedenfor beskriver overleveringen før denne
+instruksjonen. Scorerregresjonen består, men Qwen Q4-runtime blokkerer fase A;
+ingen av de 31 konfigurasjonene er kjørt. Se
+[`evals/retrieval_optimization_report.v1.md`](../evals/retrieval_optimization_report.v1.md).
+Holdout, produksjonsendring og svargenerering er fortsatt utelukket.
+
 **Status:** Testdesignet er avtalt; **ikke autorisasjon til å starte optimalisering**. Først må eier godkjenne evalueringsgrunnlaget og en tilstrekkelig pålitelig, fullstendig scorer.  
 **Overlevering:** 8. oktober 2026. **Repo:** [`rajern/offline-ai-outdoor-companion`](https://github.com/rajern/offline-ai-outdoor-companion). Referansecommit: [`c4326d0`](https://github.com/rajern/offline-ai-outdoor-companion/commit/c4326d034fccc77cc1223911eb6b5c1230df0bcc). Kontroller senere endringer før kjøring.
 

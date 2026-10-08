@@ -276,6 +276,13 @@ Judge validation subtask completed on 2026-10-08: v2 rules, locking/recovery,
 `evals/retrieval_judge_validation_report.v2.md`. Owner review of remaining
 scoring issues is required before retrieval optimization; M2-06 remains open.
 
+The owner subsequently authorized the unchanged 25-case optimization foundation
+and scorer corrections. V3 targeted calibration passed (22 rows, 19 unique judge
+calls, three cache hits). Optimization stopped before phase A because Qwen Q4's
+local runtime did not pass embedding repeatability. No configurations were run;
+full experiment execution remains unfinished. See
+`evals/retrieval_optimization_report.v1.md`. M2-06 is not complete.
+
 Replace development fixtures in the main RAG flow with the approved Outwise knowledge base.
 
 Requirements:

@@ -1,5 +1,12 @@
 # Retrieval evaluation boundaries
 
+Owner task, 2026-10-08: the existing 25 development cases and conditional 31-step
+optimization are authorized after the specified scorer/runtime prechecks. This
+supersedes the preparation-only scope below; original gold/references remain
+immutable. Current execution is blocked before phase A by the Qwen embedding
+runtime probe. See `RETRIEVAL_OPTIMIZATION.md` and the preflight report. Holdout,
+production changes and answer generation remain excluded.
+
 Read `FOUNDATION.md` before future retrieval optimization. Default input is the
 25-case development set, never the control set. Do not recursively read/search
 `evals/holdout/` or include its files in optimizer context, calibration, debugging

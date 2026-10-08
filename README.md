@@ -51,6 +51,11 @@ The Codex-only judge validation is complete: 15 synthetic stress examples and
 [reproducible workflow](evals/JUDGE_VALIDATION.md). Judge approval and retrieval
 optimization remain pending owner review.
 
+The owner then authorized conditional optimization. Targeted V3 scoring
+corrections passed, but local Qwen Q4 embedding repeatability blocked the model
+preflight before any configuration ran. See the
+[optimization preflight report](evals/retrieval_optimization_report.v1.md).
+
 ## Local setup
 
 Follow `backend/README.md`, `frontend/README.md` and `docs/MODEL_SETUP.md`.

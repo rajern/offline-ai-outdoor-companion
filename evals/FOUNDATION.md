@@ -1,5 +1,12 @@
 # Retrieval evaluation foundation — proposal v2
 
+Owner update, 2026-10-08: the existing 25-case development set is approved for the
+conditional optimization task. The original preparation-stage approval wording
+below is retained as history. Separate adjudication and scorer regression passed;
+execution is blocked by the Qwen Q4 runtime probe. See
+[`retrieval_optimization_report.v1.md`](retrieval_optimization_report.v1.md).
+This grants no control-set access or final product/safety approval.
+
 Status: **pending owner approval**. This task prepares cases and scoring only.
 No new retrieval, control-set evaluation, generation, parameter search, model
 change or production change was performed. Source inspection and rescoring of
