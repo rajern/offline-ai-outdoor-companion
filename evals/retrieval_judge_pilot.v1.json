@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "authorization": "Owner explicitly authorized this bounded pilot on 2026-10-08; no retrieval optimization or holdout access.",
+  "cases": ["case-02", "case-03", "case-06", "case-07", "case-08", "case-15"],
+  "case_selection": "Cold treatment complete control; English water timing/altitude/chemical conjunctions; major bleeding escalation; burn negations and partial coverage; adult breathing timing and wrong-age context; empty-gold Norwegian fire-law knowledge gap.",
+  "reasoning_effort": "medium",
+  "api_models": ["gpt-6-luna", "gpt-6.1-sol"],
+  "codex_model": "gpt-6.1-sol",
+  "api_budget_usd": 5.0,
+  "max_output_tokens": 6000,
+  "api_retries": 0,
+  "timeout_seconds": 240,
+  "prices_checked_at": "2026-10-08",
+  "prices_usd_per_million": {
+    "gpt-6-luna": {"input": 0.10, "cached_input": 0.01, "output": 0.50, "cache_write": 0.125, "source": "https://developers.openai.com/api/docs/models/gpt-6-luna"},
+    "gpt-6.1-sol": {"input": 2.0, "cached_input": 0.10, "output": 10.0, "cache_write": 2.50, "source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"}
+  },
+  "pricing_assumptions": "Standard service tier; no regional processing premium, fast mode, tools, batch or long-context multiplier. API estimates are not invoice guarantees. Unknown-usage calls retain their full reservation. Cache writes conservatively reserved at the higher rate.",
+  "reference_status": "Historical annotations were authored by earlier Codex agents, described as manual inspection with quotes; no independently documented human expert labels.",
+  "historical_runs": {
+    "A": "retrieval-eval-v1-2026-10-07",
+    "B": "retrieval-eval-v1-2026-10-07",
+    "B8": "retrieval-topk-ablation-v1-2026-10-07",
+    "C8": "retrieval-child-search-v1-2026-10-07",
+    "C8U8": "retrieval-parent-dedup-v1-2026-10-07"
+  }
+}

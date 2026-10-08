@@ -1,5 +1,13 @@
 # Retrieval evaluation cases
 
+## Bounded judge pilot
+
+The owner-authorized historical-context judge pilot is documented in
+[JUDGE_PILOT.md](JUDGE_PILOT.md), with frozen configuration in
+`retrieval_judge_pilot.v1.json`. Results and the provisional recommendation are in
+[retrieval_judge_pilot_report.v1.md](retrieval_judge_pilot_report.v1.md).
+It does not authorize retrieval optimization, production changes or holdout access.
+
 ## Proposed foundation v2 — pending owner approval
 
 See `FOUNDATION.md` for the ten new development cases, scoring investigation,

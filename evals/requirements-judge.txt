@@ -1,0 +1,5 @@
+# Evaluation only; install into a separate environment, never the product runtime.
+openai==3.26.1
+python-dotenv==1.2.4
+jsonschema==4.26.0
+PyYAML==6.0.3
