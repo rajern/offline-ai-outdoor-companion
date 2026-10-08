@@ -271,6 +271,11 @@ validation is blocked. Technical tests pass; manual checks found irrelevant
 retrieved context and unsupported or garbled Norwegian answers. See
 `docs/KNOWLEDGE_SETUP.md`. Do not mark complete or begin M3 yet.
 
+Judge validation subtask completed on 2026-10-08: v2 rules, locking/recovery,
+15 synthetic stress examples and 45 saved historical contexts. See
+`evals/retrieval_judge_validation_report.v2.md`. Owner review of remaining
+scoring issues is required before retrieval optimization; M2-06 remains open.
+
 Replace development fixtures in the main RAG flow with the approved Outwise knowledge base.
 
 Requirements:

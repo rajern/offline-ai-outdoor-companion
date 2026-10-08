@@ -45,6 +45,12 @@ not complete or suitable for real outdoor decisions. Milestone 2 also requires
 an owner quality review before Milestone 3. Safety policy, final product
 messaging and release approval remain separate checkpoints.
 
+The Codex-only judge validation is complete: 15 synthetic stress examples and
+45 saved historical contexts, with no API calls or retrieval changes. See the
+[v2 validation report](evals/retrieval_judge_validation_report.v2.md) and
+[reproducible workflow](evals/JUDGE_VALIDATION.md). Judge approval and retrieval
+optimization remain pending owner review.
+
 ## Local setup
 
 Follow `backend/README.md`, `frontend/README.md` and `docs/MODEL_SETUP.md`.

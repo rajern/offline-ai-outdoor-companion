@@ -5,6 +5,13 @@ No new retrieval, control-set evaluation, generation, parameter search, model
 change or production change was performed. Source inspection and rescoring of
 already saved historical contexts are not new retrieval experiments.
 
+Subsequent judge work, 2026-10-08: the owner selected Sol Codex Medium
+provisionally. The [v2 validation report](retrieval_judge_validation_report.v2.md)
+records completed synthetic stress tests and nine original historical cases.
+The scoring-method discussion below describes the foundation preparation stage;
+judge implementation now exists, while full hybrid scoring, new gold approval
+and retrieval optimization remain pending owner review.
+
 ## Datasets and reproducibility
 
 - `retrieval_development.v2.yaml`: all 25 development questions; its first 15

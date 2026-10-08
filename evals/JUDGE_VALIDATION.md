@@ -7,6 +7,11 @@ No OpenAI API calls, new retrieval, Qwen generation, embeddings, packing changes
 production changes or holdout access. The v1 recommendation is superseded by the
 owner's provisional selection; v1 artifacts and references stay unchanged.
 
+Completed results and remaining decisions:
+[`retrieval_judge_validation_report.v2.md`](retrieval_judge_validation_report.v2.md).
+Machine-readable aggregates and frozen identities:
+[`retrieval_judge_validation_results.v2.json`](retrieval_judge_validation_results.v2.json).
+
 Changes and category definitions: `retrieval_judge_changes.v2.md` and
 `retrieval_judge_prompt.v2.md`. `retrieval_judge_stress.v2.json` contains fictional
 calibration data/expectations, never expert ground truth. Expectations, config
