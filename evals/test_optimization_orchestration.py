@@ -1,5 +1,6 @@
 """Phase boundaries, accounting, safety tradeoffs and resume checks; no inference."""
 import json
+from copy import deepcopy
 from pathlib import Path
 import tempfile
 import unittest
@@ -10,6 +11,37 @@ from optimization_resources import Resources,RAM_RESERVE,RSS_LIMIT,validate_vect
 
 
 class OrchestrationTests(unittest.TestCase):
+    def test_source_defaults_are_canonicalized_without_accepting_changed_content(self):
+        with tempfile.TemporaryDirectory(dir=r.s.runtime.LOCAL) as folder:
+            base=Path(folder);run=base/'experiment';local=base/'corpus'
+            case={'id':'case-01','question':'Synthetic question?','jurisdiction':'NO'}
+            source={'id':'synthetic-01','text':'Synthetic source instruction.',
+                'title':'Synthetic source','source_name':'Fixture','source_url':'https://example.invalid/source',
+                'license':'synthetic','language':'en','topic':'fixture','metadata':{'origin':'fixture'}}
+            item=r.KnowledgeItem(**source);results=[r.RetrievedKnowledgeItem(item,.5)]
+            context=r.context_for(results);prompt=r._build_grounded_prompt(case['question'],results)
+            row={'case_id':case['id'],'question':case['question'],'excerpts':[r.asdict(results[0])],
+                'context_sha256':r.s.runtime.legacy.text_sha(context),'prompt_sha256':r.s.runtime.legacy.text_sha(prompt),
+                'prompt_tokens':2,'context_tokens':2}
+            target=run/'configurations/A-fixture';case_dir=target/case['id'];case_dir.mkdir(parents=True)
+            (case_dir/'context.txt').write_text(context,encoding='utf-8',newline='\n')
+            (case_dir/'prompt-not-executed.txt').write_text(prompt,encoding='utf-8',newline='\n')
+            r.s.runtime.write(local/'knowledge.json',{'items':[source]})
+            def save(value):
+                r.s.runtime.write(target/'retrieved-all.json',[value],replace=True)
+                r.s.runtime.write(case_dir/'retrieved.json',value,replace=True)
+            save(row)
+            with patch.object(r,'RUN',run),patch.object(r.s.runtime,'LOCAL',local), \
+                 patch.object(r.s,'load_development',return_value={'cases':[case]}), \
+                 patch.object(r,'allowed_in_jurisdiction',return_value=True), \
+                 patch.object(r.TokenCounter,'count',return_value=(2,'fixture')):
+                self.assertEqual(r.verify_rows('A-fixture'),[row])
+                for field,value in [('text','Changed instruction.'),('source_url','https://example.invalid/other'),
+                                     ('metadata',{'origin':'changed'}),('id','unknown'),('published_at','2026-10-08')]:
+                    changed=deepcopy(row);changed['excerpts'][0]['item'][field]=value;save(changed)
+                    with self.subTest(field=field),self.assertRaisesRegex(ValueError,'provenance'):
+                        r.verify_rows('A-fixture')
+
     def test_thresholds_pool_allowed_top16_with_linear_percentiles(self):
         rows=[{'candidates_top16':[{'score':v} for v in [.1,.3]]},
               {'candidates_top16':[{'score':v} for v in [.5,.9]]}]

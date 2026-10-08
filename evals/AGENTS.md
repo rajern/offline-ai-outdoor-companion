@@ -7,8 +7,11 @@ immutable. Subsequent bounded diagnostics resolved the Qwen repeatability blocke
 with explicit CPU isolation; see `qwen_embedding_stability_report.v1.md`. The
 owner subsequently authorized resuming the existing 31 configurations after
 technical/resource checks, without intermediate approvals. The resumed task
-stopped before phase A at the available-RAM guard; see
-`retrieval_optimization_report.v2.md` and `RETRIEVAL_OPTIMIZATION.md`. Full live
+initially stopped before phase A at the available-RAM guard. After the owner freed
+RAM, all three sequential resource/input probes passed with the original limits.
+The 25 MiniLM contexts were preserved after a one-line correction for missing
+source defaults; see `retrieval_optimization_serialization_correction.v1.json`.
+Phase A resumed without repeating model probes or retrieval. Full live
 execution and finalist review remain unverified. Holdout,
 production changes and answer generation remain excluded.
 

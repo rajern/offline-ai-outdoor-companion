@@ -296,6 +296,14 @@ reserve. No new judge calls or configurations were run. See
 `evals/retrieval_optimization_report.v2.md`. Live full-flow validation, resource
 capacity and finalist source review remain unverified; M2-06 stays open.
 
+After the owner freed RAM, all three sequential model/resource/input probes
+passed with the original limits. The 25 MiniLM contexts are saved; a one-line
+source-default comparison correction preserves all 980 result-file hashes and
+the original freeze in a separate audit layer. Thirteen orchestration tests
+pass, including default/mutation checks. Phase A resumed without repeating
+model probes/retrieval. No scoring, gold or model setting changed; M2-06 remains
+open pending actual results and source review.
+
 Replace development fixtures in the main RAG flow with the approved Outwise knowledge base.
 
 Requirements:

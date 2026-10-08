@@ -5,15 +5,27 @@ plan, conditional on scorer and runtime checks. This supersedes the older
 foundation preparation-only gate. Original gold, references and V1/V2 outputs
 remain unchanged. Holdout, production settings and answer generation are excluded.
 
-**Current status: resumed optimization blocked by available RAM before phase A.**
+**Current status: resource preflight passed after RAM was freed; phase A resumed.**
 Explicit CPU isolation passes the unchanged repeatability probe and a bounded
 four-query/24-synthetic-passage ranking check. See the
 [stability report](qwen_embedding_stability_report.v1.md). The owner subsequently
 authorized A → B → C without intermediate approvals. Orchestration is implemented
 and technically tested, but model preflight stopped when MiniLM left only 244.6 MiB
 available RAM (reserve: 256 MiB). See the [resumed report](retrieval_optimization_report.v2.md).
-No development
-retrieval or configuration comparison was run. The preceding failure is preserved in the
+The second resumption passed all three model/resource/input probes with the same
+256 MiB reserve and 4 GiB RSS limit. All 25 MiniLM contexts were saved. The source
+verifier initially compared raw dictionaries with dataclass dictionaries that
+add `published_at: null`; the one-line correction canonicalizes the frozen source
+through the same KnowledgeItem defaults. Changed source content, provenance or
+metadata remains rejected. Thirteen orchestration tests passed, including this
+default/mutation regression. See
+[`retrieval_optimization_serialization_correction.v1.json`](retrieval_optimization_serialization_correction.v1.json).
+The old freeze and passed preflight are preserved with a separate correction
+manifest; only the runner verification-line identity was amended before any
+judge call. All 980 existing index/context/token-cache files retain their hashes.
+Ordinary `run` resumes them without another model probe or retrieval call.
+No scoring, gold, model, packing or resource settings changed. Final results and
+source review remain pending. The preceding failure is preserved in the
 [report](retrieval_optimization_report.v1.md) and
 [machine-readable results](retrieval_optimization_preflight_results.v1.json).
 

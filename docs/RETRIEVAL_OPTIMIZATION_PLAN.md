@@ -10,7 +10,14 @@ Eieren har deretter godkjent gjenopptakelse av A/B/C etter tekniske kontroller,
 uten mellomgodkjenninger. Orkestreringen er implementert og teknisk testet;
 minnekontrollen stoppet allerede ved MiniLM (244,6 MiB ledig, krav 256 MiB).
 Full faktisk gjennomføring er dermed uverifisert. Ingen av de 31 konfigurasjonene
-er kjørt. Se [ny rapport](../evals/retrieval_optimization_report.v2.md) og den tidligere
+var ferdige ved denne minnestoppen. Etter at eieren frigjorde RAM, bestod alle tre
+sekvensielle modell-/input-/ressurskontroller med uendrede grenser. 25 MiniLM-kontekster
+er lagret. En énlinjes rettelse sammenligner kilder gjennom datamodellens samme
+standardfelter; den opprinnelige frysen og alle resultathasher er bevart i et
+separat [rettelseslag](../evals/retrieval_optimization_serialization_correction.v1.json).
+Scoring, gold og modellinnstillinger er uendret; ingen dommerkall var gjort før
+rettelsen. Kjøringen er gjenopptatt fra lagrede kontekster. Se
+[ny rapport](../evals/retrieval_optimization_report.v2.md) og den tidligere
 [`evals/retrieval_optimization_report.v1.md`](../evals/retrieval_optimization_report.v1.md).
 Holdout, produksjonsendring og svargenerering er fortsatt utelukket.
 

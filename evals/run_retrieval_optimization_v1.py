@@ -273,7 +273,7 @@ def checked_index(name):
 
 def verify_rows(config_id):
     target=RUN/'configurations'/config_id;rows=s.runtime.read(target/'retrieved-all.json')
-    cases=s.load_development()['cases'];parents={p['id']:p for p in s.runtime.read(s.runtime.LOCAL/'knowledge.json')['items']}
+    cases=s.load_development()['cases'];parents={p['id']:asdict(KnowledgeItem(**p)) for p in s.runtime.read(s.runtime.LOCAL/'knowledge.json')['items']}
     if [r['case_id'] for r in rows]!=[c['id'] for c in cases]:raise ValueError('Incomplete or reordered case results')
     counter=TokenCounter()
     for case,row in zip(cases,rows):

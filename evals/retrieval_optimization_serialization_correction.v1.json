@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "at": "2026-10-08T18:12:23.585723+00:00",
+  "reason": "Compare source records through the same KnowledgeItem defaults used by retrieval; missing published_at equals its default null. No content or source field is ignored.",
+  "original_freeze_sha256": "23a5da821bf7aa5cbfc8280e5823b8f8fca81b70b353ded3eee28d331313730e",
+  "original_technical_summary_sha256": "2b9ca0fb249dc807152914da584e50cbd4dab73cafd86ca703118defbd558aa5",
+  "runner_before_sha256": "f26030e3a8711b99f2d36bdc27cb1ace7d30860023d5abd53cc1f7e7ab278073",
+  "runner_after_sha256": "ec4e1b4126badcde1b572361e8e4446d82e00ba0ac1c03e5d3738eb9d1544ffa",
+  "changed_lines": 1,
+  "verified_cases": 25,
+  "verified_excerpts": 198,
+  "default_only_differences": 198,
+  "judge_calls_before_correction": 0,
+  "scoring_gold_model_settings_changed": false,
+  "preserved_result_files": 980,
+  "preserved_results_manifest_sha256": "3ec361749e81fcd5c88484d54900689f66de11f11f6ec72514b6e1c9102d1706",
+  "tests": "13 orchestration tests passed, including missing defaults and rejection of modified text/source URL/metadata/ID/published date.",
+  "original_settings": {
+    "ram_reserve_bytes": 268435456,
+    "rss_limit_bytes": 4294967296,
+    "qwen_ctx": 2048,
+    "qwen_batch": 1024,
+    "qwen_ubatch": 1024,
+    "embedding_threads": 4
+  },
+  "holdout_accessed": false,
+  "paid_api_calls": 0
+}

@@ -9,7 +9,16 @@ diagnostics now pass with explicit CPU isolation; see
 The owner then authorized the existing 31-stage optimization. The resumed task
 stopped before phase A at the RAM preflight; see
 [`retrieval_optimization_report.v2.md`](retrieval_optimization_report.v2.md).
-No optimization configurations were run. See the earlier
+After the owner freed RAM, all three sequential model/resource/input checks
+passed. Phase A now has 25 saved MiniLM contexts. A one-line provenance comparison
+correction handles missing `published_at` through the existing KnowledgeItem
+default, while preserving every source/context/index hash. The old freeze and
+preflight summary are archived; a separate implementation-correction manifest
+records the exact runner hashes before/after and 980 preserved result files.
+No gold, judge, packing, resource or model settings changed; no judge call had
+occurred before the correction. See
+[`correction record`](retrieval_optimization_serialization_correction.v1.json).
+The run resumed from those contexts. See the earlier
 [`retrieval_optimization_report.v1.md`](retrieval_optimization_report.v1.md).
 This grants no control-set access or final product/safety approval.
 
