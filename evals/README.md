@@ -1,5 +1,12 @@
 # Retrieval evaluation cases
 
+## Sol Codex validation v2
+
+The owner selected Sol Codex CLI / Medium through the ChatGPT subscription.
+[JUDGE_VALIDATION.md](JUDGE_VALIDATION.md) documents the separately authorized
+synthetic stress tests and nine remaining historical questions. V1 stays intact;
+retrieval optimization and holdout use remain gated.
+
 ## Bounded judge pilot
 
 The owner-authorized historical-context judge pilot is documented in

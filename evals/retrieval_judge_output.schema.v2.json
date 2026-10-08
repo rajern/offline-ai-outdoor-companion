@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "items",
+    "irrelevant",
+    "potentially_misleading",
+    "jurisdiction_leakage",
+    "optional_observed",
+    "requires_review",
+    "contradictory"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/item"
+      }
+    },
+    "irrelevant": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    },
+    "potentially_misleading": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    },
+    "jurisdiction_leakage": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    },
+    "optional_observed": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    },
+    "requires_review": {
+      "type": "boolean"
+    },
+    "contradictory": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    }
+  },
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "block",
+        "quote"
+      ],
+      "properties": {
+        "block": {
+          "type": "integer"
+        },
+        "quote": {
+          "type": "string"
+        }
+      }
+    },
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "item",
+        "decision",
+        "evidence",
+        "missing_components",
+        "reason"
+      ],
+      "properties": {
+        "item": {
+          "type": "integer"
+        },
+        "decision": {
+          "type": "string",
+          "enum": [
+            "covered",
+            "not_covered",
+            "uncertain"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "missing_components": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence",
+        "reason"
+      ],
+      "properties": {
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

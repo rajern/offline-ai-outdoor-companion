@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "authentication": "chatgpt_subscription",
+  "api_calls_permitted": false,
+  "timeout_seconds": 240,
+  "stress_unique": 15,
+  "stress_repeats": 3,
+  "validation_cases": ["case-01", "case-04", "case-05", "case-09", "case-10", "case-11", "case-12", "case-13", "case-14"],
+  "prompt": "evals/retrieval_judge_prompt.v2.md",
+  "schema": "evals/retrieval_judge_output.schema.v2.json",
+  "stress_data": "evals/retrieval_judge_stress.v2.json",
+  "selection_seed": 202610081,
+  "reference_caution": "Agent-authored historical labels, not independent human expert ground truth",
+  "authorization": "Owner selected Sol Codex Medium and authorized synthetic stress tests plus the nine remaining saved historical cases; no retrieval optimization, API use, production changes or holdout access."
+}
