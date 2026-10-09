@@ -10,7 +10,7 @@ import run_retrieval_optimization_v1 as d
 import retrieval_optimization_scoring as s
 
 
-def audit():
+def audit(output_paths=None):
     s.holdout_guard()
     frozen = d.verify()
     c.check_frozen()
@@ -141,7 +141,8 @@ def audit():
         assert all(d.file_hash(archive / name) == value for name, value in manifest['file_sha256'].items())
         output['archived_quota_rejections'].append({'cache_key': manifest['cache_key'], 'archive': manifest['archive'],
                                                    'record_sha256': manifest['file_sha256']['record.json']})
-    for path in [c.STATE / 'final-audit.v1.json', s.ROOT / 'evals/retrieval_optimization_final_audit.v1.json']:
+    for path in (output_paths if output_paths is not None else
+                 [c.STATE / 'final-audit.v1.json', s.ROOT / 'evals/retrieval_optimization_final_audit.v1.json']):
         path.write_text(json.dumps(output, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
     print(json.dumps({k: v for k, v in output.items() if k not in ['configurations', 'approved_exact_input_adjustments']}))
     return output
