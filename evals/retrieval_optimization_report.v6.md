@@ -1,8 +1,8 @@
 # M2-06 — avsluttende utviklingsrapport
 
-**Status: prepared_C. 28/31 konfigurasjoner ferdige.**
+**Status: running_C. 28/31 konfigurasjoner ferdige.**
 
-Resultatsnapshot 2026-10-09T13:56:31.934693+00:00; rapport 2026-10-09T13:59:36.121081+00:00.
+Resultatsnapshot 2026-10-09T13:56:31.934693+00:00; rapport 2026-10-09T14:26:01.181967+00:00.
 
 ## Frosset sammenligning og adjudikasjoner
 
@@ -46,7 +46,7 @@ Justert analyse. Flagg er antall støttede caser med irrelevant / potensielt mis
 | B-k16-p30 | complete; 25/25 | 51/72 (70.83%) | 72.27% | 14/22 | 33/51 (64.71%) / 64.62% / 7/13 | 21 / 1 / 0 / 0 |
 | B-k16-p50 | complete; 25/25 | 47/72 (65.28%) | 68.11% | 12/22 | 29/51 (56.86%) / 57.56% / 5/13 | 20 / 1 / 0 / 0 |
 | B-k16-p70 | complete; 25/25 | 34/72 (47.22%) | 54.85% | 10/22 | 18/51 (35.29%) / 40.26% / 4/13 | 18 / 1 / 0 / 0 |
-| C-P1 | not_run; 0/25 | — | — | — | — | — |
+| C-P1 | partial; 23/25 | — | — | — | — | — |
 | C-P2 | not_run; 0/25 | — | — | — | — | — |
 | C-P3 | not_run; 0/25 | — | — | — | — | — |
 

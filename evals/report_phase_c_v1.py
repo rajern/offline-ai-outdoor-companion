@@ -19,6 +19,27 @@ def pct(value):
 def export():
     data = read(ROOT / 'evals/retrieval_optimization_results.v6.json')
     data['reported_at'] = datetime.now(timezone.utc).isoformat()
+    # Only progress metadata is refreshed between the frozen driver's exports.
+    # A raw summary pending its resource check is not prematurely called complete.
+    for entry in data['configurations']:
+        cid = entry['configuration']['id']
+        if not cid.startswith('C-') or entry['status'] == 'complete':
+            continue
+        target = RUN / 'configurations' / cid
+        rows = []
+        for path in sorted(target.glob('case-*/score.json')):
+            try:
+                rows.append(read(path))
+            except json.JSONDecodeError:
+                pass  # A concurrent tiny score write has not completed yet.
+        if rows:
+            entry.update(status='partial', judged_cases=len(rows), partial_scores=[
+                {k: row[k] for k in ['case_id', 'decisions', 'flags', 'requires_review',
+                                    'certificate_judge_disagreement', 'context_sha256', 'cache_key']} for row in rows])
+            if (target / 'config.json').exists():
+                entry['configuration'] = read(target / 'config.json')
+            if data['status'] == 'prepared_C':
+                data['status'] = 'running_C'
     data['indices'] = read(ROOT / 'evals/retrieval_optimization_results.v5.json')['indices']
     data['safety_context_bindings'] = []
     for entry in data['configurations']:
