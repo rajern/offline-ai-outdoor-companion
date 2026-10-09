@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "version": "approved-1.0.0",
+  "date": "2026-10-09",
+  "status": "owner_approved",
+  "applied": true,
+  "active_adjudication_changed": false,
+  "gold_sha256": "9f18ea8ae8a4886415ec9daaefab378cf0a4075bd94d2c736bd2336130c41ea8",
+  "judge_prompt_sha256": "1e7ef4df845219735008d4a8a2fa2b62ab03e427d70bb2c8d1e1648a14858336",
+  "records": [
+    {
+      "case_id": "case-13",
+      "configuration": "A-gemma2",
+      "context_sha256": "0d3327b71ae52710abc95b8ba18b9a03a18a4c672ede7a34281632e6138f63a8",
+      "cache_key": "eebe18fd1f5330d1f99c54b35657d58f8df542261a03dc5befe3bf60a602954f",
+      "field": "potentially_misleading",
+      "original": false,
+      "basis": "Prioritizing unavailable telephone contact can delay use of the available beacon in the explicitly stated life-threatening/no-coverage situation.",
+      "evidence": [
+        {
+          "source_item": "source-01-027",
+          "minilm_block": 1,
+          "gemma_block": 2,
+          "text_sha256": "8bc7cf445d5f2fd30be0ac1d6c3e5a1fdfb70b82fe7535ef4a024d9037265275",
+          "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/"
+        },
+        {
+          "source_item": "source-04-009",
+          "minilm_block": 2,
+          "gemma_block": 4,
+          "text_sha256": "18e60632a78e0d140bd2bcaeb0289eb3de4c13025639d36afd40daa2d8d69e58",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/"
+        },
+        {
+          "source_item": "source-03-008",
+          "minilm_block": 3,
+          "gemma_block": 3,
+          "text_sha256": "18e60632a78e0d140bd2bcaeb0289eb3de4c13025639d36afd40daa2d8d69e58",
+          "source_url": "https://www.helsenorge.no/forstehjelp/brannskader-overflatiske/"
+        },
+        {
+          "source_item": "source-08-010",
+          "minilm_block": 5,
+          "gemma_block": 6,
+          "text_sha256": "18e60632a78e0d140bd2bcaeb0289eb3de4c13025639d36afd40daa2d8d69e58",
+          "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/"
+        }
+      ],
+      "unchanged": {
+        "required_coverage": "0/2",
+        "irrelevant": true,
+        "contradictory": false
+      },
+      "id": "owner-2026-10-09-1",
+      "approved": true
+    },
+    {
+      "case_id": "case-20",
+      "configuration": "A-minilm",
+      "context_sha256": "f37a956df646172cb677b04ac97d4ca6bfa5a0b2cf490d5a1589f6df44eaea62",
+      "cache_key": "01834a0b997f0ee6b3995a7aa822e73b527eaec63386702dbf1339dccec0f8ae",
+      "item": 1,
+      "original": "not_covered",
+      "basis": "Terrain/route investigation, trip feasibility with this group and abilities-based planning jointly provide route/skill assessment. No additional route/skill component in other Qwen blocks.",
+      "evidence": [
+        {
+          "block": 3,
+          "source_item": "source-16-002",
+          "source_url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+          "text_sha256": "65175e7b6ac1a4b0918c60811d08808f4e2bc35e6b5957b9be809905292387e0",
+          "formatted_block_start": 463,
+          "character_length": 131,
+          "quote_sha256": "a343a1851936f88535a765d1464c64075084b90ffda060e3fa465d9f372789bb"
+        },
+        {
+          "block": 3,
+          "source_item": "source-16-002",
+          "source_url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+          "text_sha256": "65175e7b6ac1a4b0918c60811d08808f4e2bc35e6b5957b9be809905292387e0",
+          "formatted_block_start": 625,
+          "character_length": 73,
+          "quote_sha256": "d64358b70b808a3bc80ac9a2bdd4017eeb5398749365d9c307b7c7955065152e"
+        },
+        {
+          "block": 3,
+          "source_item": "source-16-002",
+          "source_url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+          "text_sha256": "65175e7b6ac1a4b0918c60811d08808f4e2bc35e6b5957b9be809905292387e0",
+          "formatted_block_start": 878,
+          "character_length": 104,
+          "quote_sha256": "57eb8b56734a3b8e6f81c832fc2541f22c8d871bdc1149fd2c3fe38960caecf8"
+        }
+      ],
+      "id": "owner-2026-10-09-2",
+      "approved": "covered"
+    }
+  ],
+  "execution_permission": true,
+  "limitations": "No change to original judge outputs, historical score files, gold, certificates or frozen scoring code. Not production approval.",
+  "authority": "Explicit owner approval in chat, 2026-10-09",
+  "application": "Separate adjusted analyses only. Bind case + exact delivered-context SHA + complete blinded-input cache key. Identical cache input may recur under another config label. Other contexts are excluded."
+}

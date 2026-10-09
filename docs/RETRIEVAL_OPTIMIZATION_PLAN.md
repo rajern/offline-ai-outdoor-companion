@@ -1,5 +1,15 @@
 # Outwise — Retrieval Optimization Plan
 
+**Godkjent videreføring, 2026-10-09:** Eieren har valgt MiniLM som forsøksmodell
+for de 25 B- og tre C-konfigurasjonene. Case 13/Gemma og case 20/1/MiniLM er
+godkjent i et separat [adjudikasjonslag](../evals/retrieval_embedding_selection_adjudication.approved.v1.json)
+med eksakt kontekst- og dommerinputbinding. Opprinnelige resultater og fasit
+beholdes. `evals/continue_retrieval_optimization_v1.py` viderefører lagret kjøring
+uten å gjenta A og bruker eksisterende worker, indeks, cache og frosne regler.
+Tersklene fryses fra MiniLMs lagrede 400 top-16-scorer før B. Den opprinnelige
+konservative valgregelen gjelder for B/C; reelle avveininger stopper fortsatt.
+Dette er ikke godkjenning av produksjonskonfigurasjon eller holdout.
+
 **Eieroppdatering, 2026-10-08:** Oppdraget i chatten godkjenner eksisterende
 25 utviklingscaser og betinget kjøring av planen etter scorer-/runtimekontroll.
 Den eldre status-/godkjenningsporten nedenfor beskriver overleveringen før denne

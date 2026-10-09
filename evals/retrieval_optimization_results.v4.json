@@ -1,0 +1,2818 @@
+{
+  "at": "2026-10-09T07:25:03.956810+00:00",
+  "status": "prepared",
+  "error": null,
+  "configurations": [
+    {
+      "configuration": {
+        "id": "A-minilm",
+        "model": "minilm",
+        "k": 8,
+        "threshold": null,
+        "packing": "P2"
+      },
+      "judged_cases": 25,
+      "status": "complete",
+      "partial_scores": [
+        {
+          "case_id": "case-01",
+          "decisions": [
+            "not_covered",
+            "not_covered",
+            "not_covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "a7b9fb436ff51fb4951ce6a7b59113bf648de982874f16b6662fd7c1240136ee",
+          "cache_key": "c7d0b13e188cc2b4cabb9c33d0fe8ba0b68abe25ce43e137f84a33fe1a6f9682"
+        },
+        {
+          "case_id": "case-02",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "ac9911aac675b90fc887032bac77df19ccc6b76fbbe703f510f039c866480672",
+          "cache_key": "46b0eb4e1725a4aec2cf490a5f47bf4e911b13a7bd30d689792828ccc1858115"
+        },
+        {
+          "case_id": "case-03",
+          "decisions": [
+            "covered",
+            "covered",
+            "not_covered",
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "398e777437f0dbacaf768ac1894a324f833d82a9e14810f60dcb7e7a94695362",
+          "cache_key": "179b5024f18e76f5de8dfcd7a89d68676764a86725fbba0c5f0e6a657936e5d7"
+        },
+        {
+          "case_id": "case-04",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "d11501e0dd26ddd1373a7c2535407bcc432059c48140d60905e3a163b6b1b429",
+          "cache_key": "1f4d98b5779dc32999e958dc898be79ae3fdb1940ae3a7830e2a2e0647cd0d16"
+        },
+        {
+          "case_id": "case-05",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered",
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "9e17e7491dd0412128604ecf129463ef78761dc70284eee390e0668ed4b397df",
+          "cache_key": "b1b373a034b0c71bf9e6a2f45da577a1992713a3240ee58e3861e75c644529a1"
+        },
+        {
+          "case_id": "case-06",
+          "decisions": [
+            "not_covered",
+            "covered",
+            "covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "4f4d39eb0bf1d8d6cd251f3b0e1f72156b86530f40962438b27baa9ca87fa427",
+          "cache_key": "0785c21018f46694e39c3cf2176d00b56a4de90a8c464d286d173d220389fa2d"
+        },
+        {
+          "case_id": "case-07",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "95366f4237bd56f557bbe8b464042be33b4d21811353f8fe9e4225ca17e8b74a",
+          "cache_key": "e9d73b4afc390c5e389d186558b281b9a16a3b049399c258b0dc6c54d61d0a4b"
+        },
+        {
+          "case_id": "case-08",
+          "decisions": [
+            "covered",
+            "not_covered",
+            "covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "e0279c9c306a8b05154b8dbf11c177283ba201cb9ee4af3271e35757c2156707",
+          "cache_key": "c634775cc7a2f0f33a57ae43ee1843ceb151cee1cf6a545650b94799cabcba32"
+        },
+        {
+          "case_id": "case-09",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "2f60d2aafe96374e4366ac147ddd68d7066c1a292ec32c4ea6fe5c346bc100a8",
+          "cache_key": "03bed4621858ab2b5573f2b86a20496d9b1ae79a6d2bf629bfee9b494702f2cd"
+        },
+        {
+          "case_id": "case-10",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "41352b4a1b21db19abe427152e9ae30918a7815d0ebede3898b7306f6021d111",
+          "cache_key": "5bf1f6e45038839b4ab8cd62888d2550aca9a36b2c463718dce6798b0e82551e"
+        },
+        {
+          "case_id": "case-11",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "37dd5fbf2c51da7e3e24aa5c7027bee76d1ceeef9e3efee03001272c8c1f5a51",
+          "cache_key": "29f2708ef075990572184b6708e88e924af767c082de2f22bd8392f1090a9221"
+        },
+        {
+          "case_id": "case-12",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "b5e9fa59d525ff4994d9829b52378cae7e9dd1d07c772e848a6673d5964b267a",
+          "cache_key": "e6ed38a04a6aebf504b1703ed3fd7f0d597a7c66004b4571de5b54428cec9c8c"
+        },
+        {
+          "case_id": "case-13",
+          "decisions": [
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": true,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "08067e23ca62c0a7fe5d442dbc96caa87a548f11b251944d7c40be5a1d8b3aef",
+          "cache_key": "fe28970af7f750f2b35047dcdcbf2e7b599cfbe0499d53ec86c558d6e5d3c345"
+        },
+        {
+          "case_id": "case-14",
+          "decisions": [
+            "covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "eaf1f73037b53b92ad2f48d58d82fc3d4eabf2ce9843e0af3cd82cc4fefabeba",
+          "cache_key": "4ded295228758a000d10c924fa2c4019cdc28f433f600031428533fd3cf60a0e"
+        },
+        {
+          "case_id": "case-15",
+          "decisions": [],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "a652e05f304f0bca0bc436f2518b7d0d28c013d97a7250fccc7d4c562230ef75",
+          "cache_key": "afb38bbfa3826fd7336c2f4db3912b0421dfd6055e40a3b7b8652e644a225d05"
+        },
+        {
+          "case_id": "case-16",
+          "decisions": [
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "649009f422de3b8dd127a6691898c546c3d943ccb63d2e9d509723014d4b0268",
+          "cache_key": "a0525fac1e364a064b286bf16a6b7c3348cb8f75afa2c1b70b5506892d8e94b3"
+        },
+        {
+          "case_id": "case-17",
+          "decisions": [
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "316d752eed979fc8a45113cf21f3cc2a93a8ce25ee8124226b09a196f4231f49",
+          "cache_key": "5487cffb245d7279d9b1bf86b0b1b60bc96d4f491b8ae6370d713a7fe3279860"
+        },
+        {
+          "case_id": "case-18",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "4b0f66985c110ce8dae4cdcfa829a8a47ed803c27bbdbbac890633f0e4b75bc3",
+          "cache_key": "b92039104b27314c90ec7915b627d12d5d080e107ddfaaa277e9826548d624b1"
+        },
+        {
+          "case_id": "case-19",
+          "decisions": [
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "8840178c902c34198462b7031a570e6b844235e6199d70c105fbaf84df1cd1c7",
+          "cache_key": "f2a9e35e5377805019745fa3240e5cda11483323cc8573942527fc9a7193d801"
+        },
+        {
+          "case_id": "case-20",
+          "decisions": [
+            "not_covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "f37a956df646172cb677b04ac97d4ca6bfa5a0b2cf490d5a1589f6df44eaea62",
+          "cache_key": "01834a0b997f0ee6b3995a7aa822e73b527eaec63386702dbf1339dccec0f8ae"
+        },
+        {
+          "case_id": "case-21",
+          "decisions": [
+            "covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "01e3ac3d0298165760125f90b1b4a943a20c7b18b12ae679fab27580ab97e397",
+          "cache_key": "6cc520ef1cc626fae7496f17a84b815eed0166cd83b137d45d97dba6b9e23198"
+        },
+        {
+          "case_id": "case-22",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "7b0e1688883a214fd9ae71e45d90becec52c1e5a3326a3e6a4713053fe1b81a5",
+          "cache_key": "83779debe81f612bf283233904ea5e6772bfcdffd3cf7a637266878d4e4df875"
+        },
+        {
+          "case_id": "case-23",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "4438ff172d0a4cafebdd5a4007612c2ae888b5b64fe8fd3213e2ee7a92dcfdde",
+          "cache_key": "c40a4c7a98ca8c8808f9ad41b7143ed91ef59c37a203a19c50ddef23ccef9226"
+        },
+        {
+          "case_id": "case-24",
+          "decisions": [
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "d6132291c2416ccc0a82ae1c6e98ad9509098ae86ec0263b117369d95a906c07",
+          "cache_key": "b3f7d3869baa0020d92affc579e26a0a2e859cb2493265a8613c24cd89aae09a"
+        },
+        {
+          "case_id": "case-25",
+          "decisions": [],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "6ddbf00dab932ac241f52d12bf6073f1adce5869499288652a51c1bbc5f22841",
+          "cache_key": "92b9b19d76ac6e12ec87ae7ddf1669226645662d2fa071b9f7ad552bc0c8893d"
+        }
+      ],
+      "raw_full25": {
+        "cases": 25,
+        "supported_cases": 22,
+        "gap_cases": 3,
+        "must_have_total": 72,
+        "covered": 56,
+        "micro_coverage": 0.7777777777777778,
+        "macro_coverage": 0.7568181818181817,
+        "complete_cases": 14,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 22,
+          "potentially_misleading": 1,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-25",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "adjusted_full25": {
+        "cases": 25,
+        "supported_cases": 22,
+        "gap_cases": 3,
+        "must_have_total": 72,
+        "covered": 57,
+        "micro_coverage": 0.7916666666666666,
+        "macro_coverage": 0.7795454545454544,
+        "complete_cases": 15,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 22,
+          "potentially_misleading": 1,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-25",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "raw_legacy15": {
+        "cases": 15,
+        "supported_cases": 13,
+        "gap_cases": 2,
+        "must_have_total": 51,
+        "covered": 39,
+        "micro_coverage": 0.7647058823529411,
+        "macro_coverage": 0.7423076923076923,
+        "complete_cases": 8,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 13,
+          "potentially_misleading": 1,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "adjusted_legacy15": {
+        "cases": 15,
+        "supported_cases": 13,
+        "gap_cases": 2,
+        "must_have_total": 51,
+        "covered": 39,
+        "micro_coverage": 0.7647058823529411,
+        "macro_coverage": 0.7423076923076923,
+        "complete_cases": 8,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 13,
+          "potentially_misleading": 1,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "applied_adjudications": [
+        {
+          "case_id": "case-20",
+          "records": [
+            "owner-2026-10-09-2"
+          ],
+          "context_sha256": "f37a956df646172cb677b04ac97d4ca6bfa5a0b2cf490d5a1589f6df44eaea62",
+          "cache_key": "01834a0b997f0ee6b3995a7aa822e73b527eaec63386702dbf1339dccec0f8ae"
+        }
+      ],
+      "resources": {
+        "prompt_tokens": [
+          1976,
+          1084,
+          1524,
+          1409,
+          1623,
+          1374,
+          1686,
+          1446,
+          1265,
+          1023,
+          1536,
+          1699,
+          1063,
+          1983,
+          1741,
+          1631,
+          1352,
+          1864,
+          1136,
+          1416,
+          1529,
+          1158,
+          1826,
+          1450,
+          1399
+        ],
+        "context_tokens": [
+          1797,
+          886,
+          1334,
+          1222,
+          1436,
+          1191,
+          1496,
+          1247,
+          1085,
+          842,
+          1337,
+          1505,
+          866,
+          1793,
+          1564,
+          1438,
+          1152,
+          1673,
+          942,
+          1222,
+          1321,
+          973,
+          1631,
+          1246,
+          1208
+        ],
+        "passages": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          7,
+          8,
+          8,
+          8,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "budget_excluded_packets": 2,
+        "ranking_seconds": 0.02199270000028264,
+        "retrieval_and_packing_seconds": 160.0640560999991
+      }
+    },
+    {
+      "configuration": {
+        "id": "A-gemma2",
+        "model": "gemma2",
+        "k": 8,
+        "threshold": null,
+        "packing": "P2"
+      },
+      "judged_cases": 25,
+      "status": "complete",
+      "partial_scores": [
+        {
+          "case_id": "case-01",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "a8c2c8861a4c18916cd13e327a91c140548158d16278576e803cd333eb5780e2",
+          "cache_key": "ec69213d2fe9b88b9c9b70539597547217afa03ad4bd96aca96be303e23ab2a0"
+        },
+        {
+          "case_id": "case-02",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "4b18f7c8d1fd1fc7c9aeda6ab06d4a16417d889473d00f18c811c8ad919eae7c",
+          "cache_key": "36a1bf9dd38a27594fccc2259dfff2b19f397f398e1cf8b77a9893339cdbe83d"
+        },
+        {
+          "case_id": "case-03",
+          "decisions": [
+            "not_covered",
+            "covered",
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "1e678b15017913c3f3c114778fe7a7a100e76be8bde1776cb49f88fbeb22140f",
+          "cache_key": "dec7c51ecfab70055b3d1f00839af5bedfc6780df9b4f87475cb21dd6a3e6e88"
+        },
+        {
+          "case_id": "case-04",
+          "decisions": [
+            "not_covered",
+            "not_covered",
+            "not_covered",
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "73ec4d8419036f878f6d93140a0628bdcab1d1b052c17c61041870dc3ba86278",
+          "cache_key": "1a63169f7509bd060ec930fe0a7e0bed3b3060d8c0ac4bb15fd9c853bf2af25d"
+        },
+        {
+          "case_id": "case-05",
+          "decisions": [
+            "not_covered",
+            "not_covered",
+            "not_covered",
+            "not_covered",
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "865b704e383765ed7f15dacaf662e2f46b4db23a760e774b3b5dc62921b52eda",
+          "cache_key": "020544d697e90cd1152147ce86fa48fb00264dee411f955ce47b563bee30a639"
+        },
+        {
+          "case_id": "case-06",
+          "decisions": [
+            "not_covered",
+            "covered",
+            "covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "8852c404b267abcd5575cd3bd91439600a4afc3f997e5b3dd17f008d4fddfb05",
+          "cache_key": "d212aa24bebddec103857e56b957b3bea505b7e297f6ad8b38b691ef6c6ca37c"
+        },
+        {
+          "case_id": "case-07",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "b845d48d9263726097fba12adc2602a5fc99a2ee85c282e855197c5dbf5b42da",
+          "cache_key": "6fee29e886384b467ffce31e8406bd4f82e4e1702b407c198f72cbdae66e7964"
+        },
+        {
+          "case_id": "case-08",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "3ad78e0e4b47536daffc4fdf2b1f85d8f4cd044e5027ecfc68f7fb49c6190fd2",
+          "cache_key": "15237d551195567b0a9d65c2e7723e1276e812efa91b9fc1358cde2d5cefadeb"
+        },
+        {
+          "case_id": "case-09",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "50c0187de5db4dc2421637116485e832fe4c843d80612d3b2a099308b483f2e6",
+          "cache_key": "f89b7a637907b8a282f6b7daed0ae09905021da457e7bd50da18d7f3521b3f15"
+        },
+        {
+          "case_id": "case-10",
+          "decisions": [
+            "not_covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "7ba3b5c183ef7c12f3662210ebb92cc8c1b6b2554a442eafb8530fa8a0568cbb",
+          "cache_key": "6e3390d5a7328b8d979a826f5dd7ac5680c294c5c70cf11d1eb5787ec68597ef"
+        },
+        {
+          "case_id": "case-11",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "25f4c596fd5cc3000237ba6c162db76c25568dffece67936a7eb224eb2b2ece2",
+          "cache_key": "71e28d0cc95b6a975650381aa8e569bf8ed93a43c7d094385f64f27079d0016c"
+        },
+        {
+          "case_id": "case-12",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "9d82fbc00b1530cb35edc2050331f4287c24d02dc67b44d1fcc3061d22d092c7",
+          "cache_key": "bd8bc8ca8899f39a5783f5a87e115dad20a89aad44fcaeae0af2e7efd2f843ae"
+        },
+        {
+          "case_id": "case-13",
+          "decisions": [
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "0d3327b71ae52710abc95b8ba18b9a03a18a4c672ede7a34281632e6138f63a8",
+          "cache_key": "eebe18fd1f5330d1f99c54b35657d58f8df542261a03dc5befe3bf60a602954f"
+        },
+        {
+          "case_id": "case-14",
+          "decisions": [
+            "covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "2f934bf3056655bb6efafac281cc8f813270c3826971e563c9a154381e71fc32",
+          "cache_key": "7109c26cbef5d856318ae54f01d42f021da9f2417d686a1919f3e725d7c7481a"
+        },
+        {
+          "case_id": "case-15",
+          "decisions": [],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "a06997ba02b723b001949c4a417979e5910e9b37d22982e358096a59aa7a5f5e",
+          "cache_key": "73cbcf94e4d4ac7b3f94797a1e50948a74bf32746d0a1868225b56708b7ca59c"
+        },
+        {
+          "case_id": "case-16",
+          "decisions": [
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "173d02fb211c2e48eed1311aec12d19803729c5a07d1593787c7b2c263b9b773",
+          "cache_key": "1bae70261c8cd65c2ee3a4e1f488803b7b02f235a3d9f5e1c37a8212f27210e0"
+        },
+        {
+          "case_id": "case-17",
+          "decisions": [
+            "covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "5f3f221aa8fa4a1967d973e22911ad469c7551be1f02b8d4f90e39f107937811",
+          "cache_key": "04b138fdec313003947bee9f3d935f87b87207a4214fa0cf0f19f1183026c0cc"
+        },
+        {
+          "case_id": "case-18",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "b2717e201afe4d89f6a3e4940dc71c12fe3c62d7a5b71f4650a5b6e029b3925d",
+          "cache_key": "f26a21a778e839f8e94a89183220eee924d87fa78400a02c9c1cd97c2c13da6e"
+        },
+        {
+          "case_id": "case-19",
+          "decisions": [
+            "covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "76ca0e3969a51c54f4ae6cf556d231a355a43973852fa101d31c909eaa415726",
+          "cache_key": "417678eefe204ac50a5e8ba272361e06f677b05162069098f75411064a64f15c"
+        },
+        {
+          "case_id": "case-20",
+          "decisions": [
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "f7181f7f98afd8389046020de06c5601d5b5b6468c665712e6f563589af3bb9f",
+          "cache_key": "81c9c1017a0e50ba49aab161a17f2898235fc0acc826973632ccc588c3249749"
+        },
+        {
+          "case_id": "case-21",
+          "decisions": [
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "4f2ca9562d27826970eab8cc463c3946dc904181d9b3b487caee5ddadf6ab558",
+          "cache_key": "d8766115931d6e81b33de74f23971b316824659031ed3001f4e5ac6959cd0477"
+        },
+        {
+          "case_id": "case-22",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "396b201150c538f750339797cc6d9f8167e743bb1e28f77e011d5f7402c3124e",
+          "cache_key": "0785c606f25333b11730b13148777b1d31a5f4815e466ce1e4ee58d2803bd581"
+        },
+        {
+          "case_id": "case-23",
+          "decisions": [
+            "covered",
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "a6530f694e3a74f11e38247958f6d1e9aff1a9d00d68698d7c9e40bb651c42e0",
+          "cache_key": "86aa34ed3ef4e9947432635d3f1ce28c432c1aded79272904c448fc09de7cd8a"
+        },
+        {
+          "case_id": "case-24",
+          "decisions": [
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "b0190117ba18a07df0879b634d7fd83ccac1b9a0acb92a6abf4de7f5f5e36e79",
+          "cache_key": "1464571894b41c2effbf5c40452ddc9c62ca182ffb3932de254a61e5271e0e39"
+        },
+        {
+          "case_id": "case-25",
+          "decisions": [],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "ee426ffb1807813862762d76685b73929c567b4e76817a78205a827837d9ed8b",
+          "cache_key": "925ac5ff1912201de3bfc6cf5d5b35f56428978360dec4e043d517f8e2c8f0d1"
+        }
+      ],
+      "raw_full25": {
+        "cases": 25,
+        "supported_cases": 22,
+        "gap_cases": 3,
+        "must_have_total": 72,
+        "covered": 51,
+        "micro_coverage": 0.7083333333333334,
+        "macro_coverage": 0.740909090909091,
+        "complete_cases": 13,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 22,
+          "potentially_misleading": 0,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-25",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "adjusted_full25": {
+        "cases": 25,
+        "supported_cases": 22,
+        "gap_cases": 3,
+        "must_have_total": 72,
+        "covered": 51,
+        "micro_coverage": 0.7083333333333334,
+        "macro_coverage": 0.740909090909091,
+        "complete_cases": 13,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 22,
+          "potentially_misleading": 1,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-25",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "raw_legacy15": {
+        "cases": 15,
+        "supported_cases": 13,
+        "gap_cases": 2,
+        "must_have_total": 51,
+        "covered": 34,
+        "micro_coverage": 0.6666666666666666,
+        "macro_coverage": 0.6897435897435897,
+        "complete_cases": 7,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 13,
+          "potentially_misleading": 0,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "adjusted_legacy15": {
+        "cases": 15,
+        "supported_cases": 13,
+        "gap_cases": 2,
+        "must_have_total": 51,
+        "covered": 34,
+        "micro_coverage": 0.6666666666666666,
+        "macro_coverage": 0.6897435897435897,
+        "complete_cases": 7,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 13,
+          "potentially_misleading": 1,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "applied_adjudications": [
+        {
+          "case_id": "case-13",
+          "records": [
+            "owner-2026-10-09-1"
+          ],
+          "context_sha256": "0d3327b71ae52710abc95b8ba18b9a03a18a4c672ede7a34281632e6138f63a8",
+          "cache_key": "eebe18fd1f5330d1f99c54b35657d58f8df542261a03dc5befe3bf60a602954f"
+        }
+      ],
+      "resources": {
+        "prompt_tokens": [
+          1688,
+          1876,
+          1366,
+          1847,
+          1737,
+          1719,
+          1932,
+          1797,
+          1649,
+          1386,
+          1564,
+          1945,
+          1151,
+          1808,
+          1710,
+          1876,
+          1821,
+          1867,
+          1681,
+          1402,
+          1318,
+          1347,
+          1909,
+          2000,
+          1373
+        ],
+        "context_tokens": [
+          1509,
+          1678,
+          1176,
+          1660,
+          1550,
+          1536,
+          1742,
+          1598,
+          1469,
+          1205,
+          1365,
+          1751,
+          954,
+          1618,
+          1533,
+          1683,
+          1621,
+          1676,
+          1487,
+          1208,
+          1110,
+          1162,
+          1714,
+          1796,
+          1182
+        ],
+        "passages": [
+          8,
+          8,
+          8,
+          7,
+          8,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          7,
+          8,
+          8,
+          8,
+          6,
+          8,
+          8,
+          8,
+          8,
+          7,
+          7,
+          8
+        ],
+        "budget_excluded_packets": 7,
+        "ranking_seconds": 0.009853699998529919,
+        "retrieval_and_packing_seconds": 131.26177159999725
+      }
+    },
+    {
+      "configuration": {
+        "id": "A-qwen3-q4",
+        "model": "qwen3-q4",
+        "k": 8,
+        "threshold": null,
+        "packing": "P2"
+      },
+      "judged_cases": 25,
+      "status": "complete",
+      "partial_scores": [
+        {
+          "case_id": "case-01",
+          "decisions": [
+            "not_covered",
+            "not_covered",
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "840480972237ef42311857d578abaa854a64d2120e26cb563892fe86b7ab72a4",
+          "cache_key": "f8474f693e201a5db352a98652b83f010ec2f110c1d7710b9211cbee2b5b9a42"
+        },
+        {
+          "case_id": "case-02",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "3d81712b4fd8b36245f4d03c7392101adca5a0a75fab1b80d89fb2c470812f8c",
+          "cache_key": "304587a22a1fbb3cf42597c5961faaf56edb5e9fc032bc0b09be1d945f0cc410"
+        },
+        {
+          "case_id": "case-03",
+          "decisions": [
+            "not_covered",
+            "not_covered",
+            "not_covered",
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "2986a0b200a9bcfe328b29811cd588375578caddcd80852e6759b13bba48b30c",
+          "cache_key": "6c408d00543fd7f5e04cc7deadd6645a4aa5c2a6c768e17c950e0587edffa760"
+        },
+        {
+          "case_id": "case-04",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "90a57cb137eea43cb0ec80ac6c8dfe98d56ebd6dc57fe63c87cb77c2f12cb560",
+          "cache_key": "7844bb005069dddd2291ee6803513f6a16d3ee51bb352064907996945a636d89"
+        },
+        {
+          "case_id": "case-05",
+          "decisions": [
+            "not_covered",
+            "not_covered",
+            "not_covered",
+            "not_covered",
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "506586db293c3dfa5b41ed71345ad9eede9122ff8308c2b70bae21ab7281530b",
+          "cache_key": "35f2b50f06463c7edfe0100c9b4d14364549f3271ff3ada305c4c0b8bbbf59eb"
+        },
+        {
+          "case_id": "case-06",
+          "decisions": [
+            "not_covered",
+            "not_covered",
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "b04b5ce74a01d7b999cbf878ec893049b9c4762c58d1f719805ddd074a9aca2e",
+          "cache_key": "72a6a8394790b99d720245c5e3d6a287fb31552ab814b3be0197dbde3517cf9c"
+        },
+        {
+          "case_id": "case-07",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "b0cd7aa1484d73938f26e5ba12b896f2f8e56c86a20da969f5f9301881a65cef",
+          "cache_key": "ba1a4e632a0628166e6d95282332b212d3a9192596e70dd30eb8483079054a3f"
+        },
+        {
+          "case_id": "case-08",
+          "decisions": [
+            "not_covered",
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "96d15799bade9258871674704a14c6f71107e948a8846cda97e6625b5f731751",
+          "cache_key": "51ca3a0bb0e5cccc9ec14566391d4cb962032ba9585289f13ea1a8820077372c"
+        },
+        {
+          "case_id": "case-09",
+          "decisions": [
+            "not_covered",
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "e9f42d10f8f5e8c87833e26e42deebcb2350f69b00b8daa6cc54612ec04269bb",
+          "cache_key": "bc195e0bf74849c0477690d974475543a89be3b5b83ddef5b150b819cff10eb9"
+        },
+        {
+          "case_id": "case-10",
+          "decisions": [
+            "not_covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "ce046e87ab87fdb8a167c5f0c7f6fa625fea2cc2361a1cd4b57a1f0a12fc1b0c",
+          "cache_key": "882cfee4106ec48b40ae5d00ec432cb20b6323bd7d83d3706d320684245c2e6c"
+        },
+        {
+          "case_id": "case-11",
+          "decisions": [
+            "not_covered",
+            "not_covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "833edf53400932b846b7b95935c45a746918ad0bdee3fe6e0dee8dc9878d957d",
+          "cache_key": "72ae359fd69f2cf7fc192703eded10f7f6a4dafb788fddc5c664f833ca3fe5da"
+        },
+        {
+          "case_id": "case-12",
+          "decisions": [
+            "not_covered",
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "d1c5027bcd095cd3bbd7c05ecc7f1c47ef3193eb8c467d4fd5d231344978447f",
+          "cache_key": "628e9ad661054dbd611fc9b1cebcb35874b61836bb44ccb092f2a9c59b99e92b"
+        },
+        {
+          "case_id": "case-13",
+          "decisions": [
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "36d207cb8a47612118c35c5036a4c0ae3f40dcf9305949687fd866c35005dbaf",
+          "cache_key": "1175606dec6d6cdd45e6b2e475419deab1495f6d69f29530201e445cf721f25f"
+        },
+        {
+          "case_id": "case-14",
+          "decisions": [
+            "covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "f7c4be848ac1f525eb7793ddff5fb8199fb1b29375140b46951c234e1aa37cd8",
+          "cache_key": "2f868a80b34f88b3db0d0412f4eb22abcd39fa4a908d3ff1d77e9be1b91beeef"
+        },
+        {
+          "case_id": "case-15",
+          "decisions": [],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "da58f47ff8d65609a0b987a01cfda3b4839e421a26af699d9ab622b3133fa8a3",
+          "cache_key": "e861a965e021b2ddc096206101dbcbba26fdce2c87dc582ded9ca8a49d1ce856"
+        },
+        {
+          "case_id": "case-16",
+          "decisions": [
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "d04b7a77d5ec8ee91d238fa1053ba0f7d9925db7bc3864ffa9c7a8dfbb043800",
+          "cache_key": "89d6f46586f41d767a69f93b7052fd22fbd398c85b8ceae968ef0b6795583464"
+        },
+        {
+          "case_id": "case-17",
+          "decisions": [
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "1203283fdb4e2a6330a18fa6880834a7d6659b1015ee1fc1b0d6c41d656d35b0",
+          "cache_key": "27f52fea08b47f086ee2c5266e8d1878673bdf7fe0c7808e9227f2b9a0f0d020"
+        },
+        {
+          "case_id": "case-18",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "ca9cdf3a7f840e73c207e03fd088b9365bcc508fc61bd752e7e25fd9bc3ade23",
+          "cache_key": "b7aa2f5fc8f3e6c6d63fb182c81d2bc3d6fd31d54ce5af82bf48bb887a30975d"
+        },
+        {
+          "case_id": "case-19",
+          "decisions": [
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": false,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "ab34f9a8d1a5deee9bcf82a587cbd6758b2fbfc4719582f063371f089f67571e",
+          "cache_key": "14f0cee27a98ad2f6737414745f910b1e3f480654af832294c4cdd583684ae05"
+        },
+        {
+          "case_id": "case-20",
+          "decisions": [
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "3740d27261b9426383af71ecee5e0030de7a9c9c8814e17c84e2d55553a5a8d9",
+          "cache_key": "428951d330d36a463e2e2e9e066aff681856ca8c7a90fe3c3b911c654b4402bf"
+        },
+        {
+          "case_id": "case-21",
+          "decisions": [
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "08eb18bc1875b45df1164170a6e1ebc70264cd6978987a89a08750a48f3323dd",
+          "cache_key": "19b684302e309854a27c895cca72d54da21cc3886c9fc62b9a2173cad7de9283"
+        },
+        {
+          "case_id": "case-22",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "8932e7a462ac8c6f063b938b2d377e0c345500cde037877b8b58b9f4500d1335",
+          "cache_key": "47cb7dc6b6ff6d9e37c712dc6b1e06f41530e1a898328348f3da24b36fefb9f0"
+        },
+        {
+          "case_id": "case-23",
+          "decisions": [
+            "covered",
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "3683ee4fd1638704b3fc760a03e600bfa2d35e97640cbdc303c841800979257f",
+          "cache_key": "0b4db0e5c5039735b94e3825a3230a36a363e472bad4dadc5ddfe6837575cc84"
+        },
+        {
+          "case_id": "case-24",
+          "decisions": [
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "c913325905349a4dfbba28c2cd4183dc350b84fb82642d3b003427089d84ebd8",
+          "cache_key": "ccafe222b0eb4efb28cc7fbcf72d180789ce9dff6ed725cc71c3eb13a9870f47"
+        },
+        {
+          "case_id": "case-25",
+          "decisions": [],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "a7ba06c3be4a5c669648a075c47bc03b92283f76b83dd37d779b7d07448db1bb",
+          "cache_key": "c91f14257e883a840ecb0a7569a8a11e5e0a2c4d07d5040a66acb45a8802e4ae"
+        }
+      ],
+      "raw_full25": {
+        "cases": 25,
+        "supported_cases": 22,
+        "gap_cases": 3,
+        "must_have_total": 72,
+        "covered": 37,
+        "micro_coverage": 0.5138888888888888,
+        "macro_coverage": 0.5492424242424243,
+        "complete_cases": 10,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 21,
+          "potentially_misleading": 0,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-25",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "adjusted_full25": {
+        "cases": 25,
+        "supported_cases": 22,
+        "gap_cases": 3,
+        "must_have_total": 72,
+        "covered": 37,
+        "micro_coverage": 0.5138888888888888,
+        "macro_coverage": 0.5492424242424243,
+        "complete_cases": 10,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 21,
+          "potentially_misleading": 0,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-25",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "raw_legacy15": {
+        "cases": 15,
+        "supported_cases": 13,
+        "gap_cases": 2,
+        "must_have_total": 51,
+        "covered": 20,
+        "micro_coverage": 0.39215686274509803,
+        "macro_coverage": 0.36538461538461536,
+        "complete_cases": 3,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 13,
+          "potentially_misleading": 0,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "adjusted_legacy15": {
+        "cases": 15,
+        "supported_cases": 13,
+        "gap_cases": 2,
+        "must_have_total": 51,
+        "covered": 20,
+        "micro_coverage": 0.39215686274509803,
+        "macro_coverage": 0.36538461538461536,
+        "complete_cases": 3,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 13,
+          "potentially_misleading": 0,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "applied_adjudications": [],
+      "resources": {
+        "prompt_tokens": [
+          1697,
+          1351,
+          1970,
+          1592,
+          1633,
+          1872,
+          1775,
+          1776,
+          1276,
+          1249,
+          1673,
+          1842,
+          1399,
+          1817,
+          1857,
+          1826,
+          1724,
+          1882,
+          1342,
+          1717,
+          1475,
+          1441,
+          1989,
+          1808,
+          1757
+        ],
+        "context_tokens": [
+          1518,
+          1153,
+          1780,
+          1405,
+          1446,
+          1689,
+          1585,
+          1577,
+          1096,
+          1068,
+          1474,
+          1648,
+          1202,
+          1627,
+          1680,
+          1633,
+          1524,
+          1691,
+          1148,
+          1523,
+          1267,
+          1256,
+          1794,
+          1604,
+          1566
+        ],
+        "passages": [
+          8,
+          8,
+          7,
+          8,
+          8,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8,
+          7,
+          8,
+          7,
+          8,
+          7,
+          8,
+          6,
+          8,
+          8,
+          8,
+          8,
+          8,
+          7,
+          7
+        ],
+        "budget_excluded_packets": 9,
+        "ranking_seconds": 0.011201600002095802,
+        "retrieval_and_packing_seconds": 140.59101270000247
+      }
+    },
+    {
+      "configuration": {
+        "id": "B-k3-none",
+        "k": 3,
+        "threshold_name": "none",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k3-p10",
+        "k": 3,
+        "threshold_name": "p10",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k3-p30",
+        "k": 3,
+        "threshold_name": "p30",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k3-p50",
+        "k": 3,
+        "threshold_name": "p50",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k3-p70",
+        "k": 3,
+        "threshold_name": "p70",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k5-none",
+        "k": 5,
+        "threshold_name": "none",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k5-p10",
+        "k": 5,
+        "threshold_name": "p10",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k5-p30",
+        "k": 5,
+        "threshold_name": "p30",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k5-p50",
+        "k": 5,
+        "threshold_name": "p50",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k5-p70",
+        "k": 5,
+        "threshold_name": "p70",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k8-none",
+        "k": 8,
+        "threshold_name": "none",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k8-p10",
+        "k": 8,
+        "threshold_name": "p10",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k8-p30",
+        "k": 8,
+        "threshold_name": "p30",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k8-p50",
+        "k": 8,
+        "threshold_name": "p50",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k8-p70",
+        "k": 8,
+        "threshold_name": "p70",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k12-none",
+        "k": 12,
+        "threshold_name": "none",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k12-p10",
+        "k": 12,
+        "threshold_name": "p10",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k12-p30",
+        "k": 12,
+        "threshold_name": "p30",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k12-p50",
+        "k": 12,
+        "threshold_name": "p50",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k12-p70",
+        "k": 12,
+        "threshold_name": "p70",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k16-none",
+        "k": 16,
+        "threshold_name": "none",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k16-p10",
+        "k": 16,
+        "threshold_name": "p10",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k16-p30",
+        "k": 16,
+        "threshold_name": "p30",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k16-p50",
+        "k": 16,
+        "threshold_name": "p50",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "B-k16-p70",
+        "k": 16,
+        "threshold_name": "p70",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "C-P1",
+        "packing": "P1"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "C-P2",
+        "packing": "P2"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    },
+    {
+      "configuration": {
+        "id": "C-P3",
+        "packing": "P3"
+      },
+      "judged_cases": 0,
+      "status": "not_run",
+      "partial_scores": []
+    }
+  ],
+  "completed": 3,
+  "consumption": {
+    "actual_calls": 75,
+    "successful_calls": 75,
+    "cache_hits": 0,
+    "avoided_calls": 0,
+    "usage": {
+      "input_tokens": 573954,
+      "cached_input_tokens": 72576,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 140977,
+      "reasoning_output_tokens": 15802,
+      "total_tokens": 714931
+    },
+    "sum_call_seconds": 3921.554289900002,
+    "unknown_usage_calls": 0,
+    "errors": [],
+    "billing": "ChatGPT subscription",
+    "paid_api_calls": 0,
+    "estimated_api_cost_usd": null
+  },
+  "consumption_before": {
+    "actual_calls": 75,
+    "successful_calls": 75,
+    "cache_hits": 0,
+    "avoided_calls": 0,
+    "usage": {
+      "input_tokens": 573954,
+      "cached_input_tokens": 72576,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 140977,
+      "reasoning_output_tokens": 15802,
+      "total_tokens": 714931
+    },
+    "sum_call_seconds": 3921.554289900002,
+    "unknown_usage_calls": 0,
+    "errors": [],
+    "billing": "ChatGPT subscription",
+    "paid_api_calls": 0,
+    "estimated_api_cost_usd": null
+  },
+  "thresholds": {
+    "model": "minilm",
+    "values": {
+      "p10": 0.3411781549453735,
+      "p30": 0.38985224068164825,
+      "p50": 0.4206088036298752,
+      "p70": 0.4637095630168915
+    },
+    "method": "numpy.percentile linear pooled allowed top16",
+    "score_count": 400,
+    "source_sha256": "a1c32365e7472740c9df332961b6d145b3e8f9e12c39b4b2a235aff216314f04"
+  },
+  "analysis_layer_sha256": "8ae34432de295ab575684724012b2efe645515ac8e062009284f45073535a6f4",
+  "holdout_accessed": false,
+  "paid_api_calls": 0,
+  "production_changed": false,
+  "generation_calls": 0
+}

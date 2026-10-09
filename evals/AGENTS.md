@@ -30,6 +30,16 @@ Do not treat the recommendation or proposals as the owner's decision. Stop here
 until the owner selects the model and resolves the proposed adjudications; do not
 repeat phase A or start B/C from this review alone.
 
+Owner continuation, 2026-10-09: MiniLM is explicitly selected as the experimental
+B/C model. Both case 13 Gemma risk and case 20/1 MiniLM semantic coverage are
+approved in `retrieval_embedding_selection_adjudication.approved.v1.json`.
+Use `continue_retrieval_optimization_v1.py` to resume the remaining 28 planned
+configurations; it preserves the original frozen scorer, raw scores and cache,
+and writes separate exact-input-bound adjusted summaries. Do not repeat A.
+Ordinary B/C phase transitions need no new approval; real resource, review or
+per-case safety tradeoffs still block selection. This supersedes the preceding
+pending-owner status. No production approval is given.
+
 Read `FOUNDATION.md` before future retrieval optimization. Default input is the
 25-case development set, never the control set. Do not recursively read/search
 `evals/holdout/` or include its files in optimizer context, calibration, debugging
