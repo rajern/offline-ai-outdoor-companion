@@ -1,5 +1,17 @@
 # Outwise — Retrieval Optimization Plan
 
+**Resultat etter gjenopptakelse, 2026-10-09:** Alle 25 B-konfigurasjoner er
+ferdige; 28/31 inkludert A. De tre C-testene er ikke kjørt. Den opprinnelige
+dominansregelen stopper valg, og kildekontroll viser uavklarte risikovurderinger
+i case 13/P70 og case 19. Foreløpig anbefaling for C er MiniLM k16 uten terskel,
+men eieren må avklare de konkrete funnene og forsøksvalget før videreføring.
+Se [resultatrapporten](../evals/retrieval_optimization_report.v5.md) og
+[integritetsaudit](../evals/retrieval_optimization_final_audit.v1.json).
+RAM-grensene er uendret. En kvoteavvisning er bevart; videreføring skjedde etter
+naturlig kvotefornyelse og ny eierinstruks, uten å gjenta ferdige svar.
+Ingen endring av forsøksplan, scorer, gold, holdout eller produksjonsoppsett.
+De eldre statusavsnittene nedenfor er historikk, ikke nåværende fullføringsstatus.
+
 **Godkjent videreføring, 2026-10-09:** Eieren har valgt MiniLM som forsøksmodell
 for de 25 B- og tre C-konfigurasjonene. Case 13/Gemma og case 20/1/MiniLM er
 godkjent i et separat [adjudikasjonslag](../evals/retrieval_embedding_selection_adjudication.approved.v1.json)

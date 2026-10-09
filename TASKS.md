@@ -327,6 +327,19 @@ open; do not repeat completed A calls or start M3.
   Resume completed calls from cache after the resource blocker is resolved.
   M2-06 remains open; holdout, production changes and answer generation excluded.
 
+  Latest continuation, 2026-10-09: all 25 MiniLM B configurations / 625 judgments
+  are complete; A+B totals 28/31. The original dominance gate blocks C. Best
+  coverage is 58/72, macro 79.09%, 15/22 complete at k12/16 without threshold,
+  versus adjusted A's 57/72, macro 77.95%, 15/22. Gain: adult breathing check
+  08/2; full monitoring/CPR 08/4 and anaphylaxis 17/1–2 remain missing. Source
+  review identifies unresolved case13/P70 risk negatives and case19 risk
+  variability. Recommend k16/no threshold provisionally for C, subject to owner
+  resolution of those findings and the protected experimental choice. One quota
+  rejection was archived; resume followed natural renewal and a new owner
+  instruction. Original limits, raw A/B results, gold, judge and production are
+  preserved. See `evals/retrieval_optimization_report.v5.md`; only the three
+  planned C configurations remain. M2-06 is still open.
+
 Replace development fixtures in the main RAG flow with the approved Outwise knowledge base.
 
 Requirements:

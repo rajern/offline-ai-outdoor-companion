@@ -1,8 +1,12 @@
 # M2-06 — gjenopptatt MiniLM-optimalisering
 
-**Status: running-B. 23/31 konfigurasjoner fullstendig vurdert.**
+**Status: blocked. 28/31 konfigurasjoner fullstendig vurdert.**
 
-Resultatsnapshot: 2026-10-09T12:17:09.504059+00:00. Eksport: 2026-10-09T12:17:11.289653+00:00.
+Resultatsnapshot: 2026-10-09T12:29:43.269077+00:00. Eksport: 2026-10-09T12:38:46.445492+00:00.
+
+Kjøringen stoppet: Material per-case coverage/safety tradeoffs: no configuration dominates; owner decision required
+
+Alle 25 B-konfigurasjoner er ferdige; 28/31 totalt. Den frosne dominansregelen stopper C, og kildekontrollen avdekker uavklarte risikovurderinger i case 13 og 19. Foreløpig anbefaling for C er MiniLM k=16 uten terskel; ingen produksjonsvinner er valgt.
 
 ## Metode og avgrensning
 
@@ -49,11 +53,11 @@ Tallene viser justert analyse. Flagg: irrelevant / misvisende / direkte konflikt
 | B-k12-p30 | complete; 25/25 | 51/72 (70.83%) | 72.27% | 14/22 | 33/51 (64.71%) / 64.62% / 7/13 | 21 / 2 / 0 / 0 |
 | B-k12-p50 | complete; 25/25 | 47/72 (65.28%) | 68.11% | 12/22 | 29/51 (56.86%) / 57.56% / 5/13 | 20 / 1 / 0 / 0 |
 | B-k12-p70 | complete; 25/25 | 34/72 (47.22%) | 54.85% | 10/22 | 18/51 (35.29%) / 40.26% / 4/13 | 18 / 0 / 0 / 0 |
-| B-k16-none | partial; 8/25 | — | — | — | — | — |
-| B-k16-p10 | not_run; 0/25 | — | — | — | — | — |
-| B-k16-p30 | not_run; 0/25 | — | — | — | — | — |
-| B-k16-p50 | not_run; 0/25 | — | — | — | — | — |
-| B-k16-p70 | not_run; 0/25 | — | — | — | — | — |
+| B-k16-none | complete; 25/25 | 58/72 (80.56%) | 79.09% | 15/22 | 40/51 (78.43%) / 76.15% / 8/13 | 22 / 1 / 0 / 0 |
+| B-k16-p10 | complete; 25/25 | 53/72 (73.61%) | 74.55% | 14/22 | 35/51 (68.63%) / 68.46% / 7/13 | 21 / 1 / 0 / 0 |
+| B-k16-p30 | complete; 25/25 | 51/72 (70.83%) | 72.27% | 14/22 | 33/51 (64.71%) / 64.62% / 7/13 | 21 / 2 / 0 / 0 |
+| B-k16-p50 | complete; 25/25 | 47/72 (65.28%) | 68.11% | 12/22 | 29/51 (56.86%) / 57.56% / 5/13 | 20 / 1 / 0 / 0 |
+| B-k16-p70 | complete; 25/25 | 34/72 (47.22%) | 54.85% | 10/22 | 18/51 (35.29%) / 40.26% / 4/13 | 18 / 0 / 0 / 0 |
 | C-P1 | not_run; 0/25 | — | — | — | — | — |
 | C-P2 | not_run; 0/25 | — | — | — | — | — |
 | C-P3 | not_run; 0/25 | — | — | — | — | — |
@@ -89,6 +93,11 @@ Ufullstendige resultater rangeres ikke. Rå/justerte scorer, gap-resultater og s
 | B-k12-p30 | 1581.0 / 1983 | 1389.6 | 212 | 24 | 0.01317 / 3.898 |
 | B-k12-p50 | 1358.6 / 1983 | 1167.2 | 175 | 12 | 0.01136 / 4.321 |
 | B-k12-p70 | 951.8 / 1983 | 760.5 | 114 | 3 | 0.01423 / 3.436 |
+| B-k16-none | 1957.9 / 1999 | 1766.4 | 278 | 122 | 0.01411 / 96.065 |
+| B-k16-p10 | 1842.2 / 1999 | 1650.8 | 259 | 101 | 0.01055 / 6.929 |
+| B-k16-p30 | 1610.1 / 1983 | 1418.7 | 218 | 62 | 0.01134 / 2.790 |
+| B-k16-p50 | 1365.6 / 1983 | 1174.3 | 177 | 23 | 0.01129 / 1.233 |
+| B-k16-p70 | 951.8 / 1983 | 760.5 | 114 | 6 | 0.01039 / 0.741 |
 
 | ID | Maks worker-tre RSS, MiB | Min ledig RAM, MiB | Sum worker-CPU, s | Ressursstatus |
 |---|---:|---:|---:|---|
@@ -112,24 +121,114 @@ Ufullstendige resultater rangeres ikke. Rå/justerte scorer, gap-resultater og s
 | B-k12-p30 | 220.9 | 2407.1 | 46.02 | består |
 | B-k12-p50 | 222.1 | 1956.3 | 50.11 | består |
 | B-k12-p70 | 218.0 | 2692.7 | 50.31 | består |
-| B-k16-none | 220.8 | 2891.9 | 140.48 | består |
+| B-k16-none | 240.7 | 437.9 | 221.86 | består |
+| B-k16-p10 | 213.3 | 2387.5 | 19.95 | består |
+| B-k16-p30 | 248.3 | 2054.6 | 26.25 | består |
+| B-k16-p50 | 203.9 | 2244.6 | 19.56 | består |
+| B-k16-p70 | 199.9 | 2408.7 | 19.11 | består |
 
 B/C-worker-RSS gjelder gjenbrukt indeks og fjern dommervurdering, ikke hele mobilappen. MiniLM har 235,05 MB modell og 0,292 MB indeks (384 dimensjoner); A-indeksarbeidet toppet på omtrent 915 MB prosess-tre-RSS. Gemma har 1 488,92 MB modell / 0,584 MB indeks; Qwen Q4 396,47 MB / 0,778 MB. MiniLMs dokumentvektorer ble gjenbrukt i A, mens de andre bygget dokumentvektorer; A-indekstidene er derfor ikke en lik full-indeks-benchmark. MiniLMs kjente 128-token-avkorting (108/405 visninger, ingen spørsmål) er uendret. Mobil-RAM, energibruk og samlet lokal svartid er fortsatt ikke målt.
+
+Etter gjenopptakelse, eksklusive det historiske B-k3-none-forsøket: maks worker-tre-RSS 248.3 MiB, min ledig RAM 437.9 MiB, sum målt worker-CPU 1362.19 s. De opprinnelige 4 GiB/256 MiB-grensene bestod i disse workerne.
 
 Spørsmålsvektorene er også lagrede. Ranking-/packing-tidene inkluderer derfor ikke embedding av et nytt brukerspørsmål. De er ikke full online retrieval-latens. Embeddingmålingene fra A og størrelses-/RAMdata rapporteres separat i resultat-JSON.
 
 
-B/C: 106 CLI-kallforsøk, 105 fullførte vurderinger, 403 cachetreff/unngåtte kall; tokens `{"input_tokens": 759165, "cached_input_tokens": 142336, "cache_write_input_tokens": 0, "output_tokens": 157835, "reasoning_output_tokens": 19822, "total_tokens": 917000}`.
+B/C: 115 CLI-kallforsøk, 114 fullførte vurderinger, 511 cachetreff/unngåtte kall; tokens `{"input_tokens": 830809, "cached_input_tokens": 145792, "cache_write_input_tokens": 0, "output_tokens": 178422, "reasoning_output_tokens": 22512, "total_tokens": 1009231}`.
 
-Hele A+B/C: 181 kall, 180 vellykkede; tokens `{"input_tokens": 1333119, "cached_input_tokens": 214912, "cache_write_input_tokens": 0, "output_tokens": 298812, "reasoning_output_tokens": 35624, "total_tokens": 1631931}`; 1 med ukjent bruk; sum dommerkalletid 8820.19 s. Reasoning inngår i output, prefix-cached input i input; ingen dobbelttelling.
+Hele A+B/C: 190 kall, 189 vellykkede; tokens `{"input_tokens": 1404763, "cached_input_tokens": 218368, "cache_write_input_tokens": 0, "output_tokens": 319399, "reasoning_output_tokens": 38314, "total_tokens": 1724162}`; 1 med ukjent bruk; sum dommerkalletid 9415.46 s. Reasoning inngår i output, prefix-cached input i input; ingen dobbelttelling.
 
 Før denne gjenopptakelsen: femtimerskvote 43% brukt, ukeskvote 59% brukt. Dette er kontoens delte bruk; eval-tokenregnskapet over er separat. Ingen automatisk API-fallback eller kvotereset.
 
 1 kvoteavvist forsøk er bevart i et separat hashbundet arkiv og inkludert i antall forsøk/ukjent forbruk og kjøretid. Ingen vurdering kom tilbake fra dette forsøket. Eierens nye fortsett-instruks kom etter naturlig kvotefornyelse; kun det avviste inputet ble klargjort på nytt. Den frosne driverens v4-telling følger nåværende cache; v5 inkluderer også de arkiverte forsøkene.
 
-## Sikkerhet og anbefaling
+Siste kvotesnapshot 2026-10-09T12:36:17.787634+00:00: femtimerskvote 40% brukt, ukeskvote 74% brukt. Kvoteavvisning under forsøket: ja. En naturlig fornyelse og ny eierinstruks tillot videreføring; ingen reset-kreditt ble brukt.
 
-Ingen endelig konfigurasjon anbefales før fase B/C og kilde-/sikkerhetskontroll er ferdige. Case 01, 03/21, 08, 13, 17 og 20 overvåkes særlig. De kjente manglene i 08/4 og 17/1–2 må ikke antas løst av parameterendringer. Alle kildepassasjer og dommersvar bevares lokalt.
+## Teknisk sluttkontroll
+
+Offline integritetsaudit består: 700 case-resultater, 82 frosne filer og 309 uendrede A-artefakter. Kildeproveniens, faktisk kontekst/prompt, token-cache/budsjett, blindet input, resultatsegl/loggbruk, schema og kildebevis er kontrollert; rå og justerte aggregater er beregnet på nytt. Kun de godkjente eksakte adjudikasjonsbindingene gir justering. Alle tre indeksers vektorhashes og det arkiverte kvoteforsøket er verifisert. Ingen nye dommer-/tokenizerkall i audit. Dette bekrefter teknisk integritet, ikke uavhengig semantisk sikkerhetsvalidering. De tidligere 34 relevante scorer-/packing-/fortsettelsestestene bestod; ny audit-/rapportkode har også bestått Python-kompilering og kjøring mot de lagrede resultatene.
+
+## Konklusjon og rangert beslutningsgrunnlag
+
+**Fase B er ferdig: 25/25 konfigurasjoner, 625 vurderinger. Sammen med A er 28/31 ferdige. C er ikke kjørt.**
+Den opprinnelige valgregelen stopper fordi ingen kandidat dominerer alle andre på hvert krav og hvert beskyttet sikkerhetsflagg.
+Dette er et metodisk/scoringsmessig stopp, ikke en ny RAM-feil. Ingen prosentgrense eller regel ble endret etter resultatene.
+
+**Min foreløpige anbefaling for de tre gjenværende packing-testene er MiniLM, k=16, ingen terskel.**
+Det faktisk målte oppsettet bruker P2. Anbefalingen er et forsøksgrunnlag, ikke en produksjonsvinner eller en konklusjon om P1/P3.
+K=12 gir samme kravdekning med litt mindre kontekst. K=16 gir den allerede planlagte P3-metoden anledning til å behandle nødpeilertreffet på rang 16;
+k=12 tilbyr ikke dette treffet. Dette er en begrunnet testmulighet, **ingen garanti** for forbedring. Sikkerhetsavklaringen nedenfor må gjøres før C.
+
+| Prioritet som forsøkskandidat | Målt oppsett | Krav / micro / macro | Komplette | Irrelevant / misvisende / konflikt / geo | Gj.snitt prompttokens |
+|---|---|---|---|---|---:|
+| 1, foreløpig | k16 / ingen / P2 | 58/72 / 80,56% / 79,09% | 15/22 | 22 / 1 / 0 / 0 | 1957,88 |
+| 2 | k12 / ingen / P2 | 58/72 / 80,56% / 79,09% | 15/22 | 22 / 2 / 0 / 0 | 1900,12 |
+| 3, kontrollreferanse | k8 / ingen / P2 | 57/72 / 79,17% / 77,95% | 15/22 | 22 / 1 / 0 / 0 | 1487,72 |
+
+Dette er en kildebasert prioritering av aktuelle forsøk, ikke en automatisk rangering som skjuler sikkerhetstap.
+K16s lavere misvisende-tall enn k12 dokumenterer ikke at teksten er tryggere i case 19.
+Terskelvariantene gir lavere dekning. P70 ved k12/16 får 34/72 og 10/22 komplette, og mister 24 krav som k16/ingen dekker.
+Null misvisende-flagg i disse variantene er ikke dokumentert risikofjerning, se case 13.
+
+Mot den **justerte** MiniLM A-baselinen øker k12/16 uten terskel micro med 1,39 prosentpoeng og macro med 1,14 prosentpoeng;
+antall komplette caser forblir 15. Den eneste kravgevinsten er **08/2**; ingen krav går tapt.
+På den uendrede 15-slicen øker dekningen fra 39/51 til 40/51 (76,47% → 78,43%), macro fra 74,23% til 76,15%, med fortsatt 8/13 komplette.
+Dette blandes ikke med 25-settet eller den eldre manuelle B8-vurderingen.
+
+## Sikkerhetskontroll av de aktuelle kandidatene
+
+**08/2 er en reell, kildebekreftet gevinst.** Den leverte voksenpassasjen `source-01-004`, blokk 9 i k12/16 uten terskel,
+dekker voksen luftvei, se/lytte/føle etter pust og kontroll i inntil ti sekunder. Hele teksten leveres; kildebeviset og dommeren er enige.
+08/1 har både 113-oppringning og veiledning fra faktisk levert kilde, ikke den deaktiverte tredje bevisruten.
+08/3 har betinget sideleie ved normal pust. **08/4 mangler fortsatt**, og et delvis pustebevis gis ikke automatisk komplett pass.
+
+**Case 13 har en uavklart negativ risikovurdering i P70.** K12/P70 og k16/P70 leverer identisk kontekst og bruker samme cachede dommersvar.
+De beholder `source-01-027`, `source-04-009`, `source-03-008` og `source-08-010` som blokk 1/2/3/5, med de samme generelle 113-instruksjonene
+som den tidligere kildegjennomgangen identifiserte som potensielt misvisende uten mobildekning. Ingen levert kvalifikasjon gjør telefonkontakten tilgjengelig,
+og begge nødpeilerkrav mangler fortsatt. Det rå P70-svaret har likevel ingen misvisende-funn.
+Jeg finner ikke en tekstlig begrunnelse for denne tilsynelatende sikkerhetsgevinsten. Dette må behandles som et uavklart risikofunn,
+ikke som dokumentert eliminering av risiko eller direkte konflikt. Den godkjente adjudikasjonen for Gemma A har en annen eksakt inputbinding
+og overføres derfor ikke automatisk. K16/ingen får fortsatt misvisende-flagg i case 13.
+
+**Case 19 varierer uten en tilsvarende dokumentert risikoforskjell.** A/k8, k12 og k16 uten terskel har identisk `source-19-002` som blokk 3:
+et generelt redningsråd fra isredning som ikke selv angir is-situasjonen. A/k8 og k16 merker dette irrelevant; k12 merker det også potensielt misvisende,
+med risiko for å bruke feil redningsmetode i skredterreng. De første elleve blokkene er identiske mellom k12 og k16;
+k16 legger bare til to legevaktpassasjer, `source-04-010` og `source-03-009`. De endrer ikke redningsrådets avgrensning.
+Begge har allerede eksplisitt isinformasjon i blokk 8 og 9. Ingen direkte konflikt er påvist.
+En konkret mulig feil bruk er beskrevet, men én vurdering per forskjellig helkontekst kan ikke skille dommervariasjon fra en konteksteffekt.
+K16 kan derfor ikke erklæres tryggere enn k12 basert på dette flagget. Råresultatene beholdes; ingen ny adjudikasjon er aktivert.
+
+Alle overvåkede positive krav i k8/k12/k16 er kontrollert mot faktisk levert tekst og kildebevis.
+Case 20/1 er godkjent via eksakt A-input i k8; k12/16 leverer dessuten det eksplisitte rute-/ferdighetsgrunnlaget `source-10-002`.
+Kunnskapshullene 14, 15 og 25 rapporteres separat og blir ikke automatisk fullstendig pass.
+
+## Alle udekkede krav i k12/16 uten terskel
+
+| Case / krav | Hva mangler fortsatt | Dokumentert begrensning |
+|---|---|---|
+| 01 / 1–3 | Bruddmistanke ved manglende belastning, brudd/forstuing-usikkerhet, lege/legevakt ved mistanke | `source-04-005` er på MiniLM-rang 20, uten avkorting; utenfor k≤16/P2. P1 kan nå naboseksjonen via rang 6 dersom budsjettet tillater det; ikke testet. |
+| 03 / 3–5 | Korrekt fosskoking/tid/høyde og kjemikalie-/giftforbehold med alternativ vannkilde | `source-21-010` på rang 11 ville gitt 2062 tokens; `source-21-009` på rang 13 ville gitt 2086 i k16. Begge forkastes. Ingen forbedring fra k12 til k16. |
+| 06 / 1,4 | 113 ved stor/ustoppelig blødning, varme/overvåking og varsling ved endring | Full støtte mangler også i A. Denne gjennomgangen fastslår ikke én bestemt rangerings-/avkortingsårsak. K16 gir ingen gevinst. |
+| 08 / 4 | Vedvarende pustovervåking, HLR ved ingen/unormal pust, 113 ved usikkerhet | Nøkkelpassasje `source-07-005` ligger på rang 25. Den siste beslutningsdelen avkortes i begge embedding-visninger. De frosne grenreglene gir ingen dokumentert full rute; 08/2-gevinsten løser ikke 08/4. |
+| 13 / 1–2 | Aktivere nødpeiler ved livsfare uten dekning; handle tidlig uten å la tvil forsinke | `source-11-003` ligger på rang 16, men ville gitt 2031 tokens og forkastes. P3 kan muligens frigjøre plass; dette er ikke målt. |
+| 17 / 1–2 | Anafylaksimønster med hud/slimhinne/hals/pust og insektutløser; akutt eskalering/113 uten å vente | Symptompassasjen `source-08-004` har rang 34 og mister kritiske symptomer i begge embedding-visninger. Relevante akuttpassasjer ligger også utenfor topp 16. De planlagte justeringene har ikke løst dette. |
+| 21 / 2 | Filtrer først, desinfiser etterpå **og følg produktinstruksen** | Rekkefølgen leveres allerede. Produktinstruksen fra `source-21-009`, rang 13, ville gitt 2073 tokens og forkastes. Ikke en påvist omvendt behandlingsrekkefølge. |
+
+Dette er **14 udekkede krav**, inklusive flere akutte sikkerhetskrav. Ingen av kandidatene godkjennes som tilstrekkelig produksjonsdekning.
+Avkorting er dokumentert, men dens kausale effekt på rangeringen er ikke bevist gjennom kontrafaktiske modellkjøringer.
+Senere arbeid utenfor denne forsøksplanen må håndtere de utilgjengelige akuttpassasjene og bevare fullstendige handlingsforløp;
+slikt arbeid er ikke startet. Flere kilder eller Qwen-svar er ikke brukt til å kompensere.
+
+## Hva eieren må avklare for C
+
+1. Det uavklarte risikofunnet i case 13/P70 må vurderes mot den allerede godkjente kildebaserte tolkningen, med nye eksakte kontekstbindinger dersom det adjudikeres.
+2. Case 19 må få en konsistent, kildebegrunnet behandling av den samme generelle redningspassasjen. Ingen scorer endres før en separat beslutning.
+3. Eieren må eksplisitt velge et **forsøksgrunnlag for C** eller godkjenne en avgrenset fravikelse fra dominansregelen med disse dokumenterte avveiningene.
+   Min anbefaling er k16/ingen. Dette er forskjellig fra godkjenning av en produksjonskonfigurasjon.
+
+De tre planlagte C-konfigurasjonene kan deretter bruke de samme frosne packing-reglene, indeksen og cachede inputene.
+Fase A eller B trenger ikke gjentas. Det er ingen tillatelse til holdout, produksjonsendring eller nye parameterkombinasjoner.
+
 
 Historisk B8: 34/51 og 7/13 komplette på den opprinnelige 15-slicen med manuelle vurderinger. Dette er ikke en kontrollert 25-sett-sammenligning. Forsøket er utviklings-/kalibreringsarbeid, ikke uavhengig sikkerhetsvalidering. Endelig eierbeslutning og eventuell senere kontrolltest gjenstår.
 

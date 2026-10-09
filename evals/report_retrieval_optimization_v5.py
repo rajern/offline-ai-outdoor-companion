@@ -49,6 +49,14 @@ def export():
     data['reported_at'] = datetime.now(timezone.utc).isoformat()
     data['judge_identity'] = read(RUN / 'freeze.json')['judge_identity']
     data['resources_by_worker'] = [dict(file=p.name, **read(p)) for p in sorted((STATE / 'resources').glob('*.json'))]
+    resumed = [w for w in data['resources_by_worker']
+               if not w['file'].startswith(('retrieve-B-k3-none-', 'score-B-k3-none-'))]
+    if resumed:
+        data['resumed_worker_resources'] = {
+            'workers': len(resumed),
+            'peak_process_tree_rss_bytes': max(w['peak_process_tree_rss_bytes'] for w in resumed),
+            'minimum_available_ram_bytes': min(w['minimum_available_ram_bytes'] for w in resumed),
+            'sum_worker_cpu_seconds': sum(w['cpu_seconds'] for w in resumed)}
     data['resume_attempts'] = [read(p) for p in sorted((STATE / 'resume-attempts').glob('attempt-*.json'))]
     data['indices'] = {p.parent.name: read(p) for p in (RUN / 'indices').glob('*/index.json')}
     data['stage_choices'] = {phase: read(RUN / f'choice-{phase}.json') for phase in ['A', 'B', 'C']
@@ -82,6 +90,8 @@ def export():
         f"Resultatsnapshot: {data['at']}. Eksport: {data['reported_at']}.", '']
     if data['error']:
         lines += ['Kjøringen stoppet: ' + data['error'], '']
+    if 'final-review.v1.json' in data:
+        lines += [data['final-review.v1.json']['summary'], '']
     lines += ['## Metode og avgrensning', '',
         'MiniLM er eierens valgte forsøksmodell. Fase A og B-k3-none gjenbrukes; ingen fullførte dommerkall gjentas. '
         'Alle caser bruker den samme frosne kildebasen, V3-prompten, schemaet, scoreren og Codex Sol Medium '
@@ -151,6 +161,13 @@ def export():
         'mens de andre bygget dokumentvektorer; A-indekstidene er derfor ikke en lik full-indeks-benchmark. '
         'MiniLMs kjente 128-token-avkorting (108/405 visninger, ingen spørsmål) er uendret. '
         'Mobil-RAM, energibruk og samlet lokal svartid er fortsatt ikke målt.', '']
+    if 'resumed_worker_resources' in data:
+        resource = data['resumed_worker_resources']
+        lines += [f"Etter gjenopptakelse, eksklusive det historiske B-k3-none-forsøket: "
+                  f"maks worker-tre-RSS {resource['peak_process_tree_rss_bytes']/1024**2:.1f} MiB, "
+                  f"min ledig RAM {resource['minimum_available_ram_bytes']/1024**2:.1f} MiB, "
+                  f"sum målt worker-CPU {resource['sum_worker_cpu_seconds']:.2f} s. "
+                  'De opprinnelige 4 GiB/256 MiB-grensene bestod i disse workerne.', '']
     lines += ['Spørsmålsvektorene er også lagrede. Ranking-/packing-tidene inkluderer derfor ikke '
         'embedding av et nytt brukerspørsmål. De er ikke full online retrieval-latens. '
         'Embeddingmålingene fra A og størrelses-/RAMdata rapporteres separat i resultat-JSON.', '']
@@ -169,6 +186,25 @@ def export():
                   'og inkludert i antall forsøk/ukjent forbruk og kjøretid. Ingen vurdering kom tilbake fra dette forsøket. '
                   'Eierens nye fortsett-instruks kom etter naturlig kvotefornyelse; kun det avviste inputet ble klargjort på nytt. '
                   'Den frosne driverens v4-telling følger nåværende cache; v5 inkluderer også de arkiverte forsøkene.', '']
+    if 'resume-quota-end.v1.json' in data:
+        end = data['resume-quota-end.v1.json']
+        lines += [f"Siste kvotesnapshot {end['at']}: femtimerskvote {end['five_hour_used_percent']}% brukt, "
+                  f"ukeskvote {end['weekly_used_percent']}% brukt. "
+                  f"Kvoteavvisning under forsøket: {'ja' if end['quota_rejection_occurred'] else 'nei'}. "
+                  'En naturlig fornyelse og ny eierinstruks tillot videreføring; ingen reset-kreditt ble brukt.', '']
+    if 'final-audit.v1.json' in data:
+        audit = data['final-audit.v1.json']
+        lines += ['## Teknisk sluttkontroll', '',
+                  f"Offline integritetsaudit består: {audit['verified_completed_case_inputs']} case-resultater, "
+                  f"{audit['frozen_identity_files_verified']} frosne filer og "
+                  f"{audit['phase_a_files_unchanged']} uendrede A-artefakter. "
+                  'Kildeproveniens, faktisk kontekst/prompt, token-cache/budsjett, blindet input, '
+                  'resultatsegl/loggbruk, schema og kildebevis er kontrollert; rå og justerte aggregater er beregnet på nytt. '
+                  'Kun de godkjente eksakte adjudikasjonsbindingene gir justering. Alle tre indeksers vektorhashes og '
+                  'det arkiverte kvoteforsøket er verifisert. Ingen nye dommer-/tokenizerkall i audit. '
+                  'Dette bekrefter teknisk integritet, ikke uavhengig semantisk sikkerhetsvalidering. '
+                  'De tidligere 34 relevante scorer-/packing-/fortsettelsestestene bestod; ny audit-/rapportkode '
+                  'har også bestått Python-kompilering og kjøring mot de lagrede resultatene.', '']
     # Detailed source/safety review is supplied separately after the stage gate.
     review = STATE / 'final-review.v1.md'
     if review.exists():

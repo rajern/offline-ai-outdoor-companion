@@ -1,5 +1,20 @@
 # Retrieval evaluation boundaries
 
+Latest continuation status, 2026-10-09: all 25 MiniLM phase-B configurations
+are complete (625 judgments); 28/31 configurations including A. C has not run.
+RAM checks passed after owner-authorized resume with unchanged limits. One
+quota rejection was retained in a hashed archive and retried only after natural
+quota renewal and a new owner resume instruction; completed answers were reused.
+The original stage-B dominance gate stopped selection. Source review finds
+unresolved case-13 risk negatives at P70 despite unchanged generic 113 advice,
+and case-19 risk variability despite identical rescue advice. See
+`retrieval_optimization_report.v5.md` and `retrieval_optimization_final_audit.v1.json`.
+MiniLM k16/no threshold is recommended provisionally as the experimental C
+candidate, not selected or approved for production. Obtain a context-bound risk
+resolution and explicit experimental B choice/limited gate override before C.
+Do not repeat A/B, change frozen gold/judge/packing, or open holdout. Earlier
+progress/stops below are historical; their scope restrictions remain applicable.
+
 Owner task, 2026-10-08: the existing 25 development cases and conditional 31-step
 optimization are authorized after the specified scorer/runtime prechecks. This
 supersedes the preparation-only scope below; original gold/references remain

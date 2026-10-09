@@ -29,6 +29,7 @@ def archive_quota_rejection(key, authorization):
         cache = (s.CACHE / key).resolve()
         assert cache.is_relative_to(s.CACHE.resolve())
         out = cache / 'results/context-01'
+        assert out.resolve().is_relative_to(cache)
         record = s.runtime.read(out / 'record.json')
         events, malformed, usage = s.runtime.events_and_usage(out / 'stdout.jsonl')
         assert record['success'] is False and record['returncode'] != 0
