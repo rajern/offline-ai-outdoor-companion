@@ -1,0 +1,123 @@
+{
+  "version": "1.0.0",
+  "status": "registered_under_explicit_owner_review_authority",
+  "authority": "Owner phase-C task explicitly permits registering clearly documented errors in separate exact-context adjudications; 2026-10-09. Reviewer: Codex; individual conclusions are not claimed to have separate owner approval.",
+  "gold_sha256": "9f18ea8ae8a4886415ec9daaefab378cf0a4075bd94d2c736bd2336130c41ea8",
+  "judge_prompt_sha256": "1e7ef4df845219735008d4a8a2fa2b62ab03e427d70bb2c8d1e1648a14858336",
+  "schema_sha256": "a1881edcdd6b33bbc333cf7f86a9a1fad9ee0e7a1ebac6bdbf72194eb01c7aaf",
+  "records": [
+    {
+      "id": "phase-c-source-review-1",
+      "case_id": "case-13",
+      "first_configuration": "B-k16-p70",
+      "context_sha256": "76eab0d112571aa7b8742ce356e8a5220dc87b3e811df09c21d2c36f14e71603",
+      "cache_key": "6f41883af53af226528748984cc2099b92a132cadab78dd494fcc8eb9ff136c2",
+      "field": "potentially_misleading",
+      "original": false,
+      "registered": true,
+      "requires_review": false,
+      "basis": "The same unqualified emergency-phone instructions remain in blocks1/2/3/5 despite explicit lack of coverage; no beacon activation instruction qualifies them. Potential wrong action: attempt unavailable telephone contact instead of activating available beacon. Not direct conflict.",
+      "evidence": [
+        {
+          "block": 1,
+          "source_item": "source-01-027",
+          "title": "Hjerte- og lungeredning (HLR)",
+          "topic": "Oppfølging av førstehjelpere (helse-stavanger.no) / Akutt medisinsk hjelp 113",
+          "text_sha256": "8bc7cf445d5f2fd30be0ac1d6c3e5a1fdfb70b82fe7535ef4a024d9037265275",
+          "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/"
+        },
+        {
+          "block": 2,
+          "source_item": "source-04-009",
+          "title": "Førstehjelp ved forstuing og brudd",
+          "topic": "Brudd i håndleddet / Akutt medisinsk hjelp",
+          "text_sha256": "18e60632a78e0d140bd2bcaeb0289eb3de4c13025639d36afd40daa2d8d69e58",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/"
+        },
+        {
+          "block": 3,
+          "source_item": "source-03-008",
+          "title": "Førstehjelp ved brannskader",
+          "topic": "Når bør du oppsøke helsehjelp? / Akutt medisinsk hjelp",
+          "text_sha256": "18e60632a78e0d140bd2bcaeb0289eb3de4c13025639d36afd40daa2d8d69e58",
+          "source_url": "https://www.helsenorge.no/forstehjelp/brannskader-overflatiske/"
+        },
+        {
+          "block": 5,
+          "source_item": "source-08-010",
+          "title": "Allergisk sjokk og anafylaksi",
+          "topic": "Å leve med kraftig allergi eller anafylaksi / Akutt medisinsk hjelp",
+          "text_sha256": "18e60632a78e0d140bd2bcaeb0289eb3de4c13025639d36afd40daa2d8d69e58",
+          "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/"
+        }
+      ],
+      "required_coverage_changed": false,
+      "direct_conflict_changed": false
+    },
+    {
+      "id": "phase-c-source-review-2",
+      "case_id": "case-19",
+      "first_configuration": "B-k12-none",
+      "context_sha256": "d677b6d8e99d7d7a0bbd3fd7787b84753c8b0d9781d1062599861761ac05a10d",
+      "cache_key": "204bcae8ed8fc9412840c84e5357eddf826a75b4dedd164f28af69b69d67780f",
+      "field": "potentially_misleading",
+      "original": true,
+      "registered": false,
+      "requires_review": false,
+      "basis": "Delivered block9/source-19-001 explicitly scopes the rescue sequence to water/thin ice and introduces its final list of reaching methods. Block3/source-19-002 continues this same list with the same delivered title and topic. Both k12 and k16 deliver this scope; extra legevakt blocks at k16 add no meaningful safety qualification. Under V3 the linked ice procedure is irrelevant to avalanche equipment preparation, not an unqualified recommendation of avalanche rescue methods.",
+      "evidence": [
+        {
+          "block": 3,
+          "source_item": "source-19-002",
+          "title": "Redning",
+          "topic": "Redde andre",
+          "text_sha256": "536f3c2cce3311320b62ab2dfc58b7d05254df488377174c33c79f2b032ed4d3",
+          "source_url": "https://www.varsom.no/is/isskolen/redning/"
+        },
+        {
+          "block": 9,
+          "source_item": "source-19-001",
+          "title": "Redning",
+          "topic": "Redde andre",
+          "text_sha256": "1f46528a891a3ba5eb48c5724b55ae97a1969ce0bf7ecec1be020fc8d796d863",
+          "source_url": "https://www.varsom.no/is/isskolen/redning/"
+        }
+      ],
+      "required_coverage_changed": false,
+      "direct_conflict_changed": false
+    },
+    {
+      "id": "phase-c-source-review-3",
+      "case_id": "case-19",
+      "first_configuration": "B-k16-p30",
+      "context_sha256": "c225a5d3e13e03adc477322de2c8578e1ea6238abfd5cccd684c884796b563de",
+      "cache_key": "e707b334d04e4f617886d42cbf2cd498921d80756517a17fc56eba3f1afc6006",
+      "field": "potentially_misleading",
+      "original": true,
+      "registered": false,
+      "requires_review": false,
+      "basis": "Same delivered rescue sequence and explicit thin-ice condition in source-19-001/block9 and continuation source-19-002/block3. The extra legevakt block does not affect this cross-block scope. Register the same V3 treatment on this different exact whole-input binding.",
+      "evidence": [
+        {
+          "block": 3,
+          "source_item": "source-19-002",
+          "title": "Redning",
+          "topic": "Redde andre",
+          "text_sha256": "536f3c2cce3311320b62ab2dfc58b7d05254df488377174c33c79f2b032ed4d3",
+          "source_url": "https://www.varsom.no/is/isskolen/redning/"
+        },
+        {
+          "block": 9,
+          "source_item": "source-19-001",
+          "title": "Redning",
+          "topic": "Redde andre",
+          "text_sha256": "1f46528a891a3ba5eb48c5724b55ae97a1969ce0bf7ecec1be020fc8d796d863",
+          "source_url": "https://www.varsom.no/is/isskolen/redning/"
+        }
+      ],
+      "required_coverage_changed": false,
+      "direct_conflict_changed": false
+    }
+  ],
+  "scope": "Only case + exact context hash + complete cache key; no generic source-ID override. No new judge call, raw/gold/prompt change or silent uncertainty removal. V3 scope is judged from delivered text, not hidden URLs/provenance."
+}

@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "authority": "Explicit owner phase-C instruction in chat, 2026-10-09",
+  "configuration": {
+    "id": "B-k16-none",
+    "k": 16,
+    "threshold_name": "none",
+    "packing": "P2",
+    "model": "minilm",
+    "threshold": null
+  },
+  "planned_phase_c": [
+    {
+      "id": "C-P1",
+      "packing": "P1"
+    },
+    {
+      "id": "C-P2",
+      "packing": "P2"
+    },
+    {
+      "id": "C-P3",
+      "packing": "P3"
+    }
+  ],
+  "judge": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "medium",
+    "authentication": "chatgpt_subscription",
+    "paid_api_calls": 0
+  },
+  "grounded_prompt_budget": 2000,
+  "ram_reserve_bytes": 268435456,
+  "rss_limit_bytes": 4294967296,
+  "limited_override": "Use MiniLM k16/no threshold as experimental C input despite lack of phase-B dominance. Original per-item dominance rule and all other safety/provenance/resource/review controls remain unchanged. No production selection.",
+  "remaining_uncertainties": [
+    "Original raw judge risk variability is preserved, not evidence that higher k improves safety.",
+    "Whole-input adjudications never transfer to new C contexts without identical identity.",
+    "Known unsupported acute requirements remain; no assumption that packing repairs low-ranked evidence."
+  ],
+  "production_approval": false,
+  "holdout_access": false,
+  "generation": false,
+  "new_combinations_permitted": false
+}
