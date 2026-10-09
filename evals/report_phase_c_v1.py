@@ -63,14 +63,18 @@ def export():
             data[name] = read(STATE / name)
     (ROOT / 'evals/retrieval_optimization_results.v6.json').write_text(
         json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
-    lines = ['# M2-06 — avsluttende utviklingsrapport', '',
-             f"**Status: {data['status']}. {data['completed']}/31 konfigurasjoner ferdige.**", '',
+    lines = ['# M2-06 — utviklingsrapport etter fase C / ressursstopp', '',
+             f"**Status: {data['status']}. {data['completed']}/31 konfigurasjoner fullt scoret.**", '',
              f"Resultatsnapshot {data['at']}; rapport {data['reported_at']}.", '']
     if data['error']:
         lines += ['Stoppgrunn: ' + data['error'], '']
     review = data.get('final-review.json')
     if review:
         lines += [review['summary'], '']
+        if review.get('execution_blocker'):
+            lines += ['C-P1 har 25 gyldige lagrede vurderinger, men score-worker bestod ikke ressurskontrollen. '
+                      'Status «complete» i råtabellen betyr at resultatene er komplett scoret; den godkjenner ikke ressurskjøringen. '
+                      'C-P2 og C-P3 er ikke startet. Fase C og hele sammenligningen er derfor ufullført.', '']
     lines += ['## Frosset sammenligning og adjudikasjoner', '',
         'A/B ble gjenbrukt. C bruker eierens eksplisitte forsøksvalg MiniLM/k16/ingen terskel og de opprinnelige P1/P2/P3-reglene. '
         'Bare overgangen fra B har et avgrenset eiergodkjent fravik fra dominansregelen. Ingen generell sikkerhetsport er fjernet, '
@@ -146,7 +150,7 @@ def export():
                   'Ingen betalt API-fallback eller reset-kreditt.', '']
     if 'final-audit.json' in data:
         audit = data['final-audit.json']
-        lines += [f"Offline sluttkontroll består: {audit['verified_completed_case_inputs']} case-resultater, "
+        lines += [f"Offline integritetskontroll består: {audit['verified_completed_case_inputs']} case-resultater, "
                   f"{audit['frozen_identity_files_verified']} frosne identitetsfiler og "
                   f"{audit['protected_prior_A_B_files']} bevarte A/B-filer. Kildeproveniens, full serialisering/token-cache, "
                   'input-/resultatsegl, schema, kildebevis, raw/justerte aggregater og registrerte risikodelta er kontrollert uten nye dommerkall. '

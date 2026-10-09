@@ -1,8 +1,8 @@
 {
-  "at": "2026-10-09T13:56:31.934693+00:00",
-  "status": "running_C",
-  "error": null,
-  "completed": 28,
+  "at": "2026-10-09T14:27:59.169168+00:00",
+  "status": "blocked",
+  "error": "Resource guard: process RSS limit or available RAM reserve exceeded",
+  "completed": 29,
   "configurations": [
     {
       "configuration": {
@@ -22853,8 +22853,8 @@
         "k": 16,
         "threshold": null
       },
-      "status": "partial",
-      "judged_cases": 23,
+      "status": "complete",
+      "judged_cases": 25,
       "partial_scores": [
         {
           "case_id": "case-01",
@@ -23271,8 +23271,390 @@
           "certificate_judge_disagreement": [],
           "context_sha256": "76df4d013c0e30a083132ca0165470ef4121f786fe9646030255cc6399e6c27e",
           "cache_key": "beb56e0a1df2d5d884c38416f8dc4a98db3f1a06eadfe226574ff16d3cba05d7"
+        },
+        {
+          "case_id": "case-24",
+          "decisions": [
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "7a2ebe4d91fe13b208feefe0fc7829f8ae86074e04bcb763733b1bf068ae84ba",
+          "cache_key": "b003b1c38fc3e550c9b788576ccf5adc11d687c2a84a6472a2014ad69fe05ea8"
+        },
+        {
+          "case_id": "case-25",
+          "decisions": [],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "c2f660d352233a637ba561d6fda7cbf82896a13ac757ced63a0b0f077fb809fe",
+          "cache_key": "6dde3f2a3f5731612dc33a6a40de67b82959d11df00f86b6e67436bf27314086"
         }
-      ]
+      ],
+      "raw_full25": {
+        "cases": 25,
+        "supported_cases": 22,
+        "gap_cases": 3,
+        "must_have_total": 72,
+        "covered": 63,
+        "micro_coverage": 0.875,
+        "macro_coverage": 0.8522727272727273,
+        "complete_cases": 17,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 22,
+          "potentially_misleading": 2,
+          "contradictory": 1,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-25",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "adjusted_full25": {
+        "cases": 25,
+        "supported_cases": 22,
+        "gap_cases": 3,
+        "must_have_total": 72,
+        "covered": 63,
+        "micro_coverage": 0.875,
+        "macro_coverage": 0.8522727272727273,
+        "complete_cases": 17,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 22,
+          "potentially_misleading": 2,
+          "contradictory": 1,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-25",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "raw_legacy15": {
+        "cases": 15,
+        "supported_cases": 13,
+        "gap_cases": 2,
+        "must_have_total": 51,
+        "covered": 44,
+        "micro_coverage": 0.8627450980392157,
+        "macro_coverage": 0.8269230769230769,
+        "complete_cases": 9,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 13,
+          "potentially_misleading": 1,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "adjusted_legacy15": {
+        "cases": 15,
+        "supported_cases": 13,
+        "gap_cases": 2,
+        "must_have_total": 51,
+        "covered": 44,
+        "micro_coverage": 0.8627450980392157,
+        "macro_coverage": 0.8269230769230769,
+        "complete_cases": 9,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 13,
+          "potentially_misleading": 1,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "applied_adjudications": [],
+      "resources": {
+        "prompt_tokens": [
+          1988,
+          1967,
+          1990,
+          1954,
+          1985,
+          1952,
+          1992,
+          1999,
+          1981,
+          1972,
+          1969,
+          1974,
+          1980,
+          1939,
+          1980,
+          1948,
+          1973,
+          1998,
+          1959,
+          1941,
+          1947,
+          1962,
+          1956,
+          1947,
+          1992
+        ],
+        "context_tokens": [
+          1809,
+          1769,
+          1800,
+          1767,
+          1798,
+          1769,
+          1802,
+          1800,
+          1801,
+          1791,
+          1770,
+          1780,
+          1783,
+          1749,
+          1803,
+          1755,
+          1773,
+          1807,
+          1765,
+          1747,
+          1739,
+          1777,
+          1761,
+          1743,
+          1801
+        ],
+        "passages": [
+          9,
+          13,
+          13,
+          10,
+          10,
+          11,
+          13,
+          12,
+          14,
+          15,
+          11,
+          10,
+          13,
+          7,
+          14,
+          10,
+          11,
+          8,
+          13,
+          11,
+          11,
+          14,
+          9,
+          13,
+          12
+        ],
+        "budget_excluded_packets": 161,
+        "ranking_seconds": 0.013353900038055144,
+        "retrieval_and_packing_seconds": 246.6360607999959
+      }
     },
     {
       "configuration": {
@@ -23294,19 +23676,19 @@
     }
   ],
   "consumption": {
-    "actual_calls": 190,
-    "successful_calls": 189,
-    "cache_hits": 511,
-    "avoided_calls": 511,
+    "actual_calls": 214,
+    "successful_calls": 213,
+    "cache_hits": 512,
+    "avoided_calls": 512,
     "usage": {
-      "input_tokens": 1404763,
-      "cached_input_tokens": 218368,
+      "input_tokens": 1597739,
+      "cached_input_tokens": 225280,
       "cache_write_input_tokens": 0,
-      "output_tokens": 319399,
-      "reasoning_output_tokens": 38314,
-      "total_tokens": 1724162
+      "output_tokens": 375237,
+      "reasoning_output_tokens": 43580,
+      "total_tokens": 1972976
     },
-    "sum_call_seconds": 9415.461188200006,
+    "sum_call_seconds": 11015.003606199978,
     "unknown_usage_calls": 1,
     "errors": [
       {
@@ -23774,6 +24156,15 @@
       "memory_method": "sampled simultaneous process-tree RSS"
     },
     {
+      "file": "retrieve-C-P1-001.json",
+      "elapsed_seconds": 252.32580710000184,
+      "peak_process_tree_rss_bytes": 260259840,
+      "minimum_available_ram_bytes": 1765228544,
+      "cpu_seconds": 221.828125,
+      "sample_interval_seconds": 0.1,
+      "memory_method": "sampled simultaneous process-tree RSS"
+    },
+    {
       "file": "score-B-k12-none-001.json",
       "elapsed_seconds": 1556.6147892000008,
       "peak_process_tree_rss_bytes": 213528576,
@@ -24006,13 +24397,22 @@
       "cpu_seconds": 51.5625,
       "sample_interval_seconds": 0.1,
       "memory_method": "sampled simultaneous process-tree RSS"
+    },
+    {
+      "file": "score-C-P1-001.json",
+      "elapsed_seconds": 1622.0365396999987,
+      "peak_process_tree_rss_bytes": 242778112,
+      "minimum_available_ram_bytes": 54968320,
+      "cpu_seconds": 248.375,
+      "sample_interval_seconds": 0.1,
+      "memory_method": "sampled simultaneous process-tree RSS"
     }
   ],
   "holdout_accessed": false,
   "paid_api_calls": 0,
   "production_changed": false,
   "generation_calls": 0,
-  "reported_at": "2026-10-09T14:26:01.181967+00:00",
+  "reported_at": "2026-10-09T14:35:00.905838+00:00",
   "indices": {
     "gemma2": {
       "model_identity": {
@@ -39455,6 +39855,1825 @@
         }
       ],
       "budget_exclusions": []
+    },
+    {
+      "configuration": "C-P1",
+      "case_id": "case-01",
+      "decisions": [
+        "covered",
+        "covered",
+        "covered",
+        "covered"
+      ],
+      "flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "contradictory": false,
+        "jurisdiction_leakage": false
+      },
+      "requires_review": false,
+      "context_sha256": "3fff08b04b43ddb1f1f74fea2a5f02d90ff2f25000d0a7679e31a1d4e99b74cc",
+      "cache_key": "d3a95434601c677ebc6bb5c221ec40c4685974a4d514488686dc601d4644cbd3",
+      "source_items": [
+        {
+          "id": "source-19-003",
+          "url": "https://www.varsom.no/is/isskolen/redning/"
+        },
+        {
+          "id": "source-19-004",
+          "url": "https://www.varsom.no/is/isskolen/redning/"
+        },
+        {
+          "id": "source-10-004",
+          "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code"
+        },
+        {
+          "id": "source-04-003",
+          "url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/"
+        },
+        {
+          "id": "source-04-004",
+          "url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/"
+        },
+        {
+          "id": "source-04-007",
+          "url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/"
+        },
+        {
+          "id": "source-04-005",
+          "url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/"
+        },
+        {
+          "id": "source-04-006",
+          "url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/"
+        },
+        {
+          "id": "source-04-010",
+          "url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/"
+        }
+      ],
+      "budget_exclusions": [
+        {
+          "seed_rank": 7,
+          "seed_id": "source-04-002",
+          "prompt_tokens": 2054,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 8,
+          "seed_id": "source-17-003",
+          "prompt_tokens": 2175,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 10,
+          "seed_id": "source-07-006",
+          "prompt_tokens": 2429,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 11,
+          "seed_id": "source-19-002",
+          "prompt_tokens": 2452,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 12,
+          "seed_id": "source-03-009",
+          "prompt_tokens": 2063,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 13,
+          "seed_id": "source-21-010",
+          "prompt_tokens": 2814,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 14,
+          "seed_id": "source-09-007",
+          "prompt_tokens": 2123,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 15,
+          "seed_id": "source-02-004",
+          "prompt_tokens": 2160,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 16,
+          "seed_id": "source-14-004",
+          "prompt_tokens": 2103,
+          "status": "over_budget"
+        }
+      ]
+    },
+    {
+      "configuration": "C-P1",
+      "case_id": "case-03",
+      "decisions": [
+        "covered",
+        "covered",
+        "covered",
+        "covered",
+        "covered"
+      ],
+      "flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "contradictory": false,
+        "jurisdiction_leakage": false
+      },
+      "requires_review": false,
+      "context_sha256": "2133ff727380ed90123777c334dc4863b7d785fee77391520d6ff50ff1aa28ef",
+      "cache_key": "9871f7d9134105c30ee428fe0ff656a909385141c32ca1675fc5fb3dc03246e5",
+      "source_items": [
+        {
+          "id": "source-20-003",
+          "url": "https://www.varsom.no/flom-og-jordskred/om-flom-og-jordskred/rad-og-forebygging/rad-til-privatpersoner/"
+        },
+        {
+          "id": "source-20-004",
+          "url": "https://www.varsom.no/flom-og-jordskred/om-flom-og-jordskred/rad-og-forebygging/rad-til-privatpersoner/"
+        },
+        {
+          "id": "source-21-005",
+          "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html"
+        },
+        {
+          "id": "source-21-002",
+          "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html"
+        },
+        {
+          "id": "source-21-003",
+          "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html"
+        },
+        {
+          "id": "source-21-009",
+          "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html"
+        },
+        {
+          "id": "source-21-010",
+          "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html"
+        },
+        {
+          "id": "source-21-011",
+          "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html"
+        },
+        {
+          "id": "source-21-012",
+          "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html"
+        },
+        {
+          "id": "source-21-013",
+          "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html"
+        },
+        {
+          "id": "source-21-014",
+          "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html"
+        },
+        {
+          "id": "source-21-008",
+          "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html"
+        },
+        {
+          "id": "source-21-016",
+          "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html"
+        }
+      ],
+      "budget_exclusions": [
+        {
+          "seed_rank": 7,
+          "seed_id": "source-20-005",
+          "prompt_tokens": 2071,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 9,
+          "seed_id": "source-03-006",
+          "prompt_tokens": 2327,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 12,
+          "seed_id": "source-05-004",
+          "prompt_tokens": 2354,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 14,
+          "seed_id": "source-06-004",
+          "prompt_tokens": 2127,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 15,
+          "seed_id": "source-21-006",
+          "prompt_tokens": 2074,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 16,
+          "seed_id": "source-14-004",
+          "prompt_tokens": 2105,
+          "status": "over_budget"
+        }
+      ]
+    },
+    {
+      "configuration": "C-P1",
+      "case_id": "case-06",
+      "decisions": [
+        "not_covered",
+        "covered",
+        "covered",
+        "covered"
+      ],
+      "flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "contradictory": false,
+        "jurisdiction_leakage": false
+      },
+      "requires_review": false,
+      "context_sha256": "cd1bba7bd67fab2ebdcf38a676186fbd1445bdb5d7402ddf54ac0b6f20947b8e",
+      "cache_key": "b56621e1283e005fdda5d23b8ac662fe8ef07fb12396671659fde0ec1a8859f9",
+      "source_items": [
+        {
+          "id": "source-02-007",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/"
+        },
+        {
+          "id": "source-02-008",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/"
+        },
+        {
+          "id": "source-02-009",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/"
+        },
+        {
+          "id": "source-02-010",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/"
+        },
+        {
+          "id": "source-02-001",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/"
+        },
+        {
+          "id": "source-02-011",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/"
+        },
+        {
+          "id": "source-02-012",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/"
+        },
+        {
+          "id": "source-04-007",
+          "url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/"
+        },
+        {
+          "id": "source-04-005",
+          "url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/"
+        },
+        {
+          "id": "source-04-006",
+          "url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/"
+        },
+        {
+          "id": "source-03-002",
+          "url": "https://www.helsenorge.no/forstehjelp/brannskader-overflatiske/"
+        }
+      ],
+      "budget_exclusions": [
+        {
+          "seed_rank": 8,
+          "seed_id": "source-04-002",
+          "prompt_tokens": 2057,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 11,
+          "seed_id": "source-19-002",
+          "prompt_tokens": 2416,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 12,
+          "seed_id": "source-02-013",
+          "prompt_tokens": 2122,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 13,
+          "seed_id": "source-20-001",
+          "prompt_tokens": 2026,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 14,
+          "seed_id": "source-03-004",
+          "prompt_tokens": 2078,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 15,
+          "seed_id": "source-04-003",
+          "prompt_tokens": 2497,
+          "status": "over_budget"
+        }
+      ]
+    },
+    {
+      "configuration": "C-P1",
+      "case_id": "case-08",
+      "decisions": [
+        "covered",
+        "covered",
+        "covered",
+        "not_covered"
+      ],
+      "flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "contradictory": false,
+        "jurisdiction_leakage": false
+      },
+      "requires_review": false,
+      "context_sha256": "8f61b6d6b95b6b3ed8e4c93a0d749ab3fbd63ac2819aa010c74e6660deb894bf",
+      "cache_key": "96736c44ea513c4ada8ffde407930d27c012cd5b9e14a5c6299d191cc3c793e3",
+      "source_items": [
+        {
+          "id": "source-07-003",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/"
+        },
+        {
+          "id": "source-07-006",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/"
+        },
+        {
+          "id": "source-07-007",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/"
+        },
+        {
+          "id": "source-01-010",
+          "url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/"
+        },
+        {
+          "id": "source-04-010",
+          "url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/"
+        },
+        {
+          "id": "source-01-017",
+          "url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/"
+        },
+        {
+          "id": "source-01-002",
+          "url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/"
+        },
+        {
+          "id": "source-03-009",
+          "url": "https://www.helsenorge.no/forstehjelp/brannskader-overflatiske/"
+        },
+        {
+          "id": "source-05-004",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/"
+        },
+        {
+          "id": "source-05-005",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/"
+        },
+        {
+          "id": "source-01-004",
+          "url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/"
+        },
+        {
+          "id": "source-08-011",
+          "url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/"
+        }
+      ],
+      "budget_exclusions": [
+        {
+          "seed_rank": 11,
+          "seed_id": "source-07-001",
+          "prompt_tokens": 2118,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 12,
+          "seed_id": "source-01-006",
+          "prompt_tokens": 2158,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 13,
+          "seed_id": "source-01-028",
+          "prompt_tokens": 2076,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 14,
+          "seed_id": "source-07-002",
+          "prompt_tokens": 2125,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 15,
+          "seed_id": "source-05-003",
+          "prompt_tokens": 2103,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 16,
+          "seed_id": "source-07-004",
+          "prompt_tokens": 2247,
+          "status": "over_budget"
+        }
+      ]
+    },
+    {
+      "configuration": "C-P1",
+      "case_id": "case-13",
+      "decisions": [
+        "not_covered",
+        "not_covered"
+      ],
+      "flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "contradictory": false,
+        "jurisdiction_leakage": false
+      },
+      "requires_review": false,
+      "context_sha256": "e9e1da2a98434c0cb4c2ad61e1c1c5ca6803ae188492b46ff599be31d466aa31",
+      "cache_key": "cc31cf3c18b8fec9c699c7702fa3b7e1277d1a2c9955588f0ad3dad4ae05b95c",
+      "source_items": [
+        {
+          "id": "source-01-026",
+          "url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/"
+        },
+        {
+          "id": "source-01-027",
+          "url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/"
+        },
+        {
+          "id": "source-04-008",
+          "url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/"
+        },
+        {
+          "id": "source-04-009",
+          "url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/"
+        },
+        {
+          "id": "source-03-007",
+          "url": "https://www.helsenorge.no/forstehjelp/brannskader-overflatiske/"
+        },
+        {
+          "id": "source-03-008",
+          "url": "https://www.helsenorge.no/forstehjelp/brannskader-overflatiske/"
+        },
+        {
+          "id": "source-07-002",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/"
+        },
+        {
+          "id": "source-08-009",
+          "url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/"
+        },
+        {
+          "id": "source-08-010",
+          "url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/"
+        },
+        {
+          "id": "source-07-006",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/"
+        },
+        {
+          "id": "source-07-007",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/"
+        },
+        {
+          "id": "source-14-004",
+          "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/river-crossing-safety/"
+        },
+        {
+          "id": "source-04-010",
+          "url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/"
+        }
+      ],
+      "budget_exclusions": [
+        {
+          "seed_rank": 8,
+          "seed_id": "source-05-007",
+          "prompt_tokens": 2098,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 9,
+          "seed_id": "source-04-006",
+          "prompt_tokens": 2399,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 10,
+          "seed_id": "source-16-003",
+          "prompt_tokens": 2016,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 11,
+          "seed_id": "source-19-001",
+          "prompt_tokens": 2367,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 12,
+          "seed_id": "source-08-007",
+          "prompt_tokens": 2162,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 14,
+          "seed_id": "source-08-011",
+          "prompt_tokens": 2056,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 15,
+          "seed_id": "source-16-001",
+          "prompt_tokens": 2079,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 16,
+          "seed_id": "source-11-003",
+          "prompt_tokens": 2082,
+          "status": "over_budget"
+        }
+      ]
+    },
+    {
+      "configuration": "C-P1",
+      "case_id": "case-17",
+      "decisions": [
+        "not_covered",
+        "not_covered"
+      ],
+      "flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "contradictory": true,
+        "jurisdiction_leakage": false
+      },
+      "requires_review": false,
+      "context_sha256": "e0c5e69a89811fccca6e7d71fa51a1fec88b5c16076b4badb0ff908dba86077b",
+      "cache_key": "3ee211112c88213bcee578594b20dfca1dfcdab7f6bd67ef1d029a5be9064b29",
+      "source_items": [
+        {
+          "id": "source-17-003",
+          "url": "https://www.varsom.no/snoskred/snoskredskolen/kameratredning"
+        },
+        {
+          "id": "source-19-001",
+          "url": "https://www.varsom.no/is/isskolen/redning/"
+        },
+        {
+          "id": "source-19-002",
+          "url": "https://www.varsom.no/is/isskolen/redning/"
+        },
+        {
+          "id": "source-05-003",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/"
+        },
+        {
+          "id": "source-17-005",
+          "url": "https://www.varsom.no/snoskred/snoskredskolen/kameratredning"
+        },
+        {
+          "id": "source-09-007",
+          "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/"
+        },
+        {
+          "id": "source-04-007",
+          "url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/"
+        },
+        {
+          "id": "source-04-010",
+          "url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/"
+        },
+        {
+          "id": "source-05-004",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/"
+        },
+        {
+          "id": "source-05-005",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/"
+        },
+        {
+          "id": "source-08-011",
+          "url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/"
+        }
+      ],
+      "budget_exclusions": [
+        {
+          "seed_rank": 9,
+          "seed_id": "source-05-007",
+          "prompt_tokens": 2092,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 10,
+          "seed_id": "source-07-007",
+          "prompt_tokens": 2338,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 11,
+          "seed_id": "source-19-005",
+          "prompt_tokens": 2040,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 12,
+          "seed_id": "source-07-003",
+          "prompt_tokens": 2108,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 14,
+          "seed_id": "source-17-001",
+          "prompt_tokens": 2038,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 15,
+          "seed_id": "source-04-009",
+          "prompt_tokens": 2145,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 16,
+          "seed_id": "source-04-006",
+          "prompt_tokens": 2469,
+          "status": "over_budget"
+        }
+      ]
+    },
+    {
+      "configuration": "C-P1",
+      "case_id": "case-19",
+      "decisions": [
+        "covered",
+        "covered"
+      ],
+      "flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "contradictory": false,
+        "jurisdiction_leakage": false
+      },
+      "requires_review": false,
+      "context_sha256": "4484aca090fbc7b0122a62cf9aa0fdae7831ebd9d82742446f2a01cd3f4de299",
+      "cache_key": "1b05e2cdfd6175202e7efd04ce47b6141e6f78a65f21aa50dfcb929e3afbcf6f",
+      "source_items": [
+        {
+          "id": "source-17-002",
+          "url": "https://www.varsom.no/snoskred/snoskredskolen/kameratredning"
+        },
+        {
+          "id": "source-15-002",
+          "url": "https://www.varsom.no/snoskred/snoskredskolen/skredfarevurdering-og-faretegn/"
+        },
+        {
+          "id": "source-19-001",
+          "url": "https://www.varsom.no/is/isskolen/redning/"
+        },
+        {
+          "id": "source-19-002",
+          "url": "https://www.varsom.no/is/isskolen/redning/"
+        },
+        {
+          "id": "source-16-001",
+          "url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/"
+        },
+        {
+          "id": "source-16-003",
+          "url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/"
+        },
+        {
+          "id": "source-17-001",
+          "url": "https://www.varsom.no/snoskred/snoskredskolen/kameratredning"
+        },
+        {
+          "id": "source-16-004",
+          "url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/"
+        },
+        {
+          "id": "source-18-004",
+          "url": "https://www.varsom.no/is/isskolen/"
+        },
+        {
+          "id": "source-07-004",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/"
+        },
+        {
+          "id": "source-01-028",
+          "url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/"
+        },
+        {
+          "id": "source-04-010",
+          "url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/"
+        },
+        {
+          "id": "source-03-009",
+          "url": "https://www.helsenorge.no/forstehjelp/brannskader-overflatiske/"
+        }
+      ],
+      "budget_exclusions": [
+        {
+          "seed_rank": 11,
+          "seed_id": "source-16-002",
+          "prompt_tokens": 2080,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 13,
+          "seed_id": "source-18-002",
+          "prompt_tokens": 2063,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 14,
+          "seed_id": "source-17-003",
+          "prompt_tokens": 2071,
+          "status": "over_budget"
+        }
+      ]
+    },
+    {
+      "configuration": "C-P1",
+      "case_id": "case-20",
+      "decisions": [
+        "covered",
+        "covered"
+      ],
+      "flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "contradictory": false,
+        "jurisdiction_leakage": false
+      },
+      "requires_review": false,
+      "context_sha256": "db27b470dda02c5ca8159384a9e881421104b9abfb06757b97b500ffcfb43927",
+      "cache_key": "ee359cdb3227391b7e99f48b780a6d810ba2f87f36a2bc1c8b1c17078c8eaa17",
+      "source_items": [
+        {
+          "id": "source-16-003",
+          "url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/"
+        },
+        {
+          "id": "source-10-003",
+          "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code"
+        },
+        {
+          "id": "source-16-002",
+          "url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/"
+        },
+        {
+          "id": "source-16-001",
+          "url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/"
+        },
+        {
+          "id": "source-09-007",
+          "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/"
+        },
+        {
+          "id": "source-14-004",
+          "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/river-crossing-safety/"
+        },
+        {
+          "id": "source-10-004",
+          "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code"
+        },
+        {
+          "id": "source-15-001",
+          "url": "https://www.varsom.no/snoskred/snoskredskolen/skredfarevurdering-og-faretegn/"
+        },
+        {
+          "id": "source-17-005",
+          "url": "https://www.varsom.no/snoskred/snoskredskolen/kameratredning"
+        },
+        {
+          "id": "source-10-002",
+          "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code"
+        },
+        {
+          "id": "source-17-003",
+          "url": "https://www.varsom.no/snoskred/snoskredskolen/kameratredning"
+        }
+      ],
+      "budget_exclusions": [
+        {
+          "seed_rank": 12,
+          "seed_id": "source-12-009",
+          "prompt_tokens": 2010,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 13,
+          "seed_id": "source-19-002",
+          "prompt_tokens": 2405,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 14,
+          "seed_id": "source-19-005",
+          "prompt_tokens": 2084,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 15,
+          "seed_id": "source-22-004",
+          "prompt_tokens": 2072,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 16,
+          "seed_id": "source-16-004",
+          "prompt_tokens": 2008,
+          "status": "over_budget"
+        }
+      ]
+    },
+    {
+      "configuration": "C-P1",
+      "case_id": "case-21",
+      "decisions": [
+        "covered",
+        "covered"
+      ],
+      "flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "contradictory": false,
+        "jurisdiction_leakage": false
+      },
+      "requires_review": false,
+      "context_sha256": "a897b47dda8fa5c8880beb9c2022e626b0a4cc5a0bcb82799cb19c621fb78fc7",
+      "cache_key": "a59792a92fe484193b2e31c5f3040fdd99271acca086446b22a8f633042060bc",
+      "source_items": [
+        {
+          "id": "source-21-009",
+          "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html"
+        },
+        {
+          "id": "source-21-010",
+          "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html"
+        },
+        {
+          "id": "source-21-011",
+          "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html"
+        },
+        {
+          "id": "source-21-012",
+          "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html"
+        },
+        {
+          "id": "source-21-013",
+          "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html"
+        },
+        {
+          "id": "source-21-014",
+          "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html"
+        },
+        {
+          "id": "source-19-001",
+          "url": "https://www.varsom.no/is/isskolen/redning/"
+        },
+        {
+          "id": "source-19-002",
+          "url": "https://www.varsom.no/is/isskolen/redning/"
+        },
+        {
+          "id": "source-05-004",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/"
+        },
+        {
+          "id": "source-05-005",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/"
+        },
+        {
+          "id": "source-21-002",
+          "url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html"
+        }
+      ],
+      "budget_exclusions": [
+        {
+          "seed_rank": 4,
+          "seed_id": "source-01-014",
+          "prompt_tokens": 2340,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 7,
+          "seed_id": "source-01-022",
+          "prompt_tokens": 2076,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 9,
+          "seed_id": "source-01-007",
+          "prompt_tokens": 2103,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 10,
+          "seed_id": "source-01-001",
+          "prompt_tokens": 2112,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 11,
+          "seed_id": "source-01-006",
+          "prompt_tokens": 2106,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 12,
+          "seed_id": "source-08-008",
+          "prompt_tokens": 2206,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 14,
+          "seed_id": "source-01-027",
+          "prompt_tokens": 2174,
+          "status": "over_budget"
+        },
+        {
+          "seed_rank": 15,
+          "seed_id": "source-01-021",
+          "prompt_tokens": 2079,
+          "status": "over_budget"
+        }
+      ]
     }
-  ]
+  ],
+  "final-review.json": {
+    "at": "2026-10-09T14:33:25.469669+00:00",
+    "status": "blocked_host_RAM_after_P1",
+    "summary": "P1 har høyest observert aggregat, 63/72 krav og 17/22 komplette, men mister tre brannskadekrav og introduserer anafylaksikonflikt. Minnereserven brøt etter alle 25 lagrede vurderinger. P2/P3 er ikke startet; ingen endelig konfigurasjon anbefales.",
+    "execution_blocker": {
+      "configuration": "C-P1",
+      "worker": "score",
+      "minimum_available_ram_bytes": 54968320,
+      "required_available_ram_bytes": 268435456,
+      "peak_process_tree_rss_bytes": 242778112,
+      "process_tree_limit_bytes": 4294967296,
+      "resource_check_passed": false,
+      "results_preserved": 25
+    },
+    "comparison_complete": false,
+    "eligible_for_final_selection": false,
+    "ready_for_control_test": false,
+    "production_approved": false,
+    "uncertain_cases": [],
+    "unresolved_certificate_disagreements": [],
+    "supported_requirement_changes_vs_B16": [
+      {
+        "case_id": "case-01",
+        "context_sha256": "3fff08b04b43ddb1f1f74fea2a5f02d90ff2f25000d0a7679e31a1d4e99b74cc",
+        "cache_key": "d3a95434601c677ebc6bb5c221ec40c4685974a4d514488686dc601d4644cbd3",
+        "source_ids": [
+          "source-19-003",
+          "source-19-004",
+          "source-10-004",
+          "source-04-003",
+          "source-04-004",
+          "source-04-007",
+          "source-04-005",
+          "source-04-006",
+          "source-04-010"
+        ],
+        "item": 1,
+        "before": "not_covered",
+        "after": "covered",
+        "requirement": "Manglende evne til å stå på den skadde foten gir grunn til å mistenke brudd."
+      },
+      {
+        "case_id": "case-01",
+        "context_sha256": "3fff08b04b43ddb1f1f74fea2a5f02d90ff2f25000d0a7679e31a1d4e99b74cc",
+        "cache_key": "d3a95434601c677ebc6bb5c221ec40c4685974a4d514488686dc601d4644cbd3",
+        "source_ids": [
+          "source-19-003",
+          "source-19-004",
+          "source-10-004",
+          "source-04-003",
+          "source-04-004",
+          "source-04-007",
+          "source-04-005",
+          "source-04-006",
+          "source-04-010"
+        ],
+        "item": 2,
+        "before": "not_covered",
+        "after": "covered",
+        "requirement": "Forstuing og brudd kan være vanskelig å skille."
+      },
+      {
+        "case_id": "case-01",
+        "context_sha256": "3fff08b04b43ddb1f1f74fea2a5f02d90ff2f25000d0a7679e31a1d4e99b74cc",
+        "cache_key": "d3a95434601c677ebc6bb5c221ec40c4685974a4d514488686dc601d4644cbd3",
+        "source_ids": [
+          "source-19-003",
+          "source-19-004",
+          "source-10-004",
+          "source-04-003",
+          "source-04-004",
+          "source-04-007",
+          "source-04-005",
+          "source-04-006",
+          "source-04-010"
+        ],
+        "item": 3,
+        "before": "not_covered",
+        "after": "covered",
+        "requirement": "Mistanke om brudd krever vurdering av lege eller legevakt."
+      },
+      {
+        "case_id": "case-03",
+        "context_sha256": "2133ff727380ed90123777c334dc4863b7d785fee77391520d6ff50ff1aa28ef",
+        "cache_key": "9871f7d9134105c30ee428fe0ff656a909385141c32ca1675fc5fb3dc03246e5",
+        "source_ids": [
+          "source-20-003",
+          "source-20-004",
+          "source-21-005",
+          "source-21-002",
+          "source-21-003",
+          "source-21-009",
+          "source-21-010",
+          "source-21-011",
+          "source-21-012",
+          "source-21-013",
+          "source-21-014",
+          "source-21-008",
+          "source-21-016"
+        ],
+        "item": 3,
+        "before": "not_covered",
+        "after": "covered",
+        "requirement": "For klart vann ved høyder opptil og med 6 500 fot skal vannet fosskoke i ett minutt for å drepe mikroorganismer."
+      },
+      {
+        "case_id": "case-03",
+        "context_sha256": "2133ff727380ed90123777c334dc4863b7d785fee77391520d6ff50ff1aa28ef",
+        "cache_key": "9871f7d9134105c30ee428fe0ff656a909385141c32ca1675fc5fb3dc03246e5",
+        "source_ids": [
+          "source-20-003",
+          "source-20-004",
+          "source-21-005",
+          "source-21-002",
+          "source-21-003",
+          "source-21-009",
+          "source-21-010",
+          "source-21-011",
+          "source-21-012",
+          "source-21-013",
+          "source-21-014",
+          "source-21-008",
+          "source-21-016"
+        ],
+        "item": 4,
+        "before": "not_covered",
+        "after": "covered",
+        "requirement": "Over 6 500 fot skal klart vann fosskoke i tre minutter for å drepe mikroorganismer."
+      },
+      {
+        "case_id": "case-03",
+        "context_sha256": "2133ff727380ed90123777c334dc4863b7d785fee77391520d6ff50ff1aa28ef",
+        "cache_key": "9871f7d9134105c30ee428fe0ff656a909385141c32ca1675fc5fb3dc03246e5",
+        "source_ids": [
+          "source-20-003",
+          "source-20-004",
+          "source-21-005",
+          "source-21-002",
+          "source-21-003",
+          "source-21-009",
+          "source-21-010",
+          "source-21-011",
+          "source-21-012",
+          "source-21-013",
+          "source-21-014",
+          "source-21-008",
+          "source-21-016"
+        ],
+        "item": 5,
+        "before": "not_covered",
+        "after": "covered",
+        "requirement": "Koking/desinfisering gjør ikke vann med skadelige kjemikalier eller giftstoffer trygt; ved mistanke om slik forurensning må en annen vannkilde brukes."
+      },
+      {
+        "case_id": "case-06",
+        "context_sha256": "cd1bba7bd67fab2ebdcf38a676186fbd1445bdb5d7402ddf54ac0b6f20947b8e",
+        "cache_key": "b56621e1283e005fdda5d23b8ac662fe8ef07fb12396671659fde0ec1a8859f9",
+        "source_ids": [
+          "source-02-007",
+          "source-02-008",
+          "source-02-009",
+          "source-02-010",
+          "source-02-001",
+          "source-02-011",
+          "source-02-012",
+          "source-04-007",
+          "source-04-005",
+          "source-04-006",
+          "source-03-002"
+        ],
+        "item": 4,
+        "before": "not_covered",
+        "after": "covered",
+        "requirement": "Hold personen varm og overvåk tilstanden; gi beskjed til 113 ved sløvhet eller andre endringer."
+      },
+      {
+        "case_id": "case-07",
+        "context_sha256": "90a249298a855567f14979e76abe9e750bd578449fc348a70ba82cb090623748",
+        "cache_key": "3b452daa99242def42c3e8e8116f22978c6e9b7b6b193983028cb3ab680a5d0b",
+        "source_ids": [
+          "source-03-005",
+          "source-02-012",
+          "source-21-009",
+          "source-21-010",
+          "source-21-011",
+          "source-21-012",
+          "source-21-013",
+          "source-21-014",
+          "source-03-007",
+          "source-03-008",
+          "source-21-016",
+          "source-21-008",
+          "source-21-005"
+        ],
+        "item": 1,
+        "before": "covered",
+        "after": "not_covered",
+        "requirement": "Avkjøl skadestedet med rennende, litt kjølig vann omkring 20 grader i inntil 20 minutter for en voksen."
+      },
+      {
+        "case_id": "case-07",
+        "context_sha256": "90a249298a855567f14979e76abe9e750bd578449fc348a70ba82cb090623748",
+        "cache_key": "3b452daa99242def42c3e8e8116f22978c6e9b7b6b193983028cb3ab680a5d0b",
+        "source_ids": [
+          "source-03-005",
+          "source-02-012",
+          "source-21-009",
+          "source-21-010",
+          "source-21-011",
+          "source-21-012",
+          "source-21-013",
+          "source-21-014",
+          "source-03-007",
+          "source-03-008",
+          "source-21-016",
+          "source-21-008",
+          "source-21-005"
+        ],
+        "item": 2,
+        "before": "covered",
+        "after": "not_covered",
+        "requirement": "Ikke bruk is eller iskaldt vann; is kan skade huden ytterligere."
+      },
+      {
+        "case_id": "case-07",
+        "context_sha256": "90a249298a855567f14979e76abe9e750bd578449fc348a70ba82cb090623748",
+        "cache_key": "3b452daa99242def42c3e8e8116f22978c6e9b7b6b193983028cb3ab680a5d0b",
+        "source_ids": [
+          "source-03-005",
+          "source-02-012",
+          "source-21-009",
+          "source-21-010",
+          "source-21-011",
+          "source-21-012",
+          "source-21-013",
+          "source-21-014",
+          "source-03-007",
+          "source-03-008",
+          "source-21-016",
+          "source-21-008",
+          "source-21-005"
+        ],
+        "item": 3,
+        "before": "covered",
+        "after": "not_covered",
+        "requirement": "Ikke stikk hull på blemmene."
+      },
+      {
+        "case_id": "case-21",
+        "context_sha256": "a897b47dda8fa5c8880beb9c2022e626b0a4cc5a0bcb82799cb19c621fb78fc7",
+        "cache_key": "a59792a92fe484193b2e31c5f3040fdd99271acca086446b22a8f633042060bc",
+        "source_ids": [
+          "source-21-009",
+          "source-21-010",
+          "source-21-011",
+          "source-21-012",
+          "source-21-013",
+          "source-21-014",
+          "source-19-001",
+          "source-19-002",
+          "source-05-004",
+          "source-05-005",
+          "source-21-002"
+        ],
+        "item": 2,
+        "before": "not_covered",
+        "after": "covered",
+        "requirement": "Filtrer først og desinfiser det filtrerte vannet; følg produktets bruksanvisning."
+      }
+    ],
+    "missing_supported_P1": [
+      {
+        "case_id": "case-06",
+        "context_sha256": "cd1bba7bd67fab2ebdcf38a676186fbd1445bdb5d7402ddf54ac0b6f20947b8e",
+        "cache_key": "b56621e1283e005fdda5d23b8ac662fe8ef07fb12396671659fde0ec1a8859f9",
+        "source_ids": [
+          "source-02-007",
+          "source-02-008",
+          "source-02-009",
+          "source-02-010",
+          "source-02-001",
+          "source-02-011",
+          "source-02-012",
+          "source-04-007",
+          "source-04-005",
+          "source-04-006",
+          "source-03-002"
+        ],
+        "item": 1,
+        "decision": "not_covered",
+        "requirement": "Ring 113 ved større blødning eller blødning som ikke lar seg stoppe."
+      },
+      {
+        "case_id": "case-07",
+        "context_sha256": "90a249298a855567f14979e76abe9e750bd578449fc348a70ba82cb090623748",
+        "cache_key": "3b452daa99242def42c3e8e8116f22978c6e9b7b6b193983028cb3ab680a5d0b",
+        "source_ids": [
+          "source-03-005",
+          "source-02-012",
+          "source-21-009",
+          "source-21-010",
+          "source-21-011",
+          "source-21-012",
+          "source-21-013",
+          "source-21-014",
+          "source-03-007",
+          "source-03-008",
+          "source-21-016",
+          "source-21-008",
+          "source-21-005"
+        ],
+        "item": 1,
+        "decision": "not_covered",
+        "requirement": "Avkjøl skadestedet med rennende, litt kjølig vann omkring 20 grader i inntil 20 minutter for en voksen."
+      },
+      {
+        "case_id": "case-07",
+        "context_sha256": "90a249298a855567f14979e76abe9e750bd578449fc348a70ba82cb090623748",
+        "cache_key": "3b452daa99242def42c3e8e8116f22978c6e9b7b6b193983028cb3ab680a5d0b",
+        "source_ids": [
+          "source-03-005",
+          "source-02-012",
+          "source-21-009",
+          "source-21-010",
+          "source-21-011",
+          "source-21-012",
+          "source-21-013",
+          "source-21-014",
+          "source-03-007",
+          "source-03-008",
+          "source-21-016",
+          "source-21-008",
+          "source-21-005"
+        ],
+        "item": 2,
+        "decision": "not_covered",
+        "requirement": "Ikke bruk is eller iskaldt vann; is kan skade huden ytterligere."
+      },
+      {
+        "case_id": "case-07",
+        "context_sha256": "90a249298a855567f14979e76abe9e750bd578449fc348a70ba82cb090623748",
+        "cache_key": "3b452daa99242def42c3e8e8116f22978c6e9b7b6b193983028cb3ab680a5d0b",
+        "source_ids": [
+          "source-03-005",
+          "source-02-012",
+          "source-21-009",
+          "source-21-010",
+          "source-21-011",
+          "source-21-012",
+          "source-21-013",
+          "source-21-014",
+          "source-03-007",
+          "source-03-008",
+          "source-21-016",
+          "source-21-008",
+          "source-21-005"
+        ],
+        "item": 3,
+        "decision": "not_covered",
+        "requirement": "Ikke stikk hull på blemmene."
+      },
+      {
+        "case_id": "case-08",
+        "context_sha256": "8f61b6d6b95b6b3ed8e4c93a0d749ab3fbd63ac2819aa010c74e6660deb894bf",
+        "cache_key": "96736c44ea513c4ada8ffde407930d27c012cd5b9e14a5c6299d191cc3c793e3",
+        "source_ids": [
+          "source-07-003",
+          "source-07-006",
+          "source-07-007",
+          "source-01-010",
+          "source-04-010",
+          "source-01-017",
+          "source-01-002",
+          "source-03-009",
+          "source-05-004",
+          "source-05-005",
+          "source-01-004",
+          "source-08-011"
+        ],
+        "item": 4,
+        "decision": "not_covered",
+        "requirement": "Overvåk at pusten forblir normal; manglende eller unormal pust krever HLR, og usikkerhet avklares med 113."
+      },
+      {
+        "case_id": "case-13",
+        "context_sha256": "e9e1da2a98434c0cb4c2ad61e1c1c5ca6803ae188492b46ff599be31d466aa31",
+        "cache_key": "cc31cf3c18b8fec9c699c7702fa3b7e1277d1a2c9955588f0ad3dad4ae05b95c",
+        "source_ids": [
+          "source-01-026",
+          "source-01-027",
+          "source-04-008",
+          "source-04-009",
+          "source-03-007",
+          "source-03-008",
+          "source-07-002",
+          "source-08-009",
+          "source-08-010",
+          "source-07-006",
+          "source-07-007",
+          "source-14-004",
+          "source-04-010"
+        ],
+        "item": 1,
+        "decision": "not_covered",
+        "requirement": "Aktiver nødpeileren ved en livstruende situasjon; forhold kan raskt bli verre, og tidligere aktivering kan gi tidligere hjelp."
+      },
+      {
+        "case_id": "case-13",
+        "context_sha256": "e9e1da2a98434c0cb4c2ad61e1c1c5ca6803ae188492b46ff599be31d466aa31",
+        "cache_key": "cc31cf3c18b8fec9c699c7702fa3b7e1277d1a2c9955588f0ad3dad4ae05b95c",
+        "source_ids": [
+          "source-01-026",
+          "source-01-027",
+          "source-04-008",
+          "source-04-009",
+          "source-03-007",
+          "source-03-008",
+          "source-07-002",
+          "source-08-009",
+          "source-08-010",
+          "source-07-006",
+          "source-07-007",
+          "source-14-004",
+          "source-04-010"
+        ],
+        "item": 2,
+        "decision": "not_covered",
+        "requirement": "Er man usikker på når nødpeileren skal aktiveres, anbefaler kilden å aktivere og få hjelp fremfor å vente."
+      },
+      {
+        "case_id": "case-17",
+        "context_sha256": "e0c5e69a89811fccca6e7d71fa51a1fec88b5c16076b4badb0ff908dba86077b",
+        "cache_key": "3ee211112c88213bcee578594b20dfca1dfcdab7f6bd67ef1d029a5be9064b29",
+        "source_ids": [
+          "source-17-003",
+          "source-19-001",
+          "source-19-002",
+          "source-05-003",
+          "source-17-005",
+          "source-09-007",
+          "source-04-007",
+          "source-04-010",
+          "source-05-004",
+          "source-05-005",
+          "source-08-011"
+        ],
+        "item": 1,
+        "decision": "not_covered",
+        "requirement": "Rask reaksjon med hud-/slimhinnehevelse og trang hals/pustebesvær er blant symptomene på anafylaksi; insektstikk kan utløse den."
+      },
+      {
+        "case_id": "case-17",
+        "context_sha256": "e0c5e69a89811fccca6e7d71fa51a1fec88b5c16076b4badb0ff908dba86077b",
+        "cache_key": "3ee211112c88213bcee578594b20dfca1dfcdab7f6bd67ef1d029a5be9064b29",
+        "source_ids": [
+          "source-17-003",
+          "source-19-001",
+          "source-19-002",
+          "source-05-003",
+          "source-17-005",
+          "source-09-007",
+          "source-04-007",
+          "source-04-010",
+          "source-05-004",
+          "source-05-005",
+          "source-08-011"
+        ],
+        "item": 2,
+        "decision": "not_covered",
+        "requirement": "Mistanke om anafylaksi krever akutt behandling og umiddelbar kontakt med 113, ikke å vente til turen er ferdig."
+      }
+    ],
+    "covered_gains": 8,
+    "covered_losses": 3,
+    "future_work_started": false,
+    "remaining_configurations": [
+      "C-P2",
+      "C-P3"
+    ],
+    "resume_command": "knowledge/local/optimization-env/Scripts/python.exe evals/continue_retrieval_phase_c_v1.py",
+    "repeat_completed_judge_calls": false,
+    "holdout_accessed": false,
+    "paid_api_calls": 0
+  },
+  "quota-end.json": {
+    "at": "2026-10-09T14:33:25.477847+00:00",
+    "five_hour_used_percent": 76,
+    "weekly_used_percent": 80,
+    "ordinary_usage_allowed": true,
+    "five_hour_reset_unix": 1791566046,
+    "weekly_reset_unix": 1791961473,
+    "source": "Codex app get_usage_limits observed after P1 resource stop",
+    "shared_account": true,
+    "reset_credit_used": false,
+    "paid_api_calls": 0,
+    "phase_C_quota_rejections": 0
+  },
+  "final-audit.json": {
+    "at": "2026-10-09T14:34:09.246229+00:00",
+    "integrity_passed": true,
+    "completed_configurations": 29,
+    "configurations": [
+      {
+        "configuration": "A-minilm",
+        "cases": 25,
+        "summary_sha256": "71f4a77173ede174f1ae4ec8b9f76e939c8494bc3285e3f4a685c6198b3e7890",
+        "adjusted_sha256": "c18485008f5c2218aea3f6f27ee72f5cc078e667e916c6a0ef53575a95c8588c"
+      },
+      {
+        "configuration": "A-gemma2",
+        "cases": 25,
+        "summary_sha256": "45e25df6cc0622483aa773b72679eed8a70f98eba53c11c418bd233196d55630",
+        "adjusted_sha256": "1397a5408546242272f55e7350faa609fb137c7944855c453bf456352fb82b19"
+      },
+      {
+        "configuration": "A-qwen3-q4",
+        "cases": 25,
+        "summary_sha256": "6ac25d6deeb30a083723a33fec09f4292605a19d92a968e582b5b6df410e297c",
+        "adjusted_sha256": "cc576282cdb1fdbe3b05609af9e9b9b64fd17b5e46fcb1c30ca63687c069dfff"
+      },
+      {
+        "configuration": "B-k3-none",
+        "cases": 25,
+        "summary_sha256": "1a9e9fd62a69836ef98edd5341c994518e10958c729bb99e4f75c0248899e8ca",
+        "adjusted_sha256": "babcd9d5932532e55fcd0f76ec1b47696b54ebc21eb2a7ffb94b5904b782611d"
+      },
+      {
+        "configuration": "B-k3-p10",
+        "cases": 25,
+        "summary_sha256": "b92c5eb0c67b774c109fb443841c1d75fbfdcbb797ee903701b42e13738831c8",
+        "adjusted_sha256": "011c55adcc5d955f06863c0ae558a906ef33886b10cb86721ba7730917d9be17"
+      },
+      {
+        "configuration": "B-k3-p30",
+        "cases": 25,
+        "summary_sha256": "fd8eaff155c0620f1f4bc201c617ee1141921cf27ccd8c431420dd776b5cb979",
+        "adjusted_sha256": "59a6281df9c7325767b2a8829eb81f7ef69a1f8807b5a7b652a813256f6e827b"
+      },
+      {
+        "configuration": "B-k3-p50",
+        "cases": 25,
+        "summary_sha256": "8ba10d465364145a6271df06e9058fe707288243083c0fbfa0e055f17fb0cac5",
+        "adjusted_sha256": "33aeea8eb8788c19dffc900e5cb312ffd6c61d83eed3ecf5f16410042b1b5cc8"
+      },
+      {
+        "configuration": "B-k3-p70",
+        "cases": 25,
+        "summary_sha256": "138fa1e6c04d0b2374706dba940e20c2d922f65176103d4fac6e784cf73b3ee7",
+        "adjusted_sha256": "9fa758751d9012295109d51e9bee65b6fb86f3afebddd97d5332af11d1f2d6d2"
+      },
+      {
+        "configuration": "B-k5-none",
+        "cases": 25,
+        "summary_sha256": "0e420ad3d3badd8646efee07c032b7106dbfd6c8602ee4488b3e267d304426c9",
+        "adjusted_sha256": "294a8b9700dd8b02e9123e37e492140f79cd0f13ddbbac2b0674669b375f20df"
+      },
+      {
+        "configuration": "B-k5-p10",
+        "cases": 25,
+        "summary_sha256": "06984b6dd28dc63c962d921fdf97a24ffa84077409dd6f1e9c86f085c4e6b9b0",
+        "adjusted_sha256": "023215dbd001e746bb14c39617d14fbe68a8f96ae60bca90982b6c4fb8d8413d"
+      },
+      {
+        "configuration": "B-k5-p30",
+        "cases": 25,
+        "summary_sha256": "639cba4065be9cca5ba3aef95894b64ca005bb2953c0f9f3cb50575f9a4764a0",
+        "adjusted_sha256": "c1b0f470f61dd224b28befada62811ba880de57af67d918823aa42a27bdfc0fa"
+      },
+      {
+        "configuration": "B-k5-p50",
+        "cases": 25,
+        "summary_sha256": "7d1baf952f382ece5bb516a6db9c18f667d9b2619ce93d67b300858fff6a4e50",
+        "adjusted_sha256": "e20487186a6b8ea5419f7ab802de3410a4c0e249d8aec34283fde6146937e4f3"
+      },
+      {
+        "configuration": "B-k5-p70",
+        "cases": 25,
+        "summary_sha256": "7e28ed28d043a4618771dcff26ab75928f7fbfdc149ada9e01401ffb214b626b",
+        "adjusted_sha256": "f31220fd947e09eb02f1f008dae181d3de51a6666eee760d1b4c6d9d2c79a7eb"
+      },
+      {
+        "configuration": "B-k8-none",
+        "cases": 25,
+        "summary_sha256": "98b7666e541d40f24db0ddb2b63c00d799d471451317792be29f350cc33c3b87",
+        "adjusted_sha256": "0cbb3c50eceb6964b86ebfc7caa0f1b977d52caf0a6cfcb91674f5cb98ec2235"
+      },
+      {
+        "configuration": "B-k8-p10",
+        "cases": 25,
+        "summary_sha256": "961ae91eb7e5e81f221d3d5117188ccfc1d2426e3c26e6bcd2c7e041798f6946",
+        "adjusted_sha256": "15749d0c9e6744b49a0524ffce5dc0f10c4434770708f03d3da8ffdb77684812"
+      },
+      {
+        "configuration": "B-k8-p30",
+        "cases": 25,
+        "summary_sha256": "c20d91014139399e45bac13a26df4b3453e999ac102a4fa23e374a85972e56ad",
+        "adjusted_sha256": "bed8ecff41e085aee7666dfced904b8e6b92629e68c7251ab0bc562ba7030c23"
+      },
+      {
+        "configuration": "B-k8-p50",
+        "cases": 25,
+        "summary_sha256": "da4ed01c6a7ef24a605ed88ccb11ea76b475e82c9eb507997c62561210a9320f",
+        "adjusted_sha256": "1bc485b39b4be75731bbcdabbca8904a64e1f0230be9328a9d20699db7c69bd3"
+      },
+      {
+        "configuration": "B-k8-p70",
+        "cases": 25,
+        "summary_sha256": "5b78112636d83862902fc821b3bf4c133f6a1d36e38b810d72d65c88fd6ce86d",
+        "adjusted_sha256": "35b62303c5a46751aa5241825415c561aa14c85f0a7a37f7721722258bd35b24"
+      },
+      {
+        "configuration": "B-k12-none",
+        "cases": 25,
+        "summary_sha256": "ebfc396d3ded8aebf2f022d3006c9b6bc26b06a709f83c44a5fe0bb6f79e23eb",
+        "adjusted_sha256": "22a606fe3a7bb36691a1d48fd6095b8896c9f27de7ae91b1160a2f3f90ca376d"
+      },
+      {
+        "configuration": "B-k12-p10",
+        "cases": 25,
+        "summary_sha256": "d481e909f95e35b6bd4fb637536c3b84c08c172b92d9e10cebf44521c8c5d3c1",
+        "adjusted_sha256": "e0f4d8b762a080e10658b15ceb8c8cf02a155a54387c0b6152a37efc4d772771"
+      },
+      {
+        "configuration": "B-k12-p30",
+        "cases": 25,
+        "summary_sha256": "1a2d43b00662d73d80711a528c3b964613dc0214c24862b71fcb49cb4933ce83",
+        "adjusted_sha256": "f3ee600bea81c6259371ecbc3f720988af5fa6ed74c529d6ddf384c74c2fb176"
+      },
+      {
+        "configuration": "B-k12-p50",
+        "cases": 25,
+        "summary_sha256": "b4f6ffcd1194ee485179b8f0708a3709fdae591ee97fa1ca3ed9d93877115a41",
+        "adjusted_sha256": "df30c07aecceb5917f6d23f490795decd757f4430c85fd84dbd55b0334a0cda0"
+      },
+      {
+        "configuration": "B-k12-p70",
+        "cases": 25,
+        "summary_sha256": "8598a04b00872b0eac4b4bf767b9e2f02dcf0108d97fd43037edbf4751c3ab1c",
+        "adjusted_sha256": "527d471ca2dd60491a88a216a81d8c63ac35dbdbbcbba2b333a8c3ae029f2ede"
+      },
+      {
+        "configuration": "B-k16-none",
+        "cases": 25,
+        "summary_sha256": "29b5763527d0f3aa8c7f108120626f0fcaec0fbe78bf9a2c08a772d96f6bf8c7",
+        "adjusted_sha256": "a6bdd071467564def84ac4540faedca821aa623fbad2bae804b80edb5086063f"
+      },
+      {
+        "configuration": "B-k16-p10",
+        "cases": 25,
+        "summary_sha256": "eea823f6b594ba93950ebae3894424dd94e266d711573af3201aaa458df85dea",
+        "adjusted_sha256": "6126975e3b8938f7618aac12dfc6e39ab3ef8ad39ec673cffe1017fbf4a705eb"
+      },
+      {
+        "configuration": "B-k16-p30",
+        "cases": 25,
+        "summary_sha256": "b26947d57ec70c3a86e2786112c38db90f4c0204aa4d7e5160cdaec84e12e6e9",
+        "adjusted_sha256": "bf9d4013222f006007d23f66d1ab0aa326af8257a006c1a7aae760de0d1c8ab3"
+      },
+      {
+        "configuration": "B-k16-p50",
+        "cases": 25,
+        "summary_sha256": "e7ecc9a6abfb5d6e684604656869d2b6acde0d0a2f298b76a3a7d8be317f8676",
+        "adjusted_sha256": "cb50267283d3af5513cfad4a90081869b5ef1bc12efd3d89a1dee23050cb1ad2"
+      },
+      {
+        "configuration": "B-k16-p70",
+        "cases": 25,
+        "summary_sha256": "ff411dd2b26257dcdc502719328be4aa21c93df0837629a416ee54f7fc9d8d6a",
+        "adjusted_sha256": "9d01d31f0736c5f7d4b7fcc958bbd01ba8ba120c01e438ea80ff866e58d38fd1"
+      },
+      {
+        "configuration": "C-P1",
+        "cases": 25,
+        "summary_sha256": "54119ea8d5e7b13dbe0576569eddf65179f6b1bbfe9258ed11986adbced399d1",
+        "adjusted_sha256": "fb4192135b43f8b4f744d40244f886cee7efabacd34a1dc814239c3572f45fda"
+      }
+    ],
+    "unfinished_configurations": [
+      {
+        "configuration": "C-P2",
+        "saved_scores": 0
+      },
+      {
+        "configuration": "C-P3",
+        "saved_scores": 0
+      }
+    ],
+    "verified_completed_case_inputs": 725,
+    "unique_sealed_judge_inputs": 216,
+    "verified_retrieved_contexts": 725,
+    "verified_partial_case_inputs": [],
+    "frozen_identity_files_verified": 82,
+    "phase_a_files_unchanged": 309,
+    "approved_exact_input_adjustments": [
+      {
+        "configuration": "A-minilm",
+        "case_id": "case-20",
+        "records": [
+          "owner-2026-10-09-2"
+        ],
+        "context_sha256": "f37a956df646172cb677b04ac97d4ca6bfa5a0b2cf490d5a1589f6df44eaea62",
+        "cache_key": "01834a0b997f0ee6b3995a7aa822e73b527eaec63386702dbf1339dccec0f8ae"
+      },
+      {
+        "configuration": "A-gemma2",
+        "case_id": "case-13",
+        "records": [
+          "owner-2026-10-09-1"
+        ],
+        "context_sha256": "0d3327b71ae52710abc95b8ba18b9a03a18a4c672ede7a34281632e6138f63a8",
+        "cache_key": "eebe18fd1f5330d1f99c54b35657d58f8df542261a03dc5befe3bf60a602954f"
+      },
+      {
+        "configuration": "B-k8-none",
+        "case_id": "case-20",
+        "records": [
+          "owner-2026-10-09-2"
+        ],
+        "context_sha256": "f37a956df646172cb677b04ac97d4ca6bfa5a0b2cf490d5a1589f6df44eaea62",
+        "cache_key": "01834a0b997f0ee6b3995a7aa822e73b527eaec63386702dbf1339dccec0f8ae"
+      },
+      {
+        "configuration": "B-k8-p10",
+        "case_id": "case-20",
+        "records": [
+          "owner-2026-10-09-2"
+        ],
+        "context_sha256": "f37a956df646172cb677b04ac97d4ca6bfa5a0b2cf490d5a1589f6df44eaea62",
+        "cache_key": "01834a0b997f0ee6b3995a7aa822e73b527eaec63386702dbf1339dccec0f8ae"
+      },
+      {
+        "configuration": "B-k8-p30",
+        "case_id": "case-20",
+        "records": [
+          "owner-2026-10-09-2"
+        ],
+        "context_sha256": "f37a956df646172cb677b04ac97d4ca6bfa5a0b2cf490d5a1589f6df44eaea62",
+        "cache_key": "01834a0b997f0ee6b3995a7aa822e73b527eaec63386702dbf1339dccec0f8ae"
+      },
+      {
+        "configuration": "B-k8-p50",
+        "case_id": "case-20",
+        "records": [
+          "owner-2026-10-09-2"
+        ],
+        "context_sha256": "f37a956df646172cb677b04ac97d4ca6bfa5a0b2cf490d5a1589f6df44eaea62",
+        "cache_key": "01834a0b997f0ee6b3995a7aa822e73b527eaec63386702dbf1339dccec0f8ae"
+      }
+    ],
+    "gold_prompt_schema_models_unchanged": true,
+    "provenance_serialization_tokens_result_seals_and_aggregate_recalculation": true,
+    "new_judge_calls": 0,
+    "new_tokenizer_calls": 0,
+    "holdout_accessed": false,
+    "paid_api_calls": 0,
+    "production_changed": false,
+    "limitation": "Integrity verification is not independent semantic validation or production safety approval.",
+    "verified_indices": {
+      "minilm": {
+        "documents_sha256": "1952356b4aef70c0a10fff752071bce511c61f7d8a31bdf6bd97a0d140d1a09d",
+        "queries_sha256": "3a13a2d965fe927750e2775f76c4650e2b5f7b2b585af397deb80c205f037cef"
+      },
+      "gemma2": {
+        "documents_sha256": "991d754dbfd380776a4b635e664a480a3f7cdc3a5c6c5db231e1e2b2928b2f46",
+        "queries_sha256": "0216e572af54be2248d853420797f26bfb5d63b40015f387dd9f7fe4c8da1077"
+      },
+      "qwen3-q4": {
+        "documents_sha256": "4f1db768d0caed8d82f9343422dd550f746a8e21ebcfbe453f5481ae93d07348",
+        "queries_sha256": "ae5b6ec6ff5cd4850ef47f5eb7c60319f0076fa8ed03acada7faa2334bb4ff84"
+      }
+    },
+    "archived_quota_rejections": [
+      {
+        "cache_key": "1656049ce9e47022ec10495d8813cc5d20722f9bfac354347ece451996a0f0b6",
+        "archive": "knowledge\\local\\judge-cache-v3\\1656049ce9e47022ec10495d8813cc5d20722f9bfac354347ece451996a0f0b6\\failed-attempts\\context-01\\attempt-001",
+        "record_sha256": "04701f8c8297f9da84e1a0cbf2601b990927b0443ce4365744a080b3a65ca056"
+      }
+    ],
+    "phase_C_frozen": true,
+    "protected_prior_A_B_files": 2912,
+    "registered_risk_delta": [
+      {
+        "configuration": "B-k12-none",
+        "case_id": "case-19",
+        "cache_key": "204bcae8ed8fc9412840c84e5357eddf826a75b4dedd164f28af69b69d67780f",
+        "context_sha256": "d677b6d8e99d7d7a0bbd3fd7787b84753c8b0d9781d1062599861761ac05a10d",
+        "changed_fields": [
+          "flags"
+        ],
+        "records": [
+          "phase-c-source-review-2"
+        ]
+      },
+      {
+        "configuration": "B-k12-p10",
+        "case_id": "case-19",
+        "cache_key": "204bcae8ed8fc9412840c84e5357eddf826a75b4dedd164f28af69b69d67780f",
+        "context_sha256": "d677b6d8e99d7d7a0bbd3fd7787b84753c8b0d9781d1062599861761ac05a10d",
+        "changed_fields": [
+          "flags"
+        ],
+        "records": [
+          "phase-c-source-review-2"
+        ]
+      },
+      {
+        "configuration": "B-k12-p30",
+        "case_id": "case-19",
+        "cache_key": "204bcae8ed8fc9412840c84e5357eddf826a75b4dedd164f28af69b69d67780f",
+        "context_sha256": "d677b6d8e99d7d7a0bbd3fd7787b84753c8b0d9781d1062599861761ac05a10d",
+        "changed_fields": [
+          "flags"
+        ],
+        "records": [
+          "phase-c-source-review-2"
+        ]
+      },
+      {
+        "configuration": "B-k12-p70",
+        "case_id": "case-13",
+        "cache_key": "6f41883af53af226528748984cc2099b92a132cadab78dd494fcc8eb9ff136c2",
+        "context_sha256": "76eab0d112571aa7b8742ce356e8a5220dc87b3e811df09c21d2c36f14e71603",
+        "changed_fields": [
+          "flags"
+        ],
+        "records": [
+          "phase-c-source-review-1"
+        ]
+      },
+      {
+        "configuration": "B-k16-p30",
+        "case_id": "case-19",
+        "cache_key": "e707b334d04e4f617886d42cbf2cd498921d80756517a17fc56eba3f1afc6006",
+        "context_sha256": "c225a5d3e13e03adc477322de2c8578e1ea6238abfd5cccd684c884796b563de",
+        "changed_fields": [
+          "flags"
+        ],
+        "records": [
+          "phase-c-source-review-3"
+        ]
+      },
+      {
+        "configuration": "B-k16-p70",
+        "case_id": "case-13",
+        "cache_key": "6f41883af53af226528748984cc2099b92a132cadab78dd494fcc8eb9ff136c2",
+        "context_sha256": "76eab0d112571aa7b8742ce356e8a5220dc87b3e811df09c21d2c36f14e71603",
+        "changed_fields": [
+          "flags"
+        ],
+        "records": [
+          "phase-c-source-review-1"
+        ]
+      }
+    ],
+    "new_review_layer_coverage_changes": 0,
+    "limited_owner_B_override": "Use MiniLM k16/no threshold as experimental C input despite lack of phase-B dominance. Original per-item dominance rule and all other safety/provenance/resource/review controls remain unchanged. No production selection."
+  }
 }

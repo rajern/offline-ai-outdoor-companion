@@ -1,5 +1,26 @@
 # Retrieval evaluation boundaries
 
+Current stop, 2026-10-09: the owner explicitly authorized MiniLM/k16/no threshold
+for C and a limited B-to-C dominance override. Exact-input review resolved case
+13/P70 risk negatives and case 19's inconsistent interpretation of a supplied
+ice-rescue sequence; only risk flags change in six B rows / three unique inputs.
+See `retrieval_phase_c_safety_review.v1.md` and the separately frozen registry.
+`continue_retrieval_phase_c_v1.py` preserved A/B and ran C-P1: all 25 judgments
+are saved (24 fresh subscription calls, one cache hit), 63/72 coverage, macro
+85.23%, 17/22 complete. Host available RAM fell to 52.42 MiB against the unchanged
+256 MiB reserve; peak judge process-tree RSS was 231.53 MiB, below 4 GiB.
+Offline integrity audit passed 725 saved case results, 82 frozen identities and
+2,912 protected A/B files without inference; see `retrieval_optimization_final_audit.v2.json`.
+The post-worker resource guard failed. C-P2/C-P3 have not started; 29/31 are
+fully scored, not a completed resource-approved comparison. P1 gains eight
+requirements but loses burn items 07/1-3 and introduces anaphylaxis risk/conflict.
+See `retrieval_optimization_report.v6.md`. No final winner or control-test
+readiness is established. After the RAM blocker is resolved and the owner asks
+to resume, use the same C continuation; it verifies/skips C-P1 and never repeats
+A/B or completed judge calls. Preserve the failed resource sample. All frozen
+gold/prompt/packing and production/holdout/generation restrictions still apply.
+Earlier continuation statuses below are history, not present approval gates.
+
 Latest continuation status, 2026-10-09: all 25 MiniLM phase-B configurations
 are complete (625 judgments); 28/31 configurations including A. C has not run.
 RAM checks passed after owner-authorized resume with unchanged limits. One

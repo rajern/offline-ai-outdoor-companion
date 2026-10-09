@@ -340,6 +340,22 @@ open; do not repeat completed A calls or start M3.
   preserved. See `evals/retrieval_optimization_report.v5.md`; only the three
   planned C configurations remain. M2-06 is still open.
 
+  Current C stop, 2026-10-09: owner authorized MiniLM/k16/no threshold and the
+  limited B-to-C dominance override. Three exact-input risk adjudications resolve
+  case13/P70 and case19 in six B rows without coverage/gold/raw changes. All 25
+  C-P1 judgments are saved: 24 new calls, one cache hit, 63/72 requirements,
+  macro 85.23%, 17/22 complete. Original RAM guard failed after scoring: host
+  available memory 52.42 MiB versus 256 MiB reserve; judge-tree peak 231.53 MiB
+  versus 4 GiB limit. C-P2/P3 are not started; 29/31 configurations fully scored.
+  P1 gains eight items but loses burn-treatment 07/1-3 and introduces a concrete
+  anaphylaxis contact conflict. No final winner or control-test readiness. See
+  `evals/retrieval_optimization_report.v6.md`. Resolve RAM and resume the same C
+  continuation when instructed; preserve failed samples and reuse all completed
+  calls. Six C tests and nine continuation tests passed. Offline audit passed
+  all 725 results, 82 frozen identities and 2,912 protected A/B files; see
+  `evals/retrieval_optimization_final_audit.v2.json`. M2-06 remains open;
+  production, holdout, generation and extra experiments are excluded.
+
 Replace development fixtures in the main RAG flow with the approved Outwise knowledge base.
 
 Requirements:

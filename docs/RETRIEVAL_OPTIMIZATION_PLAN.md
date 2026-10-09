@@ -1,5 +1,24 @@
 # Outwise — Retrieval Optimization Plan
 
+**Gjeldende stoppunkt, 2026-10-09:** Eieren godkjente MiniLM/k16/ingen terskel
+som forsøksgrunnlag for C, med avgrenset fravik fra B-dominansporten. Separat
+eksakt-inputbundet review avklarte case 13/P70 og case 19 uten å endre råscorer,
+gold eller judge. C-P1 har alle 25 vurderinger lagret: 63/72 krav, macro 85,23 %,
+17/22 komplette. Etterkontrollen feilet fordi vertens ledige RAM falt til
+52,42 MiB, under den opprinnelige reserven på 256 MiB; dommerens RSS var bare
+231,53 MiB. C-P2/P3 er ikke startet. 29/31 konfigurasjoner er fullt scoret;
+sammenligningen er ufullført. P1 mister tre brannskadekrav og introduserer
+anafylaksikonflikt, selv om åtte andre krav forbedres. Ingen vinner anbefales
+eller implementeres. Integritetskontrollen består for alle 725 lagrede case-resultater,
+82 frosne identiteter og 2 912 bevarte A/B-filer, uten nye dommerkall.
+Se [delrapport v6](../evals/retrieval_optimization_report.v6.md) og
+[audit v2](../evals/retrieval_optimization_final_audit.v2.json).
+Når RAM-blokkeringen er løst og eieren ber om videreføring, gjenoppta samme
+`evals/continue_retrieval_phase_c_v1.py`; ikke gjenta A/B eller P1-dommerkall.
+Den feilende ressursmålingen bevares. Frosne regler og de to resterende
+packing-testene endres ikke. Holdout, produksjon og Qwen-svar er fortsatt utelukket.
+De eldre statusavsnittene nedenfor beskriver tidligere stopp og godkjenninger.
+
 **Resultat etter gjenopptakelse, 2026-10-09:** Alle 25 B-konfigurasjoner er
 ferdige; 28/31 inkludert A. De tre C-testene er ikke kjørt. Den opprinnelige
 dominansregelen stopper valg, og kildekontroll viser uavklarte risikovurderinger
