@@ -1,6 +1,6 @@
 # M2-06 — gjenopptatt MiniLM-optimalisering
 
-**Status: running-B. 8/31 konfigurasjoner fullstendig vurdert.**
+**Status: running-B. 14/31 konfigurasjoner fullstendig vurdert.**
 
 ## Metode og avgrensning
 
@@ -30,12 +30,12 @@ Tallene viser justert analyse. Flagg: irrelevant / misvisende / direkte konflikt
 | B-k3-p30 | complete; 25/25 | 35/72 (48.61%) | 50.68% | 7/22 | 20/51 (39.22%) / 37.05% / 2/13 | 19 / 2 / 0 / 0 |
 | B-k3-p50 | complete; 25/25 | 35/72 (48.61%) | 50.68% | 7/22 | 20/51 (39.22%) / 37.05% / 2/13 | 18 / 2 / 0 / 0 |
 | B-k3-p70 | complete; 25/25 | 25/72 (34.72%) | 41.97% | 6/22 | 10/51 (19.61%) / 22.31% / 1/13 | 17 / 2 / 0 / 0 |
-| B-k5-none | not_run; 0/25 | — | — | — | — | — |
-| B-k5-p10 | not_run; 0/25 | — | — | — | — | — |
-| B-k5-p30 | not_run; 0/25 | — | — | — | — | — |
-| B-k5-p50 | not_run; 0/25 | — | — | — | — | — |
-| B-k5-p70 | not_run; 0/25 | — | — | — | — | — |
-| B-k8-none | not_run; 0/25 | — | — | — | — | — |
+| B-k5-none | complete; 25/25 | 48/72 (66.67%) | 65.83% | 10/22 | 33/51 (64.71%) / 62.69% / 5/13 | 20 / 2 / 0 / 0 |
+| B-k5-p10 | complete; 25/25 | 43/72 (59.72%) | 61.29% | 9/22 | 28/51 (54.90%) / 55.00% / 4/13 | 19 / 2 / 0 / 0 |
+| B-k5-p30 | complete; 25/25 | 43/72 (59.72%) | 61.29% | 9/22 | 28/51 (54.90%) / 55.00% / 4/13 | 19 / 2 / 0 / 0 |
+| B-k5-p50 | complete; 25/25 | 43/72 (59.72%) | 61.29% | 9/22 | 28/51 (54.90%) / 55.00% / 4/13 | 18 / 2 / 0 / 0 |
+| B-k5-p70 | complete; 25/25 | 32/72 (44.44%) | 51.06% | 8/22 | 17/51 (33.33%) / 37.69% / 3/13 | 17 / 2 / 0 / 0 |
+| B-k8-none | complete; 25/25 | 57/72 (79.17%) | 77.95% | 15/22 | 39/51 (76.47%) / 74.23% / 8/13 | 22 / 1 / 0 / 0 |
 | B-k8-p10 | not_run; 0/25 | — | — | — | — | — |
 | B-k8-p30 | not_run; 0/25 | — | — | — | — | — |
 | B-k8-p50 | not_run; 0/25 | — | — | — | — | — |
@@ -70,10 +70,36 @@ Ufullstendige resultater rangeres ikke. Rå/justerte scorer, gap-resultater og s
 | B-k3-p30 | 687.8 / 1038 | 496.4 | 70 | 0 | 0.01201 / 1.443 |
 | B-k3-p50 | 676.8 / 1038 | 485.4 | 68 | 0 | 0.01291 / 2.304 |
 | B-k3-p70 | 589.9 / 1038 | 398.6 | 57 | 0 | 0.01225 / 6.783 |
+| B-k5-none | 1032.2 / 1578 | 840.7 | 125 | 0 | 0.01182 / 20.868 |
+| B-k5-p10 | 1001.4 / 1578 | 810.0 | 120 | 0 | 0.01352 / 1.060 |
+| B-k5-p30 | 967.6 / 1578 | 776.2 | 116 | 0 | 0.01377 / 1.017 |
+| B-k5-p50 | 900.2 / 1578 | 708.8 | 105 | 0 | 0.01403 / 1.914 |
+| B-k5-p70 | 740.5 / 1578 | 549.2 | 81 | 0 | 0.01406 / 0.835 |
+| B-k8-none | 1487.7 / 1983 | 1296.3 | 198 | 2 | 0.01334 / 3.083 |
 
-B/C: 34 nye faktiske dommerkall, 91 cachetreff/unngåtte kall; tokens `{"input_tokens": 225934, "cached_input_tokens": 10368, "cache_write_input_tokens": 0, "output_tokens": 31513, "reasoning_output_tokens": 4967, "total_tokens": 257447}`.
+| ID | Maks worker-tre RSS, MiB | Min ledig RAM, MiB | Sum worker-CPU, s | Ressursstatus |
+|---|---:|---:|---:|---|
+| B-k3-none | 246.6 | 5.7 | 149.75 | bevart grensebrudd |
+| B-k3-p10 | 246.2 | 3055.9 | 22.64 | består |
+| B-k3-p30 | 246.2 | 3090.8 | 23.42 | består |
+| B-k3-p50 | 243.5 | 3140.2 | 25.45 | består |
+| B-k3-p70 | 242.9 | 2808.7 | 47.45 | består |
+| B-k5-none | 247.8 | 2114.2 | 151.17 | består |
+| B-k5-p10 | 183.4 | 3179.1 | 24.78 | består |
+| B-k5-p30 | 175.1 | 3564.0 | 25.83 | består |
+| B-k5-p50 | 240.1 | 3625.3 | 29.47 | består |
+| B-k5-p70 | 178.0 | 3996.9 | 24.92 | består |
+| B-k8-none | 174.5 | 4093.9 | 25.86 | består |
+| B-k8-p10 | 218.8 | 4030.8 | 9.02 | består |
 
-Hele A+B/C: 109 kall, 109 vellykkede; tokens `{"input_tokens": 799888, "cached_input_tokens": 82944, "cache_write_input_tokens": 0, "output_tokens": 172490, "reasoning_output_tokens": 20769, "total_tokens": 972378}`; 0 med ukjent bruk; sum dommerkalletid 4947.66 s. Reasoning inngår i output, prefix-cached input i input; ingen dobbelttelling.
+B/C-worker-RSS gjelder gjenbrukt indeks og fjern dommervurdering, ikke hele mobilappen. MiniLM har 235,05 MB modell og 0,292 MB indeks (384 dimensjoner); A-indeksarbeidet toppet på omtrent 915 MB prosess-tre-RSS. Gemma har 1 488,92 MB modell / 0,584 MB indeks; Qwen Q4 396,47 MB / 0,778 MB. MiniLMs dokumentvektorer ble gjenbrukt i A, mens de andre bygget dokumentvektorer; A-indekstidene er derfor ikke en lik full-indeks-benchmark. MiniLMs kjente 128-token-avkorting (108/405 visninger, ingen spørsmål) er uendret. Mobil-RAM, energibruk og samlet lokal svartid er fortsatt ikke målt.
+
+Spørsmålsvektorene er også lagrede. Ranking-/packing-tidene inkluderer derfor ikke embedding av et nytt brukerspørsmål. De er ikke full online retrieval-latens. Embeddingmålingene fra A og størrelses-/RAMdata rapporteres separat i resultat-JSON.
+
+
+B/C: 60 nye faktiske dommerkall, 215 cachetreff/unngåtte kall; tokens `{"input_tokens": 409579, "cached_input_tokens": 48384, "cache_write_input_tokens": 0, "output_tokens": 65990, "reasoning_output_tokens": 10167, "total_tokens": 475569}`.
+
+Hele A+B/C: 135 kall, 135 vellykkede; tokens `{"input_tokens": 983533, "cached_input_tokens": 120960, "cache_write_input_tokens": 0, "output_tokens": 206967, "reasoning_output_tokens": 25969, "total_tokens": 1190500}`; 0 med ukjent bruk; sum dommerkalletid 6013.28 s. Reasoning inngår i output, prefix-cached input i input; ingen dobbelttelling.
 
 Før denne gjenopptakelsen: femtimerskvote 43% brukt, ukeskvote 59% brukt. Dette er kontoens delte bruk; eval-tokenregnskapet over er separat. Ingen automatisk API-fallback eller kvotereset.
 

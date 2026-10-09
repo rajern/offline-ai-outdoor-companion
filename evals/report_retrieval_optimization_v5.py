@@ -102,6 +102,27 @@ def export():
             lines.append(f"| {r['configuration']['id']} | {sum(m['prompt_tokens'])/25:.1f} / {max(m['prompt_tokens'])} | "
                 f"{sum(m['context_tokens'])/25:.1f} | {sum(m['passages'])} | {m['budget_excluded_packets']} | "
                 f"{m['ranking_seconds']:.5f} / {m['retrieval_and_packing_seconds']:.3f} |")
+    lines += ['', '| ID | Maks worker-tre RSS, MiB | Min ledig RAM, MiB | Sum worker-CPU, s | Ressursstatus |',
+              '|---|---:|---:|---:|---|']
+    for r in records:
+        cid = r['configuration']['id']
+        workers = [w for w in data['resources_by_worker'] if w['file'].startswith(('retrieve-' + cid + '-', 'score-' + cid + '-'))]
+        if workers:
+            rss = max(w['peak_process_tree_rss_bytes'] for w in workers)
+            ram = min(w['minimum_available_ram_bytes'] for w in workers)
+            valid = rss <= 4 * 1024**3 and ram >= 256 * 1024**2
+            lines.append(f"| {cid} | {rss/1024**2:.1f} | {ram/1024**2:.1f} | "
+                f"{sum(w['cpu_seconds'] for w in workers):.2f} | {'består' if valid else 'bevart grensebrudd'} |")
+    lines += ['', 'B/C-worker-RSS gjelder gjenbrukt indeks og fjern dommervurdering, ikke hele mobilappen. '
+        'MiniLM har 235,05 MB modell og 0,292 MB indeks (384 dimensjoner); '
+        'A-indeksarbeidet toppet på omtrent 915 MB prosess-tre-RSS. Gemma har 1 488,92 MB modell / '
+        '0,584 MB indeks; Qwen Q4 396,47 MB / 0,778 MB. MiniLMs dokumentvektorer ble gjenbrukt i A, '
+        'mens de andre bygget dokumentvektorer; A-indekstidene er derfor ikke en lik full-indeks-benchmark. '
+        'MiniLMs kjente 128-token-avkorting (108/405 visninger, ingen spørsmål) er uendret. '
+        'Mobil-RAM, energibruk og samlet lokal svartid er fortsatt ikke målt.', '']
+    lines += ['Spørsmålsvektorene er også lagrede. Ranking-/packing-tidene inkluderer derfor ikke '
+        'embedding av et nytt brukerspørsmål. De er ikke full online retrieval-latens. '
+        'Embeddingmålingene fra A og størrelses-/RAMdata rapporteres separat i resultat-JSON.', '']
     usage, before = data['consumption'], data['consumption_before']
     delta = {k: v - before['usage'].get(k, 0) for k, v in usage['usage'].items()}
     lines += ['', f"B/C: {usage['actual_calls']-before['actual_calls']} nye faktiske dommerkall, "
