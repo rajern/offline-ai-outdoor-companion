@@ -19,6 +19,17 @@ gold/judge based on results; obtain the owner's provisional model decision and
 case 13 review before advancing. Finalist review remains unfinished. Holdout,
 production changes and answer generation remain excluded.
 
+Owner review task, 2026-10-09: the offline model-selection review is complete;
+see `retrieval_embedding_selection_review.v1.md` and its evidence JSON. MiniLM
+is recommended only as the experimental phase B candidate. Full breathing/CPR
+support in case 08 and anaphylaxis support in case 17 are unreachable with its
+frozen top-16/section rules. Case 13 Gemma risk and case 20 MiniLM coverage have
+separate proposals in `retrieval_embedding_selection_adjudication.proposed.v1.json`;
+they are NOT active scoring rules. Original judgments/gold/cache remain unchanged.
+Do not treat the recommendation or proposals as the owner's decision. Stop here
+until the owner selects the model and resolves the proposed adjudications; do not
+repeat phase A or start B/C from this review alone.
+
 Read `FOUNDATION.md` before future retrieval optimization. Default input is the
 25-case development set, never the control set. Do not recursively read/search
 `evals/holdout/` or include its files in optimizer context, calibration, debugging

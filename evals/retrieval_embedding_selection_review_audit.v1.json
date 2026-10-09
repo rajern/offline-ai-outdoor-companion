@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "date": "2026-10-09",
+  "unchanged_saved_artifacts": 3850,
+  "production_files_matching_frozen_hashes": 18,
+  "evidence_spans_verified": 39,
+  "static_membership_targets_verified_against_frozen_code": 20,
+  "losses_verified": 11,
+  "qwen_gains_verified": 4,
+  "proposed_records_verified": 2,
+  "new_inference_calls": 0,
+  "phase_b_c_started": false,
+  "holdout_accessed": false,
+  "review_sha256": "e326c1442652527ee1aeb2f8f8d491201cdc7dc9fafc425c7a744b8647030706",
+  "report_sha256": "9561a6ff0ab0c959ac78bede8058e1f073d0d199b4994b93a09b1f82a04274b5",
+  "proposal_sha256": "149762b8dd7cb5e4619f79ee3c0c4dbbdd166fb16e5481127d674c745fb853a3",
+  "local_protected_snapshot_sha256": "9dfea5171211e12f88a017805d2d906e10fae58975d4c2e03423c6714beb620e",
+  "boundary": "Offline verification of existing artifacts and pure rule membership; no new retrieval, packing, model or judge execution."
+}

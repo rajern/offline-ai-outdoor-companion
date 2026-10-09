@@ -1,0 +1,4221 @@
+{
+  "schema_version": 1,
+  "version": "1.0.0",
+  "date": "2026-10-09",
+  "repository_baseline": "0e09750",
+  "status": "review_complete_pending_owner_model_and_adjudication_decision",
+  "recommendation": "minilm_for_phase_B_experiment",
+  "approved_model": null,
+  "new_judge_calls": 0,
+  "new_embedding_calls": 0,
+  "new_configurations": 0,
+  "phase_b_c_started": false,
+  "holdout_accessed": false,
+  "production_changed": false,
+  "original_results_modified": false,
+  "source_free": true,
+  "method": "Explain saved rankings using existing document/query vectors; no new inference, packing, thresholds or configurations.",
+  "limitations": [
+    "Rank explanations use existing vectors, not counterfactual embeddings.",
+    "Static section membership precedes threshold, token budget and deduplication; no new packing outputs.",
+    "No generated answers, clinical outcome or mobile deployment measurements.",
+    "Read-only semantic review is not independent judge validation."
+  ],
+  "models": {
+    "minilm": {
+      "index_sha256": "64300ef127cd0211c6da434e159d25fb3591ce247cddd3428f7fcaae8cdbe61c",
+      "documents_sha256": "1952356b4aef70c0a10fff752071bce511c61f7d8a31bdf6bd97a0d140d1a09d",
+      "queries_sha256": "3a13a2d965fe927750e2775f76c4650e2b5f7b2b585af397deb80c205f037cef"
+    },
+    "gemma2": {
+      "index_sha256": "68cbbaa2c0addf7c71cadd31bf2567ffbf42aad862ed1cd6beba7eac785b9869",
+      "documents_sha256": "991d754dbfd380776a4b635e664a480a3f7cdc3a5c6c5db231e1e2b2928b2f46",
+      "queries_sha256": "0216e572af54be2248d853420797f26bfb5d63b40015f387dd9f7fe4c8da1077"
+    },
+    "qwen3-q4": {
+      "index_sha256": "18e178c616c4c03c3233ba70b096dd446d28c51df5477e04ec387b1042d0660f",
+      "documents_sha256": "4f1db768d0caed8d82f9343422dd550f746a8e21ebcfbe453f5481ae93d07348",
+      "queries_sha256": "ae5b6ec6ff5cd4850ef47f5eb7c60319f0076fa8ed03acada7faa2334bb4ff84"
+    }
+  },
+  "reviewed_cases": {
+    "case-01": {
+      "minilm": {
+        "context_sha256": "a7b9fb436ff51fb4951ce6a7b59113bf648de982874f16b6662fd7c1240136ee",
+        "prompt_tokens": 1976,
+        "budget_excluded_packets": 0,
+        "cache_key": "c7d0b13e188cc2b4cabb9c33d0fe8ba0b68abe25ce43e137f84a33fe1a6f9682",
+        "retrieved_sha256": "7df795bbe3a3e845185d4e3eec17184627e06e00bf924661a48efdd09ee1acff",
+        "score_sha256": "bf57e22a234228c9d5f094ef91f054de237cd3b82d3a3ad568f0a669a5a2de59",
+        "answer_sha256": "b09e6d2a8eba0c36b68dfeaaec955a74e5144284d56855a9aeb7c1b61fe096de",
+        "delivered": [
+          "source-19-004",
+          "source-19-003",
+          "source-10-004",
+          "source-04-003",
+          "source-04-007",
+          "source-04-006",
+          "source-04-002",
+          "source-17-003"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-19-004",
+            "score": 0.4049946665763855
+          },
+          {
+            "id": "source-19-003",
+            "score": 0.3589051365852356
+          },
+          {
+            "id": "source-10-004",
+            "score": 0.35456472635269165
+          },
+          {
+            "id": "source-04-003",
+            "score": 0.34615063667297363
+          },
+          {
+            "id": "source-04-007",
+            "score": 0.34549111127853394
+          },
+          {
+            "id": "source-04-006",
+            "score": 0.34119319915771484
+          },
+          {
+            "id": "source-04-002",
+            "score": 0.33267873525619507
+          },
+          {
+            "id": "source-17-003",
+            "score": 0.332322895526886
+          },
+          {
+            "id": "source-04-010",
+            "score": 0.3315179646015167
+          },
+          {
+            "id": "source-07-006",
+            "score": 0.328624427318573
+          },
+          {
+            "id": "source-19-002",
+            "score": 0.3280787467956543
+          },
+          {
+            "id": "source-03-009",
+            "score": 0.3120165765285492
+          },
+          {
+            "id": "source-21-010",
+            "score": 0.3075575828552246
+          },
+          {
+            "id": "source-09-007",
+            "score": 0.305929571390152
+          },
+          {
+            "id": "source-02-004",
+            "score": 0.3031366467475891
+          },
+          {
+            "id": "source-14-004",
+            "score": 0.2996533513069153
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-04-005",
+            "rank": 20,
+            "block": null,
+            "text_sha256": "d9a3208ca7c8d6551edf6d75ae4ac432626318f2b4fcf130c66132343c9da9a0",
+            "section": "Hva er brudd?",
+            "embedding_inputs": {
+              "context": {
+                "original_tokens": 128,
+                "actual_tokens": 128
+              },
+              "text": {
+                "original_tokens": 112,
+                "actual_tokens": 112
+              }
+            }
+          }
+        ],
+        "decisions": [
+          "not_covered",
+          "not_covered",
+          "not_covered",
+          "covered"
+        ],
+        "certificate_positive": [
+          4
+        ]
+      },
+      "gemma2": {
+        "context_sha256": "a8c2c8861a4c18916cd13e327a91c140548158d16278576e803cd333eb5780e2",
+        "prompt_tokens": 1688,
+        "budget_excluded_packets": 0,
+        "cache_key": "ec69213d2fe9b88b9c9b70539597547217afa03ad4bd96aca96be303e23ab2a0",
+        "retrieved_sha256": "657d2b9de10ea14f84908e3be1e9f25559520f54f2d90dd42699c8a65fb84486",
+        "score_sha256": "d47267a48a285fb2a4d4e860ada75d57e40bc2b1676493faaeca9fc4bd5109a9",
+        "answer_sha256": "93debc711eb31395f3c5ac00f09279b3e201e544c6d9c9eb3e30e03a72a02c22",
+        "delivered": [
+          "source-04-006",
+          "source-04-007",
+          "source-04-005",
+          "source-04-004",
+          "source-04-002",
+          "source-04-003",
+          "source-02-003",
+          "source-02-001"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-04-006",
+            "score": 0.7399612665176392
+          },
+          {
+            "id": "source-04-007",
+            "score": 0.7376890182495117
+          },
+          {
+            "id": "source-04-005",
+            "score": 0.7029358744621277
+          },
+          {
+            "id": "source-04-004",
+            "score": 0.6996966600418091
+          },
+          {
+            "id": "source-04-002",
+            "score": 0.6905333995819092
+          },
+          {
+            "id": "source-04-003",
+            "score": 0.6860603094100952
+          },
+          {
+            "id": "source-02-003",
+            "score": 0.6843653917312622
+          },
+          {
+            "id": "source-02-001",
+            "score": 0.6783831715583801
+          },
+          {
+            "id": "source-16-002",
+            "score": 0.677006721496582
+          },
+          {
+            "id": "source-04-009",
+            "score": 0.6765933632850647
+          },
+          {
+            "id": "source-02-013",
+            "score": 0.6756821274757385
+          },
+          {
+            "id": "source-08-011",
+            "score": 0.6731588840484619
+          },
+          {
+            "id": "source-02-006",
+            "score": 0.6720032691955566
+          },
+          {
+            "id": "source-02-004",
+            "score": 0.6708182692527771
+          },
+          {
+            "id": "source-04-010",
+            "score": 0.6706340909004211
+          },
+          {
+            "id": "source-02-007",
+            "score": 0.6703753471374512
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-04-005",
+            "rank": 3,
+            "block": 3,
+            "text_sha256": "d9a3208ca7c8d6551edf6d75ae4ac432626318f2b4fcf130c66132343c9da9a0",
+            "section": "Hva er brudd?"
+          }
+        ],
+        "decisions": [
+          "covered",
+          "covered",
+          "covered",
+          "covered"
+        ],
+        "certificate_positive": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "qwen3-q4": {
+        "context_sha256": "840480972237ef42311857d578abaa854a64d2120e26cb563892fe86b7ab72a4",
+        "prompt_tokens": 1697,
+        "budget_excluded_packets": 0,
+        "cache_key": "f8474f693e201a5db352a98652b83f010ec2f110c1d7710b9211cbee2b5b9a42",
+        "retrieved_sha256": "3f471d5ca53d8c4709788754d8019cc4d54181744a42b7213f1ed7d80160f3fe",
+        "score_sha256": "b86004b022a6502ebec94cec24909e0cfe02fbd2f24afbbd8454910040d865b3",
+        "answer_sha256": "014678afd72ded205ba29e6685d94d946db9dea0ce0f099bb41e9a43450f8a37",
+        "delivered": [
+          "source-04-007",
+          "source-19-004",
+          "source-19-003",
+          "source-07-004",
+          "source-08-011",
+          "source-07-007",
+          "source-07-006",
+          "source-19-002"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-04-007",
+            "score": 0.5089811682701111
+          },
+          {
+            "id": "source-19-004",
+            "score": 0.4541109800338745
+          },
+          {
+            "id": "source-19-003",
+            "score": 0.44451868534088135
+          },
+          {
+            "id": "source-07-004",
+            "score": 0.43512606620788574
+          },
+          {
+            "id": "source-08-011",
+            "score": 0.42941081523895264
+          },
+          {
+            "id": "source-07-007",
+            "score": 0.4284534752368927
+          },
+          {
+            "id": "source-07-006",
+            "score": 0.4283773899078369
+          },
+          {
+            "id": "source-19-002",
+            "score": 0.4238428473472595
+          },
+          {
+            "id": "source-05-005",
+            "score": 0.41354772448539734
+          },
+          {
+            "id": "source-04-010",
+            "score": 0.4007985591888428
+          },
+          {
+            "id": "source-18-004",
+            "score": 0.391923725605011
+          },
+          {
+            "id": "source-08-007",
+            "score": 0.3903627097606659
+          },
+          {
+            "id": "source-03-009",
+            "score": 0.387797474861145
+          },
+          {
+            "id": "source-04-006",
+            "score": 0.3871706426143646
+          },
+          {
+            "id": "source-17-003",
+            "score": 0.3726266920566559
+          },
+          {
+            "id": "source-18-002",
+            "score": 0.3721955716609955
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-04-005",
+            "rank": 81,
+            "block": null,
+            "text_sha256": "d9a3208ca7c8d6551edf6d75ae4ac432626318f2b4fcf130c66132343c9da9a0",
+            "section": "Hva er brudd?"
+          }
+        ],
+        "decisions": [
+          "not_covered",
+          "not_covered",
+          "not_covered",
+          "not_covered"
+        ],
+        "certificate_positive": []
+      }
+    },
+    "case-03": {
+      "minilm": {
+        "context_sha256": "398e777437f0dbacaf768ac1894a324f833d82a9e14810f60dcb7e7a94695362",
+        "prompt_tokens": 1524,
+        "budget_excluded_packets": 0,
+        "cache_key": "179b5024f18e76f5de8dfcd7a89d68676764a86725fbba0c5f0e6a657936e5d7",
+        "retrieved_sha256": "d36f280f0ce6406d8a0c0f0999489505c1d42198c6de97b7b3ba7e5a87df3cce",
+        "score_sha256": "9d6aa75cfefc484c2cb28c5e02b95b6b319f3a7ac064b18b4095358c7a1167e8",
+        "answer_sha256": "41546ec8a374cfa5c104283a35e707d8226a40b07e79356d8d44448196ac1864",
+        "delivered": [
+          "source-20-003",
+          "source-21-005",
+          "source-21-002",
+          "source-21-003",
+          "source-21-012",
+          "source-20-004",
+          "source-20-005",
+          "source-21-008"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-20-003",
+            "score": 0.6191798448562622
+          },
+          {
+            "id": "source-21-005",
+            "score": 0.5632607936859131
+          },
+          {
+            "id": "source-21-002",
+            "score": 0.5521570444107056
+          },
+          {
+            "id": "source-21-003",
+            "score": 0.5323842763900757
+          },
+          {
+            "id": "source-21-012",
+            "score": 0.49740493297576904
+          },
+          {
+            "id": "source-20-004",
+            "score": 0.47567102313041687
+          },
+          {
+            "id": "source-20-005",
+            "score": 0.4700341820716858
+          },
+          {
+            "id": "source-21-008",
+            "score": 0.46886271238327026
+          },
+          {
+            "id": "source-03-006",
+            "score": 0.46622270345687866
+          },
+          {
+            "id": "source-21-016",
+            "score": 0.4513867199420929
+          },
+          {
+            "id": "source-21-010",
+            "score": 0.4485371708869934
+          },
+          {
+            "id": "source-05-004",
+            "score": 0.443087637424469
+          },
+          {
+            "id": "source-21-009",
+            "score": 0.44036996364593506
+          },
+          {
+            "id": "source-06-004",
+            "score": 0.43931275606155396
+          },
+          {
+            "id": "source-21-006",
+            "score": 0.428927481174469
+          },
+          {
+            "id": "source-14-004",
+            "score": 0.41786956787109375
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-21-009",
+            "rank": 13,
+            "block": null,
+            "text_sha256": "81a6f7d4c87d9683243e79bdff9981cd9b31436c4b4a2bd3ab0a5e0323342bcc",
+            "section": "Prevention steps and strategies / Treat your water",
+            "embedding_inputs": {
+              "context": {
+                "original_tokens": 134,
+                "actual_tokens": 128
+              },
+              "text": {
+                "original_tokens": 108,
+                "actual_tokens": 108
+              }
+            }
+          },
+          {
+            "id": "source-21-010",
+            "rank": 11,
+            "block": null,
+            "text_sha256": "12e0429c5c27a2df65bddcd0cdc11229ded29e69f0d0a9b4276ee3a3202443da",
+            "section": "Prevention steps and strategies / Treat your water / Boil",
+            "embedding_inputs": {
+              "context": {
+                "original_tokens": 106,
+                "actual_tokens": 106
+              },
+              "text": {
+                "original_tokens": 77,
+                "actual_tokens": 77
+              }
+            }
+          }
+        ],
+        "decisions": [
+          "covered",
+          "covered",
+          "not_covered",
+          "not_covered",
+          "not_covered"
+        ],
+        "certificate_positive": [
+          1,
+          2
+        ]
+      },
+      "gemma2": {
+        "context_sha256": "1e678b15017913c3f3c114778fe7a7a100e76be8bde1776cb49f88fbeb22140f",
+        "prompt_tokens": 1366,
+        "budget_excluded_packets": 0,
+        "cache_key": "dec7c51ecfab70055b3d1f00839af5bedfc6780df9b4f87475cb21dd6a3e6e88",
+        "retrieved_sha256": "1f6f21541c7420ddfe5de2a61b3c97d42a04340b2907c6a1fd8c1751ef28c060",
+        "score_sha256": "1c443eba5fa5d54c12c3e23d4a4d04cc4412e7b8b21ff9ee2a72d6250933de3f",
+        "answer_sha256": "084c419b409e4986ddac6b5b46de1259c73e10a58b29331db528cc733e3399e4",
+        "delivered": [
+          "source-20-003",
+          "source-21-002",
+          "source-21-003",
+          "source-21-008",
+          "source-21-015",
+          "source-21-009",
+          "source-20-004",
+          "source-21-010"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-20-003",
+            "score": 0.7446000576019287
+          },
+          {
+            "id": "source-21-002",
+            "score": 0.7399889230728149
+          },
+          {
+            "id": "source-21-003",
+            "score": 0.7360591292381287
+          },
+          {
+            "id": "source-21-008",
+            "score": 0.7359834909439087
+          },
+          {
+            "id": "source-21-015",
+            "score": 0.7301223874092102
+          },
+          {
+            "id": "source-21-009",
+            "score": 0.7276845574378967
+          },
+          {
+            "id": "source-20-004",
+            "score": 0.7236688137054443
+          },
+          {
+            "id": "source-21-010",
+            "score": 0.7185113430023193
+          },
+          {
+            "id": "source-06-004",
+            "score": 0.709865152835846
+          },
+          {
+            "id": "source-12-003",
+            "score": 0.7071843147277832
+          },
+          {
+            "id": "source-20-005",
+            "score": 0.7026014924049377
+          },
+          {
+            "id": "source-21-014",
+            "score": 0.7016475200653076
+          },
+          {
+            "id": "source-20-006",
+            "score": 0.7013518810272217
+          },
+          {
+            "id": "source-21-016",
+            "score": 0.7011767625808716
+          },
+          {
+            "id": "source-02-012",
+            "score": 0.6997477412223816
+          },
+          {
+            "id": "source-21-007",
+            "score": 0.6994401216506958
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-21-009",
+            "rank": 6,
+            "block": 6,
+            "text_sha256": "81a6f7d4c87d9683243e79bdff9981cd9b31436c4b4a2bd3ab0a5e0323342bcc",
+            "section": "Prevention steps and strategies / Treat your water"
+          },
+          {
+            "id": "source-21-010",
+            "rank": 8,
+            "block": 8,
+            "text_sha256": "12e0429c5c27a2df65bddcd0cdc11229ded29e69f0d0a9b4276ee3a3202443da",
+            "section": "Prevention steps and strategies / Treat your water / Boil"
+          }
+        ],
+        "decisions": [
+          "not_covered",
+          "covered",
+          "covered",
+          "covered",
+          "covered"
+        ],
+        "certificate_positive": [
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "qwen3-q4": {
+        "context_sha256": "2986a0b200a9bcfe328b29811cd588375578caddcd80852e6759b13bba48b30c",
+        "prompt_tokens": 1970,
+        "budget_excluded_packets": 1,
+        "cache_key": "6c408d00543fd7f5e04cc7deadd6645a4aa5c2a6c768e17c950e0587edffa760",
+        "retrieved_sha256": "d34acc681d788858cc709ee3db8dd83964fcc4dc44d0c1a3aab1c9a2f4684ae9",
+        "score_sha256": "d15b26128fd7215242d1e6cbf2872de99d536910e8395d3bf1bdb1dda4b2e944",
+        "answer_sha256": "b26832ef37e0990f686a64500b696848eb5486b9a13184843e40194b7b89616e",
+        "delivered": [
+          "source-19-004",
+          "source-20-003",
+          "source-19-003",
+          "source-06-004",
+          "source-05-004",
+          "source-03-006",
+          "source-20-005"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-19-004",
+            "score": 0.4626794457435608
+          },
+          {
+            "id": "source-20-003",
+            "score": 0.4426248073577881
+          },
+          {
+            "id": "source-19-003",
+            "score": 0.4299917221069336
+          },
+          {
+            "id": "source-06-004",
+            "score": 0.42821022868156433
+          },
+          {
+            "id": "source-05-004",
+            "score": 0.4264230728149414
+          },
+          {
+            "id": "source-03-006",
+            "score": 0.4118117690086365
+          },
+          {
+            "id": "source-20-005",
+            "score": 0.40506958961486816
+          },
+          {
+            "id": "source-17-005",
+            "score": 0.4022313952445984
+          },
+          {
+            "id": "source-06-006",
+            "score": 0.4015580415725708
+          },
+          {
+            "id": "source-19-005",
+            "score": 0.3979455530643463
+          },
+          {
+            "id": "source-19-001",
+            "score": 0.3888075649738312
+          },
+          {
+            "id": "source-18-003",
+            "score": 0.3855944275856018
+          },
+          {
+            "id": "source-05-005",
+            "score": 0.38511425256729126
+          },
+          {
+            "id": "source-21-003",
+            "score": 0.3762584924697876
+          },
+          {
+            "id": "source-20-004",
+            "score": 0.37147754430770874
+          },
+          {
+            "id": "source-17-002",
+            "score": 0.36895519495010376
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-21-009",
+            "rank": 46,
+            "block": null,
+            "text_sha256": "81a6f7d4c87d9683243e79bdff9981cd9b31436c4b4a2bd3ab0a5e0323342bcc",
+            "section": "Prevention steps and strategies / Treat your water"
+          },
+          {
+            "id": "source-21-010",
+            "rank": 45,
+            "block": null,
+            "text_sha256": "12e0429c5c27a2df65bddcd0cdc11229ded29e69f0d0a9b4276ee3a3202443da",
+            "section": "Prevention steps and strategies / Treat your water / Boil"
+          }
+        ],
+        "decisions": [
+          "not_covered",
+          "not_covered",
+          "not_covered",
+          "not_covered",
+          "not_covered"
+        ],
+        "certificate_positive": []
+      }
+    },
+    "case-08": {
+      "minilm": {
+        "context_sha256": "e0279c9c306a8b05154b8dbf11c177283ba201cb9ee4af3271e35757c2156707",
+        "prompt_tokens": 1446,
+        "budget_excluded_packets": 0,
+        "cache_key": "c634775cc7a2f0f33a57ae43ee1843ceb151cee1cf6a545650b94799cabcba32",
+        "retrieved_sha256": "fbc17e1e4b0358721d10e1a97d17b1620e36c066d478b81350cdfb12203a8203",
+        "score_sha256": "4b06b74eaeb64f186c8fe148adb7a1ee65cad2be75c5aea71dc80c0b3496d329",
+        "answer_sha256": "43a6ad93471daa46e7ebf5c35ca161182ab637441ed0321ca9a1d86778b507f6",
+        "delivered": [
+          "source-07-003",
+          "source-07-006",
+          "source-01-010",
+          "source-04-010",
+          "source-01-017",
+          "source-01-002",
+          "source-03-009",
+          "source-05-005"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-07-003",
+            "score": 0.5272256135940552
+          },
+          {
+            "id": "source-07-006",
+            "score": 0.4518967866897583
+          },
+          {
+            "id": "source-01-010",
+            "score": 0.44637078046798706
+          },
+          {
+            "id": "source-04-010",
+            "score": 0.42032039165496826
+          },
+          {
+            "id": "source-01-017",
+            "score": 0.4017066955566406
+          },
+          {
+            "id": "source-01-002",
+            "score": 0.3996936082839966
+          },
+          {
+            "id": "source-03-009",
+            "score": 0.39897215366363525
+          },
+          {
+            "id": "source-05-005",
+            "score": 0.38424983620643616
+          },
+          {
+            "id": "source-01-004",
+            "score": 0.38082897663116455
+          },
+          {
+            "id": "source-08-011",
+            "score": 0.37890732288360596
+          },
+          {
+            "id": "source-07-001",
+            "score": 0.37676510214805603
+          },
+          {
+            "id": "source-01-006",
+            "score": 0.37599655985832214
+          },
+          {
+            "id": "source-01-028",
+            "score": 0.37419193983078003
+          },
+          {
+            "id": "source-07-002",
+            "score": 0.37207162380218506
+          },
+          {
+            "id": "source-05-003",
+            "score": 0.3710132837295532
+          },
+          {
+            "id": "source-07-004",
+            "score": 0.3511350750923157
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-07-004",
+            "rank": 16,
+            "block": null,
+            "text_sha256": "9445ddd7f46bd683f53da293d499ae2089a11f9a6ba391b035ba36c19ca7486d",
+            "section": "Slik hjelper du en bevisstløs person / Gi fri luftvei",
+            "embedding_inputs": {
+              "context": {
+                "original_tokens": 188,
+                "actual_tokens": 128
+              },
+              "text": {
+                "original_tokens": 168,
+                "actual_tokens": 128
+              }
+            }
+          },
+          {
+            "id": "source-07-005",
+            "rank": 25,
+            "block": null,
+            "text_sha256": "756869eb822589ad78d2aefc76138ccc60fdbb760d0cded5b0193c031f74a722",
+            "section": "Slik hjelper du en bevisstløs person / Sjekk for normal pust",
+            "embedding_inputs": {
+              "context": {
+                "original_tokens": 221,
+                "actual_tokens": 128
+              },
+              "text": {
+                "original_tokens": 201,
+                "actual_tokens": 128
+              }
+            }
+          },
+          {
+            "id": "source-01-004",
+            "rank": 9,
+            "block": null,
+            "text_sha256": "6aab7fd56b15a4b75ae509da7821f7ef09f6c7cdea80a2f463be47d71f6ee90e",
+            "section": "Hjerte- og lungeredning på voksne / Legg personen på gulvet og sjekk pusten",
+            "embedding_inputs": {
+              "context": {
+                "original_tokens": 148,
+                "actual_tokens": 128
+              },
+              "text": {
+                "original_tokens": 119,
+                "actual_tokens": 119
+              }
+            }
+          },
+          {
+            "id": "source-01-006",
+            "rank": 12,
+            "block": null,
+            "text_sha256": "5a79ea74c8a079e55e984d039918f0a675b55bdfc30b60ea38e3323155feb7ab",
+            "section": "Hjerte- og lungeredning på voksne / To innblåsinger",
+            "embedding_inputs": {
+              "context": {
+                "original_tokens": 119,
+                "actual_tokens": 119
+              },
+              "text": {
+                "original_tokens": 94,
+                "actual_tokens": 94
+              }
+            }
+          }
+        ],
+        "decisions": [
+          "covered",
+          "not_covered",
+          "covered",
+          "not_covered"
+        ],
+        "certificate_positive": [
+          1,
+          3
+        ]
+      },
+      "gemma2": {
+        "context_sha256": "3ad78e0e4b47536daffc4fdf2b1f85d8f4cd044e5027ecfc68f7fb49c6190fd2",
+        "prompt_tokens": 1797,
+        "budget_excluded_packets": 0,
+        "cache_key": "15237d551195567b0a9d65c2e7723e1276e812efa91b9fc1358cde2d5cefadeb",
+        "retrieved_sha256": "d530543e50606936ce2cca5b32dcf47b8c4cf701163dc0daca8a622357a83b7a",
+        "score_sha256": "c5c5900868a5c8ca4f55360ec4358c5da83b20953c9a206f7aefcb02eb538e99",
+        "answer_sha256": "fa838fca16d97650ef8422df156d9cc4eabd6c0d0e43abcab0e622473df34df1",
+        "delivered": [
+          "source-07-003",
+          "source-01-005",
+          "source-07-005",
+          "source-07-006",
+          "source-01-001",
+          "source-01-006",
+          "source-01-010",
+          "source-01-003"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-07-003",
+            "score": 0.7320895195007324
+          },
+          {
+            "id": "source-01-005",
+            "score": 0.7219512462615967
+          },
+          {
+            "id": "source-07-005",
+            "score": 0.7177853584289551
+          },
+          {
+            "id": "source-07-006",
+            "score": 0.7146778106689453
+          },
+          {
+            "id": "source-01-001",
+            "score": 0.7116988897323608
+          },
+          {
+            "id": "source-01-006",
+            "score": 0.7062772512435913
+          },
+          {
+            "id": "source-01-010",
+            "score": 0.7061055898666382
+          },
+          {
+            "id": "source-01-003",
+            "score": 0.7050172090530396
+          },
+          {
+            "id": "source-07-004",
+            "score": 0.7029539942741394
+          },
+          {
+            "id": "source-05-005",
+            "score": 0.7007085680961609
+          },
+          {
+            "id": "source-07-007",
+            "score": 0.6994253993034363
+          },
+          {
+            "id": "source-01-013",
+            "score": 0.6986040472984314
+          },
+          {
+            "id": "source-01-004",
+            "score": 0.698074996471405
+          },
+          {
+            "id": "source-01-016",
+            "score": 0.6977354288101196
+          },
+          {
+            "id": "source-07-001",
+            "score": 0.6972141861915588
+          },
+          {
+            "id": "source-04-006",
+            "score": 0.6961885690689087
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-07-004",
+            "rank": 9,
+            "block": null,
+            "text_sha256": "9445ddd7f46bd683f53da293d499ae2089a11f9a6ba391b035ba36c19ca7486d",
+            "section": "Slik hjelper du en bevisstløs person / Gi fri luftvei"
+          },
+          {
+            "id": "source-07-005",
+            "rank": 3,
+            "block": 3,
+            "text_sha256": "756869eb822589ad78d2aefc76138ccc60fdbb760d0cded5b0193c031f74a722",
+            "section": "Slik hjelper du en bevisstløs person / Sjekk for normal pust"
+          },
+          {
+            "id": "source-01-004",
+            "rank": 13,
+            "block": null,
+            "text_sha256": "6aab7fd56b15a4b75ae509da7821f7ef09f6c7cdea80a2f463be47d71f6ee90e",
+            "section": "Hjerte- og lungeredning på voksne / Legg personen på gulvet og sjekk pusten"
+          },
+          {
+            "id": "source-01-006",
+            "rank": 6,
+            "block": 6,
+            "text_sha256": "5a79ea74c8a079e55e984d039918f0a675b55bdfc30b60ea38e3323155feb7ab",
+            "section": "Hjerte- og lungeredning på voksne / To innblåsinger"
+          }
+        ],
+        "decisions": [
+          "covered",
+          "covered",
+          "covered",
+          "covered"
+        ],
+        "certificate_positive": [
+          1,
+          3,
+          4
+        ]
+      },
+      "qwen3-q4": {
+        "context_sha256": "96d15799bade9258871674704a14c6f71107e948a8846cda97e6625b5f731751",
+        "prompt_tokens": 1776,
+        "budget_excluded_packets": 0,
+        "cache_key": "51ca3a0bb0e5cccc9ec14566391d4cb962032ba9585289f13ea1a8820077372c",
+        "retrieved_sha256": "f685a87fdd131615e68a5a300ce79c3cb2935bf673fed0a2fca1c454ccc831b4",
+        "score_sha256": "2f25a6334610325edfc410e59c338fce7669193618669f76a20526c5dfa2daba",
+        "answer_sha256": "877bacd3cdcf59f4bb8596a2a32b6afafcc516639f20c4209e032006740882e1",
+        "delivered": [
+          "source-07-003",
+          "source-07-007",
+          "source-02-011",
+          "source-07-005",
+          "source-05-005",
+          "source-07-006",
+          "source-01-010",
+          "source-01-006"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-07-003",
+            "score": 0.46960312128067017
+          },
+          {
+            "id": "source-07-007",
+            "score": 0.46487733721733093
+          },
+          {
+            "id": "source-02-011",
+            "score": 0.45892804861068726
+          },
+          {
+            "id": "source-07-005",
+            "score": 0.4567040801048279
+          },
+          {
+            "id": "source-05-005",
+            "score": 0.4542999863624573
+          },
+          {
+            "id": "source-07-006",
+            "score": 0.45047375559806824
+          },
+          {
+            "id": "source-01-010",
+            "score": 0.44776487350463867
+          },
+          {
+            "id": "source-01-006",
+            "score": 0.4474406838417053
+          },
+          {
+            "id": "source-01-004",
+            "score": 0.4473857283592224
+          },
+          {
+            "id": "source-19-005",
+            "score": 0.4367242455482483
+          },
+          {
+            "id": "source-02-009",
+            "score": 0.4330850839614868
+          },
+          {
+            "id": "source-01-009",
+            "score": 0.4293084740638733
+          },
+          {
+            "id": "source-05-004",
+            "score": 0.42731207609176636
+          },
+          {
+            "id": "source-06-006",
+            "score": 0.42338675260543823
+          },
+          {
+            "id": "source-02-004",
+            "score": 0.42330390214920044
+          },
+          {
+            "id": "source-01-005",
+            "score": 0.42090070247650146
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-07-004",
+            "rank": 84,
+            "block": null,
+            "text_sha256": "9445ddd7f46bd683f53da293d499ae2089a11f9a6ba391b035ba36c19ca7486d",
+            "section": "Slik hjelper du en bevisstløs person / Gi fri luftvei"
+          },
+          {
+            "id": "source-07-005",
+            "rank": 4,
+            "block": 4,
+            "text_sha256": "756869eb822589ad78d2aefc76138ccc60fdbb760d0cded5b0193c031f74a722",
+            "section": "Slik hjelper du en bevisstløs person / Sjekk for normal pust"
+          },
+          {
+            "id": "source-01-004",
+            "rank": 9,
+            "block": null,
+            "text_sha256": "6aab7fd56b15a4b75ae509da7821f7ef09f6c7cdea80a2f463be47d71f6ee90e",
+            "section": "Hjerte- og lungeredning på voksne / Legg personen på gulvet og sjekk pusten"
+          },
+          {
+            "id": "source-01-006",
+            "rank": 8,
+            "block": 8,
+            "text_sha256": "5a79ea74c8a079e55e984d039918f0a675b55bdfc30b60ea38e3323155feb7ab",
+            "section": "Hjerte- og lungeredning på voksne / To innblåsinger"
+          }
+        ],
+        "decisions": [
+          "not_covered",
+          "covered",
+          "covered",
+          "covered"
+        ],
+        "certificate_positive": [
+          3,
+          4
+        ]
+      }
+    },
+    "case-13": {
+      "minilm": {
+        "context_sha256": "08067e23ca62c0a7fe5d442dbc96caa87a548f11b251944d7c40be5a1d8b3aef",
+        "prompt_tokens": 1063,
+        "budget_excluded_packets": 0,
+        "cache_key": "fe28970af7f750f2b35047dcdcbf2e7b599cfbe0499d53ec86c558d6e5d3c345",
+        "retrieved_sha256": "3d5639fdb603b088090a9092b0711cafc06ef8cfb1c491f0bfde41ff9ccffd97",
+        "score_sha256": "f33aa1ebcb44f4cecbc1eaa05cee55326af29621fe931e81e2cc649d67e3a1f6",
+        "answer_sha256": "9a79010e3efad62c38b96e0d6a24b69b30459d30120aafdbac17b265fa4998d6",
+        "delivered": [
+          "source-01-027",
+          "source-04-009",
+          "source-03-008",
+          "source-07-002",
+          "source-08-010",
+          "source-07-007",
+          "source-14-004",
+          "source-05-007"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-01-027",
+            "score": 0.5483690500259399
+          },
+          {
+            "id": "source-04-009",
+            "score": 0.5388327240943909
+          },
+          {
+            "id": "source-03-008",
+            "score": 0.5128245949745178
+          },
+          {
+            "id": "source-07-002",
+            "score": 0.5044705867767334
+          },
+          {
+            "id": "source-08-010",
+            "score": 0.4825321137905121
+          },
+          {
+            "id": "source-07-007",
+            "score": 0.475102961063385
+          },
+          {
+            "id": "source-14-004",
+            "score": 0.47023841738700867
+          },
+          {
+            "id": "source-05-007",
+            "score": 0.4673197269439697
+          },
+          {
+            "id": "source-04-006",
+            "score": 0.4663490056991577
+          },
+          {
+            "id": "source-16-003",
+            "score": 0.4428471624851227
+          },
+          {
+            "id": "source-19-001",
+            "score": 0.4245474934577942
+          },
+          {
+            "id": "source-08-007",
+            "score": 0.41810142993927
+          },
+          {
+            "id": "source-04-010",
+            "score": 0.41120561957359314
+          },
+          {
+            "id": "source-08-011",
+            "score": 0.40564942359924316
+          },
+          {
+            "id": "source-16-001",
+            "score": 0.4039093852043152
+          },
+          {
+            "id": "source-11-003",
+            "score": 0.3963838219642639
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-11-003",
+            "rank": 16,
+            "block": null,
+            "text_sha256": "072b87fa901dfb3085ef4e8ff96d18efb5b51e1f3b3da1bfca8ffc3a8385f241",
+            "section": "Call for help early",
+            "embedding_inputs": {
+              "context": {
+                "original_tokens": 98,
+                "actual_tokens": 98
+              },
+              "text": {
+                "original_tokens": 79,
+                "actual_tokens": 79
+              }
+            }
+          },
+          {
+            "id": "source-11-008",
+            "rank": 18,
+            "block": null,
+            "text_sha256": "c9be4b4d17cd51746bebfc860908ed8e52015d9e732783a24f80ae8aa25be438",
+            "section": "Types of beacon / Difference between a PLB and SEND / Carrying two devices",
+            "embedding_inputs": {
+              "context": {
+                "original_tokens": 133,
+                "actual_tokens": 128
+              },
+              "text": {
+                "original_tokens": 95,
+                "actual_tokens": 95
+              }
+            }
+          }
+        ],
+        "decisions": [
+          "not_covered",
+          "not_covered"
+        ],
+        "certificate_positive": []
+      },
+      "gemma2": {
+        "context_sha256": "0d3327b71ae52710abc95b8ba18b9a03a18a4c672ede7a34281632e6138f63a8",
+        "prompt_tokens": 1151,
+        "budget_excluded_packets": 0,
+        "cache_key": "eebe18fd1f5330d1f99c54b35657d58f8df542261a03dc5befe3bf60a602954f",
+        "retrieved_sha256": "946b77a5abcd3b111ab67a85ee41091387aa3309d6e25e03967411f11c13973e",
+        "score_sha256": "8049f01b4ce0eba1cdbbbe921668f3b72c766cfc77d1538bc9efb927a800583d",
+        "answer_sha256": "ae0261999a701e66c48153f7afb16b1da7e5b96e0e27e549f85a38cf84f46260",
+        "delivered": [
+          "source-07-002",
+          "source-01-027",
+          "source-03-008",
+          "source-04-009",
+          "source-05-007",
+          "source-08-010",
+          "source-19-002",
+          "source-01-001"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-07-002",
+            "score": 0.7491318583488464
+          },
+          {
+            "id": "source-01-027",
+            "score": 0.7319075465202332
+          },
+          {
+            "id": "source-03-008",
+            "score": 0.7286150455474854
+          },
+          {
+            "id": "source-04-009",
+            "score": 0.7221719026565552
+          },
+          {
+            "id": "source-05-007",
+            "score": 0.7155660390853882
+          },
+          {
+            "id": "source-08-010",
+            "score": 0.7153571248054504
+          },
+          {
+            "id": "source-19-002",
+            "score": 0.7108365893363953
+          },
+          {
+            "id": "source-01-001",
+            "score": 0.7108094692230225
+          },
+          {
+            "id": "source-07-003",
+            "score": 0.7085353136062622
+          },
+          {
+            "id": "source-11-003",
+            "score": 0.7061588168144226
+          },
+          {
+            "id": "source-19-001",
+            "score": 0.7038810849189758
+          },
+          {
+            "id": "source-01-002",
+            "score": 0.6934692859649658
+          },
+          {
+            "id": "source-07-001",
+            "score": 0.6926149725914001
+          },
+          {
+            "id": "source-17-005",
+            "score": 0.6921838521957397
+          },
+          {
+            "id": "source-11-008",
+            "score": 0.69106125831604
+          },
+          {
+            "id": "source-01-026",
+            "score": 0.6910479068756104
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-11-003",
+            "rank": 10,
+            "block": null,
+            "text_sha256": "072b87fa901dfb3085ef4e8ff96d18efb5b51e1f3b3da1bfca8ffc3a8385f241",
+            "section": "Call for help early"
+          },
+          {
+            "id": "source-11-008",
+            "rank": 15,
+            "block": null,
+            "text_sha256": "c9be4b4d17cd51746bebfc860908ed8e52015d9e732783a24f80ae8aa25be438",
+            "section": "Types of beacon / Difference between a PLB and SEND / Carrying two devices"
+          }
+        ],
+        "decisions": [
+          "not_covered",
+          "not_covered"
+        ],
+        "certificate_positive": []
+      },
+      "qwen3-q4": {
+        "context_sha256": "36d207cb8a47612118c35c5036a4c0ae3f40dcf9305949687fd866c35005dbaf",
+        "prompt_tokens": 1399,
+        "budget_excluded_packets": 0,
+        "cache_key": "1175606dec6d6cdd45e6b2e475419deab1495f6d69f29530201e445cf721f25f",
+        "retrieved_sha256": "94bb719acdd9a42485a767b713af517197fa2e93e81dbdbc2273c838fd08eb71",
+        "score_sha256": "7cf5304dfbfe71767990675b6f463e3ee5c60cda4404cbc577bddd4ecc8526e0",
+        "answer_sha256": "f88b13959bba6aac27c7dfc0a593fb7b8698202b8513c15c72238a5fcbe8deaa",
+        "delivered": [
+          "source-19-002",
+          "source-05-005",
+          "source-07-002",
+          "source-17-003",
+          "source-05-002",
+          "source-05-007",
+          "source-17-001",
+          "source-05-006"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-19-002",
+            "score": 0.5134811401367188
+          },
+          {
+            "id": "source-05-005",
+            "score": 0.47762420773506165
+          },
+          {
+            "id": "source-07-002",
+            "score": 0.4682908058166504
+          },
+          {
+            "id": "source-17-003",
+            "score": 0.4638324975967407
+          },
+          {
+            "id": "source-05-002",
+            "score": 0.46227025985717773
+          },
+          {
+            "id": "source-05-007",
+            "score": 0.4496636390686035
+          },
+          {
+            "id": "source-17-001",
+            "score": 0.44955894351005554
+          },
+          {
+            "id": "source-05-006",
+            "score": 0.44269850850105286
+          },
+          {
+            "id": "source-17-005",
+            "score": 0.4415214955806732
+          },
+          {
+            "id": "source-16-003",
+            "score": 0.43918049335479736
+          },
+          {
+            "id": "source-05-001",
+            "score": 0.4383557438850403
+          },
+          {
+            "id": "source-19-001",
+            "score": 0.4382059872150421
+          },
+          {
+            "id": "source-03-009",
+            "score": 0.43804502487182617
+          },
+          {
+            "id": "source-03-008",
+            "score": 0.4365695118904114
+          },
+          {
+            "id": "source-07-007",
+            "score": 0.43512794375419617
+          },
+          {
+            "id": "source-17-002",
+            "score": 0.4325047731399536
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-11-003",
+            "rank": 39,
+            "block": null,
+            "text_sha256": "072b87fa901dfb3085ef4e8ff96d18efb5b51e1f3b3da1bfca8ffc3a8385f241",
+            "section": "Call for help early"
+          },
+          {
+            "id": "source-11-008",
+            "rank": 54,
+            "block": null,
+            "text_sha256": "c9be4b4d17cd51746bebfc860908ed8e52015d9e732783a24f80ae8aa25be438",
+            "section": "Types of beacon / Difference between a PLB and SEND / Carrying two devices"
+          }
+        ],
+        "decisions": [
+          "not_covered",
+          "not_covered"
+        ],
+        "certificate_positive": []
+      }
+    },
+    "case-17": {
+      "minilm": {
+        "context_sha256": "316d752eed979fc8a45113cf21f3cc2a93a8ce25ee8124226b09a196f4231f49",
+        "prompt_tokens": 1352,
+        "budget_excluded_packets": 0,
+        "cache_key": "5487cffb245d7279d9b1bf86b0b1b60bc96d4f491b8ae6370d713a7fe3279860",
+        "retrieved_sha256": "9b066cbc676cc4a3a62198c76311fe0b5b5ff0ff7dc015ed35af8edbd9ea1ba7",
+        "score_sha256": "90c1339acd405f5367ab522b95bbe4815a46072806a98de44e2e213cf0c8a68e",
+        "answer_sha256": "06313ae3bdf7887bdf98fce623d9f381146d16c915b087b74632481df1142e39",
+        "delivered": [
+          "source-17-003",
+          "source-19-002",
+          "source-05-003",
+          "source-17-005",
+          "source-09-007",
+          "source-04-007",
+          "source-04-010",
+          "source-05-005"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-17-003",
+            "score": 0.5538415908813477
+          },
+          {
+            "id": "source-19-002",
+            "score": 0.5022393465042114
+          },
+          {
+            "id": "source-05-003",
+            "score": 0.4412614107131958
+          },
+          {
+            "id": "source-17-005",
+            "score": 0.41768449544906616
+          },
+          {
+            "id": "source-09-007",
+            "score": 0.4103071391582489
+          },
+          {
+            "id": "source-04-007",
+            "score": 0.3774395287036896
+          },
+          {
+            "id": "source-04-010",
+            "score": 0.3760403096675873
+          },
+          {
+            "id": "source-05-005",
+            "score": 0.37492263317108154
+          },
+          {
+            "id": "source-05-007",
+            "score": 0.37477216124534607
+          },
+          {
+            "id": "source-07-007",
+            "score": 0.3746529221534729
+          },
+          {
+            "id": "source-19-005",
+            "score": 0.3686324656009674
+          },
+          {
+            "id": "source-07-003",
+            "score": 0.36686623096466064
+          },
+          {
+            "id": "source-08-011",
+            "score": 0.36577439308166504
+          },
+          {
+            "id": "source-17-001",
+            "score": 0.3633798658847809
+          },
+          {
+            "id": "source-04-009",
+            "score": 0.36027291417121887
+          },
+          {
+            "id": "source-04-006",
+            "score": 0.35820838809013367
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-08-001",
+            "rank": 45,
+            "block": null,
+            "text_sha256": "0b4695c6f00a9cb43275a79786d11d1b2acdfd4ea024b426a3d9c70059d10d05",
+            "section": "Allergisk sjokk og anafylaksi",
+            "embedding_inputs": {
+              "context": {
+                "original_tokens": 75,
+                "actual_tokens": 75
+              },
+              "text": {
+                "original_tokens": 59,
+                "actual_tokens": 59
+              }
+            }
+          },
+          {
+            "id": "source-08-002",
+            "rank": 127,
+            "block": null,
+            "text_sha256": "5ee6d43d56de88d6fd5f19297f877d901714dddf6559adc08991a8c2ad74b728",
+            "section": "Hva er allergisk sjokk og anafylaksi?",
+            "embedding_inputs": {
+              "context": {
+                "original_tokens": 161,
+                "actual_tokens": 128
+              },
+              "text": {
+                "original_tokens": 142,
+                "actual_tokens": 128
+              }
+            }
+          },
+          {
+            "id": "source-08-003",
+            "rank": 40,
+            "block": null,
+            "text_sha256": "62fcc8199a800accd0e2ad9f79566d3d7123169aa29c6dfed0ffe6a6280a684f",
+            "section": "Ring 113 umiddelbart ved allergisjokk",
+            "embedding_inputs": {
+              "context": {
+                "original_tokens": 39,
+                "actual_tokens": 39
+              },
+              "text": {
+                "original_tokens": 22,
+                "actual_tokens": 22
+              }
+            }
+          },
+          {
+            "id": "source-08-004",
+            "rank": 34,
+            "block": null,
+            "text_sha256": "c1991659051fe3843f0eba27d9af0ca3019e63225b156853e88676876aa35d8f",
+            "section": "Symptomer på allergisk sjokk",
+            "embedding_inputs": {
+              "context": {
+                "original_tokens": 246,
+                "actual_tokens": 128
+              },
+              "text": {
+                "original_tokens": 231,
+                "actual_tokens": 128
+              }
+            }
+          },
+          {
+            "id": "source-08-005",
+            "rank": 151,
+            "block": null,
+            "text_sha256": "89c47d1bf18fefa0d474a59538fe90678a312cf9624933558301cea1aa597066",
+            "section": "Årsaker til anafylaksi",
+            "embedding_inputs": {
+              "context": {
+                "original_tokens": 57,
+                "actual_tokens": 57
+              },
+              "text": {
+                "original_tokens": 42,
+                "actual_tokens": 42
+              }
+            }
+          },
+          {
+            "id": "source-08-006",
+            "rank": 103,
+            "block": null,
+            "text_sha256": "ee83235ecaa42e00f21895beb0c982df658a5eadf4e4a987942de7fdfbf81de4",
+            "section": "Utredning og diagnose av anafylaksi",
+            "embedding_inputs": {
+              "context": {
+                "original_tokens": 72,
+                "actual_tokens": 72
+              },
+              "text": {
+                "original_tokens": 54,
+                "actual_tokens": 54
+              }
+            }
+          },
+          {
+            "id": "source-08-007",
+            "rank": 52,
+            "block": null,
+            "text_sha256": "c098302d5495dd98c62db66f70008ccab918c2b8cd28380828282381f1fcb49a",
+            "section": "Behandling av anafylaksi",
+            "embedding_inputs": {
+              "context": {
+                "original_tokens": 129,
+                "actual_tokens": 128
+              },
+              "text": {
+                "original_tokens": 115,
+                "actual_tokens": 115
+              }
+            }
+          },
+          {
+            "id": "source-08-008",
+            "rank": 89,
+            "block": null,
+            "text_sha256": "75894df9ade47b612d3a037c7913d3f4d7d8159aff7d2dfaeabde347175fb4af",
+            "section": "Behandling av anafylaksi / Forebyggende behandling",
+            "embedding_inputs": {
+              "context": {
+                "original_tokens": 48,
+                "actual_tokens": 48
+              },
+              "text": {
+                "original_tokens": 29,
+                "actual_tokens": 29
+              }
+            }
+          }
+        ],
+        "decisions": [
+          "not_covered",
+          "not_covered"
+        ],
+        "certificate_positive": []
+      },
+      "gemma2": {
+        "context_sha256": "5f3f221aa8fa4a1967d973e22911ad469c7551be1f02b8d4f90e39f107937811",
+        "prompt_tokens": 1821,
+        "budget_excluded_packets": 0,
+        "cache_key": "04b138fdec313003947bee9f3d935f87b87207a4214fa0cf0f19f1183026c0cc",
+        "retrieved_sha256": "1b8da1f279c3f698b7bb6595973ad2bdb155fd28b3fb384ff26b840959594189",
+        "score_sha256": "410062d28a72df1c31c64404f2a8ce89dd883e9ac1c6c12531aa01ba8234411a",
+        "answer_sha256": "41215b0fa80e856767621587e237080fa6ba6e9a07d549352adfa8a55fb19a2b",
+        "delivered": [
+          "source-19-002",
+          "source-08-004",
+          "source-17-001",
+          "source-17-003",
+          "source-02-011",
+          "source-16-002",
+          "source-06-006",
+          "source-02-013"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-19-002",
+            "score": 0.7081503868103027
+          },
+          {
+            "id": "source-08-004",
+            "score": 0.6893662810325623
+          },
+          {
+            "id": "source-17-001",
+            "score": 0.6835739612579346
+          },
+          {
+            "id": "source-17-003",
+            "score": 0.6825709342956543
+          },
+          {
+            "id": "source-02-011",
+            "score": 0.6747070550918579
+          },
+          {
+            "id": "source-16-002",
+            "score": 0.6678336262702942
+          },
+          {
+            "id": "source-06-006",
+            "score": 0.665804922580719
+          },
+          {
+            "id": "source-02-013",
+            "score": 0.6645760536193848
+          },
+          {
+            "id": "source-16-001",
+            "score": 0.6635444164276123
+          },
+          {
+            "id": "source-06-002",
+            "score": 0.6621100902557373
+          },
+          {
+            "id": "source-18-003",
+            "score": 0.660744309425354
+          },
+          {
+            "id": "source-07-005",
+            "score": 0.660415768623352
+          },
+          {
+            "id": "source-07-007",
+            "score": 0.6595034599304199
+          },
+          {
+            "id": "source-02-006",
+            "score": 0.6550507545471191
+          },
+          {
+            "id": "source-01-026",
+            "score": 0.6541950106620789
+          },
+          {
+            "id": "source-05-002",
+            "score": 0.6535139083862305
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-08-001",
+            "rank": 94,
+            "block": null,
+            "text_sha256": "0b4695c6f00a9cb43275a79786d11d1b2acdfd4ea024b426a3d9c70059d10d05",
+            "section": "Allergisk sjokk og anafylaksi"
+          },
+          {
+            "id": "source-08-002",
+            "rank": 102,
+            "block": null,
+            "text_sha256": "5ee6d43d56de88d6fd5f19297f877d901714dddf6559adc08991a8c2ad74b728",
+            "section": "Hva er allergisk sjokk og anafylaksi?"
+          },
+          {
+            "id": "source-08-003",
+            "rank": 64,
+            "block": null,
+            "text_sha256": "62fcc8199a800accd0e2ad9f79566d3d7123169aa29c6dfed0ffe6a6280a684f",
+            "section": "Ring 113 umiddelbart ved allergisjokk"
+          },
+          {
+            "id": "source-08-004",
+            "rank": 2,
+            "block": 2,
+            "text_sha256": "c1991659051fe3843f0eba27d9af0ca3019e63225b156853e88676876aa35d8f",
+            "section": "Symptomer på allergisk sjokk"
+          },
+          {
+            "id": "source-08-005",
+            "rank": 133,
+            "block": null,
+            "text_sha256": "89c47d1bf18fefa0d474a59538fe90678a312cf9624933558301cea1aa597066",
+            "section": "Årsaker til anafylaksi"
+          },
+          {
+            "id": "source-08-006",
+            "rank": 132,
+            "block": null,
+            "text_sha256": "ee83235ecaa42e00f21895beb0c982df658a5eadf4e4a987942de7fdfbf81de4",
+            "section": "Utredning og diagnose av anafylaksi"
+          },
+          {
+            "id": "source-08-007",
+            "rank": 30,
+            "block": null,
+            "text_sha256": "c098302d5495dd98c62db66f70008ccab918c2b8cd28380828282381f1fcb49a",
+            "section": "Behandling av anafylaksi"
+          },
+          {
+            "id": "source-08-008",
+            "rank": 19,
+            "block": null,
+            "text_sha256": "75894df9ade47b612d3a037c7913d3f4d7d8159aff7d2dfaeabde347175fb4af",
+            "section": "Behandling av anafylaksi / Forebyggende behandling"
+          }
+        ],
+        "decisions": [
+          "covered",
+          "not_covered"
+        ],
+        "certificate_positive": []
+      },
+      "qwen3-q4": {
+        "context_sha256": "1203283fdb4e2a6330a18fa6880834a7d6659b1015ee1fc1b0d6c41d656d35b0",
+        "prompt_tokens": 1724,
+        "budget_excluded_packets": 0,
+        "cache_key": "27f52fea08b47f086ee2c5266e8d1878673bdf7fe0c7808e9227f2b9a0f0d020",
+        "retrieved_sha256": "e05fb634524b8b97d18f7acb0268eaa51a8696de697d8f975e92acebb8e8b62e",
+        "score_sha256": "59176ce192cd747e7668d0eec6433c39d20593e28b08403876c6b4bd631543d1",
+        "answer_sha256": "78f09c762ff85a195168f40a08d8e70a746a45600250d325368a8974b15d32b5",
+        "delivered": [
+          "source-19-002",
+          "source-05-005",
+          "source-17-005",
+          "source-17-003",
+          "source-06-006",
+          "source-05-003",
+          "source-16-002",
+          "source-06-002"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-19-002",
+            "score": 0.47197073698043823
+          },
+          {
+            "id": "source-05-005",
+            "score": 0.4652775228023529
+          },
+          {
+            "id": "source-17-005",
+            "score": 0.45665407180786133
+          },
+          {
+            "id": "source-17-003",
+            "score": 0.4509025812149048
+          },
+          {
+            "id": "source-06-006",
+            "score": 0.43878310918807983
+          },
+          {
+            "id": "source-05-003",
+            "score": 0.4351113736629486
+          },
+          {
+            "id": "source-16-002",
+            "score": 0.4325178265571594
+          },
+          {
+            "id": "source-06-002",
+            "score": 0.428056538105011
+          },
+          {
+            "id": "source-07-006",
+            "score": 0.42320486903190613
+          },
+          {
+            "id": "source-07-004",
+            "score": 0.4194525480270386
+          },
+          {
+            "id": "source-08-011",
+            "score": 0.4158119559288025
+          },
+          {
+            "id": "source-05-002",
+            "score": 0.41317927837371826
+          },
+          {
+            "id": "source-05-006",
+            "score": 0.4112812280654907
+          },
+          {
+            "id": "source-02-011",
+            "score": 0.4086461663246155
+          },
+          {
+            "id": "source-16-003",
+            "score": 0.4063783288002014
+          },
+          {
+            "id": "source-01-006",
+            "score": 0.40346622467041016
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-08-001",
+            "rank": 113,
+            "block": null,
+            "text_sha256": "0b4695c6f00a9cb43275a79786d11d1b2acdfd4ea024b426a3d9c70059d10d05",
+            "section": "Allergisk sjokk og anafylaksi"
+          },
+          {
+            "id": "source-08-002",
+            "rank": 98,
+            "block": null,
+            "text_sha256": "5ee6d43d56de88d6fd5f19297f877d901714dddf6559adc08991a8c2ad74b728",
+            "section": "Hva er allergisk sjokk og anafylaksi?"
+          },
+          {
+            "id": "source-08-003",
+            "rank": 59,
+            "block": null,
+            "text_sha256": "62fcc8199a800accd0e2ad9f79566d3d7123169aa29c6dfed0ffe6a6280a684f",
+            "section": "Ring 113 umiddelbart ved allergisjokk"
+          },
+          {
+            "id": "source-08-004",
+            "rank": 62,
+            "block": null,
+            "text_sha256": "c1991659051fe3843f0eba27d9af0ca3019e63225b156853e88676876aa35d8f",
+            "section": "Symptomer på allergisk sjokk"
+          },
+          {
+            "id": "source-08-005",
+            "rank": 75,
+            "block": null,
+            "text_sha256": "89c47d1bf18fefa0d474a59538fe90678a312cf9624933558301cea1aa597066",
+            "section": "Årsaker til anafylaksi"
+          },
+          {
+            "id": "source-08-006",
+            "rank": 84,
+            "block": null,
+            "text_sha256": "ee83235ecaa42e00f21895beb0c982df658a5eadf4e4a987942de7fdfbf81de4",
+            "section": "Utredning og diagnose av anafylaksi"
+          },
+          {
+            "id": "source-08-007",
+            "rank": 61,
+            "block": null,
+            "text_sha256": "c098302d5495dd98c62db66f70008ccab918c2b8cd28380828282381f1fcb49a",
+            "section": "Behandling av anafylaksi"
+          },
+          {
+            "id": "source-08-008",
+            "rank": 99,
+            "block": null,
+            "text_sha256": "75894df9ade47b612d3a037c7913d3f4d7d8159aff7d2dfaeabde347175fb4af",
+            "section": "Behandling av anafylaksi / Forebyggende behandling"
+          }
+        ],
+        "decisions": [
+          "not_covered",
+          "not_covered"
+        ],
+        "certificate_positive": []
+      }
+    },
+    "case-20": {
+      "minilm": {
+        "context_sha256": "f37a956df646172cb677b04ac97d4ca6bfa5a0b2cf490d5a1589f6df44eaea62",
+        "prompt_tokens": 1416,
+        "budget_excluded_packets": 0,
+        "cache_key": "01834a0b997f0ee6b3995a7aa822e73b527eaec63386702dbf1339dccec0f8ae",
+        "retrieved_sha256": "6ce61e047d20ecad7a8161efbe4e8a82c54a2ca0fe175132867746f4c0a39b86",
+        "score_sha256": "0beea59e51347db1f99049ac9b819c653c7de8afc0efd81208526885b99781c3",
+        "answer_sha256": "f1c7b160738a5358febb7e5151dabc1d6f7d0d34b18ce1fd6c1dbdae6aee3d65",
+        "delivered": [
+          "source-16-003",
+          "source-10-003",
+          "source-16-002",
+          "source-16-001",
+          "source-09-007",
+          "source-14-004",
+          "source-10-004",
+          "source-15-001"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-16-003",
+            "score": 0.6501114368438721
+          },
+          {
+            "id": "source-10-003",
+            "score": 0.576141357421875
+          },
+          {
+            "id": "source-16-002",
+            "score": 0.5575024485588074
+          },
+          {
+            "id": "source-16-001",
+            "score": 0.5505337715148926
+          },
+          {
+            "id": "source-09-007",
+            "score": 0.5356318950653076
+          },
+          {
+            "id": "source-14-004",
+            "score": 0.49193015694618225
+          },
+          {
+            "id": "source-10-004",
+            "score": 0.4343000650405884
+          },
+          {
+            "id": "source-15-001",
+            "score": 0.4322386384010315
+          },
+          {
+            "id": "source-17-005",
+            "score": 0.4251573085784912
+          },
+          {
+            "id": "source-10-002",
+            "score": 0.42490071058273315
+          },
+          {
+            "id": "source-17-003",
+            "score": 0.41916152834892273
+          },
+          {
+            "id": "source-12-009",
+            "score": 0.40609210729599
+          },
+          {
+            "id": "source-19-002",
+            "score": 0.3987734019756317
+          },
+          {
+            "id": "source-19-005",
+            "score": 0.3891752064228058
+          },
+          {
+            "id": "source-22-004",
+            "score": 0.3841509222984314
+          },
+          {
+            "id": "source-16-004",
+            "score": 0.3711444139480591
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-10-002",
+            "rank": 10,
+            "block": null,
+            "text_sha256": "23fd0d056b8679041daa0897f56477933c513c7cfcbad80483e574819e7e9f28",
+            "section": "Five simple steps / 1. Choose the right trip for you",
+            "embedding_inputs": {
+              "context": {
+                "original_tokens": 36,
+                "actual_tokens": 36
+              },
+              "text": {
+                "original_tokens": 16,
+                "actual_tokens": 16
+              }
+            }
+          },
+          {
+            "id": "source-16-002",
+            "rank": 3,
+            "block": 3,
+            "text_sha256": "65175e7b6ac1a4b0918c60811d08808f4e2bc35e6b5957b9be809905292387e0",
+            "section": "Turplanleggingen starter hjemme - bruk snøskredvarselet og planlegg turen",
+            "embedding_inputs": {
+              "context": {
+                "original_tokens": 280,
+                "actual_tokens": 128
+              },
+              "text": {
+                "original_tokens": 253,
+                "actual_tokens": 128
+              }
+            }
+          }
+        ],
+        "decisions": [
+          "not_covered",
+          "covered"
+        ],
+        "certificate_positive": [
+          2
+        ]
+      },
+      "gemma2": {
+        "context_sha256": "f7181f7f98afd8389046020de06c5601d5b5b6468c665712e6f563589af3bb9f",
+        "prompt_tokens": 1402,
+        "budget_excluded_packets": 0,
+        "cache_key": "81c9c1017a0e50ba49aab161a17f2898235fc0acc826973632ccc588c3249749",
+        "retrieved_sha256": "9896104ad679a0b4536428c969dfd6ca3f4d8bf371dc95775f170b77c23ec947",
+        "score_sha256": "a145d090e684677f5c77e631a4aeb660ace4a3227a3d44d1225baa6b96376e9e",
+        "answer_sha256": "983c8e5d7921f15cecae812abef3bc3fbf779663d05bbb17a85c0e290785f8fc",
+        "delivered": [
+          "source-16-003",
+          "source-10-003",
+          "source-16-001",
+          "source-16-002",
+          "source-19-002",
+          "source-15-001",
+          "source-14-004",
+          "source-10-002"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-16-003",
+            "score": 0.7337862253189087
+          },
+          {
+            "id": "source-10-003",
+            "score": 0.7211707234382629
+          },
+          {
+            "id": "source-16-001",
+            "score": 0.7122656106948853
+          },
+          {
+            "id": "source-16-002",
+            "score": 0.701766848564148
+          },
+          {
+            "id": "source-19-002",
+            "score": 0.6957789063453674
+          },
+          {
+            "id": "source-15-001",
+            "score": 0.6866452693939209
+          },
+          {
+            "id": "source-14-004",
+            "score": 0.6825900077819824
+          },
+          {
+            "id": "source-10-002",
+            "score": 0.6702104806900024
+          },
+          {
+            "id": "source-16-004",
+            "score": 0.6701289415359497
+          },
+          {
+            "id": "source-18-003",
+            "score": 0.6632972359657288
+          },
+          {
+            "id": "source-01-006",
+            "score": 0.6613807678222656
+          },
+          {
+            "id": "source-11-008",
+            "score": 0.6607241034507751
+          },
+          {
+            "id": "source-18-002",
+            "score": 0.6588550209999084
+          },
+          {
+            "id": "source-17-001",
+            "score": 0.6587600708007812
+          },
+          {
+            "id": "source-20-002",
+            "score": 0.6581961512565613
+          },
+          {
+            "id": "source-20-005",
+            "score": 0.6556016206741333
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-10-002",
+            "rank": 8,
+            "block": 8,
+            "text_sha256": "23fd0d056b8679041daa0897f56477933c513c7cfcbad80483e574819e7e9f28",
+            "section": "Five simple steps / 1. Choose the right trip for you"
+          },
+          {
+            "id": "source-16-002",
+            "rank": 4,
+            "block": 4,
+            "text_sha256": "65175e7b6ac1a4b0918c60811d08808f4e2bc35e6b5957b9be809905292387e0",
+            "section": "Turplanleggingen starter hjemme - bruk snøskredvarselet og planlegg turen"
+          }
+        ],
+        "decisions": [
+          "covered",
+          "covered"
+        ],
+        "certificate_positive": [
+          1,
+          2
+        ]
+      },
+      "qwen3-q4": {
+        "context_sha256": "3740d27261b9426383af71ecee5e0030de7a9c9c8814e17c84e2d55553a5a8d9",
+        "prompt_tokens": 1717,
+        "budget_excluded_packets": 0,
+        "cache_key": "428951d330d36a463e2e2e9e066aff681856ca8c7a90fe3c3b911c654b4402bf",
+        "retrieved_sha256": "6dde48ce35a8c6d152249f808e6e9690fdec8693c7bce4b5d55d21c50980dbb1",
+        "score_sha256": "a815dc26d26f5a86361d9e5b6d7b9ca84fda63ff1ac5fe12d457082bc23c2d28",
+        "answer_sha256": "e3749cc725524ad96d8dea3ae5a23704831cacd7afeedeef39761c6ed371a382",
+        "delivered": [
+          "source-16-002",
+          "source-16-003",
+          "source-05-004",
+          "source-06-006",
+          "source-10-003",
+          "source-10-004",
+          "source-18-003",
+          "source-15-001"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-16-002",
+            "score": 0.5042257308959961
+          },
+          {
+            "id": "source-16-003",
+            "score": 0.4947267174720764
+          },
+          {
+            "id": "source-05-004",
+            "score": 0.47162961959838867
+          },
+          {
+            "id": "source-06-006",
+            "score": 0.4493888020515442
+          },
+          {
+            "id": "source-10-003",
+            "score": 0.4449306130409241
+          },
+          {
+            "id": "source-10-004",
+            "score": 0.4363372325897217
+          },
+          {
+            "id": "source-18-003",
+            "score": 0.4355313181877136
+          },
+          {
+            "id": "source-15-001",
+            "score": 0.43256258964538574
+          },
+          {
+            "id": "source-19-005",
+            "score": 0.4313964545726776
+          },
+          {
+            "id": "source-16-001",
+            "score": 0.4312325119972229
+          },
+          {
+            "id": "source-14-004",
+            "score": 0.42551863193511963
+          },
+          {
+            "id": "source-02-004",
+            "score": 0.42530685663223267
+          },
+          {
+            "id": "source-19-003",
+            "score": 0.41727110743522644
+          },
+          {
+            "id": "source-18-002",
+            "score": 0.4152491092681885
+          },
+          {
+            "id": "source-05-005",
+            "score": 0.4117043614387512
+          },
+          {
+            "id": "source-16-004",
+            "score": 0.40867987275123596
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-10-002",
+            "rank": 42,
+            "block": null,
+            "text_sha256": "23fd0d056b8679041daa0897f56477933c513c7cfcbad80483e574819e7e9f28",
+            "section": "Five simple steps / 1. Choose the right trip for you"
+          },
+          {
+            "id": "source-16-002",
+            "rank": 1,
+            "block": 1,
+            "text_sha256": "65175e7b6ac1a4b0918c60811d08808f4e2bc35e6b5957b9be809905292387e0",
+            "section": "Turplanleggingen starter hjemme - bruk snøskredvarselet og planlegg turen"
+          }
+        ],
+        "decisions": [
+          "covered",
+          "covered"
+        ],
+        "certificate_positive": [
+          2
+        ]
+      }
+    },
+    "case-21": {
+      "minilm": {
+        "context_sha256": "01e3ac3d0298165760125f90b1b4a943a20c7b18b12ae679fab27580ab97e397",
+        "prompt_tokens": 1529,
+        "budget_excluded_packets": 0,
+        "cache_key": "6cc520ef1cc626fae7496f17a84b815eed0166cd83b137d45d97dba6b9e23198",
+        "retrieved_sha256": "822bd047f41c60e729963163b12b4409bc73d3a6bfb7687982fe7db842051b33",
+        "score_sha256": "53314cfbba205d930d6f717b89bc524286b3dfe1bfec2c680b6698c38f26fc4c",
+        "answer_sha256": "85ce90b23475cb2f326900670e668286411c7732609024b9e8dcff6a8197e70d",
+        "delivered": [
+          "source-21-011",
+          "source-19-001",
+          "source-05-004",
+          "source-01-014",
+          "source-01-015",
+          "source-21-002",
+          "source-01-022",
+          "source-21-012"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-21-011",
+            "score": 0.6200444102287292
+          },
+          {
+            "id": "source-19-001",
+            "score": 0.48047640919685364
+          },
+          {
+            "id": "source-05-004",
+            "score": 0.4701201617717743
+          },
+          {
+            "id": "source-01-014",
+            "score": 0.448473185300827
+          },
+          {
+            "id": "source-01-015",
+            "score": 0.4126189947128296
+          },
+          {
+            "id": "source-21-002",
+            "score": 0.4099985361099243
+          },
+          {
+            "id": "source-01-022",
+            "score": 0.4069836139678955
+          },
+          {
+            "id": "source-21-012",
+            "score": 0.39981257915496826
+          },
+          {
+            "id": "source-01-007",
+            "score": 0.39449042081832886
+          },
+          {
+            "id": "source-01-001",
+            "score": 0.39302289485931396
+          },
+          {
+            "id": "source-01-006",
+            "score": 0.389294296503067
+          },
+          {
+            "id": "source-08-008",
+            "score": 0.3831760287284851
+          },
+          {
+            "id": "source-21-009",
+            "score": 0.3657594621181488
+          },
+          {
+            "id": "source-01-027",
+            "score": 0.35977399349212646
+          },
+          {
+            "id": "source-01-021",
+            "score": 0.3586726188659668
+          },
+          {
+            "id": "source-01-012",
+            "score": 0.3567705452442169
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-21-009",
+            "rank": 13,
+            "block": null,
+            "text_sha256": "81a6f7d4c87d9683243e79bdff9981cd9b31436c4b4a2bd3ab0a5e0323342bcc",
+            "section": "Prevention steps and strategies / Treat your water",
+            "embedding_inputs": {
+              "context": {
+                "original_tokens": 134,
+                "actual_tokens": 128
+              },
+              "text": {
+                "original_tokens": 108,
+                "actual_tokens": 108
+              }
+            }
+          }
+        ],
+        "decisions": [
+          "covered",
+          "not_covered"
+        ],
+        "certificate_positive": [
+          1
+        ]
+      },
+      "gemma2": {
+        "context_sha256": "4f2ca9562d27826970eab8cc463c3946dc904181d9b3b487caee5ddadf6ab558",
+        "prompt_tokens": 1318,
+        "budget_excluded_packets": 0,
+        "cache_key": "d8766115931d6e81b33de74f23971b316824659031ed3001f4e5ac6959cd0477",
+        "retrieved_sha256": "5b0f3b0bffa5a59e8c500014c5f2a30f62df3f0484e920c03a1d86799e0b623f",
+        "score_sha256": "9a85b42cc6cad87e77bf8a0f51bc98e566bac8eda84604018b54ce1948edeee5",
+        "answer_sha256": "bf58119b761efcac34cf811f016e7663cc38ff05ddf7d38c8081bc318021f7b4",
+        "delivered": [
+          "source-21-011",
+          "source-21-002",
+          "source-21-012",
+          "source-21-009",
+          "source-21-013",
+          "source-21-016",
+          "source-21-010",
+          "source-02-012"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-21-011",
+            "score": 0.6774117946624756
+          },
+          {
+            "id": "source-21-002",
+            "score": 0.6650731563568115
+          },
+          {
+            "id": "source-21-012",
+            "score": 0.6535181999206543
+          },
+          {
+            "id": "source-21-009",
+            "score": 0.6527252197265625
+          },
+          {
+            "id": "source-21-013",
+            "score": 0.6461619734764099
+          },
+          {
+            "id": "source-21-016",
+            "score": 0.6435448527336121
+          },
+          {
+            "id": "source-21-010",
+            "score": 0.6396450996398926
+          },
+          {
+            "id": "source-02-012",
+            "score": 0.6394440531730652
+          },
+          {
+            "id": "source-19-005",
+            "score": 0.6392079591751099
+          },
+          {
+            "id": "source-21-014",
+            "score": 0.637604832649231
+          },
+          {
+            "id": "source-21-008",
+            "score": 0.6322122812271118
+          },
+          {
+            "id": "source-03-006",
+            "score": 0.6309240460395813
+          },
+          {
+            "id": "source-05-005",
+            "score": 0.630649209022522
+          },
+          {
+            "id": "source-19-001",
+            "score": 0.6300921440124512
+          },
+          {
+            "id": "source-20-003",
+            "score": 0.6282159090042114
+          },
+          {
+            "id": "source-07-007",
+            "score": 0.627261757850647
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-21-009",
+            "rank": 4,
+            "block": 4,
+            "text_sha256": "81a6f7d4c87d9683243e79bdff9981cd9b31436c4b4a2bd3ab0a5e0323342bcc",
+            "section": "Prevention steps and strategies / Treat your water"
+          }
+        ],
+        "decisions": [
+          "covered",
+          "covered"
+        ],
+        "certificate_positive": [
+          1,
+          2
+        ]
+      },
+      "qwen3-q4": {
+        "context_sha256": "08eb18bc1875b45df1164170a6e1ebc70264cd6978987a89a08750a48f3323dd",
+        "prompt_tokens": 1475,
+        "budget_excluded_packets": 0,
+        "cache_key": "19b684302e309854a27c895cca72d54da21cc3886c9fc62b9a2173cad7de9283",
+        "retrieved_sha256": "343f671603f35945b2269d62151906f98431affa2524b87bdbd561825a1bcbb1",
+        "score_sha256": "0871e1ecbbb5a8d0ddacce46b159aa34052b777a02d69e6b8d37fe1028e00953",
+        "answer_sha256": "d2ad30a5456bd7eb47ed6a49e72e6ccb9938a402892f7532a30913e72a448a25",
+        "delivered": [
+          "source-21-011",
+          "source-21-012",
+          "source-21-013",
+          "source-21-009",
+          "source-21-002",
+          "source-12-004",
+          "source-20-003",
+          "source-06-006"
+        ],
+        "saved_top16": [
+          {
+            "id": "source-21-011",
+            "score": 0.5438405275344849
+          },
+          {
+            "id": "source-21-012",
+            "score": 0.4747783839702606
+          },
+          {
+            "id": "source-21-013",
+            "score": 0.41249579191207886
+          },
+          {
+            "id": "source-21-009",
+            "score": 0.4087480902671814
+          },
+          {
+            "id": "source-21-002",
+            "score": 0.40381014347076416
+          },
+          {
+            "id": "source-12-004",
+            "score": 0.3858042359352112
+          },
+          {
+            "id": "source-20-003",
+            "score": 0.3826204538345337
+          },
+          {
+            "id": "source-06-006",
+            "score": 0.36414751410484314
+          },
+          {
+            "id": "source-18-002",
+            "score": 0.35805031657218933
+          },
+          {
+            "id": "source-20-005",
+            "score": 0.35633552074432373
+          },
+          {
+            "id": "source-19-001",
+            "score": 0.3548871874809265
+          },
+          {
+            "id": "source-08-011",
+            "score": 0.3537559509277344
+          },
+          {
+            "id": "source-21-005",
+            "score": 0.35164591670036316
+          },
+          {
+            "id": "source-08-012",
+            "score": 0.34811776876449585
+          },
+          {
+            "id": "source-20-004",
+            "score": 0.34512361884117126
+          },
+          {
+            "id": "source-21-006",
+            "score": 0.34252408146858215
+          }
+        ],
+        "targets": [
+          {
+            "id": "source-21-009",
+            "rank": 4,
+            "block": 4,
+            "text_sha256": "81a6f7d4c87d9683243e79bdff9981cd9b31436c4b4a2bd3ab0a5e0323342bcc",
+            "section": "Prevention steps and strategies / Treat your water"
+          }
+        ],
+        "decisions": [
+          "covered",
+          "covered"
+        ],
+        "certificate_positive": [
+          1,
+          2
+        ]
+      }
+    }
+  },
+  "losses_vs_gemma": [
+    {
+      "case_id": "case-01",
+      "item": 1,
+      "requirement": "Manglende evne til å stå på den skadde foten gir grunn til å mistenke brudd.",
+      "safety_relevance": "acute_first_aid",
+      "documented_cause": "Rangering: bruddmistanke/legepassasje rang 20, ikke topp-8, ikke budsjettforkastet, ingen avkorting.",
+      "phase_b_c_opportunity": "P1 kan tilføre bruddparenten via rang 6; P2/k<=16 og P3 kan ikke. Budsjett og threshold uverifisert.",
+      "minilm": {
+        "raw_decision": "not_covered",
+        "evidence": [],
+        "cache_key": "c7d0b13e188cc2b4cabb9c33d0fe8ba0b68abe25ce43e137f84a33fe1a6f9682",
+        "answer_sha256": "b09e6d2a8eba0c36b68dfeaaec955a74e5144284d56855a9aeb7c1b61fe096de"
+      },
+      "gemma2": {
+        "raw_decision": "covered",
+        "evidence": [
+          {
+            "block": 3,
+            "source_item": "source-04-005",
+            "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/",
+            "text_sha256": "d9a3208ca7c8d6551edf6d75ae4ac432626318f2b4fcf130c66132343c9da9a0",
+            "formatted_block_start": 290,
+            "character_length": 85,
+            "quote_sha256": "96a71011b71983dc8f90f233be435f50e492f98c7ca6ad12530e2b38b751e054"
+          }
+        ],
+        "cache_key": "ec69213d2fe9b88b9c9b70539597547217afa03ad4bd96aca96be303e23ab2a0",
+        "answer_sha256": "93debc711eb31395f3c5ac00f09279b3e201e544c6d9c9eb3e30e03a72a02c22"
+      },
+      "primary_and_alternative_sources": [
+        {
+          "id": "source-04-005",
+          "section": "Hva er brudd?",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/",
+          "text_sha256": "d9a3208ca7c8d6551edf6d75ae4ac432626318f2b4fcf130c66132343c9da9a0"
+        }
+      ]
+    },
+    {
+      "case_id": "case-01",
+      "item": 2,
+      "requirement": "Forstuing og brudd kan være vanskelig å skille.",
+      "safety_relevance": "acute_first_aid",
+      "documented_cause": "Rangering: bruddmistanke/legepassasje rang 20, ikke topp-8, ikke budsjettforkastet, ingen avkorting.",
+      "phase_b_c_opportunity": "P1 kan tilføre bruddparenten via rang 6; P2/k<=16 og P3 kan ikke. Budsjett og threshold uverifisert.",
+      "minilm": {
+        "raw_decision": "not_covered",
+        "evidence": [],
+        "cache_key": "c7d0b13e188cc2b4cabb9c33d0fe8ba0b68abe25ce43e137f84a33fe1a6f9682",
+        "answer_sha256": "b09e6d2a8eba0c36b68dfeaaec955a74e5144284d56855a9aeb7c1b61fe096de"
+      },
+      "gemma2": {
+        "raw_decision": "covered",
+        "evidence": [
+          {
+            "block": 3,
+            "source_item": "source-04-005",
+            "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/",
+            "text_sha256": "d9a3208ca7c8d6551edf6d75ae4ac432626318f2b4fcf130c66132343c9da9a0",
+            "formatted_block_start": 376,
+            "character_length": 64,
+            "quote_sha256": "828aa10e47de036795635970d07c7419c5e7a0f6f5c3a2964e2952d5d765fcc4"
+          },
+          {
+            "block": 5,
+            "source_item": "source-04-002",
+            "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/",
+            "text_sha256": "809fd6fb1fb0dd1e5f35403b1f72ceece91d448d237b4584033c32a360593292",
+            "formatted_block_start": 252,
+            "character_length": 88,
+            "quote_sha256": "bb2f519df87c763e34325405887634b90214f4c8033f4c20b72ab999d377d57a"
+          },
+          {
+            "block": 3,
+            "source_item": "source-04-005",
+            "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/",
+            "text_sha256": "d9a3208ca7c8d6551edf6d75ae4ac432626318f2b4fcf130c66132343c9da9a0",
+            "formatted_block_start": 176,
+            "character_length": 113,
+            "quote_sha256": "557b017546ba5b17011df3566b1d56b2a3899c83de3ff547ee675f3ea6a1c0bc"
+          }
+        ],
+        "cache_key": "ec69213d2fe9b88b9c9b70539597547217afa03ad4bd96aca96be303e23ab2a0",
+        "answer_sha256": "93debc711eb31395f3c5ac00f09279b3e201e544c6d9c9eb3e30e03a72a02c22"
+      },
+      "primary_and_alternative_sources": [
+        {
+          "id": "source-04-005",
+          "section": "Hva er brudd?",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/",
+          "text_sha256": "d9a3208ca7c8d6551edf6d75ae4ac432626318f2b4fcf130c66132343c9da9a0"
+        }
+      ]
+    },
+    {
+      "case_id": "case-01",
+      "item": 3,
+      "requirement": "Mistanke om brudd krever vurdering av lege eller legevakt.",
+      "safety_relevance": "acute_first_aid",
+      "documented_cause": "Rangering: bruddmistanke/legepassasje rang 20, ikke topp-8, ikke budsjettforkastet, ingen avkorting.",
+      "phase_b_c_opportunity": "P1 kan tilføre bruddparenten via rang 6; P2/k<=16 og P3 kan ikke. Budsjett og threshold uverifisert.",
+      "minilm": {
+        "raw_decision": "not_covered",
+        "evidence": [],
+        "cache_key": "c7d0b13e188cc2b4cabb9c33d0fe8ba0b68abe25ce43e137f84a33fe1a6f9682",
+        "answer_sha256": "b09e6d2a8eba0c36b68dfeaaec955a74e5144284d56855a9aeb7c1b61fe096de"
+      },
+      "gemma2": {
+        "raw_decision": "covered",
+        "evidence": [
+          {
+            "block": 3,
+            "source_item": "source-04-005",
+            "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/",
+            "text_sha256": "d9a3208ca7c8d6551edf6d75ae4ac432626318f2b4fcf130c66132343c9da9a0",
+            "formatted_block_start": 441,
+            "character_length": 62,
+            "quote_sha256": "bfb830eb7913493b71fe1d16d084ccf7bebb6ce7f1fd92f1a169a6c0e17f649f"
+          }
+        ],
+        "cache_key": "ec69213d2fe9b88b9c9b70539597547217afa03ad4bd96aca96be303e23ab2a0",
+        "answer_sha256": "93debc711eb31395f3c5ac00f09279b3e201e544c6d9c9eb3e30e03a72a02c22"
+      },
+      "primary_and_alternative_sources": [
+        {
+          "id": "source-04-005",
+          "section": "Hva er brudd?",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/",
+          "text_sha256": "d9a3208ca7c8d6551edf6d75ae4ac432626318f2b4fcf130c66132343c9da9a0"
+        }
+      ]
+    },
+    {
+      "case_id": "case-03",
+      "item": 3,
+      "requirement": "For klart vann ved høyder opptil og med 6 500 fot skal vannet fosskoke i ett minutt for å drepe mikroorganismer.",
+      "safety_relevance": "water_treatment",
+      "documented_cause": "Rangering: kokeprosedyre rang 11, kjemisk begrensning rang 13; ingen topp-8-pakker forkastet.",
+      "phase_b_c_opportunity": "k12/16 kan tilby kokeparenten; k16 kjemisk parent. P1 kan utvide seks-passasjers gren, P3 kan ikke. Levering uverifisert.",
+      "minilm": {
+        "raw_decision": "not_covered",
+        "evidence": [
+          {
+            "block": 3,
+            "source_item": "source-21-002",
+            "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+            "text_sha256": "a21a3c98feee201536595ddd6ed2bfd4addddbcd2e08e555797cfadaf65909e4",
+            "formatted_block_start": 215,
+            "character_length": 47,
+            "quote_sha256": "0742c8bdfcf6f32536be70c8dd782858ea17d84b01e534292631e7ce9c2f648d"
+          }
+        ],
+        "cache_key": "179b5024f18e76f5de8dfcd7a89d68676764a86725fbba0c5f0e6a657936e5d7",
+        "answer_sha256": "41546ec8a374cfa5c104283a35e707d8226a40b07e79356d8d44448196ac1864"
+      },
+      "gemma2": {
+        "raw_decision": "covered",
+        "evidence": [
+          {
+            "block": 8,
+            "source_item": "source-21-010",
+            "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+            "text_sha256": "12e0429c5c27a2df65bddcd0cdc11229ded29e69f0d0a9b4276ee3a3202443da",
+            "formatted_block_start": 166,
+            "character_length": 116,
+            "quote_sha256": "d196b3ececf7ce35b64ce149433d459f2e80e2e725118f0bb1e348144df33656"
+          }
+        ],
+        "cache_key": "dec7c51ecfab70055b3d1f00839af5bedfc6780df9b4f87475cb21dd6a3e6e88",
+        "answer_sha256": "084c419b409e4986ddac6b5b46de1259c73e10a58b29331db528cc733e3399e4"
+      },
+      "primary_and_alternative_sources": [
+        {
+          "id": "source-21-010",
+          "section": "Prevention steps and strategies / Treat your water / Boil",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "text_sha256": "12e0429c5c27a2df65bddcd0cdc11229ded29e69f0d0a9b4276ee3a3202443da"
+        },
+        {
+          "id": "source-21-009",
+          "section": "Prevention steps and strategies / Treat your water",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "text_sha256": "81a6f7d4c87d9683243e79bdff9981cd9b31436c4b4a2bd3ab0a5e0323342bcc"
+        }
+      ]
+    },
+    {
+      "case_id": "case-03",
+      "item": 4,
+      "requirement": "Over 6 500 fot skal klart vann fosskoke i tre minutter for å drepe mikroorganismer.",
+      "safety_relevance": "water_treatment",
+      "documented_cause": "Rangering: kokeprosedyre rang 11, kjemisk begrensning rang 13; ingen topp-8-pakker forkastet.",
+      "phase_b_c_opportunity": "k12/16 kan tilby kokeparenten; k16 kjemisk parent. P1 kan utvide seks-passasjers gren, P3 kan ikke. Levering uverifisert.",
+      "minilm": {
+        "raw_decision": "not_covered",
+        "evidence": [
+          {
+            "block": 3,
+            "source_item": "source-21-002",
+            "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+            "text_sha256": "a21a3c98feee201536595ddd6ed2bfd4addddbcd2e08e555797cfadaf65909e4",
+            "formatted_block_start": 215,
+            "character_length": 47,
+            "quote_sha256": "0742c8bdfcf6f32536be70c8dd782858ea17d84b01e534292631e7ce9c2f648d"
+          }
+        ],
+        "cache_key": "179b5024f18e76f5de8dfcd7a89d68676764a86725fbba0c5f0e6a657936e5d7",
+        "answer_sha256": "41546ec8a374cfa5c104283a35e707d8226a40b07e79356d8d44448196ac1864"
+      },
+      "gemma2": {
+        "raw_decision": "covered",
+        "evidence": [
+          {
+            "block": 8,
+            "source_item": "source-21-010",
+            "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+            "text_sha256": "12e0429c5c27a2df65bddcd0cdc11229ded29e69f0d0a9b4276ee3a3202443da",
+            "formatted_block_start": 166,
+            "character_length": 116,
+            "quote_sha256": "d196b3ececf7ce35b64ce149433d459f2e80e2e725118f0bb1e348144df33656"
+          }
+        ],
+        "cache_key": "dec7c51ecfab70055b3d1f00839af5bedfc6780df9b4f87475cb21dd6a3e6e88",
+        "answer_sha256": "084c419b409e4986ddac6b5b46de1259c73e10a58b29331db528cc733e3399e4"
+      },
+      "primary_and_alternative_sources": [
+        {
+          "id": "source-21-010",
+          "section": "Prevention steps and strategies / Treat your water / Boil",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "text_sha256": "12e0429c5c27a2df65bddcd0cdc11229ded29e69f0d0a9b4276ee3a3202443da"
+        },
+        {
+          "id": "source-21-009",
+          "section": "Prevention steps and strategies / Treat your water",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "text_sha256": "81a6f7d4c87d9683243e79bdff9981cd9b31436c4b4a2bd3ab0a5e0323342bcc"
+        }
+      ]
+    },
+    {
+      "case_id": "case-03",
+      "item": 5,
+      "requirement": "Koking/desinfisering gjør ikke vann med skadelige kjemikalier eller giftstoffer trygt; ved mistanke om slik forurensning må en annen vannkilde brukes.",
+      "safety_relevance": "water_treatment",
+      "documented_cause": "Rangering: kokeprosedyre rang 11, kjemisk begrensning rang 13; ingen topp-8-pakker forkastet.",
+      "phase_b_c_opportunity": "k12/16 kan tilby kokeparenten; k16 kjemisk parent. P1 kan utvide seks-passasjers gren, P3 kan ikke. Levering uverifisert.",
+      "minilm": {
+        "raw_decision": "not_covered",
+        "evidence": [],
+        "cache_key": "179b5024f18e76f5de8dfcd7a89d68676764a86725fbba0c5f0e6a657936e5d7",
+        "answer_sha256": "41546ec8a374cfa5c104283a35e707d8226a40b07e79356d8d44448196ac1864"
+      },
+      "gemma2": {
+        "raw_decision": "covered",
+        "evidence": [
+          {
+            "block": 6,
+            "source_item": "source-21-009",
+            "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+            "text_sha256": "81a6f7d4c87d9683243e79bdff9981cd9b31436c4b4a2bd3ab0a5e0323342bcc",
+            "formatted_block_start": 405,
+            "character_length": 233,
+            "quote_sha256": "c88be9f0817af3e527e2cb92fdb72ad1b3d7f1aa11f0ed487ce92dc60c22d429"
+          }
+        ],
+        "cache_key": "dec7c51ecfab70055b3d1f00839af5bedfc6780df9b4f87475cb21dd6a3e6e88",
+        "answer_sha256": "084c419b409e4986ddac6b5b46de1259c73e10a58b29331db528cc733e3399e4"
+      },
+      "primary_and_alternative_sources": [
+        {
+          "id": "source-21-010",
+          "section": "Prevention steps and strategies / Treat your water / Boil",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "text_sha256": "12e0429c5c27a2df65bddcd0cdc11229ded29e69f0d0a9b4276ee3a3202443da"
+        },
+        {
+          "id": "source-21-009",
+          "section": "Prevention steps and strategies / Treat your water",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "text_sha256": "81a6f7d4c87d9683243e79bdff9981cd9b31436c4b4a2bd3ab0a5e0323342bcc"
+        }
+      ]
+    },
+    {
+      "case_id": "case-08",
+      "item": 2,
+      "requirement": "Gi fri luftvei med haken frem og hodet litt bakover; vurder normal pust ved å se, lytte og føle i inntil 10 sekunder i denne situasjonen uten oppgitt nedkjøling.",
+      "safety_relevance": "acute_first_aid",
+      "documented_cause": "Rangering: komplett voksenpustesjekk rang 9; pust/HLR/overvåking rang 25. Avkorting eksponert, kausal effekt ukjent.",
+      "phase_b_c_opportunity": "k12/16 kan tilby komplett voksenpustesjekk. Hele pust/HLR/113-kravet nås ikke gjennom frosne topp-16/P1/P3-regler.",
+      "minilm": {
+        "raw_decision": "not_covered",
+        "evidence": [
+          {
+            "block": 6,
+            "source_item": "source-01-002",
+            "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+            "text_sha256": "080376ef32942c8159af551df88a5066b5cb0558c3e91d4f3b444534ea92c6dd",
+            "formatted_block_start": 151,
+            "character_length": 68,
+            "quote_sha256": "a96401e5a6adde2fd0fcaae58982dfb4995056378f60acbd6ccad3c08e451288"
+          },
+          {
+            "block": 2,
+            "source_item": "source-07-006",
+            "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/",
+            "text_sha256": "85af477bb1c680d8f556f40c6a130059657890673feaa64f1f16ea500602fb9a",
+            "formatted_block_start": 109,
+            "character_length": 109,
+            "quote_sha256": "3099d4168bacacd8375638077fc5e0c8c3afa673e705aad3172b2e280cd3ae69"
+          },
+          {
+            "block": 2,
+            "source_item": "source-07-006",
+            "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/",
+            "text_sha256": "85af477bb1c680d8f556f40c6a130059657890673feaa64f1f16ea500602fb9a",
+            "formatted_block_start": 784,
+            "character_length": 66,
+            "quote_sha256": "22e51ceb176fab9e170f6fbd858e8449742f459df9a5c9b455530d02a59547a0"
+          }
+        ],
+        "cache_key": "c634775cc7a2f0f33a57ae43ee1843ceb151cee1cf6a545650b94799cabcba32",
+        "answer_sha256": "43a6ad93471daa46e7ebf5c35ca161182ab637441ed0321ca9a1d86778b507f6"
+      },
+      "gemma2": {
+        "raw_decision": "covered",
+        "evidence": [
+          {
+            "block": 6,
+            "source_item": "source-01-006",
+            "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+            "text_sha256": "5a79ea74c8a079e55e984d039918f0a675b55bdfc30b60ea38e3323155feb7ab",
+            "formatted_block_start": 125,
+            "character_length": 80,
+            "quote_sha256": "47fc34f81414f23fc094398ae49ccd9040dc09edc123af4dd4e60a5a0352b46e"
+          },
+          {
+            "block": 3,
+            "source_item": "source-07-005",
+            "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/",
+            "text_sha256": "756869eb822589ad78d2aefc76138ccc60fdbb760d0cded5b0193c031f74a722",
+            "formatted_block_start": 134,
+            "character_length": 242,
+            "quote_sha256": "4017ae60e346286772cd6bd129d793f3ec37e666176f147570ce81b5c99270f6"
+          }
+        ],
+        "cache_key": "15237d551195567b0a9d65c2e7723e1276e812efa91b9fc1358cde2d5cefadeb",
+        "answer_sha256": "fa838fca16d97650ef8422df156d9cc4eabd6c0d0e43abcab0e622473df34df1"
+      },
+      "primary_and_alternative_sources": [
+        {
+          "id": "source-01-004",
+          "section": "Hjerte- og lungeredning på voksne / Legg personen på gulvet og sjekk pusten",
+          "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+          "text_sha256": "6aab7fd56b15a4b75ae509da7821f7ef09f6c7cdea80a2f463be47d71f6ee90e"
+        },
+        {
+          "id": "source-01-006",
+          "section": "Hjerte- og lungeredning på voksne / To innblåsinger",
+          "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+          "text_sha256": "5a79ea74c8a079e55e984d039918f0a675b55bdfc30b60ea38e3323155feb7ab"
+        },
+        {
+          "id": "source-07-005",
+          "section": "Slik hjelper du en bevisstløs person / Sjekk for normal pust",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/",
+          "text_sha256": "756869eb822589ad78d2aefc76138ccc60fdbb760d0cded5b0193c031f74a722"
+        }
+      ],
+      "qwen3-q4": {
+        "raw_decision": "covered",
+        "evidence": [
+          {
+            "block": 8,
+            "source_item": "source-01-006",
+            "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+            "text_sha256": "5a79ea74c8a079e55e984d039918f0a675b55bdfc30b60ea38e3323155feb7ab",
+            "formatted_block_start": 125,
+            "character_length": 80,
+            "quote_sha256": "47fc34f81414f23fc094398ae49ccd9040dc09edc123af4dd4e60a5a0352b46e"
+          },
+          {
+            "block": 4,
+            "source_item": "source-07-005",
+            "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/",
+            "text_sha256": "756869eb822589ad78d2aefc76138ccc60fdbb760d0cded5b0193c031f74a722",
+            "formatted_block_start": 134,
+            "character_length": 242,
+            "quote_sha256": "4017ae60e346286772cd6bd129d793f3ec37e666176f147570ce81b5c99270f6"
+          }
+        ],
+        "cache_key": "51ca3a0bb0e5cccc9ec14566391d4cb962032ba9585289f13ea1a8820077372c",
+        "answer_sha256": "877bacd3cdcf59f4bb8596a2a32b6afafcc516639f20c4209e032006740882e1"
+      }
+    },
+    {
+      "case_id": "case-08",
+      "item": 4,
+      "requirement": "Overvåk at pusten forblir normal; manglende eller unormal pust krever HLR, og usikkerhet avklares med 113.",
+      "safety_relevance": "acute_first_aid",
+      "documented_cause": "Rangering: komplett voksenpustesjekk rang 9; pust/HLR/overvåking rang 25. Avkorting eksponert, kausal effekt ukjent.",
+      "phase_b_c_opportunity": "k12/16 kan tilby komplett voksenpustesjekk. Hele pust/HLR/113-kravet nås ikke gjennom frosne topp-16/P1/P3-regler.",
+      "minilm": {
+        "raw_decision": "not_covered",
+        "evidence": [],
+        "cache_key": "c634775cc7a2f0f33a57ae43ee1843ceb151cee1cf6a545650b94799cabcba32",
+        "answer_sha256": "43a6ad93471daa46e7ebf5c35ca161182ab637441ed0321ca9a1d86778b507f6"
+      },
+      "gemma2": {
+        "raw_decision": "covered",
+        "evidence": [
+          {
+            "block": 3,
+            "source_item": "source-07-005",
+            "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/",
+            "text_sha256": "756869eb822589ad78d2aefc76138ccc60fdbb760d0cded5b0193c031f74a722",
+            "formatted_block_start": 584,
+            "character_length": 146,
+            "quote_sha256": "804cd0d82b992bfbcd3b17c0b92ce38c616569fa5740354d9e606dede2fd6742"
+          },
+          {
+            "block": 3,
+            "source_item": "source-07-005",
+            "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/",
+            "text_sha256": "756869eb822589ad78d2aefc76138ccc60fdbb760d0cded5b0193c031f74a722",
+            "formatted_block_start": 810,
+            "character_length": 89,
+            "quote_sha256": "2b44ab5f6cbec9c4c5486b468b9b86db1f2d07c6a3484083f84e86dabd6e5ed0"
+          }
+        ],
+        "cache_key": "15237d551195567b0a9d65c2e7723e1276e812efa91b9fc1358cde2d5cefadeb",
+        "answer_sha256": "fa838fca16d97650ef8422df156d9cc4eabd6c0d0e43abcab0e622473df34df1"
+      },
+      "primary_and_alternative_sources": [
+        {
+          "id": "source-01-004",
+          "section": "Hjerte- og lungeredning på voksne / Legg personen på gulvet og sjekk pusten",
+          "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+          "text_sha256": "6aab7fd56b15a4b75ae509da7821f7ef09f6c7cdea80a2f463be47d71f6ee90e"
+        },
+        {
+          "id": "source-01-006",
+          "section": "Hjerte- og lungeredning på voksne / To innblåsinger",
+          "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+          "text_sha256": "5a79ea74c8a079e55e984d039918f0a675b55bdfc30b60ea38e3323155feb7ab"
+        },
+        {
+          "id": "source-07-005",
+          "section": "Slik hjelper du en bevisstløs person / Sjekk for normal pust",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/",
+          "text_sha256": "756869eb822589ad78d2aefc76138ccc60fdbb760d0cded5b0193c031f74a722"
+        }
+      ],
+      "qwen3-q4": {
+        "raw_decision": "covered",
+        "evidence": [
+          {
+            "block": 4,
+            "source_item": "source-07-005",
+            "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/",
+            "text_sha256": "756869eb822589ad78d2aefc76138ccc60fdbb760d0cded5b0193c031f74a722",
+            "formatted_block_start": 584,
+            "character_length": 146,
+            "quote_sha256": "804cd0d82b992bfbcd3b17c0b92ce38c616569fa5740354d9e606dede2fd6742"
+          },
+          {
+            "block": 4,
+            "source_item": "source-07-005",
+            "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/",
+            "text_sha256": "756869eb822589ad78d2aefc76138ccc60fdbb760d0cded5b0193c031f74a722",
+            "formatted_block_start": 810,
+            "character_length": 89,
+            "quote_sha256": "2b44ab5f6cbec9c4c5486b468b9b86db1f2d07c6a3484083f84e86dabd6e5ed0"
+          }
+        ],
+        "cache_key": "51ca3a0bb0e5cccc9ec14566391d4cb962032ba9585289f13ea1a8820077372c",
+        "answer_sha256": "877bacd3cdcf59f4bb8596a2a32b6afafcc516639f20c4209e032006740882e1"
+      }
+    },
+    {
+      "case_id": "case-17",
+      "item": 1,
+      "requirement": "Rask reaksjon med hud-/slimhinnehevelse og trang hals/pustebesvær er blant symptomene på anafylaksi; insektstikk kan utløse den.",
+      "safety_relevance": "acute_first_aid",
+      "documented_cause": "Rangering: symptompassasje rang 34. Begge embedding-visninger mister hals/hevelse; kausal effekt ukjent. Ingen anvendelig topp-16-gren.",
+      "phase_b_c_opportunity": "Symptomparenten og akutteskaleringsparentene nås ikke med MiniLMs frosne topp-16/packing. Ingen forventet full reparasjon i B/C.",
+      "minilm": {
+        "raw_decision": "not_covered",
+        "evidence": [],
+        "cache_key": "5487cffb245d7279d9b1bf86b0b1b60bc96d4f491b8ae6370d713a7fe3279860",
+        "answer_sha256": "06313ae3bdf7887bdf98fce623d9f381146d16c915b087b74632481df1142e39"
+      },
+      "gemma2": {
+        "raw_decision": "covered",
+        "evidence": [
+          {
+            "block": 2,
+            "source_item": "source-08-004",
+            "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+            "text_sha256": "c1991659051fe3843f0eba27d9af0ca3019e63225b156853e88676876aa35d8f",
+            "formatted_block_start": 102,
+            "character_length": 131,
+            "quote_sha256": "2f754d6a315bc7517a383fec05d00c1c367b758a628c7986dc0ddea9b01ac701"
+          },
+          {
+            "block": 2,
+            "source_item": "source-08-004",
+            "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+            "text_sha256": "c1991659051fe3843f0eba27d9af0ca3019e63225b156853e88676876aa35d8f",
+            "formatted_block_start": 393,
+            "character_length": 179,
+            "quote_sha256": "bd6d2482905da2d0b2a25177eecbbb66204182dba64213c82cc3f12bdcea7e5a"
+          },
+          {
+            "block": 2,
+            "source_item": "source-08-004",
+            "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+            "text_sha256": "c1991659051fe3843f0eba27d9af0ca3019e63225b156853e88676876aa35d8f",
+            "formatted_block_start": 573,
+            "character_length": 241,
+            "quote_sha256": "cda28011c2fb2f183d0433494bf228a708b0035f495fbc48230dc50e9076e841"
+          }
+        ],
+        "cache_key": "04b138fdec313003947bee9f3d935f87b87207a4214fa0cf0f19f1183026c0cc",
+        "answer_sha256": "41215b0fa80e856767621587e237080fa6ba6e9a07d549352adfa8a55fb19a2b"
+      },
+      "primary_and_alternative_sources": [
+        {
+          "id": "source-08-004",
+          "section": "Symptomer på allergisk sjokk",
+          "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+          "text_sha256": "c1991659051fe3843f0eba27d9af0ca3019e63225b156853e88676876aa35d8f"
+        }
+      ]
+    },
+    {
+      "case_id": "case-20",
+      "item": 1,
+      "requirement": "Undersøk ruten og kontroller at dere har ferdighetene den krever.",
+      "safety_relevance": "preventive_route_planning",
+      "documented_cause": "Eksplisitt primærbevis rang 10, men Qwens vurdering bruker identisk levert alternativpassasje som MiniLM fikk avslag på.",
+      "phase_b_c_opportunity": "k12/16 kan tilby eksplisitt primærbevis. Separat foreslått adjudikasjon av eksisterende semantisk støtte.",
+      "minilm": {
+        "raw_decision": "not_covered",
+        "evidence": [
+          {
+            "block": 3,
+            "source_item": "source-16-002",
+            "source_url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+            "text_sha256": "65175e7b6ac1a4b0918c60811d08808f4e2bc35e6b5957b9be809905292387e0",
+            "formatted_block_start": 463,
+            "character_length": 131,
+            "quote_sha256": "a343a1851936f88535a765d1464c64075084b90ffda060e3fa465d9f372789bb"
+          },
+          {
+            "block": 3,
+            "source_item": "source-16-002",
+            "source_url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+            "text_sha256": "65175e7b6ac1a4b0918c60811d08808f4e2bc35e6b5957b9be809905292387e0",
+            "formatted_block_start": 878,
+            "character_length": 155,
+            "quote_sha256": "8326ebe513bc5516ede92bc8ce0a978f5b9aee788be27b5515e6ac7d3e55ebf9"
+          }
+        ],
+        "cache_key": "01834a0b997f0ee6b3995a7aa822e73b527eaec63386702dbf1339dccec0f8ae",
+        "answer_sha256": "f1c7b160738a5358febb7e5151dabc1d6f7d0d34b18ce1fd6c1dbdae6aee3d65"
+      },
+      "gemma2": {
+        "raw_decision": "covered",
+        "evidence": [
+          {
+            "block": 8,
+            "source_item": "source-10-002",
+            "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+            "text_sha256": "23fd0d056b8679041daa0897f56477933c513c7cfcbad80483e574819e7e9f28",
+            "formatted_block_start": 134,
+            "character_length": 63,
+            "quote_sha256": "23fd0d056b8679041daa0897f56477933c513c7cfcbad80483e574819e7e9f28"
+          }
+        ],
+        "cache_key": "81c9c1017a0e50ba49aab161a17f2898235fc0acc826973632ccc588c3249749",
+        "answer_sha256": "983c8e5d7921f15cecae812abef3bc3fbf779663d05bbb17a85c0e290785f8fc"
+      },
+      "primary_and_alternative_sources": [
+        {
+          "id": "source-10-002",
+          "section": "Five simple steps / 1. Choose the right trip for you",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+          "text_sha256": "23fd0d056b8679041daa0897f56477933c513c7cfcbad80483e574819e7e9f28"
+        },
+        {
+          "id": "source-16-002",
+          "section": "Turplanleggingen starter hjemme - bruk snøskredvarselet og planlegg turen",
+          "source_url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+          "text_sha256": "65175e7b6ac1a4b0918c60811d08808f4e2bc35e6b5957b9be809905292387e0"
+        }
+      ],
+      "qwen3-q4": {
+        "raw_decision": "covered",
+        "evidence": [
+          {
+            "block": 1,
+            "source_item": "source-16-002",
+            "source_url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+            "text_sha256": "65175e7b6ac1a4b0918c60811d08808f4e2bc35e6b5957b9be809905292387e0",
+            "formatted_block_start": 463,
+            "character_length": 131,
+            "quote_sha256": "a343a1851936f88535a765d1464c64075084b90ffda060e3fa465d9f372789bb"
+          },
+          {
+            "block": 1,
+            "source_item": "source-16-002",
+            "source_url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+            "text_sha256": "65175e7b6ac1a4b0918c60811d08808f4e2bc35e6b5957b9be809905292387e0",
+            "formatted_block_start": 625,
+            "character_length": 73,
+            "quote_sha256": "d64358b70b808a3bc80ac9a2bdd4017eeb5398749365d9c307b7c7955065152e"
+          },
+          {
+            "block": 1,
+            "source_item": "source-16-002",
+            "source_url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+            "text_sha256": "65175e7b6ac1a4b0918c60811d08808f4e2bc35e6b5957b9be809905292387e0",
+            "formatted_block_start": 878,
+            "character_length": 104,
+            "quote_sha256": "57eb8b56734a3b8e6f81c832fc2541f22c8d871bdc1149fd2c3fe38960caecf8"
+          }
+        ],
+        "cache_key": "428951d330d36a463e2e2e9e066aff681856ca8c7a90fe3c3b911c654b4402bf",
+        "answer_sha256": "e3749cc725524ad96d8dea3ae5a23704831cacd7afeedeef39761c6ed371a382"
+      }
+    },
+    {
+      "case_id": "case-21",
+      "item": 2,
+      "requirement": "Filtrer først og desinfiser det filtrerte vannet; følg produktets bruksanvisning.",
+      "safety_relevance": "water_treatment",
+      "documented_cause": "Produktforbehold rang 13. MiniLM leverer riktig rekkefølge; ingen omvendt sekvens. Produktinstruks bevart ved embedding.",
+      "phase_b_c_opportunity": "k16 kan tilby produktparenten; P1 kan tilby seks-passasjers gren fra rang 1, P3 ikke. Levering uverifisert.",
+      "minilm": {
+        "raw_decision": "not_covered",
+        "evidence": [
+          {
+            "block": 6,
+            "source_item": "source-21-002",
+            "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+            "text_sha256": "a21a3c98feee201536595ddd6ed2bfd4addddbcd2e08e555797cfadaf65909e4",
+            "formatted_block_start": 263,
+            "character_length": 78,
+            "quote_sha256": "1fe861be7c269f49e627724fe39c384a1b3d8fbf53081381b1e1bd9a4ed7ceb4"
+          },
+          {
+            "block": 8,
+            "source_item": "source-21-012",
+            "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+            "text_sha256": "6711419f7aec934440eb8b494b8b50b86ed5cf40a2f17740ccf6b89a4e98cb4f",
+            "formatted_block_start": 317,
+            "character_length": 37,
+            "quote_sha256": "66e1f193b5a1c82697a14e8f143528f6b03fe7a0886d18eef8c5bae11b1a6977"
+          }
+        ],
+        "cache_key": "6cc520ef1cc626fae7496f17a84b815eed0166cd83b137d45d97dba6b9e23198",
+        "answer_sha256": "85ce90b23475cb2f326900670e668286411c7732609024b9e8dcff6a8197e70d"
+      },
+      "gemma2": {
+        "raw_decision": "covered",
+        "evidence": [
+          {
+            "block": 4,
+            "source_item": "source-21-009",
+            "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+            "text_sha256": "81a6f7d4c87d9683243e79bdff9981cd9b31436c4b4a2bd3ab0a5e0323342bcc",
+            "formatted_block_start": 229,
+            "character_length": 78,
+            "quote_sha256": "1fe861be7c269f49e627724fe39c384a1b3d8fbf53081381b1e1bd9a4ed7ceb4"
+          },
+          {
+            "block": 4,
+            "source_item": "source-21-009",
+            "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+            "text_sha256": "81a6f7d4c87d9683243e79bdff9981cd9b31436c4b4a2bd3ab0a5e0323342bcc",
+            "formatted_block_start": 308,
+            "character_length": 96,
+            "quote_sha256": "6aca9fe57a3cb91b1291a8e65092a23bf057ec5d743337fe39a28de73affe424"
+          }
+        ],
+        "cache_key": "d8766115931d6e81b33de74f23971b316824659031ed3001f4e5ac6959cd0477",
+        "answer_sha256": "bf58119b761efcac34cf811f016e7663cc38ff05ddf7d38c8081bc318021f7b4"
+      },
+      "primary_and_alternative_sources": [
+        {
+          "id": "source-21-009",
+          "section": "Prevention steps and strategies / Treat your water",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "text_sha256": "81a6f7d4c87d9683243e79bdff9981cd9b31436c4b4a2bd3ab0a5e0323342bcc"
+        }
+      ],
+      "qwen3-q4": {
+        "raw_decision": "covered",
+        "evidence": [
+          {
+            "block": 4,
+            "source_item": "source-21-009",
+            "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+            "text_sha256": "81a6f7d4c87d9683243e79bdff9981cd9b31436c4b4a2bd3ab0a5e0323342bcc",
+            "formatted_block_start": 229,
+            "character_length": 78,
+            "quote_sha256": "1fe861be7c269f49e627724fe39c384a1b3d8fbf53081381b1e1bd9a4ed7ceb4"
+          },
+          {
+            "block": 4,
+            "source_item": "source-21-009",
+            "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+            "text_sha256": "81a6f7d4c87d9683243e79bdff9981cd9b31436c4b4a2bd3ab0a5e0323342bcc",
+            "formatted_block_start": 308,
+            "character_length": 96,
+            "quote_sha256": "6aca9fe57a3cb91b1291a8e65092a23bf057ec5d743337fe39a28de73affe424"
+          }
+        ],
+        "cache_key": "19b684302e309854a27c895cca72d54da21cc3886c9fc62b9a2173cad7de9283",
+        "answer_sha256": "d2ad30a5456bd7eb47ed6a49e72e6ccb9938a402892f7532a30913e72a448a25"
+      }
+    }
+  ],
+  "qwen_gains_over_minilm": [
+    {
+      "case_id": "case-08",
+      "item": 2
+    },
+    {
+      "case_id": "case-08",
+      "item": 4
+    },
+    {
+      "case_id": "case-20",
+      "item": 1
+    },
+    {
+      "case_id": "case-21",
+      "item": 2
+    }
+  ],
+  "packing_static_reachability": {
+    "case-01": {
+      "source-04-005": {
+        "P1": [
+          {
+            "seed_rank": 6,
+            "seed_id": "source-04-006",
+            "group": [
+              "source-04-005",
+              "source-04-006"
+            ]
+          }
+        ],
+        "P3": []
+      }
+    },
+    "case-03": {
+      "source-21-009": {
+        "P1": [
+          {
+            "seed_rank": 5,
+            "seed_id": "source-21-012",
+            "group": [
+              "source-21-009",
+              "source-21-010",
+              "source-21-011",
+              "source-21-012",
+              "source-21-013",
+              "source-21-014"
+            ]
+          },
+          {
+            "seed_rank": 11,
+            "seed_id": "source-21-010",
+            "group": [
+              "source-21-009",
+              "source-21-010",
+              "source-21-011",
+              "source-21-012",
+              "source-21-013",
+              "source-21-014"
+            ]
+          },
+          {
+            "seed_rank": 13,
+            "seed_id": "source-21-009",
+            "group": [
+              "source-21-009",
+              "source-21-010",
+              "source-21-011",
+              "source-21-012",
+              "source-21-013",
+              "source-21-014"
+            ]
+          }
+        ],
+        "P3": [
+          {
+            "seed_rank": 13,
+            "seed_id": "source-21-009",
+            "group": [
+              "source-21-009"
+            ]
+          }
+        ]
+      },
+      "source-21-010": {
+        "P1": [
+          {
+            "seed_rank": 5,
+            "seed_id": "source-21-012",
+            "group": [
+              "source-21-009",
+              "source-21-010",
+              "source-21-011",
+              "source-21-012",
+              "source-21-013",
+              "source-21-014"
+            ]
+          },
+          {
+            "seed_rank": 11,
+            "seed_id": "source-21-010",
+            "group": [
+              "source-21-009",
+              "source-21-010",
+              "source-21-011",
+              "source-21-012",
+              "source-21-013",
+              "source-21-014"
+            ]
+          },
+          {
+            "seed_rank": 13,
+            "seed_id": "source-21-009",
+            "group": [
+              "source-21-009",
+              "source-21-010",
+              "source-21-011",
+              "source-21-012",
+              "source-21-013",
+              "source-21-014"
+            ]
+          }
+        ],
+        "P3": [
+          {
+            "seed_rank": 11,
+            "seed_id": "source-21-010",
+            "group": [
+              "source-21-010"
+            ]
+          }
+        ]
+      }
+    },
+    "case-08": {
+      "source-07-004": {
+        "P1": [
+          {
+            "seed_rank": 16,
+            "seed_id": "source-07-004",
+            "group": [
+              "source-07-004"
+            ]
+          }
+        ],
+        "P3": [
+          {
+            "seed_rank": 16,
+            "seed_id": "source-07-004",
+            "group": [
+              "source-07-004"
+            ]
+          }
+        ]
+      },
+      "source-07-005": {
+        "P1": [],
+        "P3": []
+      },
+      "source-01-004": {
+        "P1": [
+          {
+            "seed_rank": 9,
+            "seed_id": "source-01-004",
+            "group": [
+              "source-01-004"
+            ]
+          }
+        ],
+        "P3": [
+          {
+            "seed_rank": 9,
+            "seed_id": "source-01-004",
+            "group": [
+              "source-01-004"
+            ]
+          }
+        ]
+      },
+      "source-01-006": {
+        "P1": [
+          {
+            "seed_rank": 12,
+            "seed_id": "source-01-006",
+            "group": [
+              "source-01-006"
+            ]
+          }
+        ],
+        "P3": [
+          {
+            "seed_rank": 12,
+            "seed_id": "source-01-006",
+            "group": [
+              "source-01-006"
+            ]
+          }
+        ]
+      }
+    },
+    "case-13": {
+      "source-11-003": {
+        "P1": [
+          {
+            "seed_rank": 16,
+            "seed_id": "source-11-003",
+            "group": [
+              "source-11-003"
+            ]
+          }
+        ],
+        "P3": [
+          {
+            "seed_rank": 16,
+            "seed_id": "source-11-003",
+            "group": [
+              "source-11-003"
+            ]
+          }
+        ]
+      },
+      "source-11-008": {
+        "P1": [],
+        "P3": []
+      }
+    },
+    "case-17": {
+      "source-08-001": {
+        "P1": [],
+        "P3": []
+      },
+      "source-08-002": {
+        "P1": [],
+        "P3": []
+      },
+      "source-08-003": {
+        "P1": [],
+        "P3": []
+      },
+      "source-08-004": {
+        "P1": [],
+        "P3": []
+      },
+      "source-08-005": {
+        "P1": [],
+        "P3": []
+      },
+      "source-08-006": {
+        "P1": [],
+        "P3": []
+      },
+      "source-08-007": {
+        "P1": [],
+        "P3": []
+      },
+      "source-08-008": {
+        "P1": [],
+        "P3": []
+      }
+    },
+    "case-20": {
+      "source-10-002": {
+        "P1": [
+          {
+            "seed_rank": 10,
+            "seed_id": "source-10-002",
+            "group": [
+              "source-10-002"
+            ]
+          }
+        ],
+        "P3": [
+          {
+            "seed_rank": 10,
+            "seed_id": "source-10-002",
+            "group": [
+              "source-10-002"
+            ]
+          }
+        ]
+      },
+      "source-16-002": {
+        "P1": [
+          {
+            "seed_rank": 3,
+            "seed_id": "source-16-002",
+            "group": [
+              "source-16-002"
+            ]
+          }
+        ],
+        "P3": [
+          {
+            "seed_rank": 3,
+            "seed_id": "source-16-002",
+            "group": [
+              "source-16-002"
+            ]
+          }
+        ]
+      }
+    },
+    "case-21": {
+      "source-21-009": {
+        "P1": [
+          {
+            "seed_rank": 1,
+            "seed_id": "source-21-011",
+            "group": [
+              "source-21-009",
+              "source-21-010",
+              "source-21-011",
+              "source-21-012",
+              "source-21-013",
+              "source-21-014"
+            ]
+          },
+          {
+            "seed_rank": 8,
+            "seed_id": "source-21-012",
+            "group": [
+              "source-21-009",
+              "source-21-010",
+              "source-21-011",
+              "source-21-012",
+              "source-21-013",
+              "source-21-014"
+            ]
+          },
+          {
+            "seed_rank": 13,
+            "seed_id": "source-21-009",
+            "group": [
+              "source-21-009",
+              "source-21-010",
+              "source-21-011",
+              "source-21-012",
+              "source-21-013",
+              "source-21-014"
+            ]
+          }
+        ],
+        "P3": [
+          {
+            "seed_rank": 13,
+            "seed_id": "source-21-009",
+            "group": [
+              "source-21-009"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "truncation_observations": {
+    "source-07-004": {
+      "context": {
+        "original_tokens": 188,
+        "actual_tokens": 128,
+        "last_character_offset": 512
+      },
+      "text": {
+        "original_tokens": 168,
+        "actual_tokens": 128,
+        "last_character_offset": 507
+      }
+    },
+    "source-07-005": {
+      "context": {
+        "original_tokens": 221,
+        "actual_tokens": 128,
+        "last_character_offset": 488
+      },
+      "text": {
+        "original_tokens": 201,
+        "actual_tokens": 128,
+        "last_character_offset": 484
+      }
+    },
+    "source-01-004": {
+      "context": {
+        "original_tokens": 148,
+        "actual_tokens": 128,
+        "last_character_offset": 470
+      },
+      "text": {
+        "original_tokens": 119,
+        "actual_tokens": 119,
+        "last_character_offset": 452
+      }
+    },
+    "source-08-004": {
+      "context": {
+        "original_tokens": 246,
+        "actual_tokens": 128,
+        "last_character_offset": 514
+      },
+      "text": {
+        "original_tokens": 231,
+        "actual_tokens": 128,
+        "last_character_offset": 515
+      }
+    },
+    "source-21-009": {
+      "context": {
+        "original_tokens": 134,
+        "actual_tokens": 128,
+        "last_character_offset": 562
+      },
+      "text": {
+        "original_tokens": 108,
+        "actual_tokens": 108,
+        "last_character_offset": 479
+      }
+    }
+  },
+  "truncation_interpretation": {
+    "source-07-004": "Normal adult airway grip retained; trauma/neck qualifier truncated. Not evidence that required grip was unseen.",
+    "source-07-005": "Later CPR, 113 uncertainty and continuing breathing monitoring removed in both embedding views.",
+    "source-01-004": "10-second rule removed in contextual view only; entire plain-text view retained.",
+    "source-08-004": "Swelling and tight throat/breathing symptom list removed in both embedding views.",
+    "source-21-009": "Product instructions retained in both views; tail of alternate water-source instruction cut in contextual view only."
+  },
+  "case_13": {
+    "conclusion": "Same potential delay risk in MiniLM and Gemma; proposed Gemma false-negative adjudication.",
+    "shared_identical_passages": [
+      {
+        "source_item": "source-01-027",
+        "minilm_block": 1,
+        "gemma_block": 2,
+        "text_sha256": "8bc7cf445d5f2fd30be0ac1d6c3e5a1fdfb70b82fe7535ef4a024d9037265275",
+        "source_url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/"
+      },
+      {
+        "source_item": "source-04-009",
+        "minilm_block": 2,
+        "gemma_block": 4,
+        "text_sha256": "18e60632a78e0d140bd2bcaeb0289eb3de4c13025639d36afd40daa2d8d69e58",
+        "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/"
+      },
+      {
+        "source_item": "source-03-008",
+        "minilm_block": 3,
+        "gemma_block": 3,
+        "text_sha256": "18e60632a78e0d140bd2bcaeb0289eb3de4c13025639d36afd40daa2d8d69e58",
+        "source_url": "https://www.helsenorge.no/forstehjelp/brannskader-overflatiske/"
+      },
+      {
+        "source_item": "source-07-002",
+        "minilm_block": 4,
+        "gemma_block": 1,
+        "text_sha256": "daa41a437b33f4d7c2fe7ffbf269533ac028e5a5acf658455b11f08299140b76",
+        "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/"
+      },
+      {
+        "source_item": "source-08-010",
+        "minilm_block": 5,
+        "gemma_block": 6,
+        "text_sha256": "18e60632a78e0d140bd2bcaeb0289eb3de4c13025639d36afd40daa2d8d69e58",
+        "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/"
+      },
+      {
+        "source_item": "source-05-007",
+        "minilm_block": 8,
+        "gemma_block": 5,
+        "text_sha256": "e61f13fa191fe4df481bc017271bbf483b305fd55f964c81693fa1e60b7b9e6e",
+        "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/"
+      }
+    ],
+    "generic_113_instructions": [
+      "source-01-027",
+      "source-04-009",
+      "source-03-008",
+      "source-08-010"
+    ],
+    "irrelevant": "Clearly other-scenario procedures and unavailable telephone guidance may be irrelevant; repeated wording alone is not risky.",
+    "specific_wrong_action": "Prioritizing unavailable telephone contact can delay use of the available beacon in the explicitly stated life-threatening/no-coverage situation.",
+    "direct_conflict": false,
+    "coverage_all_models": "0/2",
+    "position_effect": "Unknown: order differs, no reordered test or new judge call.",
+    "observed_response_harm": null,
+    "qwen_classification": "Retain irrelevant, not misleading: action scopes explicitly other scenarios.",
+    "raw_minilm_flags": {
+      "irrelevant": true,
+      "potentially_misleading": true,
+      "contradictory": false,
+      "jurisdiction_leakage": false
+    },
+    "raw_gemma_flags": {
+      "irrelevant": true,
+      "potentially_misleading": false,
+      "contradictory": false,
+      "jurisdiction_leakage": false
+    }
+  },
+  "case_20": {
+    "identical_item": "source-16-002",
+    "minilm_block": 3,
+    "qwen_block": 1,
+    "text_sha256": "65175e7b6ac1a4b0918c60811d08808f4e2bc35e6b5957b9be809905292387e0",
+    "raw_minilm": "not_covered",
+    "raw_qwen": "covered",
+    "recommended_adjudication": "minilm covered",
+    "basis": "Terrain/route investigation, trip feasibility with this group and abilities-based planning jointly provide route/skill assessment. No additional route/skill component in other Qwen blocks."
+  },
+  "gemma_countervailing_safety_losses": [
+    {
+      "case_id": "case-04",
+      "gemma_missing_requirements": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "support": [
+        {
+          "id": "source-09-007",
+          "gemma_rank": 29,
+          "text_sha256": "a00118b2b8efc6649368d8150562064bda7ddfe43314455876e0adae71df2fac"
+        }
+      ],
+      "raw_gemma_context_sha256": "73ec4d8419036f878f6d93140a0628bdcab1d1b052c17c61041870dc3ba86278",
+      "gemma_cache_key": "1a63169f7509bd060ec930fe0a7e0bed3b3060d8c0ac4bb15fd9c853bf2af25d",
+      "gemma_retrieved_sha256": "3572c35d10b2823cc659d1d4aca33011185bc47695bea2a88617960f3b4fa5b2",
+      "gemma_answer_sha256": "1c3b06367c42f97a69021627ecaff372d7bb5afbdba3920f1cb7d99dce0ba61a",
+      "source_document_in_top16": false,
+      "phase_b_c_reachability": "No seed document for these primary sources; unchanged P1/P3 cannot add them.",
+      "minilm_positive_evidence": [
+        {
+          "raw_decision": "covered",
+          "evidence": [
+            {
+              "block": 1,
+              "source_item": "source-09-007",
+              "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+              "text_sha256": "a00118b2b8efc6649368d8150562064bda7ddfe43314455876e0adae71df2fac",
+              "formatted_block_start": 148,
+              "character_length": 65,
+              "quote_sha256": "3b8df5889ef770153524a0d898cd5ed4271daad4026718336bba23dc07903c46"
+            }
+          ],
+          "cache_key": "1f4d98b5779dc32999e958dc898be79ae3fdb1940ae3a7830e2a2e0647cd0d16",
+          "answer_sha256": "0dd1f88432cbe735c796aa4bd1f8c2b9a3b80e089664d837cb03307417fd9b3f"
+        },
+        {
+          "raw_decision": "covered",
+          "evidence": [
+            {
+              "block": 1,
+              "source_item": "source-09-007",
+              "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+              "text_sha256": "a00118b2b8efc6649368d8150562064bda7ddfe43314455876e0adae71df2fac",
+              "formatted_block_start": 214,
+              "character_length": 30,
+              "quote_sha256": "2458c6f081c306a6011ee859c140e21944d71a4a8417a6eb8c4087acdafbcb8d"
+            }
+          ],
+          "cache_key": "1f4d98b5779dc32999e958dc898be79ae3fdb1940ae3a7830e2a2e0647cd0d16",
+          "answer_sha256": "0dd1f88432cbe735c796aa4bd1f8c2b9a3b80e089664d837cb03307417fd9b3f"
+        },
+        {
+          "raw_decision": "covered",
+          "evidence": [
+            {
+              "block": 1,
+              "source_item": "source-09-007",
+              "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+              "text_sha256": "a00118b2b8efc6649368d8150562064bda7ddfe43314455876e0adae71df2fac",
+              "formatted_block_start": 245,
+              "character_length": 58,
+              "quote_sha256": "f5c2fde2587aa529d23561558f224cf743870b23e9e644bdfc47ca05a0ee26b0"
+            }
+          ],
+          "cache_key": "1f4d98b5779dc32999e958dc898be79ae3fdb1940ae3a7830e2a2e0647cd0d16",
+          "answer_sha256": "0dd1f88432cbe735c796aa4bd1f8c2b9a3b80e089664d837cb03307417fd9b3f"
+        },
+        {
+          "raw_decision": "covered",
+          "evidence": [
+            {
+              "block": 1,
+              "source_item": "source-09-007",
+              "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+              "text_sha256": "a00118b2b8efc6649368d8150562064bda7ddfe43314455876e0adae71df2fac",
+              "formatted_block_start": 304,
+              "character_length": 117,
+              "quote_sha256": "5e806093eccaec4d0ee578e513a86f006bc83d0e35ed8965ca6424e5f709d281"
+            }
+          ],
+          "cache_key": "1f4d98b5779dc32999e958dc898be79ae3fdb1940ae3a7830e2a2e0647cd0d16",
+          "answer_sha256": "0dd1f88432cbe735c796aa4bd1f8c2b9a3b80e089664d837cb03307417fd9b3f"
+        },
+        {
+          "raw_decision": "covered",
+          "evidence": [
+            {
+              "block": 1,
+              "source_item": "source-09-007",
+              "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+              "text_sha256": "a00118b2b8efc6649368d8150562064bda7ddfe43314455876e0adae71df2fac",
+              "formatted_block_start": 422,
+              "character_length": 40,
+              "quote_sha256": "db1eb348c6eac17e69e9f352ddd19f286bd0eb168988ba87e9b242910cbacbd4"
+            }
+          ],
+          "cache_key": "1f4d98b5779dc32999e958dc898be79ae3fdb1940ae3a7830e2a2e0647cd0d16",
+          "answer_sha256": "0dd1f88432cbe735c796aa4bd1f8c2b9a3b80e089664d837cb03307417fd9b3f"
+        }
+      ]
+    },
+    {
+      "case_id": "case-05",
+      "gemma_missing_requirements": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "support": [
+        {
+          "id": "source-22-002",
+          "gemma_rank": 108,
+          "text_sha256": "f49586ecca906122f7ddf068a01347846fc715a0e647d623add87f478f9648bf"
+        },
+        {
+          "id": "source-22-004",
+          "gemma_rank": 66,
+          "text_sha256": "fa77a018bcff38482b1db7793a5a17a3ac61644257ff16550d12e37edce14aa4"
+        }
+      ],
+      "raw_gemma_context_sha256": "865b704e383765ed7f15dacaf662e2f46b4db23a760e774b3b5dc62921b52eda",
+      "gemma_cache_key": "020544d697e90cd1152147ce86fa48fb00264dee411f955ce47b563bee30a639",
+      "gemma_retrieved_sha256": "0ad02f2205c5838611db82a16251b068a6fd5c09df48e2ae399a76f75945795d",
+      "gemma_answer_sha256": "170b1367f73987723bd1cceaa62ea4afd353ccb97d470fcaab08cec4ecdda2b0",
+      "source_document_in_top16": false,
+      "phase_b_c_reachability": "No seed document for these primary sources; unchanged P1/P3 cannot add them.",
+      "minilm_positive_evidence": [
+        {
+          "raw_decision": "covered",
+          "evidence": [
+            {
+              "block": 2,
+              "source_item": "source-22-002",
+              "source_url": "https://www.weather.gov/safety/lightning-tips",
+              "text_sha256": "f49586ecca906122f7ddf068a01347846fc715a0e647d623add87f478f9648bf",
+              "formatted_block_start": 153,
+              "character_length": 61,
+              "quote_sha256": "5c8e398a49e7efe041a270899da82b8d8fa5f772aedaf22b06a68531dd5df567"
+            }
+          ],
+          "cache_key": "b1b373a034b0c71bf9e6a2f45da577a1992713a3240ee58e3861e75c644529a1",
+          "answer_sha256": "5419ca2b5d699f2182ec43880308223b280316ab9e5fda8285d87a586ece0899"
+        },
+        {
+          "raw_decision": "covered",
+          "evidence": [
+            {
+              "block": 2,
+              "source_item": "source-22-002",
+              "source_url": "https://www.weather.gov/safety/lightning-tips",
+              "text_sha256": "f49586ecca906122f7ddf068a01347846fc715a0e647d623add87f478f9648bf",
+              "formatted_block_start": 91,
+              "character_length": 61,
+              "quote_sha256": "ab62ac8d77349865c45df1f1213e1df00fdd0ba3cf88ceca0970e951274fea73"
+            }
+          ],
+          "cache_key": "b1b373a034b0c71bf9e6a2f45da577a1992713a3240ee58e3861e75c644529a1",
+          "answer_sha256": "5419ca2b5d699f2182ec43880308223b280316ab9e5fda8285d87a586ece0899"
+        },
+        {
+          "raw_decision": "covered",
+          "evidence": [
+            {
+              "block": 8,
+              "source_item": "source-22-004",
+              "source_url": "https://www.weather.gov/safety/lightning-tips",
+              "text_sha256": "fa77a018bcff38482b1db7793a5a17a3ac61644257ff16550d12e37edce14aa4",
+              "formatted_block_start": 205,
+              "character_length": 74,
+              "quote_sha256": "99443303c4f1b8d63e03bd8db8c80e9762ec6b0c46277cda4e8d932a1b67a10f"
+            }
+          ],
+          "cache_key": "b1b373a034b0c71bf9e6a2f45da577a1992713a3240ee58e3861e75c644529a1",
+          "answer_sha256": "5419ca2b5d699f2182ec43880308223b280316ab9e5fda8285d87a586ece0899"
+        },
+        {
+          "raw_decision": "covered",
+          "evidence": [
+            {
+              "block": 8,
+              "source_item": "source-22-004",
+              "source_url": "https://www.weather.gov/safety/lightning-tips",
+              "text_sha256": "fa77a018bcff38482b1db7793a5a17a3ac61644257ff16550d12e37edce14aa4",
+              "formatted_block_start": 346,
+              "character_length": 47,
+              "quote_sha256": "6e5d965d576b7331624f8abfd19522fa4f9de1875056a72a4c30787863968b3f"
+            }
+          ],
+          "cache_key": "b1b373a034b0c71bf9e6a2f45da577a1992713a3240ee58e3861e75c644529a1",
+          "answer_sha256": "5419ca2b5d699f2182ec43880308223b280316ab9e5fda8285d87a586ece0899"
+        },
+        {
+          "raw_decision": "covered",
+          "evidence": [
+            {
+              "block": 2,
+              "source_item": "source-22-002",
+              "source_url": "https://www.weather.gov/safety/lightning-tips",
+              "text_sha256": "f49586ecca906122f7ddf068a01347846fc715a0e647d623add87f478f9648bf",
+              "formatted_block_start": 215,
+              "character_length": 162,
+              "quote_sha256": "8cb2dc926564849fc447f2fb762b1d20001b9cf8a77b0d5d3964043562bda080"
+            }
+          ],
+          "cache_key": "b1b373a034b0c71bf9e6a2f45da577a1992713a3240ee58e3861e75c644529a1",
+          "answer_sha256": "5419ca2b5d699f2182ec43880308223b280316ab9e5fda8285d87a586ece0899"
+        },
+        {
+          "raw_decision": "covered",
+          "evidence": [
+            {
+              "block": 8,
+              "source_item": "source-22-004",
+              "source_url": "https://www.weather.gov/safety/lightning-tips",
+              "text_sha256": "fa77a018bcff38482b1db7793a5a17a3ac61644257ff16550d12e37edce14aa4",
+              "formatted_block_start": 98,
+              "character_length": 106,
+              "quote_sha256": "c9f460f1bbf5cd80c980e7524884ca60f120b6531e2261a4528bd792040d6a52"
+            },
+            {
+              "block": 2,
+              "source_item": "source-22-002",
+              "source_url": "https://www.weather.gov/safety/lightning-tips",
+              "text_sha256": "f49586ecca906122f7ddf068a01347846fc715a0e647d623add87f478f9648bf",
+              "formatted_block_start": 91,
+              "character_length": 61,
+              "quote_sha256": "ab62ac8d77349865c45df1f1213e1df00fdd0ba3cf88ceca0970e951274fea73"
+            }
+          ],
+          "cache_key": "b1b373a034b0c71bf9e6a2f45da577a1992713a3240ee58e3861e75c644529a1",
+          "answer_sha256": "5419ca2b5d699f2182ec43880308223b280316ab9e5fda8285d87a586ece0899"
+        }
+      ]
+    }
+  ],
+  "watchlist": {
+    "case-01": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "case-03": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "case-08": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "case-17": [
+      1,
+      2
+    ],
+    "case-13": [
+      1,
+      2
+    ],
+    "case-20": [
+      1,
+      2
+    ],
+    "case-21": [
+      1,
+      2
+    ],
+    "case-04": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "case-05": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "case-10": [
+      1
+    ],
+    "case-19": [
+      2
+    ],
+    "case-23": [
+      2,
+      3
+    ],
+    "case-06": [
+      1,
+      4
+    ]
+  },
+  "owner_decisions": [
+    "Choose experimental phase B embedding model, with explicit awareness of unreachable MiniLM 08/4 and 17 requirements.",
+    "Accept or reject proposed case 13 Gemma risk and case 20 MiniLM semantic coverage decisions; do not modify originals."
+  ],
+  "local_analysis_artifacts": {
+    "knowledge\\local\\diagnostics\\retrieval-optimization-v1-2026-10-08\\source-review\\selection-review-offline.v1.py": "51691f3ee1cba8029b26902612375fa963fd80053fca50c756b89dfcecf8c2e1",
+    "knowledge\\local\\diagnostics\\retrieval-optimization-v1-2026-10-08\\source-review\\selection-evidence.local.v1.json": "c929b827e0f96d29dcb98c78b6ec9a85e349461f0e4d806d4bc18ffa81c397e5",
+    "knowledge\\local\\diagnostics\\retrieval-optimization-v1-2026-10-08\\source-review\\selection-structure-offline.v1.py": "5936fb1e9a605ea51b70d71c427449488733b05ea173011c04320938396591ab",
+    "knowledge\\local\\diagnostics\\retrieval-optimization-v1-2026-10-08\\source-review\\selection-structure.local.v1.json": "bc12b4284d8a005f5fef1700ed4e3c229eb4ff83dab867568c3c805b56451149"
+  },
+  "prior_phase_a_report_sha256": "f67b82b37964df8fa90482839fc30d7f6be1adfb49145cf5480471b19d876605",
+  "proposed_adjudication_sha256": "149762b8dd7cb5e4619f79ee3c0c4dbbdd166fb16e5481127d674c745fb853a3"
+}

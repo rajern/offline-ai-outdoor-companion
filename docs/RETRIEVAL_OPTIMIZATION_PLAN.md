@@ -28,6 +28,14 @@ beslutning. Se [fase A-rapport](../evals/retrieval_optimization_report.v3.md),
 [`evals/retrieval_optimization_report.v1.md`](../evals/retrieval_optimization_report.v1.md).
 Holdout, produksjonsendring og svargenerering er fortsatt utelukket.
 
+**Målrettet gjennomgang, 2026-10-09:**
+[modellvalgsrapporten](../evals/retrieval_embedding_selection_review.v1.md)
+anbefaler MiniLM som forsøksmodell til B, med dokumenterte begrensninger for
+case 08/4 og 17 innen de frosne reglene. Case 13 og 20 har separate,
+ikke-anvendte adjudikasjonsforslag. Eieren har ennå ikke valgt modell eller
+godkjent forslagene. Gjennomgangen har 0 nye modell-/dommerkall; B/C er ikke
+startet og fase A-resultatene er uendret.
+
 **Status:** Testdesignet er avtalt; **ikke autorisasjon til å starte optimalisering**. Først må eier godkjenne evalueringsgrunnlaget og en tilstrekkelig pålitelig, fullstendig scorer.  
 **Overlevering:** 8. oktober 2026. **Repo:** [`rajern/offline-ai-outdoor-companion`](https://github.com/rajern/offline-ai-outdoor-companion). Referansecommit: [`c4326d0`](https://github.com/rajern/offline-ai-outdoor-companion/commit/c4326d034fccc77cc1223911eb6b5c1230df0bcc). Kontroller senere endringer før kjøring.
 
