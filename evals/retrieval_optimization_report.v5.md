@@ -2,7 +2,7 @@
 
 **Status: running-B. 23/31 konfigurasjoner fullstendig vurdert.**
 
-Resultatsnapshot: 2026-10-09T09:10:10.723197+00:00. Eksport: 2026-10-09T09:11:26.054145+00:00.
+Resultatsnapshot: 2026-10-09T12:17:09.504059+00:00. Eksport: 2026-10-09T12:17:11.289653+00:00.
 
 ## Metode og avgrensning
 
@@ -49,7 +49,7 @@ Tallene viser justert analyse. Flagg: irrelevant / misvisende / direkte konflikt
 | B-k12-p30 | complete; 25/25 | 51/72 (70.83%) | 72.27% | 14/22 | 33/51 (64.71%) / 64.62% / 7/13 | 21 / 2 / 0 / 0 |
 | B-k12-p50 | complete; 25/25 | 47/72 (65.28%) | 68.11% | 12/22 | 29/51 (56.86%) / 57.56% / 5/13 | 20 / 1 / 0 / 0 |
 | B-k12-p70 | complete; 25/25 | 34/72 (47.22%) | 54.85% | 10/22 | 18/51 (35.29%) / 40.26% / 4/13 | 18 / 0 / 0 / 0 |
-| B-k16-none | not_run; 0/25 | — | — | — | — | — |
+| B-k16-none | partial; 8/25 | — | — | — | — | — |
 | B-k16-p10 | not_run; 0/25 | — | — | — | — | — |
 | B-k16-p30 | not_run; 0/25 | — | — | — | — | — |
 | B-k16-p50 | not_run; 0/25 | — | — | — | — | — |
@@ -112,17 +112,20 @@ Ufullstendige resultater rangeres ikke. Rå/justerte scorer, gap-resultater og s
 | B-k12-p30 | 220.9 | 2407.1 | 46.02 | består |
 | B-k12-p50 | 222.1 | 1956.3 | 50.11 | består |
 | B-k12-p70 | 218.0 | 2692.7 | 50.31 | består |
+| B-k16-none | 220.8 | 2891.9 | 140.48 | består |
 
 B/C-worker-RSS gjelder gjenbrukt indeks og fjern dommervurdering, ikke hele mobilappen. MiniLM har 235,05 MB modell og 0,292 MB indeks (384 dimensjoner); A-indeksarbeidet toppet på omtrent 915 MB prosess-tre-RSS. Gemma har 1 488,92 MB modell / 0,584 MB indeks; Qwen Q4 396,47 MB / 0,778 MB. MiniLMs dokumentvektorer ble gjenbrukt i A, mens de andre bygget dokumentvektorer; A-indekstidene er derfor ikke en lik full-indeks-benchmark. MiniLMs kjente 128-token-avkorting (108/405 visninger, ingen spørsmål) er uendret. Mobil-RAM, energibruk og samlet lokal svartid er fortsatt ikke målt.
 
 Spørsmålsvektorene er også lagrede. Ranking-/packing-tidene inkluderer derfor ikke embedding av et nytt brukerspørsmål. De er ikke full online retrieval-latens. Embeddingmålingene fra A og størrelses-/RAMdata rapporteres separat i resultat-JSON.
 
 
-B/C: 102 nye faktiske dommerkall, 398 cachetreff/unngåtte kall; tokens `{"input_tokens": 734812, "cached_input_tokens": 131968, "cache_write_input_tokens": 0, "output_tokens": 150183, "reasoning_output_tokens": 19331, "total_tokens": 884995}`.
+B/C: 106 CLI-kallforsøk, 105 fullførte vurderinger, 403 cachetreff/unngåtte kall; tokens `{"input_tokens": 759165, "cached_input_tokens": 142336, "cache_write_input_tokens": 0, "output_tokens": 157835, "reasoning_output_tokens": 19822, "total_tokens": 917000}`.
 
-Hele A+B/C: 177 kall, 177 vellykkede; tokens `{"input_tokens": 1308766, "cached_input_tokens": 204544, "cache_write_input_tokens": 0, "output_tokens": 291160, "reasoning_output_tokens": 35133, "total_tokens": 1599926}`; 0 med ukjent bruk; sum dommerkalletid 8592.66 s. Reasoning inngår i output, prefix-cached input i input; ingen dobbelttelling.
+Hele A+B/C: 181 kall, 180 vellykkede; tokens `{"input_tokens": 1333119, "cached_input_tokens": 214912, "cache_write_input_tokens": 0, "output_tokens": 298812, "reasoning_output_tokens": 35624, "total_tokens": 1631931}`; 1 med ukjent bruk; sum dommerkalletid 8820.19 s. Reasoning inngår i output, prefix-cached input i input; ingen dobbelttelling.
 
 Før denne gjenopptakelsen: femtimerskvote 43% brukt, ukeskvote 59% brukt. Dette er kontoens delte bruk; eval-tokenregnskapet over er separat. Ingen automatisk API-fallback eller kvotereset.
+
+1 kvoteavvist forsøk er bevart i et separat hashbundet arkiv og inkludert i antall forsøk/ukjent forbruk og kjøretid. Ingen vurdering kom tilbake fra dette forsøket. Eierens nye fortsett-instruks kom etter naturlig kvotefornyelse; kun det avviste inputet ble klargjort på nytt. Den frosne driverens v4-telling følger nåværende cache; v5 inkluderer også de arkiverte forsøkene.
 
 ## Sikkerhet og anbefaling
 

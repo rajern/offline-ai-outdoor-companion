@@ -1,5 +1,7 @@
 """Source-free progress/final report for the unchanged resumed B/C experiment."""
 from datetime import datetime, timezone
+from copy import deepcopy
+import hashlib
 import json
 from pathlib import Path
 
@@ -22,6 +24,28 @@ def pct(value):
 
 def export():
     data = read(ROOT / 'evals/retrieval_optimization_results.v4.json')
+    # Original frozen accounting follows the active cache slot. Preserve rejected
+    # attempts separately when an explicit owner resume archives that slot.
+    data['consumption_current_cache'] = deepcopy(data['consumption'])
+    data['archived_quota_attempts'] = []
+    for path in sorted((STATE / 'quota-retry-archives').glob('*.json')):
+        manifest = read(path)
+        archive = ROOT / manifest['archive']
+        assert archive.resolve().is_relative_to((ROOT / 'knowledge/local/judge-cache-v3').resolve())
+        for filename, expected in manifest['file_sha256'].items():
+            with (archive / filename).open('rb') as stream:
+                assert hashlib.file_digest(stream, 'sha256').hexdigest() == expected
+        failed = read(archive / 'record.json')
+        assert not failed['success'] and failed == manifest['failed_record']
+        data['archived_quota_attempts'].append(manifest)
+        usage = data['consumption']
+        usage['actual_calls'] += 1
+        usage['sum_call_seconds'] += failed['elapsed_seconds']
+        usage['unknown_usage_calls'] += failed['usage'] is None
+        for name, value in (failed['usage'] or {}).items():
+            usage['usage'][name] = usage['usage'].get(name, 0) + value
+        usage['errors'].append({'cache_key': manifest['cache_key'], 'status': 'archived_quota_rejection',
+                                'archive': manifest['archive'], 'validation_errors': failed['validation_errors']})
     data['reported_at'] = datetime.now(timezone.utc).isoformat()
     data['judge_identity'] = read(RUN / 'freeze.json')['judge_identity']
     data['resources_by_worker'] = [dict(file=p.name, **read(p)) for p in sorted((STATE / 'resources').glob('*.json'))]
@@ -132,13 +156,19 @@ def export():
         'Embeddingmålingene fra A og størrelses-/RAMdata rapporteres separat i resultat-JSON.', '']
     usage, before = data['consumption'], data['consumption_before']
     delta = {k: v - before['usage'].get(k, 0) for k, v in usage['usage'].items()}
-    lines += ['', f"B/C: {usage['actual_calls']-before['actual_calls']} nye faktiske dommerkall, "
+    lines += ['', f"B/C: {usage['actual_calls']-before['actual_calls']} CLI-kallforsøk, "
+        f"{usage['successful_calls']-before['successful_calls']} fullførte vurderinger, "
         f"{usage['cache_hits']-before['cache_hits']} cachetreff/unngåtte kall; tokens `{json.dumps(delta)}`.", '',
         f"Hele A+B/C: {usage['actual_calls']} kall, {usage['successful_calls']} vellykkede; "
         f"tokens `{json.dumps(usage['usage'])}`; {usage['unknown_usage_calls']} med ukjent bruk; "
         f"sum dommerkalletid {usage['sum_call_seconds']:.2f} s. Reasoning inngår i output, prefix-cached input i input; ingen dobbelttelling.", '',
         'Før denne gjenopptakelsen: femtimerskvote 43% brukt, ukeskvote 59% brukt. '
         'Dette er kontoens delte bruk; eval-tokenregnskapet over er separat. Ingen automatisk API-fallback eller kvotereset.', '']
+    if data['archived_quota_attempts']:
+        lines += [f"{len(data['archived_quota_attempts'])} kvoteavvist forsøk er bevart i et separat hashbundet arkiv "
+                  'og inkludert i antall forsøk/ukjent forbruk og kjøretid. Ingen vurdering kom tilbake fra dette forsøket. '
+                  'Eierens nye fortsett-instruks kom etter naturlig kvotefornyelse; kun det avviste inputet ble klargjort på nytt. '
+                  'Den frosne driverens v4-telling følger nåværende cache; v5 inkluderer også de arkiverte forsøkene.', '']
     # Detailed source/safety review is supplied separately after the stage gate.
     review = STATE / 'final-review.v1.md'
     if review.exists():

@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-09T09:10:10.723197+00:00",
+  "at": "2026-10-09T12:17:48.620948+00:00",
   "status": "running-B",
   "error": null,
   "configurations": [
@@ -18735,11 +18735,171 @@
         "id": "B-k16-none",
         "k": 16,
         "threshold_name": "none",
-        "packing": "P2"
+        "packing": "P2",
+        "model": "minilm",
+        "threshold": null
       },
-      "judged_cases": 0,
-      "status": "not_run",
-      "partial_scores": []
+      "judged_cases": 8,
+      "status": "partial",
+      "partial_scores": [
+        {
+          "case_id": "case-01",
+          "decisions": [
+            "not_covered",
+            "not_covered",
+            "not_covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "a7b9fb436ff51fb4951ce6a7b59113bf648de982874f16b6662fd7c1240136ee",
+          "cache_key": "c7d0b13e188cc2b4cabb9c33d0fe8ba0b68abe25ce43e137f84a33fe1a6f9682"
+        },
+        {
+          "case_id": "case-02",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "aec629bdfec7fefa9f370bbc2ab3ddb989bbbd1d309831b54dec507ec22acfb7",
+          "cache_key": "2ab000c0bcc90c1e70f5363ca39f72f2061669cfc74286fabbe0233de3471618"
+        },
+        {
+          "case_id": "case-03",
+          "decisions": [
+            "covered",
+            "covered",
+            "not_covered",
+            "not_covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "e08b161057a8b448569495f3db7c612061270fa3f950a17981cff784b8722dcb",
+          "cache_key": "0a73077cd0aa58f53cddd1b810d37a34a82c8ff07a0c709552bde7c40e53855f"
+        },
+        {
+          "case_id": "case-04",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "9310b1c4e528f577fc40b8b2a2783e5675d2d0d8341d1e7f0786c439ede72db2",
+          "cache_key": "a9be99693cd161cb6e8445abfd6ea8227038e6802f89cebee571847796313ede"
+        },
+        {
+          "case_id": "case-05",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered",
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "847ae586332bd2008fdd69cdd70ec4c99e3a368b8cfc8ddbdd3abd43ac73dd02",
+          "cache_key": "ead4e1487e9fd8ca5d84034cb8621deb012618b41b57d8661defaf55c3ecd2cf"
+        },
+        {
+          "case_id": "case-06",
+          "decisions": [
+            "not_covered",
+            "covered",
+            "covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "59d3a83090700c18eac1185a41f2593b9fb2c1a3ceee13d5bd95e79d8c568a4b",
+          "cache_key": "63569888bbc8dae0fbe28efa5e23daba807f9f9d587e6a5a1497ed788ae01e1c"
+        },
+        {
+          "case_id": "case-07",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered",
+            "covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "8a48cb3273e43d38b9738afb39bc5cb544a29ba22a8f3dda61ab09214e054ed8",
+          "cache_key": "f2400d853fcea48f4cd43d386ffb448122ddf15617ae307c28433cc46c333377"
+        },
+        {
+          "case_id": "case-08",
+          "decisions": [
+            "covered",
+            "covered",
+            "covered",
+            "not_covered"
+          ],
+          "flags": {
+            "irrelevant": true,
+            "potentially_misleading": false,
+            "contradictory": false,
+            "jurisdiction_leakage": false
+          },
+          "requires_review": false,
+          "certificate_judge_disagreement": [],
+          "context_sha256": "01075171de2a5b5d037b560b932a4af8a272ef807677fd32a037507db2e4a2e7",
+          "cache_key": "52a3f0868507dae56a9d265532195af4150eccccc7a35ac9bd13a3c8e1f9346e"
+        }
+      ]
     },
     {
       "configuration": {
@@ -18815,19 +18975,19 @@
   ],
   "completed": 23,
   "consumption": {
-    "actual_calls": 177,
-    "successful_calls": 177,
-    "cache_hits": 398,
-    "avoided_calls": 398,
+    "actual_calls": 180,
+    "successful_calls": 180,
+    "cache_hits": 403,
+    "avoided_calls": 403,
     "usage": {
-      "input_tokens": 1308766,
-      "cached_input_tokens": 204544,
+      "input_tokens": 1333119,
+      "cached_input_tokens": 214912,
       "cache_write_input_tokens": 0,
-      "output_tokens": 291160,
-      "reasoning_output_tokens": 35133,
-      "total_tokens": 1599926
+      "output_tokens": 298812,
+      "reasoning_output_tokens": 35624,
+      "total_tokens": 1631931
     },
-    "sum_call_seconds": 8592.6629623,
+    "sum_call_seconds": 8817.959714100001,
     "unknown_usage_calls": 0,
     "errors": [],
     "billing": "ChatGPT subscription",
