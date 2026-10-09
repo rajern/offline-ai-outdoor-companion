@@ -23,6 +23,7 @@ def pct(value):
 def export():
     data = read(ROOT / 'evals/retrieval_optimization_results.v4.json')
     data['reported_at'] = datetime.now(timezone.utc).isoformat()
+    data['judge_identity'] = read(RUN / 'freeze.json')['judge_identity']
     data['resources_by_worker'] = [dict(file=p.name, **read(p)) for p in sorted((STATE / 'resources').glob('*.json'))]
     data['resume_attempts'] = [read(p) for p in sorted((STATE / 'resume-attempts').glob('attempt-*.json'))]
     data['indices'] = {p.parent.name: read(p) for p in (RUN / 'indices').glob('*/index.json')}
@@ -43,6 +44,8 @@ def export():
                 'configuration': cid, 'case_id': score['case_id'], 'decisions': score['decisions'],
                 'flags': score['flags'], 'context_sha256': score['context_sha256'], 'cache_key': score['cache_key'],
                 'source_items': [{'id': e['item']['id'], 'url': e['item']['source_url']} for e in row['excerpts']],
+                'budget_exclusions': [{k: t[k] for k in ['seed_rank', 'seed_id', 'prompt_tokens', 'status']}
+                                      for t in row['trace'] if t['status'] == 'over_budget'],
                 'certificate_positive': score['certificate_positive'], 'requires_review': score['requires_review']})
     for name in ['final-review.v1.json', 'final-audit.v1.json', 'resume-quota-end.v1.json']:
         if (STATE / name).exists():
@@ -51,13 +54,17 @@ def export():
     records = data['configurations']
     baseline = next(r for r in records if r['configuration']['id'] == 'A-minilm')['adjusted_full25']
     lines = ['# M2-06 — gjenopptatt MiniLM-optimalisering', '',
-        f"**Status: {data['status']}. {data['completed']}/31 konfigurasjoner fullstendig vurdert.**", '']
+        f"**Status: {data['status']}. {data['completed']}/31 konfigurasjoner fullstendig vurdert.**", '',
+        f"Resultatsnapshot: {data['at']}. Eksport: {data['reported_at']}.", '']
     if data['error']:
         lines += ['Kjøringen stoppet: ' + data['error'], '']
     lines += ['## Metode og avgrensning', '',
         'MiniLM er eierens valgte forsøksmodell. Fase A og B-k3-none gjenbrukes; ingen fullførte dommerkall gjentas. '
         'Alle caser bruker den samme frosne kildebasen, V3-prompten, schemaet, scoreren og Codex Sol Medium '
         'gjennom ChatGPT-abonnementet. Ingen betalt API, holdout, Qwen-svargenerering eller produksjonsendring.', '',
+        f"Frosset dommeridentitet: `{data['judge_identity']['model']}`, reasoning `{data['judge_identity']['reasoning_effort']}`, "
+        f"`{data['judge_identity']['cli_version']}`. Autentisering, modellkatalog og innstillinger kontrolleres før workerens kall. "
+        'CLI eksponerer ikke eksakt serverrevisjon; den er fortsatt ukjent, ikke antatt identisk med en vekthash.', '',
         'Case 13/Gemma og case 20/1/MiniLM justeres bare i det separat godkjente, eksakt-input-/kontekstbundne '
         'adjudikasjonslaget. Råresultater og gold er uendret. Justert MiniLM A-baseline: '
         f"{baseline['covered']}/72, micro {pct(baseline['micro_coverage'])}, macro {pct(baseline['macro_coverage'])}, "

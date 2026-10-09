@@ -1,10 +1,14 @@
 # M2-06 — gjenopptatt MiniLM-optimalisering
 
-**Status: running-B. 14/31 konfigurasjoner fullstendig vurdert.**
+**Status: running-B. 18/31 konfigurasjoner fullstendig vurdert.**
+
+Resultatsnapshot: 2026-10-09T08:30:52.415848+00:00. Eksport: 2026-10-09T08:50:03.490634+00:00.
 
 ## Metode og avgrensning
 
 MiniLM er eierens valgte forsøksmodell. Fase A og B-k3-none gjenbrukes; ingen fullførte dommerkall gjentas. Alle caser bruker den samme frosne kildebasen, V3-prompten, schemaet, scoreren og Codex Sol Medium gjennom ChatGPT-abonnementet. Ingen betalt API, holdout, Qwen-svargenerering eller produksjonsendring.
+
+Frosset dommeridentitet: `gpt-6.1-sol`, reasoning `medium`, `codex-cli 0.162.0-alpha.2`. Autentisering, modellkatalog og innstillinger kontrolleres før workerens kall. CLI eksponerer ikke eksakt serverrevisjon; den er fortsatt ukjent, ikke antatt identisk med en vekthash.
 
 Case 13/Gemma og case 20/1/MiniLM justeres bare i det separat godkjente, eksakt-input-/kontekstbundne adjudikasjonslaget. Råresultater og gold er uendret. Justert MiniLM A-baseline: 57/72, micro 79.17%, macro 77.95%, 15/22 komplette. Råbaseline var 56/72 og 14/22; 15-slicen er uendret.
 
@@ -36,10 +40,10 @@ Tallene viser justert analyse. Flagg: irrelevant / misvisende / direkte konflikt
 | B-k5-p50 | complete; 25/25 | 43/72 (59.72%) | 61.29% | 9/22 | 28/51 (54.90%) / 55.00% / 4/13 | 18 / 2 / 0 / 0 |
 | B-k5-p70 | complete; 25/25 | 32/72 (44.44%) | 51.06% | 8/22 | 17/51 (33.33%) / 37.69% / 3/13 | 17 / 2 / 0 / 0 |
 | B-k8-none | complete; 25/25 | 57/72 (79.17%) | 77.95% | 15/22 | 39/51 (76.47%) / 74.23% / 8/13 | 22 / 1 / 0 / 0 |
-| B-k8-p10 | not_run; 0/25 | — | — | — | — | — |
-| B-k8-p30 | not_run; 0/25 | — | — | — | — | — |
-| B-k8-p50 | not_run; 0/25 | — | — | — | — | — |
-| B-k8-p70 | not_run; 0/25 | — | — | — | — | — |
+| B-k8-p10 | complete; 25/25 | 52/72 (72.22%) | 73.41% | 14/22 | 34/51 (66.67%) / 66.54% / 7/13 | 21 / 1 / 0 / 0 |
+| B-k8-p30 | complete; 25/25 | 51/72 (70.83%) | 72.27% | 14/22 | 33/51 (64.71%) / 64.62% / 7/13 | 21 / 1 / 0 / 0 |
+| B-k8-p50 | complete; 25/25 | 47/72 (65.28%) | 68.11% | 12/22 | 29/51 (56.86%) / 57.56% / 5/13 | 20 / 1 / 0 / 0 |
+| B-k8-p70 | complete; 25/25 | 34/72 (47.22%) | 54.85% | 10/22 | 18/51 (35.29%) / 40.26% / 4/13 | 18 / 1 / 0 / 0 |
 | B-k12-none | not_run; 0/25 | — | — | — | — | — |
 | B-k12-p10 | not_run; 0/25 | — | — | — | — | — |
 | B-k12-p30 | not_run; 0/25 | — | — | — | — | — |
@@ -76,6 +80,10 @@ Ufullstendige resultater rangeres ikke. Rå/justerte scorer, gap-resultater og s
 | B-k5-p50 | 900.2 / 1578 | 708.8 | 105 | 0 | 0.01403 / 1.914 |
 | B-k5-p70 | 740.5 / 1578 | 549.2 | 81 | 0 | 0.01406 / 0.835 |
 | B-k8-none | 1487.7 / 1983 | 1296.3 | 198 | 2 | 0.01334 / 3.083 |
+| B-k8-p10 | 1416.9 / 1983 | 1225.5 | 187 | 2 | 0.01340 / 3.029 |
+| B-k8-p30 | 1313.9 / 1983 | 1122.5 | 173 | 2 | 0.01288 / 2.248 |
+| B-k8-p50 | 1152.1 / 1983 | 960.8 | 146 | 2 | 0.01444 / 2.197 |
+| B-k8-p70 | 892.8 / 1983 | 701.5 | 106 | 2 | 0.01433 / 4.774 |
 
 | ID | Maks worker-tre RSS, MiB | Min ledig RAM, MiB | Sum worker-CPU, s | Ressursstatus |
 |---|---:|---:|---:|---|
@@ -90,16 +98,20 @@ Ufullstendige resultater rangeres ikke. Rå/justerte scorer, gap-resultater og s
 | B-k5-p50 | 240.1 | 3625.3 | 29.47 | består |
 | B-k5-p70 | 178.0 | 3996.9 | 24.92 | består |
 | B-k8-none | 174.5 | 4093.9 | 25.86 | består |
-| B-k8-p10 | 218.8 | 4030.8 | 9.02 | består |
+| B-k8-p10 | 218.8 | 2796.9 | 43.84 | består |
+| B-k8-p30 | 219.4 | 2704.9 | 34.05 | består |
+| B-k8-p50 | 217.3 | 3343.6 | 31.30 | består |
+| B-k8-p70 | 232.7 | 2738.8 | 62.91 | består |
+| B-k12-none | 233.9 | 2782.5 | 103.72 | består |
 
 B/C-worker-RSS gjelder gjenbrukt indeks og fjern dommervurdering, ikke hele mobilappen. MiniLM har 235,05 MB modell og 0,292 MB indeks (384 dimensjoner); A-indeksarbeidet toppet på omtrent 915 MB prosess-tre-RSS. Gemma har 1 488,92 MB modell / 0,584 MB indeks; Qwen Q4 396,47 MB / 0,778 MB. MiniLMs dokumentvektorer ble gjenbrukt i A, mens de andre bygget dokumentvektorer; A-indekstidene er derfor ikke en lik full-indeks-benchmark. MiniLMs kjente 128-token-avkorting (108/405 visninger, ingen spørsmål) er uendret. Mobil-RAM, energibruk og samlet lokal svartid er fortsatt ikke målt.
 
 Spørsmålsvektorene er også lagrede. Ranking-/packing-tidene inkluderer derfor ikke embedding av et nytt brukerspørsmål. De er ikke full online retrieval-latens. Embeddingmålingene fra A og størrelses-/RAMdata rapporteres separat i resultat-JSON.
 
 
-B/C: 60 nye faktiske dommerkall, 215 cachetreff/unngåtte kall; tokens `{"input_tokens": 409579, "cached_input_tokens": 48384, "cache_write_input_tokens": 0, "output_tokens": 65990, "reasoning_output_tokens": 10167, "total_tokens": 475569}`.
+B/C: 69 nye faktiske dommerkall, 306 cachetreff/unngåtte kall; tokens `{"input_tokens": 475113, "cached_input_tokens": 69120, "cache_write_input_tokens": 0, "output_tokens": 80576, "reasoning_output_tokens": 12356, "total_tokens": 555689}`.
 
-Hele A+B/C: 135 kall, 135 vellykkede; tokens `{"input_tokens": 983533, "cached_input_tokens": 120960, "cache_write_input_tokens": 0, "output_tokens": 206967, "reasoning_output_tokens": 25969, "total_tokens": 1190500}`; 0 med ukjent bruk; sum dommerkalletid 6013.28 s. Reasoning inngår i output, prefix-cached input i input; ingen dobbelttelling.
+Hele A+B/C: 144 kall, 144 vellykkede; tokens `{"input_tokens": 1049067, "cached_input_tokens": 141696, "cache_write_input_tokens": 0, "output_tokens": 221553, "reasoning_output_tokens": 28158, "total_tokens": 1270620}`; 0 med ukjent bruk; sum dommerkalletid 6488.41 s. Reasoning inngår i output, prefix-cached input i input; ingen dobbelttelling.
 
 Før denne gjenopptakelsen: femtimerskvote 43% brukt, ukeskvote 59% brukt. Dette er kontoens delte bruk; eval-tokenregnskapet over er separat. Ingen automatisk API-fallback eller kvotereset.
 
