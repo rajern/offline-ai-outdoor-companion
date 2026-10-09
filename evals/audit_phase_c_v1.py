@@ -5,7 +5,7 @@ import audit_retrieval_optimization_v5 as integrity
 import continue_retrieval_phase_c_v1 as c
 
 
-def audit():
+def audit(public_output=None):
     c.check_frozen()
     raw = integrity.audit(output_paths=[c.STATE / 'raw-integrity-audit.json'])
     plan = c.s.runtime.read(c.d.RUN / 'plan.json')
@@ -37,7 +37,7 @@ def audit():
     result = {**raw, 'phase_C_frozen': True, 'protected_prior_A_B_files': len(c.s.runtime.read(c.STATE / 'freeze.json')['protected_A_B_files']),
               'registered_risk_delta': changed, 'new_review_layer_coverage_changes': 0,
               'limited_owner_B_override': c.s.runtime.read(c.AUTHORIZATION)['limited_override']}
-    for path in [c.STATE / 'final-audit.json', c.s.ROOT / 'evals/retrieval_optimization_final_audit.v2.json']:
+    for path in [c.STATE / 'final-audit.json', public_output or c.s.ROOT / 'evals/retrieval_optimization_final_audit.v2.json']:
         path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
     print(json.dumps({'completed': result['completed_configurations'], 'verified_cases': result['verified_completed_case_inputs'],
                       'integrity_passed': True, 'new_risk_changes': len(changed), 'new_judge_calls': 0}))

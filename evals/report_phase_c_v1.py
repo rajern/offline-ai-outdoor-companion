@@ -16,9 +16,15 @@ def pct(value):
     return '—' if value is None else f'{100 * value:.2f}%'
 
 
-def export():
+def export(version=6):
     data = read(ROOT / 'evals/retrieval_optimization_results.v6.json')
     data['reported_at'] = datetime.now(timezone.utc).isoformat()
+    from continue_retrieval_phase_c_v1 import accounted_consumption
+    try:
+        data['consumption'] = accounted_consumption()
+        data['consumption_checked_at'] = data['reported_at']
+    except json.JSONDecodeError:
+        pass  # Preserve the prior snapshot if a concurrent record write is unfinished.
     # Only progress metadata is refreshed between the frozen driver's exports.
     # A raw summary pending its resource check is not prematurely called complete.
     for entry in data['configurations']:
@@ -49,7 +55,7 @@ def export():
         scores = read(STATE / 'adjusted' / (cid + '.json'))['scores']
         rows = {r['case_id']: r for r in read(RUN / 'configurations' / cid / 'retrieved-all.json')}
         for score in scores:
-            if score['case_id'] not in ['case-01', 'case-03', 'case-06', 'case-08', 'case-13', 'case-17', 'case-19', 'case-20', 'case-21']:
+            if score['case_id'] not in ['case-01', 'case-03', 'case-06', 'case-07', 'case-08', 'case-13', 'case-17', 'case-19', 'case-20', 'case-21']:
                 continue
             row = rows[score['case_id']]
             data['safety_context_bindings'].append({
@@ -61,9 +67,10 @@ def export():
     for name in ['final-review.json', 'final-audit.json', 'quota-end.json']:
         if (STATE / name).exists():
             data[name] = read(STATE / name)
-    (ROOT / 'evals/retrieval_optimization_results.v6.json').write_text(
+    (ROOT / f'evals/retrieval_optimization_results.v{version}.json').write_text(
         json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
-    lines = ['# M2-06 — utviklingsrapport etter fase C / ressursstopp', '',
+    title = '# M2-06 — avsluttende utviklingsrapport' if data['status'] == 'comparison_complete' else '# M2-06 — utviklingsrapport ved stoppunktet'
+    lines = [title, '',
              f"**Status: {data['status']}. {data['completed']}/31 konfigurasjoner fullt scoret.**", '',
              f"Resultatsnapshot {data['at']}; rapport {data['reported_at']}.", '']
     if data['error']:
@@ -92,6 +99,12 @@ def export():
         'Uavklart betydning/risiko markeres review og hindrer automatisk valg. '
         '25-settet har 22 støttede caser/72 krav og tre kunnskapshull; 15-slicen har 13 støttede caser/51 krav og to hull. '
         'Tom gap-kravliste gir aldri automatisk komplett pass.', '',
+        'B-tersklene ble frosset før sammenligningen fra 400 tillatte top-16-scorer, '
+        'samlet over 25 spørsmål, med lineær numpy.percentile og inklusjon ved score ≥ terskel. '
+        'p10=0,3411781549453735; p30=0,38985224068164825; p50=0,4206088036298752; p70=0,4637095630168915. '
+        'C bruker ingen terskel. P3 beholder den frosne eksakte normaliserte tekstdedupliseringen og '
+        'utvider bare de forhåndsdefinerte korte, sammenhengende seksjonsgrenene; øvrige treff bruker parent alene. '
+        'Hele pakker prøves innen faktisk budsjett uten gold eller ekstra LLM. Reglene er ikke justert fra C-resultater.', '',
         '## Alle 31 konfigurasjoner', '',
         'Justert analyse. Flagg er antall støttede caser med irrelevant / potensielt misvisende / direkte konflikt / geografisk lekkasje.', '',
         '| ID | Status | Micro25 | Macro25 | Komplette25 | Micro15 / macro15 / komplette15 | Flagg |',
@@ -144,6 +157,9 @@ def export():
               'Reasoning inngår i output, prefix-cached input i input. Det historiske kvoteavviste forsøket er bevart og medregnet '
               'med ukjent bruk; ingen estimert nullbruk eller API-kostnad. CLI-serverrevisjon eksponeres ikke, mens forespurt/katalogmodell '
               'gpt-6.1-sol, Medium, CLI-versjon og abonnementsauth er frosset og kontrollert. Kvoter gjelder den delte kontoen.', '']
+    if data['status'] != 'comparison_complete':
+        lines += ['Forbruk i delrapporter inkluderer pågående kall med foreløpig ukjent bruk. '
+                  'Konfigurasjoner regnes først som fullført etter lagret sluttsummary; scorer alene godkjenner ikke ressurskontrollen.', '']
     if 'quota-end.json' in data:
         quota = data['quota-end.json']
         lines += [f"Siste kvote {quota['at']}: 5t {quota['five_hour_used_percent']}% brukt, uke {quota['weekly_used_percent']}% brukt. "
@@ -165,9 +181,13 @@ def export():
         'Utviklingssettet brukes til kalibrering/valg; holdout er ikke åpnet eller kjørt. '
         'Råtekst, modeller, indekser og logger beholdes lokalt. Ingen produksjonskonfigurasjon eller Qwen-svargenerering er endret. '
         'M2-06 forblir åpen for senere produkt-/sikkerhetsarbeid.', '']
-    (ROOT / 'evals/retrieval_optimization_report.v6.md').write_text('\n'.join(lines), encoding='utf-8', newline='\n')
+    (ROOT / f'evals/retrieval_optimization_report.v{version}.md').write_text('\n'.join(lines), encoding='utf-8', newline='\n')
     print(data['status'], data['completed'], '/31')
 
 
 if __name__ == '__main__':
-    export()
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--version', type=int, default=6)
+    args = parser.parse_args()
+    export(args.version)
