@@ -314,6 +314,19 @@ model/configuration is selected. See `evals/retrieval_optimization_report.v3.md`
 Owner review and a provisional phase B model choice are required. M2-06 remains
 open; do not repeat completed A calls or start M3.
 
+  On 2026-10-09 the owner selected MiniLM for B/C and approved exact-context
+  adjudications for Gemma case 13 and MiniLM case 20/1. Original gold, judges,
+  score files and all 309 phase-A artifacts remain unchanged. The separate
+  continuation has 34 relevant passing tests and froze the four thresholds
+  from 400 saved MiniLM scores. B-k3-none completed 25 judgments (22 new calls,
+  three cache hits): 40/72 requirements, 8/22 complete, two misleading flags.
+  Execution stopped at the original RAM guard: only 5.65 MiB available during
+  scoring, versus a 256 MiB reserve. Integrity audit passes all 82 frozen files
+  and the 25 new input/result/token bindings. 27 B/C configurations remain;
+  no winner is selected. See `evals/retrieval_optimization_report.v4.md`.
+  Resume completed calls from cache after the resource blocker is resolved.
+  M2-06 remains open; holdout, production changes and answer generation excluded.
+
 Replace development fixtures in the main RAG flow with the approved Outwise knowledge base.
 
 Requirements:

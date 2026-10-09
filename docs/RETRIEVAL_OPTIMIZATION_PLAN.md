@@ -10,6 +10,14 @@ Tersklene fryses fra MiniLMs lagrede 400 top-16-scorer før B. Den opprinnelige
 konservative valgregelen gjelder for B/C; reelle avveininger stopper fortsatt.
 Dette er ikke godkjenning av produksjonskonfigurasjon eller holdout.
 
+**Ny ressursstopp:** Første B-konfigurasjon (k=3, ingen terskel, P2) har alle
+25 vurderinger lagret: 40/72 krav, 8/22 komplette, to misvisende-flagg. Under
+score-worker falt ledig RAM til 5,65 MiB mot reserven på 256 MiB. Integriteten
+består, men videreføring stopper på ressursporten. 24 B- og tre C-konfigurasjoner
+gjenstår; fullførte dommerkall skal ikke gjentas. Se
+[B/C-delrapport](../evals/retrieval_optimization_report.v4.md) og
+[sluttaudit](../evals/retrieval_optimization_continuation_audit.v1.json).
+
 **Eieroppdatering, 2026-10-08:** Oppdraget i chatten godkjenner eksisterende
 25 utviklingscaser og betinget kjøring av planen etter scorer-/runtimekontroll.
 Den eldre status-/godkjenningsporten nedenfor beskriver overleveringen før denne

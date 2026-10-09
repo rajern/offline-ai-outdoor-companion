@@ -40,6 +40,14 @@ Ordinary B/C phase transitions need no new approval; real resource, review or
 per-case safety tradeoffs still block selection. This supersedes the preceding
 pending-owner status. No production approval is given.
 
+Continuation stopped after B-k3-none's 25 saved judgments: available host RAM
+fell to 5.65 MiB below the unchanged 256 MiB reserve; score-worker process-tree
+RSS was only 230.2 MiB. All results/seals and 309 phase-A files pass final audit.
+One of 28 B/C configurations is fully scored (40/72, 8/22 complete, two misleading
+flags); 27 remain. See `retrieval_optimization_report.v4.md` and the continuation
+audit. No B/C winner is selected. After the resource blocker is resolved, resume
+the same continuation command; it skips completed A and B-k3-none model calls.
+
 Read `FOUNDATION.md` before future retrieval optimization. Default input is the
 25-case development set, never the control set. Do not recursively read/search
 `evals/holdout/` or include its files in optimizer context, calibration, debugging
