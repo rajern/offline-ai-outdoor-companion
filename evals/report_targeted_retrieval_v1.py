@@ -114,6 +114,8 @@ def report():
                 if (target / name).exists(): record['resources'][name] = s.runtime.read(target / name)
             record['resources']['retrieval_attempts'] = [s.runtime.read(p) for p in
                 sorted((target / 'retrieval-resource-attempts').glob('attempt-*.json'))]
+            record['resources']['judge_attempts'] = [s.runtime.read(p) for p in
+                sorted((target / 'judge-resource-attempts').glob('attempt-*.json'))]
         if record['complete']:
             q, legacy = s.aggregate(adjusted), s.aggregate(adjusted, legacy_only=True)
             record.update(full25=q, legacy15=legacy)
@@ -135,6 +137,8 @@ def report():
                               for p in sorted(folder.glob('quota-*.json'))]
     review = s.ROOT / 'evals/retrieval_targeted_preflight_review.v1.json'
     if review.exists(): data['pre_scoring_source_review'] = s.runtime.read(review)
+    source_review = s.ROOT / 'evals/retrieval_targeted_source_review.v1.json'
+    if source_review.exists(): data['source_review'] = s.runtime.read(source_review)
     if data['error']:
         lines += ['', '**Stoppårsak:** ' + data['error']]
     if compatibility.exists():
@@ -233,6 +237,11 @@ def report():
             'er fortsatt utenfor den nye rangeringens topp 16. Å representere hele teksten løser ikke disse alene.', '',
             'De fulle bindingene, sporene og source-teksthashene finnes i maskinlesbar sammenligning og separat preflight-review. '
             'Dette dokumenterer effekt av den nye representasjonen samlet; det isolerer ikke avkorting som eneste årsak.']
+    if data.get('source_review'):
+        lines += ['', '## Kildekontroll av scorede resultater', '',
+            'Separat kontroll med eksakt kontekst- og cachebinding, uten endrede råscorer eller nye adjudikasjoner.']
+        for review in data['source_review']['reviews']:
+            lines.append(f'- {review["configuration"]}/{review["case_id"]}: {review["conclusion"]}')
     s.runtime.write(s.ROOT / 'evals/retrieval_targeted_comparison.v1.json', data, replace=True)
     (s.ROOT / 'evals/retrieval_targeted_report.v1.md').write_text('\n'.join(lines) + '\n', encoding='utf-8', newline='\n')
     print(data['status'], 'judged', [v['judged_cases'] for v in data['variants']], flush=True)

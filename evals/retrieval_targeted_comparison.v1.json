@@ -1,5 +1,5 @@
 {
-  "status": "retrieval_complete",
+  "status": "running",
   "error": null,
   "baseline": {
     "full25": {
@@ -142,10 +142,95 @@
         "ranking": "window-mean",
         "packing": "P3"
       },
-      "judged_cases": 0,
-      "complete": false,
-      "comparison": null,
-      "scored_comparison_available": false,
+      "judged_cases": 25,
+      "complete": true,
+      "comparison": {
+        "gains": [
+          {
+            "case_id": "case-03",
+            "item": 5,
+            "context_sha256": "6d83876f145464b5dc170b2575cb093a363899a1e0438dbb1a916e54afad7e6a",
+            "cache_key": "c029b833041a892e0d632b10a69cbb760cfad8799a49ee7cb35f24802b056cb0"
+          }
+        ],
+        "losses": [],
+        "new_risks": [],
+        "remaining": [
+          {
+            "case_id": "case-01",
+            "item": 1,
+            "context_sha256": "d6c06f5b9b344408c74122937ecc6285f5fe3c45da13ca0e0d32ba28761aa42c",
+            "cache_key": "533e97eee4b3323b208ae3e9b48ce2db698dd69cc31fdaf9de010abccdaa4bd2"
+          },
+          {
+            "case_id": "case-01",
+            "item": 2,
+            "context_sha256": "d6c06f5b9b344408c74122937ecc6285f5fe3c45da13ca0e0d32ba28761aa42c",
+            "cache_key": "533e97eee4b3323b208ae3e9b48ce2db698dd69cc31fdaf9de010abccdaa4bd2"
+          },
+          {
+            "case_id": "case-01",
+            "item": 3,
+            "context_sha256": "d6c06f5b9b344408c74122937ecc6285f5fe3c45da13ca0e0d32ba28761aa42c",
+            "cache_key": "533e97eee4b3323b208ae3e9b48ce2db698dd69cc31fdaf9de010abccdaa4bd2"
+          },
+          {
+            "case_id": "case-03",
+            "item": 3,
+            "context_sha256": "6d83876f145464b5dc170b2575cb093a363899a1e0438dbb1a916e54afad7e6a",
+            "cache_key": "c029b833041a892e0d632b10a69cbb760cfad8799a49ee7cb35f24802b056cb0"
+          },
+          {
+            "case_id": "case-03",
+            "item": 4,
+            "context_sha256": "6d83876f145464b5dc170b2575cb093a363899a1e0438dbb1a916e54afad7e6a",
+            "cache_key": "c029b833041a892e0d632b10a69cbb760cfad8799a49ee7cb35f24802b056cb0"
+          },
+          {
+            "case_id": "case-06",
+            "item": 1,
+            "context_sha256": "df87d7e733e1af0ca6e1cfedd19d64c9d3a117c56b1b31ed395e0b6343d136c1",
+            "cache_key": "8eae711311e48404ef7041ae8cd21b3c3a6b4d9a1657e1eb5c6dbbb2ba1ebe43"
+          },
+          {
+            "case_id": "case-08",
+            "item": 4,
+            "context_sha256": "811873fe82e32a6f469462dbd75c13f21f9cc468974d33ba808d0f69f2202824",
+            "cache_key": "ccac9ce75ebbda1ac40929e901ba20395155347e8c31b0dcd55ab0cbfc49dd2d"
+          },
+          {
+            "case_id": "case-13",
+            "item": 1,
+            "context_sha256": "a29491b6d8cdf6e97a82c2da229d63085c9ebf546899813d6d95d080a830057b",
+            "cache_key": "a01b7adae668aac8fe54298a88686c5e5c08736f25954e64ea4ec881f7612b3e"
+          },
+          {
+            "case_id": "case-13",
+            "item": 2,
+            "context_sha256": "a29491b6d8cdf6e97a82c2da229d63085c9ebf546899813d6d95d080a830057b",
+            "cache_key": "a01b7adae668aac8fe54298a88686c5e5c08736f25954e64ea4ec881f7612b3e"
+          },
+          {
+            "case_id": "case-17",
+            "item": 1,
+            "context_sha256": "18b8a7558468f39211395c1045ace23b8479a73844c013cc35fffa742e81da42",
+            "cache_key": "054e75f78013df6665fd43ca3fed84a1f538ef706aac12889ce86299560b5ba0"
+          },
+          {
+            "case_id": "case-17",
+            "item": 2,
+            "context_sha256": "18b8a7558468f39211395c1045ace23b8479a73844c013cc35fffa742e81da42",
+            "cache_key": "054e75f78013df6665fd43ca3fed84a1f538ef706aac12889ce86299560b5ba0"
+          },
+          {
+            "case_id": "case-21",
+            "item": 2,
+            "context_sha256": "0f53d90d8f0cc157481480850e7b633f3b06998a23f6e082574402392893c00d",
+            "cache_key": "e935b5f16cf661a4b9f4069dd8a48f43d02b8bfad5be449e9ba8fad14c51dddc"
+          }
+        ]
+      },
+      "scored_comparison_available": true,
       "review_cases": [],
       "retrieved_cases": 25,
       "resources": {
@@ -163,6 +248,14 @@
           "peak_process_tree_rss_bytes": 192032768,
           "minimum_available_ram_bytes": 4484161536,
           "cpu_seconds": 2.875,
+          "sample_interval_seconds": 0.1,
+          "memory_method": "sampled simultaneous process-tree RSS"
+        },
+        "judge-resources.json": {
+          "elapsed_seconds": 1366.5781804000144,
+          "peak_process_tree_rss_bytes": 172220416,
+          "minimum_available_ram_bytes": 4142067712,
+          "cpu_seconds": 137.65625,
           "sample_interval_seconds": 0.1,
           "memory_method": "sampled simultaneous process-tree RSS"
         },
@@ -185,7 +278,159 @@
             "memory_method": "sampled simultaneous process-tree RSS",
             "exception_type": null
           }
+        ],
+        "judge_attempts": [
+          {
+            "elapsed_seconds": 51.96170559999882,
+            "peak_process_tree_rss_bytes": 175505408,
+            "minimum_available_ram_bytes": 4360212480,
+            "cpu_seconds": 5.3125,
+            "sample_interval_seconds": 0.1,
+            "memory_method": "sampled simultaneous process-tree RSS",
+            "exception_type": "KeyError"
+          },
+          {
+            "elapsed_seconds": 1366.568987400009,
+            "peak_process_tree_rss_bytes": 172220416,
+            "minimum_available_ram_bytes": 4142067712,
+            "cpu_seconds": 137.65625,
+            "sample_interval_seconds": 0.1,
+            "memory_method": "sampled simultaneous process-tree RSS",
+            "exception_type": null
+          }
         ]
+      },
+      "full25": {
+        "cases": 25,
+        "supported_cases": 22,
+        "gap_cases": 3,
+        "must_have_total": 72,
+        "covered": 60,
+        "micro_coverage": 0.8333333333333334,
+        "macro_coverage": 0.8113636363636364,
+        "complete_cases": 15,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 22,
+          "potentially_misleading": 1,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-25",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "legacy15": {
+        "cases": 15,
+        "supported_cases": 13,
+        "gap_cases": 2,
+        "must_have_total": 51,
+        "covered": 42,
+        "micro_coverage": 0.8235294117647058,
+        "macro_coverage": 0.7961538461538461,
+        "complete_cases": 8,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 13,
+          "potentially_misleading": 1,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
       }
     },
     {
@@ -218,7 +463,8 @@
           "sample_interval_seconds": 0.1,
           "memory_method": "sampled simultaneous process-tree RSS"
         },
-        "retrieval_attempts": []
+        "retrieval_attempts": [],
+        "judge_attempts": []
       }
     },
     {
@@ -261,19 +507,32 @@
             "memory_method": "sampled simultaneous process-tree RSS",
             "exception_type": null
           }
-        ]
+        ],
+        "judge_attempts": []
       }
     }
   ],
   "consumption": {
-    "actual_calls": 0,
-    "successful_calls": 0,
-    "cache_hits": 0,
-    "avoided_calls": 0,
-    "usage": {},
-    "sum_call_seconds": 0,
-    "unknown_usage_calls": 0,
-    "errors": [],
+    "actual_calls": 26,
+    "successful_calls": 25,
+    "cache_hits": 1,
+    "avoided_calls": 1,
+    "usage": {
+      "input_tokens": 200430,
+      "cached_input_tokens": 3456,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 54937,
+      "reasoning_output_tokens": 5343,
+      "total_tokens": 255367
+    },
+    "sum_call_seconds": 1408.1823446999479,
+    "unknown_usage_calls": 1,
+    "errors": [
+      {
+        "cache_key": "7656a2b838cbbf340b3278f932040a1bc70a75180d1a50b9b0c8e33cecd387bf",
+        "status": "incomplete"
+      }
+    ],
     "billing": "ChatGPT subscription",
     "paid_api_calls": 0,
     "estimated_api_cost_usd": null
@@ -308,6 +567,273 @@
   "paid_api_calls": 0,
   "recommendation": null,
   "decision_status": "pending_complete_scoring_and_source_review",
+  "scoring_metadata_compatibility": {
+    "reason": "Missing diagnostic section_count in targeted rows; no scoring-rule or judge-input change",
+    "original_freeze_sha256": "bc0f75adf6ea09c47e0850198dcb985e085bc9a6a68c3b7182fbca46a2e0ac80",
+    "code": {
+      "evals\\targeted_scoring_metadata_v1.py": "b9f163bb3936df8444b095134ab4e139a3d1822dd55c8cebb2329192b7453b0f",
+      "evals\\test_targeted_metadata_v1.py": "4821be45f6f922e7eb0b14def9f778ddad63c5f34c22ac654e0857615324c975"
+    },
+    "retrieval_files": {
+      "configurations\\T-ranking\\retrieved-all.json": "9b8178f19833c655d12af92c7375975e47d379334c651c11d9e1f12598b4fdca",
+      "configurations\\T-ranking\\case-01\\retrieved.json": "1550b4e2d2ae74cafe5ab0f1c4f5acfd4cea61229a6642f125bbe4cc9718c0c8",
+      "configurations\\T-ranking\\case-01\\context.txt": "d6c06f5b9b344408c74122937ecc6285f5fe3c45da13ca0e0d32ba28761aa42c",
+      "configurations\\T-ranking\\case-01\\prompt-not-executed.txt": "57ede821c2e6c9b380bc689feecb372cdd5593a97812d7ffb5e95d74da5b5736",
+      "configurations\\T-ranking\\case-02\\retrieved.json": "7953f88ee84d38aa719ab5d57a9830de57925d409a1fb303e3afe02fdd4366c8",
+      "configurations\\T-ranking\\case-02\\context.txt": "c65a6ba165e0ecd6f5171ff75a6b725aab37324f8d030aeb561cb86a49d7bc36",
+      "configurations\\T-ranking\\case-02\\prompt-not-executed.txt": "ce5bb5a7336a72a9d64cb90f33dee08baa5c975664cdf3556676e5e3c7b7d9a5",
+      "configurations\\T-ranking\\case-03\\retrieved.json": "b6940e973d48cf16e84aa4e6214718ff055b275bd88daf5b5c8e4deb25827f54",
+      "configurations\\T-ranking\\case-03\\context.txt": "6d83876f145464b5dc170b2575cb093a363899a1e0438dbb1a916e54afad7e6a",
+      "configurations\\T-ranking\\case-03\\prompt-not-executed.txt": "ae5fe2997675c5f9551c6cd656666757c49047deb53a06c8bd887e819607778e",
+      "configurations\\T-ranking\\case-04\\retrieved.json": "d4d60bc2ecceadabaece835b2afb89f0fa13d404643f1711f3f0afa8820bb115",
+      "configurations\\T-ranking\\case-04\\context.txt": "61aabae69f1535f5ecd6e7656cc9734c9084ed7ec227001d599000aa6e914c64",
+      "configurations\\T-ranking\\case-04\\prompt-not-executed.txt": "cb37188cc4ab529fa49678f00846740ce5f39b9baf682deb35682bf27b6a580c",
+      "configurations\\T-ranking\\case-05\\retrieved.json": "0b53f13d47d787ebd8c74f7dd71f344d82a2e27d60eacaf832f7ee7b1868363e",
+      "configurations\\T-ranking\\case-05\\context.txt": "a4a24bdf5da14c871770d0a90bb4ed9936c710c9b07352c1678b6865116e1c39",
+      "configurations\\T-ranking\\case-05\\prompt-not-executed.txt": "2e1aa8e61a202f26eca80c2e2f0595039d496f0a52c37f7e02c032f02d5f1d2e",
+      "configurations\\T-ranking\\case-06\\retrieved.json": "ac2d4cd6944e4621aab5c38d76e54541dc3159b29e60bcc8ca1aeafa0d21ef38",
+      "configurations\\T-ranking\\case-06\\context.txt": "df87d7e733e1af0ca6e1cfedd19d64c9d3a117c56b1b31ed395e0b6343d136c1",
+      "configurations\\T-ranking\\case-06\\prompt-not-executed.txt": "3eb48a42ad7ece4e6520a92be20ae523921612d53462bc6c85a025a2fa60d8fa",
+      "configurations\\T-ranking\\case-07\\retrieved.json": "a470c5a5b8f0b7cef7e1889ccf88560adc7b0f36afcca99cb29b5513a6a29603",
+      "configurations\\T-ranking\\case-07\\context.txt": "044898a6deea7d74dcd627f595bab4ff8236f09d42fd15ad4117f0795f076fab",
+      "configurations\\T-ranking\\case-07\\prompt-not-executed.txt": "81c1b6b40d6cfd5ac02cc96047890c3cbeb44180c46be3e83e94d9df8b9fd1f9",
+      "configurations\\T-ranking\\case-08\\retrieved.json": "655ae12789fa3a0c4ae02ebda0de0289495dcff51747ffc756b4a9fb1e2976f8",
+      "configurations\\T-ranking\\case-08\\context.txt": "811873fe82e32a6f469462dbd75c13f21f9cc468974d33ba808d0f69f2202824",
+      "configurations\\T-ranking\\case-08\\prompt-not-executed.txt": "dc09f3bd2d4072b6c010fd1c45843f35d16ca4e644cd5fec1c9cfa4abbcc4d07",
+      "configurations\\T-ranking\\case-09\\retrieved.json": "131cdcffce825de11112906d47d8e71564cac4356a093d76f993d75cab74efe9",
+      "configurations\\T-ranking\\case-09\\context.txt": "dd4d4f2fcbe9d571b403ba238daa00054c792d61d28000f7377277f3561518c0",
+      "configurations\\T-ranking\\case-09\\prompt-not-executed.txt": "c21789f9967f5ff713ce0a4475a393fa83890a8e577e83ec4f622b0c3a14a6ff",
+      "configurations\\T-ranking\\case-10\\retrieved.json": "45082d1676918c4784af60e155995e5170b735d3f2cfc5f7e1c2cfa28f621c34",
+      "configurations\\T-ranking\\case-10\\context.txt": "5661d03bec776655ff03f5a3d3d567e4aee6fe4c8b2c01753c5382f6155d4647",
+      "configurations\\T-ranking\\case-10\\prompt-not-executed.txt": "cc97df3ed406fc4388617100efaa4b5828d175ce0cee217d3232e30044b5c621",
+      "configurations\\T-ranking\\case-11\\retrieved.json": "3ea4eccfde97ad0f05227ffcfffedb26dc551e6fd531fd554e983b9b36246297",
+      "configurations\\T-ranking\\case-11\\context.txt": "5ddb8f6604340b5ea04e124f77bfcb0236f1f2eb36e0fc11ad695a06cdead94d",
+      "configurations\\T-ranking\\case-11\\prompt-not-executed.txt": "b0613deb4c87813f7882096af1af694552d6052ecb0f8b7904d80baf1030f461",
+      "configurations\\T-ranking\\case-12\\retrieved.json": "51880a37fba53fff25347ef83498bb4113d4fed0d3b0d6bb23f57a52897e2a29",
+      "configurations\\T-ranking\\case-12\\context.txt": "c4ec524b0328acefe73dc3a5b757a13186ec02a7a6796f1b9d2c2051b45d00cf",
+      "configurations\\T-ranking\\case-12\\prompt-not-executed.txt": "b920f5cddfccc3db0a74371c6c464ee5926f73ff6b4c2c99dc278443ad3c75fd",
+      "configurations\\T-ranking\\case-13\\retrieved.json": "9274fe01ff9e840c19fa8a27acc29dc3aa5217ef9e4c831da1c2bffce84c0113",
+      "configurations\\T-ranking\\case-13\\context.txt": "a29491b6d8cdf6e97a82c2da229d63085c9ebf546899813d6d95d080a830057b",
+      "configurations\\T-ranking\\case-13\\prompt-not-executed.txt": "4a24a8a1c22076733e0fb72edaefff687684f50a01d85d3d7c569b914ca348fb",
+      "configurations\\T-ranking\\case-14\\retrieved.json": "ff421a11e206c21535173578927611e53b251d232942988f8c541640c4543989",
+      "configurations\\T-ranking\\case-14\\context.txt": "659997ac0b12d8f721c676cac16280f5ad25e733d879939a6d63afafa4110bfd",
+      "configurations\\T-ranking\\case-14\\prompt-not-executed.txt": "576a53f992e5ebc0655d7b2aa5e0f070770c7b38f532b1207733710b1211721e",
+      "configurations\\T-ranking\\case-15\\retrieved.json": "563439333ad023fe76dcc755d32ebd02b434b088101ebabb5e0b021448abb2ee",
+      "configurations\\T-ranking\\case-15\\context.txt": "d42d6da46bf499a1cdc2f10ba5323646adba787812bf6b0aa61620d7b41b8432",
+      "configurations\\T-ranking\\case-15\\prompt-not-executed.txt": "0b27d269bb1334649fed7f944a3ab3b19b88a9eb6eb32915db722416194d78fa",
+      "configurations\\T-ranking\\case-16\\retrieved.json": "f4dcb1cc7981b7238f0d51f3d6a7e1e421a69d1c7648a84f1222995260a8578d",
+      "configurations\\T-ranking\\case-16\\context.txt": "595bc6f610ca3063e3add6638ea311b3a69e72d81af071179c85642d861db3bd",
+      "configurations\\T-ranking\\case-16\\prompt-not-executed.txt": "03e783b194df35b2654c58e9ea007b2bb65690603895166917ca64aa827c6c27",
+      "configurations\\T-ranking\\case-17\\retrieved.json": "c3f142438a1d2a453e69c3b30ba09c2bbf2c0d262721dd97b376ff6d5f0ab0d2",
+      "configurations\\T-ranking\\case-17\\context.txt": "18b8a7558468f39211395c1045ace23b8479a73844c013cc35fffa742e81da42",
+      "configurations\\T-ranking\\case-17\\prompt-not-executed.txt": "18605a984b8d2516d0bb87c67859b40bffbc40022f61ff41b9ed0fb980500fe2",
+      "configurations\\T-ranking\\case-18\\retrieved.json": "8c5aa600b0d94b769e3c6872df4833d342a9ef56422c1e4dc38f1a0d1e0d139d",
+      "configurations\\T-ranking\\case-18\\context.txt": "04cd1c1bb1b7f02fbbe5f067fa7e9f91e03afd7e66023b81b148e83b29e4b85c",
+      "configurations\\T-ranking\\case-18\\prompt-not-executed.txt": "5565088d81e49f39faf7c81c7176d3b0cc79cd8f7a389abfe6f682811a3599ed",
+      "configurations\\T-ranking\\case-19\\retrieved.json": "fefa43f3ba2caf8e9d2f1efe4bc36d477c0377d3e0bb86eef7a349370fda2f15",
+      "configurations\\T-ranking\\case-19\\context.txt": "75c0385eccfd89c5d151543ca869f947e92de9ed938df3667b28b2affeec637a",
+      "configurations\\T-ranking\\case-19\\prompt-not-executed.txt": "5e8ff0c97239a70b54f8d6eb977804ed300000d0bb37a36c62c4c96b023b8ead",
+      "configurations\\T-ranking\\case-20\\retrieved.json": "81e1914385c17578f62995f0acb6a5197e2e62101bb14c74ec1a1b593de81bc2",
+      "configurations\\T-ranking\\case-20\\context.txt": "100e79615073a212a84fcb9bd7ef637f16e8f43d0c6fdfe0102b326662918163",
+      "configurations\\T-ranking\\case-20\\prompt-not-executed.txt": "6ce9ac3d9f74f71a60cbe5928ff46464674e5ba3a286b31dee5d86d05bd69c67",
+      "configurations\\T-ranking\\case-21\\retrieved.json": "ee52a854b57624f6ac9a7a71e21b23daa2e98cd3668d97e63315316fba365d1c",
+      "configurations\\T-ranking\\case-21\\context.txt": "0f53d90d8f0cc157481480850e7b633f3b06998a23f6e082574402392893c00d",
+      "configurations\\T-ranking\\case-21\\prompt-not-executed.txt": "e8bcdd4c2c55ed5cafe36504807f5e4c65b12499db6ee96c8bd030b49e7d75f3",
+      "configurations\\T-ranking\\case-22\\retrieved.json": "ba67fda87146d71251ad1b831cc1fbdd70638860a21a4e755395b3200c084898",
+      "configurations\\T-ranking\\case-22\\context.txt": "7012731b9aeeae16db51201aff3645ab1287bdf70f98918e6e009b2ad547ef2a",
+      "configurations\\T-ranking\\case-22\\prompt-not-executed.txt": "e51a3e225ea9f2e0123a6fd59b0e916b457d3838a52b5eedae491d767494c4df",
+      "configurations\\T-ranking\\case-23\\retrieved.json": "995a7b7b1526332ff652198553dd200f0adf8cb58d3b078b19ae7e1dbf4e1758",
+      "configurations\\T-ranking\\case-23\\context.txt": "49e854e197459c99804bbfd32438ae3d7eb55d7528492203a007ab0f4e8bfc1a",
+      "configurations\\T-ranking\\case-23\\prompt-not-executed.txt": "8f1effc1f4088c9959cd8abab27b027fc1d02eb0ee73f6ad9623b8733a994797",
+      "configurations\\T-ranking\\case-24\\retrieved.json": "b2a2bd4df5a1ed150421555ab3fb8e470dac4a01823f7c72cbecd214ff82a75a",
+      "configurations\\T-ranking\\case-24\\context.txt": "291f822f267dc53539934191a72995330d7ee332928dce5faeeb724faccbf074",
+      "configurations\\T-ranking\\case-24\\prompt-not-executed.txt": "7632c0e834e6e795369b7409451a7f798bd90f1f793ed074b40fd69e643fbbc6",
+      "configurations\\T-ranking\\case-25\\retrieved.json": "238a6e1dd010e3c7ed99f25b41a870a1854a3da2f6aae3a9436eda630e0be0dc",
+      "configurations\\T-ranking\\case-25\\context.txt": "ab4ec88394822662c1cbd7ac735673376bb3ecd5179a47e9e0e475f16e84fcd1",
+      "configurations\\T-ranking\\case-25\\prompt-not-executed.txt": "2fa739cd281dabe77db6a5036b2e4d9df8e2a59c653bd035632398bf6004a75d",
+      "configurations\\T-packing\\retrieved-all.json": "fec6bb4226fe363933c6ca055b2ee842194ef199d53123a59b7f03dbd6a5fa5e",
+      "configurations\\T-packing\\case-01\\retrieved.json": "22bb3250f9bd991d7fb9089fa645fbf3d064efd3d1de485558d2a4d0db1e95eb",
+      "configurations\\T-packing\\case-01\\context.txt": "e8605eb0da4feaf123e432c37fbc8a5d7c569f033e520868d85f3a762d15ccc1",
+      "configurations\\T-packing\\case-01\\prompt-not-executed.txt": "0bb84eecef7a753d1db7e11dc969b672c683529d6f030885e02c22f4dee15a6f",
+      "configurations\\T-packing\\case-02\\retrieved.json": "9ddbe547500cbc72722b743e2d1ed180fdb44c90315b8ada39c02de3ee910e5b",
+      "configurations\\T-packing\\case-02\\context.txt": "5c9f9faaac711753aa2ce71e2dbcf1ff27e03300471f6f988f79f94905552976",
+      "configurations\\T-packing\\case-02\\prompt-not-executed.txt": "32ec85f730ac20c9fe873699eb1b2c917e80391fdc3b144c065372fbbc5d5b0b",
+      "configurations\\T-packing\\case-03\\retrieved.json": "53722e9519e4aa72a03f53daaee5cbd164a425863152877833ee73371d64f4a0",
+      "configurations\\T-packing\\case-03\\context.txt": "6a077e145e9207f99d9c0327fd8be5ffd5c1b2cad3e7ebee98d3546a880fe57c",
+      "configurations\\T-packing\\case-03\\prompt-not-executed.txt": "ce7f7c96a36bd1305ad986f96033ce10f4d0f31aad2b127f1b738786e44284c5",
+      "configurations\\T-packing\\case-04\\retrieved.json": "129c1c45dbdcf07f356292f9d888424aafda596dc5d24a6d168f2e3f45f7bbe4",
+      "configurations\\T-packing\\case-04\\context.txt": "292be47098c7951c54e34ebbefcfb99beff6493e23bf6187cbdd37f0120e43d5",
+      "configurations\\T-packing\\case-04\\prompt-not-executed.txt": "fc3bdef682b7a1a3401d2c28ff2b24bb9e2e50b826c0e532a44e389cf7c06cec",
+      "configurations\\T-packing\\case-05\\retrieved.json": "a2de81adf9aa611416bf121d77e0902a125545c5b805cc061114cbd719511ca9",
+      "configurations\\T-packing\\case-05\\context.txt": "25373003d0b2bcfe6f2e13a27adaa4b234c5f395b000c5e6c67bdd024e25df05",
+      "configurations\\T-packing\\case-05\\prompt-not-executed.txt": "60337c5c5609cb03ba28e737fa687dd849c9c8df7408c44e7e6e6a00dccb3dd4",
+      "configurations\\T-packing\\case-06\\retrieved.json": "452d91de4dd823c4d75c31563e9efd0b99651c26b47cf2a5084f7343265088e0",
+      "configurations\\T-packing\\case-06\\context.txt": "6c1e343b2c42367044ab303567a5d047fa474e7300080eaa83a559c61897fa51",
+      "configurations\\T-packing\\case-06\\prompt-not-executed.txt": "13fc5003f028aecd4a3755d1de0006f74dc316a84ba3f1cd8510a168e6a5673f",
+      "configurations\\T-packing\\case-07\\retrieved.json": "c7d42a222f62cec76edf451fd26fa768b9ea58ea6c4d2a6d592543f386cbdddf",
+      "configurations\\T-packing\\case-07\\context.txt": "e37f70c2a4bc2da2842cc7d801dd72aa851a489e6bfaf6dc05089a68187ddc78",
+      "configurations\\T-packing\\case-07\\prompt-not-executed.txt": "c4a2f61361c9785275b62c07d0523a5dfa17cfa492836b9061bea1f53e314900",
+      "configurations\\T-packing\\case-08\\retrieved.json": "908aa0b2817fca9ffd95669f74415c0d932271c2880f97ceb7c0d0a6c88a1bd5",
+      "configurations\\T-packing\\case-08\\context.txt": "4753277e8c7c70f2867a879f5aa8d34172086830afe0c33855ec5a2492173608",
+      "configurations\\T-packing\\case-08\\prompt-not-executed.txt": "b796f8696b704d046aadfaf46b58327b03b2a980de4c227ba84a6010910b285b",
+      "configurations\\T-packing\\case-09\\retrieved.json": "bc4786dbf3377ad7c9ef12ba715f4d6f39f2f773ae5617be7fcf1b901db978b2",
+      "configurations\\T-packing\\case-09\\context.txt": "e3b49d064fc21837ac1cd109caa1a9d960e10b19d15f2866915e40ef366631bb",
+      "configurations\\T-packing\\case-09\\prompt-not-executed.txt": "1dc4f44eb8075ac178d097df0179763ace41006911040c15402efcf23045adc7",
+      "configurations\\T-packing\\case-10\\retrieved.json": "1a9afb915b644ac18985cbd9f66a3dc318f703bd9fba09f531a7e5158c4bc066",
+      "configurations\\T-packing\\case-10\\context.txt": "610528954fd10f9d9d843831469b8e8ac72b2f0de5a3883c68e7f1d8766a7cf8",
+      "configurations\\T-packing\\case-10\\prompt-not-executed.txt": "598209db880f0afafd7c959b5495a2c5198a75f9a31aa7d61bf89b278e61a477",
+      "configurations\\T-packing\\case-11\\retrieved.json": "b0ab32aa9c259e6fb4d29547a8c012f2611739e913f728f60fddc818386c5f1f",
+      "configurations\\T-packing\\case-11\\context.txt": "04f032479a08da1e40cfedb4c47e521e49ed0d614c1a7b3577a59e513dacdcce",
+      "configurations\\T-packing\\case-11\\prompt-not-executed.txt": "3d523270a44f86dacb820b65f3bdb8c33f358b09121fbe6677a62bad38abae70",
+      "configurations\\T-packing\\case-12\\retrieved.json": "2bae121aa557fcdac05acc1abf34c36c3ad9aa7b1ea6fc751d5442b0867e573b",
+      "configurations\\T-packing\\case-12\\context.txt": "fd568732a46cf46c1db9a92b28875b9bce2c8dae5be90bfde93ce11c0840160c",
+      "configurations\\T-packing\\case-12\\prompt-not-executed.txt": "b590fc8bdd46945f8fb34b0a2476efe21aca2153b1658dfc60774ee5918afe7d",
+      "configurations\\T-packing\\case-13\\retrieved.json": "6142dc9ed7109a4b69f9daf0605ae1ddda1a665032a7fe7d251c8411bbccb0ce",
+      "configurations\\T-packing\\case-13\\context.txt": "c8bf98d78944b97064a0884a11a380fbb12c73ba703b08d3fc46e6aba5aa8b36",
+      "configurations\\T-packing\\case-13\\prompt-not-executed.txt": "8701d546c780c999160f192bc29ad282366735fd1d185a3f0ac1a90e4624d62a",
+      "configurations\\T-packing\\case-14\\retrieved.json": "db4d597f4d3dc10ace880c628a5535560b4ad5b5b0127249f53afba1cbb51c83",
+      "configurations\\T-packing\\case-14\\context.txt": "c8969f8d99e972ab18488e59af1b737a9a6a2a143f4959f49fd3317727a9fcc7",
+      "configurations\\T-packing\\case-14\\prompt-not-executed.txt": "244f115a016301b13539d098baab5f1bb99cf6f039df664227cfe78cf3e47ce7",
+      "configurations\\T-packing\\case-15\\retrieved.json": "e2023ad47be1e570364c0012175c426c3c85d88b8deb84237325a87fe479324f",
+      "configurations\\T-packing\\case-15\\context.txt": "f1a6e48423dcf98280b8c34bb93cc9a48dc4bc6004ac1efa4d3725e2cca2a356",
+      "configurations\\T-packing\\case-15\\prompt-not-executed.txt": "534942986344e615a3f50f8b2c1252b8deae2cebf17565f2402075f2007f2249",
+      "configurations\\T-packing\\case-16\\retrieved.json": "2d38eef003b259df3a4f3bb2b71edb8aa94a7e78f0931ed1db351a76e160bb10",
+      "configurations\\T-packing\\case-16\\context.txt": "d008f9498e5ea3a88061a08b84acdb110c988f94588afc7124256916ce6b1e77",
+      "configurations\\T-packing\\case-16\\prompt-not-executed.txt": "64eaf2e30cb51079cbb2b0ab4dc7e7644f3b1047f8b4f7427534cc189e1cbfd6",
+      "configurations\\T-packing\\case-17\\retrieved.json": "15dd719b6312c81db723c11fde0b7d38d911ab4552e6201c77f696992385ba0e",
+      "configurations\\T-packing\\case-17\\context.txt": "da44b79756b6d0413996090960f7d6063fa973b5e5123af1506528d260d24cec",
+      "configurations\\T-packing\\case-17\\prompt-not-executed.txt": "f02ba0a8bffb3d11bebaffa54deb900c4bacf5521d8beaa40c09e6623affd080",
+      "configurations\\T-packing\\case-18\\retrieved.json": "c67dee00edb447f63dd97ae19bd6802718c020f3013819d1ac7537176ebbea05",
+      "configurations\\T-packing\\case-18\\context.txt": "e56a5743087ad5e9665faeba0e3652061a4b2b2bb62351a4270d35c3cb076937",
+      "configurations\\T-packing\\case-18\\prompt-not-executed.txt": "76e5dc150effb465819d2bc300168e93760bbd61cdf77f5382fdb91c47a41f68",
+      "configurations\\T-packing\\case-19\\retrieved.json": "fbab0e4c9ee6d433c7b79864a1da2b639b1794e59dd7a4a0e39e60d8c22b8019",
+      "configurations\\T-packing\\case-19\\context.txt": "6a587f63c355f186c644e632eaa5685c24cd1491c4859da304beb494897ca19a",
+      "configurations\\T-packing\\case-19\\prompt-not-executed.txt": "a9d0d04b2a7717b254222d844b08dec67093603120f180a536f438b3b4522d8a",
+      "configurations\\T-packing\\case-20\\retrieved.json": "49af18eff894535ef2485cfce9052024dfe8dd3daec6d45989641e9406eb80a5",
+      "configurations\\T-packing\\case-20\\context.txt": "feb27cd6e561d4bad390279a67a5a4d96199f6feb6d72ce4ac7003bd6eb29e81",
+      "configurations\\T-packing\\case-20\\prompt-not-executed.txt": "57b9b3189bbff3d020f7c4a18ec6fab1d13446543674489a48ed49ca59ca7fbf",
+      "configurations\\T-packing\\case-21\\retrieved.json": "0d67352a87d83549919a5e877dfd874bc0460f24ce878ec3a1c15914f8799bb9",
+      "configurations\\T-packing\\case-21\\context.txt": "227366f9f14f750d38fbc9994c14bbc6c77840210620e2aa5a67c74d251803f5",
+      "configurations\\T-packing\\case-21\\prompt-not-executed.txt": "5f175d4d565eab909e9f45b204fc7d4aa3eeea1262d34532c664a7ba7f22846c",
+      "configurations\\T-packing\\case-22\\retrieved.json": "d0232fd589df7c09c33a41c2f2ae3536d55205be3da7d854bfa73691acfbe32b",
+      "configurations\\T-packing\\case-22\\context.txt": "cc4c0fcf854b69a1c83d08b35025ca81c899b487717ea909e57b3595b643c51d",
+      "configurations\\T-packing\\case-22\\prompt-not-executed.txt": "f5125ceb98f465d6efdf189b0f1d67a6a0523b50278d59358a4aa02159d5127b",
+      "configurations\\T-packing\\case-23\\retrieved.json": "20481b7edaed595c47d9c908f2fa926745d166deb1b54d23495f06a0f86eb33e",
+      "configurations\\T-packing\\case-23\\context.txt": "6f54dd31a03626352f712db4b0e06f051a6f3e433f8c706b484c1f3871a9d69e",
+      "configurations\\T-packing\\case-23\\prompt-not-executed.txt": "c5abea4f66c90db4e6d5adb24f887d1a8702268bd79db5a1d30a016ddcac8df6",
+      "configurations\\T-packing\\case-24\\retrieved.json": "51b748534b8926e818cfc56144e48013a8d211c058e5149d01045c25cd438941",
+      "configurations\\T-packing\\case-24\\context.txt": "cb3bd972c9147ce6e09b1e5dbb93a33e588521cb0bd1bace012768d5a574bd9c",
+      "configurations\\T-packing\\case-24\\prompt-not-executed.txt": "68f8e3f18508a942b824b577dc08fe63a18c01c92798329fad91136c48e2b223",
+      "configurations\\T-packing\\case-25\\retrieved.json": "7db4245b63d0d14b4f6300ec598884ea33d3c5b0958f536304a63c1176fe3588",
+      "configurations\\T-packing\\case-25\\context.txt": "b24cb3e9a038db0fe7000c5481f9c7e67b71822c20673e363d2ba425fd42cc93",
+      "configurations\\T-packing\\case-25\\prompt-not-executed.txt": "14d5d8bd32ae890756f6118360cb8f2b7b90c59dea85f3ea12ad91d76c376355",
+      "configurations\\T-combined\\retrieved-all.json": "4962ea4e9340eb07e1a3a0e0d12b3e235cb12c17067e9687cd65ac227d3e9d6d",
+      "configurations\\T-combined\\case-01\\retrieved.json": "dce77de27e5c4e552b49fcd2c4028b548ac042c079a8a359445c5be26c624145",
+      "configurations\\T-combined\\case-01\\context.txt": "8f114c2bfad0166023a5af43919cab8077140ecba9d332dd199c00fe757e63fd",
+      "configurations\\T-combined\\case-01\\prompt-not-executed.txt": "944e2d95262822d0f7cd2ee6a8e7cad2c2bb69223a0530faefc81b21bb45b91e",
+      "configurations\\T-combined\\case-02\\retrieved.json": "f4523d732abab861f4e611eba1db614782ec591c8a75a859605db3fc612070dc",
+      "configurations\\T-combined\\case-02\\context.txt": "a44124e505165d39c3d5c582472760f55e204bdfddd9a459704951513cb0ab99",
+      "configurations\\T-combined\\case-02\\prompt-not-executed.txt": "fd17f8ba8c601326f0365ce4fa1c87b56debdee52d9a4e5d45fc80cff097f017",
+      "configurations\\T-combined\\case-03\\retrieved.json": "388b191f71f337f58915721fdb04a9cdea84d856367cdd40c0882220e0cf5042",
+      "configurations\\T-combined\\case-03\\context.txt": "7a349ca65a02b313afbd2679366e53b628839a513027f795699825c5965e65e2",
+      "configurations\\T-combined\\case-03\\prompt-not-executed.txt": "3f3e0804dc740b958dd8a2575e648d1e9dfcc4d17b66848bb599f35a40a72f5c",
+      "configurations\\T-combined\\case-04\\retrieved.json": "d3390f92bd12a376d160cea791b5639d36083f8b3c1bc1978ce285e8abbbfb3a",
+      "configurations\\T-combined\\case-04\\context.txt": "4287637ca555b87125c965986980ff3f6ef505c05f736329a9ccfca62ec780a2",
+      "configurations\\T-combined\\case-04\\prompt-not-executed.txt": "c316275d335121d67dca1e1d53050cc33f8c6ea747c3e2ce2ce761f12dd35602",
+      "configurations\\T-combined\\case-05\\retrieved.json": "af609689fa7cf3bf1249a87e22dd77e0380648074d293b1a5d7b612e928f43db",
+      "configurations\\T-combined\\case-05\\context.txt": "8cc2868444453b95ca0ddb73eeb00f9e718854285c9bd4e0a42b6c6c99c28006",
+      "configurations\\T-combined\\case-05\\prompt-not-executed.txt": "954177771dbe8025be98a999bd229e8d4a2c52d6fb9cb17b550bf4194b31c284",
+      "configurations\\T-combined\\case-06\\retrieved.json": "d314dd7f2b628daf734304e25c4a821e84c185a7d213f3a515eb83814a8b4d57",
+      "configurations\\T-combined\\case-06\\context.txt": "91fc167927cf88390101da58f9064ac8c45141e12d308537b808f94c9044d766",
+      "configurations\\T-combined\\case-06\\prompt-not-executed.txt": "be7c0b059232d7e6380d2431bcdb464b726cf30146afe39a58b1f19b27d330e4",
+      "configurations\\T-combined\\case-07\\retrieved.json": "f4718fc93f7ba617363b0600c76a236b3ae40537417f8d27b0636aec086b9480",
+      "configurations\\T-combined\\case-07\\context.txt": "31f2d6cd2878d472cd8838694f54793d72ab5aba22a4d960faea46d166d5fc57",
+      "configurations\\T-combined\\case-07\\prompt-not-executed.txt": "60a88388f2aa6f553ae0780d0f7d19365fffad314ef2392e22a2c3043d4469e3",
+      "configurations\\T-combined\\case-08\\retrieved.json": "f3cc7dcc290a869b52e7b5cb290520072a3352d4e20dec6f090ccfb40637edeb",
+      "configurations\\T-combined\\case-08\\context.txt": "4753277e8c7c70f2867a879f5aa8d34172086830afe0c33855ec5a2492173608",
+      "configurations\\T-combined\\case-08\\prompt-not-executed.txt": "b796f8696b704d046aadfaf46b58327b03b2a980de4c227ba84a6010910b285b",
+      "configurations\\T-combined\\case-09\\retrieved.json": "bbff5255711cb1f285e8db45bd031b037797240d146cc5d6eec81e37e535e8be",
+      "configurations\\T-combined\\case-09\\context.txt": "9a3d362ca0190c990860dad6791cc9030f6943c4f4c1986649b00581066baf48",
+      "configurations\\T-combined\\case-09\\prompt-not-executed.txt": "bf18a30c946ce08768cf36cf3e9c16c895a2d5928fa1d69c6736e427aa136144",
+      "configurations\\T-combined\\case-10\\retrieved.json": "7fd518c15662b60b0f447535b008ecf5d913bef596f2cfc69a8ea30b3760d525",
+      "configurations\\T-combined\\case-10\\context.txt": "220dd50227fdb48eba8adb68ec4fead7915ef636c0decdc4153f5ab9e8a0f18b",
+      "configurations\\T-combined\\case-10\\prompt-not-executed.txt": "17accd922c1f4214fa6c6e6146ca9eb7b94a191e8caddd6b338ff505ec1ae00b",
+      "configurations\\T-combined\\case-11\\retrieved.json": "fe18e748f2147568846427d4cd58c50b3e9ba2f584c320ae12d66e0be117efb4",
+      "configurations\\T-combined\\case-11\\context.txt": "04f032479a08da1e40cfedb4c47e521e49ed0d614c1a7b3577a59e513dacdcce",
+      "configurations\\T-combined\\case-11\\prompt-not-executed.txt": "3d523270a44f86dacb820b65f3bdb8c33f358b09121fbe6677a62bad38abae70",
+      "configurations\\T-combined\\case-12\\retrieved.json": "d909925b71b93762bb1df84e8b97a66721e963a1bbefaa7006d0b5421a6e9fbf",
+      "configurations\\T-combined\\case-12\\context.txt": "fce097818f4c1e7f98e3fdb05650049fe56e055ddc909181da1526c3362821f9",
+      "configurations\\T-combined\\case-12\\prompt-not-executed.txt": "7e5375343f8a6df37bae68897e114d964d2e69d95a355e7efd01e44699929217",
+      "configurations\\T-combined\\case-13\\retrieved.json": "721bf576422dd3423acfad56726a32f5c2903c0d1c5b4eae293a018d6980ac86",
+      "configurations\\T-combined\\case-13\\context.txt": "f3f86fd393f8c6fa0986bb055921f82b3f4aeaee157d41a2df505892194eed75",
+      "configurations\\T-combined\\case-13\\prompt-not-executed.txt": "bd68303a505acd62a753e99df175f8cbbe2b746698d5a928401029b4f3e515dd",
+      "configurations\\T-combined\\case-14\\retrieved.json": "7baa296c3364f5cb51deb9de55e221732fb067abd81dbd042ce5c974f5d4daef",
+      "configurations\\T-combined\\case-14\\context.txt": "359a271548e73fd95c269222c0473ed9a223b8b37b3fc93431863a8d494e10ab",
+      "configurations\\T-combined\\case-14\\prompt-not-executed.txt": "a5c57a3da323162b7ac6f0ffadc1f2c0fee5487387312b5176272980ca1f8157",
+      "configurations\\T-combined\\case-15\\retrieved.json": "66b9d88d551e57717b6fb5b6d8402738672077a7aedee6baf5c25c329b71b3c6",
+      "configurations\\T-combined\\case-15\\context.txt": "463b9f5e8af1e6407d22e86c66a0b2a20226f5f7ac9aaec69ba3466bad931b83",
+      "configurations\\T-combined\\case-15\\prompt-not-executed.txt": "672de1a5bd9642215d05bead1d01659eec84b3427ddb588f466115e6db31117e",
+      "configurations\\T-combined\\case-16\\retrieved.json": "722441a924265e56dbeeb96d92174ff59b89ae370cc2eaa1ecc64c2a4a620a35",
+      "configurations\\T-combined\\case-16\\context.txt": "8fe28fcd00dc2f093b303f7eab970e1ea4316d049a0aa48a8d3e029466576594",
+      "configurations\\T-combined\\case-16\\prompt-not-executed.txt": "1cf754c8c7b3a0544db7ee6c836c80fb4fc8e1fb43787f79a308ee497f37c963",
+      "configurations\\T-combined\\case-17\\retrieved.json": "efc250d4fbe267dc3c10d8360b2b3b51a00644cd8397ac38d77128f859df7fdb",
+      "configurations\\T-combined\\case-17\\context.txt": "8867245f94e4c2db60ba9b7027f2e836b27104563f2fd55893574fc1b75e5fd5",
+      "configurations\\T-combined\\case-17\\prompt-not-executed.txt": "d72a78317b45aaca3a364fb522a4925e0eb7bc415524b25a7a9d13761b71b395",
+      "configurations\\T-combined\\case-18\\retrieved.json": "a3cda6b7e7dc46146fe77a2bca11964274883c5118cf90708a1a273278453873",
+      "configurations\\T-combined\\case-18\\context.txt": "797cbe4a9e451b9ecf21bf1550630feddb9ba175ec10cbd95ed9de932656dbf4",
+      "configurations\\T-combined\\case-18\\prompt-not-executed.txt": "e9b02db02f5a8558a6d27371dd08eb47a836259f3a36bdb51001c5e050f9081b",
+      "configurations\\T-combined\\case-19\\retrieved.json": "040a4828f7179605d94a721115d3ff6766ef357542513d416f7adaade99b5530",
+      "configurations\\T-combined\\case-19\\context.txt": "88e52ee37cfc4bf2e474d09fb7b541323f0679275e9d3d5ca9ee21bf17a8119b",
+      "configurations\\T-combined\\case-19\\prompt-not-executed.txt": "100b49e13aa306f86aad4cd1ba8c4ecdbea5585158c5822e120a99c5d1fab246",
+      "configurations\\T-combined\\case-20\\retrieved.json": "de03d5d00f6872fdacafe094af763e42eb06f5aed781293ce66a5e2f9b1069fc",
+      "configurations\\T-combined\\case-20\\context.txt": "226affe2be801b2b37cd05f744b1829eab69bdac52880ca477218a27ac9fa608",
+      "configurations\\T-combined\\case-20\\prompt-not-executed.txt": "435fd8639a921ca5c4a530d78f3181bd99af3937d2efdaed48453054bd28d660",
+      "configurations\\T-combined\\case-21\\retrieved.json": "58683e114279c1446aae71e42c5a6246d719d98be2bb9b4f2860e8db2dffddf2",
+      "configurations\\T-combined\\case-21\\context.txt": "f68ef0ad380101cf1bff2f7373c20bd5825469777896ab85ecd903875f0b5f7d",
+      "configurations\\T-combined\\case-21\\prompt-not-executed.txt": "f4c6938ec673c35da9d4f22d4342339f207ce924605bbad9c1e1c5fdba5fcf3a",
+      "configurations\\T-combined\\case-22\\retrieved.json": "0937930052ac44c436fbd032e5d2c2d081532a821eb5d7677a6e1bbf2a4effa0",
+      "configurations\\T-combined\\case-22\\context.txt": "c250c2bb317af51c4832d34a4332d6d9c79c67b677d055689d2a6c95f4eb66e8",
+      "configurations\\T-combined\\case-22\\prompt-not-executed.txt": "4837b3e44958e8e0ad881353ad0202ba2061cb85b491f068ad8bb4d064821b2c",
+      "configurations\\T-combined\\case-23\\retrieved.json": "220f9347cba32e266ad09b556104789d9a9ddd5641f2115ab039b3e836792437",
+      "configurations\\T-combined\\case-23\\context.txt": "63b64d9a5d519edce61296576050a8782f8a3cfe62b14cae81a9414dc4929ac7",
+      "configurations\\T-combined\\case-23\\prompt-not-executed.txt": "a4c8774d97a35d627d56943305684d17749210defd0565fb0ab9bf5ce5f9595e",
+      "configurations\\T-combined\\case-24\\retrieved.json": "55259a9467c9eb08abc8269014aa7589f6fea49c2bed319d1ac5eddce3a413f0",
+      "configurations\\T-combined\\case-24\\context.txt": "801cf50c54a45a96d8e1ee78c9d8efae194856dc86336581ff154c20a6797caa",
+      "configurations\\T-combined\\case-24\\prompt-not-executed.txt": "77030aa127d5b1260b141ece44570b26155589ffe0eee8b99d51dbc8db30e1d7",
+      "configurations\\T-combined\\case-25\\retrieved.json": "381fcf58c12f5ef63d8ebdc781e6f270645d4ad0e8551005b08ed84873528e47",
+      "configurations\\T-combined\\case-25\\context.txt": "ae7d06730af5f3aee475310c5046709eff49ebe4fab2bfd82b546d55bf281f81",
+      "configurations\\T-combined\\case-25\\prompt-not-executed.txt": "daf8ab17c717444bd2beed2a5239ca807f2c47aedfc409763e9342f2e959f6cb"
+    },
+    "judge_inputs_unchanged": 75,
+    "original_rows_modified": 0,
+    "judge_identity": {
+      "prompt_sha256": "1e7ef4df845219735008d4a8a2fa2b62ab03e427d70bb2c8d1e1648a14858336",
+      "schema_sha256": "a1881edcdd6b33bbc333cf7f86a9a1fad9ee0e7a1ebac6bdbf72194eb01c7aaf",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "authentication": "chatgpt_subscription",
+      "cli_version": "codex-cli 0.162.0-alpha.2",
+      "catalog_model": "gpt-6.1-sol",
+      "actual_server_revision": null,
+      "settings": {
+        "ephemeral": true,
+        "tools": false,
+        "timeout_seconds": 240,
+        "forced_auth_method": "chatgpt"
+      },
+      "code_hashes": {
+        "evals\\retrieval_optimization_scoring.py": "bbef04365c179eb9eb6ee5f196620449af8bacf1737d3f5f51ac7fd8b01c203c",
+        "evals\\codex_judge_runtime.py": "b2aafbb822cf2736eb8b71e53b55fc7dc174cb54283d34933b2934814dd5c60f",
+        "evals\\retrieval_judge_pilot.py": "245880c6f4f5a11e356da9646d71a9d10ba721e80a2cd409b92b42b45e71812e",
+        "evals\\automatic_retrieval_scoring.py": "8e40cfd2cdba52c7666e7a846494be674f8238f935f69209e7159323a3ce4d5a",
+        "evals\\eval_foundation.py": "6cc3e4215ca5e215616b2417f48931df1add60a84875141d890057863e4f76d9"
+      },
+      "validator_versions": {
+        "jsonschema": "4.26.0",
+        "PyYAML": "6.0.3"
+      }
+    }
+  },
   "judge_identity": {
     "prompt_sha256": "1e7ef4df845219735008d4a8a2fa2b62ab03e427d70bb2c8d1e1648a14858336",
     "schema_sha256": "a1881edcdd6b33bbc333cf7f86a9a1fad9ee0e7a1ebac6bdbf72194eb01c7aaf",
@@ -2368,6 +2894,19 @@
       }
     },
     {
+      "at": "2026-10-10T09:30:19.843830+00:00",
+      "primary": {
+        "usedPercent": 63,
+        "windowDurationMins": 300,
+        "resetsAt": 1791632706
+      },
+      "secondary": {
+        "usedPercent": 94,
+        "windowDurationMins": 10080,
+        "resetsAt": 1791961473
+      }
+    },
+    {
       "at": "2026-10-10T08:52:29.026758+00:00",
       "phase": "owner_authorized_resume",
       "primary": {
@@ -2435,5 +2974,75 @@
       }
     ],
     "adjudications_applied": []
+  },
+  "source_review": {
+    "status": "partial_source_review",
+    "reviews": [
+      {
+        "configuration": "T-ranking",
+        "case_id": "case-03",
+        "context_sha256": "6d83876f145464b5dc170b2575cb093a363899a1e0438dbb1a916e54afad7e6a",
+        "cache_key": "c029b833041a892e0d632b10a69cbb760cfad8799a49ee7cb35f24802b056cb0",
+        "source_ids": [
+          "source-21-009"
+        ],
+        "source_text_sha256": {
+          "source-21-009": "81a6f7d4c87d9683243e79bdff9981cd9b31436c4b4a2bd3ab0a5e0323342bcc"
+        },
+        "conclusion": "Covered item 5 is supported by delivered warning covering chemical/toxic contamination, ineffective boiling/disinfection and alternative water source. Items 3/4 remain missing; boiling-time passage was rejected by budget.",
+        "adjudication": false,
+        "scores_modified": false
+      },
+      {
+        "configuration": "T-ranking",
+        "case_id": "case-07",
+        "context_sha256": "044898a6deea7d74dcd627f595bab4ff8236f09d42fd15ad4117f0795f076fab",
+        "cache_key": "f6b45efd66cbcaffb80c30f233d2add4930d6d790b6dedc1c630f5176af2ba97",
+        "source_ids": [
+          "source-03-006"
+        ],
+        "source_text_sha256": {
+          "source-03-006": "eef4046277bd67bb0ec9939e41b389e8ba82e994ec0addfb293e996a2e042788"
+        },
+        "conclusion": "All four baseline burn requirements remain covered; complete first-aid parent is actually delivered. No new risk flag.",
+        "adjudication": false,
+        "scores_modified": false
+      },
+      {
+        "configuration": "T-ranking",
+        "case_id": "case-13",
+        "context_sha256": "a29491b6d8cdf6e97a82c2da229d63085c9ebf546899813d6d95d080a830057b",
+        "cache_key": "a01b7adae668aac8fe54298a88686c5e5c08736f25954e64ea4ec881f7612b3e",
+        "source_ids": [],
+        "source_text_sha256": {},
+        "conclusion": "Both beacon requirements remain missing. Judge flags generic immediate 113 instruction as potentially misleading without mobile coverage; no direct conflict. This agrees with approved V3 risk interpretation.",
+        "adjudication": false,
+        "scores_modified": false
+      }
+    ],
+    "not_independent_validation": true,
+    "ranking_comparison_checked": {
+      "judged_cases": 25,
+      "gain_items": [
+        "03/5"
+      ],
+      "lost_items": [],
+      "new_safety_flags": [],
+      "remaining_supported_items": [
+        "01/1",
+        "01/2",
+        "01/3",
+        "03/3",
+        "03/4",
+        "06/1",
+        "08/4",
+        "13/1",
+        "13/2",
+        "17/1",
+        "17/2",
+        "21/2"
+      ],
+      "recommendation_pending_remaining_variants": true
+    }
   }
 }

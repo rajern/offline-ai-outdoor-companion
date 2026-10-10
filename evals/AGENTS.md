@@ -1,5 +1,18 @@
 # Retrieval evaluation boundaries
 
+Targeted scoring checkpoint, 2026-10-10: T-ranking is complete, 25/25.
+60/72 supported requirements (83.33% micro, 81.14% macro), 15/22 complete;
+legacy15: 42/51, 79.62% macro, 8/13 complete. Gain is only case03/5,
+confirmed against delivered source-21-009. No covered-item losses or new risk
+flags; 22 irrelevant, one misleading (case13), no conflict/geography/review.
+Burn07 and cases04/05 remain fully covered. Twelve supported requirements
+remain missing, including fracture, boiling times, major-bleeding113, full
+breathing/CPR, beacon, anaphylaxis and water-product instruction.
+Judge guard passed: min available RAM 3,950.18 MiB / peak RSS 164.24 MiB.
+T-packing scoring has started with the same frozen metadata adapter; combined
+not scored. Shared quota after ranking: 63% five-hour / 94% weekly used.
+This is a partial comparison, not a final selection or holdout readiness.
+
 Technical metadata repair, 2026-10-10: first targeted subscription answer is
 sealed, but original merge stopped before saving a score on missing diagnostic
 `section_count`. `targeted_scoring_metadata_v1.py` supplies only that count from

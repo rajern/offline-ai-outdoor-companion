@@ -93,6 +93,9 @@ def audit():
               'new_judge_calls': 0, 'holdout_accessed': False,
               'frozen_targeted_code': frozen['code'],
               'limits': 'Semantic source review is separate; seal validity is not semantic correctness.'}
+    if (metadata.STATE / 'freeze.json').exists():
+        record['scoring_metadata_binding_sha256'] = t.d.file_hash(metadata.STATE / 'freeze.json')
+        record['judge_inputs_unchanged_by_metadata_adapter'] = 75
     s.runtime.write(s.ROOT / 'evals/retrieval_targeted_audit.v1.json', record, replace=True)
     print(record, flush=True)
 

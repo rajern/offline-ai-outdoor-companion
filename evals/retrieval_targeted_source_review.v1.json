@@ -1,0 +1,70 @@
+{
+  "status": "partial_source_review",
+  "reviews": [
+    {
+      "configuration": "T-ranking",
+      "case_id": "case-03",
+      "context_sha256": "6d83876f145464b5dc170b2575cb093a363899a1e0438dbb1a916e54afad7e6a",
+      "cache_key": "c029b833041a892e0d632b10a69cbb760cfad8799a49ee7cb35f24802b056cb0",
+      "source_ids": [
+        "source-21-009"
+      ],
+      "source_text_sha256": {
+        "source-21-009": "81a6f7d4c87d9683243e79bdff9981cd9b31436c4b4a2bd3ab0a5e0323342bcc"
+      },
+      "conclusion": "Covered item 5 is supported by delivered warning covering chemical/toxic contamination, ineffective boiling/disinfection and alternative water source. Items 3/4 remain missing; boiling-time passage was rejected by budget.",
+      "adjudication": false,
+      "scores_modified": false
+    },
+    {
+      "configuration": "T-ranking",
+      "case_id": "case-07",
+      "context_sha256": "044898a6deea7d74dcd627f595bab4ff8236f09d42fd15ad4117f0795f076fab",
+      "cache_key": "f6b45efd66cbcaffb80c30f233d2add4930d6d790b6dedc1c630f5176af2ba97",
+      "source_ids": [
+        "source-03-006"
+      ],
+      "source_text_sha256": {
+        "source-03-006": "eef4046277bd67bb0ec9939e41b389e8ba82e994ec0addfb293e996a2e042788"
+      },
+      "conclusion": "All four baseline burn requirements remain covered; complete first-aid parent is actually delivered. No new risk flag.",
+      "adjudication": false,
+      "scores_modified": false
+    },
+    {
+      "configuration": "T-ranking",
+      "case_id": "case-13",
+      "context_sha256": "a29491b6d8cdf6e97a82c2da229d63085c9ebf546899813d6d95d080a830057b",
+      "cache_key": "a01b7adae668aac8fe54298a88686c5e5c08736f25954e64ea4ec881f7612b3e",
+      "source_ids": [],
+      "source_text_sha256": {},
+      "conclusion": "Both beacon requirements remain missing. Judge flags generic immediate 113 instruction as potentially misleading without mobile coverage; no direct conflict. This agrees with approved V3 risk interpretation.",
+      "adjudication": false,
+      "scores_modified": false
+    }
+  ],
+  "not_independent_validation": true,
+  "ranking_comparison_checked": {
+    "judged_cases": 25,
+    "gain_items": [
+      "03/5"
+    ],
+    "lost_items": [],
+    "new_safety_flags": [],
+    "remaining_supported_items": [
+      "01/1",
+      "01/2",
+      "01/3",
+      "03/3",
+      "03/4",
+      "06/1",
+      "08/4",
+      "13/1",
+      "13/2",
+      "17/1",
+      "17/2",
+      "21/2"
+    ],
+    "recommendation_pending_remaining_variants": true
+  }
+}
