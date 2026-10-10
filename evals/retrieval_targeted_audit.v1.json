@@ -1,9 +1,9 @@
 {
   "passed": true,
   "retrieved_rows_checked": 75,
-  "scores_checked": 0,
+  "scores_checked": 50,
   "blind_adapter_rows_checked": 75,
-  "audit_helper_code_sha256": "293630264ec82fa614847d73d531e59a96380bd74bdd00559a4a7ce0b057e71f",
+  "audit_helper_code_sha256": "d87532b998117973028e6433c2f8240ff67b8a487e196d115dfb81e3eda605ed",
   "fresh_query_vector_bytes_equal_baseline": true,
   "original_files_checked": 3193,
   "superseded_pre_scoring_files_checked": 4188,
@@ -17,5 +17,7 @@
     "evals\\test_targeted_retrieval_v1.py": "13d97b247aac30786a90323e7231d6451c1502d510c7574c5cfa2a5976c98521",
     "evals\\test_targeted_headers_v1.py": "a8ebed44951c67340f05921860d99094b3dd42c258a025659e483eda6a98cde1"
   },
-  "limits": "Semantic source review is separate; seal validity is not semantic correctness."
+  "limits": "Semantic source review is separate; seal validity is not semantic correctness.",
+  "scoring_metadata_binding_sha256": "6a08666598f3da0d90f61f4b8cf207b5c988637ac327e5bb837d7d2bd1e19112",
+  "judge_inputs_unchanged_by_metadata_adapter": 75
 }

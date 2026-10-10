@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import statistics
 from pathlib import Path
+from datetime import datetime
 import numpy as np
 
 import run_targeted_retrieval_v1 as t
@@ -135,12 +136,37 @@ def report():
     data['known_gap_source_exposure'] = gap_exposure()
     data['quota_snapshots'] = [s.runtime.read(p) for folder in [t.PREVIOUS, t.RUN]
                               for p in sorted(folder.glob('quota-*.json'))]
+    latest_quota = max(data['quota_snapshots'], key=lambda q: datetime.fromisoformat(
+        q['at'].replace(' UTC', '+00:00').replace(' ', 'T', 1))) if data['quota_snapshots'] else None
     review = s.ROOT / 'evals/retrieval_targeted_preflight_review.v1.json'
     if review.exists(): data['pre_scoring_source_review'] = s.runtime.read(review)
     source_review = s.ROOT / 'evals/retrieval_targeted_source_review.v1.json'
     if source_review.exists(): data['source_review'] = s.runtime.read(source_review)
+    required = s.ROOT / 'evals/retrieval_targeted_review_required.v1.json'
+    if required.exists():
+        data['required_source_review'] = s.runtime.read(required)
+        data['decision_status'] = 'blocked_source_review_and_incomplete_combined'
+        data['analytical_selection_blocked'] = True
+        data['best_observed_complete_variant'] = 'T-ranking'
     if data['error']:
         lines += ['', '**Stoppårsak:** ' + data['error']]
+    if required.exists():
+        lines += ['', '## Metodisk stopp før tredje variant', '',
+            'Case 16 har identiske trykk-/liggende-instrukser fra `source-02-007/008` i P3, ranking og packing. '
+            'Packing flagges som misvisende; de andre flagges ikke. Packing legger til en innledning om stort blodtap, '
+            'men ingen meningsfull sikkerhetsforskjell som forklarer flaggskiftet er etablert. '
+            'Dette er `requires_review` i et separat kontekstbundet analyselag; rå dommerresultater og historiske scorer er bevart. '
+            'En ny risiko kan ikke fastslås bare fra flaggskiftet. '
+            'Se `retrieval_targeted_review_required.v1.json` for eksakte bindinger og beslutningen som gjenstår.', '',
+            'Ranking er beste **fullførte observerte** variant med én bekreftet kravgevinst og ingen kravtap. '
+            'Packing taper 12 krav for tre gevinster og kan ikke anbefales. '
+            'Den kombinerte varianten har 25 kontrollerte kontekster, men er ikke scoret. '
+            'Ingen endelig anbefaling eller produksjonsendring gjøres før risikovurderingen er konsistent; '
+            'P3 forblir eksisterende utviklingsgrunnlag. Kvoteavslag utløste ikke dette stoppet.', '',
+            'Ranking mangler fortsatt 01/1–3, 03/3–4, 06/1, 08/4, 13/1–2, 17/1–2 og 21/2. '
+            'Det er ikke klart for holdout. Neste steg er avgrenset adjudikasjon av case 16 under eksisterende V3-regler, '
+            'med vurdering av resterende case 13/17-risiko. Ved senere autorisert gjenopptakelse beholdes '
+            'de 50 vurderingene og alle 75 kontekstene; kun kombinert scoring gjenstår.']
     if compatibility.exists():
         lines += ['', 'En teknisk scoreradapter kompletterer `section_count` fra dokument/seksjon i leverte utdrag. '
             'De 75 retrieval-filene, dommerinputene, prompten og scorerreglene er uendret og hashbundet separat. '
@@ -169,7 +195,8 @@ def report():
             continue
         lines += [f'**{record["configuration"]["id"]}** ({record["judged_cases"]}/25): gevinster {names(delta["gains"])}; '
                   f'tap {names(delta["losses"])}. Udekket i scorede caser: {names(delta["remaining"])}. '
-                  f'Nye sikkerhetsflagg: {json.dumps(delta["new_risks"], ensure_ascii=False)}.', '']
+                  'Nye dommerflagg: ' + (', '.join(r['case_id'].replace('case-', '') + '/' + r['flag']
+                      for r in delta['new_risks']) or 'ingen') + '. Eksakte bindinger finnes i sammenlignings-JSON.', '']
     lines += ['## Ressurser og abonnement', '',
         'Indeksarbeid og ferske enkeltspørsmål måles separat fra ranking/packing på lagrede spørsmålsvektorer. '
         'Tid påvirkes av token-cache og integritetskontroller. Originalmodell og original indeks gjenbrukes '
@@ -180,11 +207,22 @@ def report():
         'disse utløser ingen fersk dommerinferens. Nye kall og cachetreff for konfigurasjonene loggføres separat nedenfor. '
         'GPT-6.1 Sol / Codex CLI / Medium / ChatGPT-auth og CLI-versjon er verifisert mot den frosne identiteten; '
         'CLI-resultatformatet eksponerer fortsatt ikke faktisk servermodell/revisjon.', '',
-        'Nye kall/tokens: `' + json.dumps(data['consumption'], ensure_ascii=False) + '`.', '',
-        'Historiske A+B+C-tokens holdes separat: `' + json.dumps(data['original_consumption'], ensure_ascii=False) + '`.', '',
+        f'Nye abonnementskall: {data["consumption"]["actual_calls"]}; '
+        f'vellykkede {data["consumption"]["successful_calls"]}; cachegjenbruk {data["consumption"]["cache_hits"]}. '
+        f'Input {data["consumption"]["usage"]["input_tokens"]:,}, output {data["consumption"]["usage"]["output_tokens"]:,}, '
+        f'reasoning {data["consumption"]["usage"]["reasoning_output_tokens"]:,}; '
+        f'total {data["consumption"]["usage"]["total_tokens"]:,} tokens. '
+        f'Dommerkalletid {data["consumption"]["sum_call_seconds"]/60:.2f} minutter.', '',
+        f'Historiske A+B+C-tokens holdes separat: {data["original_consumption"]["usage"]["total_tokens"]:,}. '
+        f'Samlet kjent forbruk {data["original_consumption"]["usage"]["total_tokens"] + data["consumption"]["usage"]["total_tokens"]:,}; '
+        'ett historisk kvoteavslag har ukjent tokenbruk. '
+        f'Feil i nye dommerkall: {len(data["consumption"]["errors"])}.', '',
         'Reasoning inngår i output; prefix-cached input inngår i input. Ingen betalt API-fallback eller automatisk kvotereset.', '',
-        'Registrerte kvotevinduer: `' + json.dumps(data['quota_snapshots'], ensure_ascii=False) + '`. '
-        'Dette er delt kontobruk; prosentendringer kan ikke tilskrives dommerkallene alene.', '',
+        (f'Siste registrerte kvote: {latest_quota["primary"]["usedPercent"]} % av femtimersvinduet og '
+         f'{latest_quota["secondary"]["usedPercent"]} % av uken brukt. ' if latest_quota else 'Kvote er ikke registrert. ')
+        +
+        'Dette er delt kontobruk; prosentendringer kan ikke tilskrives dommerkallene alene. '
+        'Alle snapshots og detaljerte tokenfelt er bevart i sammenlignings-JSON.', '',
         '## Beslutningsstatus', '',
         'Ingen automatisk produksjonsvinner. Alle nye sikkerhetsflagg, kravtap og viktige positive vurderinger '
         'må kildegjennomgås før anbefaling. Et ufullstendig eller review-blokkert forsøk kan ikke velges. '
@@ -222,6 +260,17 @@ def report():
             f'{r["passages"]} / {r["excluded_packets"]} | {r["ranking_seconds"]:.4f} / {r["retrieval_packing_seconds"]:.2f} |')
     lines += ['', 'Ufullstendige ressursutvalg kan ikke sammenlignes som like store utvalg. Packing-målingene '
         'er fra første revisjons uendrede, gjenbrukte input; ranking-målingene er fra korrigert revisjon.']
+    lines += ['', '| Fullført dommerfase | CPU s | Topp RSS MiB | Min tilgjengelig RAM MiB |',
+              '|---|---:|---:|---:|']
+    for record in data['variants']:
+        memory = record.get('resources', {}).get('judge-resources.json')
+        if memory:
+            lines.append(f'| {record["configuration"]["id"]} | {memory["cpu_seconds"]:.2f} | '
+                f'{memory["peak_process_tree_rss_bytes"]/1048576:.2f} | {memory["minimum_available_ram_bytes"]/1048576:.2f} |')
+    lines += ['', 'CPU/RAM gjelder lokal, overvåket dommerfase, ikke servermodellens ressurser eller alle hashkontroller. '
+        'Begge fullførte faser bestod uendrede grenser. Metadatafeilens første ressurslogg beholdes separat. '
+        'Flaggtall i hovedtabellen er dommervurderinger med tidligere godkjente eksakte lag; '
+        'de manuelle risikoreviewene endrer ikke disse tallene og blokkerer en endelig anbefaling.']
     if data.get('pre_scoring_source_review'):
         lines += ['', '## Kildefunn før scoring', '',
             'Dette er eksakt kontekstbundet kildegjennomgang, uten nye adjudikasjoner eller tildelte dekningspoeng.', '',

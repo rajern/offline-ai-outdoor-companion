@@ -1,6 +1,6 @@
 {
-  "status": "running",
-  "error": null,
+  "status": "blocked",
+  "error": "Methodological safety review: case-16 identical pressure/lying-down instructions have inconsistent risk classification across baseline/ranking/packing. Requires exact-context adjudication before combined scoring or final selection.",
   "baseline": {
     "full25": {
       "cases": 25,
@@ -439,10 +439,259 @@
         "ranking": "baseline",
         "packing": "scope-diverse"
       },
-      "judged_cases": 0,
-      "complete": false,
-      "comparison": null,
-      "scored_comparison_available": false,
+      "judged_cases": 25,
+      "complete": true,
+      "comparison": {
+        "gains": [
+          {
+            "case_id": "case-13",
+            "item": 1,
+            "context_sha256": "c8bf98d78944b97064a0884a11a380fbb12c73ba703b08d3fc46e6aba5aa8b36",
+            "cache_key": "bacc9ab023b821bbdaf9663288a070e754ab258ec7a3fcbf8d493861c11b3c87"
+          },
+          {
+            "case_id": "case-13",
+            "item": 2,
+            "context_sha256": "c8bf98d78944b97064a0884a11a380fbb12c73ba703b08d3fc46e6aba5aa8b36",
+            "cache_key": "bacc9ab023b821bbdaf9663288a070e754ab258ec7a3fcbf8d493861c11b3c87"
+          },
+          {
+            "case_id": "case-21",
+            "item": 2,
+            "context_sha256": "227366f9f14f750d38fbc9994c14bbc6c77840210620e2aa5a67c74d251803f5",
+            "cache_key": "77340d9a31f8c9a2f5e387cc3c075b362ab9804a7c6f4d678a9fe03611e01402"
+          }
+        ],
+        "losses": [
+          {
+            "case_id": "case-01",
+            "item": 4,
+            "context_sha256": "e8605eb0da4feaf123e432c37fbc8a5d7c569f033e520868d85f3a762d15ccc1",
+            "cache_key": "7656a2b838cbbf340b3278f932040a1bc70a75180d1a50b9b0c8e33cecd387bf"
+          },
+          {
+            "case_id": "case-05",
+            "item": 3,
+            "context_sha256": "25373003d0b2bcfe6f2e13a27adaa4b234c5f395b000c5e6c67bdd024e25df05",
+            "cache_key": "214fa98fd4e07786d02d05e2702182908655ee8d7d5eaa77e4c12c9aa65187e9"
+          },
+          {
+            "case_id": "case-05",
+            "item": 6,
+            "context_sha256": "25373003d0b2bcfe6f2e13a27adaa4b234c5f395b000c5e6c67bdd024e25df05",
+            "cache_key": "214fa98fd4e07786d02d05e2702182908655ee8d7d5eaa77e4c12c9aa65187e9"
+          },
+          {
+            "case_id": "case-06",
+            "item": 4,
+            "context_sha256": "6c1e343b2c42367044ab303567a5d047fa474e7300080eaa83a559c61897fa51",
+            "cache_key": "fe6e6cf670b103d0e857fde34c16e9d32e9870ea7c279930c5957064df394961"
+          },
+          {
+            "case_id": "case-07",
+            "item": 1,
+            "context_sha256": "e37f70c2a4bc2da2842cc7d801dd72aa851a489e6bfaf6dc05089a68187ddc78",
+            "cache_key": "4824de1287dd6bd9d5cc6b15dbccb6e16744da664fdd4cf91012f668ef13d472"
+          },
+          {
+            "case_id": "case-07",
+            "item": 2,
+            "context_sha256": "e37f70c2a4bc2da2842cc7d801dd72aa851a489e6bfaf6dc05089a68187ddc78",
+            "cache_key": "4824de1287dd6bd9d5cc6b15dbccb6e16744da664fdd4cf91012f668ef13d472"
+          },
+          {
+            "case_id": "case-07",
+            "item": 3,
+            "context_sha256": "e37f70c2a4bc2da2842cc7d801dd72aa851a489e6bfaf6dc05089a68187ddc78",
+            "cache_key": "4824de1287dd6bd9d5cc6b15dbccb6e16744da664fdd4cf91012f668ef13d472"
+          },
+          {
+            "case_id": "case-08",
+            "item": 2,
+            "context_sha256": "4753277e8c7c70f2867a879f5aa8d34172086830afe0c33855ec5a2492173608",
+            "cache_key": "84bfb462461d542f7ffd70b83752f36ac0ce9d29bfe5a2e56e6754f829da186b"
+          },
+          {
+            "case_id": "case-10",
+            "item": 2,
+            "context_sha256": "610528954fd10f9d9d843831469b8e8ac72b2f0de5a3883c68e7f1d8766a7cf8",
+            "cache_key": "26c302fb1fb1d716ea20f7845db93504c4286fadb7e243e147e5737389e29e2a"
+          },
+          {
+            "case_id": "case-19",
+            "item": 1,
+            "context_sha256": "6a587f63c355f186c644e632eaa5685c24cd1491c4859da304beb494897ca19a",
+            "cache_key": "32cdb433c4697d2b8ca8e8d3b3255f9826d4e9450ce203cfd881c594f836a7cd"
+          },
+          {
+            "case_id": "case-23",
+            "item": 2,
+            "context_sha256": "6f54dd31a03626352f712db4b0e06f051a6f3e433f8c706b484c1f3871a9d69e",
+            "cache_key": "6baa95159ba0a736b586668a7f497b6c7e6e1bb4a08fe44bc5426e53635f6645"
+          },
+          {
+            "case_id": "case-23",
+            "item": 3,
+            "context_sha256": "6f54dd31a03626352f712db4b0e06f051a6f3e433f8c706b484c1f3871a9d69e",
+            "cache_key": "6baa95159ba0a736b586668a7f497b6c7e6e1bb4a08fe44bc5426e53635f6645"
+          }
+        ],
+        "new_risks": [
+          {
+            "case_id": "case-08",
+            "flag": "potentially_misleading",
+            "context_sha256": "4753277e8c7c70f2867a879f5aa8d34172086830afe0c33855ec5a2492173608",
+            "cache_key": "84bfb462461d542f7ffd70b83752f36ac0ce9d29bfe5a2e56e6754f829da186b"
+          },
+          {
+            "case_id": "case-16",
+            "flag": "potentially_misleading",
+            "context_sha256": "d008f9498e5ea3a88061a08b84acdb110c988f94588afc7124256916ce6b1e77",
+            "cache_key": "1a36f1e939d51600d02e14da7d35ccef91b0cc27117a44994c2056fd0ab0fb9e"
+          },
+          {
+            "case_id": "case-17",
+            "flag": "potentially_misleading",
+            "context_sha256": "da44b79756b6d0413996090960f7d6063fa973b5e5123af1506528d260d24cec",
+            "cache_key": "2c6c3950198b5f8ed7a872531467f2773feb03ef9153207e6de4eb1a8cddaf53"
+          }
+        ],
+        "remaining": [
+          {
+            "case_id": "case-01",
+            "item": 1,
+            "context_sha256": "e8605eb0da4feaf123e432c37fbc8a5d7c569f033e520868d85f3a762d15ccc1",
+            "cache_key": "7656a2b838cbbf340b3278f932040a1bc70a75180d1a50b9b0c8e33cecd387bf"
+          },
+          {
+            "case_id": "case-01",
+            "item": 2,
+            "context_sha256": "e8605eb0da4feaf123e432c37fbc8a5d7c569f033e520868d85f3a762d15ccc1",
+            "cache_key": "7656a2b838cbbf340b3278f932040a1bc70a75180d1a50b9b0c8e33cecd387bf"
+          },
+          {
+            "case_id": "case-01",
+            "item": 3,
+            "context_sha256": "e8605eb0da4feaf123e432c37fbc8a5d7c569f033e520868d85f3a762d15ccc1",
+            "cache_key": "7656a2b838cbbf340b3278f932040a1bc70a75180d1a50b9b0c8e33cecd387bf"
+          },
+          {
+            "case_id": "case-01",
+            "item": 4,
+            "context_sha256": "e8605eb0da4feaf123e432c37fbc8a5d7c569f033e520868d85f3a762d15ccc1",
+            "cache_key": "7656a2b838cbbf340b3278f932040a1bc70a75180d1a50b9b0c8e33cecd387bf"
+          },
+          {
+            "case_id": "case-03",
+            "item": 3,
+            "context_sha256": "6a077e145e9207f99d9c0327fd8be5ffd5c1b2cad3e7ebee98d3546a880fe57c",
+            "cache_key": "ed9923c0c5a8ecc1420edff14d67b63bad6fcc7e7f8cb6c1cf3b8fb8e2cd24c1"
+          },
+          {
+            "case_id": "case-03",
+            "item": 4,
+            "context_sha256": "6a077e145e9207f99d9c0327fd8be5ffd5c1b2cad3e7ebee98d3546a880fe57c",
+            "cache_key": "ed9923c0c5a8ecc1420edff14d67b63bad6fcc7e7f8cb6c1cf3b8fb8e2cd24c1"
+          },
+          {
+            "case_id": "case-03",
+            "item": 5,
+            "context_sha256": "6a077e145e9207f99d9c0327fd8be5ffd5c1b2cad3e7ebee98d3546a880fe57c",
+            "cache_key": "ed9923c0c5a8ecc1420edff14d67b63bad6fcc7e7f8cb6c1cf3b8fb8e2cd24c1"
+          },
+          {
+            "case_id": "case-05",
+            "item": 3,
+            "context_sha256": "25373003d0b2bcfe6f2e13a27adaa4b234c5f395b000c5e6c67bdd024e25df05",
+            "cache_key": "214fa98fd4e07786d02d05e2702182908655ee8d7d5eaa77e4c12c9aa65187e9"
+          },
+          {
+            "case_id": "case-05",
+            "item": 6,
+            "context_sha256": "25373003d0b2bcfe6f2e13a27adaa4b234c5f395b000c5e6c67bdd024e25df05",
+            "cache_key": "214fa98fd4e07786d02d05e2702182908655ee8d7d5eaa77e4c12c9aa65187e9"
+          },
+          {
+            "case_id": "case-06",
+            "item": 1,
+            "context_sha256": "6c1e343b2c42367044ab303567a5d047fa474e7300080eaa83a559c61897fa51",
+            "cache_key": "fe6e6cf670b103d0e857fde34c16e9d32e9870ea7c279930c5957064df394961"
+          },
+          {
+            "case_id": "case-06",
+            "item": 4,
+            "context_sha256": "6c1e343b2c42367044ab303567a5d047fa474e7300080eaa83a559c61897fa51",
+            "cache_key": "fe6e6cf670b103d0e857fde34c16e9d32e9870ea7c279930c5957064df394961"
+          },
+          {
+            "case_id": "case-07",
+            "item": 1,
+            "context_sha256": "e37f70c2a4bc2da2842cc7d801dd72aa851a489e6bfaf6dc05089a68187ddc78",
+            "cache_key": "4824de1287dd6bd9d5cc6b15dbccb6e16744da664fdd4cf91012f668ef13d472"
+          },
+          {
+            "case_id": "case-07",
+            "item": 2,
+            "context_sha256": "e37f70c2a4bc2da2842cc7d801dd72aa851a489e6bfaf6dc05089a68187ddc78",
+            "cache_key": "4824de1287dd6bd9d5cc6b15dbccb6e16744da664fdd4cf91012f668ef13d472"
+          },
+          {
+            "case_id": "case-07",
+            "item": 3,
+            "context_sha256": "e37f70c2a4bc2da2842cc7d801dd72aa851a489e6bfaf6dc05089a68187ddc78",
+            "cache_key": "4824de1287dd6bd9d5cc6b15dbccb6e16744da664fdd4cf91012f668ef13d472"
+          },
+          {
+            "case_id": "case-08",
+            "item": 2,
+            "context_sha256": "4753277e8c7c70f2867a879f5aa8d34172086830afe0c33855ec5a2492173608",
+            "cache_key": "84bfb462461d542f7ffd70b83752f36ac0ce9d29bfe5a2e56e6754f829da186b"
+          },
+          {
+            "case_id": "case-08",
+            "item": 4,
+            "context_sha256": "4753277e8c7c70f2867a879f5aa8d34172086830afe0c33855ec5a2492173608",
+            "cache_key": "84bfb462461d542f7ffd70b83752f36ac0ce9d29bfe5a2e56e6754f829da186b"
+          },
+          {
+            "case_id": "case-10",
+            "item": 2,
+            "context_sha256": "610528954fd10f9d9d843831469b8e8ac72b2f0de5a3883c68e7f1d8766a7cf8",
+            "cache_key": "26c302fb1fb1d716ea20f7845db93504c4286fadb7e243e147e5737389e29e2a"
+          },
+          {
+            "case_id": "case-17",
+            "item": 1,
+            "context_sha256": "da44b79756b6d0413996090960f7d6063fa973b5e5123af1506528d260d24cec",
+            "cache_key": "2c6c3950198b5f8ed7a872531467f2773feb03ef9153207e6de4eb1a8cddaf53"
+          },
+          {
+            "case_id": "case-17",
+            "item": 2,
+            "context_sha256": "da44b79756b6d0413996090960f7d6063fa973b5e5123af1506528d260d24cec",
+            "cache_key": "2c6c3950198b5f8ed7a872531467f2773feb03ef9153207e6de4eb1a8cddaf53"
+          },
+          {
+            "case_id": "case-19",
+            "item": 1,
+            "context_sha256": "6a587f63c355f186c644e632eaa5685c24cd1491c4859da304beb494897ca19a",
+            "cache_key": "32cdb433c4697d2b8ca8e8d3b3255f9826d4e9450ce203cfd881c594f836a7cd"
+          },
+          {
+            "case_id": "case-23",
+            "item": 2,
+            "context_sha256": "6f54dd31a03626352f712db4b0e06f051a6f3e433f8c706b484c1f3871a9d69e",
+            "cache_key": "6baa95159ba0a736b586668a7f497b6c7e6e1bb4a08fe44bc5426e53635f6645"
+          },
+          {
+            "case_id": "case-23",
+            "item": 3,
+            "context_sha256": "6f54dd31a03626352f712db4b0e06f051a6f3e433f8c706b484c1f3871a9d69e",
+            "cache_key": "6baa95159ba0a736b586668a7f497b6c7e6e1bb4a08fe44bc5426e53635f6645"
+          }
+        ]
+      },
+      "scored_comparison_available": true,
       "review_cases": [],
       "retrieved_cases": 25,
       "resources": {
@@ -463,8 +712,158 @@
           "sample_interval_seconds": 0.1,
           "memory_method": "sampled simultaneous process-tree RSS"
         },
+        "judge-resources.json": {
+          "elapsed_seconds": 1446.605161900021,
+          "peak_process_tree_rss_bytes": 170086400,
+          "minimum_available_ram_bytes": 3901399040,
+          "cpu_seconds": 147.53125,
+          "sample_interval_seconds": 0.1,
+          "memory_method": "sampled simultaneous process-tree RSS"
+        },
         "retrieval_attempts": [],
-        "judge_attempts": []
+        "judge_attempts": [
+          {
+            "elapsed_seconds": 1446.595521500014,
+            "peak_process_tree_rss_bytes": 170086400,
+            "minimum_available_ram_bytes": 3901399040,
+            "cpu_seconds": 147.53125,
+            "sample_interval_seconds": 0.1,
+            "memory_method": "sampled simultaneous process-tree RSS",
+            "exception_type": null
+          }
+        ]
+      },
+      "full25": {
+        "cases": 25,
+        "supported_cases": 22,
+        "gap_cases": 3,
+        "must_have_total": 72,
+        "covered": 50,
+        "micro_coverage": 0.6944444444444444,
+        "macro_coverage": 0.7189393939393939,
+        "complete_cases": 12,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 22,
+          "potentially_misleading": 3,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-25",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
+      },
+      "legacy15": {
+        "cases": 15,
+        "supported_cases": 13,
+        "gap_cases": 2,
+        "must_have_total": 51,
+        "covered": 34,
+        "micro_coverage": 0.6666666666666666,
+        "macro_coverage": 0.691025641025641,
+        "complete_cases": 6,
+        "review_cases": 0,
+        "uncertain_items": 0,
+        "flags_supported": {
+          "irrelevant": 13,
+          "potentially_misleading": 1,
+          "contradictory": 0,
+          "jurisdiction_leakage": 0
+        },
+        "gap_results": [
+          {
+            "case_id": "case-14",
+            "coverage": {
+              "covered": 1,
+              "total": 2,
+              "unknown": 0,
+              "coverage": 0.5,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          },
+          {
+            "case_id": "case-15",
+            "coverage": {
+              "covered": 0,
+              "total": 0,
+              "unknown": 0,
+              "coverage": null,
+              "complete_pass": false,
+              "gap": true,
+              "requires_review": false
+            },
+            "flags": {
+              "irrelevant": true,
+              "potentially_misleading": false,
+              "contradictory": false,
+              "jurisdiction_leakage": false
+            }
+          }
+        ],
+        "eligible_for_selection": true
       }
     },
     {
@@ -513,26 +912,21 @@
     }
   ],
   "consumption": {
-    "actual_calls": 26,
-    "successful_calls": 25,
+    "actual_calls": 50,
+    "successful_calls": 50,
     "cache_hits": 1,
     "avoided_calls": 1,
     "usage": {
-      "input_tokens": 200430,
-      "cached_input_tokens": 3456,
+      "input_tokens": 401496,
+      "cached_input_tokens": 28416,
       "cache_write_input_tokens": 0,
-      "output_tokens": 54937,
-      "reasoning_output_tokens": 5343,
-      "total_tokens": 255367
+      "output_tokens": 110425,
+      "reasoning_output_tokens": 11312,
+      "total_tokens": 511921
     },
-    "sum_call_seconds": 1408.1823446999479,
-    "unknown_usage_calls": 1,
-    "errors": [
-      {
-        "cache_key": "7656a2b838cbbf340b3278f932040a1bc70a75180d1a50b9b0c8e33cecd387bf",
-        "status": "incomplete"
-      }
-    ],
+    "sum_call_seconds": 2844.9092745998933,
+    "unknown_usage_calls": 0,
+    "errors": [],
     "billing": "ChatGPT subscription",
     "paid_api_calls": 0,
     "estimated_api_cost_usd": null
@@ -566,7 +960,7 @@
   "production_changed": false,
   "paid_api_calls": 0,
   "recommendation": null,
-  "decision_status": "pending_complete_scoring_and_source_review",
+  "decision_status": "blocked_source_review_and_incomplete_combined",
   "scoring_metadata_compatibility": {
     "reason": "Missing diagnostic section_count in targeted rows; no scoring-rule or judge-input change",
     "original_freeze_sha256": "bc0f75adf6ea09c47e0850198dcb985e085bc9a6a68c3b7182fbca46a2e0ac80",
@@ -2894,6 +3288,21 @@
       }
     },
     {
+      "at": "2026-10-10 10:08:47 UTC",
+      "phase": "final_source_review_report",
+      "primary": {
+        "usedPercent": 88,
+        "windowDurationMins": 300,
+        "resetsAt": 1791632706
+      },
+      "secondary": {
+        "usedPercent": 98,
+        "windowDurationMins": 10080,
+        "resetsAt": 1791961473
+      },
+      "quota_rejection": false
+    },
+    {
       "at": "2026-10-10T09:30:19.843830+00:00",
       "primary": {
         "usedPercent": 63,
@@ -2919,6 +3328,20 @@
         "windowDurationMins": 10080,
         "resetsAt": 1791961473
       }
+    },
+    {
+      "at": "2026-10-10T10:01:38.894873+00:00",
+      "primary": {
+        "usedPercent": 84,
+        "windowDurationMins": 300,
+        "resetsAt": 1791632706
+      },
+      "secondary": {
+        "usedPercent": 97,
+        "windowDurationMins": 10080,
+        "resetsAt": 1791961473
+      },
+      "quota_rejection": false
     }
   ],
   "pre_scoring_source_review": {
@@ -2976,7 +3399,7 @@
     "adjudications_applied": []
   },
   "source_review": {
-    "status": "partial_source_review",
+    "status": "requires_review_before_combined_scoring",
     "reviews": [
       {
         "configuration": "T-ranking",
@@ -3018,6 +3441,215 @@
         "conclusion": "Both beacon requirements remain missing. Judge flags generic immediate 113 instruction as potentially misleading without mobile coverage; no direct conflict. This agrees with approved V3 risk interpretation.",
         "adjudication": false,
         "scores_modified": false
+      },
+      {
+        "configuration": "T-packing",
+        "case_id": "case-01",
+        "items": [
+          4
+        ],
+        "context_sha256": "e8605eb0da4feaf123e432c37fbc8a5d7c569f033e520868d85f3a762d15ccc1",
+        "cache_key": "7656a2b838cbbf340b3278f932040a1bc70a75180d1a50b9b0c8e33cecd387bf",
+        "missing_baseline_source_ids": [
+          "source-04-006"
+        ],
+        "conclusion": "Rest/avoid-loading text remains, but the explicit movement-worsens-injury/pain part is missing. Baseline source-04-006 is excluded in the new atomic source-04-005/006 packet at 2485 tokens after other-document priority. This is a real coverage loss; ordering and packet expansion both changed, so their individual effects are not isolated.",
+        "adjudication": false,
+        "scores_modified": false
+      },
+      {
+        "configuration": "T-packing",
+        "case_id": "case-05",
+        "items": [
+          3,
+          6
+        ],
+        "context_sha256": "25373003d0b2bcfe6f2e13a27adaa4b234c5f395b000c5e6c67bdd024e25df05",
+        "cache_key": "214fa98fd4e07786d02d05e2702182908655ee8d7d5eaa77e4c12c9aa65187e9",
+        "missing_baseline_source_ids": [
+          "source-22-004"
+        ],
+        "conclusion": "Baseline fallback outdoor-risk measures source-22-004 are rejected at 2084 tokens. Delivered general outdoor-unsafety/shelter guidance does not state the terrain-exit/fallback-risk-reduction requirements fully. Losses 3/6 are source-supported; overhang semantic coverage is retained, not reversed.",
+        "adjudication": false,
+        "scores_modified": false
+      },
+      {
+        "configuration": "T-packing",
+        "case_id": "case-06",
+        "items": [
+          4
+        ],
+        "context_sha256": "6c1e343b2c42367044ab303567a5d047fa474e7300080eaa83a559c61897fa51",
+        "cache_key": "fe6e6cf670b103d0e857fde34c16e9d32e9870ea7c279930c5957064df394961",
+        "missing_baseline_source_ids": [
+          "source-02-009"
+        ],
+        "conclusion": "Baseline warmth/monitoring/113-on-deterioration source-02-009 is absent. It is not in top16 and belongs to a sibling heading; the new same-heading/ancestor packet does not include it, while P3 did. This is a packing-expansion loss, not a documented budget rejection of that source.",
+        "adjudication": false,
+        "scores_modified": false
+      },
+      {
+        "configuration": "T-packing",
+        "case_id": "case-07",
+        "items": [
+          1,
+          2,
+          3
+        ],
+        "context_sha256": "e37f70c2a4bc2da2842cc7d801dd72aa851a489e6bfaf6dc05089a68187ddc78",
+        "cache_key": "4824de1287dd6bd9d5cc6b15dbccb6e16744da664fdd4cf91012f668ef13d472",
+        "missing_baseline_source_ids": [
+          "source-03-006"
+        ],
+        "conclusion": "Baseline full burn-first-aid source-03-006 is rejected at 2305 tokens. Only symptoms and doctor-contact material remain. Items 1/2/3 correctly lose full coverage; item4 remains covered. Packing fails the protected burn requirement.",
+        "adjudication": false,
+        "scores_modified": false
+      },
+      {
+        "configuration": "T-packing",
+        "case_id": "case-13",
+        "items": [
+          1,
+          2
+        ],
+        "context_sha256": "c8bf98d78944b97064a0884a11a380fbb12c73ba703b08d3fc46e6aba5aa8b36",
+        "cache_key": "bacc9ab023b821bbdaf9663288a070e754ab258ec7a3fcbf8d493861c11b3c87",
+        "source_ids": [
+          "source-11-003"
+        ],
+        "conclusion": "Both beacon requirements are fully supported by delivered source-11-003. This is a meaningful whole-context difference from baseline. Judge risk flag is negative, but generic immediate 113 instructions remain unqualified despite absent coverage. No safety improvement is credited from the missing flag; residual risk requires human review if this candidate is considered. Existing coverage losses already prevent recommending packing. No raw score or adjudication is changed.",
+        "residual_risk_review": true,
+        "adjudication": false,
+        "scores_modified": false
+      },
+      {
+        "configuration": "T-packing",
+        "case_id": "case-17",
+        "context_sha256": "da44b79756b6d0413996090960f7d6063fa973b5e5123af1506528d260d24cec",
+        "cache_key": "2c6c3950198b5f8ed7a872531467f2773feb03ef9153207e6de4eb1a8cddaf53",
+        "source_ids": [
+          "source-08-011"
+        ],
+        "conclusion": "Potentially misleading flag is supported: delivered generic urgent/GP-unavailable 116117 advice is under the anaphylaxis title, without the dedicated acute/symptom passages. Both required items remain missing. This reintroduces P1 medical-escalation risk. Raw direct-conflict flag is false while P1 flagged conflict; no safety improvement is credited from the lower subcategory count. Candidate is not recommended.",
+        "direct_conflict_subcategory_review": true,
+        "adjudication": false,
+        "scores_modified": false
+      },
+      {
+        "configuration": "T-packing",
+        "case_id": "case-08",
+        "items": [
+          2
+        ],
+        "context_sha256": "4753277e8c7c70f2867a879f5aa8d34172086830afe0c33855ec5a2492173608",
+        "cache_key": "84bfb462461d542f7ffd70b83752f36ac0ce9d29bfe5a2e56e6754f829da186b",
+        "missing_baseline_source_ids": [
+          "source-01-004"
+        ],
+        "conclusion": "Adult airway and 10-second see/listen/feel passage is rejected in the source-01-003/004 packet at 2207 tokens. Child and hypothermia instructions do not cover the adult case. New unqualified 116117 instruction under adult CPR title supports the misleading flag. The secondary side-position risk route is less conclusive because a normal-breathing condition is also delivered; no separate flag reduction is applied.",
+        "adjudication": false,
+        "scores_modified": false
+      },
+      {
+        "configuration": "T-packing",
+        "case_id": "case-10",
+        "items": [
+          2
+        ],
+        "context_sha256": "610528954fd10f9d9d843831469b8e8ac72b2f0de5a3883c68e7f1d8766a7cf8",
+        "cache_key": "26c302fb1fb1d716ea20f7845db93504c4286fadb7e243e147e5737389e29e2a",
+        "missing_baseline_source_ids": [
+          "source-12-002"
+        ],
+        "conclusion": "Actual overnight-equipment list with sleeping bag/survival blanket is rejected at 2119 tokens. Its introductory sentence is delivered without the list; required insulation equipment is missing.",
+        "adjudication": false,
+        "scores_modified": false
+      },
+      {
+        "configuration": "T-packing",
+        "case_id": "case-19",
+        "items": [
+          1
+        ],
+        "context_sha256": "6a587f63c355f186c644e632eaa5685c24cd1491c4859da304beb494897ca19a",
+        "cache_key": "32cdb433c4697d2b8ca8e8d3b3255f9826d4e9450ce203cfd881c594f836a7cd",
+        "missing_baseline_source_ids": [
+          "source-17-001"
+        ],
+        "conclusion": "Explicit transmitter/receiver, shovel and probe requirement is rejected at 2018 tokens. The delivered all-members reference source-17-002 lacks its equipment antecedent. This is a real incomplete-instruction regression.",
+        "adjudication": false,
+        "scores_modified": false
+      },
+      {
+        "configuration": "T-packing",
+        "case_id": "case-21",
+        "items": [
+          2
+        ],
+        "context_sha256": "227366f9f14f750d38fbc9994c14bbc6c77840210620e2aa5a67c74d251803f5",
+        "cache_key": "77340d9a31f8c9a2f5e387cc3c075b362ab9804a7c6f4d678a9fe03611e01402",
+        "missing_baseline_source_ids": [],
+        "conclusion": "Delivered source-21-009 explicitly supports filtering before disinfection and following product instructions. Item2 is a source-supported gain.",
+        "adjudication": false,
+        "scores_modified": false
+      },
+      {
+        "configuration": "C-P3",
+        "case_id": "case-16",
+        "context_sha256": "96ba33d18ff29d07be84478feb17acfc4d0c501753799939052dbdcf5237a9db",
+        "cache_key": "e66f0b5137d3244b7f17686da9348b1c0b9e8ae65d7f118865fd74c450ff7553",
+        "source_ids": [
+          "source-02-007",
+          "source-02-008"
+        ],
+        "conclusion": "The same external-bleeding pressure/lying-down instructions occur in all three contexts. Packing additionally includes a large-blood-loss introduction, not a newly added pressure instruction. Raw misleading classification differs (P3/ranking false, packing true); context effects versus judge interpretation are not established. Do not report this as a proven newly introduced hazard or a safety improvement. Preserve raw scores; exact-input scope/risk classification remains for human review. This does not rescue packing from twelve independently confirmed coverage losses.",
+        "requires_review": true,
+        "adjudication": false,
+        "scores_modified": false
+      },
+      {
+        "configuration": "T-ranking",
+        "case_id": "case-16",
+        "context_sha256": "595bc6f610ca3063e3add6638ea311b3a69e72d81af071179c85642d861db3bd",
+        "cache_key": "b0cf1aa5d488a308c94aa5af447a8f8ae28b1432a0ab525aaee3bf91a833b848",
+        "source_ids": [
+          "source-02-007",
+          "source-02-008"
+        ],
+        "conclusion": "The same external-bleeding pressure/lying-down instructions occur in all three contexts. Packing additionally includes a large-blood-loss introduction, not a newly added pressure instruction. Raw misleading classification differs (P3/ranking false, packing true); context effects versus judge interpretation are not established. Do not report this as a proven newly introduced hazard or a safety improvement. Preserve raw scores; exact-input scope/risk classification remains for human review. This does not rescue packing from twelve independently confirmed coverage losses.",
+        "requires_review": true,
+        "adjudication": false,
+        "scores_modified": false
+      },
+      {
+        "configuration": "T-packing",
+        "case_id": "case-16",
+        "context_sha256": "d008f9498e5ea3a88061a08b84acdb110c988f94588afc7124256916ce6b1e77",
+        "cache_key": "1a36f1e939d51600d02e14da7d35ccef91b0cc27117a44994c2056fd0ab0fb9e",
+        "source_ids": [
+          "source-02-007",
+          "source-02-008"
+        ],
+        "conclusion": "The same external-bleeding pressure/lying-down instructions occur in all three contexts. Packing additionally includes a large-blood-loss introduction, not a newly added pressure instruction. Raw misleading classification differs (P3/ranking false, packing true); context effects versus judge interpretation are not established. Do not report this as a proven newly introduced hazard or a safety improvement. Preserve raw scores; exact-input scope/risk classification remains for human review. This does not rescue packing from twelve independently confirmed coverage losses.",
+        "requires_review": true,
+        "adjudication": false,
+        "scores_modified": false
+      },
+      {
+        "configuration": "T-packing",
+        "case_id": "case-23",
+        "items": [
+          2,
+          3
+        ],
+        "context_sha256": "6f54dd31a03626352f712db4b0e06f051a6f3e433f8c706b484c1f3871a9d69e",
+        "cache_key": "6baa95159ba0a736b586668a7f497b6c7e6e1bb4a08fe44bc5426e53635f6645",
+        "missing_baseline_source_ids": [
+          "source-22-003"
+        ],
+        "conclusion": "Indoor-lightning electrical-contact and plumbing precautions are lost together: source-22-003 is rejected at 2052 tokens after other-document priority. Generic shelter guidance does not cover these concrete indoor precautions.",
+        "adjudication": false,
+        "scores_modified": false
       }
     ],
     "not_independent_validation": true,
@@ -3043,6 +3675,126 @@
         "21/2"
       ],
       "recommendation_pending_remaining_variants": true
+    },
+    "packing_comparison_checked": {
+      "judged_cases": 25,
+      "gain_items": [
+        "13/1",
+        "13/2",
+        "21/2"
+      ],
+      "lost_items": [
+        "01/4",
+        "05/3",
+        "05/6",
+        "06/4",
+        "07/1",
+        "07/2",
+        "07/3",
+        "08/2",
+        "10/2",
+        "19/1",
+        "23/2",
+        "23/3"
+      ],
+      "recommendation": "do_not_use_scope_diverse_packing",
+      "uncertain_risk_case": "16"
     }
-  }
+  },
+  "required_source_review": {
+    "status": "requires_review",
+    "blocking_case": "case-16",
+    "authority": "Owner task: stop and report if a substantial safety/methodological problem cannot be resolved",
+    "rule_source": "evals/retrieval_judge_prompt.v3.md:55-78",
+    "issue": "Identical delivered external-bleeding instructions receive different risk flags for the same nearly non-bleeding abrasion; meaningful whole-context safety difference is not established.",
+    "bindings": [
+      {
+        "configuration": "C-P3",
+        "case_id": "case-16",
+        "context_sha256": "96ba33d18ff29d07be84478feb17acfc4d0c501753799939052dbdcf5237a9db",
+        "cache_key": "e66f0b5137d3244b7f17686da9348b1c0b9e8ae65d7f118865fd74c450ff7553",
+        "source_ids": [
+          "source-02-007",
+          "source-02-008"
+        ],
+        "conclusion": "The same external-bleeding pressure/lying-down instructions occur in all three contexts. Packing additionally includes a large-blood-loss introduction, not a newly added pressure instruction. Raw misleading classification differs (P3/ranking false, packing true); context effects versus judge interpretation are not established. Do not report this as a proven newly introduced hazard or a safety improvement. Preserve raw scores; exact-input scope/risk classification remains for human review. This does not rescue packing from twelve independently confirmed coverage losses.",
+        "requires_review": true,
+        "adjudication": false,
+        "scores_modified": false,
+        "raw_flags": {
+          "irrelevant": true,
+          "potentially_misleading": false,
+          "contradictory": false,
+          "jurisdiction_leakage": false
+        },
+        "retrieval_path": "knowledge\\local\\diagnostics\\retrieval-optimization-v1-2026-10-08\\experiment\\configurations\\C-P3\\case-16\\retrieved.json",
+        "score_path": "knowledge\\local\\diagnostics\\retrieval-optimization-v1-2026-10-08\\experiment\\configurations\\C-P3\\case-16\\score.json"
+      },
+      {
+        "configuration": "T-ranking",
+        "case_id": "case-16",
+        "context_sha256": "595bc6f610ca3063e3add6638ea311b3a69e72d81af071179c85642d861db3bd",
+        "cache_key": "b0cf1aa5d488a308c94aa5af447a8f8ae28b1432a0ab525aaee3bf91a833b848",
+        "source_ids": [
+          "source-02-007",
+          "source-02-008"
+        ],
+        "conclusion": "The same external-bleeding pressure/lying-down instructions occur in all three contexts. Packing additionally includes a large-blood-loss introduction, not a newly added pressure instruction. Raw misleading classification differs (P3/ranking false, packing true); context effects versus judge interpretation are not established. Do not report this as a proven newly introduced hazard or a safety improvement. Preserve raw scores; exact-input scope/risk classification remains for human review. This does not rescue packing from twelve independently confirmed coverage losses.",
+        "requires_review": true,
+        "adjudication": false,
+        "scores_modified": false,
+        "raw_flags": {
+          "irrelevant": true,
+          "potentially_misleading": false,
+          "contradictory": false,
+          "jurisdiction_leakage": false
+        },
+        "retrieval_path": "knowledge\\local\\diagnostics\\retrieval-targeted-v1-2026-10-10\\revision-02\\configurations\\T-ranking\\case-16\\retrieved.json",
+        "score_path": "knowledge\\local\\diagnostics\\retrieval-targeted-v1-2026-10-10\\revision-02\\configurations\\T-ranking\\case-16\\score.json"
+      },
+      {
+        "configuration": "T-packing",
+        "case_id": "case-16",
+        "context_sha256": "d008f9498e5ea3a88061a08b84acdb110c988f94588afc7124256916ce6b1e77",
+        "cache_key": "1a36f1e939d51600d02e14da7d35ccef91b0cc27117a44994c2056fd0ab0fb9e",
+        "source_ids": [
+          "source-02-007",
+          "source-02-008"
+        ],
+        "conclusion": "The same external-bleeding pressure/lying-down instructions occur in all three contexts. Packing additionally includes a large-blood-loss introduction, not a newly added pressure instruction. Raw misleading classification differs (P3/ranking false, packing true); context effects versus judge interpretation are not established. Do not report this as a proven newly introduced hazard or a safety improvement. Preserve raw scores; exact-input scope/risk classification remains for human review. This does not rescue packing from twelve independently confirmed coverage losses.",
+        "requires_review": true,
+        "adjudication": false,
+        "scores_modified": false,
+        "raw_flags": {
+          "irrelevant": true,
+          "potentially_misleading": true,
+          "contradictory": false,
+          "jurisdiction_leakage": false
+        },
+        "retrieval_path": "knowledge\\local\\diagnostics\\retrieval-targeted-v1-2026-10-10\\revision-02\\configurations\\T-packing\\case-16\\retrieved.json",
+        "score_path": "knowledge\\local\\diagnostics\\retrieval-targeted-v1-2026-10-10\\revision-02\\configurations\\T-packing\\case-16\\score.json"
+      }
+    ],
+    "source_text_sha256": {
+      "source-02-007": "c4b691253d269f5b5ec6596cbffad8a1b60e94d51d42601b4a969c40e89d674a",
+      "source-02-008": "625fa155bd403ac9d4dd8fc008eda8cae92a9c971097b2f8ddd5097710525fdc"
+    },
+    "requested_resolution": "A consistent applicability/severity/risk ruling for these three exact inputs under existing V3 rules; record any corrections in a separate owner-approved adjudication layer. Do not change gold, prompt or raw scores.",
+    "additional_reviews": [
+      {
+        "case": "13/T-packing",
+        "issue": "Residual generic 113 advice despite delivered beacon instructions; missing flag is not proof of resolution."
+      },
+      {
+        "case": "17/T-packing",
+        "issue": "Same GP/anaphylaxis risk as P1; direct-conflict subcategory differs. No safety improvement credited."
+      }
+    ],
+    "raw_scores_modified": false,
+    "combined_scored": false,
+    "all75_retrieval_inputs_retained": true,
+    "no_new_judge_calls_for_review": true
+  },
+  "analytical_selection_blocked": true,
+  "best_observed_complete_variant": "T-ranking"
 }

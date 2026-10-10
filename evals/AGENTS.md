@@ -1,5 +1,27 @@
 # Retrieval evaluation boundaries
 
+Current targeted stop, 2026-10-10: two variants are fully scored (50/75 rows).
+T-ranking: 60/72, 83.33% micro, 81.14% macro, 15/22 complete; legacy15
+42/51, 79.62% macro, 8/13 complete. T-packing: 50/72, 69.44% micro,
+71.89% macro, 12/22 complete; legacy15 34/51, 69.10% macro, 6/13 complete.
+Ranking gains only03/5 and loses none. Packing gains13/1-2 and21/2, but loses
+01/4,05/3+6,06/4,07/1-3,08/2,10/2,19/1,23/2-3. All gains/losses have
+source review. New misleading flags08/16/17 are reviewed separately from raw
+counts;16 is not a proven new hazard, because identical source-02-007/008
+instructions appear in baseline/ranking without that flag. The significance of
+whole-context changes versus judge interpretation remains unresolved under V3.
+`retrieval_targeted_review_required.v1.json` records exact three-input bindings
+and requires a consistent scope/risk ruling before further scoring/selection.
+Stop before T-combined inference; its 25 guarded contexts are already saved.
+No new general judge tests, prompt/gold edits or automatic adjudication.
+Fifty successful subscription calls, 511,921 tokens, one cached reuse of the
+first answer after metadata repair; no quota rejection or paid API. Guarded
+judge phases passed RAM/RSS. Shared quota at stop: 84% five-hour /97% weekly; final report snapshot
+88% /98%. Additional account usage is not attributed to judge calls.
+No final recommendation or holdout readiness. Preserve all frozen records.
+After owner resolution and explicit resume, only combined scoring remains;
+use targeted_scoring_metadata_v1.py, retaining the 50 results and 75 contexts.
+
 Targeted scoring checkpoint, 2026-10-10: T-ranking is complete, 25/25.
 60/72 supported requirements (83.33% micro, 81.14% macro), 15/22 complete;
 legacy15: 42/51, 79.62% macro, 8/13 complete. Gain is only case03/5,

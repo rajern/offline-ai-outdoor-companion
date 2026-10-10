@@ -1,0 +1,94 @@
+{
+  "status": "requires_review",
+  "blocking_case": "case-16",
+  "authority": "Owner task: stop and report if a substantial safety/methodological problem cannot be resolved",
+  "rule_source": "evals/retrieval_judge_prompt.v3.md:55-78",
+  "issue": "Identical delivered external-bleeding instructions receive different risk flags for the same nearly non-bleeding abrasion; meaningful whole-context safety difference is not established.",
+  "bindings": [
+    {
+      "configuration": "C-P3",
+      "case_id": "case-16",
+      "context_sha256": "96ba33d18ff29d07be84478feb17acfc4d0c501753799939052dbdcf5237a9db",
+      "cache_key": "e66f0b5137d3244b7f17686da9348b1c0b9e8ae65d7f118865fd74c450ff7553",
+      "source_ids": [
+        "source-02-007",
+        "source-02-008"
+      ],
+      "conclusion": "The same external-bleeding pressure/lying-down instructions occur in all three contexts. Packing additionally includes a large-blood-loss introduction, not a newly added pressure instruction. Raw misleading classification differs (P3/ranking false, packing true); context effects versus judge interpretation are not established. Do not report this as a proven newly introduced hazard or a safety improvement. Preserve raw scores; exact-input scope/risk classification remains for human review. This does not rescue packing from twelve independently confirmed coverage losses.",
+      "requires_review": true,
+      "adjudication": false,
+      "scores_modified": false,
+      "raw_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "contradictory": false,
+        "jurisdiction_leakage": false
+      },
+      "retrieval_path": "knowledge\\local\\diagnostics\\retrieval-optimization-v1-2026-10-08\\experiment\\configurations\\C-P3\\case-16\\retrieved.json",
+      "score_path": "knowledge\\local\\diagnostics\\retrieval-optimization-v1-2026-10-08\\experiment\\configurations\\C-P3\\case-16\\score.json"
+    },
+    {
+      "configuration": "T-ranking",
+      "case_id": "case-16",
+      "context_sha256": "595bc6f610ca3063e3add6638ea311b3a69e72d81af071179c85642d861db3bd",
+      "cache_key": "b0cf1aa5d488a308c94aa5af447a8f8ae28b1432a0ab525aaee3bf91a833b848",
+      "source_ids": [
+        "source-02-007",
+        "source-02-008"
+      ],
+      "conclusion": "The same external-bleeding pressure/lying-down instructions occur in all three contexts. Packing additionally includes a large-blood-loss introduction, not a newly added pressure instruction. Raw misleading classification differs (P3/ranking false, packing true); context effects versus judge interpretation are not established. Do not report this as a proven newly introduced hazard or a safety improvement. Preserve raw scores; exact-input scope/risk classification remains for human review. This does not rescue packing from twelve independently confirmed coverage losses.",
+      "requires_review": true,
+      "adjudication": false,
+      "scores_modified": false,
+      "raw_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "contradictory": false,
+        "jurisdiction_leakage": false
+      },
+      "retrieval_path": "knowledge\\local\\diagnostics\\retrieval-targeted-v1-2026-10-10\\revision-02\\configurations\\T-ranking\\case-16\\retrieved.json",
+      "score_path": "knowledge\\local\\diagnostics\\retrieval-targeted-v1-2026-10-10\\revision-02\\configurations\\T-ranking\\case-16\\score.json"
+    },
+    {
+      "configuration": "T-packing",
+      "case_id": "case-16",
+      "context_sha256": "d008f9498e5ea3a88061a08b84acdb110c988f94588afc7124256916ce6b1e77",
+      "cache_key": "1a36f1e939d51600d02e14da7d35ccef91b0cc27117a44994c2056fd0ab0fb9e",
+      "source_ids": [
+        "source-02-007",
+        "source-02-008"
+      ],
+      "conclusion": "The same external-bleeding pressure/lying-down instructions occur in all three contexts. Packing additionally includes a large-blood-loss introduction, not a newly added pressure instruction. Raw misleading classification differs (P3/ranking false, packing true); context effects versus judge interpretation are not established. Do not report this as a proven newly introduced hazard or a safety improvement. Preserve raw scores; exact-input scope/risk classification remains for human review. This does not rescue packing from twelve independently confirmed coverage losses.",
+      "requires_review": true,
+      "adjudication": false,
+      "scores_modified": false,
+      "raw_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "contradictory": false,
+        "jurisdiction_leakage": false
+      },
+      "retrieval_path": "knowledge\\local\\diagnostics\\retrieval-targeted-v1-2026-10-10\\revision-02\\configurations\\T-packing\\case-16\\retrieved.json",
+      "score_path": "knowledge\\local\\diagnostics\\retrieval-targeted-v1-2026-10-10\\revision-02\\configurations\\T-packing\\case-16\\score.json"
+    }
+  ],
+  "source_text_sha256": {
+    "source-02-007": "c4b691253d269f5b5ec6596cbffad8a1b60e94d51d42601b4a969c40e89d674a",
+    "source-02-008": "625fa155bd403ac9d4dd8fc008eda8cae92a9c971097b2f8ddd5097710525fdc"
+  },
+  "requested_resolution": "A consistent applicability/severity/risk ruling for these three exact inputs under existing V3 rules; record any corrections in a separate owner-approved adjudication layer. Do not change gold, prompt or raw scores.",
+  "additional_reviews": [
+    {
+      "case": "13/T-packing",
+      "issue": "Residual generic 113 advice despite delivered beacon instructions; missing flag is not proof of resolution."
+    },
+    {
+      "case": "17/T-packing",
+      "issue": "Same GP/anaphylaxis risk as P1; direct-conflict subcategory differs. No safety improvement credited."
+    }
+  ],
+  "raw_scores_modified": false,
+  "combined_scored": false,
+  "all75_retrieval_inputs_retained": true,
+  "no_new_judge_calls_for_review": true
+}

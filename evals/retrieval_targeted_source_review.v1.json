@@ -1,5 +1,5 @@
 {
-  "status": "partial_source_review",
+  "status": "requires_review_before_combined_scoring",
   "reviews": [
     {
       "configuration": "T-ranking",
@@ -41,6 +41,215 @@
       "conclusion": "Both beacon requirements remain missing. Judge flags generic immediate 113 instruction as potentially misleading without mobile coverage; no direct conflict. This agrees with approved V3 risk interpretation.",
       "adjudication": false,
       "scores_modified": false
+    },
+    {
+      "configuration": "T-packing",
+      "case_id": "case-01",
+      "items": [
+        4
+      ],
+      "context_sha256": "e8605eb0da4feaf123e432c37fbc8a5d7c569f033e520868d85f3a762d15ccc1",
+      "cache_key": "7656a2b838cbbf340b3278f932040a1bc70a75180d1a50b9b0c8e33cecd387bf",
+      "missing_baseline_source_ids": [
+        "source-04-006"
+      ],
+      "conclusion": "Rest/avoid-loading text remains, but the explicit movement-worsens-injury/pain part is missing. Baseline source-04-006 is excluded in the new atomic source-04-005/006 packet at 2485 tokens after other-document priority. This is a real coverage loss; ordering and packet expansion both changed, so their individual effects are not isolated.",
+      "adjudication": false,
+      "scores_modified": false
+    },
+    {
+      "configuration": "T-packing",
+      "case_id": "case-05",
+      "items": [
+        3,
+        6
+      ],
+      "context_sha256": "25373003d0b2bcfe6f2e13a27adaa4b234c5f395b000c5e6c67bdd024e25df05",
+      "cache_key": "214fa98fd4e07786d02d05e2702182908655ee8d7d5eaa77e4c12c9aa65187e9",
+      "missing_baseline_source_ids": [
+        "source-22-004"
+      ],
+      "conclusion": "Baseline fallback outdoor-risk measures source-22-004 are rejected at 2084 tokens. Delivered general outdoor-unsafety/shelter guidance does not state the terrain-exit/fallback-risk-reduction requirements fully. Losses 3/6 are source-supported; overhang semantic coverage is retained, not reversed.",
+      "adjudication": false,
+      "scores_modified": false
+    },
+    {
+      "configuration": "T-packing",
+      "case_id": "case-06",
+      "items": [
+        4
+      ],
+      "context_sha256": "6c1e343b2c42367044ab303567a5d047fa474e7300080eaa83a559c61897fa51",
+      "cache_key": "fe6e6cf670b103d0e857fde34c16e9d32e9870ea7c279930c5957064df394961",
+      "missing_baseline_source_ids": [
+        "source-02-009"
+      ],
+      "conclusion": "Baseline warmth/monitoring/113-on-deterioration source-02-009 is absent. It is not in top16 and belongs to a sibling heading; the new same-heading/ancestor packet does not include it, while P3 did. This is a packing-expansion loss, not a documented budget rejection of that source.",
+      "adjudication": false,
+      "scores_modified": false
+    },
+    {
+      "configuration": "T-packing",
+      "case_id": "case-07",
+      "items": [
+        1,
+        2,
+        3
+      ],
+      "context_sha256": "e37f70c2a4bc2da2842cc7d801dd72aa851a489e6bfaf6dc05089a68187ddc78",
+      "cache_key": "4824de1287dd6bd9d5cc6b15dbccb6e16744da664fdd4cf91012f668ef13d472",
+      "missing_baseline_source_ids": [
+        "source-03-006"
+      ],
+      "conclusion": "Baseline full burn-first-aid source-03-006 is rejected at 2305 tokens. Only symptoms and doctor-contact material remain. Items 1/2/3 correctly lose full coverage; item4 remains covered. Packing fails the protected burn requirement.",
+      "adjudication": false,
+      "scores_modified": false
+    },
+    {
+      "configuration": "T-packing",
+      "case_id": "case-13",
+      "items": [
+        1,
+        2
+      ],
+      "context_sha256": "c8bf98d78944b97064a0884a11a380fbb12c73ba703b08d3fc46e6aba5aa8b36",
+      "cache_key": "bacc9ab023b821bbdaf9663288a070e754ab258ec7a3fcbf8d493861c11b3c87",
+      "source_ids": [
+        "source-11-003"
+      ],
+      "conclusion": "Both beacon requirements are fully supported by delivered source-11-003. This is a meaningful whole-context difference from baseline. Judge risk flag is negative, but generic immediate 113 instructions remain unqualified despite absent coverage. No safety improvement is credited from the missing flag; residual risk requires human review if this candidate is considered. Existing coverage losses already prevent recommending packing. No raw score or adjudication is changed.",
+      "residual_risk_review": true,
+      "adjudication": false,
+      "scores_modified": false
+    },
+    {
+      "configuration": "T-packing",
+      "case_id": "case-17",
+      "context_sha256": "da44b79756b6d0413996090960f7d6063fa973b5e5123af1506528d260d24cec",
+      "cache_key": "2c6c3950198b5f8ed7a872531467f2773feb03ef9153207e6de4eb1a8cddaf53",
+      "source_ids": [
+        "source-08-011"
+      ],
+      "conclusion": "Potentially misleading flag is supported: delivered generic urgent/GP-unavailable 116117 advice is under the anaphylaxis title, without the dedicated acute/symptom passages. Both required items remain missing. This reintroduces P1 medical-escalation risk. Raw direct-conflict flag is false while P1 flagged conflict; no safety improvement is credited from the lower subcategory count. Candidate is not recommended.",
+      "direct_conflict_subcategory_review": true,
+      "adjudication": false,
+      "scores_modified": false
+    },
+    {
+      "configuration": "T-packing",
+      "case_id": "case-08",
+      "items": [
+        2
+      ],
+      "context_sha256": "4753277e8c7c70f2867a879f5aa8d34172086830afe0c33855ec5a2492173608",
+      "cache_key": "84bfb462461d542f7ffd70b83752f36ac0ce9d29bfe5a2e56e6754f829da186b",
+      "missing_baseline_source_ids": [
+        "source-01-004"
+      ],
+      "conclusion": "Adult airway and 10-second see/listen/feel passage is rejected in the source-01-003/004 packet at 2207 tokens. Child and hypothermia instructions do not cover the adult case. New unqualified 116117 instruction under adult CPR title supports the misleading flag. The secondary side-position risk route is less conclusive because a normal-breathing condition is also delivered; no separate flag reduction is applied.",
+      "adjudication": false,
+      "scores_modified": false
+    },
+    {
+      "configuration": "T-packing",
+      "case_id": "case-10",
+      "items": [
+        2
+      ],
+      "context_sha256": "610528954fd10f9d9d843831469b8e8ac72b2f0de5a3883c68e7f1d8766a7cf8",
+      "cache_key": "26c302fb1fb1d716ea20f7845db93504c4286fadb7e243e147e5737389e29e2a",
+      "missing_baseline_source_ids": [
+        "source-12-002"
+      ],
+      "conclusion": "Actual overnight-equipment list with sleeping bag/survival blanket is rejected at 2119 tokens. Its introductory sentence is delivered without the list; required insulation equipment is missing.",
+      "adjudication": false,
+      "scores_modified": false
+    },
+    {
+      "configuration": "T-packing",
+      "case_id": "case-19",
+      "items": [
+        1
+      ],
+      "context_sha256": "6a587f63c355f186c644e632eaa5685c24cd1491c4859da304beb494897ca19a",
+      "cache_key": "32cdb433c4697d2b8ca8e8d3b3255f9826d4e9450ce203cfd881c594f836a7cd",
+      "missing_baseline_source_ids": [
+        "source-17-001"
+      ],
+      "conclusion": "Explicit transmitter/receiver, shovel and probe requirement is rejected at 2018 tokens. The delivered all-members reference source-17-002 lacks its equipment antecedent. This is a real incomplete-instruction regression.",
+      "adjudication": false,
+      "scores_modified": false
+    },
+    {
+      "configuration": "T-packing",
+      "case_id": "case-21",
+      "items": [
+        2
+      ],
+      "context_sha256": "227366f9f14f750d38fbc9994c14bbc6c77840210620e2aa5a67c74d251803f5",
+      "cache_key": "77340d9a31f8c9a2f5e387cc3c075b362ab9804a7c6f4d678a9fe03611e01402",
+      "missing_baseline_source_ids": [],
+      "conclusion": "Delivered source-21-009 explicitly supports filtering before disinfection and following product instructions. Item2 is a source-supported gain.",
+      "adjudication": false,
+      "scores_modified": false
+    },
+    {
+      "configuration": "C-P3",
+      "case_id": "case-16",
+      "context_sha256": "96ba33d18ff29d07be84478feb17acfc4d0c501753799939052dbdcf5237a9db",
+      "cache_key": "e66f0b5137d3244b7f17686da9348b1c0b9e8ae65d7f118865fd74c450ff7553",
+      "source_ids": [
+        "source-02-007",
+        "source-02-008"
+      ],
+      "conclusion": "The same external-bleeding pressure/lying-down instructions occur in all three contexts. Packing additionally includes a large-blood-loss introduction, not a newly added pressure instruction. Raw misleading classification differs (P3/ranking false, packing true); context effects versus judge interpretation are not established. Do not report this as a proven newly introduced hazard or a safety improvement. Preserve raw scores; exact-input scope/risk classification remains for human review. This does not rescue packing from twelve independently confirmed coverage losses.",
+      "requires_review": true,
+      "adjudication": false,
+      "scores_modified": false
+    },
+    {
+      "configuration": "T-ranking",
+      "case_id": "case-16",
+      "context_sha256": "595bc6f610ca3063e3add6638ea311b3a69e72d81af071179c85642d861db3bd",
+      "cache_key": "b0cf1aa5d488a308c94aa5af447a8f8ae28b1432a0ab525aaee3bf91a833b848",
+      "source_ids": [
+        "source-02-007",
+        "source-02-008"
+      ],
+      "conclusion": "The same external-bleeding pressure/lying-down instructions occur in all three contexts. Packing additionally includes a large-blood-loss introduction, not a newly added pressure instruction. Raw misleading classification differs (P3/ranking false, packing true); context effects versus judge interpretation are not established. Do not report this as a proven newly introduced hazard or a safety improvement. Preserve raw scores; exact-input scope/risk classification remains for human review. This does not rescue packing from twelve independently confirmed coverage losses.",
+      "requires_review": true,
+      "adjudication": false,
+      "scores_modified": false
+    },
+    {
+      "configuration": "T-packing",
+      "case_id": "case-16",
+      "context_sha256": "d008f9498e5ea3a88061a08b84acdb110c988f94588afc7124256916ce6b1e77",
+      "cache_key": "1a36f1e939d51600d02e14da7d35ccef91b0cc27117a44994c2056fd0ab0fb9e",
+      "source_ids": [
+        "source-02-007",
+        "source-02-008"
+      ],
+      "conclusion": "The same external-bleeding pressure/lying-down instructions occur in all three contexts. Packing additionally includes a large-blood-loss introduction, not a newly added pressure instruction. Raw misleading classification differs (P3/ranking false, packing true); context effects versus judge interpretation are not established. Do not report this as a proven newly introduced hazard or a safety improvement. Preserve raw scores; exact-input scope/risk classification remains for human review. This does not rescue packing from twelve independently confirmed coverage losses.",
+      "requires_review": true,
+      "adjudication": false,
+      "scores_modified": false
+    },
+    {
+      "configuration": "T-packing",
+      "case_id": "case-23",
+      "items": [
+        2,
+        3
+      ],
+      "context_sha256": "6f54dd31a03626352f712db4b0e06f051a6f3e433f8c706b484c1f3871a9d69e",
+      "cache_key": "6baa95159ba0a736b586668a7f497b6c7e6e1bb4a08fe44bc5426e53635f6645",
+      "missing_baseline_source_ids": [
+        "source-22-003"
+      ],
+      "conclusion": "Indoor-lightning electrical-contact and plumbing precautions are lost together: source-22-003 is rejected at 2052 tokens after other-document priority. Generic shelter guidance does not cover these concrete indoor precautions.",
+      "adjudication": false,
+      "scores_modified": false
     }
   ],
   "not_independent_validation": true,
@@ -66,5 +275,29 @@
       "21/2"
     ],
     "recommendation_pending_remaining_variants": true
+  },
+  "packing_comparison_checked": {
+    "judged_cases": 25,
+    "gain_items": [
+      "13/1",
+      "13/2",
+      "21/2"
+    ],
+    "lost_items": [
+      "01/4",
+      "05/3",
+      "05/6",
+      "06/4",
+      "07/1",
+      "07/2",
+      "07/3",
+      "08/2",
+      "10/2",
+      "19/1",
+      "23/2",
+      "23/3"
+    ],
+    "recommendation": "do_not_use_scope_diverse_packing",
+    "uncertain_risk_case": "16"
   }
 }
