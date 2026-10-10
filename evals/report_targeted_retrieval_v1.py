@@ -3,11 +3,45 @@ from __future__ import annotations
 import json
 import statistics
 from pathlib import Path
+import numpy as np
 
 import run_targeted_retrieval_v1 as t
 import continue_retrieval_phase_c_v1 as c
 import retrieval_optimization_scoring as s
 from optimization_report import consumption
+
+
+def gap_exposure():
+    """Analyst-only known source locations; never imported by retrieval methods."""
+    locations = {'case-01': ['source-04-005'], 'case-03': ['source-21-009', 'source-21-010'],
+        'case-06': ['source-02-006'], 'case-08': ['source-07-005'], 'case-13': ['source-11-003'],
+        'case-17': ['source-08-001', 'source-08-003', 'source-08-004'], 'case-21': ['source-21-009']}
+    parents = [t.d.KnowledgeItem(**p) for p in s.runtime.read(s.runtime.LOCAL / 'knowledge.json')['items']]
+    cases = s.load_development()['cases']; output = []
+    old = t.d.RUN / 'indices/minilm'; new = t.RUN / 'index'
+    if not (new / 'index.json').exists(): return output
+    for i, case in enumerate(cases):
+        if case['id'] not in locations: continue
+        rankings = {}
+        for name, index in [('baseline', old), ('window-mean', new)]:
+            scores = np.load(index / 'documents.npy') @ np.load(index / 'queries.npy')[i]
+            eligible = [n for n, p in enumerate(parents) if t.d.allowed_in_jurisdiction(p, case['jurisdiction'])]
+            order = sorted(eligible, key=lambda n: (-float(scores[n]), parents[n].id))
+            rankings[name] = {parents[n].id: rank for rank, n in enumerate(order, 1)}
+        for source in locations[case['id']]:
+            row = {'case_id': case['id'], 'parent_id': source,
+                   'ranks': {name: values.get(source) for name, values in rankings.items()}, 'variants': {}}
+            parent = next(p for p in parents if p.id == source)
+            row['source_text_sha256'] = s.runtime.legacy.text_sha(parent.text)
+            for config in s.runtime.read(t.CONFIG)['variants']:
+                path = t.RUN / 'configurations' / config['id'] / case['id'] / 'retrieved.json'
+                if path.exists():
+                    context = s.runtime.read(path)
+                    row['variants'][config['id']] = {'delivered': source in [e['item']['id'] for e in context['excerpts']],
+                        'context_sha256': context['context_sha256'],
+                        'related_trace': [r for r in context['trace'] if source in r['would_add']]}
+            output.append(row)
+    return output
 
 
 def compare(current, baseline):
@@ -41,7 +75,9 @@ def report():
     lines = ['# M2-06 — målrettet retrieval-runde', '', f'**Status: {data["status"]}.**', '',
         'Tre varianter er frosset samlet før scoring. MiniLM, 16 unike parent-passasjer, ingen terskel, '
         '2 000 tokens, samme kilder/gold/V3-dommer og eksakte adjudikasjonsbindinger. Ingen tidligere '
-        'resultater er endret. Se `retrieval_targeted_plan.v1.md` og konfigurasjonsfilen.', '',
+        'resultater er endret. Se `retrieval_targeted_plan.v2.md` og konfigurasjonsfilen v2. '
+        'Teknisk revisjon 02 retter manglende skille mellom avkortet overskrift og brødtekst før scoring. '
+        'Første revisjons 75 ubedømte kontekster er bevart; packing-forsøkets 25 kontekster gjenbrukes.', '',
         '| Oppsett | Vurdert | Micro25 | Macro25 | Komplette25 | Micro15 / macro15 / komplette15 | I / M / K / G |',
         '|---|---:|---:|---:|---:|---|---|',
         '| P3 baseline | 25 | 59/72 (81,94 %) | 80,23 % | 15/22 | 41/51 / 78,08 % / 8/13 | 22 / 1 / 0 / 0 |']
@@ -76,6 +112,9 @@ def report():
         data['variants'].append(record)
     if (t.RUN / 'index/index.json').exists():
         data['index'] = t.checked_index()
+    data['known_gap_source_exposure'] = gap_exposure()
+    data['quota_snapshots'] = [s.runtime.read(p) for folder in [t.PREVIOUS, t.RUN]
+                              for p in sorted(folder.glob('quota-*.json'))]
     if data['error']:
         lines += ['', '**Stoppårsak:** ' + data['error']]
     lines += ['', '## Kravgevinster og tap', '']
@@ -95,6 +134,8 @@ def report():
         'Nye kall/tokens: `' + json.dumps(data['consumption'], ensure_ascii=False) + '`.', '',
         'Historiske A+B+C-tokens holdes separat: `' + json.dumps(data['original_consumption'], ensure_ascii=False) + '`.', '',
         'Reasoning inngår i output; prefix-cached input inngår i input. Ingen betalt API-fallback eller automatisk kvotereset.', '',
+        'Registrerte kvotevinduer: `' + json.dumps(data['quota_snapshots'], ensure_ascii=False) + '`. '
+        'Dette er delt kontobruk; prosentendringer kan ikke tilskrives dommerkallene alene.', '',
         '## Beslutningsstatus', '',
         'Ingen automatisk produksjonsvinner. Alle nye sikkerhetsflagg, kravtap og viktige positive vurderinger '
         'må kildegjennomgås før anbefaling. Et ufullstendig eller review-blokkert forsøk kan ikke velges. '

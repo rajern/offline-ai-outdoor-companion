@@ -1,0 +1,48 @@
+{
+  "version": 2,
+  "authority": "Owner: implementer det og kjør; bounded targeted improvement after the original 31 configurations",
+  "baseline": "C-P3",
+  "model": "minilm",
+  "top_k_unique_parents": 16,
+  "threshold": null,
+  "grounded_prompt_tokens": 2000,
+  "ranking": {
+    "window_body_tokens": 96,
+    "header_tokens": 24,
+    "overlap": 0,
+    "aggregation": "body-token-weighted mean within each view, normalize, equal text/context view mean, normalize",
+    "parent_scoring": "one cosine per original parent; no max over windows",
+    "overflow": "refuse any generated input over the existing 128-token limit",
+    "header_separator_after_cut": ". "
+  },
+  "packing": {
+    "order": "first highest ranked packet per document, then remaining packets in original rank order",
+    "unit": "seed plus contiguous same-heading continuations and nearest preceding strict heading ancestor, whole text",
+    "deduplication": "exact normalized body plus document/title/section/jurisdiction; identical scope only",
+    "budget": "atomic unit acceptance using the locked complete grounded prompt tokenizer; no partial trimming or refill below top16"
+  },
+  "variants": [
+    {
+      "id": "T-ranking",
+      "ranking": "window-mean",
+      "packing": "P3"
+    },
+    {
+      "id": "T-packing",
+      "ranking": "baseline",
+      "packing": "scope-diverse"
+    },
+    {
+      "id": "T-combined",
+      "ranking": "window-mean",
+      "packing": "scope-diverse"
+    }
+  ],
+  "combined_policy": "All three unconditional variants fixed before scoring; no adaptive choice based on first two scores",
+  "selection": "No automatic winner. Review every covered requirement loss and new safety flag before any recommendation.",
+  "holdout": false,
+  "production_change": false,
+  "answer_generation": false,
+  "paid_api_calls": false,
+  "technical_correction": "Pre-scoring revision: explicit delimiter after partial subword header; original unjudged diagnostics preserved; no score-driven tuning"
+}

@@ -29,7 +29,7 @@ def embedding_views(items, tokenizer, width=96, header_tokens=24):
         header = f'{item["title"]}. {item.get("section") or ""}. '
         encoding = tokenizer.encode(header, add_special_tokens=False)
         if len(encoding.ids) > header_tokens:
-            header = header[:encoding.offsets[header_tokens][0]]
+            header = header[:encoding.offsets[header_tokens][0]].rstrip() + '. '
         windows = text_windows(item['text'], tokenizer, width)
         if ''.join(t for t, _ in windows) != item['text']:
             raise ValueError('Window offsets lost source characters')

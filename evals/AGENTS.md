@@ -5,9 +5,12 @@ the owner explicitly said "implementer det og kjør". This authorizes at most
 three separate MiniLM/k16/no-threshold experiments beyond the completed 31:
 window-mean ranking with P3, scope-diverse packing with original ranking, and
 their preplanned combination. All three are frozen together before evaluation.
-See `retrieval_targeted_plan.v1.md`, `retrieval_targeted.v1.json` and
+See `retrieval_targeted_plan.v2.md`, `retrieval_targeted.v2.json` and
 `run_targeted_retrieval_v1.py`. Runtime storage is separate under
 `knowledge/local/diagnostics/retrieval-targeted-v1-2026-10-10`.
+Technical revision-02 repairs header/body separation before any fresh judgment;
+the first revision's 75 unjudged contexts/code snapshots remain unchanged.
+Packing-only contexts are reused after identical packing-function checks.
 Original 31 contexts, scores and adjudication layers remain immutable. Same gold,
 sources, V3 judge, subscription authentication, 2,000-token prompt and resource
 limits apply. Check every coverage loss and new safety flag before recommending.

@@ -2,9 +2,11 @@
 from __future__ import annotations
 
 import argparse
+import ast
 from dataclasses import asdict
 import json
 import os
+import shutil
 from pathlib import Path
 import subprocess
 import sys
@@ -20,11 +22,13 @@ from optimization_resources import Resources, input_accounting, validate_vectors
 from optimization_report import consumption
 import targeted_retrieval_methods as methods
 
-RUN = s.runtime.LOCAL / 'diagnostics/retrieval-targeted-v1-2026-10-10'
-CONFIG = s.ROOT / 'evals/retrieval_targeted.v1.json'
+PREVIOUS = s.runtime.LOCAL / 'diagnostics/retrieval-targeted-v1-2026-10-10'
+RUN = PREVIOUS / 'revision-02'
+CONFIG = s.ROOT / 'evals/retrieval_targeted.v2.json'
 CODE = [Path(__file__), Path(methods.__file__), CONFIG,
-        s.ROOT / 'evals/retrieval_targeted_plan.v1.md',
-        s.ROOT / 'evals/test_targeted_retrieval_v1.py']
+        s.ROOT / 'evals/retrieval_targeted_plan.v2.md',
+        s.ROOT / 'evals/test_targeted_retrieval_v1.py',
+        s.ROOT / 'evals/test_targeted_headers_v1.py']
 
 
 def write_once(path, value):
@@ -40,6 +44,47 @@ def protected_prior():
     # Enumerate only the explicit old experiment, never the evals directory.
     return {str(p.relative_to(d.RUN)): d.file_hash(p)
             for p in (d.RUN / 'configurations').rglob('*') if p.is_file()}
+
+
+def superseded_files():
+    paths = [p for folder in ['configurations', 'index', 'tokenization', 'source-snapshot']
+             for p in (PREVIOUS / folder).rglob('*') if p.is_file()]
+    paths += [PREVIOUS / name for name in ['freeze.json', 'started.json', 'technical-correction.v1.json', 'quota-before.json']]
+    return {str(p.relative_to(PREVIOUS)): d.file_hash(p) for p in paths}
+
+
+def reuse_packing():
+    old_text = (PREVIOUS / 'source-snapshot/evals/targeted_retrieval_methods.py').read_text(encoding='utf-8')
+    new_text = Path(methods.__file__).read_text(encoding='utf-8')
+    def functions(text):
+        return {node.name: ast.get_source_segment(text, node) for node in ast.parse(text).body
+                if isinstance(node, ast.FunctionDef)}
+    old, new = functions(old_text), functions(new_text)
+    for name in ['scope_key', 'instruction_unit', 'diverse_pack']:
+        assert old[name] == new[name]
+    source = PREVIOUS / 'configurations/T-packing'; target = RUN / 'configurations/T-packing'
+    if not target.exists():
+        target.parent.mkdir(exist_ok=True); shutil.copytree(source, target)
+    hashes = {str(p.relative_to(source)): d.file_hash(p) for p in source.rglob('*') if p.is_file()}
+    assert all(d.file_hash(target / name) == value for name, value in hashes.items())
+    write_once(RUN / 'packing-reuse.json', {'source': str(source.relative_to(s.ROOT)),
+        'files': hashes, 'method_sha256': {name: s.runtime.legacy.text_sha(new[name])
+        for name in ['scope_key', 'instruction_unit', 'diverse_pack']},
+        'judge_calls_repeated': 0, 'contexts_reused': 25})
+
+
+class LoggedResources(Resources):
+    """Retain samples even when a worker exits on a quota/review/RAM failure."""
+    def __init__(self, directory):
+        super().__init__(); self.directory = directory
+    def __exit__(self, *args):
+        try:
+            super().__exit__(*args)
+        finally:
+            self.directory.mkdir(parents=True, exist_ok=True)
+            number = len(list(self.directory.glob('attempt-*.json'))) + 1
+            write_once(self.directory / f'attempt-{number:03}.json',
+                {**self.result(), 'exception_type': args[0].__name__ if args[0] else None})
 
 
 def freeze():
@@ -61,15 +106,22 @@ def freeze():
         assert cached['cache_hit'] and cached['calls'] == 0
     config = s.runtime.read(CONFIG)
     assert [v['id'] for v in config['variants']] == ['T-ranking', 'T-packing', 'T-combined']
+    superseded = s.runtime.read(PREVIOUS / 'freeze.json')
+    assert superseded['config']['variants'] == config['variants']
+    assert not list((PREVIOUS / 'configurations').glob('*/case-*/score.json'))
+    for path, expected in superseded['code'].items():
+        assert d.file_hash(PREVIOUS / 'source-snapshot' / path) == expected
     write_once(RUN / 'freeze.json', {
         'code': {str(p.relative_to(s.ROOT)): d.file_hash(p) for p in CODE},
         'original_freeze_sha256': d.file_hash(d.RUN / 'freeze.json'),
         'prior_files': protected_prior(), 'config': config, 'judge_identity': ident,
+        'superseded_pre_scoring_files': superseded_files(),
         'baseline_summary_sha256': d.file_hash(d.RUN / 'configurations/C-P3/summary.json'),
         'resource_limits': {'ram_reserve': d.RAM_RESERVE, 'rss_limit': d.RSS_LIMIT},
         'preflight_new_judge_calls': 0, 'preflight_cache_checks': 1})
     write_once(RUN / 'started.json', {'at': s.runtime.now(),
         'existing_cache_keys': [p.name for p in s.CACHE.iterdir() if p.is_dir()]})
+    reuse_packing()
     return verify()
 
 
@@ -83,6 +135,8 @@ def verify():
         raise ValueError('Original freeze changed')
     if protected_prior() != value['prior_files']:
         raise ValueError('Original 31 experiment files changed')
+    if superseded_files() != value['superseded_pre_scoring_files']:
+        raise ValueError('Unjudged technical revision was not preserved')
     return value
 
 
@@ -93,7 +147,7 @@ def build_index():
     items = s.runtime.read(s.runtime.LOCAL / 'knowledge.json')['items']
     cases = s.load_development()['cases']; model = None
     started = time.perf_counter()
-    with Resources() as resource:
+    with LoggedResources(target / 'resource-attempts') as resource:
         try:
             resource.check(); model = MiniLM(); resource.check()
             from tokenizers import Tokenizer
@@ -171,8 +225,9 @@ def counter():
     class Counter(d.TokenCounter):
         def count(self, text):
             key = s.runtime.legacy.text_sha(text)
-            if (d.RUN / 'tokenization' / key / 'count.json').exists():
-                return d.TokenCounter(d.RUN / 'tokenization').count(text)
+            for cache in [d.RUN / 'tokenization', PREVIOUS / 'tokenization']:
+                if (cache / key / 'count.json').exists():
+                    return d.TokenCounter(cache).count(text)
             return super().count(text)
     return Counter(RUN / 'tokenization')
 
@@ -186,7 +241,7 @@ def retrieve(cid):
     vectors = np.load(index / 'documents.npy'); queries = np.load(index / 'queries.npy')
     parents = [d.KnowledgeItem(**p) for p in s.runtime.read(s.runtime.LOCAL / 'knowledge.json')['items']]
     rows = []; tokens = counter()
-    with Resources() as resource:
+    with LoggedResources(target / 'retrieval-resource-attempts') as resource:
         resource.check()
         for i, case in enumerate(s.load_development()['cases']):
             folder = target / case['id']
@@ -254,7 +309,7 @@ def score(cid):
     frozen = verify(); target = RUN / 'configurations' / cid; rows = verify_rows(cid)
     cases = {case['id']: case for case in s.load_development()['cases']}
     corpus = s.runtime.read(s.runtime.LOCAL / 'knowledge.json')['items']
-    with Resources() as resource, s.runtime.JudgeLock():
+    with LoggedResources(target / 'judge-resource-attempts') as resource, s.runtime.JudgeLock():
         resource.check(); s.runtime.recover_active(); pre = s.runtime.preflight(); ident = s.identity(pre)
         assert ident == frozen['judge_identity']
         for row in rows:
