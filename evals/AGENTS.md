@@ -1,5 +1,17 @@
 # Retrieval evaluation boundaries
 
+Technical metadata repair, 2026-10-10: first targeted subscription answer is
+sealed, but original merge stopped before saving a score on missing diagnostic
+`section_count`. `targeted_scoring_metadata_v1.py` supplies only that count from
+actual delivered document/section pairs before the unchanged proof function.
+Original rows/contexts, frozen methods, judge inputs/cache identity and scorer
+rules remain unchanged. Adapter/tests plus all 75 retrieval inputs are separately
+hash-bound under revision-02/scoring-metadata-v1. Seven tests pass, including
+old-scorer equivalence and merge of the saved answer; no repeated inference.
+Use this compatibility launcher for remaining score commands. Offline audit
+installs it only after verifying its binding. Original metadata stop and resource
+attempt are preserved. No score-driven changes or new experiments are authorized.
+
 Owner-authorized resume, 2026-10-10: all 75 targeted contexts are now complete
 and pass offline source/prompt/blinded-adapter audit. Original 3,193 experiment
 files and 4,188 superseded technical files remain unchanged. Ranking reused its

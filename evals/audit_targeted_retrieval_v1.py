@@ -4,6 +4,7 @@ import retrieval_optimization_scoring as s
 import json
 from pathlib import Path
 import numpy as np
+import targeted_scoring_metadata_v1 as metadata
 
 
 def verify_partial(target, cases, parents):
@@ -44,6 +45,8 @@ def verify_partial(target, cases, parents):
 
 def audit():
     frozen = t.verify(); cases = {c['id']: c for c in s.load_development()['cases']}
+    if (metadata.STATE / 'freeze.json').exists():
+        metadata.verify_binding(); metadata.install()
     corpus = s.runtime.read(s.runtime.LOCAL / 'knowledge.json')['items']
     parents = {p['id']: t.d.KnowledgeItem(**p) for p in corpus}
     rows_checked = scores_checked = 0

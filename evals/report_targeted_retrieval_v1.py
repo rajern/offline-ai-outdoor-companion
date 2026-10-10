@@ -73,6 +73,9 @@ def report():
         'original_consumption': c.accounted_consumption(),
         'holdout_accessed': False, 'production_changed': False, 'paid_api_calls': 0,
         'recommendation': None, 'decision_status': 'pending_complete_scoring_and_source_review'}
+    compatibility = t.RUN / 'scoring-metadata-v1/freeze.json'
+    if compatibility.exists():
+        data['scoring_metadata_compatibility'] = s.runtime.read(compatibility)
     if (t.RUN / 'freeze.json').exists():
         frozen = s.runtime.read(t.RUN / 'freeze.json')
         data['judge_identity'] = frozen['judge_identity']
@@ -134,6 +137,11 @@ def report():
     if review.exists(): data['pre_scoring_source_review'] = s.runtime.read(review)
     if data['error']:
         lines += ['', '**Stoppårsak:** ' + data['error']]
+    if compatibility.exists():
+        lines += ['', 'En teknisk scoreradapter kompletterer `section_count` fra dokument/seksjon i leverte utdrag. '
+            'De 75 retrieval-filene, dommerinputene, prompten og scorerreglene er uendret og hashbundet separat. '
+            'Første lagrede dommersvar gjenbrukes etter metadatafeilen; ingen inferens gjentas. '
+            'Regresjonskontrollen viser identisk output fra gammel scorer med fullstendig metadata.']
     lines += ['', '## Kjøring og bevarte tekniske stopp', '',
         '| Variant | Lagrede kontekster | Dommervurderinger |', '|---|---:|---:|']
     for record in data['variants']:
