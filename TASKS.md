@@ -356,6 +356,22 @@ open; do not repeat completed A calls or start M3.
   `evals/retrieval_optimization_final_audit.v2.json`. M2-06 remains open;
   production, holdout, generation and extra experiments are excluded.
 
+  Final development report, 2026-10-10: all 31 planned configurations / 775
+  judgments completed on 2026-10-09. P1 was preserved; P2 reused 25 exact B16
+  results, P3 used 15 new calls / ten cache hits. P2/P3 resources passed;
+  P1's historical RAM failure remains failed. Audit v3 verifies all 775 inputs,
+  82 identities, 2,912 A/B files and 103 unchanged P1 files. Provisional
+  development recommendation: MiniLM/k16/no threshold/P3, 59/72, macro 80.23%,
+  15/22 complete. P1's 63/72 aggregate conceals burn regressions and anaphylaxis
+  conflict. P3 still lacks 13 supported requirements, so further retrieval
+  improvement is recommended before the control test. No production winner
+  or automatic C dominance choice. Total: 228 successful new judge calls,
+  547 cache hits, 2,126,482 reported subscription tokens; one historical failed
+  attempt has unknown usage. See `evals/retrieval_optimization_report.v7.md`.
+  Stop at the agreed 31 configurations. M2-06 remains open for product/safety
+  acceptance; new experiments, holdout, production and generation need separate
+  authorization. Older execution statuses above remain historical.
+
 Replace development fixtures in the main RAG flow with the approved Outwise knowledge base.
 
 Requirements:

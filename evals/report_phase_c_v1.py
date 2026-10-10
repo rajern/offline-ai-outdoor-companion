@@ -16,8 +16,8 @@ def pct(value):
     return '—' if value is None else f'{100 * value:.2f}%'
 
 
-def export(version=6):
-    data = read(ROOT / 'evals/retrieval_optimization_results.v6.json')
+def export(version=6, source=None):
+    data = read(source or ROOT / 'evals/retrieval_optimization_results.v6.json')
     data['reported_at'] = datetime.now(timezone.utc).isoformat()
     from continue_retrieval_phase_c_v1 import accounted_consumption
     try:
@@ -162,7 +162,7 @@ def export(version=6):
                   'Konfigurasjoner regnes først som fullført etter lagret sluttsummary; scorer alene godkjenner ikke ressurskontrollen.', '']
     if 'quota-end.json' in data:
         quota = data['quota-end.json']
-        lines += [f"Siste kvote {quota['at']}: 5t {quota['five_hour_used_percent']}% brukt, uke {quota['weekly_used_percent']}% brukt. "
+        lines += [f"Historisk kvoteobservasjon fra kjøringen ({quota['at']}): 5t {quota['five_hour_used_percent']}% brukt, uke {quota['weekly_used_percent']}% brukt. "
                   'Ingen betalt API-fallback eller reset-kreditt.', '']
     if 'final-audit.json' in data:
         audit = data['final-audit.json']
@@ -171,6 +171,9 @@ def export(version=6):
                   f"{audit['protected_prior_A_B_files']} bevarte A/B-filer. Kildeproveniens, full serialisering/token-cache, "
                   'input-/resultatsegl, schema, kildebevis, raw/justerte aggregater og registrerte risikodelta er kontrollert uten nye dommerkall. '
                   'Seks nye C-kontrolltester og ni eksisterende fortsettelsestester bestod. Integritet er ikke uavhengig sikkerhetsvalidering.', '']
+        if audit.get('phase_P1_files_unchanged_after_resume'):
+            lines += [f"Alle {audit['phase_P1_files_unchanged_after_resume']} P1-filer er hashkontrollert uendret etter gjenopptakelsen. "
+                      'Den tidligere minnefeilen beholdes separat; den er ikke merket bestått.', '']
     review_path = STATE / 'final-review.md'
     if review_path.exists():
         lines += [review_path.read_text(encoding='utf-8'), '']
@@ -189,5 +192,6 @@ if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument('--version', type=int, default=6)
+    parser.add_argument('--source', type=Path)
     args = parser.parse_args()
-    export(args.version)
+    export(args.version, args.source)

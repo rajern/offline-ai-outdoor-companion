@@ -7,6 +7,15 @@ import continue_retrieval_phase_c_v1 as c
 
 def audit(public_output=None):
     c.check_frozen()
+    resume = c.STATE / 'resume-2026-10-09-after-P1' / 'resume.json'
+    preserved_p1 = 0
+    if resume.exists():
+        manifest = c.s.runtime.read(resume)
+        for path, value in manifest['protected_P1_files_sha256'].items():
+            assert c.d.file_hash(c.d.RUN / path) == value
+            preserved_p1 += 1
+        for path, value in manifest['archived_files_sha256'].items():
+            assert c.d.file_hash(resume.parent / c.s.ROOT.joinpath(path).name) == value
     raw = integrity.audit(output_paths=[c.STATE / 'raw-integrity-audit.json'])
     plan = c.s.runtime.read(c.d.RUN / 'plan.json')
     layer = c.s.runtime.read(c.LAYER)
@@ -35,6 +44,7 @@ def audit(public_output=None):
     assert sum(not r['configuration'].startswith('C-') for r in changed) == 6, 'Unexpected historical risk delta'
     assert all(r['case_id'] in ['case-13', 'case-19'] for r in changed)
     result = {**raw, 'phase_C_frozen': True, 'protected_prior_A_B_files': len(c.s.runtime.read(c.STATE / 'freeze.json')['protected_A_B_files']),
+              'phase_P1_files_unchanged_after_resume': preserved_p1,
               'registered_risk_delta': changed, 'new_review_layer_coverage_changes': 0,
               'limited_owner_B_override': c.s.runtime.read(c.AUTHORIZATION)['limited_override']}
     for path in [c.STATE / 'final-audit.json', public_output or c.s.ROOT / 'evals/retrieval_optimization_final_audit.v2.json']:

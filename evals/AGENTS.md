@@ -1,5 +1,23 @@
 # Retrieval evaluation boundaries
 
+Final development status, 2026-10-10: all 31 planned configurations / 775 case
+judgments completed on 2026-10-09. The owner-authorized resume skipped P1;
+P2 reused all 25 exact B16 inputs, P3 used 15 new calls / ten cache hits.
+P2/P3 passed unchanged RAM/RSS guards. Historical P1 RAM failure remains failed.
+Offline audit v3 passes all 775 inputs, 82 frozen identities, 2,912 A/B files
+and 103 unchanged P1 files. See `retrieval_optimization_report.v7.md` and
+`retrieval_optimization_final_audit.v3.json`. P3 (59/72, macro 80.23%, 15/22)
+is recommended only as a provisional development baseline. P1 has highest
+coverage (63/72, 17/22) but loses burn items 07/1-3 and introduces anaphylaxis
+conflict. P3 still lacks 13 supported requirements; no control-test readiness,
+final production choice or automatic C dominance winner is established.
+No additional experiments, holdout access, production change or answer generation
+is authorized. Stop after the final report; obtain a separate owner task for
+further retrieval development. Prior reports/audits v6/v2 remain unchanged.
+To refresh the final report without reading historical v6, use
+`report_phase_c_v1.py --version 7 --source evals/retrieval_optimization_results.v7.json`.
+The statuses below record earlier stops, not current pending execution.
+
 Current stop, 2026-10-09: the owner explicitly authorized MiniLM/k16/no threshold
 for C and a limited B-to-C dominance override. Exact-input review resolved case
 13/P70 risk negatives and case 19's inconsistent interpretation of a supplied

@@ -1,5 +1,22 @@
 # Outwise — Retrieval Optimization Plan
 
+**Sluttstatus, 2026-10-10:** Alle 31 avtalte konfigurasjoner / 775 vurderinger
+ble fullført 9. oktober. Gjenopptakelsen beholdt P1 og gjenbrukte 25 eksakte
+B16-resultater for P2. P3 brukte 15 nye kall og ti cachetreff; P2/P3 bestod
+de opprinnelige ressursgrensene. P1s tidligere RAM-feil beholdes historisk.
+[Sluttrapport v7](../evals/retrieval_optimization_report.v7.md) anbefaler
+MiniLM/k16/ingen terskel/P3 **foreløpig for videre utvikling**, med 59/72 krav,
+macro 80,23 % og 15/22 komplette. P1 har høyest totalscore (63/72, 17/22), men
+mister tre brannskadekrav og introduserer anafylaksikonflikt. P3 mangler fortsatt
+13 krav; videre forbedring anbefales før kontrolltesten. Ingen automatisk eller
+produksjonsimplementert vinner velges. [Audit v3](../evals/retrieval_optimization_final_audit.v3.json)
+består for alle 775 input, 82 frosne identiteter, 2 912 A/B-filer og 103 P1-filer.
+Samlet optimalisering: 228 fullførte nye dommerkall, 547 cachetreff og 2 126 482
+rapporterte abonnementstokens; ett eldre kvoteavvist forsøk har ukjent bruk.
+Forsøksbudsjettet er uttømt. Stopp her; videre utvikling eller kontrolltest krever
+separat eiermandat. Holdout, produksjon og Qwen-svar er ikke kjørt/endret.
+De tidligere stoppavsnittene nedenfor er historiske; v6 og audit v2 er bevart.
+
 **Gjeldende stoppunkt, 2026-10-09:** Eieren godkjente MiniLM/k16/ingen terskel
 som forsøksgrunnlag for C, med avgrenset fravik fra B-dominansporten. Separat
 eksakt-inputbundet review avklarte case 13/P70 og case 19 uten å endre råscorer,
