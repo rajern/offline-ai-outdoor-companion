@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "retrieved_rows_checked": 47,
+  "scores_checked": 0,
+  "original_files_checked": 3193,
+  "superseded_pre_scoring_files_checked": 4188,
+  "new_judge_calls": 0,
+  "holdout_accessed": false,
+  "frozen_targeted_code": {
+    "evals\\run_targeted_retrieval_v1.py": "6119e614cec32cc727b5531b9d42a8359832c7867f72a54c2e578e9b64f87e51",
+    "evals\\targeted_retrieval_methods.py": "dc0b517754c9aad53260d353f605415ec23923cfc13ca76dee3a2e0926499cf9",
+    "evals\\retrieval_targeted.v2.json": "252fda055828990459e65d1d9d378eb28b4071641b902a86ed50f0b8abbb4cbe",
+    "evals\\retrieval_targeted_plan.v2.md": "1ee6b36061a1696f789be168978e7d608172eedbbe40153ebcd7fcc78d235987",
+    "evals\\test_targeted_retrieval_v1.py": "13d97b247aac30786a90323e7231d6451c1502d510c7574c5cfa2a5976c98521",
+    "evals\\test_targeted_headers_v1.py": "a8ebed44951c67340f05921860d99094b3dd42c258a025659e483eda6a98cde1"
+  },
+  "limits": "Semantic source review is separate; seal validity is not semantic correctness.",
+  "blind_adapter_rows_checked": 47,
+  "audit_helper_code_sha256": "b4aba9b5d4b817bb7f01995ea9f33ab67a7e131e594ace56c77fc31ed524b27c",
+  "fresh_query_vector_bytes_equal_baseline": true
+}

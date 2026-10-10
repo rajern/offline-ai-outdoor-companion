@@ -1,0 +1,54 @@
+{
+  "status": "pre_scoring_source_review_not_adjudication",
+  "new_judge_calls": 0,
+  "gold_or_raw_results_changed": false,
+  "judge_prompt_sha256": "1e7ef4df845219735008d4a8a2fa2b62ab03e427d70bb2c8d1e1648a14858336",
+  "observations": [
+    {
+      "configuration": "T-packing",
+      "case_id": "case-07",
+      "context_sha256": "e37f70c2a4bc2da2842cc7d801dd72aa851a489e6bfaf6dc05089a68187ddc78",
+      "finding": "Baseline burn first-aid passage is not delivered; symptom and doctor text remain. Exposure regression, not scored requirement loss.",
+      "source_id": "source-03-006",
+      "trace": [
+        {
+          "seed_rank": 5,
+          "seed_id": "source-03-006",
+          "score": 0.46403342485427856,
+          "would_add": [
+            "source-03-006"
+          ],
+          "prompt_tokens": 2305,
+          "tokenization_key": "05203e775933b64544f7e8c534e7bd4e173f88cf12d740ed9c012e75203884fa",
+          "status": "over_budget"
+        }
+      ]
+    },
+    {
+      "configuration": "T-packing",
+      "case_id": "case-17",
+      "context_sha256": "da44b79756b6d0413996090960f7d6063fa973b5e5123af1506528d260d24cec",
+      "source_id": "source-08-011",
+      "source_text_sha256": "d4a91f8d878438f38565b09b56ebeed425780b0356833a89bb32e955fc0b7a05",
+      "same_passage_as_prior_P1": true,
+      "prior_P1_context_sha256": "e0c5e69a89811fccca6e7d71fa51a1fec88b5c16076b4badb0ff908dba86077b",
+      "finding": "Generic urgent GP instructions under anaphylaxis title, without delivered acute anaphylaxis escalation passages. Concrete safety concern; no recommendation of this variant from aggregate score.",
+      "absent_source_ids": [
+        "source-08-001",
+        "source-08-003",
+        "source-08-004"
+      ],
+      "raw_judge_flags": null
+    },
+    {
+      "configuration": "T-packing",
+      "case_id": "case-13",
+      "context_sha256": "c8bf98d78944b97064a0884a11a380fbb12c73ba703b08d3fc46e6aba5aa8b36",
+      "added_source_id": "source-11-003",
+      "source_text_sha256": "072b87fa901dfb3085ef4e8ff96d18efb5b51e1f3b3da1bfca8ffc3a8385f241",
+      "finding": "Beacon activation for life-threatening or uncertain situations is actually delivered; generic 113 instructions also remain. Whole-context risk review remains pending.",
+      "raw_judge_flags": null
+    }
+  ],
+  "adjudications_applied": []
+}

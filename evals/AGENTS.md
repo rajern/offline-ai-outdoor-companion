@@ -1,5 +1,23 @@
 # Retrieval evaluation boundaries
 
+Latest targeted stop, 2026-10-10: revision-02 MiniLM window index passed input
+checks (568 views, no body truncation) and build guards (279.96 MiB minimum
+available RAM). Corrected ranking retrieval saved cases 01–22 before available
+RAM fell to 241.41 MiB, below the unchanged 256 MiB reserve; process-tree RSS
+peaked at 185.45 MiB, below 4 GiB. Do not relax the guard or auto-retry.
+No new judge call was attempted. Packing has 25 exact reused contexts; combined
+has none. All 47 current contexts, 3,193 original experiment files and 4,188
+superseded pre-scoring files pass offline audit; blinded adapter/context checks
+pass on all 47 without inference or new tokenization. See targeted report,
+comparison, audit and preflight source-review v1 files. Source review already
+finds packing drops burn first-aid source-03-006 and reintroduces P1's generic
+GP/anaphylaxis passage source-08-011; no coverage points or new adjudications
+were assigned. New variants have no comparable quality scores or recommendation.
+After sufficient RAM is available and the owner resumes, use the same frozen
+`run_targeted_retrieval_v1.py run`; reuse index/47 contexts, finish three ranking
+contexts and all combined contexts, then score only after all input guards pass.
+Preserve the failed resource log and review source risks before recommendation.
+
 Owner task, 2026-10-10: after reviewing the proposed targeted improvement round,
 the owner explicitly said "implementer det og kjør". This authorizes at most
 three separate MiniLM/k16/no-threshold experiments beyond the completed 31:

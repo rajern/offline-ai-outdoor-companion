@@ -1,0 +1,54 @@
+{
+  "status": "blocked",
+  "error": "Resource guard: process RSS limit or available RAM reserve exceeded",
+  "at": "2026-10-10T07:58:38.410233+00:00",
+  "configurations": [
+    {
+      "configuration": {
+        "id": "T-ranking",
+        "ranking": "window-mean",
+        "packing": "P3"
+      },
+      "judged_cases": 0,
+      "retrieved_cases": 22,
+      "decisions": []
+    },
+    {
+      "configuration": {
+        "id": "T-packing",
+        "ranking": "baseline",
+        "packing": "scope-diverse"
+      },
+      "judged_cases": 0,
+      "retrieved_cases": 25,
+      "decisions": []
+    },
+    {
+      "configuration": {
+        "id": "T-combined",
+        "ranking": "window-mean",
+        "packing": "scope-diverse"
+      },
+      "judged_cases": 0,
+      "retrieved_cases": 0,
+      "decisions": []
+    }
+  ],
+  "consumption": {
+    "actual_calls": 0,
+    "successful_calls": 0,
+    "cache_hits": 0,
+    "avoided_calls": 0,
+    "usage": {},
+    "sum_call_seconds": 0,
+    "unknown_usage_calls": 0,
+    "errors": [],
+    "billing": "ChatGPT subscription",
+    "paid_api_calls": 0,
+    "estimated_api_cost_usd": null
+  },
+  "holdout_accessed": false,
+  "production_changed": false,
+  "generation_calls": 0,
+  "paid_api_calls": 0
+}
