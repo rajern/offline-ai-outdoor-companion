@@ -2,6 +2,8 @@
 import run_targeted_retrieval_v1 as t
 import retrieval_optimization_scoring as s
 import json
+from pathlib import Path
+import numpy as np
 
 
 def verify_partial(target, cases, parents):
@@ -51,6 +53,11 @@ def audit():
                    else verify_partial(target, cases, parents))
         for row in checked:
             rows_checked += 1
+            case = cases[row['case_id']]
+            payload = s.judge_input(case, row)
+            assert 'expected_result' not in payload
+            assert len(payload['requirements']) == len(case['must_have_information'])
+            assert s.runtime.legacy.text_sha('\n\n'.join(b['text'] for b in payload['blocks'])) == row['context_sha256']
             path = target / row['case_id'] / 'score.json'
             if not path.exists():
                 continue
@@ -73,6 +80,11 @@ def audit():
             assert all(raw[k] == v for k, v in merged.items())
             scores_checked += 1
     record = {'passed': True, 'retrieved_rows_checked': rows_checked, 'scores_checked': scores_checked,
+              'blind_adapter_rows_checked': rows_checked,
+              'audit_helper_code_sha256': t.d.file_hash(Path(__file__)),
+              'fresh_query_vector_bytes_equal_baseline': (
+                  np.load(t.RUN / 'index/queries.npy').tobytes() ==
+                  np.load(t.d.RUN / 'indices/minilm/queries.npy').tobytes()),
               'original_files_checked': len(frozen['prior_files']),
               'superseded_pre_scoring_files_checked': len(frozen['superseded_pre_scoring_files']),
               'new_judge_calls': 0, 'holdout_accessed': False,

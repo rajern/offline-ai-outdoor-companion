@@ -1,6 +1,6 @@
 # M2-06 — målrettet retrieval-runde
 
-**Status: blocked.**
+**Status: retrieval_complete.**
 
 Tre varianter er frosset samlet før scoring. MiniLM, 16 unike parent-passasjer, ingen terskel, 2 000 tokens, samme kilder/gold/V3-dommer og eksakte adjudikasjonsbindinger. Ingen tidligere resultater er endret. Se `retrieval_targeted_plan.v2.md` og konfigurasjonsfilen v2. Teknisk revisjon 02 retter manglende skille mellom avkortet overskrift og brødtekst før scoring. Første revisjons 75 ubedømte kontekster er bevart; packing-forsøkets 25 kontekster gjenbrukes.
 
@@ -11,15 +11,13 @@ Tre varianter er frosset samlet før scoring. MiniLM, 16 unike parent-passasjer,
 | T-packing | 0/25 | ufullstendig | — | — | — | — |
 | T-combined | 0/25 | ufullstendig | — | — | — | — |
 
-**Stoppårsak:** Resource guard: process RSS limit or available RAM reserve exceeded
-
-## Kjøring og teknisk stopp
+## Kjøring og bevarte tekniske stopp
 
 | Variant | Lagrede kontekster | Dommervurderinger |
 |---|---:|---:|
-| T-ranking | 22/25 | 0/25 |
+| T-ranking | 25/25 | 0/25 |
 | T-packing | 25/25 | 0/25 |
-| T-combined | 0/25 | 0/25 |
+| T-combined | 25/25 | 0/25 |
 
 Stoppmåling T-ranking: 241.41 MiB tilgjengelig RAM (krav 256 MiB); topp prosess-tre-RSS 185.45 MiB (grense 4096 MiB). Tilgjengelig vertsmaskin-RAM utløste stoppet; ekstern årsak er ikke fastslått. Ingen automatisk retry eller lemping av grensen.
 
@@ -35,7 +33,7 @@ Stoppmåling T-ranking: 241.41 MiB tilgjengelig RAM (krav 256 MiB); topp prosess
 
 Indeksarbeid og ferske enkeltspørsmål måles separat fra ranking/packing på lagrede spørsmålsvektorer. Tid påvirkes av token-cache og integritetskontroller. Originalmodell og original indeks gjenbrukes for packing-forsøket; gammel indeksbyggetid er ikke en ny sammenlignbar benchmark. Windows-målinger dokumenterer ikke mobilens minne eller energibruk. Prosessgrense 4 GiB og tilgjengelig-RAM-reserve 256 MiB er uendret.
 
-Tekniske forseglede cachekontroller: 2; ingen fersk dommerinferens. Cachetreff for nye konfigurasjoner kommer først ved scoring. GPT-6.1 Sol / Codex CLI / Medium / ChatGPT-auth og CLI-versjon er verifisert mot den frosne identiteten; CLI-resultatformatet eksponerer fortsatt ikke faktisk servermodell/revisjon.
+Tekniske forseglede cachekontroller: 2; disse utløser ingen fersk dommerinferens. Nye kall og cachetreff for konfigurasjonene loggføres separat nedenfor. GPT-6.1 Sol / Codex CLI / Medium / ChatGPT-auth og CLI-versjon er verifisert mot den frosne identiteten; CLI-resultatformatet eksponerer fortsatt ikke faktisk servermodell/revisjon.
 
 Nye kall/tokens: `{"actual_calls": 0, "successful_calls": 0, "cache_hits": 0, "avoided_calls": 0, "usage": {}, "sum_call_seconds": 0, "unknown_usage_calls": 0, "errors": [], "billing": "ChatGPT subscription", "paid_api_calls": 0, "estimated_api_cost_usd": null}`.
 
@@ -43,7 +41,7 @@ Historiske A+B+C-tokens holdes separat: `{"actual_calls": 229, "successful_calls
 
 Reasoning inngår i output; prefix-cached input inngår i input. Ingen betalt API-fallback eller automatisk kvotereset.
 
-Registrerte kvotevinduer: `[{"at": "2026-10-10 07:29:34 UTC", "phase": "before_targeted_judge_calls", "ordinaryUsageAllowed": true, "primary": {"usedPercent": 18, "windowDurationMins": 300, "resetsAt": 1791632706}, "secondary": {"usedPercent": 87, "windowDurationMins": 10080, "resetsAt": 1791961473}}, {"at": "2026-10-10 08:04:16 UTC", "phase": "after_ram_stop_before_any_targeted_judge_call", "ordinaryUsageAllowed": true, "primary": {"usedPercent": 31, "windowDurationMins": 300, "resetsAt": 1791632706}, "secondary": {"usedPercent": 89, "windowDurationMins": 10080, "resetsAt": 1791961473}}]`. Dette er delt kontobruk; prosentendringer kan ikke tilskrives dommerkallene alene.
+Registrerte kvotevinduer: `[{"at": "2026-10-10 07:29:34 UTC", "phase": "before_targeted_judge_calls", "ordinaryUsageAllowed": true, "primary": {"usedPercent": 18, "windowDurationMins": 300, "resetsAt": 1791632706}, "secondary": {"usedPercent": 87, "windowDurationMins": 10080, "resetsAt": 1791961473}}, {"at": "2026-10-10 08:04:16 UTC", "phase": "after_ram_stop_before_any_targeted_judge_call", "ordinaryUsageAllowed": true, "primary": {"usedPercent": 31, "windowDurationMins": 300, "resetsAt": 1791632706}, "secondary": {"usedPercent": 89, "windowDurationMins": 10080, "resetsAt": 1791961473}}, {"at": "2026-10-10T08:52:29.026758+00:00", "phase": "owner_authorized_resume", "primary": {"usedPercent": 39, "windowDurationMins": 300, "resetsAt": 1791632706}, "secondary": {"usedPercent": 90, "windowDurationMins": 10080, "resetsAt": 1791961473}}]`. Dette er delt kontobruk; prosentendringer kan ikke tilskrives dommerkallene alene.
 
 ## Beslutningsstatus
 
@@ -57,10 +55,11 @@ Korrigert indeks: 568 embedding-visninger, null avkortet brødtekst, 52 avkorted
 
 | Variant | Målte caser | Prompt snitt / maks | Kontekst snitt | Passasjer / forkastede pakker | Ranking / packing s |
 |---|---:|---:|---:|---:|---:|
-| T-ranking | 22 | 1956.45 / 1991 | 1765.73 | 232 / 114 | 0.0125 / 143.69 |
+| T-ranking | 25 | 1959.60 / 1999 | 1768.16 | 265 / 129 | 0.0145 / 146.83 |
 | T-packing | 25 | 1971.96 / 2000 | 1780.52 | 273 / 163 | 0.0141 / 325.12 |
+| T-combined | 25 | 1958.60 / 1998 | 1767.16 | 266 / 165 | 0.0106 / 90.42 |
 
-22- og 25-caseressurser kan ikke sammenlignes som like store utvalg. Packing-målingene er fra første revisjons uendrede, gjenbrukte input; ranking-målingene er fra korrigert revisjon.
+Ufullstendige ressursutvalg kan ikke sammenlignes som like store utvalg. Packing-målingene er fra første revisjons uendrede, gjenbrukte input; ranking-målingene er fra korrigert revisjon.
 
 ## Kildefunn før scoring
 

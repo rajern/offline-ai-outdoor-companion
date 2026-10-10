@@ -134,7 +134,7 @@ def report():
     if review.exists(): data['pre_scoring_source_review'] = s.runtime.read(review)
     if data['error']:
         lines += ['', '**Stoppårsak:** ' + data['error']]
-    lines += ['', '## Kjøring og teknisk stopp', '',
+    lines += ['', '## Kjøring og bevarte tekniske stopp', '',
         '| Variant | Lagrede kontekster | Dommervurderinger |', '|---|---:|---:|']
     for record in data['variants']:
         lines.append(f'| {record["configuration"]["id"]} | {record["retrieved_cases"]}/25 | {record["judged_cases"]}/25 |')
@@ -165,7 +165,7 @@ def report():
         'Windows-målinger dokumenterer ikke mobilens minne eller energibruk. '
         'Prosessgrense 4 GiB og tilgjengelig-RAM-reserve 256 MiB er uendret.', '',
         f'Tekniske forseglede cachekontroller: {data.get("technical_sealed_cache_checks", 0)}; '
-        'ingen fersk dommerinferens. Cachetreff for nye konfigurasjoner kommer først ved scoring. '
+        'disse utløser ingen fersk dommerinferens. Nye kall og cachetreff for konfigurasjonene loggføres separat nedenfor. '
         'GPT-6.1 Sol / Codex CLI / Medium / ChatGPT-auth og CLI-versjon er verifisert mot den frosne identiteten; '
         'CLI-resultatformatet eksponerer fortsatt ikke faktisk servermodell/revisjon.', '',
         'Nye kall/tokens: `' + json.dumps(data['consumption'], ensure_ascii=False) + '`.', '',
@@ -208,7 +208,7 @@ def report():
         lines.append(f'| {record["configuration"]["id"]} | {r["measured_cases"]} | '
             f'{r["mean_prompt_tokens"]:.2f} / {r["max_prompt_tokens"]} | {r["mean_context_tokens"]:.2f} | '
             f'{r["passages"]} / {r["excluded_packets"]} | {r["ranking_seconds"]:.4f} / {r["retrieval_packing_seconds"]:.2f} |')
-    lines += ['', '22- og 25-caseressurser kan ikke sammenlignes som like store utvalg. Packing-målingene '
+    lines += ['', 'Ufullstendige ressursutvalg kan ikke sammenlignes som like store utvalg. Packing-målingene '
         'er fra første revisjons uendrede, gjenbrukte input; ranking-målingene er fra korrigert revisjon.']
     if data.get('pre_scoring_source_review'):
         lines += ['', '## Kildefunn før scoring', '',

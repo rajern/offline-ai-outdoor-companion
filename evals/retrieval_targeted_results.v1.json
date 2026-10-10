@@ -1,7 +1,7 @@
 {
-  "status": "blocked",
-  "error": "Resource guard: process RSS limit or available RAM reserve exceeded",
-  "at": "2026-10-10T07:58:38.410233+00:00",
+  "status": "retrieval_complete",
+  "error": null,
+  "at": "2026-10-10T09:01:37.814087+00:00",
   "configurations": [
     {
       "configuration": {
@@ -10,7 +10,7 @@
         "packing": "P3"
       },
       "judged_cases": 0,
-      "retrieved_cases": 22,
+      "retrieved_cases": 25,
       "decisions": []
     },
     {
@@ -30,7 +30,7 @@
         "packing": "scope-diverse"
       },
       "judged_cases": 0,
-      "retrieved_cases": 0,
+      "retrieved_cases": 25,
       "decisions": []
     }
   ],

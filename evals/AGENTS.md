@@ -1,5 +1,17 @@
 # Retrieval evaluation boundaries
 
+Owner-authorized resume, 2026-10-10: all 75 targeted contexts are now complete
+and pass offline source/prompt/blinded-adapter audit. Original 3,193 experiment
+files and 4,188 superseded technical files remain unchanged. Ranking reused its
+first 22 contexts; packing reused all 25; combined created its 25 contexts.
+Resumed ranking minimum available RAM 4,276.43 MiB / peak RSS 183.14 MiB;
+combined minimum available RAM 3,824.18 MiB / peak RSS 185.48 MiB. All complete
+prompts are <=2,000 tokens. Preserve the earlier failed resource attempt.
+Scoring is proceeding sequentially with the frozen subscription judge. No exact
+prior cache records match the 75 inputs; shared weekly quota was 90% used before
+resume. Stop on quota or scorer disagreement; review source risks before any
+recommendation. This status supersedes only the RAM stop below.
+
 Latest targeted stop, 2026-10-10: revision-02 MiniLM window index passed input
 checks (568 views, no body truncation) and build guards (279.96 MiB minimum
 available RAM). Corrected ranking retrieval saved cases 01–22 before available
