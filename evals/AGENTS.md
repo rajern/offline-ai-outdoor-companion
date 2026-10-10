@@ -1,5 +1,21 @@
 # Retrieval evaluation boundaries
 
+Owner task, 2026-10-10: after reviewing the proposed targeted improvement round,
+the owner explicitly said "implementer det og kjør". This authorizes at most
+three separate MiniLM/k16/no-threshold experiments beyond the completed 31:
+window-mean ranking with P3, scope-diverse packing with original ranking, and
+their preplanned combination. All three are frozen together before evaluation.
+See `retrieval_targeted_plan.v1.md`, `retrieval_targeted.v1.json` and
+`run_targeted_retrieval_v1.py`. Runtime storage is separate under
+`knowledge/local/diagnostics/retrieval-targeted-v1-2026-10-10`.
+Original 31 contexts, scores and adjudication layers remain immutable. Same gold,
+sources, V3 judge, subscription authentication, 2,000-token prompt and resource
+limits apply. Check every coverage loss and new safety flag before recommending.
+Unresolved scorer/safety/resource/quota blockers stop continuation. No holdout,
+production integration, paid API, answer generation or further experiments.
+The prior "no additional experiments" status below is superseded only for this
+new bounded owner task; it remains the historical end of the original plan.
+
 Final development status, 2026-10-10: all 31 planned configurations / 775 case
 judgments completed on 2026-10-09. The owner-authorized resume skipped P1;
 P2 reused all 25 exact B16 inputs, P3 used 15 new calls / ten cache hits.
