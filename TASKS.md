@@ -287,6 +287,25 @@ metadata match all 25 saved contexts. Existing 68 backend tests and 13 Qwen-rela
 tests pass. See `evals/qwen_rag_system_report.v1.md`, results/audit v1 and the
 separate answer-review file. No production replacement or T-combined judging.
 
+Owner-authorized next task: one bounded local model/generation comparison.
+The old answer review fully reproduces 15 of the 60 retrieval-covered requirements;
+the other 45 are partial or absent. Principal failures are scenario mixing,
+changed conditions/order and missing safe abstention. No historical score changed.
+Generation-only input budget is now 3,200 native-template tokens, runtime context
+4,096 and output reservation 512; saved retrieval contexts/order stay unchanged.
+All 25 originals, three sufficient-context inputs, four paraphrases and four
+repeats were bound before inference. Critical supported-source errors override
+the 54/60 development target; Windows performance is not mobile validation.
+
+Comparison stopped in preflight, 2026-10-11: available host RAM fell to 140.72 MiB
+while loading existing 2B plus MiniLM, below the unchanged 256 MiB reserve.
+Process-tree RSS peaked at 748.72 MiB, below 4 GiB. No new response or paid API
+call occurred; larger model downloads, native-token budget checks and inference
+remain pending. See `evals/local_generation_comparison_report.v1.md` and audit.
+Preserve both pre-inference technical history and the memory stop. Free host RAM
+before an explicitly resumed preflight; do not remove the failed record or retry
+automatically. M2-06 is still open, production and M3 unchanged.
+
 Subtasks and acceptance evidence:
 - [x] Freeze a separate answer-assessment protocol and run the local ModelService /
   Qwen baseline on the unchanged 25 development cases; three corpus gaps separate.

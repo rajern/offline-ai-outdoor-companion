@@ -1,5 +1,21 @@
 # Retrieval evaluation boundaries
 
+Current generation-comparison stop, 2026-10-11: owner authorized one bounded
+three-model comparison and amended only generation input to 3,200 native-template
+tokens (runtime 4,096, output 512). See local_generation_comparison_protocol.v1.md,
+prompt v1, preflight launcher and report/audit v1. All 36 planned input definitions
+were frozen before any new answer. Existing 2B + resident MiniLM preflight breached
+the original 256 MiB host reserve (140.72 MiB observed; RSS 748.72 MiB <4 GiB).
+Zero new inference, no downloads or paid API. Runtime/template/token checks and
+the comparison are pending; this is a host-memory block, not a quality result or
+proof that any candidate cannot fit. Do not automatically retry the failed load.
+Preserve original stop and revision-02 input-freeze/logs before owner resume.
+Revision-01 technical stop used raw CRLF file hash instead of logical LF CLI-input
+hash; revision-02 fixes this and verifies old seals without changing old inputs.
+The new protocol supersedes earlier generation restrictions only for this owner
+task. Historical retrieval/gold/judge/results stay unchanged; no holdout, new
+retrieval experiments, production replacement, final safety policy or M3.
+
 Current system-test stop, 2026-10-11: 25 baseline + three bounded local Qwen
 sufficient-context diagnoses complete; all original resource guards passed.
 See qwen_rag_system_report/results/audit.v1 and separate answer review. All 25
