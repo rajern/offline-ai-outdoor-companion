@@ -1,5 +1,20 @@
 # Retrieval evaluation boundaries
 
+Current owner task, 2026-10-11: retrieval optimization is paused. Do not judge
+T-combined or run additional retrieval experiments. One isolated local Qwen/RAG
+system baseline on the existing 25 development questions is authorized within
+M2-06, using MiniLM T-ranking/k16/no threshold/original P3 and <=2,000 complete
+prompt tokens. Use existing Qwen3.5-2B Q4_K_M ModelService settings and freeze a
+separate answer-assessment method before evaluation. Preserve all historical
+retrieval results, gold, V3 scorer and source snapshot. Case16 remains
+requires_review; it does not block isolated system testing but must be resolved
+or explicitly handled before final owner quality approval. Existing RAM guards
+apply with retrieval and Qwen concurrently loaded. Bounded sufficient-context
+Qwen diagnostics may be recorded separately. No holdout, paid API, production
+replacement, final safety policy or M3. Do not mark M2-06 complete. Earlier stops
+and generation restrictions below are historical, superseded only within this
+new authorized scope. See qwen_rag_system_protocol.v1.md.
+
 Current targeted stop, 2026-10-10: two variants are fully scored (50/75 rows).
 T-ranking: 60/72, 83.33% micro, 81.14% macro, 15/22 complete; legacy15
 42/51, 79.62% macro, 8/13 complete. T-packing: 50/72, 69.44% micro,
