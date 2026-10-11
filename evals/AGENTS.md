@@ -1,5 +1,18 @@
 # Retrieval evaluation boundaries
 
+Current system-test stop, 2026-10-11: 25 baseline + three bounded local Qwen
+sufficient-context diagnoses complete; all original resource guards passed.
+See qwen_rag_system_report/results/audit.v1 and separate answer review. All 25
+fresh query/ranking/P3 prompts exactly equal saved T-ranking contexts. Source
+metadata matches via the actual API; four current-app probes ran without Qwen.
+Answers show critical generation errors even with sufficient source context;
+M2-06 quality is not approved. Owner manual review and further bounded generation
+work require the next task; do not repeat completed answers, judge T-combined,
+start new retrieval experiments, change production, open holdout or start M3.
+Case16 historical review remains unchanged; generated-answer findings are separate.
+First pre-inference Windows socket stop and its freeze remain preserved; use the
+separately frozen qwen_system_windows_adapter_v1.py only for exact sealed reuse.
+
 Current owner task, 2026-10-11: retrieval optimization is paused. Do not judge
 T-combined or run additional retrieval experiments. One isolated local Qwen/RAG
 system baseline on the existing 25 development questions is authorized within

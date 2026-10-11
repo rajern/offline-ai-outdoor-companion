@@ -280,22 +280,33 @@ This is a development baseline, not an approved production configuration.
 Case 16 remains `requires_review` under V3; isolated Qwen testing may proceed,
 but this ambiguity must be resolved or explicitly handled before quality approval.
 
-Remaining M2-06 subtasks:
-- [ ] Run one resumable baseline on the same 25 development questions using local
-  Qwen3.5-2B Q4_K_M / existing ModelService and generation settings. Freeze answer
-  assessment before inference; keep the three corpus gaps separate.
-- [ ] Review grounding, required actions/conditions/escalation, unsupported advice,
-  situational relevance, Norwegian clarity and source insufficiency for every answer.
-  Attribute failures to retrieval, generation, corpus or prompt/length constraints;
-  preserve raw answers and use only bounded, separately labelled diagnostics.
-- [ ] Verify the isolated candidate through the API/orchestrator, actual packing,
-  prompt serialization and stored source metadata. Document differences from the
-  unchanged current app, abstention behavior and the three-point/256-token limits.
-- [ ] Measure end-to-end latency, CPU and simultaneous retrieval/Qwen RAM with the
-  original 256 MiB available reserve / 4 GiB process-tree RSS guards. Verify local
-  operation, preserve any stop and cached calls, and publish a reproducible report.
-- [ ] Owner manually reviews representative real-world answers, source correctness,
-  gaps and unresolved safety findings, and explicitly approves M2-06 quality.
+M2-06 system-test status, 2026-10-11: one unchanged 25-question Qwen baseline
+and three separate sufficient-context diagnostics are complete. All 28 model calls
+passed the original resource guards. Exact live candidate inputs and API source
+metadata match all 25 saved contexts. Existing 68 backend tests and 13 Qwen-related
+tests pass. See `evals/qwen_rag_system_report.v1.md`, results/audit v1 and the
+separate answer-review file. No production replacement or T-combined judging.
+
+Subtasks and acceptance evidence:
+- [x] Freeze a separate answer-assessment protocol and run the local ModelService /
+  Qwen baseline on the unchanged 25 development cases; three corpus gaps separate.
+- [x] Source-review all answers; preserve raw outputs, bind annotations to exact
+  contexts, identify retrieval/generation/corpus/constraint failures, and complete
+  the three bounded diagnostics without prompt/model tuning.
+- [x] Verify isolated candidate API/orchestration/packing/prompt/metadata, document
+  unchanged current-app differences and four no-generation integration probes.
+- [x] Measure latency, CPU and simultaneous retrieval/Qwen memory; publish sealed
+  results and reproducible checks. Python external network is denied; an actual
+  OS-disconnected UI review remains below.
+- [ ] Resolve generated-answer failures before quality acceptance: critical
+  conditions/negations, wrong-scenario advice and reliable insufficiency reporting.
+  Current source review finds 0/22 fully covered supported answers; even sufficient
+  contexts retain breathing/CPR and anaphylaxis contradictions. No automatic pass.
+- [ ] Explicitly handle source/risk review07/16/18 and geography/abstention issues;
+  restore normal backend startup and obtain separate approval before permanently
+  integrating the candidate. Current app still uses older retrieval defaults.
+- [ ] Owner manually reviews representative UI answers/source correctness/gaps,
+  performs physical offline testing, and explicitly approves M2-06 quality.
 
 Completion requires all these checks and explicit owner quality approval. Do not
 mark M2-06 complete or start M3. No holdout access, new retrieval experiments,

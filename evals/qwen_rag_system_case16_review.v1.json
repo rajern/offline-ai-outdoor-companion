@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "authority": "Owner system-test authorization 2026-10-11",
+  "status": "requires_review",
+  "blocks_isolated_system_test": false,
+  "blocks_unqualified_final_quality_approval": true,
+  "v3_rules": "evals/retrieval_judge_prompt.v3.md:55-78",
+  "previous_registry_sha256": "b1dcccaf690e1c3f1a3d9da68589a29689acaa6c0e06c0983b3105460a9e2c67",
+  "source_review": "The question specifies a nearly non-bleeding abrasion with sand. Delivered source-02-012 explicitly covers cleaning and protection. Source-02-007/008 retain external-bleeding headings but include pressure, lying down and extra hard-object pressure without an explicit severe-bleeding restriction. The same instructions occur in historical P3, T-ranking and T-packing. T-packing adds large-blood-loss introduction, not a new pressure instruction. V3 normally treats clearly different-scenario text as irrelevant, but it is ambiguous whether these broad headings sufficiently restrict the pressure instructions in this question. A meaningful safety change explaining different judge flags is not established. Preserve the exact-context review requirement; neither risk absence nor risk presence is treated as confirmed safety improvement. Review the actual Qwen answer separately for transfer of these instructions into the abrasion situation.",
+  "bindings": [
+    {
+      "configuration": "C-P3",
+      "case_id": "case-16",
+      "context_sha256": "96ba33d18ff29d07be84478feb17acfc4d0c501753799939052dbdcf5237a9db",
+      "cache_key": "e66f0b5137d3244b7f17686da9348b1c0b9e8ae65d7f118865fd74c450ff7553",
+      "source_ids": [
+        "source-02-007",
+        "source-02-008"
+      ],
+      "conclusion": "The same external-bleeding pressure/lying-down instructions occur in all three contexts. Packing additionally includes a large-blood-loss introduction, not a newly added pressure instruction. Raw misleading classification differs (P3/ranking false, packing true); context effects versus judge interpretation are not established. Do not report this as a proven newly introduced hazard or a safety improvement. Preserve raw scores; exact-input scope/risk classification remains for human review. This does not rescue packing from twelve independently confirmed coverage losses.",
+      "requires_review": true,
+      "adjudication": false,
+      "scores_modified": false,
+      "raw_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "contradictory": false,
+        "jurisdiction_leakage": false
+      },
+      "retrieval_path": "knowledge\\local\\diagnostics\\retrieval-optimization-v1-2026-10-08\\experiment\\configurations\\C-P3\\case-16\\retrieved.json",
+      "score_path": "knowledge\\local\\diagnostics\\retrieval-optimization-v1-2026-10-08\\experiment\\configurations\\C-P3\\case-16\\score.json"
+    },
+    {
+      "configuration": "T-ranking",
+      "case_id": "case-16",
+      "context_sha256": "595bc6f610ca3063e3add6638ea311b3a69e72d81af071179c85642d861db3bd",
+      "cache_key": "b0cf1aa5d488a308c94aa5af447a8f8ae28b1432a0ab525aaee3bf91a833b848",
+      "source_ids": [
+        "source-02-007",
+        "source-02-008"
+      ],
+      "conclusion": "The same external-bleeding pressure/lying-down instructions occur in all three contexts. Packing additionally includes a large-blood-loss introduction, not a newly added pressure instruction. Raw misleading classification differs (P3/ranking false, packing true); context effects versus judge interpretation are not established. Do not report this as a proven newly introduced hazard or a safety improvement. Preserve raw scores; exact-input scope/risk classification remains for human review. This does not rescue packing from twelve independently confirmed coverage losses.",
+      "requires_review": true,
+      "adjudication": false,
+      "scores_modified": false,
+      "raw_flags": {
+        "irrelevant": true,
+        "potentially_misleading": false,
+        "contradictory": false,
+        "jurisdiction_leakage": false
+      },
+      "retrieval_path": "knowledge\\local\\diagnostics\\retrieval-targeted-v1-2026-10-10\\revision-02\\configurations\\T-ranking\\case-16\\retrieved.json",
+      "score_path": "knowledge\\local\\diagnostics\\retrieval-targeted-v1-2026-10-10\\revision-02\\configurations\\T-ranking\\case-16\\score.json"
+    },
+    {
+      "configuration": "T-packing",
+      "case_id": "case-16",
+      "context_sha256": "d008f9498e5ea3a88061a08b84acdb110c988f94588afc7124256916ce6b1e77",
+      "cache_key": "1a36f1e939d51600d02e14da7d35ccef91b0cc27117a44994c2056fd0ab0fb9e",
+      "source_ids": [
+        "source-02-007",
+        "source-02-008"
+      ],
+      "conclusion": "The same external-bleeding pressure/lying-down instructions occur in all three contexts. Packing additionally includes a large-blood-loss introduction, not a newly added pressure instruction. Raw misleading classification differs (P3/ranking false, packing true); context effects versus judge interpretation are not established. Do not report this as a proven newly introduced hazard or a safety improvement. Preserve raw scores; exact-input scope/risk classification remains for human review. This does not rescue packing from twelve independently confirmed coverage losses.",
+      "requires_review": true,
+      "adjudication": false,
+      "scores_modified": false,
+      "raw_flags": {
+        "irrelevant": true,
+        "potentially_misleading": true,
+        "contradictory": false,
+        "jurisdiction_leakage": false
+      },
+      "retrieval_path": "knowledge\\local\\diagnostics\\retrieval-targeted-v1-2026-10-10\\revision-02\\configurations\\T-packing\\case-16\\retrieved.json",
+      "score_path": "knowledge\\local\\diagnostics\\retrieval-targeted-v1-2026-10-10\\revision-02\\configurations\\T-packing\\case-16\\score.json"
+    }
+  ],
+  "raw_results_modified": false,
+  "gold_modified": false,
+  "new_judge_calls": 0
+}
