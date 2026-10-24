@@ -335,6 +335,22 @@ Gemma official QAT Q4_0 download/hash and all 36 native-token checks now pass.
 2B and Gemma proceed to the preplanned screening (at most 22 responses); no
 retrieval/gold/prompt change. See local_generation_comparison_execution.v1.md.
 
+Bounded generation comparison COMPLETE, 2026-10-24: 22 new local responses,
+11 each from 2B/Gemma; 4B excluded only after >4 GiB RSS with host reserve intact.
+All executed generation guards pass. Same-screen8/19 requirements: old 2B 2/19,
+new 2B 4/19, Gemma 6/19. Gemma safely abstains in both tested gaps; 2B in neither.
+Both omit supported critical airway/breathing assessment in primary case08,
+so neither passes the frozen finalist gate. No finalist or further tuning run.
+Full25 remains historical 15/72; these eight-case scores cannot replace it.
+See `evals/local_generation_comparison_report.v3.md`, results v1 and final audit.
+Actual usage 41,704 input /4,400 output tokens, no paid API/Codex judge calls;
+first raw response reused after metadata-only n_ctx check repair, no repeat.
+Recommendation for OWNER REVIEW: restrict generation, use source-preserved
+critical procedures, consider Gemma only for bounded summaries/abstention.
+No final model/source-first safety policy or production integration approved.
+Remaining M2-06 work: owner chooses bounded prototype scope, then separately
+authorized integration/startup and UI/offline/quality review before M3.
+
 Subtasks and acceptance evidence:
 - [x] Freeze a separate answer-assessment protocol and run the local ModelService /
   Qwen baseline on the unchanged 25 development cases; three corpus gaps separate.

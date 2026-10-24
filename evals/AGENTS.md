@@ -1,5 +1,19 @@
 # Retrieval evaluation boundaries
 
+Current stop: bounded generation comparison COMPLETE, 2026-10-24. 22 new local
+responses (11 2B +11 Gemma), all executed generation resource guards passed.
+4B is excluded on proven RSS limit, not quality. Source review on identical
+screen8 finds 2B 4/19, Gemma 6/19 full; old same subset 2/19. Gemma abstains in
+both screened corpus gaps, 2B does not. Both omit delivered critical assessment
+in primary08 and are NOT eligible for finalist; no 25-call finalist or tuning.
+See report v3, comparison results v1 and final audit v1. Original full25 remains
+15/72 answer coverage, 60/72 retrieval; do not mix denominators or claim safety.
+Metadata-only adapter recovers original first response without repeat and uses
+actual /props to verify n_ctx; original stop/raw/code freeze plus adapter binding
+are preserved. No prompt/gold/retrieval changes or paid API/Codex judge calls.
+Stop here for owner prototype/model/safety-scope decision. Do not automatically
+integrate Gemma, source-procedure policy, production retrieval or M3. No holdout.
+
 Current authorized screening, 2026-10-24: newest explicit retry has host reserve
 intact but Qwen 4B + MiniLM RSS >4 GiB, so exclude 4B under the frozen protocol's
 existing resource-incompatibility rule. Not a model-quality comparison/result.
