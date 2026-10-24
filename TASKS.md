@@ -319,6 +319,14 @@ See `evals/local_generation_comparison_report.v2.md` and preflight/audit v2.
 Retain the new resource stop and successful 2B checks for the next explicit
 resume. More host RAM must be freed; do not raise limits or auto-retry.
 
+Second explicit retry, 2026-10-24 ("prøv igjen"): reused sealed 2B input checks
+and the verified 4B file in a separate retry directory. 4B loading again hit the
+host reserve: 158.79 MiB available (<256 MiB), 749.08 MiB sampled process-tree
+RSS (<4 GiB). This attempt stopped earlier in loading, so RSS is not a model
+footprint measurement. Server terminated; zero generated responses. See
+`evals/local_generation_comparison_retry.v1.md` and JSON audit. Original attempts
+remain unchanged. No automatic retry, model substitution or production change.
+
 Subtasks and acceptance evidence:
 - [x] Freeze a separate answer-assessment protocol and run the local ModelService /
   Qwen baseline on the unchanged 25 development cases; three corpus gaps separate.

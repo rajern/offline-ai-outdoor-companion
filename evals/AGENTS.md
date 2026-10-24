@@ -1,5 +1,12 @@
 # Retrieval evaluation boundaries
 
+Latest explicit retry, 2026-10-24 (owner: "prøv igjen"): inherited and verified
+successful 2B checks + 4B download; separate retry again breached available-host
+RAM (158.79 MiB <256 MiB; sampled RSS 749.08 MiB). Zero responses; own server
+terminated. Earlier partial loading RSS is not the full model footprint. See
+local_generation_comparison_retry.v1.md/JSON and continue_local_generation_v1.py.
+Keep this stop and the older attempts. No automatic retry or scope reduction.
+
 Latest owner resume/stop, 2026-10-24: successful 2B native-template preflight on
 all 36 frozen inputs (777–2,233 actual tokens, slot 4,096, output reserved 512).
 Host reserve passed for resident MiniLM + 2B (min 1,087.68 MiB; peak RSS
