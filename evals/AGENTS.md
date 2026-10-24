@@ -1,5 +1,20 @@
 # Retrieval evaluation boundaries
 
+Latest owner resume/stop, 2026-10-24: successful 2B native-template preflight on
+all 36 frozen inputs (777–2,233 actual tokens, slot 4,096, output reserved 512).
+Host reserve passed for resident MiniLM + 2B (min 1,087.68 MiB; peak RSS
+2,570.20 MiB). Exact approved Qwen 4B Q4_K_M downloaded and SHA verified; its
+load hit host RAM 148.07 MiB <256 MiB, peak RSS 3,898.40 MiB <4 GiB. Zero new
+generated responses. Preserve the successful 2B checks and 4B stop under
+local-generation-comparison-v1-2026-10-11/resume-2026-10-24/revision-02.
+No Gemma download or new comparison scores. See comparison report/audit v2 and
+resume_local_generation_v1.py. The initial resumed metadata stop is also retained:
+runtime props omit training context, so the technical adapter reads actual GGUF
+metadata instead, without altering input definitions, prompt or model. Complete
+model/runtime freeze and inference execution remain pending after sufficient RAM.
+Do not auto-retry after the new host-memory breach, discard logs, exclude 4B as
+permanently incompatible, or rerun old answers. No production/holdout/M3 changes.
+
 Current generation-comparison stop, 2026-10-11: owner authorized one bounded
 three-model comparison and amended only generation input to 3,200 native-template
 tokens (runtime 4,096, output 512). See local_generation_comparison_protocol.v1.md,

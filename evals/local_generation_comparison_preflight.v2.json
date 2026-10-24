@@ -1,0 +1,67 @@
+{
+  "version": 2,
+  "status": "control_preflight_passed_larger_model_host_ram_stop",
+  "date": "2026-10-24",
+  "original_input_freeze_sha256": "31ca5a2179a57f555b2b67c2b4b4154f5f3ad440ccd57a9614d395335a8491f6",
+  "historical_and_input_identities_verified": true,
+  "planned_input_count": 36,
+  "control_passed_inputs": 36,
+  "control_min_input_tokens": 777,
+  "control_max_input_tokens": 2233,
+  "runtime_context": 4096,
+  "reserved_output_tokens": 512,
+  "input_budget": 3200,
+  "control_training_context": 262144,
+  "resources": {
+    "qwen-2b": {
+      "elapsed_seconds": 6.291553399991244,
+      "peak_process_tree_rss_bytes": 2695053312,
+      "minimum_available_ram_bytes": 1140518912,
+      "cpu_seconds": 8.515625,
+      "sample_interval_seconds": 0.1,
+      "memory_method": "sampled simultaneous process-tree RSS"
+    },
+    "qwen-4b": {
+      "elapsed_seconds": 5.958161700051278,
+      "peak_process_tree_rss_bytes": 4087771136,
+      "minimum_available_ram_bytes": 155262976,
+      "cpu_seconds": 7.203125,
+      "sample_interval_seconds": 0.1,
+      "memory_method": "sampled simultaneous process-tree RSS"
+    }
+  },
+  "model_4b": {
+    "repo": "bartowski/Qwen_Qwen3.5-4B-GGUF",
+    "revision": "4168f45a16a1290d65a4ec0fa312ae917a4c15d6",
+    "file": "Qwen_Qwen3.5-4B-Q4_K_M.gguf",
+    "size": 3013027808,
+    "sha256": "13c16f426047e2de38cd075bdade4a7bcbc8c774384876f677740cda65f8a983",
+    "license": "apache-2.0"
+  },
+  "new_generated_responses": 0,
+  "new_codex_judge_calls": 0,
+  "paid_api_calls": 0,
+  "model_4b_runtime_passed": false,
+  "gemma_downloaded": false,
+  "m3_tasks_unchanged": true,
+  "all_model_experiment_frozen": false,
+  "inference_orchestration_runtime_tested": false,
+  "raw_hashes": {
+    "knowledge\\local\\diagnostics\\local-generation-comparison-v1-2026-10-11\\resume-2026-10-24\\revision-02\\stop.json": "6a76d4528b9a082cecad2c334ba7b591b10515a8a3c6240a38cfeeec37b9f26b",
+    "knowledge\\local\\diagnostics\\local-generation-comparison-v1-2026-10-11\\resume-2026-10-24\\stop.json": "e70e4fb0d99479f2ef63842664519707002cc9188f9d5d24d06001c204064071",
+    "knowledge\\local\\diagnostics\\local-generation-comparison-v1-2026-10-11\\resume-2026-10-24\\revision-02\\downloads\\qwen-4b\\manifest.json": "9bc678a68a0dddaf42a3ed15502e0d80f83d245ad91eca7ec3d9b719f6587ea9",
+    "knowledge\\local\\diagnostics\\local-generation-comparison-v1-2026-10-11\\resume-2026-10-24\\revision-02\\preflight\\qwen-2b\\seal.json": "8689b8895134b3ada111c58ecddfd1829edf2b02adae0c1a4618a71846d890ac",
+    "knowledge\\local\\diagnostics\\local-generation-comparison-v1-2026-10-11\\resume-2026-10-24\\revision-02\\preflight\\qwen-2b\\command.json": "27d099433d3c85b65d8d84dcf50fdf47d29eae52873b03e811892fbf0af59088",
+    "knowledge\\local\\diagnostics\\local-generation-comparison-v1-2026-10-11\\resume-2026-10-24\\revision-02\\preflight\\qwen-2b\\stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "knowledge\\local\\diagnostics\\local-generation-comparison-v1-2026-10-11\\resume-2026-10-24\\revision-02\\preflight\\qwen-2b\\stderr.txt": "18f49150a402813dbbe205301ce246dbb5023a5bfe6a207557db7f8ed69c6f6d",
+    "knowledge\\local\\diagnostics\\local-generation-comparison-v1-2026-10-11\\resume-2026-10-24\\revision-02\\preflight\\qwen-2b\\resources.json": "bc72db6cc8b03604aa6291aba4b38ed542a60ccccf654c5fe55638d556acb9cc",
+    "knowledge\\local\\diagnostics\\local-generation-comparison-v1-2026-10-11\\resume-2026-10-24\\revision-02\\preflight\\qwen-4b\\command.json": "14f3b553274c78c1ab5f449ab4d84f9cc50850f5382d581eadfe243024e8b749",
+    "knowledge\\local\\diagnostics\\local-generation-comparison-v1-2026-10-11\\resume-2026-10-24\\revision-02\\preflight\\qwen-4b\\stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "knowledge\\local\\diagnostics\\local-generation-comparison-v1-2026-10-11\\resume-2026-10-24\\revision-02\\preflight\\qwen-4b\\stderr.txt": "a1542c5eac45c0ca8b2285faa11b1c933ef64847e258d1d696867b2a45792006",
+    "knowledge\\local\\diagnostics\\local-generation-comparison-v1-2026-10-11\\resume-2026-10-24\\revision-02\\preflight\\qwen-4b\\resources.json": "b444149bf96046ee3242703e622f45a05d4f214893bbbabc50497a0294045b1c"
+  },
+  "code_sha256": {
+    "audit_local_generation_resume_v1.py": "758d87b3127169cad4ecb4b2e80593653b6ca72102992122a32e80616ca4971e",
+    "resume_local_generation_v1.py": "3cfb45fee01ace2bf55bb1054be7d520db4e066bf28419e915fbe303671c4aea"
+  }
+}

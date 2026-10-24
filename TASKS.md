@@ -306,6 +306,19 @@ Preserve both pre-inference technical history and the memory stop. Free host RAM
 before an explicitly resumed preflight; do not remove the failed record or retry
 automatically. M2-06 is still open, production and M3 unchanged.
 
+Owner resume, 2026-10-24: the saved 36 inputs and historical identities verify.
+Qwen 2B now passes all 36 native-template/token checks (777–2,233 input tokens,
+512 reserved output, actual slot 4,096; GGUF context metadata 262,144).
+Resident MiniLM + 2B peak RSS 2,570.20 MiB / available RAM minimum 1,087.68 MiB.
+The approved 4B Q4_K_M was downloaded at a pinned revision and SHA-256 verified.
+Its loading then breached the unchanged host reserve: 148.07 MiB available,
+3,898.40 MiB peak RSS (still below 4 GiB). No new answer was generated.
+Gemma download and all new generation/quality comparisons remain pending;
+the 2B pass is not evidence that 4B cannot fit on a less occupied host.
+See `evals/local_generation_comparison_report.v2.md` and preflight/audit v2.
+Retain the new resource stop and successful 2B checks for the next explicit
+resume. More host RAM must be freed; do not raise limits or auto-retry.
+
 Subtasks and acceptance evidence:
 - [x] Freeze a separate answer-assessment protocol and run the local ModelService /
   Qwen baseline on the unchanged 25 development cases; three corpus gaps separate.
