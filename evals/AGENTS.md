@@ -1,5 +1,15 @@
 # Retrieval evaluation boundaries
 
+Current authorized screening, 2026-10-24: newest explicit retry has host reserve
+intact but Qwen 4B + MiniLM RSS >4 GiB, so exclude 4B under the frozen protocol's
+existing resource-incompatibility rule. Not a model-quality comparison/result.
+2B inherited checks and Gemma official QAT Q4_0 36-input preflight pass. Use
+run_eligible_local_generation_v1.py and local-generation-eligible-2026-10-24.
+Freeze all eligible models/settings/code/native tokens before any response;
+then at most 22 screening calls (11 each). Finalist conditional <=25 remains.
+Preserve all prior stops, frozen prompts/gold and actual contexts. No holdout,
+paid API, production changes or M3. See execution v1 and original protocol.
+
 Latest explicit retry, 2026-10-24 (owner: "prøv igjen"): inherited and verified
 successful 2B checks + 4B download; separate retry again breached available-host
 RAM (158.79 MiB <256 MiB; sampled RSS 749.08 MiB). Zero responses; own server

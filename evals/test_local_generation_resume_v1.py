@@ -39,5 +39,14 @@ class ResumeTests(unittest.TestCase):
         with patch.object(r.q,'read',return_value={'answer.txt':'expected'}), patch.object(r.q,'sha',return_value='modified'):
             with self.assertRaises(AssertionError): r.verify_seal(Path('synthetic'))
 
+    def test_only_rss_failure_with_intact_host_reserve_permits_exclusion(self):
+        exclusion = {'qwen-4b': {'resource_path':'synthetic.json','resource_sha256':'match'}}
+        observed = {'minimum_available_ram_bytes':r.RAM_RESERVE,'peak_process_tree_rss_bytes':r.RSS_LIMIT+1}
+        with patch.object(Path,'exists',return_value=True), patch.object(r.q,'read',side_effect=[exclusion,observed]), patch.object(r.q,'sha',return_value='match'):
+            self.assertEqual(r.eligible_models(),['qwen-2b','gemma-e2b'])
+        observed['minimum_available_ram_bytes']=r.RAM_RESERVE-1
+        with patch.object(Path,'exists',return_value=True), patch.object(r.q,'read',side_effect=[exclusion,observed]), patch.object(r.q,'sha',return_value='match'):
+            with self.assertRaises(AssertionError): r.eligible_models()
+
 
 if __name__ == '__main__': unittest.main()

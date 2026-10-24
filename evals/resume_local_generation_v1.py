@@ -54,7 +54,9 @@ def gguf_metadata(path):
         number('Q'); count = number('Q'); metadata = {}
         for _ in range(count):
             key = string(); kind = number('I')
-            keep = key in ['general.architecture','general.name','general.file_type','tokenizer.chat_template'] or key.endswith('.context_length')
+            keep = (key in ['general.architecture','general.name','general.file_type','tokenizer.chat_template',
+                            'tokenizer.ggml.bos_token_id','tokenizer.ggml.eos_token_id','tokenizer.ggml.add_bos_token']
+                    or key.endswith('.context_length'))
             result = value(kind, keep)
             if keep: metadata[key] = result
         return metadata
@@ -70,6 +72,18 @@ def plan():
         assert p.hashlib.sha256(context.encode()).hexdigest() == item['context_sha256']
         assert p.messages(item['question'], context) == item['messages']
     return frozen
+
+
+def eligible_models():
+    path = RUN / 'exclusions.json'
+    excluded = q.read(path) if path.exists() else {}
+    for name, evidence in excluded.items():
+        assert name in MODELS and name != 'qwen-2b'
+        assert q.sha(Path(evidence['resource_path'])) == evidence['resource_sha256']
+        observed = q.read(Path(evidence['resource_path']))
+        assert observed['minimum_available_ram_bytes'] >= RAM_RESERVE
+        assert observed['peak_process_tree_rss_bytes'] > RSS_LIMIT
+    return [name for name in MODELS if name not in excluded]
 
 
 def download(name):
@@ -201,10 +215,15 @@ def freeze():
     plan()
     identities = {str(path): q.sha(path) for path in [Path(__file__).resolve(),
                   p.PROTOCOL, p.PROMPT, p.RUN / 'input-freeze.json',
-                  p.ROOT / 'evals/optimization_resources.py']}
+                  p.ROOT / 'evals/optimization_resources.py',
+                  p.ROOT / 'evals/continue_local_generation_v1.py',
+                  p.ROOT / 'evals/run_eligible_local_generation_v1.py']}
     for path in [p.RUNTIME, *sorted(p.RUNTIME.parent.glob('*.dll'))]:
         identities[str(path)] = q.sha(path)
-    for name, model in MODELS.items():
+    if (RUN / 'exclusions.json').exists():
+        identities[str(RUN / 'exclusions.json')] = q.sha(RUN / 'exclusions.json')
+    for name in eligible_models():
+        model = MODELS[name]
         folder = RUN / 'preflight' / name
         verify_seal(folder)
         identities[str(model['path'])] = q.sha(model['path'])
@@ -213,16 +232,18 @@ def freeze():
             identities[str(RUN / 'downloads' / name / 'manifest.json')] = q.sha(RUN / 'downloads' / name / 'manifest.json')
     q.write_once(RUN / 'experiment-freeze.json', {'identities': identities, 'settings': SETTINGS,
                  'source_plan_sha256': q.sha(p.RUN / 'input-freeze.json'),
+                 'eligible_models': eligible_models(),
                  'max_screen_calls': 33, 'max_finalist_calls': 25,
                  'no_prior_new_model_responses': not (RUN / 'responses').exists()})
-    print('Complete three-model experiment frozen before responses', flush=True)
+    print('Complete eligible-model experiment frozen before responses:', eligible_models(), flush=True)
 
 
 def verify():
     frozen = q.read(RUN / 'experiment-freeze.json')
     for name, expected in frozen['identities'].items():
         assert q.sha(Path(name)) == expected, 'Frozen experiment identity changed: ' + name
-    for name in MODELS:
+    assert frozen['eligible_models'] == eligible_models()
+    for name in eligible_models():
         verify_seal(RUN / 'preflight' / name)
     return frozen
 
@@ -247,7 +268,7 @@ def run_responses(stage, model_name=None):
     inputs = plan()['inputs']
     if stage == 'screen':
         keys = p.STAGE_ONE + ['diagnostic-case-03','diagnostic-case-08','diagnostic-case-17']
-        names = list(MODELS)
+        names = frozen['eligible_models']
     else:
         review = q.read(RUN / 'finalist-decision.json')
         assert review['eligible'] and review['model'] == model_name

@@ -327,6 +327,14 @@ footprint measurement. Server terminated; zero generated responses. See
 `evals/local_generation_comparison_retry.v1.md` and JSON audit. Original attempts
 remain unchanged. No automatic retry, model substitution or production change.
 
+Further explicit retry, 2026-10-24 ("prøv nå"): with host reserve intact,
+4B + MiniLM exceeded 4 GiB process-group RSS. The already-frozen protocol permits
+excluding a candidate proven incompatible with this limit. 4B is excluded for
+this fixed CPU/configuration test, without changing limits or model variant.
+Gemma official QAT Q4_0 download/hash and all 36 native-token checks now pass.
+2B and Gemma proceed to the preplanned screening (at most 22 responses); no
+retrieval/gold/prompt change. See local_generation_comparison_execution.v1.md.
+
 Subtasks and acceptance evidence:
 - [x] Freeze a separate answer-assessment protocol and run the local ModelService /
   Qwen baseline on the unchanged 25 development cases; three corpus gaps separate.
