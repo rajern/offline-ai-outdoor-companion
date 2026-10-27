@@ -45,7 +45,9 @@ function SourceCard({ source, index }: { source: ChatSource; index: number }) {
 }
 
 export default function PrototypeApp() {
-  const [demo, setDemo] = useState(Platform.OS === 'web' && typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('demo'));
+  const query = Platform.OS === 'web' && typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null;
+  const replayOnly = query?.get('replay') === '1';
+  const [demo, setDemo] = useState(replayOnly || Boolean(query?.has('demo')));
   const [turns, setTurns] = useState<Turn[]>([]);
   const [draft, setDraft] = useState('');
   const [sending, setSending] = useState(false);
@@ -75,7 +77,7 @@ export default function PrototypeApp() {
     } finally { setSending(false); setPending(''); }
   }
 
-  function changeMode(value: boolean) { setDemo(value); setTurns([]); setError(null); setDraft(''); }
+  function changeMode(value: boolean) { setDemo(replayOnly || value); setTurns([]); setError(null); setDraft(''); }
   const ready = Boolean(status?.assets_present);
   return <SafeAreaView style={s.safe}><StatusBar style="dark" />
     <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={s.safe}>
@@ -85,7 +87,7 @@ export default function PrototypeApp() {
           <View style={[s.badge, !demo && !ready && s.badgeMuted]}><Text style={s.badgeText}>{demo ? 'Lagrede testsvar' : ready ? 'Lokale filer klare' : 'Lokalt oppsett'}</Text></View>
         </View>
         <View style={s.toolbar}>
-          <View style={s.modes}>{[['Lokal modell', false], ['Se demo', true]].map(([label, value]) =>
+          <View style={s.modes}>{(replayOnly ? [['Se demo', true]] : [['Lokal modell', false], ['Se demo', true]]).map(([label, value]) =>
             <Pressable key={String(label)} disabled={sending} accessibilityRole="button" accessibilityState={{ selected: demo === value }}
               onPress={() => changeMode(Boolean(value))} style={[s.mode, demo === value && s.modeActive]}>
               <Text style={[s.modeText, demo === value && s.modeTextActive]}>{String(label)}</Text>
@@ -133,7 +135,7 @@ export default function PrototypeApp() {
           {sending && <View style={s.loading} onLayout={() => scroll.current?.scrollToEnd({ animated: true })}><ActivityIndicator color="#245D45" /><View style={s.grow}><Text style={s.sectionTitle}>Søker og lager tolkning …</Text>
             <Text style={s.small}>{pending}</Text><Text style={s.small}>Første svar kan ta tid mens modellen lastes.</Text></View></View>}
           {error && <View accessibilityRole="alert" style={s.error}><Text style={s.errorText}>{error}</Text></View>}
-          <Text style={s.footer}>Kjøres på PC · Mobiltilpasset grensesnitt · Hvert spørsmål behandles separat</Text>
+          <Text style={s.footer}>{replayOnly ? 'Lagrede testsvar · Ingen modell eller backend kjøres' : 'Kjøres på PC · Mobiltilpasset grensesnitt · Hvert spørsmål behandles separat'}</Text>
         </ScrollView>
         {!demo && <View style={s.composer}>
           <TextInput accessibilityLabel="Spørsmål til Outwise" placeholder="Hva vil du undersøke?" placeholderTextColor="#788179"

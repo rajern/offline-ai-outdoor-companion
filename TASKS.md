@@ -12,7 +12,9 @@ of the original M3 safety-approved MVP.
 - [x] Write source-backed results, rubric/data explanation and research comparison.
 - [x] Archive obsolete evaluation/history files; preserve key evidence and private raw logs.
 - [x] Complete integration, startup, error handling, phone-width UI and local-network checks.
-- [x] Finish README, actual screenshots and recorded replay demonstration.
+- [x] Finish README, actual screenshots and saved-answer replay demonstration.
+- [x] Verify the standalone Node-only demo and revised same-eight-question README.
+- [x] Commit and push the README/demo update after final checks.
 - [ ] Owner reviews UI, prototype wording, results and README; physically tests offline operation.
 
 The original M1 technical slice and knowledge ingestion were completed. M2-06

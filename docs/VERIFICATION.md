@@ -1,7 +1,9 @@
-# Prototype verification — 26 October 2026
+# Prototype verification
 
 This records technical closeout checks. It does not replace the answer-quality
 evaluation or approve the prototype for outdoor/medical use.
+
+## Local application checks — 26 October 2026
 
 | Check | Result |
 |---|---|
@@ -42,15 +44,45 @@ Private original experiment folders were not rewritten.
 
 ## Demo evidence
 
-The PNGs are actual browser screenshots. The GIF is a 13-second walkthrough made
-from three captured views of the replay UI, not a real-time model speed
-measurement or a fabricated good answer. The mobile viewport checks layout on
-PC; they do not demonstrate native iOS/Android performance.
+The JPEGs are actual browser screenshots. They show the replay UI and an unchanged
+test answer, not a real-time model speed measurement or a fabricated good answer.
+The mobile viewport checks layout on PC; they do not demonstrate native
+iOS/Android performance. The previous GIF was replaced with separate screenshots
+at the owner's request.
 
-- [Overview](images/outwise-overview.png)
-- [Source excerpts](images/outwise-sources.png)
-- [Automatically shown interpretation](images/outwise-interpretation.png)
-- [Animated walkthrough](images/outwise-walkthrough.gif)
+- [Overview](images/outwise-overview.jpg)
+- [Source excerpts](images/outwise-sources.jpg)
+- [Automatically shown interpretation](images/outwise-interpretation.jpg)
+
+## README and standalone replay — 27 October 2026
+
+- The README now leads with the same eight questions for Qwen, Gemma and GPT,
+  with required coverage, gap abstention and separate judge flags. Historical
+  full-25 results remain in the detailed results document. No answers, scores,
+  questions or rubrics were changed and no quality experiment was rerun.
+- `scripts/start-demo.ps1` built the current frontend and served it at numeric
+  loopback port 8080 using Node alone. The browser followed the replay-only
+  redirect, showed both saved examples and their automatic interpretations,
+  expanded/collapsed source cards and cleared the view successfully.
+- The live-model switch and question input were absent from standalone replay.
+  Its server exposes only the exported frontend; API requests are rejected.
+  The server test passed for redirects, assets, HEAD, missing files, API/method
+  rejection, malformed URLs and path traversal. The initial sandboxed test
+  could not connect to its loopback port (EACCES); the same test passed outside
+  that restriction. This was a test-environment limitation, not a product fix.
+- The frontend TypeScript check and Expo web export passed. The 390 px browser
+  viewport had document width and scroll width both 390 px. Three actual JPEG
+  screenshots replaced the previous animation.
+- The actual application also started successfully through
+  `scripts/start-outwise.ps1` on port 8000 with the newly built frontend. The
+  browser showed available local files, both modes and the live question input.
+  No new model answer was generated for this startup regression check.
+- Active documentation links, both replay packages and their private original
+  answer hashes passed the project check; all 43 retained frozen evidence files
+  remained unchanged. The earlier backend/local-model checks above still apply.
+
+This verifies a local replay and its presentation. It is not a new answer-quality
+result or a physical internet-disconnected test of the complete application.
 
 ## Owner review still required
 

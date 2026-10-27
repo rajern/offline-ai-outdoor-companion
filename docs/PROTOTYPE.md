@@ -56,8 +56,16 @@ hashes and excerpt IDs. Source text is quoted with publisher/content-owner,
 original links, dates and reuse terms from the already approved manifest.
 Only text is included; no third-party media or logos were copied.
 
-The replay can be shown without installing models. It does not replace the
-actual local application or turn an unsafe answer into acceptable advice.
+The standalone replay requires only Node 22.13+ and the installed frontend
+dependencies. `scripts/start-demo.ps1` rebuilds the same Expo frontend and serves
+its export at `http://127.0.0.1:8080/?demo=1`, on the same PC while the command
+runs. The server redirects to a replay-only view: the local-model switch is
+hidden, no status/chat API is called and no Python backend or model is started.
+The full application still has both modes. No hosting or paid service is needed.
+
+The README uses three actual screenshots rather than an animation. The replay
+does not replace the actual local application or turn an unsafe answer into
+acceptable advice.
 
 ## Remaining owner review
 
