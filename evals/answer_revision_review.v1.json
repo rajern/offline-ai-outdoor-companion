@@ -1,0 +1,1208 @@
+{
+  "version": 1,
+  "at": "2026-10-24T20:15:56.197665+00:00",
+  "raw_scores_changed": false,
+  "clinical_validation": false,
+  "independent_reviewer": false,
+  "effort_blinding": "X/Y decisions sealed before effort key; prior Medium case05 issue and outputs were known",
+  "review_scope": "All 18 criterion/support disputes, 35 agreed high-consequence criterion pairs and all 50 answer finding/gap pairs inspected. Source quotes compared; full delivered blocks consulted where needed. No exhaustive clinical review of every corpus assertion.",
+  "disagreement_items_reviewed": 18,
+  "review_preferences": {
+    "medium": 5,
+    "unresolved": 5,
+    "high": 7,
+    "neither": 1
+  },
+  "preference_groups": {
+    "medium": [
+      "case-02",
+      "case-11",
+      "case-23"
+    ],
+    "unresolved": [
+      "case-03",
+      "case-10",
+      "case-18"
+    ],
+    "high": [
+      "case-04",
+      "case-06",
+      "case-08",
+      "case-22"
+    ],
+    "neither": [
+      "case-24"
+    ]
+  },
+  "items": [
+    {
+      "id": "D001",
+      "preferred": "X",
+      "decision": "absent",
+      "support": "not_assessed",
+      "source_blocks": [
+        5
+      ],
+      "reason": "Overskriften nevner varme, men den konkrete handlingen er isolasjon. Ingen aktiv varmetilførsel gis. Bare en overskrift er ikke en utført prosedyre etter den frosne regelen.",
+      "group": "case-02",
+      "rubric": "historical",
+      "preferred_effort": "medium"
+    },
+    {
+      "id": "D002",
+      "preferred": "Y",
+      "decision": "absent",
+      "support": "not_assessed",
+      "source_blocks": [
+        5
+      ],
+      "reason": "Samme skille mellom isolasjon og varmetilførsel. En omtalt overskrift fyller ikke varmetilførselskravet. Hudforbeholdet kan ikke alene gjøre manglende hovedhandling delvis dekket.",
+      "group": "case-02",
+      "rubric": "revised",
+      "preferred_effort": "medium"
+    },
+    {
+      "id": "D003",
+      "preferred": "unresolved",
+      "decision": "full",
+      "support": "uncertain",
+      "source_blocks": [
+        4,
+        5
+      ],
+      "reason": "Begge dekker behandling før drikking. Kokingsalternativet er støttet, men filtrering alene mangler etterbehandling. Full støtte er forsvarlig for den avgrensede behandlingspåstanden; delvis for hele alternativsetningen. Støttens enhet er utilstrekkelig avklart.",
+      "group": "case-03",
+      "rubric": "revised",
+      "preferred_effort": "unresolved"
+    },
+    {
+      "id": "D004",
+      "preferred": "X",
+      "decision": "absent",
+      "support": "not_assessed",
+      "source_blocks": [
+        2,
+        4
+      ],
+      "reason": "Å vurdere snøskredfare er ikke å stoppe og vurdere egen bortkomst. Delvis poeng basert bare på ordet vurdering gir feil situasjon positiv dekning.",
+      "group": "case-04",
+      "rubric": "historical",
+      "preferred_effort": "high"
+    },
+    {
+      "id": "D005",
+      "preferred": "X",
+      "decision": "absent",
+      "support": "not_assessed",
+      "source_blocks": [
+        2,
+        4
+      ],
+      "reason": "Den reviderte situasjonsregelen tillater konteksthenvisning, men ikke overføring fra et annet hendelsesforløp. Ingen stopp eller relevant bortkomstvurdering gis.",
+      "group": "case-04",
+      "rubric": "revised",
+      "preferred_effort": "high"
+    },
+    {
+      "id": "D006",
+      "preferred": "Y",
+      "decision": "absent",
+      "support": "not_assessed",
+      "source_blocks": [
+        5
+      ],
+      "reason": "113 knyttes til sårmål eller mulig brudd, ikke stor eller ustoppelig blødning. Den frosne regelen krever handling og avgjørende betingelse samlet; feil betingelse er ikke delvis riktig varsling her.",
+      "group": "case-06",
+      "rubric": "historical",
+      "preferred_effort": "high"
+    },
+    {
+      "id": "D007",
+      "preferred": "X",
+      "decision": "absent",
+      "support": "not_assessed",
+      "source_blocks": [
+        5
+      ],
+      "reason": "Svareren anbefaler ikke varsling for den beskrevne store blødningen; den legger inn andre terskler. Samme feil handling/betingelse som i D006.",
+      "group": "case-06",
+      "rubric": "revised",
+      "preferred_effort": "high"
+    },
+    {
+      "id": "D008",
+      "preferred": "X",
+      "decision": "absent",
+      "support": "not_assessed",
+      "source_blocks": [
+        3,
+        11
+      ],
+      "reason": "Ubetingede innblåsinger og kompresjoner gir verken overvåking eller riktig pustebetingelse. Korrekt nevnte HLR-deler gjør ikke den feil anvendte handlingsregelen delvis riktig.",
+      "group": "case-08",
+      "rubric": "revised",
+      "preferred_effort": "high"
+    },
+    {
+      "id": "D009",
+      "preferred": "unresolved",
+      "decision": "partial",
+      "support": "uncertain",
+      "source_blocks": [
+        1,
+        5
+      ],
+      "reason": "Underlagsisolasjon er kildebeskrevet, men svaret blander trekasse, pasient på is og egen overnatting. Full støtte for den avgrensede isolasjonspåstanden og delvis støtte for anvendelsen er begge forsvarlige; ikke skill dommerkvalitet på dette.",
+      "group": "case-10",
+      "rubric": "revised",
+      "preferred_effort": "unresolved"
+    },
+    {
+      "id": "D010",
+      "preferred": "X",
+      "decision": "absent",
+      "support": "not_assessed",
+      "source_blocks": [
+        5
+      ],
+      "reason": "Å la avfall renne nedstrøms er feil handling, ikke korrekt nedgravd plassering nedstrøms vannhentingen. Riktig ord om retning gir ikke delvis dekning av motsatt avfallshåndtering.",
+      "group": "case-11",
+      "rubric": "historical",
+      "preferred_effort": "medium"
+    },
+    {
+      "id": "D011",
+      "preferred": "X",
+      "decision": "absent",
+      "support": "not_assessed",
+      "source_blocks": [
+        5
+      ],
+      "reason": "Samme handlingsfeil som D010. Kilden støtter nedgraving og avstand fra vannhentingssted, ikke instruksen om rennende avfall.",
+      "group": "case-11",
+      "rubric": "revised",
+      "preferred_effort": "medium"
+    },
+    {
+      "id": "D012",
+      "preferred": "unresolved",
+      "decision": "uncertain",
+      "support": "not_assessed",
+      "source_blocks": [
+        1
+      ],
+      "reason": "Hodet over vann og vending mot ankomstretningen er sagt. Forsøk på oppstigning i den retningen er ikke sagt direkte, men kan være kontekstuelt ment. Full versus delvis avhenger av en uavklart grense for implisitt instruksjon.",
+      "group": "case-18",
+      "rubric": "historical",
+      "preferred_effort": "unresolved"
+    },
+    {
+      "id": "D013",
+      "preferred": "unresolved",
+      "decision": "uncertain",
+      "support": "full",
+      "source_blocks": [
+        1
+      ],
+      "reason": "Revidert rubrikk åpner for konteksthenvisning, men ikke større manglende trinn. Den praktiske forskjellen mellom å finne retningen og å forsøke opp der er reell, men språklig tvetydig her. Behold uenigheten.",
+      "group": "case-18",
+      "rubric": "revised",
+      "preferred_effort": "unresolved"
+    },
+    {
+      "id": "D014",
+      "preferred": "unresolved",
+      "decision": "partial",
+      "support": "uncertain",
+      "source_blocks": [
+        1,
+        2
+      ],
+      "reason": "Ispigger for feste er støttet. Den videre påstanden om skistaver utelater kildens forbehold om for sløve spisser. Full støtte for ispigg-delen og delvis for hele setningen avhenger av samme støtteavgrensning som D003.",
+      "group": "case-18",
+      "rubric": "revised",
+      "preferred_effort": "unresolved"
+    },
+    {
+      "id": "D015",
+      "preferred": "Y",
+      "decision": "absent",
+      "support": "not_assessed",
+      "source_blocks": [
+        1
+      ],
+      "reason": "Ingen batteriplan gis. En reserve i selve telefonen er ikke den uavhengige papirreserven som skal virke ved telefonsvikt. Å nevne papirbackup sammen med feil plassering gir ingen fungerende reserveinstruksjon.",
+      "group": "case-22",
+      "rubric": "historical",
+      "preferred_effort": "high"
+    },
+    {
+      "id": "D016",
+      "preferred": "X",
+      "decision": "absent",
+      "support": "not_assessed",
+      "source_blocks": [
+        1
+      ],
+      "reason": "Samme som D015: både batteriplan og en fungerende uavhengig reserve mangler. Ikke gi delvis poeng for et relevant substantiv med en betingelse som ødelegger funksjonen.",
+      "group": "case-22",
+      "rubric": "revised",
+      "preferred_effort": "high"
+    },
+    {
+      "id": "D017",
+      "preferred": "Y",
+      "decision": "full",
+      "support": "full",
+      "source_blocks": [
+        9
+      ],
+      "reason": "Den relevante påstanden om avstand fra vannledninger er fullt støttet av plumbing-rådet. Den ekstra påstanden om drikkevann må flagges separat; den endrer ikke støtten til den faktiske røranleggspåstanden.",
+      "group": "case-23",
+      "rubric": "revised",
+      "preferred_effort": "medium"
+    },
+    {
+      "id": "D018",
+      "preferred": "neither",
+      "decision": "full",
+      "support": "full",
+      "source_blocks": [
+        1
+      ],
+      "reason": "Spørsmålet plasserer den løse skråningen helt inntil bekken. Det universelle rådet om å unngå nærheten av bekker med stor vannføring, med erosjon/skred som begrunnelse, avviser dermed dette stedet. Revidert regel tillater inkludert eksempel og kjente spørsmålsfakta uten gjentakelse. Begge vurderinger er for bokstavelige her.",
+      "uncertainty": "Et mer generelt krav om alle løse skråninger ville vært annerledes; her er kriteriet uttrykkelig avgrenset til den beskrevne bekken.",
+      "group": "case-24",
+      "rubric": "revised",
+      "preferred_effort": "neither"
+    }
+  ],
+  "finding_and_gap_pairs_reviewed": 50,
+  "agreed_high_consequence_pairs_reviewed": 35,
+  "finding_reviews": [
+    {
+      "group": "case-01",
+      "answer_id": "17a6b8b44c2e",
+      "reviewed": true,
+      "input_sha256": "d28b48df30fc94d834d074a21c653043f05b935d02b45ab205ec9a69e7e43784",
+      "answer_text_sha256": "f60d4a4cc0716701847b883fc41fe2a243f763ab048fad44264b2fbb2a282f4d",
+      "medium_types": [
+        "unsupported"
+      ],
+      "high_types": [
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Begge identifiserer feil overføring av kuldebehandlingens 20 minutter til terskel for legevakt. Behold funnet; ingen klinisk ventetid valideres her."
+    },
+    {
+      "group": "case-02",
+      "answer_id": "d84eb803a921",
+      "reviewed": true,
+      "input_sha256": "fd54e54d63fbad6c75fc30a45493e942eab95b7cb257f7153c3773531d3b8a8f",
+      "answer_text_sha256": "cc461f4078006a0236f6383f99fae19ed7ee6db7d8200e0b0f5893cf1c36b8e4",
+      "medium_types": [
+        "critical_omission",
+        "irrelevant",
+        "unsupported"
+      ],
+      "high_types": [
+        "critical_omission",
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Feil scenario for minuttsjekk av pust, udokumentert transportpresisering og manglende vind-/fuktbeskyttelse/varmetilførsel/varsling er synlige. Kritisk er rubrikkens deklarasjon, ikke en uavhengig alvorlighetsgrad."
+    },
+    {
+      "group": "case-03",
+      "answer_id": "99e7a21dd7c2",
+      "reviewed": true,
+      "input_sha256": "c2fb0e305b9733afdf99c779dad0c45c66f1b01010135b390e6bb976c4efc200",
+      "answer_text_sha256": "1b2a2000b80dd82fe2a1fb66eb7c93639ec9017a485d356f3719e2a894c3e26e",
+      "medium_types": [
+        "direct_conflict",
+        "irrelevant"
+      ],
+      "high_types": [
+        "direct_conflict",
+        "irrelevant",
+        "requires_review"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Begge ser filtrering uten desinfisering og flomstoff. High synliggjør at koketid også mangler i retrieval; ikke kall dette bare en genereringsfeil. Støtteavgrensningen er uavklart i D003."
+    },
+    {
+      "group": "diagnostic-case-03",
+      "answer_id": "172523e4061a",
+      "reviewed": true,
+      "input_sha256": "3a9b6d27abc8a77d4d00957038f41e147da4023e4862ee35ab9a22416c3f06c8",
+      "answer_text_sha256": "756efc860ec4894012b21791321497380a5432aa49ba29b13d6212139889ee82",
+      "medium_types": [],
+      "high_types": [],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Gemmas kildebundne kokeanvisning har ingen registrerte tillegg. Ny 2B snur strømvilkåret; kjemikalieforbud er faktisk med, men ikke alle betingede ledd. Highs kritiske kjemikalieflaggs proporsjonalitet trenger vurdering. Gammel 2B mangler høydegrensen."
+    },
+    {
+      "group": "diagnostic-case-03",
+      "answer_id": "584fbe71697e",
+      "reviewed": true,
+      "input_sha256": "3a9b6d27abc8a77d4d00957038f41e147da4023e4862ee35ab9a22416c3f06c8",
+      "answer_text_sha256": "f4a220657541373938b126e113912c6a7353fe23cdcf80d69027d3dc8d059efd",
+      "medium_types": [
+        "direct_conflict",
+        "requires_review"
+      ],
+      "high_types": [
+        "critical_omission",
+        "direct_conflict",
+        "requires_review"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Gemmas kildebundne kokeanvisning har ingen registrerte tillegg. Ny 2B snur strømvilkåret; kjemikalieforbud er faktisk med, men ikke alle betingede ledd. Highs kritiske kjemikalieflaggs proporsjonalitet trenger vurdering. Gammel 2B mangler høydegrensen."
+    },
+    {
+      "group": "diagnostic-case-03",
+      "answer_id": "c8ff10355443",
+      "reviewed": true,
+      "input_sha256": "3a9b6d27abc8a77d4d00957038f41e147da4023e4862ee35ab9a22416c3f06c8",
+      "answer_text_sha256": "d042f0cf8a838ecb0d914eab1b83668e69818f7b96136e9fdb5525b2b99b53ad",
+      "medium_types": [
+        "critical_omission"
+      ],
+      "high_types": [
+        "critical_omission"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Gemmas kildebundne kokeanvisning har ingen registrerte tillegg. Ny 2B snur strømvilkåret; kjemikalieforbud er faktisk med, men ikke alle betingede ledd. Highs kritiske kjemikalieflaggs proporsjonalitet trenger vurdering. Gammel 2B mangler høydegrensen."
+    },
+    {
+      "group": "case-04",
+      "answer_id": "04872654d9ff",
+      "reviewed": true,
+      "input_sha256": "1914855b3c80e1a32d2c2d95894d079835d5a2d0d11dec87923d2a4f1130d7e4",
+      "answer_text_sha256": "242bf563b48a8db7fd2adde2fb23eefbcafd739d5cd55b7fafd417d7bdd85797",
+      "medium_types": [
+        "critical_omission",
+        "irrelevant"
+      ],
+      "high_types": [
+        "critical_omission",
+        "irrelevant"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Skred- og planleggingsstoff erstatter bortkomsthandlinger; bli på stedet/ikke gå videre er utelatt. Highs avvisning av feil-scenario-dekning foretrekkes i D004/005."
+    },
+    {
+      "group": "case-05",
+      "answer_id": "5473ff3f75f5",
+      "reviewed": true,
+      "input_sha256": "25fcb8753e2701b02bf9fc32866b2fb76e0ac39e5291a5be6e18e091fe5754fd",
+      "answer_text_sha256": "6393619409fd54f929b055204630e5ba40fe35b4832a0fc5448710431831a3a6",
+      "medium_types": [
+        "critical_omission",
+        "direct_conflict",
+        "irrelevant",
+        "unsupported"
+      ],
+      "high_types": [
+        "critical_omission",
+        "direct_conflict",
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Feil ly, skredstoff og avgrensninger er reelle spørsmål. Begge undervurderer historisk old5 når ett fullt gyldig ly-alternativ allerede finnes. For Gemmas umiddelbare flytting til gyldig ly er behovet for ekstra eksplisitte rygg-/overhengssetninger et uløst tolkningspunkt; ikke behandle kritisk-flaggantallet som klinisk fasit."
+    },
+    {
+      "group": "case-05",
+      "answer_id": "9db3cd842605",
+      "reviewed": true,
+      "input_sha256": "25fcb8753e2701b02bf9fc32866b2fb76e0ac39e5291a5be6e18e091fe5754fd",
+      "answer_text_sha256": "31d9841bb3a033a6cb0cd701d1f4f8beaa81f993b59851cc12f6e073f7c986be",
+      "medium_types": [
+        "critical_omission",
+        "direct_conflict"
+      ],
+      "high_types": [
+        "critical_omission",
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Feil ly, skredstoff og avgrensninger er reelle spørsmål. Begge undervurderer historisk old5 når ett fullt gyldig ly-alternativ allerede finnes. For Gemmas umiddelbare flytting til gyldig ly er behovet for ekstra eksplisitte rygg-/overhengssetninger et uløst tolkningspunkt; ikke behandle kritisk-flaggantallet som klinisk fasit."
+    },
+    {
+      "group": "case-05",
+      "answer_id": "ba306bda9fc2",
+      "reviewed": true,
+      "input_sha256": "25fcb8753e2701b02bf9fc32866b2fb76e0ac39e5291a5be6e18e091fe5754fd",
+      "answer_text_sha256": "d16b85f87f429da82cdb252f06d6c5d93987e16443d78f43985084d1cdb06895",
+      "medium_types": [
+        "critical_omission",
+        "direct_conflict",
+        "irrelevant",
+        "requires_review",
+        "unsupported"
+      ],
+      "high_types": [
+        "critical_omission",
+        "direct_conflict",
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Feil ly, skredstoff og avgrensninger er reelle spørsmål. Begge undervurderer historisk old5 når ett fullt gyldig ly-alternativ allerede finnes. For Gemmas umiddelbare flytting til gyldig ly er behovet for ekstra eksplisitte rygg-/overhengssetninger et uløst tolkningspunkt; ikke behandle kritisk-flaggantallet som klinisk fasit."
+    },
+    {
+      "group": "case-06",
+      "answer_id": "3c9ef423a24b",
+      "reviewed": true,
+      "input_sha256": "3323afe2a25872e077b54f88f53c4881522a2ce50dc534de49a55dbe9531e1f8",
+      "answer_text_sha256": "9208d07567a868be6ee142aa83df8e56d476ee6e1c79ceb69327d07f6c141d1d",
+      "medium_types": [
+        "critical_omission",
+        "irrelevant",
+        "unsupported"
+      ],
+      "high_types": [
+        "critical_omission",
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Feil 113-betingelser, råd fra småsår og manglende fortsatt trykk/utenpåbandasje og varme/overvåking er synlige. Ikke gi poeng bare for 113-ordet. Kildene for konkret steinbruk er ikke klinisk godkjent i denne gjennomgangen."
+    },
+    {
+      "group": "case-07",
+      "answer_id": "28f7ab5961b5",
+      "reviewed": true,
+      "input_sha256": "96196bfae4fde97b9ae0e3007ed58e35598054e3930546912014ae9b329072be",
+      "answer_text_sha256": "4b9804ab5ad90a0913d9af286047e553c0fca0a3b9d86705166be06b86facf7d",
+      "medium_types": [
+        "critical_omission",
+        "requires_review"
+      ],
+      "high_types": [
+        "critical_omission",
+        "requires_review"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Begge finner blemmer/legekontakt utelatt og kremkonflikt i selve kilden. Temperatur/is-detaljers kritiske alvorlighetsgrad er rubrikkbestemt; konflikten om krem løses ikke av judge-enighet."
+    },
+    {
+      "group": "case-08",
+      "answer_id": "45ae3909d1de",
+      "reviewed": true,
+      "input_sha256": "e42cf31586698b5df158de1d3170fd4ee8c759fe2876661f62fe9286ae18f61a",
+      "answer_text_sha256": "d5adca810f4021a6e8902a066c88c1a46c23cfda1c7dd185d2da65313be0c171",
+      "medium_types": [
+        "critical_omission"
+      ],
+      "high_types": [
+        "critical_omission"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Alle mangler faktisk pustevurdering som er levert. Gemma har luftveisåpning, men går videre til HLR uten avklart pust. Ulike merkelapper for anvendelsen endrer ikke den konkrete svakheten. HLR-grenen er ikke fullstendig levert i primærkonteksten."
+    },
+    {
+      "group": "case-08",
+      "answer_id": "4daf32ba0c02",
+      "reviewed": true,
+      "input_sha256": "e42cf31586698b5df158de1d3170fd4ee8c759fe2876661f62fe9286ae18f61a",
+      "answer_text_sha256": "f80a6647f58a122d88e54d548d3170b6da25fcabbed3ab534864bb8610588492",
+      "medium_types": [
+        "critical_omission",
+        "irrelevant",
+        "unsupported"
+      ],
+      "high_types": [
+        "critical_omission",
+        "direct_conflict",
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Alle mangler faktisk pustevurdering som er levert. Gemma har luftveisåpning, men går videre til HLR uten avklart pust. Ulike merkelapper for anvendelsen endrer ikke den konkrete svakheten. HLR-grenen er ikke fullstendig levert i primærkonteksten."
+    },
+    {
+      "group": "case-08",
+      "answer_id": "c625821d1a6f",
+      "reviewed": true,
+      "input_sha256": "e42cf31586698b5df158de1d3170fd4ee8c759fe2876661f62fe9286ae18f61a",
+      "answer_text_sha256": "a3d911522d9c903e03347c8b49d232ff5acd8c00e1fdf927571700ac7f5f9f44",
+      "medium_types": [
+        "critical_omission",
+        "unsupported"
+      ],
+      "high_types": [
+        "critical_omission",
+        "requires_review"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Alle mangler faktisk pustevurdering som er levert. Gemma har luftveisåpning, men går videre til HLR uten avklart pust. Ulike merkelapper for anvendelsen endrer ikke den konkrete svakheten. HLR-grenen er ikke fullstendig levert i primærkonteksten."
+    },
+    {
+      "group": "diagnostic-case-08",
+      "answer_id": "6d643d5c7dde",
+      "reviewed": true,
+      "input_sha256": "1bf58af871431dacb5fe3fa67703f308bec99f3bbb8b1de1a1e1a3684fa0c158",
+      "answer_text_sha256": "653bc3cac3c4519592acb740a1e0507b4eecaa6c1b3af1e60510c027132ac66b",
+      "medium_types": [
+        "critical_omission"
+      ],
+      "high_types": [
+        "critical_omission"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Begge nye modeller gir vesentlig mer av prosedyren her; begge mangler nedovervendt munn. Gammel 2B knytter ti sekunder til HLR. Uklar oppstartsfrist/varighet beholdes som usikker, ikke en sikkert bestemt HLR-varighet."
+    },
+    {
+      "group": "diagnostic-case-08",
+      "answer_id": "d1817012b7f8",
+      "reviewed": true,
+      "input_sha256": "1bf58af871431dacb5fe3fa67703f308bec99f3bbb8b1de1a1e1a3684fa0c158",
+      "answer_text_sha256": "5a8765a4f9841d8990e9a27040ec2031cc104c31352096388480c622e9bfaa53",
+      "medium_types": [
+        "critical_omission",
+        "direct_conflict"
+      ],
+      "high_types": [
+        "critical_omission",
+        "requires_review"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Begge nye modeller gir vesentlig mer av prosedyren her; begge mangler nedovervendt munn. Gammel 2B knytter ti sekunder til HLR. Uklar oppstartsfrist/varighet beholdes som usikker, ikke en sikkert bestemt HLR-varighet."
+    },
+    {
+      "group": "diagnostic-case-08",
+      "answer_id": "d41b849c1d44",
+      "reviewed": true,
+      "input_sha256": "1bf58af871431dacb5fe3fa67703f308bec99f3bbb8b1de1a1e1a3684fa0c158",
+      "answer_text_sha256": "7514e5c9235222c9a6d37e2aff4cc4da8c8313cc6fc54594a7d2fe918cad2a05",
+      "medium_types": [
+        "critical_omission"
+      ],
+      "high_types": [
+        "critical_omission"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Begge nye modeller gir vesentlig mer av prosedyren her; begge mangler nedovervendt munn. Gammel 2B knytter ti sekunder til HLR. Uklar oppstartsfrist/varighet beholdes som usikker, ikke en sikkert bestemt HLR-varighet."
+    },
+    {
+      "group": "case-09",
+      "answer_id": "e18c92fff6c0",
+      "reviewed": true,
+      "input_sha256": "44f47f37faf920ad36268e9296fe3768118bb32c16b5a62fb0622752ef155c2c",
+      "answer_text_sha256": "b6d83098b84af3dc70022de9b83c3a0622e273cd716f8021058f57f0e9221ef5",
+      "medium_types": [
+        "direct_conflict",
+        "irrelevant",
+        "unsupported"
+      ],
+      "high_types": [
+        "direct_conflict",
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Varm drikke er ikke påkrevd i kilden. Ubetinget varmt isolerende tøy gjelder feil varmesituasjon; betinget isråd er irrelevant. Begge ser hovedproblemene."
+    },
+    {
+      "group": "case-10",
+      "answer_id": "cc7e86d922e2",
+      "reviewed": true,
+      "input_sha256": "7f9173170a63f523b6b456fe166e34284290ddb0d51541867122f58b542ab453",
+      "answer_text_sha256": "e6daa8498dc0f5750137324fbf4667435eb40cd711899c462a98b771e36f1070",
+      "medium_types": [
+        "irrelevant",
+        "unsupported"
+      ],
+      "high_types": [
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Trekasse er udokumentert og ispasient erstatter pakkeliste. Støtte for det isolerte underlaget alene versus anvendelsen er uavklart; sovepose eller tilsvarende og ly mangler."
+    },
+    {
+      "group": "case-11",
+      "answer_id": "657622cd1e2b",
+      "reviewed": true,
+      "input_sha256": "fdf223109684828704ae854e5f5209ad632e5e9a802b4ff1d0e6c768a274ff48",
+      "answer_text_sha256": "4db7131ffb0d2ec164db529b3bed933ad610f56bfb81b11ea690e8e9eb70bfae",
+      "medium_types": [
+        "direct_conflict"
+      ],
+      "high_types": [
+        "direct_conflict"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Begge finner den gale instruksen om å la avfall renne. High gir samtidig delvis kriteriedekning for dette; Mediums absent foretrekkes. Håndhygienekravets bredde utover brukerens matlagingsspørsmål trenger fortsatt eier-/faglig vurdering av målet."
+    },
+    {
+      "group": "case-12",
+      "answer_id": "07600b195f8c",
+      "reviewed": true,
+      "input_sha256": "9f7685d110deaabeb89b8198f74a64c3ec9195b7bb9a076eff77a5852a45cd42",
+      "answer_text_sha256": "8e21f58875e2fd9c146283643e435495af25d7893a0bcec4e6636724af7d18bc",
+      "medium_types": [
+        "critical_omission",
+        "irrelevant",
+        "unsupported"
+      ],
+      "high_types": [
+        "critical_omission",
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Nei til kryssing og alternativ rute er faktisk med. Om dette også dekker hensikten med vent/snu-kravet, eller krever egen setning, bør vurderes; rå kritisk-utelatelsesflagg er ikke endelig dom. Is- og flomkontaktstoff er uvedkommende/udokumentert i anvendelsen."
+    },
+    {
+      "group": "case-13",
+      "answer_id": "3aefbdefb61e",
+      "reviewed": true,
+      "input_sha256": "9390d22a1ccda5d66b7ca78535c0e2027a8c46a3bad37cc5516500e8a1193317",
+      "answer_text_sha256": "94801383b130d70610812d20bddff73c0163c626aee8960e63ee38873d058535",
+      "medium_types": [
+        "critical_omission",
+        "direct_conflict",
+        "irrelevant"
+      ],
+      "high_types": [
+        "critical_omission",
+        "requires_review",
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Nødpeileren aktiveres ikke. Ubetinget sideleie mangler kildens vilkår. Påstanden om ingen mobildekning avklarer ikke alle muligheter for nødanrop; Highs forsiktige tolkningsflagg er rimelig uten ekstern nettverkskunnskap."
+    },
+    {
+      "group": "case-14",
+      "answer_id": "1ebd8ab9e0ea",
+      "reviewed": true,
+      "input_sha256": "a765f83a859e578f5b6587e1aa5dc887ed07c31e2e8deae2b5644e733ed3c458",
+      "answer_text_sha256": "f02301707e5c296ad785eda57cd1ee36f506a2f3e064016d7b1ed8018732e6e0",
+      "medium_types": [
+        "irrelevant",
+        "unsupported"
+      ],
+      "high_types": [
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_medium": "unsafe_or_missing_abstention",
+      "gap_high": "unsafe_or_missing_abstention",
+      "note": "Begge ser isredning og feil slutning om levende skredtattes plassering; relevant retrettgrunnlag mangler. Ingen trygg avståelse."
+    },
+    {
+      "group": "case-15",
+      "answer_id": "21005ac72dde",
+      "reviewed": true,
+      "input_sha256": "02815e8d80f729211521a39331f2737788d9dff3ac5ad60f73a14ec46186f170",
+      "answer_text_sha256": "1178d27da6ed98d6a2ef58ebefc7f98c57001c3b2ccaabbfd047666bf2ade80a",
+      "medium_types": [
+        "direct_conflict",
+        "irrelevant",
+        "unsupported"
+      ],
+      "high_types": [
+        "irrelevant",
+        "requires_review",
+        "unsupported"
+      ],
+      "gap_medium": "unsafe_or_missing_abstention",
+      "gap_high": "uncertain",
+      "note": "Gemma avstår eksplisitt; ny 2B dikter tillatelse og regler. Gammel 2B kan leses som at regel mangler i kunnskapen eller i verden. Hold gap-uenigheten som usikker; den er ikke en bekreftet trygg avståelse. Ingen norsk båljuss vurderes eksternt her."
+    },
+    {
+      "group": "case-15",
+      "answer_id": "301047ea915f",
+      "reviewed": true,
+      "input_sha256": "02815e8d80f729211521a39331f2737788d9dff3ac5ad60f73a14ec46186f170",
+      "answer_text_sha256": "e03f7c0d05618bb6504a9043758a893884fb36f01c47a6f2367e58bf4620e84e",
+      "medium_types": [],
+      "high_types": [],
+      "gap_medium": "safe_abstention",
+      "gap_high": "safe_abstention",
+      "note": "Gemma avstår eksplisitt; ny 2B dikter tillatelse og regler. Gammel 2B kan leses som at regel mangler i kunnskapen eller i verden. Hold gap-uenigheten som usikker; den er ikke en bekreftet trygg avståelse. Ingen norsk båljuss vurderes eksternt her."
+    },
+    {
+      "group": "case-15",
+      "answer_id": "f4db0b17d78b",
+      "reviewed": true,
+      "input_sha256": "02815e8d80f729211521a39331f2737788d9dff3ac5ad60f73a14ec46186f170",
+      "answer_text_sha256": "fbd479bd95b617746791c2815d3a1016dc0f4f0657e2e4d28c935b91c5fc82e0",
+      "medium_types": [
+        "irrelevant",
+        "unsupported"
+      ],
+      "high_types": [
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_medium": "unsafe_or_missing_abstention",
+      "gap_high": "unsafe_or_missing_abstention",
+      "note": "Gemma avstår eksplisitt; ny 2B dikter tillatelse og regler. Gammel 2B kan leses som at regel mangler i kunnskapen eller i verden. Hold gap-uenigheten som usikker; den er ikke en bekreftet trygg avståelse. Ingen norsk båljuss vurderes eksternt her."
+    },
+    {
+      "group": "case-16",
+      "answer_id": "6f1f43528443",
+      "reviewed": true,
+      "input_sha256": "13d2cdcec8053826281dad895343bc8dab72128cab72976273c7d0b96f9dff9f",
+      "answer_text_sha256": "8672a89225dfb22b98e9bcb3a9cb7933af55c76aea0c19dff355933ad10bef2c",
+      "medium_types": [
+        "unsupported"
+      ],
+      "high_types": [
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Sårvask og beskyttelse finnes. Begge identifiserer udokumentert 113-terskel ved usikker dybde. Dette endrer ikke de positive delene."
+    },
+    {
+      "group": "case-17",
+      "answer_id": "3662e9dafe83",
+      "reviewed": true,
+      "input_sha256": "11cf31173ab0b620d3457d9ab3bc931bb6cdd05f4e873b32a658965f334f97c8",
+      "answer_text_sha256": "06d30b7a7a4d29370484db793c4887255f7ecd4ad9f045e578a82fd364823cb5",
+      "medium_types": [
+        "direct_conflict",
+        "irrelevant",
+        "unsupported"
+      ],
+      "high_types": [
+        "critical_omission",
+        "direct_conflict",
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Primærretrieval mangler stikkspesifikk prosedyre, men har generelt tidskritisk 113-råd. Ny 2B gir 113 straks sammen med oppdiktet nedkjøling/varmebehandling. Gemmas kildebegrensning er reell, men varsling utelates; ikke tell som corpus-gap-suksess."
+    },
+    {
+      "group": "case-17",
+      "answer_id": "38cf2c032506",
+      "reviewed": true,
+      "input_sha256": "11cf31173ab0b620d3457d9ab3bc931bb6cdd05f4e873b32a658965f334f97c8",
+      "answer_text_sha256": "13d52422c96c0ed2c00f4ecd0fb321fdb480bb891ae6da782c72aca7d4e4aed2",
+      "medium_types": [
+        "unsupported"
+      ],
+      "high_types": [
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Primærretrieval mangler stikkspesifikk prosedyre, men har generelt tidskritisk 113-råd. Ny 2B gir 113 straks sammen med oppdiktet nedkjøling/varmebehandling. Gemmas kildebegrensning er reell, men varsling utelates; ikke tell som corpus-gap-suksess."
+    },
+    {
+      "group": "case-17",
+      "answer_id": "beb23f98296b",
+      "reviewed": true,
+      "input_sha256": "11cf31173ab0b620d3457d9ab3bc931bb6cdd05f4e873b32a658965f334f97c8",
+      "answer_text_sha256": "e3ef67979a9c5961926b226b58796348243efb04b1e4a3d18e0343c89232fcba",
+      "medium_types": [
+        "critical_omission",
+        "requires_review"
+      ],
+      "high_types": [
+        "critical_omission",
+        "requires_review"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Primærretrieval mangler stikkspesifikk prosedyre, men har generelt tidskritisk 113-råd. Ny 2B gir 113 straks sammen med oppdiktet nedkjøling/varmebehandling. Gemmas kildebegrensning er reell, men varsling utelates; ikke tell som corpus-gap-suksess."
+    },
+    {
+      "group": "diagnostic-case-17",
+      "answer_id": "8337a747f379",
+      "reviewed": true,
+      "input_sha256": "b1d82db26893d9229f3d6eabb24bd2c108fd56dd01dc3d5faf7bc7a1532a5883",
+      "answer_text_sha256": "806e7abe82deec31064de30b2b1c9d1872ee8e1c08e7dde99c87af32af978e11",
+      "medium_types": [
+        "direct_conflict"
+      ],
+      "high_types": [
+        "direct_conflict"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Gemmas korte anafylaksi/113-råd dekker nytt kjernekrav. Ny 2B gir tilsvarende varsling, men legger til udokumentert allergenleting. Gammel 2B kombinerer øyeblikkelig varsling med venting. Grensen mellom positiv dekning og selvmotsigende instruksjon bør presiseres senere; ingen rå score endres."
+    },
+    {
+      "group": "diagnostic-case-17",
+      "answer_id": "dd72f728aec7",
+      "reviewed": true,
+      "input_sha256": "b1d82db26893d9229f3d6eabb24bd2c108fd56dd01dc3d5faf7bc7a1532a5883",
+      "answer_text_sha256": "c4652a418631c1432fe60dbc301d8e70e4cb9e85298eb728bb4c29bdab2b8977",
+      "medium_types": [],
+      "high_types": [],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Gemmas korte anafylaksi/113-råd dekker nytt kjernekrav. Ny 2B gir tilsvarende varsling, men legger til udokumentert allergenleting. Gammel 2B kombinerer øyeblikkelig varsling med venting. Grensen mellom positiv dekning og selvmotsigende instruksjon bør presiseres senere; ingen rå score endres."
+    },
+    {
+      "group": "diagnostic-case-17",
+      "answer_id": "fc058177beee",
+      "reviewed": true,
+      "input_sha256": "b1d82db26893d9229f3d6eabb24bd2c108fd56dd01dc3d5faf7bc7a1532a5883",
+      "answer_text_sha256": "cdd3a5efb196fe14fe8347256a73328eea4af1e6c620e609e3f9ebe6f647598f",
+      "medium_types": [
+        "requires_review",
+        "unsupported"
+      ],
+      "high_types": [
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Gemmas korte anafylaksi/113-råd dekker nytt kjernekrav. Ny 2B gir tilsvarende varsling, men legger til udokumentert allergenleting. Gammel 2B kombinerer øyeblikkelig varsling med venting. Grensen mellom positiv dekning og selvmotsigende instruksjon bør presiseres senere; ingen rå score endres."
+    },
+    {
+      "group": "case-18",
+      "answer_id": "932d3d68bf94",
+      "reviewed": true,
+      "input_sha256": "ad0c8fc40a2a779f68b27ace0bd6dee08d58906bd8c17e85681724ee5d33fd38",
+      "answer_text_sha256": "4ad556d726eb4fc3ba410741f027173130490da99407a2327b4734dc52216ede",
+      "medium_types": [
+        "critical_omission",
+        "unsupported"
+      ],
+      "high_types": [
+        "critical_omission",
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Komplett oppstigningsmetode mangler. Returretningens implisitte betydning og støtte for hele ispigg/skistav-setningen er bevart som usikre D012-014. Ikke gjør disse til bevist High-forbedring."
+    },
+    {
+      "group": "case-19",
+      "answer_id": "1a4ce50f6467",
+      "reviewed": true,
+      "input_sha256": "0b2f322e2625192f19d0cfa2c8fcf09f84ea3b48d0aa2ab00bfc76199e7832ec",
+      "answer_text_sha256": "972d4606a5c6bda98f49e9eb44d0e6bad129e50757707588cc9c53f795edc375",
+      "medium_types": [
+        "critical_omission",
+        "irrelevant",
+        "unsupported"
+      ],
+      "high_types": [
+        "critical_omission",
+        "irrelevant",
+        "requires_review"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Fellesutstyrsspørsmålet og søkestang/alle-personer-kravet er reelle svake punkter. Isredning er uvedkommende. Ord om skredvarselssone kan være uklare heller enn sikkert falske; behold Highs tolkningsforbehold."
+    },
+    {
+      "group": "case-19",
+      "answer_id": "4b6df7504dbb",
+      "reviewed": true,
+      "input_sha256": "0b2f322e2625192f19d0cfa2c8fcf09f84ea3b48d0aa2ab00bfc76199e7832ec",
+      "answer_text_sha256": "99ffa58064a49b0baad62f2cece16e1fb6a90e804ff6903ba030dd9232a839ae",
+      "medium_types": [
+        "critical_omission",
+        "irrelevant",
+        "unsupported"
+      ],
+      "high_types": [
+        "critical_omission",
+        "irrelevant",
+        "requires_review",
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Fellesutstyrsspørsmålet og søkestang/alle-personer-kravet er reelle svake punkter. Isredning er uvedkommende. Ord om skredvarselssone kan være uklare heller enn sikkert falske; behold Highs tolkningsforbehold."
+    },
+    {
+      "group": "case-19",
+      "answer_id": "f4cd87afd92d",
+      "reviewed": true,
+      "input_sha256": "0b2f322e2625192f19d0cfa2c8fcf09f84ea3b48d0aa2ab00bfc76199e7832ec",
+      "answer_text_sha256": "6aa6038ef3dfa5e09cf111e0c6d028628861823e06bb37c73e5aae65a9f42722",
+      "medium_types": [
+        "critical_omission"
+      ],
+      "high_types": [
+        "critical_omission",
+        "requires_review"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Fellesutstyrsspørsmålet og søkestang/alle-personer-kravet er reelle svake punkter. Isredning er uvedkommende. Ord om skredvarselssone kan være uklare heller enn sikkert falske; behold Highs tolkningsforbehold."
+    },
+    {
+      "group": "case-20",
+      "answer_id": "ac55a6271626",
+      "reviewed": true,
+      "input_sha256": "6465cbc94894b29821d475cc33a82114f90d6d992d91ccf4337cf59e20d0668f",
+      "answer_text_sha256": "31cb70d72124f8bf9ba51d38c166c68d7634abfce2db6a54bc7f2664e9b042f3",
+      "medium_types": [],
+      "high_types": [
+        "requires_review"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Planlegging og fleksibilitet er relevante, men avgrensning til skredterreng har uklar relevans. Highs requires_review utvider ikke automatisk listen over påviste feil."
+    },
+    {
+      "group": "case-21",
+      "answer_id": "231e77828428",
+      "reviewed": true,
+      "input_sha256": "860590cc69b27eff281fb2863cc501d3e9e14ab2a411b22f92fbf0e1f61f6390",
+      "answer_text_sha256": "2bc5ebcff152fabfde878b91b1f81f1c2fd5f74d152864b5340fd4104b919a8c",
+      "medium_types": [
+        "unsupported"
+      ],
+      "high_types": [
+        "critical_omission",
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Virusbegrensning og behandlingsrekkefølge er faktisk levert; produktinstruksjonen er ikke. High fanger imputerte klordioksidtabletter i gammel 2B som Medium overser. Ny 2B benekter virusvirkning og behandler selve filteret. Gemma gir kort riktig rekkefølge, men ikke filterbegrensningen."
+    },
+    {
+      "group": "case-21",
+      "answer_id": "258e7d3eca6d",
+      "reviewed": true,
+      "input_sha256": "860590cc69b27eff281fb2863cc501d3e9e14ab2a411b22f92fbf0e1f61f6390",
+      "answer_text_sha256": "5c6b05fb3b9879a4a5ebe895f159085a34e84174663ef7d4859acd660256f2d0",
+      "medium_types": [
+        "direct_conflict"
+      ],
+      "high_types": [
+        "direct_conflict"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Virusbegrensning og behandlingsrekkefølge er faktisk levert; produktinstruksjonen er ikke. High fanger imputerte klordioksidtabletter i gammel 2B som Medium overser. Ny 2B benekter virusvirkning og behandler selve filteret. Gemma gir kort riktig rekkefølge, men ikke filterbegrensningen."
+    },
+    {
+      "group": "case-21",
+      "answer_id": "66a5bd373520",
+      "reviewed": true,
+      "input_sha256": "860590cc69b27eff281fb2863cc501d3e9e14ab2a411b22f92fbf0e1f61f6390",
+      "answer_text_sha256": "72d0c094cec27ac5efcbfd0074eadee24249131ee84e24612de09a602863b23c",
+      "medium_types": [
+        "critical_omission"
+      ],
+      "high_types": [
+        "critical_omission"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Virusbegrensning og behandlingsrekkefølge er faktisk levert; produktinstruksjonen er ikke. High fanger imputerte klordioksidtabletter i gammel 2B som Medium overser. Ny 2B benekter virusvirkning og behandler selve filteret. Gemma gir kort riktig rekkefølge, men ikke filterbegrensningen."
+    },
+    {
+      "group": "case-22",
+      "answer_id": "04b51e7b5f38",
+      "reviewed": true,
+      "input_sha256": "0910c43bfe6095ea37bfd1e2a4eaa7d26380428972c6bb720d95608ee00fbde1",
+      "answer_text_sha256": "8931e969e633b3a07b29f476fa0c2e8e6ad64a84482643ccd5dc0f599d92039a",
+      "medium_types": [
+        "direct_conflict",
+        "unsupported"
+      ],
+      "high_types": [
+        "direct_conflict",
+        "requires_review"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Papirreserve i selve telefonen og manglende batteriplan er problemer. PLB-kontakt kan bety varsling eller toveis kontakt; ikke behandle den siste tolkningen som sikkert ment."
+    },
+    {
+      "group": "case-23",
+      "answer_id": "8d0bac244f14",
+      "reviewed": true,
+      "input_sha256": "1140ff9330724a111f14c6983fd7df2181889a2cef266ae6c966da80c8aa4e97",
+      "answer_text_sha256": "319be64cc52c935edd647979473fc0eef6673f6c84019a83b1ddf991f2d8421e",
+      "medium_types": [
+        "unsupported"
+      ],
+      "high_types": [
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Ny 2B tillater utgang etter ti minutter; dette er direkte i strid med levert regel. Gemma gir de tre kjernebehovene, men legger til et kjøretøyalternativ uten metalltak. Gammel 2B mangler ventetid og har isstoff. Vannledningsstøtten bedømmes separat fra tillegg om drikkevann."
+    },
+    {
+      "group": "case-23",
+      "answer_id": "92b946c15231",
+      "reviewed": true,
+      "input_sha256": "1140ff9330724a111f14c6983fd7df2181889a2cef266ae6c966da80c8aa4e97",
+      "answer_text_sha256": "22ab0647e98663c3614cb03943da99456e71890907d489963b5715071cc3067e",
+      "medium_types": [
+        "direct_conflict",
+        "irrelevant",
+        "requires_review"
+      ],
+      "high_types": [
+        "critical_omission",
+        "direct_conflict",
+        "irrelevant",
+        "requires_review",
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Ny 2B tillater utgang etter ti minutter; dette er direkte i strid med levert regel. Gemma gir de tre kjernebehovene, men legger til et kjøretøyalternativ uten metalltak. Gammel 2B mangler ventetid og har isstoff. Vannledningsstøtten bedømmes separat fra tillegg om drikkevann."
+    },
+    {
+      "group": "case-23",
+      "answer_id": "a3843fe8805e",
+      "reviewed": true,
+      "input_sha256": "1140ff9330724a111f14c6983fd7df2181889a2cef266ae6c966da80c8aa4e97",
+      "answer_text_sha256": "577f4641215509a76f641cb9a5dacda30dfe9fdd2d43974759f94df65ead9624",
+      "medium_types": [
+        "critical_omission",
+        "irrelevant",
+        "unsupported"
+      ],
+      "high_types": [
+        "critical_omission",
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Ny 2B tillater utgang etter ti minutter; dette er direkte i strid med levert regel. Gemma gir de tre kjernebehovene, men legger til et kjøretøyalternativ uten metalltak. Gammel 2B mangler ventetid og har isstoff. Vannledningsstøtten bedømmes separat fra tillegg om drikkevann."
+    },
+    {
+      "group": "case-24",
+      "answer_id": "4d80f9027a3b",
+      "reviewed": true,
+      "input_sha256": "7c4525e7bd0d92b9c90e18ab954e19f896c7b13d3bd9b212e372640a1b1385bc",
+      "answer_text_sha256": "130c0a159fdb36bc53241e17fe12f9f910263dd4e0dcc13bc7b65c71bf1ee054",
+      "medium_types": [
+        "critical_omission",
+        "irrelevant"
+      ],
+      "high_types": [
+        "critical_omission",
+        "irrelevant"
+      ],
+      "gap_medium": "not_gap",
+      "gap_high": "not_gap",
+      "note": "Bil- og båtråd er irrelevante. Begges kritiske utelatelsesflagg for den beskrevne skråningen avvises i D018: det brede forbudet mot å oppholde seg nær den aktuelle bekken dekker stedet etter revidert kontekstregel. Ingen rå score endres."
+    },
+    {
+      "group": "case-25",
+      "answer_id": "2edf6285fdf5",
+      "reviewed": true,
+      "input_sha256": "bddce967cdc82fe671738a3d320fe9e4dd4b8377d2aaa606dd3d9a4a1cad3e13",
+      "answer_text_sha256": "2b746be819e959205a84d63b647b59140968cb62f4bf367c9e393af62d882256",
+      "medium_types": [],
+      "high_types": [],
+      "gap_medium": "safe_abstention",
+      "gap_high": "safe_abstention",
+      "note": "Gemma avstår; begge 2B-versjoner dikter fremgangsmåter uten kildegrunnlag. Ny 2B krever også teltduk som brukeren ikke har. Begge er enige om manglende trygg avståelse."
+    },
+    {
+      "group": "case-25",
+      "answer_id": "8fc85889a9e5",
+      "reviewed": true,
+      "input_sha256": "bddce967cdc82fe671738a3d320fe9e4dd4b8377d2aaa606dd3d9a4a1cad3e13",
+      "answer_text_sha256": "015224d2ab360849033d9e5f16d22d05f0baad84e97e4fb544e440ddd8aa0601",
+      "medium_types": [
+        "irrelevant",
+        "unsupported"
+      ],
+      "high_types": [
+        "irrelevant",
+        "requires_review",
+        "unsupported"
+      ],
+      "gap_medium": "unsafe_or_missing_abstention",
+      "gap_high": "unsafe_or_missing_abstention",
+      "note": "Gemma avstår; begge 2B-versjoner dikter fremgangsmåter uten kildegrunnlag. Ny 2B krever også teltduk som brukeren ikke har. Begge er enige om manglende trygg avståelse."
+    },
+    {
+      "group": "case-25",
+      "answer_id": "9437ca81d3af",
+      "reviewed": true,
+      "input_sha256": "bddce967cdc82fe671738a3d320fe9e4dd4b8377d2aaa606dd3d9a4a1cad3e13",
+      "answer_text_sha256": "e5387db9e9d74d0d742f94430c75f12bc07939a81faafceee098376ce737f2ee",
+      "medium_types": [
+        "unsupported"
+      ],
+      "high_types": [
+        "unsupported"
+      ],
+      "gap_medium": "unsafe_or_missing_abstention",
+      "gap_high": "unsafe_or_missing_abstention",
+      "note": "Gemma avstår; begge 2B-versjoner dikter fremgangsmåter uten kildegrunnlag. Ny 2B krever også teltduk som brukeren ikke har. Begge er enige om manglende trygg avståelse."
+    }
+  ],
+  "additional_agreed_issue": [
+    {
+      "group": "case-05",
+      "answer_id": "9db3cd842605",
+      "effort": "medium",
+      "criterion_id": "case-05/old5",
+      "raw_decision": "partial",
+      "review_decision": "full",
+      "reason": "Én komplett solid-bygning-med-strøm/rør-alternativ er oppgitt. Metalltak mangler i et annet alternativ og skal flagges separat; det opphever ikke den positive dekningen."
+    },
+    {
+      "group": "case-05",
+      "answer_id": "9db3cd842605",
+      "effort": "high",
+      "criterion_id": "case-05/old5",
+      "raw_decision": "partial",
+      "review_decision": "full",
+      "reason": "Én komplett solid-bygning-med-strøm/rør-alternativ er oppgitt. Metalltak mangler i et annet alternativ og skal flagges separat; det opphever ikke den positive dekningen."
+    }
+  ],
+  "gap_disagreement_review": {
+    "group": "case-15",
+    "answer_id": "21005ac72dde",
+    "review_decision": "uncertain",
+    "safe_abstention_confirmed": false,
+    "reason": "Ingen spesifikk regel kan vise til kunnskapens dekning eller en påstand om verden. Konservativ usikkerhet; ingen trygg tillatelse eller avståelse er dokumentert."
+  },
+  "limits": [
+    "Preferences are source-bound agent judgments, not clinical gold",
+    "Old/revised disputes often duplicate the same underlying wording issue",
+    "No partially adjudicated model leaderboard is produced",
+    "Critical flags reflect author-defined rubric significance, not validated clinical severity"
+  ],
+  "bindings": {
+    "blind_adjudication_sha256": "4c3bd459768e819f5da642616cb00426ed25a384cfbf5167d2e91c521942351e",
+    "packet_sha256": "1e253ae67e337ebd6f426d4b69ffcf819d883538736dce839b4a3fe6cb90d643",
+    "key_sha256": "fc7df3507a5bd2d367b273dae823008508b8f3cab9a19a2b759334c158788323",
+    "finding_packet_sha256": "be19953283ec9dca871b2a97e5cd7c7828747f1dafd4da0a066302c884da765f",
+    "review_code_sha256": "af994a727dc544bc5593c005bff20fe9a3720907b82dfcd19b734e0d818b21c7"
+  }
+}

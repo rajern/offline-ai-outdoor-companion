@@ -134,3 +134,22 @@ Run the app and try `evals/real-knowledge.json` plus paraphrases and combined
 scenarios. Review retrieval relevance, Norwegian answer quality, source
 correctness and missing knowledge. Automated checks do not approve product
 quality. M3 must wait for explicit owner approval.
+
+## Learning-prototype profile (26 October 2026)
+
+Setup also builds a separate full-body window index (`prototype-index.json` and
+`prototype-embeddings.npy`) for the measured MiniLM T-ranking/P3 application
+profile. The original index remains available. To build only the prototype
+index from already installed frozen assets, without fetching sources:
+
+```powershell
+cd backend
+.\.venv\Scripts\python.exe -m outwise.knowledge.window_index
+```
+
+The application uses Norway/general scope, top-16 seeds and no score threshold.
+Source excerpts and AI interpretation are displayed separately. The setup smoke
+check is operational verification, not a new rubric evaluation or safety pass.
+See [scope](PROTOTYPE.md), [results](RESULTS.md) and [verification](VERIFICATION.md).
+Two selected replay examples include licensed source text with attribution;
+full source snapshots and indexes still remain outside Git.

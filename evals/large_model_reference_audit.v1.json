@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-25T14:40:43.828017+00:00",
+  "passed": true,
+  "parent_protected_files": 1270,
+  "same_eight_system_user_messages": true,
+  "generator_input_rubric_free": true,
+  "generation_raw_reparsed": 8,
+  "judge_raw_reparsed": 8,
+  "judged_answer_text_matches": 8,
+  "all_tool_free_and_resources_pass": true,
+  "new_generation_calls": 8,
+  "new_judge_calls": 8,
+  "freeze_sha256": "c1be06ec04d3748566b9598802935786d739f3ab8738874ad545d2551ca0debc",
+  "judge_freeze_sha256": "6975d3e0b935367907cc80c08cee5e9ef3d7d2f03b20522d4bfb7f1113b483fe",
+  "independent_clinical_review": false,
+  "limitation": "Client guards do not measure remote model memory; hidden wrapper/model revision not independently exposed."
+}

@@ -1,7 +1,11 @@
 import os
+from contextlib import asynccontextmanager
+from threading import Lock
+from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from outwise.routes.chat import router as chat_router
 from outwise.routes.health import router as health_router
@@ -13,26 +17,38 @@ from outwise.services.orchestrator import (
     knowledge_path_from_environment,
 )
 from outwise.services.retrieval import RetrievalService
-from outwise.services.semantic_retrieval import LocalKnowledgeRetriever
+from outwise.knowledge.window_index import WindowRetriever
+from outwise.services.native_model import NativeModelService
 
 
 def create_app(
     model_service: ModelGenerator | None = None,
     retrieval_service: KnowledgeRetriever | None = None,
 ) -> FastAPI:
-    app = FastAPI(title="Outwise API", version="0.1.0")
-    resolved_model_service = model_service or ModelService()
+    prototype = retrieval_service is None and os.environ.get("OUTWISE_KNOWLEDGE_MODE", "real") == "real"
+    resolved_model_service = model_service or (NativeModelService() if prototype else ModelService())
+
+    @asynccontextmanager
+    async def lifespan(app):
+        yield
+        if isinstance(resolved_model_service, NativeModelService):
+            resolved_model_service.close()
+
+    app = FastAPI(title="Outwise API", version="0.2.0", lifespan=lifespan)
     if retrieval_service is not None:
         resolved_retrieval_service = retrieval_service
     elif os.environ.get("OUTWISE_KNOWLEDGE_MODE", "real") == "real":
-        resolved_retrieval_service = LocalKnowledgeRetriever(knowledge_path_from_environment())
+        resolved_retrieval_service = WindowRetriever(knowledge_path_from_environment())
     elif os.environ.get("OUTWISE_KNOWLEDGE_MODE") == "fixtures":
         resolved_retrieval_service = RetrievalService.from_json(knowledge_path_from_environment())
     else:
         raise ValueError("OUTWISE_KNOWLEDGE_MODE must be real or fixtures")
     app.state.orchestrator = Orchestrator(
-        resolved_retrieval_service, resolved_model_service
+        resolved_retrieval_service, resolved_model_service, top_k=16 if prototype else 3, prototype=prototype,
     )
+    app.state.request_lock = Lock()
+    app.state.model_service = resolved_model_service
+    app.state.prototype = prototype
     app.add_middleware(
         CORSMiddleware,
         allow_origin_regex=r"^https?://(localhost|127\.0\.0\.1)(:\d+)?$",
@@ -41,6 +57,9 @@ def create_app(
     )
     app.include_router(health_router)
     app.include_router(chat_router)
+    web = Path(__file__).resolve().parents[2] / 'frontend/dist'
+    if web.is_dir():
+        app.mount('/', StaticFiles(directory=web, html=True), name='web')
     return app
 
 

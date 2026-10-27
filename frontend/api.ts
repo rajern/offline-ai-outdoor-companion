@@ -1,4 +1,5 @@
-const API_BASE_URL = process.env.EXPO_PUBLIC_API_URL ?? 'http://127.0.0.1:8000';
+const API_BASE_URL = process.env.EXPO_PUBLIC_API_URL ??
+  (typeof window !== 'undefined' ? window.location.origin : 'http://127.0.0.1:8000');
 
 export type ChatSource = {
   title: string;
@@ -10,12 +11,29 @@ export type ChatSource = {
   retrieved_at?: string;
   source_updated_at?: string;
   notice?: string;
+  excerpts: { id: string; text: string; section?: string; language: string }[];
 };
 
 export type ChatResponse = {
   answer: string;
   sources: ChatSource[];
+  generation_error?: string;
+  context_notice?: string;
 };
+
+export type LocalStatus = {
+  mode: string;
+  assets_present: boolean;
+  knowledge_present: boolean;
+  model_present: boolean;
+  message: string;
+};
+
+export async function getLocalStatus(): Promise<LocalStatus> {
+  const response = await fetch(`${API_BASE_URL}/api/status`);
+  if (!response.ok) throw new Error('Status unavailable');
+  return response.json() as Promise<LocalStatus>;
+}
 
 export async function sendChatMessage(message: string): Promise<ChatResponse> {
   let response: Response;

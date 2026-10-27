@@ -24,6 +24,8 @@ try {
     if ($LASTEXITCODE -ne 0) { throw "Knowledge ingestion failed." }
     & $Python @embeddingArgs
     if ($LASTEXITCODE -ne 0) { throw "Embedding build failed." }
+    & $Python -m outwise.knowledge.window_index
+    if ($LASTEXITCODE -ne 0) { throw "Prototype window index build failed." }
     & $Python -m outwise.knowledge.evaluate
     if ($LASTEXITCODE -ne 0) { throw "Retrieval evaluation failed; inspect knowledge/local/retrieval-report.json." }
 }

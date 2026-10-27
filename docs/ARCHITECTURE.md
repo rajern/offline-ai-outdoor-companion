@@ -187,3 +187,20 @@ The interfaces and expected behaviour should remain conceptually the same.
 - Avoid coupling retrieval directly to specific data sources.
 - Do not introduce distributed services or complex infrastructure.
 - Optimize for rapid agentic development and easy replacement of individual components.
+## Implemented learning-prototype closeout (26 October 2026)
+
+The current normal flow uses `WindowRetriever` -> original P3 packing ->
+`NativeModelService`, with source excerpts/metadata returned separately from the
+interpretation. `NativeModelService` owns a lazy, single-slot, numeric-loopback
+llama.cpp server and closes it on application shutdown. Prompt/token budgets
+are enforced without silently truncating sources. The existing legacy services
+remain for historical compatibility; application code imports no eval runners.
+
+FastAPI can serve the exported Expo frontend itself. API URLs are same-origin
+unless a development override is set. Model calls are serialized. Each question
+is independent; conversation memory and device location are not implemented.
+
+The safety layer above is an original architectural target and remains
+unfinished. Prototype warnings, visible sources and operational failure handling
+are not a substitute for that layer. The chosen closeout scope is described in
+[PROTOTYPE.md](PROTOTYPE.md); no full MVP safety approval is implied.

@@ -1,0 +1,948 @@
+{
+  "at": "2026-10-25T09:19:44.019344+00:00",
+  "raw_scores_changed": false,
+  "clinical_validation": false,
+  "reviewer": "Current workspace agent, not independent expert; actual model/effort not exposed",
+  "scope": "All69 actual main items and25 finding lists inspected. Full positive quote evidence checked against criterion wording; absent/partial actual source contexts checked, with notes below. No exhaustive clinical validation.",
+  "criterion_reviews": [
+    {
+      "case_id": "case-01",
+      "criterion_id": "case-01/r1",
+      "raw_decision": "absent",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Hele konteksten kontrollert for de to negative/delvise kravene: manglende belastningsevne kobles ikke til brudd, og mulig brudd kobles ikke til legekontakt. Ro/avlastning er fullt levert.",
+      "input_sha256": "3d35e306a63679b2e1137dd662bece7963c8affd73347c41aa4d690ca6af2646",
+      "record_sha256": "33b1a339f152c6a415b0063d45c5da39e4a039ede4b4d17038459335e6594bb5"
+    },
+    {
+      "case_id": "case-01",
+      "criterion_id": "case-01/r3",
+      "raw_decision": "partial",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Hele konteksten kontrollert for de to negative/delvise kravene: manglende belastningsevne kobles ikke til brudd, og mulig brudd kobles ikke til legekontakt. Ro/avlastning er fullt levert.",
+      "input_sha256": "3d35e306a63679b2e1137dd662bece7963c8affd73347c41aa4d690ca6af2646",
+      "record_sha256": "33b1a339f152c6a415b0063d45c5da39e4a039ede4b4d17038459335e6594bb5"
+    },
+    {
+      "case_id": "case-01",
+      "criterion_id": "case-01/r4",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Hele konteksten kontrollert for de to negative/delvise kravene: manglende belastningsevne kobles ikke til brudd, og mulig brudd kobles ikke til legekontakt. Ro/avlastning er fullt levert.",
+      "input_sha256": "3d35e306a63679b2e1137dd662bece7963c8affd73347c41aa4d690ca6af2646",
+      "record_sha256": "33b1a339f152c6a415b0063d45c5da39e4a039ede4b4d17038459335e6594bb5"
+    },
+    {
+      "case_id": "case-02",
+      "criterion_id": "case-02/r1",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Vått tøy, isolasjon/vind/fukt, sikker varmetilførsel, overvåking og113 finnes direkte i kildene. Enkelte pakkelisteelementer kan være nyttige supplementer snarere enn støy; annen irrelevant tekst er tydelig.",
+      "input_sha256": "9e6bf040ce7ecb6ddb37348ab8549a53aa376a293e856197f630e4aad36fd976",
+      "record_sha256": "43f87a28ae619cf54eca68907531c64b50575411f25513d2d32406f1e8687702"
+    },
+    {
+      "case_id": "case-02",
+      "criterion_id": "case-02/r2",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Vått tøy, isolasjon/vind/fukt, sikker varmetilførsel, overvåking og113 finnes direkte i kildene. Enkelte pakkelisteelementer kan være nyttige supplementer snarere enn støy; annen irrelevant tekst er tydelig.",
+      "input_sha256": "9e6bf040ce7ecb6ddb37348ab8549a53aa376a293e856197f630e4aad36fd976",
+      "record_sha256": "43f87a28ae619cf54eca68907531c64b50575411f25513d2d32406f1e8687702"
+    },
+    {
+      "case_id": "case-02",
+      "criterion_id": "case-02/r3",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Vått tøy, isolasjon/vind/fukt, sikker varmetilførsel, overvåking og113 finnes direkte i kildene. Enkelte pakkelisteelementer kan være nyttige supplementer snarere enn støy; annen irrelevant tekst er tydelig.",
+      "input_sha256": "9e6bf040ce7ecb6ddb37348ab8549a53aa376a293e856197f630e4aad36fd976",
+      "record_sha256": "43f87a28ae619cf54eca68907531c64b50575411f25513d2d32406f1e8687702"
+    },
+    {
+      "case_id": "case-02",
+      "criterion_id": "case-02/r4",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Vått tøy, isolasjon/vind/fukt, sikker varmetilførsel, overvåking og113 finnes direkte i kildene. Enkelte pakkelisteelementer kan være nyttige supplementer snarere enn støy; annen irrelevant tekst er tydelig.",
+      "input_sha256": "9e6bf040ce7ecb6ddb37348ab8549a53aa376a293e856197f630e4aad36fd976",
+      "record_sha256": "43f87a28ae619cf54eca68907531c64b50575411f25513d2d32406f1e8687702"
+    },
+    {
+      "case_id": "case-02",
+      "criterion_id": "case-02/r5",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Vått tøy, isolasjon/vind/fukt, sikker varmetilførsel, overvåking og113 finnes direkte i kildene. Enkelte pakkelisteelementer kan være nyttige supplementer snarere enn støy; annen irrelevant tekst er tydelig.",
+      "input_sha256": "9e6bf040ce7ecb6ddb37348ab8549a53aa376a293e856197f630e4aad36fd976",
+      "record_sha256": "43f87a28ae619cf54eca68907531c64b50575411f25513d2d32406f1e8687702"
+    },
+    {
+      "case_id": "case-03",
+      "criterion_id": "case-03/r2",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Hele konteksten kontrollert: generelle behandlingsråd og kjemikaliebegrensning er levert; de to koketidene/høydegrensen finnes ikke. Ikke fyll dette fra corpus eller diagnosekonteksten.",
+      "input_sha256": "8a43d594610bac8171ed403f8a64b60b19fb11be7b9c01a52ace016683d26ea7",
+      "record_sha256": "51a92c5ac62e830d9b1c827588ca1a6713b88094fe32f828cab98083835d4950"
+    },
+    {
+      "case_id": "case-03",
+      "criterion_id": "case-03/r3",
+      "raw_decision": "absent",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Hele konteksten kontrollert: generelle behandlingsråd og kjemikaliebegrensning er levert; de to koketidene/høydegrensen finnes ikke. Ikke fyll dette fra corpus eller diagnosekonteksten.",
+      "input_sha256": "8a43d594610bac8171ed403f8a64b60b19fb11be7b9c01a52ace016683d26ea7",
+      "record_sha256": "51a92c5ac62e830d9b1c827588ca1a6713b88094fe32f828cab98083835d4950"
+    },
+    {
+      "case_id": "case-03",
+      "criterion_id": "case-03/r4",
+      "raw_decision": "absent",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Hele konteksten kontrollert: generelle behandlingsråd og kjemikaliebegrensning er levert; de to koketidene/høydegrensen finnes ikke. Ikke fyll dette fra corpus eller diagnosekonteksten.",
+      "input_sha256": "8a43d594610bac8171ed403f8a64b60b19fb11be7b9c01a52ace016683d26ea7",
+      "record_sha256": "51a92c5ac62e830d9b1c827588ca1a6713b88094fe32f828cab98083835d4950"
+    },
+    {
+      "case_id": "case-03",
+      "criterion_id": "case-03/r5",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Hele konteksten kontrollert: generelle behandlingsråd og kjemikaliebegrensning er levert; de to koketidene/høydegrensen finnes ikke. Ikke fyll dette fra corpus eller diagnosekonteksten.",
+      "input_sha256": "8a43d594610bac8171ed403f8a64b60b19fb11be7b9c01a52ace016683d26ea7",
+      "record_sha256": "51a92c5ac62e830d9b1c827588ca1a6713b88094fe32f828cab98083835d4950"
+    },
+    {
+      "case_id": "case-04",
+      "criterion_id": "case-04/r1",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "De fem bortkomsthandlingene står samlet og eksplisitt i blokk4. Skred- og annen-situasjonstekst gir ikke motstrid bare fordi den også er handlingsrettet.",
+      "input_sha256": "bbc533ad3054b1921a9ee5a77f02a03eabc0f0a5f421e5d2ab30c76b7a5bd177",
+      "record_sha256": "e0061fa15f1869de77c9db4fad6f1964fa36b8780b0409780bad2806ae16b056"
+    },
+    {
+      "case_id": "case-04",
+      "criterion_id": "case-04/r2",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "De fem bortkomsthandlingene står samlet og eksplisitt i blokk4. Skred- og annen-situasjonstekst gir ikke motstrid bare fordi den også er handlingsrettet.",
+      "input_sha256": "bbc533ad3054b1921a9ee5a77f02a03eabc0f0a5f421e5d2ab30c76b7a5bd177",
+      "record_sha256": "e0061fa15f1869de77c9db4fad6f1964fa36b8780b0409780bad2806ae16b056"
+    },
+    {
+      "case_id": "case-04",
+      "criterion_id": "case-04/r3",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "De fem bortkomsthandlingene står samlet og eksplisitt i blokk4. Skred- og annen-situasjonstekst gir ikke motstrid bare fordi den også er handlingsrettet.",
+      "input_sha256": "bbc533ad3054b1921a9ee5a77f02a03eabc0f0a5f421e5d2ab30c76b7a5bd177",
+      "record_sha256": "e0061fa15f1869de77c9db4fad6f1964fa36b8780b0409780bad2806ae16b056"
+    },
+    {
+      "case_id": "case-04",
+      "criterion_id": "case-04/r4",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "De fem bortkomsthandlingene står samlet og eksplisitt i blokk4. Skred- og annen-situasjonstekst gir ikke motstrid bare fordi den også er handlingsrettet.",
+      "input_sha256": "bbc533ad3054b1921a9ee5a77f02a03eabc0f0a5f421e5d2ab30c76b7a5bd177",
+      "record_sha256": "e0061fa15f1869de77c9db4fad6f1964fa36b8780b0409780bad2806ae16b056"
+    },
+    {
+      "case_id": "case-04",
+      "criterion_id": "case-04/r5",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "De fem bortkomsthandlingene står samlet og eksplisitt i blokk4. Skred- og annen-situasjonstekst gir ikke motstrid bare fordi den også er handlingsrettet.",
+      "input_sha256": "bbc533ad3054b1921a9ee5a77f02a03eabc0f0a5f421e5d2ab30c76b7a5bd177",
+      "record_sha256": "e0061fa15f1869de77c9db4fad6f1964fa36b8780b0409780bad2806ae16b056"
+    },
+    {
+      "case_id": "case-05",
+      "criterion_id": "case-05/r2",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Eksplisitt lynly, avvisning av overheng og ned fra høyt terreng er levert. Begge betingede begrensninger finnes i universalregelen og kildebeskrevet reserveplan.",
+      "input_sha256": "701eb0a9c5f9779797f8bc019eb3f02862c92b779a1b36b462c566b85a11a7f7",
+      "record_sha256": "c34e8a32b5370b7b3ef41f3afe6a58281c2840ea3378cd07e28f49788fd0da70"
+    },
+    {
+      "case_id": "case-05",
+      "criterion_id": "case-05/r3",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Eksplisitt lynly, avvisning av overheng og ned fra høyt terreng er levert. Begge betingede begrensninger finnes i universalregelen og kildebeskrevet reserveplan.",
+      "input_sha256": "701eb0a9c5f9779797f8bc019eb3f02862c92b779a1b36b462c566b85a11a7f7",
+      "record_sha256": "c34e8a32b5370b7b3ef41f3afe6a58281c2840ea3378cd07e28f49788fd0da70"
+    },
+    {
+      "case_id": "case-05",
+      "criterion_id": "case-05/r4",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Eksplisitt lynly, avvisning av overheng og ned fra høyt terreng er levert. Begge betingede begrensninger finnes i universalregelen og kildebeskrevet reserveplan.",
+      "input_sha256": "701eb0a9c5f9779797f8bc019eb3f02862c92b779a1b36b462c566b85a11a7f7",
+      "record_sha256": "c34e8a32b5370b7b3ef41f3afe6a58281c2840ea3378cd07e28f49788fd0da70"
+    },
+    {
+      "case_id": "case-05",
+      "criterion_id": "case-05/r5",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Eksplisitt lynly, avvisning av overheng og ned fra høyt terreng er levert. Begge betingede begrensninger finnes i universalregelen og kildebeskrevet reserveplan.",
+      "input_sha256": "701eb0a9c5f9779797f8bc019eb3f02862c92b779a1b36b462c566b85a11a7f7",
+      "record_sha256": "c34e8a32b5370b7b3ef41f3afe6a58281c2840ea3378cd07e28f49788fd0da70"
+    },
+    {
+      "case_id": "case-05",
+      "criterion_id": "case-05/r6",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Eksplisitt lynly, avvisning av overheng og ned fra høyt terreng er levert. Begge betingede begrensninger finnes i universalregelen og kildebeskrevet reserveplan.",
+      "input_sha256": "701eb0a9c5f9779797f8bc019eb3f02862c92b779a1b36b462c566b85a11a7f7",
+      "record_sha256": "c34e8a32b5370b7b3ef41f3afe6a58281c2840ea3378cd07e28f49788fd0da70"
+    },
+    {
+      "case_id": "case-06",
+      "criterion_id": "case-06/r1",
+      "raw_decision": "absent",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Alle faktiske blokker kontrollert: direkte trykk, utenpåbandasje og økt trykk, varme/overvåking/113 ved forverring er levert. Ingen regel om initial113-varsling for stor ytre blødning finnes i pakken.",
+      "input_sha256": "3ad74b43ff6c03af1e140cd281161ce8cd4a7799616875206a3c92e99fb13614",
+      "record_sha256": "b1097310e174ea96f34ce8344d3858d8c264acf8421083fff9144038ad7b617b"
+    },
+    {
+      "case_id": "case-06",
+      "criterion_id": "case-06/r2",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Alle faktiske blokker kontrollert: direkte trykk, utenpåbandasje og økt trykk, varme/overvåking/113 ved forverring er levert. Ingen regel om initial113-varsling for stor ytre blødning finnes i pakken.",
+      "input_sha256": "3ad74b43ff6c03af1e140cd281161ce8cd4a7799616875206a3c92e99fb13614",
+      "record_sha256": "b1097310e174ea96f34ce8344d3858d8c264acf8421083fff9144038ad7b617b"
+    },
+    {
+      "case_id": "case-06",
+      "criterion_id": "case-06/r3",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Alle faktiske blokker kontrollert: direkte trykk, utenpåbandasje og økt trykk, varme/overvåking/113 ved forverring er levert. Ingen regel om initial113-varsling for stor ytre blødning finnes i pakken.",
+      "input_sha256": "3ad74b43ff6c03af1e140cd281161ce8cd4a7799616875206a3c92e99fb13614",
+      "record_sha256": "b1097310e174ea96f34ce8344d3858d8c264acf8421083fff9144038ad7b617b"
+    },
+    {
+      "case_id": "case-06",
+      "criterion_id": "case-06/r4",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Alle faktiske blokker kontrollert: direkte trykk, utenpåbandasje og økt trykk, varme/overvåking/113 ved forverring er levert. Ingen regel om initial113-varsling for stor ytre blødning finnes i pakken.",
+      "input_sha256": "3ad74b43ff6c03af1e140cd281161ce8cd4a7799616875206a3c92e99fb13614",
+      "record_sha256": "b1097310e174ea96f34ce8344d3858d8c264acf8421083fff9144038ad7b617b"
+    },
+    {
+      "case_id": "case-07",
+      "criterion_id": "case-07/r1",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Fire kjernekrav har direkte og komplett støtte. Den allerede deklarerte kremuklarheten beholdes som egen kildemerknad uten endring av kjernepoeng eller medisinsk avgjørelse.",
+      "input_sha256": "ca7a3649aea0589d2388193234f7ab36af77c95ba495732ff96c4ba6c1fae342",
+      "record_sha256": "a3571b0c8c6d5baed4d2501f40bc785aac2f3c9828deed31f35f2a10dd02afe0"
+    },
+    {
+      "case_id": "case-07",
+      "criterion_id": "case-07/r2",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Fire kjernekrav har direkte og komplett støtte. Den allerede deklarerte kremuklarheten beholdes som egen kildemerknad uten endring av kjernepoeng eller medisinsk avgjørelse.",
+      "input_sha256": "ca7a3649aea0589d2388193234f7ab36af77c95ba495732ff96c4ba6c1fae342",
+      "record_sha256": "a3571b0c8c6d5baed4d2501f40bc785aac2f3c9828deed31f35f2a10dd02afe0"
+    },
+    {
+      "case_id": "case-07",
+      "criterion_id": "case-07/r3",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Fire kjernekrav har direkte og komplett støtte. Den allerede deklarerte kremuklarheten beholdes som egen kildemerknad uten endring av kjernepoeng eller medisinsk avgjørelse.",
+      "input_sha256": "ca7a3649aea0589d2388193234f7ab36af77c95ba495732ff96c4ba6c1fae342",
+      "record_sha256": "a3571b0c8c6d5baed4d2501f40bc785aac2f3c9828deed31f35f2a10dd02afe0"
+    },
+    {
+      "case_id": "case-07",
+      "criterion_id": "case-07/r4",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Fire kjernekrav har direkte og komplett støtte. Den allerede deklarerte kremuklarheten beholdes som egen kildemerknad uten endring av kjernepoeng eller medisinsk avgjørelse.",
+      "input_sha256": "ca7a3649aea0589d2388193234f7ab36af77c95ba495732ff96c4ba6c1fae342",
+      "record_sha256": "a3571b0c8c6d5baed4d2501f40bc785aac2f3c9828deed31f35f2a10dd02afe0"
+    },
+    {
+      "case_id": "case-08",
+      "criterion_id": "case-08/r1",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Luftvei/pustesjekk/10sekunder og sideleie med normal-pust-vilkår og munnen ned er faktisk levert. Bare videre overvåking, ikke HLR-oppstart ved ingen/unormal pust, finnes for r4. Risikoetiketten for113/sideleie-sammendrag er usikker fordi operatørveiledning og vilkåret finnes andre steder i samme pakke.",
+      "input_sha256": "1c225c5c6857c084f7b99c73ff975679233f7298d64345950050053c46597acc",
+      "record_sha256": "01aa458a57ea90474f122c59aa0ca42ed91af9acb79211993ff6b89fa6f56dc2"
+    },
+    {
+      "case_id": "case-08",
+      "criterion_id": "case-08/r2",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Luftvei/pustesjekk/10sekunder og sideleie med normal-pust-vilkår og munnen ned er faktisk levert. Bare videre overvåking, ikke HLR-oppstart ved ingen/unormal pust, finnes for r4. Risikoetiketten for113/sideleie-sammendrag er usikker fordi operatørveiledning og vilkåret finnes andre steder i samme pakke.",
+      "input_sha256": "1c225c5c6857c084f7b99c73ff975679233f7298d64345950050053c46597acc",
+      "record_sha256": "01aa458a57ea90474f122c59aa0ca42ed91af9acb79211993ff6b89fa6f56dc2"
+    },
+    {
+      "case_id": "case-08",
+      "criterion_id": "case-08/r3",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Luftvei/pustesjekk/10sekunder og sideleie med normal-pust-vilkår og munnen ned er faktisk levert. Bare videre overvåking, ikke HLR-oppstart ved ingen/unormal pust, finnes for r4. Risikoetiketten for113/sideleie-sammendrag er usikker fordi operatørveiledning og vilkåret finnes andre steder i samme pakke.",
+      "input_sha256": "1c225c5c6857c084f7b99c73ff975679233f7298d64345950050053c46597acc",
+      "record_sha256": "01aa458a57ea90474f122c59aa0ca42ed91af9acb79211993ff6b89fa6f56dc2"
+    },
+    {
+      "case_id": "case-08",
+      "criterion_id": "case-08/r4",
+      "raw_decision": "partial",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Luftvei/pustesjekk/10sekunder og sideleie med normal-pust-vilkår og munnen ned er faktisk levert. Bare videre overvåking, ikke HLR-oppstart ved ingen/unormal pust, finnes for r4. Risikoetiketten for113/sideleie-sammendrag er usikker fordi operatørveiledning og vilkåret finnes andre steder i samme pakke.",
+      "input_sha256": "1c225c5c6857c084f7b99c73ff975679233f7298d64345950050053c46597acc",
+      "record_sha256": "01aa458a57ea90474f122c59aa0ca42ed91af9acb79211993ff6b89fa6f56dc2"
+    },
+    {
+      "case_id": "case-09",
+      "criterion_id": "case-09/r1",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Alle tre forebyggende varmekrav har direkte kildebevis. Merket nedkjølings-/is-/brannskadestoff vurderes som andre scenarioer, ikke som automatisk anvendelig motstrid.",
+      "input_sha256": "1ac8d50e0bdfc525c7a8b748537342b0c5f45ac0f1d763f03c06c62e1a20cf02",
+      "record_sha256": "777ce28d680208e4d6a6534b21b6b1fd9c681dcd928e0716796f3dd7115a80f5"
+    },
+    {
+      "case_id": "case-09",
+      "criterion_id": "case-09/r2",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Alle tre forebyggende varmekrav har direkte kildebevis. Merket nedkjølings-/is-/brannskadestoff vurderes som andre scenarioer, ikke som automatisk anvendelig motstrid.",
+      "input_sha256": "1ac8d50e0bdfc525c7a8b748537342b0c5f45ac0f1d763f03c06c62e1a20cf02",
+      "record_sha256": "777ce28d680208e4d6a6534b21b6b1fd9c681dcd928e0716796f3dd7115a80f5"
+    },
+    {
+      "case_id": "case-09",
+      "criterion_id": "case-09/r3",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Alle tre forebyggende varmekrav har direkte kildebevis. Merket nedkjølings-/is-/brannskadestoff vurderes som andre scenarioer, ikke som automatisk anvendelig motstrid.",
+      "input_sha256": "1ac8d50e0bdfc525c7a8b748537342b0c5f45ac0f1d763f03c06c62e1a20cf02",
+      "record_sha256": "777ce28d680208e4d6a6534b21b6b1fd9c681dcd928e0716796f3dd7115a80f5"
+    },
+    {
+      "case_id": "case-10",
+      "criterion_id": "case-10/r1",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Den faktisk leverte overskriften gir varmt tøy; utstyrslisten gir sovepose, overlevelsesteppe og nødly. Overskriften er tekst i input, ikke en utledet faktaopplysning fra kilde-ID.",
+      "input_sha256": "6c92cc9014bb673c90fea059ef93a41ecefe5105c2a35726a61e105e658b6855",
+      "record_sha256": "41369e2740d046d4df3a144b0190ac5eaa17bcb062fb1e1de98730875fe6eda8"
+    },
+    {
+      "case_id": "case-10",
+      "criterion_id": "case-10/r2",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Den faktisk leverte overskriften gir varmt tøy; utstyrslisten gir sovepose, overlevelsesteppe og nødly. Overskriften er tekst i input, ikke en utledet faktaopplysning fra kilde-ID.",
+      "input_sha256": "6c92cc9014bb673c90fea059ef93a41ecefe5105c2a35726a61e105e658b6855",
+      "record_sha256": "41369e2740d046d4df3a144b0190ac5eaa17bcb062fb1e1de98730875fe6eda8"
+    },
+    {
+      "case_id": "case-10",
+      "criterion_id": "case-10/r3",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Den faktisk leverte overskriften gir varmt tøy; utstyrslisten gir sovepose, overlevelsesteppe og nødly. Overskriften er tekst i input, ikke en utledet faktaopplysning fra kilde-ID.",
+      "input_sha256": "6c92cc9014bb673c90fea059ef93a41ecefe5105c2a35726a61e105e658b6855",
+      "record_sha256": "41369e2740d046d4df3a144b0190ac5eaa17bcb062fb1e1de98730875fe6eda8"
+    },
+    {
+      "case_id": "case-11",
+      "criterion_id": "case-11/r1",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Alle avstands-/dybdeledd, nedstrømsplassering og håndhygieneledd er levert. Omregningene er omtrentlige slik kriteriet tillater. Kravets relevansbredde er allerede et dokumentert rubrikkforbehold; definisjonen endres ikke her.",
+      "input_sha256": "48b7b94886c180da9a37ee9069ec71bede1b43c40810de83429034c980826e57",
+      "record_sha256": "6b00fc065d66d68699715b294ee217fa6e633bd5ee268090f97c50b164f7cfeb"
+    },
+    {
+      "case_id": "case-11",
+      "criterion_id": "case-11/r2",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Alle avstands-/dybdeledd, nedstrømsplassering og håndhygieneledd er levert. Omregningene er omtrentlige slik kriteriet tillater. Kravets relevansbredde er allerede et dokumentert rubrikkforbehold; definisjonen endres ikke her.",
+      "input_sha256": "48b7b94886c180da9a37ee9069ec71bede1b43c40810de83429034c980826e57",
+      "record_sha256": "6b00fc065d66d68699715b294ee217fa6e633bd5ee268090f97c50b164f7cfeb"
+    },
+    {
+      "case_id": "case-11",
+      "criterion_id": "case-11/r3",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Alle avstands-/dybdeledd, nedstrømsplassering og håndhygieneledd er levert. Omregningene er omtrentlige slik kriteriet tillater. Kravets relevansbredde er allerede et dokumentert rubrikkforbehold; definisjonen endres ikke her.",
+      "input_sha256": "48b7b94886c180da9a37ee9069ec71bede1b43c40810de83429034c980826e57",
+      "record_sha256": "6b00fc065d66d68699715b294ee217fa6e633bd5ee268090f97c50b164f7cfeb"
+    },
+    {
+      "case_id": "case-12",
+      "criterion_id": "case-12/r2",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Kryssingsforbud ved flom/usikkerhet/manglende erfaring og vent/snu er eksplisitt kildebeskrevet. Ingen slutning fra uspesifiserte naturforhold er nødvendig.",
+      "input_sha256": "ec8c09a98539918dcbd2263c00eba7295451d6698811df982e9a4de50b97e884",
+      "record_sha256": "561259410c1e019c41bd169a7d6abff1cdf257a404371d18ed5f764445fb0f2a"
+    },
+    {
+      "case_id": "case-12",
+      "criterion_id": "case-12/r3",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Kryssingsforbud ved flom/usikkerhet/manglende erfaring og vent/snu er eksplisitt kildebeskrevet. Ingen slutning fra uspesifiserte naturforhold er nødvendig.",
+      "input_sha256": "ec8c09a98539918dcbd2263c00eba7295451d6698811df982e9a4de50b97e884",
+      "record_sha256": "561259410c1e019c41bd169a7d6abff1cdf257a404371d18ed5f764445fb0f2a"
+    },
+    {
+      "case_id": "case-13",
+      "criterion_id": "case-13/r1",
+      "raw_decision": "partial",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "PLB beskrives som en aktiverbar nødopsjon, men ikke med klar beskjed om straks å aktivere fremfor å vente. Behold delvis r1 og fraværende betinget tvilsregel. Telefonrådets potensielle misvisning er uavklart: teksten sier ikke at telefon er eneste valg, og mulig nødanrop er ikke avgjort av kildene.",
+      "input_sha256": "b5a438e2a6d6f2f7a58303c5b747ce6dcf4e22249eeae6184393365740f6f2b7",
+      "record_sha256": "0b59514563a778625e75ce3de4a478937c79628cf9d25710dd1ea942f68a72d6"
+    },
+    {
+      "case_id": "case-13",
+      "criterion_id": "case-13/r2",
+      "raw_decision": "absent",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "PLB beskrives som en aktiverbar nødopsjon, men ikke med klar beskjed om straks å aktivere fremfor å vente. Behold delvis r1 og fraværende betinget tvilsregel. Telefonrådets potensielle misvisning er uavklart: teksten sier ikke at telefon er eneste valg, og mulig nødanrop er ikke avgjort av kildene.",
+      "input_sha256": "b5a438e2a6d6f2f7a58303c5b747ce6dcf4e22249eeae6184393365740f6f2b7",
+      "record_sha256": "0b59514563a778625e75ce3de4a478937c79628cf9d25710dd1ea942f68a72d6"
+    },
+    {
+      "case_id": "case-14",
+      "criterion_id": "case-14/r1",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Bare det støttede delsettet av kunnskapshullet vurderes. Generelle faretegn/endret plan finnes; ingen levert instruks om begrenset skredterreng uten erfaring. Ingen komplett lokal retrettprosedyre eller automatisk gap-pass hevdes.",
+      "input_sha256": "e968f1da86426d654e2a579ced98452df3aced7ee81842aa65199d2cf9b5f03e",
+      "record_sha256": "3c9c61d974479a829776a5faa72f86c33665b0a53309061a7492edaf04907822"
+    },
+    {
+      "case_id": "case-14",
+      "criterion_id": "case-14/r2",
+      "raw_decision": "absent",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Bare det støttede delsettet av kunnskapshullet vurderes. Generelle faretegn/endret plan finnes; ingen levert instruks om begrenset skredterreng uten erfaring. Ingen komplett lokal retrettprosedyre eller automatisk gap-pass hevdes.",
+      "input_sha256": "e968f1da86426d654e2a579ced98452df3aced7ee81842aa65199d2cf9b5f03e",
+      "record_sha256": "3c9c61d974479a829776a5faa72f86c33665b0a53309061a7492edaf04907822"
+    },
+    {
+      "case_id": "case-16",
+      "criterion_id": "case-16/r1",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Vask av sår/hud, lunkent vann og mild/nøytral/uparfymert såpe samt bandasje mot ny skitt er direkte levert. Historisk risikotvist gjenåpnes ikke som en endring av rå historiske funn.",
+      "input_sha256": "63b6847fd6295058b0c1ecf19da1481e0b5643435ad30f2e84b9eb43282149b4",
+      "record_sha256": "1ad7e009ce356c700e7b5828d16a76cab93b281888be433f72f11b1727f8a43a"
+    },
+    {
+      "case_id": "case-16",
+      "criterion_id": "case-16/r2",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Vask av sår/hud, lunkent vann og mild/nøytral/uparfymert såpe samt bandasje mot ny skitt er direkte levert. Historisk risikotvist gjenåpnes ikke som en endring av rå historiske funn.",
+      "input_sha256": "63b6847fd6295058b0c1ecf19da1481e0b5643435ad30f2e84b9eb43282149b4",
+      "record_sha256": "1ad7e009ce356c700e7b5828d16a76cab93b281888be433f72f11b1727f8a43a"
+    },
+    {
+      "case_id": "case-17",
+      "criterion_id": "case-17/r2",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Generisk113-instruks ved pustevansker/tidskritisk tilstand godtas for det reviderte akutte varslingskravet i den oppgitte situasjonen. Dette beviser ikke at anafylaksiforklaring eller stikkspesifikk prosedyre er levert; de finnes ikke i denne pakken.",
+      "input_sha256": "bed44fa277b3f8b2ba026f058548b0e762bb8d54e76529eff8976f3bcc4a3074",
+      "record_sha256": "b6c47e59539dfe8ef07305c43bd7b2b433b935205711566b2919e578b6ef3895"
+    },
+    {
+      "case_id": "case-18",
+      "criterion_id": "case-18/r1",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "To faktiske kildeblokker gir hodet over vann/returretning, bryte svak kant og minst én komplett oppstigningsmetode etter solid kant. Den oppgitte betingelsen er bevart.",
+      "input_sha256": "b6dc4721432b559d38a310e4c1282f0ca8e7721e083465251ea1acf3798e7d8a",
+      "record_sha256": "9871860bb7dd26a3d91d41e2b4dbf45180b04ae0cb0f40246a879b42cc4fcbde"
+    },
+    {
+      "case_id": "case-18",
+      "criterion_id": "case-18/r2",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "To faktiske kildeblokker gir hodet over vann/returretning, bryte svak kant og minst én komplett oppstigningsmetode etter solid kant. Den oppgitte betingelsen er bevart.",
+      "input_sha256": "b6dc4721432b559d38a310e4c1282f0ca8e7721e083465251ea1acf3798e7d8a",
+      "record_sha256": "9871860bb7dd26a3d91d41e2b4dbf45180b04ae0cb0f40246a879b42cc4fcbde"
+    },
+    {
+      "case_id": "case-18",
+      "criterion_id": "case-18/r3",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "To faktiske kildeblokker gir hodet over vann/returretning, bryte svak kant og minst én komplett oppstigningsmetode etter solid kant. Den oppgitte betingelsen er bevart.",
+      "input_sha256": "b6dc4721432b559d38a310e4c1282f0ca8e7721e083465251ea1acf3798e7d8a",
+      "record_sha256": "9871860bb7dd26a3d91d41e2b4dbf45180b04ae0cb0f40246a879b42cc4fcbde"
+    },
+    {
+      "case_id": "case-19",
+      "criterion_id": "case-19/r1",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Utstyrslisten i blokk8 og den faktisk leverte overskriften om de andre i følget i blokk2 dekker hver-person-betydningen sammen. Blokk2 beskriver også praktisk øving. Ingen fakta legges til fra originalartikkelen utenfor pakken.",
+      "input_sha256": "acdbae6f66984af763a52c3f25063aed6bb8e2d2d8ad259d7d164ea2e1534bce",
+      "record_sha256": "1700a1c4eb03e4f4284b403732daeb8dbe8370654794a6dedb124718632cb8bd"
+    },
+    {
+      "case_id": "case-19",
+      "criterion_id": "case-19/r2",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Utstyrslisten i blokk8 og den faktisk leverte overskriften om de andre i følget i blokk2 dekker hver-person-betydningen sammen. Blokk2 beskriver også praktisk øving. Ingen fakta legges til fra originalartikkelen utenfor pakken.",
+      "input_sha256": "acdbae6f66984af763a52c3f25063aed6bb8e2d2d8ad259d7d164ea2e1534bce",
+      "record_sha256": "1700a1c4eb03e4f4284b403732daeb8dbe8370654794a6dedb124718632cb8bd"
+    },
+    {
+      "case_id": "case-20",
+      "criterion_id": "case-20/r1",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Rute/ferdigheter og vær/endre-plan er direkte sitert. Skredspesifikke avsnitt er ikke nødvendigvis nyttige her; generelle planleggingsledd kan være relevante selv i samme blokk.",
+      "input_sha256": "cd25bfed21c348a267591e67ef6544f16bb788d97e347b9043bfb994dcb8a4df",
+      "record_sha256": "8be807136368dd54a51c435f4c1941f01b275d05f8fa2e45e6104dccea99ec34"
+    },
+    {
+      "case_id": "case-20",
+      "criterion_id": "case-20/r2",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Rute/ferdigheter og vær/endre-plan er direkte sitert. Skredspesifikke avsnitt er ikke nødvendigvis nyttige her; generelle planleggingsledd kan være relevante selv i samme blokk.",
+      "input_sha256": "cd25bfed21c348a267591e67ef6544f16bb788d97e347b9043bfb994dcb8a4df",
+      "record_sha256": "8be807136368dd54a51c435f4c1941f01b275d05f8fa2e45e6104dccea99ec34"
+    },
+    {
+      "case_id": "case-21",
+      "criterion_id": "case-21/r1",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Filterets mikrobestørrelse/virusbegrensning og filtrer-før-desinfiser finnes. Produktets bruksanvisning finnes ikke; den delvise dekningen må ikke omtales som bare en LLM-utelatelse.",
+      "input_sha256": "a84c9abd072ffd55a8d489503677f54ae7fb19d549c7529db91d350a21a8dfec",
+      "record_sha256": "9b112b9d611391f5f8078d445c669d18c543243bc89bc9cd8c8de95ac1b1d112"
+    },
+    {
+      "case_id": "case-21",
+      "criterion_id": "case-21/r2",
+      "raw_decision": "partial",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Filterets mikrobestørrelse/virusbegrensning og filtrer-før-desinfiser finnes. Produktets bruksanvisning finnes ikke; den delvise dekningen må ikke omtales som bare en LLM-utelatelse.",
+      "input_sha256": "a84c9abd072ffd55a8d489503677f54ae7fb19d549c7529db91d350a21a8dfec",
+      "record_sha256": "9b112b9d611391f5f8078d445c669d18c543243bc89bc9cd8c8de95ac1b1d112"
+    },
+    {
+      "case_id": "case-22",
+      "criterion_id": "case-22/r1",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Offline NZ-topografikart, nedlasting/testing før avreise, batteri og papirreserve finnes eksplisitt. Ingen slutning fra en utenlandsk kilde til feil jurisdiksjon gjøres.",
+      "input_sha256": "9760dcbe0c6c695f07c888285d1f932b034fe9d7d8dcbe031a262a90ff9b81a3",
+      "record_sha256": "b9620f2287202cc17622e59762cd5a4c8cbb78c02d2da611a82ccc9b67fc5a6a"
+    },
+    {
+      "case_id": "case-22",
+      "criterion_id": "case-22/r2",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Offline NZ-topografikart, nedlasting/testing før avreise, batteri og papirreserve finnes eksplisitt. Ingen slutning fra en utenlandsk kilde til feil jurisdiksjon gjøres.",
+      "input_sha256": "9760dcbe0c6c695f07c888285d1f932b034fe9d7d8dcbe031a262a90ff9b81a3",
+      "record_sha256": "b9620f2287202cc17622e59762cd5a4c8cbb78c02d2da611a82ccc9b67fc5a6a"
+    },
+    {
+      "case_id": "case-22",
+      "criterion_id": "case-22/r3",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Offline NZ-topografikart, nedlasting/testing før avreise, batteri og papirreserve finnes eksplisitt. Ingen slutning fra en utenlandsk kilde til feil jurisdiksjon gjøres.",
+      "input_sha256": "9760dcbe0c6c695f07c888285d1f932b034fe9d7d8dcbe031a262a90ff9b81a3",
+      "record_sha256": "b9620f2287202cc17622e59762cd5a4c8cbb78c02d2da611a82ccc9b67fc5a6a"
+    },
+    {
+      "case_id": "case-23",
+      "criterion_id": "case-23/r1",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "30minutter etter siste torden, elektrisk kontaktutstyr og røranlegg er direkte levert. Eksempeloppramsingen brukes ikke som et ekstra krav utover den generelle kategorien.",
+      "input_sha256": "346c0a5f71f4d72fa4931140b7b66106d1aa5132927225558aec5d57ebf85d93",
+      "record_sha256": "c63623775a45870f6e2ac29d308d6bb85f02edcc7daaa7c0a5c3081bcbdbe1c4"
+    },
+    {
+      "case_id": "case-23",
+      "criterion_id": "case-23/r2",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "30minutter etter siste torden, elektrisk kontaktutstyr og røranlegg er direkte levert. Eksempeloppramsingen brukes ikke som et ekstra krav utover den generelle kategorien.",
+      "input_sha256": "346c0a5f71f4d72fa4931140b7b66106d1aa5132927225558aec5d57ebf85d93",
+      "record_sha256": "c63623775a45870f6e2ac29d308d6bb85f02edcc7daaa7c0a5c3081bcbdbe1c4"
+    },
+    {
+      "case_id": "case-23",
+      "criterion_id": "case-23/r3",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "30minutter etter siste torden, elektrisk kontaktutstyr og røranlegg er direkte levert. Eksempeloppramsingen brukes ikke som et ekstra krav utover den generelle kategorien.",
+      "input_sha256": "346c0a5f71f4d72fa4931140b7b66106d1aa5132927225558aec5d57ebf85d93",
+      "record_sha256": "c63623775a45870f6e2ac29d308d6bb85f02edcc7daaa7c0a5c3081bcbdbe1c4"
+    },
+    {
+      "case_id": "case-24",
+      "criterion_id": "case-24/r1",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Begge avstandskrav har direkte tekstbevis. Denne kildescoren avklarer ikke eller overskriver den tidligere rå LLM-vurderingens kjente konteksttolkningsproblem.",
+      "input_sha256": "4b34c8191af2c24ec47ea55f456b0698470ae3b5f4a73fa94996e7081620ab1e",
+      "record_sha256": "5b712b746ce563c5973afd662a58cf2abac6bc79171dda58b8c27495bd784231"
+    },
+    {
+      "case_id": "case-24",
+      "criterion_id": "case-24/r2",
+      "raw_decision": "full",
+      "review_disposition": "retain_raw",
+      "reviewed": true,
+      "note": "Begge avstandskrav har direkte tekstbevis. Denne kildescoren avklarer ikke eller overskriver den tidligere rå LLM-vurderingens kjente konteksttolkningsproblem.",
+      "input_sha256": "4b34c8191af2c24ec47ea55f456b0698470ae3b5f4a73fa94996e7081620ab1e",
+      "record_sha256": "5b712b746ce563c5973afd662a58cf2abac6bc79171dda58b8c27495bd784231"
+    }
+  ],
+  "case_reviews": [
+    {
+      "case_id": "case-01",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "Hele konteksten kontrollert for de to negative/delvise kravene: manglende belastningsevne kobles ikke til brudd, og mulig brudd kobles ikke til legekontakt. Ro/avlastning er fullt levert."
+    },
+    {
+      "case_id": "case-02",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "Vått tøy, isolasjon/vind/fukt, sikker varmetilførsel, overvåking og113 finnes direkte i kildene. Enkelte pakkelisteelementer kan være nyttige supplementer snarere enn støy; annen irrelevant tekst er tydelig."
+    },
+    {
+      "case_id": "case-03",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "Hele konteksten kontrollert: generelle behandlingsråd og kjemikaliebegrensning er levert; de to koketidene/høydegrensen finnes ikke. Ikke fyll dette fra corpus eller diagnosekonteksten."
+    },
+    {
+      "case_id": "case-04",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "De fem bortkomsthandlingene står samlet og eksplisitt i blokk4. Skred- og annen-situasjonstekst gir ikke motstrid bare fordi den også er handlingsrettet."
+    },
+    {
+      "case_id": "case-05",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "Eksplisitt lynly, avvisning av overheng og ned fra høyt terreng er levert. Begge betingede begrensninger finnes i universalregelen og kildebeskrevet reserveplan."
+    },
+    {
+      "case_id": "case-06",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "Alle faktiske blokker kontrollert: direkte trykk, utenpåbandasje og økt trykk, varme/overvåking/113 ved forverring er levert. Ingen regel om initial113-varsling for stor ytre blødning finnes i pakken."
+    },
+    {
+      "case_id": "case-07",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant",
+        "requires_review"
+      ],
+      "note": "Fire kjernekrav har direkte og komplett støtte. Den allerede deklarerte kremuklarheten beholdes som egen kildemerknad uten endring av kjernepoeng eller medisinsk avgjørelse."
+    },
+    {
+      "case_id": "case-08",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant",
+        "potentially_misleading"
+      ],
+      "note": "Luftvei/pustesjekk/10sekunder og sideleie med normal-pust-vilkår og munnen ned er faktisk levert. Bare videre overvåking, ikke HLR-oppstart ved ingen/unormal pust, finnes for r4. Risikoetiketten for113/sideleie-sammendrag er usikker fordi operatørveiledning og vilkåret finnes andre steder i samme pakke."
+    },
+    {
+      "case_id": "case-09",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "Alle tre forebyggende varmekrav har direkte kildebevis. Merket nedkjølings-/is-/brannskadestoff vurderes som andre scenarioer, ikke som automatisk anvendelig motstrid."
+    },
+    {
+      "case_id": "case-10",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "Den faktisk leverte overskriften gir varmt tøy; utstyrslisten gir sovepose, overlevelsesteppe og nødly. Overskriften er tekst i input, ikke en utledet faktaopplysning fra kilde-ID."
+    },
+    {
+      "case_id": "case-11",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "Alle avstands-/dybdeledd, nedstrømsplassering og håndhygieneledd er levert. Omregningene er omtrentlige slik kriteriet tillater. Kravets relevansbredde er allerede et dokumentert rubrikkforbehold; definisjonen endres ikke her."
+    },
+    {
+      "case_id": "case-12",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "Kryssingsforbud ved flom/usikkerhet/manglende erfaring og vent/snu er eksplisitt kildebeskrevet. Ingen slutning fra uspesifiserte naturforhold er nødvendig."
+    },
+    {
+      "case_id": "case-13",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant",
+        "potentially_misleading"
+      ],
+      "note": "PLB beskrives som en aktiverbar nødopsjon, men ikke med klar beskjed om straks å aktivere fremfor å vente. Behold delvis r1 og fraværende betinget tvilsregel. Telefonrådets potensielle misvisning er uavklart: teksten sier ikke at telefon er eneste valg, og mulig nødanrop er ikke avgjort av kildene."
+    },
+    {
+      "case_id": "case-14",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "Bare det støttede delsettet av kunnskapshullet vurderes. Generelle faretegn/endret plan finnes; ingen levert instruks om begrenset skredterreng uten erfaring. Ingen komplett lokal retrettprosedyre eller automatisk gap-pass hevdes."
+    },
+    {
+      "case_id": "case-15",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant",
+        "requires_review"
+      ],
+      "note": "Ingen kjernekrav på dette deklarerte kunnskapshullet; tom liste er ikke100prosent. Kildene gir ikke båljuss. Kremmerknaden gjelder kildetekst i annet scenario, ikke et påvist aktuelt bålproblem."
+    },
+    {
+      "case_id": "case-16",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "Vask av sår/hud, lunkent vann og mild/nøytral/uparfymert såpe samt bandasje mot ny skitt er direkte levert. Historisk risikotvist gjenåpnes ikke som en endring av rå historiske funn."
+    },
+    {
+      "case_id": "case-17",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "Generisk113-instruks ved pustevansker/tidskritisk tilstand godtas for det reviderte akutte varslingskravet i den oppgitte situasjonen. Dette beviser ikke at anafylaksiforklaring eller stikkspesifikk prosedyre er levert; de finnes ikke i denne pakken."
+    },
+    {
+      "case_id": "case-18",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "To faktiske kildeblokker gir hodet over vann/returretning, bryte svak kant og minst én komplett oppstigningsmetode etter solid kant. Den oppgitte betingelsen er bevart."
+    },
+    {
+      "case_id": "case-19",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "Utstyrslisten i blokk8 og den faktisk leverte overskriften om de andre i følget i blokk2 dekker hver-person-betydningen sammen. Blokk2 beskriver også praktisk øving. Ingen fakta legges til fra originalartikkelen utenfor pakken."
+    },
+    {
+      "case_id": "case-20",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "Rute/ferdigheter og vær/endre-plan er direkte sitert. Skredspesifikke avsnitt er ikke nødvendigvis nyttige her; generelle planleggingsledd kan være relevante selv i samme blokk."
+    },
+    {
+      "case_id": "case-21",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "Filterets mikrobestørrelse/virusbegrensning og filtrer-før-desinfiser finnes. Produktets bruksanvisning finnes ikke; den delvise dekningen må ikke omtales som bare en LLM-utelatelse."
+    },
+    {
+      "case_id": "case-22",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "Offline NZ-topografikart, nedlasting/testing før avreise, batteri og papirreserve finnes eksplisitt. Ingen slutning fra en utenlandsk kilde til feil jurisdiksjon gjøres."
+    },
+    {
+      "case_id": "case-23",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "30minutter etter siste torden, elektrisk kontaktutstyr og røranlegg er direkte levert. Eksempeloppramsingen brukes ikke som et ekstra krav utover den generelle kategorien."
+    },
+    {
+      "case_id": "case-24",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "Begge avstandskrav har direkte tekstbevis. Denne kildescoren avklarer ikke eller overskriver den tidligere rå LLM-vurderingens kjente konteksttolkningsproblem."
+    },
+    {
+      "case_id": "case-25",
+      "all_finding_lists_reviewed": true,
+      "raw_finding_types": [
+        "irrelevant"
+      ],
+      "note": "Ingen kjernekrav på deklarert konstruksjonshull. Utstyrslister og generelle ly-/værord er ikke en kildebeskrevet greinelyprosedyre. Ingen tom-listesuksess."
+    }
+  ],
+  "raw_finding_context_counts": {
+    "irrelevant": 25,
+    "requires_review": 2,
+    "potentially_misleading": 2
+  },
+  "risk_review_notes": [
+    {
+      "case_id": "case-08",
+      "raw_type": "potentially_misleading",
+      "review_disposition": "uncertain_applicability",
+      "reason": "113/sideleie-sammendraget kan leses for bredt, men viser til operatørhjelp og samme pakke gir normal-pust-vilkåret. Ikke en uavhengig påvist klinisk kildefeil."
+    },
+    {
+      "case_id": "case-13",
+      "raw_type": "potentially_misleading",
+      "review_disposition": "uncertain_applicability",
+      "reason": "Telefonrådet kan avlede fra nødpeiler, men sier ikke eksplisitt at telefon er eneste varsling. Fullstendig nettutfall versus mulig nødanrop avgjøres ikke her."
+    }
+  ],
+  "core_corrections_applied": 0,
+  "definition_bridge": {
+    "old_total": 72,
+    "old_full": 60,
+    "retained_total": 63,
+    "retained_old_full": 54,
+    "new_full": 55,
+    "excluded_total": 9,
+    "excluded_old_full": 6
+  },
+  "changed_retained_coverage": [
+    {
+      "case_id": "case-17",
+      "criterion_id": "case-17/r2",
+      "old_full": false,
+      "new_full": true,
+      "old_text": "Mistanke om anafylaksi krever akutt behandling og umiddelbar kontakt med 113, ikke å vente til turen er ferdig.",
+      "new_text": "Ring 113 øyeblikkelig for akutt hjelp i denne situasjonen; ikke vent til dere er nede."
+    }
+  ],
+  "answer_linkage_caveat": "Raw Medium judgments are reused. Known case24 inference issue can affect historical full25 retention by one item; this is not silently corrected. Matched screen8 does not include case24.",
+  "measurement_uncertainty": "Zero uncertain labels from this judge is not zero epistemic uncertainty. Risk labels and criterion applicability remain author/source-bound judgments.",
+  "freeze_sha256": "63002ba61c6a60b2a04501a4cc024f47b9584b80a3c6412e503fee8a4faaa108",
+  "review_code_sha256": "47e300074455cb71438b53ac87330c9dd1d58dc2bb8998ce48a4ce16a4e0cdae"
+}

@@ -1,104 +1,82 @@
 # Outwise backend
 
-The backend exposes the local HTTP API used by the Outwise frontend. It also
-contains dedicated services for local Qwen inference and local knowledge
-retrieval, coordinated by a small RAG orchestrator. Safety integration is a
-separate later task.
+Python/FastAPI owns retrieval, context packing and local generation. The normal
+application is a **learning prototype**, not a safety-approved outdoor assistant.
+See [scope](../docs/PROTOTYPE.md) and [results](../docs/RESULTS.md).
 
-## Setup (Windows PowerShell)
+## Setup and run (PowerShell, repository root)
+
+```powershell
+python -m venv backend/.venv
+backend/.venv/Scripts/python.exe -m pip install -e './backend[dev]'
+.\scripts\setup-local-model.ps1
+.\scripts\setup-knowledge.ps1
+.\scripts\start-outwise.ps1
+```
+
+The startup script serves the exported frontend and API at
+`http://127.0.0.1:8000`. Models and knowledge load only on a live question.
+`/?demo=1` replays selected saved tests without loading those assets.
+For API-only development:
 
 ```powershell
 cd backend
-python -m venv .venv
-.\.venv\Scripts\python -m pip install -e ".[dev]"
+.\.venv\Scripts\python.exe -m uvicorn outwise.main:app --host 127.0.0.1 --port 8000
 ```
 
-## Run
+Stop with Ctrl+C; the backend closes its owned llama.cpp process. The subprocess
+binds numeric loopback and uses CPU inference, local assets and offline flags.
 
-Prepare the approved local knowledge assets from the repository root with
-`.\scripts\setup-knowledge.ps1` before using chat. This is separate from Qwen setup.
+## Request and response
+
+`GET /health` reports API liveness only. `GET /api/status` checks whether expected
+local files/runtime executables are present; their integrity is checked when
+used. Neither endpoint certifies answer quality or physical offline operation.
+
+`POST /api/chat` accepts `{"message":"..."}`. Each question is independent; the
+backend receives no chat history. The response contains:
+
+- `answer`: the generated interpretation, or an explicit unavailability message.
+- `sources`: stored title/publisher/URL/reuse metadata and exact excerpt IDs,
+  text, section and language. These do not come from generated citations.
+- Optional `generation_error`: interpretation could not be generated.
+- Optional `context_notice`: raw hits are shown because packing could not be
+  completed; the model was not run. This is not mislabeled as a knowledge gap.
+
+A missing knowledge store returns an explicit503 setup error without fixture
+fallback. Generation failures after retrieval preserve source access. Empty
+retrieval skips generation. A nonempty search can still be irrelevant: the
+measured top-16/no-threshold profile does not solve safe abstention.
+
+## Application components
+
+- `knowledge/window_index.py`: portable full-body MiniLM window index.
+- `services/context.py`: original P3 expansion/deduplication and fixed budget.
+- `services/native_model.py`: owned llama.cpp server, native prompt serialization,
+  input limit and later Qwen baseline generation settings.
+- `services/orchestrator.py`: coordinates the request and keeps source provenance.
+
+The original `SemanticRetrievalService`, lexical fixture retriever, legacy
+`ModelService` and legacy prompt remain for existing tests and historical
+reference. They are not the normal prototype profile. Evaluation runners are
+archived and are not application dependencies.
+
+Settings still support `OUTWISE_MODEL_PATH`, `OUTWISE_LLAMA_CLI` and
+`OUTWISE_KNOWLEDGE_PATH`. The pinned llama.cpp installation must contain
+`llama-cli`, `llama-server` and `llama-tokenize` beside each other. Knowledge setup
+creates both the original index and the separate `prototype-index.json` /
+`prototype-embeddings.npy`; existing original files are not silently replaced.
+For explicit synthetic fixture development, use `OUTWISE_KNOWLEDGE_MODE=fixtures`.
+This is not real advice or the measured profile.
+
+## Checks
 
 ```powershell
-.\.venv\Scripts\python -m uvicorn outwise.main:app --reload
+backend/.venv/Scripts/python.exe -m pytest backend/tests -q
+backend/.venv/Scripts/python.exe scripts/verify-prototype.py
 ```
 
-Verify the API from another PowerShell window:
-
-```powershell
-Invoke-RestMethod http://127.0.0.1:8000/health
-```
-
-The response should be `{"status":"ok"}`.
-
-The local chat boundary is `POST /api/chat`:
-
-```powershell
-Invoke-RestMethod -Method Post -Uri http://127.0.0.1:8000/api/chat `
-  -ContentType "application/json" -Body '{"message":"Jeg har gått meg vill."}'
-```
-
-The response contains an `answer` and a `sources` list. Source titles, names and
-URLs come directly from retrieved knowledge metadata, never from model output.
-If retrieval finds no relevant knowledge, the API returns an explicit unsupported
-answer with no sources and does not call the model. Model setup, loading, timeout
-and generation failures are returned as explicit HTTP errors.
-
-## Local model service
-
-First complete the model setup described in `../docs/MODEL_SETUP.md`. Backend
-code can then call the local model without depending on llama.cpp command-line
-details:
-
-```python
-from outwise.services.model import ModelService
-
-answer = ModelService().generate("Reply briefly: what should I prioritize?")
-```
-
-The defaults use `../models/Qwen_Qwen3.5-2B-Q4_K_M.gguf` and discover the
-installed llama.cpp runtime. `OUTWISE_MODEL_PATH` and `OUTWISE_LLAMA_CLI` can
-override those paths. Missing assets, model loading failures, timeouts and
-generation failures are exposed as distinct `ModelServiceError` subclasses.
-
-The HTTP chat route uses this service while keeping llama.cpp details outside the
-route and frontend.
-
-## Local retrieval service
-
-`RetrievalService` loads the normalized JSON knowledge contract and ranks chunks
-with a deterministic BM25-style lexical score. It has no model, UI, source-format
-or network dependency:
-
-```python
-from outwise.services.retrieval import RetrievalService
-
-retriever = RetrievalService.from_json("../knowledge/fixtures/development-knowledge.json")
-results = retriever.retrieve("How should I treat drinking water?", top_k=3)
-```
-
-Each result contains the original `KnowledgeItem` with all source metadata plus
-its score. Blank queries and non-positive `top_k` values raise `ValueError`; a
-query with no lexical overlap returns an empty list. The fixture lexical method
-is intentionally small and replaceable, and may miss cross-language queries or
-semantic matches that use entirely different vocabulary.
-
-The normal request flow loads `../knowledge/local/knowledge.json` and its paired
-embedding index/model. `SemanticRetrievalService` runs local multilingual cosine
-search with NO/general geography filtering. Missing or mismatched assets return
-a clear HTTP 503 setup error; the application never silently uses fixtures.
-
-Set `OUTWISE_KNOWLEDGE_PATH` to a different prepared knowledge JSON to use its
-paired local assets. For explicit fixture development only, set
-`OUTWISE_KNOWLEDGE_MODE=fixtures`; this uses the small lexical retriever and
-`../knowledge/fixtures/development-knowledge.json`. Remove the variable to
-return to real knowledge. Fixture content is not production advice.
-
-Sources also expose stored licence, content owner, retrieval/update dates and
-reuse notices when present. Norwegian Bokmål is the default answer language.
-See `../docs/KNOWLEDGE_SETUP.md` for reproducible setup and owner review.
-
-## Test
-
-```powershell
-.\.venv\Scripts\python -m pytest
-```
+The second command is an optional comparison with the original private frozen
+inputs. It requires that evidence, generates no answers and reads no holdout.
+A fresh clone can run unit tests without private sources/models. See
+[verification](../docs/VERIFICATION.md) for performed checks and their limits.

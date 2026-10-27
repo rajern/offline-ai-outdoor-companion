@@ -1,5 +1,18 @@
 # Outwise — Product
 
+## Owner-approved prototype closeout — 26 October 2026
+
+The immediate deliverable is now a documented learning prototype, with the
+existing local stack and Qwen model. Source excerpts and AI interpretation are
+shown automatically and separately. The selected measured retrieval/native
+prompt profile may be integrated and checked for demonstration. General model
+optimization stops. Superseded public development files may be archived after
+verified recovery; key results/research/provenance remain accessible.
+
+This scope does not approve M2 answer quality, final safety policy/messaging,
+all original MVP milestones or public release. See [scope](PROTOTYPE.md).
+The original product/MVP goals below remain historical or future targets.
+
 ## What it is
 
 Outwise is an **Offline AI Outdoor Companion** designed to help people handle unexpected situations outdoors when internet access is unavailable.

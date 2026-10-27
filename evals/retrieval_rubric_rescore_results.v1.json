@@ -1,0 +1,2129 @@
+{
+  "version": 1,
+  "at": "2026-10-25T09:13:12.587891+00:00",
+  "complete": true,
+  "freeze_sha256": "63002ba61c6a60b2a04501a4cc024f47b9584b80a3c6412e503fee8a4faaa108",
+  "rubric_sha256": "6333f84d343c529009b0f319a1119edb9437f8b6a047c07325bd4201658b5d1f",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "primary_records": 25,
+  "core_denominator": 63,
+  "core_counts": {
+    "absent": 4,
+    "partial": 4,
+    "full": 55,
+    "cases": 22,
+    "all_core_full": 16
+  },
+  "confirmed_micro_coverage": 0.873015873015873,
+  "uncertainty_upper_bound": 0.873015873015873,
+  "supported_cases_observed": 22,
+  "macro_confirmed_coverage": 0.8484848484848485,
+  "conditional_branch_availability": {
+    "full": 3,
+    "absent": 1
+  },
+  "rows": [
+    {
+      "case_id": "case-01",
+      "context_id": "R01",
+      "corpus_gap": false,
+      "required": {
+        "case-01/r1": "absent",
+        "case-01/r3": "partial",
+        "case-01/r4": "full"
+      },
+      "conditional": {},
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [
+        {
+          "id": "case-01/r1",
+          "decision": "absent",
+          "missing_components": [
+            "Informasjon om at manglende evne til å stå på foten gir grunn til å mistenke brudd."
+          ],
+          "reason": "Brudd omtales, men ingen kilde knytter manglende belastningsevne til mulig brudd."
+        },
+        {
+          "id": "case-01/r3",
+          "decision": "partial",
+          "missing_components": [
+            "Anbefaling om lege- eller legevaktvurdering konkret ved mulig brudd."
+          ],
+          "reason": "Generelt råd om å kontakte legevakt er tilgjengelig, men mulig brudd er ikke angitt som grunn til medisinsk vurdering."
+        },
+        {
+          "id": "case-01/r4",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Kildene støtter både ro, begrenset bevegelse og å unngå belastning."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Rådene gjelder selvredning etter gjennombrudd i is, ikke den beskrevne ankelskaden."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Generelt forberedelsesråd gir ikke konkrete tiltak etter den aktuelle skaden."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Disse betingede rådene gjelder andre skadesteder enn ankelen; de er ikke motstridende råd for denne situasjonen."
+        }
+      ]
+    },
+    {
+      "case_id": "case-02",
+      "context_id": "R02",
+      "corpus_gap": false,
+      "required": {
+        "case-02/r1": "full",
+        "case-02/r2": "full",
+        "case-02/r3": "full",
+        "case-02/r4": "full",
+        "case-02/r5": "full"
+      },
+      "conditional": {},
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [
+        {
+          "id": "case-02/r1",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Kildene støtter å fjerne våte klær og erstatte dem med tørre."
+        },
+        {
+          "id": "case-02/r2",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Isolasjon og beskyttelse mot vind og fukt er uttrykkelig dekket; rådet kan anvendes med tilgjengelig egnet utstyr."
+        },
+        {
+          "id": "case-02/r3",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Både varmetilførsel og beskyttelse mot direkte hudkontakt er dekket."
+        },
+        {
+          "id": "case-02/r4",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Begge observasjonene er uttrykkelig angitt."
+        },
+        {
+          "id": "case-02/r5",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Rådet gjelder førstehjelp ved nedkjøling uten avgrensning som utelukker den beskrevne situasjonen."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Forberedelsesråd og pakkeliste gir ikke behandling av den allerede nedkjølte personen."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Disse passasjene gjelder bevisstløshet, ikke personen som er våken og snakker normalt."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Vannbåren sykdom og smitteforebygging hjelper ikke med den aktuelle nedkjølingen."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Rådene gjelder uttrykkelig oppheting og hetebølge, ikke nedkjøling."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Denne delen gjelder etterbehandling ved isredning. Bevegelsesrådet er ikke levert som et generelt råd for den beskrevne regn- og vindsituasjonen."
+        }
+      ]
+    },
+    {
+      "case_id": "case-03",
+      "context_id": "R03",
+      "corpus_gap": false,
+      "required": {
+        "case-03/r2": "full",
+        "case-03/r3": "absent",
+        "case-03/r4": "absent"
+      },
+      "conditional": {
+        "case-03/r5": "full"
+      },
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [
+        {
+          "id": "case-03/r2",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Kildene sier at usikkert vann må behandles, også når bekkevannet ser rent ut."
+        },
+        {
+          "id": "case-03/r3",
+          "decision": "absent",
+          "missing_components": [
+            "Fosskoking av klart vann i ett minutt ved høyder til og med 6500 fot, omtrent 2000 meter."
+          ],
+          "reason": "Koking anbefales, men verken koketid eller høydegrense er levert."
+        },
+        {
+          "id": "case-03/r4",
+          "decision": "absent",
+          "missing_components": [
+            "Fosskoking av klart vann i tre minutter over 6500 fot."
+          ],
+          "reason": "Ingen levert tekst angir regelen for høyder over 6500 fot."
+        },
+        {
+          "id": "case-03/r5",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Begrensningen ved kjemisk forurensning og rådet om en annen vannkilde er uttrykkelig dekket."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Rådene gjelder flom, skred og skadeforebygging, ikke behandling av drikkevann på tur."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Toalettavfall og håndhygiene besvarer ikke spørsmålet om behandling av bekkevannet."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Førstehjelp ved nedkjøling gjelder et annet scenario."
+        }
+      ]
+    },
+    {
+      "case_id": "case-04",
+      "context_id": "R04",
+      "corpus_gap": false,
+      "required": {
+        "case-04/r1": "full",
+        "case-04/r2": "full",
+        "case-04/r3": "full",
+        "case-04/r4": "full",
+        "case-04/r5": "full"
+      },
+      "conditional": {},
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [
+        {
+          "id": "case-04/r1",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Direkte råd om ikke å fortsette inn i ukjent terreng for å finne veien."
+        },
+        {
+          "id": "case-04/r2",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Stopp og situasjonsvurdering er uttrykkelig dekket."
+        },
+        {
+          "id": "case-04/r3",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Rådet om å bli på stedet er knyttet til usikkerhet om veien ut."
+        },
+        {
+          "id": "case-04/r4",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Sikkerhet, varme og å lage ly er dekket."
+        },
+        {
+          "id": "case-04/r5",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Både å søke hjelp og gjøre seg synlig er uttrykkelig dekket."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Skredredning, skredhistorier og skredfarevurdering gjelder andre situasjoner enn den oppgitte orienteringssvikten i tåke."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Passasjen gjelder pustevurdering hos en bevisstløs, nedkjølt person; dette er ikke oppgitt i situasjonen."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Rådene gjelder farlig elvekryssing og forhåndsplanlegging, ikke umiddelbare handlinger når stien allerede er mistet i tåke."
+        }
+      ]
+    },
+    {
+      "case_id": "case-05",
+      "context_id": "R05",
+      "corpus_gap": false,
+      "required": {
+        "case-05/r3": "full",
+        "case-05/r4": "full",
+        "case-05/r5": "full"
+      },
+      "conditional": {
+        "case-05/r2": "full",
+        "case-05/r6": "full"
+      },
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [
+        {
+          "id": "case-05/r2",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Kilden sier uttrykkelig at ingen steder utendørs er trygge under tordenvær."
+        },
+        {
+          "id": "case-05/r3",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Umiddelbar ferdsel bort fra rygger, topper og høyt terreng er eksplisitt dekket."
+        },
+        {
+          "id": "case-05/r4",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Kilden forbyr uttrykkelig å bruke klippeoverheng som ly."
+        },
+        {
+          "id": "case-05/r5",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Begge gyldige ly-alternativer er beskrevet med nødvendige egenskaper."
+        },
+        {
+          "id": "case-05/r6",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Reserveplanen er betinget av manglende ly og omtales som risikoreduksjon, uten garanti for trygghet."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Generell forhåndsberedskap gir ikke tiltak for det pågående tordenværet."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Rådene gjelder å ha gått seg vill, ikke den oppgitte lynsituasjonen; oppfordringen til å bli værende har en annen uttrykkelig kontekst."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Flom- og skredrådene gjelder andre farer som ikke er oppgitt i situasjonen."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Disse blokkene gjelder snøskredvurdering, turplanlegging og kameratredning, ikke håndtering av lyn på fjellryggen."
+        }
+      ]
+    },
+    {
+      "case_id": "case-06",
+      "context_id": "R06",
+      "corpus_gap": false,
+      "required": {
+        "case-06/r1": "absent",
+        "case-06/r2": "full",
+        "case-06/r3": "full",
+        "case-06/r4": "full"
+      },
+      "conditional": {},
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [
+        {
+          "id": "case-06/r1",
+          "decision": "absent",
+          "missing_components": [
+            "Instruks om å ringe 113 ved den beskrevne store ytre blødningen."
+          ],
+          "reason": "113-rådene gjelder forverring, indre blødning eller bestemte brudd, ikke stor ytre blødning i seg selv."
+        },
+        {
+          "id": "case-06/r2",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Kildene støtter direkte, kraftig trykk med bandasje eller rent tøy."
+        },
+        {
+          "id": "case-06/r3",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Ny bandasje utenpå den eksisterende innebærer at den første beholdes, samtidig som trykket økes."
+        },
+        {
+          "id": "case-06/r4",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Varme, overvåking og varsling av 113 ved forverring er dekket."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Dette er råd under behandling av mindre blødninger og sår, ikke den aktuelle innledende håndteringen av stor pågående blødning."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Bruddinstruksjonene gjelder et annet skadescenario. Rådet om å unngå press er avgrenset til dette og er ikke en konflikt med direkte trykk mot kuttsåret."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Rengjøringsrådene gjelder skrubbsår og rifter, ikke første tiltak ved den beskrevne store blødningen."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Dette varslingrådet gjelder indre blødning og dekker ikke den synlige ytre blødningen."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Skredredning og forstuet ankel gjelder andre situasjoner."
+        }
+      ]
+    },
+    {
+      "case_id": "case-07",
+      "context_id": "R07",
+      "corpus_gap": false,
+      "required": {
+        "case-07/r1": "full",
+        "case-07/r2": "full",
+        "case-07/r3": "full",
+        "case-07/r4": "full"
+      },
+      "conditional": {},
+      "finding_types": [
+        "irrelevant",
+        "requires_review"
+      ],
+      "items": [
+        {
+          "id": "case-07/r1",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Dekker avkjølingsmåte, temperatur og varighet for voksne."
+        },
+        {
+          "id": "case-07/r2",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Både is og iskaldt vann frarådes eksplisitt."
+        },
+        {
+          "id": "case-07/r3",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Instruksjonen er eksplisitt."
+        },
+        {
+          "id": "case-07/r4",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Brannskade på hånden er uttrykkelig grunn til legekontakt."
+        }
+      ],
+      "findings": [
+        {
+          "type": "requires_review",
+          "reason": "Kremrådene er ikke entydige. Den oppgitte begrensningen bevares uten å avgjøre krembruken; dette ligger utenfor kjernekriteriene."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Barnespesifikt råd gjelder ikke den voksne personen."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Gjelder skrubbsår og rifter, ikke behandling av den aktuelle brannskaden."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Vannbehandling og generell turhygiene gir ikke førstehjelp for den allerede oppståtte brannskaden."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Gjelder henholdsvis nedkjøling og heteslag, ikke den beskrevne skåldingsskaden."
+        }
+      ]
+    },
+    {
+      "case_id": "case-08",
+      "context_id": "R08",
+      "corpus_gap": false,
+      "required": {
+        "case-08/r1": "full",
+        "case-08/r2": "full",
+        "case-08/r3": "full",
+        "case-08/r4": "partial"
+      },
+      "conditional": {},
+      "finding_types": [
+        "irrelevant",
+        "potentially_misleading"
+      ],
+      "items": [
+        {
+          "id": "case-08/r1",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Direkte beskjed om å ringe 113 ved bevisstløshet."
+        },
+        {
+          "id": "case-08/r2",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Luftveisåpning, vurdering av luftstrøm og brystbevegelser samt tidsgrensen er dekket for voksne."
+        },
+        {
+          "id": "case-08/r3",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Normal pust som vilkår, sideleie, fri luftvei og nedovervendt munn er uttrykkelig dekket."
+        },
+        {
+          "id": "case-08/r4",
+          "decision": "partial",
+          "missing_components": [
+            "Beskjed om å starte HLR ved ingen eller unormal pust."
+          ],
+          "reason": "Overvåking er dekket. HLR-teknikk finnes, men ingen levert tekst knytter oppstart av HLR til ingen eller unormal pust."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Barne- og spedbarnsprosedyrene gjelder andre aldersgrupper enn den voksne i spørsmålet."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Legevaktinformasjonen under forstuing og brudd hjelper ikke med den beskrevne bevisstløsheten."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Minuttlang pustesjekk gjelder nedkjøling, som ikke er oppgitt i situasjonen."
+        },
+        {
+          "type": "potentially_misleading",
+          "reason": "Disse sammendragene nevner sideleie uten vilkåret om normal pust. Lest alene kan de føre til sideleie før normal pust er bekreftet; vilkåret finnes i blokk 2."
+        }
+      ]
+    },
+    {
+      "case_id": "case-09",
+      "context_id": "R09",
+      "corpus_gap": false,
+      "required": {
+        "case-09/r1": "full",
+        "case-09/r2": "full",
+        "case-09/r3": "full"
+      },
+      "conditional": {},
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [
+        {
+          "id": "case-09/r1",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Kilden gir uttrykkelig råd om rikelig alkoholfri drikke."
+        },
+        {
+          "id": "case-09/r2",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Rådet står i en uttrykkelig kontekst om å unngå oppheting."
+        },
+        {
+          "id": "case-09/r3",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Kilden beskriver både avkjøling og kjøligere omgivelser."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Dette gjelder nedkjøling og redning, ikke forebygging av varmeplager. Rådene er ikke anvendelige konflikter."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Rådene gjelder andre turforberedelser og farer, ikke tiltak mot varmeplager underveis."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Dette gjelder smitte og vannhygiene, ikke forebygging av oppheting eller dehydrering i den beskrevne situasjonen."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Blokken gjelder behandling av brannskader, ikke varmeplager; dens avkjølingsråd har en annen avgrensning."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Definisjonen gir ingen forebyggende tiltak og fastsetter ikke en sikker temperaturgrense for turen."
+        }
+      ]
+    },
+    {
+      "case_id": "case-10",
+      "context_id": "R10",
+      "corpus_gap": false,
+      "required": {
+        "case-10/r1": "full",
+        "case-10/r2": "full",
+        "case-10/r3": "full"
+      },
+      "conditional": {},
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [
+        {
+          "id": "case-10/r1",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Varmt tøy knyttes uttrykkelig til dårlig vær og en uventet natt ute."
+        },
+        {
+          "id": "case-10/r2",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Utstyrslisten omfatter både sovepose og overlevelsesteppe."
+        },
+        {
+          "id": "case-10/r3",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Nødly er uttrykkelig oppført som personlig utstyr."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Dette gjelder behandling etter redning på is, ikke pakking for en uventet overnatting."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Rådene gjelder å ha gått seg vill, som ikke er oppgitt i spørsmålet."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Dette gjelder særskilte lyn- og skredscenarioer, ikke det etterspurte beredskapsutstyret."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Utstyr som forutsetter strømtilgang hjelper ikke med den beskrevne overnattingen ute i fjellet."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Teksten gjelder hete og overoppheting, ikke å holde varmen gjennom natten. Dette er et annet scenario, ikke en motstridende bekledningsregel."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Isferdsel og isredningsutstyr gjelder et annet scenario enn det spørsmålet beskriver."
+        }
+      ]
+    },
+    {
+      "case_id": "case-11",
+      "context_id": "R11",
+      "corpus_gap": false,
+      "required": {
+        "case-11/r1": "full",
+        "case-11/r2": "full",
+        "case-11/r3": "full"
+      },
+      "conditional": {},
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [
+        {
+          "id": "case-11/r1",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Nedgraving uten toalett med minst 8 tommers dybde og 200 fots avstand tilsvarer omtrent 20 cm og 60 m."
+        },
+        {
+          "id": "case-11/r2",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Plassering nedstrøms egne og andres vannhentesteder er eksplisitt dekket."
+        },
+        {
+          "id": "case-11/r3",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Alle tidspunktene og alternativet med minst 60 prosent alkohol når såpe og vann mangler, er dekket."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Rådene gjelder flomforebygging og eiendomssikring, ikke toalettavfall eller håndhygiene ved teltplassen."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Førstehjelp ved nedkjøling og brannskader gjelder andre situasjoner enn den beskrevne."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Denne delen av utstyrslisten hjelper ikke med toalettavfall eller håndhygiene. Forbudet mot vask og såpe i vann i samme blokk er derimot relevant."
+        }
+      ]
+    },
+    {
+      "case_id": "case-12",
+      "context_id": "R12",
+      "corpus_gap": false,
+      "required": {
+        "case-12/r2": "full",
+        "case-12/r3": "full"
+      },
+      "conditional": {},
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [
+        {
+          "id": "case-12/r2",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Kildene fraråder kryssing ved flom, manglende erfaring og tvil, og identifiserer brunt vann som et selvstendig faresignal."
+        },
+        {
+          "id": "case-12/r3",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Å snu eller vente til elva er trygg, er uttrykkelig dekket."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Råd om bilkjøring, bolig og sikring av eiendom gjelder andre situasjoner enn turfølgets beslutning om elvekryssing."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Drikkevannshygiene og koking av vann hjelper ikke med vurderingen av om elva kan krysses."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Isferdsel og behandling av nedkjølte gjelder andre scenarioer; verken is eller en nedkjølt person er oppgitt."
+        }
+      ]
+    },
+    {
+      "case_id": "case-13",
+      "context_id": "R13",
+      "corpus_gap": false,
+      "required": {
+        "case-13/r1": "partial"
+      },
+      "conditional": {
+        "case-13/r2": "absent"
+      },
+      "finding_types": [
+        "irrelevant",
+        "potentially_misleading"
+      ],
+      "items": [
+        {
+          "id": "case-13/r1",
+          "decision": "partial",
+          "missing_components": [
+            "At nødpeileren skal aktiveres straks i den beskrevne situasjonen, uten å vente på bedring."
+          ],
+          "reason": "Teksten støtter aktivering av nødpeiler i nødssituasjoner, men gir ikke det nødvendige rådet om umiddelbar aktivering fremfor å vente."
+        },
+        {
+          "id": "case-13/r2",
+          "decision": "absent",
+          "missing_components": [
+            "Uttrykkelig råd om å aktivere og få hjelp ved tvil, fremfor å vente."
+          ],
+          "reason": "Ingen levert tekst omtaler tvil om aktivering."
+        }
+      ],
+      "findings": [
+        {
+          "type": "potentially_misleading",
+          "reason": "Det ubetingede telefonrådet kan lede til å forsøke å ringe som eneste varsling, selv om spørsmålet uttrykkelig oppgir manglende mobildekning og tilgjengelig nødpeiler."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Dette gjelder oppfølging av en bevisstløs person; bevisstløshet er ikke oppgitt, og teksten avklarer ikke nødpeileraktivering."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Elvekryssing og skredplanlegging gjelder andre faresituasjoner, ikke varsling etter den aktuelle fallulykken."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Legevaktinformasjonen avklarer ikke bruk av nødpeiler ved mulig livsfare uten mobildekning."
+        }
+      ]
+    },
+    {
+      "case_id": "case-14",
+      "context_id": "R14",
+      "corpus_gap": true,
+      "required": {
+        "case-14/r1": "full",
+        "case-14/r2": "absent"
+      },
+      "conditional": {},
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [
+        {
+          "id": "case-14/r1",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Teksten knytter faretegn til skredfare og behovet for å tilpasse turvalget."
+        },
+        {
+          "id": "case-14/r2",
+          "decision": "absent",
+          "missing_components": [
+            "Råd om å unngå eller begrense skredterreng uten tilstrekkelig kunnskap og erfaring."
+          ],
+          "reason": "Planleggingsråd og krav om skredutstyr gir ikke det etterspurte rådet om terrengbegrensning."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Hendelsesfortellinger og søk etter skredtatte gir ikke hjelp til den aktuelle situasjonen; ingen er oppgitt skredtatt."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Rådene gjelder ferdsel på is, selvredning fra vann og nedkjøling etter isulykke, ikke faretegn i snø på topptur."
+        }
+      ]
+    },
+    {
+      "case_id": "case-15",
+      "context_id": "R15",
+      "corpus_gap": true,
+      "required": {},
+      "conditional": {},
+      "finding_types": [
+        "irrelevant",
+        "requires_review"
+      ],
+      "items": [],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Råd om vannbehandling avklarer ikke om bål er tillatt eller hvilke bålregler som gjelder."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Flom- og skredrådene gjelder andre situasjoner, ikke lovligheten av matlagingsbål ved et vann."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Generell værberedskap gir ingen informasjon om bålregler."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Førstehjelp ved brannskader gjelder en annen situasjon; ingen skade er oppgitt."
+        },
+        {
+          "type": "requires_review",
+          "reason": "Kremrådene har en uavklart innbyrdes avgrensning. Dette ligger utenfor spørsmålet om bålregler og avgjøres ikke her."
+        }
+      ]
+    },
+    {
+      "case_id": "case-16",
+      "context_id": "R16",
+      "corpus_gap": false,
+      "required": {
+        "case-16/r1": "full",
+        "case-16/r2": "full"
+      },
+      "conditional": {},
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [
+        {
+          "id": "case-16/r1",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Dekker rengjøring av såret og huden rundt, vanntype og alle kravene til eventuell såpe."
+        },
+        {
+          "id": "case-16/r2",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Gir råd om plaster eller bandasje ved fare for ny skitt, som er relevant når turen fortsetter."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Tiltak for blødningskontroll og overvåking hjelper ikke med rengjøring og beskyttelse av det beskrevne skrubbsåret som nesten ikke blør."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Brudd og sprikende kutt er andre skadescenarioer enn det oppgitte overfladiske skrubbsåret."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Brannskadebehandlingen gjelder et annet scenario og gir ikke anvendelig råd om skrubbsåret."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Rådet gjelder indre blødning, ikke den beskrevne overfladiske skaden."
+        }
+      ]
+    },
+    {
+      "case_id": "case-17",
+      "context_id": "R17",
+      "corpus_gap": false,
+      "required": {
+        "case-17/r2": "full"
+      },
+      "conditional": {},
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [
+        {
+          "id": "case-17/r2",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Instruksen om å ringe 113 ved pustevansker eller tidskritisk sykdom dekker den beskrevne raske reaksjonen med trang hals. Varslingen er knyttet til tilstanden nå, ikke til ankomst ned fra fjellet."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Skredredning, skredhistorier og skredfarevurdering gjelder andre situasjoner. Rekkefølgen for varsling ved skredsøk er ikke et motstridende råd for denne hendelsen."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Disse redningsrådene gjelder personer i vannet og redning fra is, ikke reaksjon etter vepsestikk."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Nedkjøling, undersøkelse ved mulig bevisstløshet, det å gå seg vill og ankelforstuing gjelder andre situasjoner enn den beskrevne."
+        }
+      ]
+    },
+    {
+      "case_id": "case-18",
+      "context_id": "R18",
+      "corpus_gap": false,
+      "required": {
+        "case-18/r1": "full",
+        "case-18/r2": "full",
+        "case-18/r3": "full"
+      },
+      "conditional": {},
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [
+        {
+          "id": "case-18/r1",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Begge handlingene er uttrykkelig beskrevet for egenredning."
+        },
+        {
+          "id": "case-18/r2",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Kilden beskriver både rekkefølgen og hvordan svak kant brytes før oppstigning."
+        },
+        {
+          "id": "case-18/r3",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "En komplett metode med svømmestilling, armer, benspark og ispigger er gitt under betingelsen solid kant."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Gjelder et annet scenario: personen er under isen, ikke ved overflaten i hullet."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Forebyggende ferdselsråd og fremtidig trening beskriver ikke hvordan personen kommer opp fra hullet nå."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Blokken gjelder søk og kameratredning ved snøskred, ikke egenredning gjennom is."
+        }
+      ]
+    },
+    {
+      "case_id": "case-19",
+      "context_id": "R19",
+      "corpus_gap": false,
+      "required": {
+        "case-19/r1": "full",
+        "case-19/r2": "full"
+      },
+      "conditional": {},
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [
+        {
+          "id": "case-19/r1",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Kravet gjelder hver deltaker og alle tre utstyrstypene. Gruppens beskrevne fellesutstyr oppfyller derfor ikke kravet."
+        },
+        {
+          "id": "case-19/r2",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Kilden krever praktisk øving til rutinene sitter, også etter skredkurs."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Dette gjelder isredning, ikke personlig skredutstyr eller øving før skitur."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Førstehjelp til en bevisstløs person gjelder en annen situasjon enn den beskrevne turforberedelsen."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Legevaktinformasjon hjelper ikke med spørsmålet om skredutstyr og øving."
+        }
+      ]
+    },
+    {
+      "case_id": "case-20",
+      "context_id": "R20",
+      "corpus_gap": false,
+      "required": {
+        "case-20/r1": "full",
+        "case-20/r2": "full"
+      },
+      "conditional": {},
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [
+        {
+          "id": "case-20/r1",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Kilden dekker både å undersøke ruten og å sikre tilstrekkelige ferdigheter."
+        },
+        {
+          "id": "case-20/r2",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Kilden anbefaler å sjekke værmeldingen og endre planen ved behov."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Dette gjelder å ha gått seg bort og å få hjelp, ikke beslutninger før turen."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Skredspesifikke vurderinger, ulykkesfortellinger og kameratredning gjelder en fare som ikke er oppgitt i spørsmålet. De generelle planleggingsrådene i disse blokkene kan likevel være nyttige."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Elvekryssing er ikke oppgitt som del av turen. Blokkens generelle råd om fleksibilitet og reserveplan er likevel nyttige."
+        }
+      ]
+    },
+    {
+      "case_id": "case-21",
+      "context_id": "R21",
+      "corpus_gap": false,
+      "required": {
+        "case-21/r1": "full",
+        "case-21/r2": "partial"
+      },
+      "conditional": {},
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [
+        {
+          "id": "case-21/r1",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Dekker filterets effekt mot bakterier og parasitter samt begrensningen mot virus."
+        },
+        {
+          "id": "case-21/r2",
+          "decision": "partial",
+          "missing_components": [
+            "Instruksjon om å følge desinfeksjonsproduktets bruksanvisning."
+          ],
+          "reason": "Riktig rekkefølge er uttrykkelig støttet, men produktets bruksanvisning omtales ikke."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Førstehjelp ved nedkjøling hjelper ikke med vannbehandlingen."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "HLR for barn og baby gjelder andre situasjoner enn behandling av drikkevann."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Isredning er ikke relevant for spørsmålet om filter og desinfeksjon."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Brannskadebehandling gjelder en annen situasjon og gir ingen støtte til vannbehandlingen."
+        }
+      ]
+    },
+    {
+      "case_id": "case-22",
+      "context_id": "R22",
+      "corpus_gap": false,
+      "required": {
+        "case-22/r1": "full",
+        "case-22/r2": "full",
+        "case-22/r3": "full"
+      },
+      "conditional": {},
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [
+        {
+          "id": "case-22/r1",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Supports choosing an offline topographic app covering New Zealand backcountry, tracks and terrain."
+        },
+        {
+          "id": "case-22/r2",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Explicitly supports downloading and testing maps offline before departure."
+        },
+        {
+          "id": "case-22/r3",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Explicitly supports sufficient battery life and a paper backup."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Addresses actions after becoming lost, rather than preparations for offline phone navigation."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Indoor and outdoor lightning precautions concern a different hazard."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "River-crossing contingency advice does not address the requested navigation preparations."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "General conduct during a trip does not address offline maps, battery preparation or navigation backup."
+        }
+      ]
+    },
+    {
+      "case_id": "case-23",
+      "context_id": "R23",
+      "corpus_gap": false,
+      "required": {
+        "case-23/r1": "full",
+        "case-23/r2": "full",
+        "case-23/r3": "full"
+      },
+      "conditional": {},
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [
+        {
+          "id": "case-23/r1",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Angir minst 30 minutter i ly etter siste hørbare torden; ti minutter er dermed ikke nok."
+        },
+        {
+          "id": "case-23/r2",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Dekker å unngå ledningstilkoblet utstyr som gir direkte kontakt med elektrisitet."
+        },
+        {
+          "id": "case-23/r3",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Dekker å unngå røranlegg, inkludert vask, bad og kraner."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Rådene gjelder flom- og skredberedskap, ikke ventetid eller innendørs sikkerhet ved tordenvær."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Elvekryssing gjelder en annen situasjon."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Kameratredning etter snøskred hjelper ikke med den aktuelle tordenværsituasjonen."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Rådene gjelder redning på is, ikke opphold i en bygning under tordenvær."
+        }
+      ]
+    },
+    {
+      "case_id": "case-24",
+      "context_id": "R24",
+      "corpus_gap": false,
+      "required": {
+        "case-24/r1": "full",
+        "case-24/r2": "full"
+      },
+      "conditional": {},
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [
+        {
+          "id": "case-24/r1",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Kilden fraråder uttrykkelig opphold nær bekker med stor vannføring."
+        },
+        {
+          "id": "case-24/r2",
+          "decision": "full",
+          "missing_components": [],
+          "reason": "Kilden dekker både avstand fra løsmasseskråningen og skredfaren ved erosjon langs bekken."
+        }
+      ],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Råd om skadeforebygging på eiendom gjelder en annen situasjon enn ferdsel på den utsatte turstien."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Drikkevannssmitte og symptomer gjelder en annen fare enn strøm, erosjon og skred langs stien."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Dette er råd ved lynfare; spørsmålet beskriver ikke tordenvær."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Båt- og bilkjøring er andre ferdselssituasjoner enn den beskrevne fotturen."
+        }
+      ]
+    },
+    {
+      "case_id": "case-25",
+      "context_id": "R25",
+      "corpus_gap": true,
+      "required": {},
+      "conditional": {},
+      "finding_types": [
+        "irrelevant"
+      ],
+      "items": [],
+      "findings": [
+        {
+          "type": "irrelevant",
+          "reason": "Rådene gjelder lyn og tordenvær, som ikke er oppgitt i situasjonen, ikke bygging av regntett greinely."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Dette er råd om eiendomssikring, flom og skred i andre situasjoner, ikke en prosedyre for skogsly."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Utstyrslistene gir ingen byggemetode eller kriterier for regntetting og stabilitet. Teltoppføringen løser ikke situasjonen uten teltduk."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Vannbehandling og matforsyning gir ikke veiledning om det etterspurte lyet."
+        },
+        {
+          "type": "irrelevant",
+          "reason": "Dette gjelder redning på is og behandling ved nedkjøling, ikke den oppgitte situasjonen eller konstruksjon av greinely."
+        }
+      ]
+    }
+  ],
+  "paired_answer_retention": [
+    {
+      "case_id": "case-01",
+      "model": "historical-qwen",
+      "answer_id": "17a6b8b44c2e",
+      "available": 1,
+      "preserved": 1,
+      "answer_full_total": 1,
+      "answer_full_without_full_source": 0,
+      "retention": 1.0,
+      "items": {
+        "case-01/r1": {
+          "source": "absent",
+          "answer": "absent"
+        },
+        "case-01/r3": {
+          "source": "partial",
+          "answer": "partial"
+        },
+        "case-01/r4": {
+          "source": "full",
+          "answer": "full"
+        }
+      }
+    },
+    {
+      "case_id": "case-02",
+      "model": "historical-qwen",
+      "answer_id": "d84eb803a921",
+      "available": 5,
+      "preserved": 1,
+      "answer_full_total": 1,
+      "answer_full_without_full_source": 0,
+      "retention": 0.2,
+      "items": {
+        "case-02/r1": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-02/r2": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-02/r3": {
+          "source": "full",
+          "answer": "absent"
+        },
+        "case-02/r4": {
+          "source": "full",
+          "answer": "full"
+        },
+        "case-02/r5": {
+          "source": "full",
+          "answer": "absent"
+        }
+      }
+    },
+    {
+      "case_id": "case-03",
+      "model": "historical-qwen",
+      "answer_id": "99e7a21dd7c2",
+      "available": 1,
+      "preserved": 1,
+      "answer_full_total": 1,
+      "answer_full_without_full_source": 0,
+      "retention": 1.0,
+      "items": {
+        "case-03/r2": {
+          "source": "full",
+          "answer": "full"
+        },
+        "case-03/r3": {
+          "source": "absent",
+          "answer": "partial"
+        },
+        "case-03/r4": {
+          "source": "absent",
+          "answer": "partial"
+        }
+      }
+    },
+    {
+      "case_id": "case-04",
+      "model": "historical-qwen",
+      "answer_id": "04872654d9ff",
+      "available": 5,
+      "preserved": 0,
+      "answer_full_total": 0,
+      "answer_full_without_full_source": 0,
+      "retention": 0.0,
+      "items": {
+        "case-04/r1": {
+          "source": "full",
+          "answer": "absent"
+        },
+        "case-04/r2": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-04/r3": {
+          "source": "full",
+          "answer": "absent"
+        },
+        "case-04/r4": {
+          "source": "full",
+          "answer": "absent"
+        },
+        "case-04/r5": {
+          "source": "full",
+          "answer": "partial"
+        }
+      }
+    },
+    {
+      "case_id": "case-05",
+      "model": "historical-qwen",
+      "answer_id": "5473ff3f75f5",
+      "available": 3,
+      "preserved": 0,
+      "answer_full_total": 0,
+      "answer_full_without_full_source": 0,
+      "retention": 0.0,
+      "items": {
+        "case-05/r3": {
+          "source": "full",
+          "answer": "absent"
+        },
+        "case-05/r4": {
+          "source": "full",
+          "answer": "absent"
+        },
+        "case-05/r5": {
+          "source": "full",
+          "answer": "absent"
+        }
+      }
+    },
+    {
+      "case_id": "case-05",
+      "model": "gemma-e2b",
+      "answer_id": "9db3cd842605",
+      "available": 3,
+      "preserved": 1,
+      "answer_full_total": 1,
+      "answer_full_without_full_source": 0,
+      "retention": 0.3333333333333333,
+      "items": {
+        "case-05/r3": {
+          "source": "full",
+          "answer": "absent"
+        },
+        "case-05/r4": {
+          "source": "full",
+          "answer": "absent"
+        },
+        "case-05/r5": {
+          "source": "full",
+          "answer": "full"
+        }
+      }
+    },
+    {
+      "case_id": "case-05",
+      "model": "qwen-2b",
+      "answer_id": "ba306bda9fc2",
+      "available": 3,
+      "preserved": 3,
+      "answer_full_total": 3,
+      "answer_full_without_full_source": 0,
+      "retention": 1.0,
+      "items": {
+        "case-05/r3": {
+          "source": "full",
+          "answer": "full"
+        },
+        "case-05/r4": {
+          "source": "full",
+          "answer": "full"
+        },
+        "case-05/r5": {
+          "source": "full",
+          "answer": "full"
+        }
+      }
+    },
+    {
+      "case_id": "case-06",
+      "model": "historical-qwen",
+      "answer_id": "3c9ef423a24b",
+      "available": 3,
+      "preserved": 0,
+      "answer_full_total": 0,
+      "answer_full_without_full_source": 0,
+      "retention": 0.0,
+      "items": {
+        "case-06/r1": {
+          "source": "absent",
+          "answer": "partial"
+        },
+        "case-06/r2": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-06/r3": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-06/r4": {
+          "source": "full",
+          "answer": "absent"
+        }
+      }
+    },
+    {
+      "case_id": "case-07",
+      "model": "historical-qwen",
+      "answer_id": "28f7ab5961b5",
+      "available": 4,
+      "preserved": 0,
+      "answer_full_total": 0,
+      "answer_full_without_full_source": 0,
+      "retention": 0.0,
+      "items": {
+        "case-07/r1": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-07/r2": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-07/r3": {
+          "source": "full",
+          "answer": "absent"
+        },
+        "case-07/r4": {
+          "source": "full",
+          "answer": "absent"
+        }
+      }
+    },
+    {
+      "case_id": "case-08",
+      "model": "gemma-e2b",
+      "answer_id": "45ae3909d1de",
+      "available": 3,
+      "preserved": 1,
+      "answer_full_total": 1,
+      "answer_full_without_full_source": 0,
+      "retention": 0.3333333333333333,
+      "items": {
+        "case-08/r1": {
+          "source": "full",
+          "answer": "full"
+        },
+        "case-08/r2": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-08/r3": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-08/r4": {
+          "source": "partial",
+          "answer": "absent"
+        }
+      }
+    },
+    {
+      "case_id": "case-08",
+      "model": "qwen-2b",
+      "answer_id": "4daf32ba0c02",
+      "available": 3,
+      "preserved": 1,
+      "answer_full_total": 1,
+      "answer_full_without_full_source": 0,
+      "retention": 0.3333333333333333,
+      "items": {
+        "case-08/r1": {
+          "source": "full",
+          "answer": "full"
+        },
+        "case-08/r2": {
+          "source": "full",
+          "answer": "absent"
+        },
+        "case-08/r3": {
+          "source": "full",
+          "answer": "absent"
+        },
+        "case-08/r4": {
+          "source": "partial",
+          "answer": "absent"
+        }
+      }
+    },
+    {
+      "case_id": "case-08",
+      "model": "historical-qwen",
+      "answer_id": "c625821d1a6f",
+      "available": 3,
+      "preserved": 1,
+      "answer_full_total": 1,
+      "answer_full_without_full_source": 0,
+      "retention": 0.3333333333333333,
+      "items": {
+        "case-08/r1": {
+          "source": "full",
+          "answer": "full"
+        },
+        "case-08/r2": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-08/r3": {
+          "source": "full",
+          "answer": "absent"
+        },
+        "case-08/r4": {
+          "source": "partial",
+          "answer": "partial"
+        }
+      }
+    },
+    {
+      "case_id": "case-09",
+      "model": "historical-qwen",
+      "answer_id": "e18c92fff6c0",
+      "available": 3,
+      "preserved": 1,
+      "answer_full_total": 1,
+      "answer_full_without_full_source": 0,
+      "retention": 0.3333333333333333,
+      "items": {
+        "case-09/r1": {
+          "source": "full",
+          "answer": "full"
+        },
+        "case-09/r2": {
+          "source": "full",
+          "answer": "absent"
+        },
+        "case-09/r3": {
+          "source": "full",
+          "answer": "absent"
+        }
+      }
+    },
+    {
+      "case_id": "case-10",
+      "model": "historical-qwen",
+      "answer_id": "cc7e86d922e2",
+      "available": 3,
+      "preserved": 0,
+      "answer_full_total": 0,
+      "answer_full_without_full_source": 0,
+      "retention": 0.0,
+      "items": {
+        "case-10/r1": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-10/r2": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-10/r3": {
+          "source": "full",
+          "answer": "absent"
+        }
+      }
+    },
+    {
+      "case_id": "case-11",
+      "model": "historical-qwen",
+      "answer_id": "657622cd1e2b",
+      "available": 3,
+      "preserved": 0,
+      "answer_full_total": 0,
+      "answer_full_without_full_source": 0,
+      "retention": 0.0,
+      "items": {
+        "case-11/r1": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-11/r2": {
+          "source": "full",
+          "answer": "absent"
+        },
+        "case-11/r3": {
+          "source": "full",
+          "answer": "partial"
+        }
+      }
+    },
+    {
+      "case_id": "case-12",
+      "model": "historical-qwen",
+      "answer_id": "07600b195f8c",
+      "available": 2,
+      "preserved": 1,
+      "answer_full_total": 1,
+      "answer_full_without_full_source": 0,
+      "retention": 0.5,
+      "items": {
+        "case-12/r2": {
+          "source": "full",
+          "answer": "full"
+        },
+        "case-12/r3": {
+          "source": "full",
+          "answer": "absent"
+        }
+      }
+    },
+    {
+      "case_id": "case-13",
+      "model": "historical-qwen",
+      "answer_id": "3aefbdefb61e",
+      "available": 0,
+      "preserved": 0,
+      "answer_full_total": 0,
+      "answer_full_without_full_source": 0,
+      "retention": null,
+      "items": {
+        "case-13/r1": {
+          "source": "partial",
+          "answer": "absent"
+        }
+      }
+    },
+    {
+      "case_id": "case-16",
+      "model": "historical-qwen",
+      "answer_id": "6f1f43528443",
+      "available": 2,
+      "preserved": 1,
+      "answer_full_total": 1,
+      "answer_full_without_full_source": 0,
+      "retention": 0.5,
+      "items": {
+        "case-16/r1": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-16/r2": {
+          "source": "full",
+          "answer": "full"
+        }
+      }
+    },
+    {
+      "case_id": "case-17",
+      "model": "historical-qwen",
+      "answer_id": "3662e9dafe83",
+      "available": 1,
+      "preserved": 0,
+      "answer_full_total": 0,
+      "answer_full_without_full_source": 0,
+      "retention": 0.0,
+      "items": {
+        "case-17/r2": {
+          "source": "full",
+          "answer": "partial"
+        }
+      }
+    },
+    {
+      "case_id": "case-17",
+      "model": "qwen-2b",
+      "answer_id": "38cf2c032506",
+      "available": 1,
+      "preserved": 1,
+      "answer_full_total": 1,
+      "answer_full_without_full_source": 0,
+      "retention": 1.0,
+      "items": {
+        "case-17/r2": {
+          "source": "full",
+          "answer": "full"
+        }
+      }
+    },
+    {
+      "case_id": "case-17",
+      "model": "gemma-e2b",
+      "answer_id": "beb23f98296b",
+      "available": 1,
+      "preserved": 0,
+      "answer_full_total": 0,
+      "answer_full_without_full_source": 0,
+      "retention": 0.0,
+      "items": {
+        "case-17/r2": {
+          "source": "full",
+          "answer": "absent"
+        }
+      }
+    },
+    {
+      "case_id": "case-18",
+      "model": "historical-qwen",
+      "answer_id": "932d3d68bf94",
+      "available": 3,
+      "preserved": 2,
+      "answer_full_total": 2,
+      "answer_full_without_full_source": 0,
+      "retention": 0.6666666666666666,
+      "items": {
+        "case-18/r1": {
+          "source": "full",
+          "answer": "full"
+        },
+        "case-18/r2": {
+          "source": "full",
+          "answer": "full"
+        },
+        "case-18/r3": {
+          "source": "full",
+          "answer": "partial"
+        }
+      }
+    },
+    {
+      "case_id": "case-19",
+      "model": "historical-qwen",
+      "answer_id": "1a4ce50f6467",
+      "available": 2,
+      "preserved": 0,
+      "answer_full_total": 0,
+      "answer_full_without_full_source": 0,
+      "retention": 0.0,
+      "items": {
+        "case-19/r1": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-19/r2": {
+          "source": "full",
+          "answer": "absent"
+        }
+      }
+    },
+    {
+      "case_id": "case-19",
+      "model": "qwen-2b",
+      "answer_id": "4b6df7504dbb",
+      "available": 2,
+      "preserved": 1,
+      "answer_full_total": 1,
+      "answer_full_without_full_source": 0,
+      "retention": 0.5,
+      "items": {
+        "case-19/r1": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-19/r2": {
+          "source": "full",
+          "answer": "full"
+        }
+      }
+    },
+    {
+      "case_id": "case-19",
+      "model": "gemma-e2b",
+      "answer_id": "f4cd87afd92d",
+      "available": 2,
+      "preserved": 1,
+      "answer_full_total": 1,
+      "answer_full_without_full_source": 0,
+      "retention": 0.5,
+      "items": {
+        "case-19/r1": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-19/r2": {
+          "source": "full",
+          "answer": "full"
+        }
+      }
+    },
+    {
+      "case_id": "case-20",
+      "model": "historical-qwen",
+      "answer_id": "ac55a6271626",
+      "available": 2,
+      "preserved": 0,
+      "answer_full_total": 0,
+      "answer_full_without_full_source": 0,
+      "retention": 0.0,
+      "items": {
+        "case-20/r1": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-20/r2": {
+          "source": "full",
+          "answer": "absent"
+        }
+      }
+    },
+    {
+      "case_id": "case-21",
+      "model": "qwen-2b",
+      "answer_id": "231e77828428",
+      "available": 1,
+      "preserved": 0,
+      "answer_full_total": 0,
+      "answer_full_without_full_source": 0,
+      "retention": 0.0,
+      "items": {
+        "case-21/r1": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-21/r2": {
+          "source": "partial",
+          "answer": "partial"
+        }
+      }
+    },
+    {
+      "case_id": "case-21",
+      "model": "historical-qwen",
+      "answer_id": "258e7d3eca6d",
+      "available": 1,
+      "preserved": 1,
+      "answer_full_total": 1,
+      "answer_full_without_full_source": 0,
+      "retention": 1.0,
+      "items": {
+        "case-21/r1": {
+          "source": "full",
+          "answer": "full"
+        },
+        "case-21/r2": {
+          "source": "partial",
+          "answer": "absent"
+        }
+      }
+    },
+    {
+      "case_id": "case-21",
+      "model": "gemma-e2b",
+      "answer_id": "66a5bd373520",
+      "available": 1,
+      "preserved": 0,
+      "answer_full_total": 0,
+      "answer_full_without_full_source": 0,
+      "retention": 0.0,
+      "items": {
+        "case-21/r1": {
+          "source": "full",
+          "answer": "absent"
+        },
+        "case-21/r2": {
+          "source": "partial",
+          "answer": "partial"
+        }
+      }
+    },
+    {
+      "case_id": "case-22",
+      "model": "historical-qwen",
+      "answer_id": "04b51e7b5f38",
+      "available": 3,
+      "preserved": 0,
+      "answer_full_total": 0,
+      "answer_full_without_full_source": 0,
+      "retention": 0.0,
+      "items": {
+        "case-22/r1": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-22/r2": {
+          "source": "full",
+          "answer": "partial"
+        },
+        "case-22/r3": {
+          "source": "full",
+          "answer": "partial"
+        }
+      }
+    },
+    {
+      "case_id": "case-23",
+      "model": "gemma-e2b",
+      "answer_id": "8d0bac244f14",
+      "available": 3,
+      "preserved": 3,
+      "answer_full_total": 3,
+      "answer_full_without_full_source": 0,
+      "retention": 1.0,
+      "items": {
+        "case-23/r1": {
+          "source": "full",
+          "answer": "full"
+        },
+        "case-23/r2": {
+          "source": "full",
+          "answer": "full"
+        },
+        "case-23/r3": {
+          "source": "full",
+          "answer": "full"
+        }
+      }
+    },
+    {
+      "case_id": "case-23",
+      "model": "qwen-2b",
+      "answer_id": "92b946c15231",
+      "available": 3,
+      "preserved": 2,
+      "answer_full_total": 2,
+      "answer_full_without_full_source": 0,
+      "retention": 0.6666666666666666,
+      "items": {
+        "case-23/r1": {
+          "source": "full",
+          "answer": "absent"
+        },
+        "case-23/r2": {
+          "source": "full",
+          "answer": "full"
+        },
+        "case-23/r3": {
+          "source": "full",
+          "answer": "full"
+        }
+      }
+    },
+    {
+      "case_id": "case-23",
+      "model": "historical-qwen",
+      "answer_id": "a3843fe8805e",
+      "available": 3,
+      "preserved": 2,
+      "answer_full_total": 2,
+      "answer_full_without_full_source": 0,
+      "retention": 0.6666666666666666,
+      "items": {
+        "case-23/r1": {
+          "source": "full",
+          "answer": "absent"
+        },
+        "case-23/r2": {
+          "source": "full",
+          "answer": "full"
+        },
+        "case-23/r3": {
+          "source": "full",
+          "answer": "full"
+        }
+      }
+    },
+    {
+      "case_id": "case-24",
+      "model": "historical-qwen",
+      "answer_id": "4d80f9027a3b",
+      "available": 2,
+      "preserved": 1,
+      "answer_full_total": 1,
+      "answer_full_without_full_source": 0,
+      "retention": 0.5,
+      "items": {
+        "case-24/r1": {
+          "source": "full",
+          "answer": "full"
+        },
+        "case-24/r2": {
+          "source": "full",
+          "answer": "absent"
+        }
+      }
+    }
+  ],
+  "retention_slices": {
+    "full25|historical-qwen": {
+      "available": 55,
+      "preserved": 13,
+      "answer_full_total": 13,
+      "answer_full_without_full_source": 0,
+      "supported_answers": 22,
+      "retention": 0.23636363636363636
+    },
+    "matched-screen8|historical-qwen": {
+      "available": 13,
+      "preserved": 4,
+      "answer_full_total": 4,
+      "answer_full_without_full_source": 0,
+      "supported_answers": 6,
+      "retention": 0.3076923076923077
+    },
+    "matched-screen8|gemma-e2b": {
+      "available": 13,
+      "preserved": 6,
+      "answer_full_total": 6,
+      "answer_full_without_full_source": 0,
+      "supported_answers": 6,
+      "retention": 0.46153846153846156
+    },
+    "matched-screen8|qwen-2b": {
+      "available": 13,
+      "preserved": 8,
+      "answer_full_total": 8,
+      "answer_full_without_full_source": 0,
+      "supported_answers": 6,
+      "retention": 0.6153846153846154
+    }
+  },
+  "known_usage": {
+    "input_tokens": 223119,
+    "cached_input_tokens": 11520,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 27495,
+    "reasoning_output_tokens": 4569,
+    "total_tokens": 250614
+  },
+  "new_search_calls": 0,
+  "new_product_answers": 0,
+  "paid_api_calls": 0,
+  "free_resets_consumed": 0,
+  "raw_scores_unchanged": true,
+  "historical_coverage": "60/72 old rubric; different definition, unchanged search",
+  "known_answer_review_caveats": "Sealed answer_revision_review.v1.json; raw Medium reused, not silently corrected",
+  "judgments_are_not_clinical_validation": true
+}

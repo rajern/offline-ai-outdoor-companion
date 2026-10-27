@@ -1,0 +1,2936 @@
+{
+  "version": 1,
+  "historical_gold_sha256": "9f18ea8ae8a4886415ec9daaefab378cf0a4075bd94d2c736bd2336130c41ea8",
+  "corpus_sha256": "bd954cd27111854db2a54a8b05335dac8be7776301060da2cce3dfedb2a33d20",
+  "retrospective": true,
+  "independent_clinical_review": false,
+  "cases": [
+    {
+      "id": "case-01",
+      "question": "Jeg tråkket over på tur. Ankelen har hovnet opp, og jeg klarer ikke å stå på foten. Hva bør jeg gjøre nå?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-01/r1",
+          "old_item": 1,
+          "historical_text": "Manglende evne til å stå på den skadde foten gir grunn til å mistenke brudd.",
+          "classification": "required",
+          "criterion": "Ta høyde for mulig brudd når personen ikke kan stå på foten.",
+          "omission_rationale": "Uten bruddmistanke kan situasjonen behandles som ukomplisert forstuing.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-01/r2",
+          "old_item": 2,
+          "historical_text": "Forstuing og brudd kan være vanskelig å skille.",
+          "classification": "optional",
+          "criterion": "Forstuing og brudd kan være vanskelig å skille.",
+          "omission_rationale": "Forklarer bruddmistanken; handling og legevurdering dekker det umiddelbare behovet.",
+          "trigger": "Not core scored",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-01/r3",
+          "old_item": 3,
+          "historical_text": "Mistanke om brudd krever vurdering av lege eller legevakt.",
+          "classification": "required",
+          "criterion": "Anbefal vurdering av lege eller legevakt ved mulig brudd.",
+          "omission_rationale": "Uten vurdering blir mulig brudd stående uten relevant oppfølging.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-01/r4",
+          "old_item": 4,
+          "historical_text": "Hold området i ro og unngå belastning/unødvendig bevegelse; bevegelse kan forverre skaden og smerten.",
+          "classification": "required",
+          "criterion": "Hold skaden i ro og unngå belastning eller unødvendig bevegelse.",
+          "omission_rationale": "Avlastning er handlingen; forklaring om mer smerte/skade er utdyping.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        }
+      ],
+      "historical_alternatives": [
+        "Passasjer om bruddmistanke og førstehjelp ved brudd dekker samlet kravene.",
+        "RICE kan bidra med ro/avlastning, men erstatter ikke bruddmistanke og medisinsk vurdering.",
+        "All approved, applicable passages collectively covering the must-have facts count; supporting sources are not required if primary context is complete."
+      ],
+      "unchanged_optional": [
+        "Holde den skadde varm.",
+        "Foreløpig støtte/spjelking uten press på skadestedet.",
+        "116 117 og relevant nødtelefoninformasjon.",
+        "Supplerende forstuingsråd uten å erstatte bruddveiledningen."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Innledende førstehjelp og behov for medisinsk vurdering er godt dekket.",
+          "Konkret evakuering/transport når personen ikke kan gå fra et avsides tursted, er ikke godt dekket."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-04-001",
+          "section": "Førstehjelp ved forstuing og brudd",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/",
+          "sha256": "444e4bd1a9c97fc3600f340db4077d72e639ec28e44a54ac4ddf0ad7858f9d88"
+        },
+        {
+          "id": "source-04-002",
+          "section": "Hva er forstuing?",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/",
+          "sha256": "eb0faf964582825dde3e4cb5e2e4e60fb2669e5e05d5dd42954c3f9df1558dcf"
+        },
+        {
+          "id": "source-04-003",
+          "section": "Hva er forstuing? / Førstehjelp ved forstuing:",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/",
+          "sha256": "23d497dda40490b390b0ead4c857ccab76b8a9cb7bb5def7ca10a3ce3137e070"
+        },
+        {
+          "id": "source-04-004",
+          "section": "Hva er forstuing? / Førstehjelp ved forstuing: / Råd for behandling",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/",
+          "sha256": "78c21ea57b581eced2c224dcc1cf36677a885ec8ca7f39bc3eadeb47e05e3261"
+        },
+        {
+          "id": "source-04-005",
+          "section": "Hva er brudd?",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/",
+          "sha256": "92d38c2a347c52503d8600477cc5b6f43f34002a6f7d3fc4eb38f6e481273a93"
+        },
+        {
+          "id": "source-04-006",
+          "section": "Hva er brudd? / Førstehjelp ved brudd:",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/",
+          "sha256": "f3574002602afd0c0df934e9df42ce9f747b5b14a7549f081f677d5fc6538b64"
+        },
+        {
+          "id": "source-04-007",
+          "section": "Forstua ankel",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/",
+          "sha256": "3c957b7de8f8706ba72f59f941a7f0b44e9486db39228c6a3ccc367e159b58bd"
+        },
+        {
+          "id": "source-04-008",
+          "section": "Brudd i håndleddet",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/",
+          "sha256": "4bb1955f7125f624de4b112ce596653b9ffb7882c1e2de7cc99f459ee2a18758"
+        },
+        {
+          "id": "source-04-009",
+          "section": "Brudd i håndleddet / Akutt medisinsk hjelp",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/",
+          "sha256": "b06d8d4570d38b697a692cb183d93ac6e6c36fa5d32e9f3d424576e7c0662ed7"
+        },
+        {
+          "id": "source-04-010",
+          "section": "Legevakt",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/forstuing-og-brudd/",
+          "sha256": "20cd7b4b0354afb4f1ea0ce85735347b2d14d091c9f17f3d69c0d4a16799dcf3"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-02",
+      "question": "Vi har gått lenge i regn og vind. Turkameraten min er gjennomvåt og skjelver kraftig, men er våken og snakker normalt. Vi har sovepose og fjellduk. Hvordan hjelper jeg ham nå?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-02/r1",
+          "old_item": 1,
+          "historical_text": "Fjern vått tøy og begrens videre varmetap.",
+          "classification": "required",
+          "criterion": "Begrens varmetap ved å få bort vått tøy og få personen tørr.",
+          "omission_rationale": "Vedvarende vått tøy motvirker oppvarmingen.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-02/r2",
+          "old_item": 2,
+          "historical_text": "Pakk personen inn i isolerende materiale med vind- og damptett beskyttelse mot vind og fukt.",
+          "classification": "required",
+          "criterion": "Isoler personen og beskytt mot vind og fukt med tilgjengelig egnet utstyr.",
+          "omission_rationale": "Sovepose/fjellduk kan beskrive funksjonene uten ordrett vind- og damptett terminologi.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-02/r3",
+          "old_item": 3,
+          "historical_text": "Tilfør varme; eksterne varmekilder skal ikke ligge direkte mot huden.",
+          "classification": "required",
+          "criterion": "Tilfør varme; eventuelle eksterne varmekilder skal ikke ligge direkte på huden.",
+          "omission_rationale": "Oppvarming og beskyttelse mot direkte varmekilde må bevares samlet.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-02/r4",
+          "old_item": 4,
+          "historical_text": "Overvåk bevissthet og pust.",
+          "classification": "required",
+          "criterion": "Følg med på bevissthet og pust.",
+          "omission_rationale": "Forverring må kunne oppdages.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-02/r5",
+          "old_item": 5,
+          "historical_text": "Ring 113 for veiledning, slik førstehjelpskilden anbefaler.",
+          "classification": "required",
+          "criterion": "Ring 113 for hjelp ved denne beskrevne nedkjølingen, slik den frosne kilden anbefaler.",
+          "omission_rationale": "Beholder kildeanbefalt varsling; eksplisitt forklaring av operatørens rolle kreves ikke.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        }
+      ],
+      "historical_alternatives": [
+        "Helsenorges førstehjelpsseksjon er tilstrekkelig alene.",
+        "Likeverdige passasjer eller kombinasjoner som dekker alle must-have-punktene kan godtas; støttepassasjer er ikke påkrevd.",
+        "Utstyrslister, symptomer eller etterbehandling ved isredning alene dekker ikke kravene."
+      ],
+      "unchanged_optional": [
+        "Få personen innendørs eller i ly dersom mulig.",
+        "Våkenhet og skjelving er forenlig med mildere nedkjøling i symptomoversikten.",
+        "Knytte tilgjengelig sovepose/fjellduk til isolasjon og vindbeskyttelse.",
+        "Alternativ innpakking dersom isolerende materiale mangler."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Grunnleggende førstehjelp er godt dekket; detaljerte evakueringsbeslutninger fra avsides tursteder er ikke godt dekket."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-05-001",
+          "section": "Førstehjelp ved nedkjøling",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/",
+          "sha256": "4dd22703f432612f0197063fadaead819b972711438a8d1d5b65c782e14c50c2"
+        },
+        {
+          "id": "source-05-002",
+          "section": "Om nedkjøling",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/",
+          "sha256": "bb43ea92c58043e8fabb037c445bf07bd5991bfadf172507dbf314f073384444"
+        },
+        {
+          "id": "source-05-003",
+          "section": "Symptomer på nedkjøling",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/",
+          "sha256": "fc3c2becbc7f353b51b02cdb68d57174c3160d8c7d9fe5496a83bdd4b8786266"
+        },
+        {
+          "id": "source-05-004",
+          "section": "Slik gir du førstehjelp ved nedkjøling",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/",
+          "sha256": "0773f5e1773197c16799cde71710e48afa33035172ee3824875e4d3132a2b117"
+        },
+        {
+          "id": "source-05-005",
+          "section": "Slik gir du førstehjelp ved nedkjøling / Sjekk pusten hos den nedkjølte",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/",
+          "sha256": "42dd7005c1d3b0229372b216351b0f484b10f980b208a1726c46290be8bd84cf"
+        },
+        {
+          "id": "source-05-006",
+          "section": "Hjertestans på grunn av nedkjøling",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/",
+          "sha256": "d2a4b2160ca0d8dc0c5fc0bd4db23f2fe86286a6fa4823c7e116fa01bfa7e21c"
+        },
+        {
+          "id": "source-05-007",
+          "section": "Hjerte- og lungeredning (HLR)",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-nedkjoling/",
+          "sha256": "a9097354dc9b85b77c19819b96b1259cc41164c187591ac8fccd5a27a0634a92"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-03",
+      "question": "Vi har gått tomme for drikkevann på tur. Bekken ser helt ren ut, og vi har stormkjøkken. Kan vi bruke vannet derfra, og hva bør vi gjøre med det først?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-03/r1",
+          "old_item": 1,
+          "historical_text": "Vann som ser rent ut, kan inneholde sykdomsfremkallende mikroorganismer.",
+          "classification": "optional",
+          "criterion": "Rent utseende beviser ikke at vann er mikrobiologisk trygt.",
+          "omission_rationale": "Nyttig forklaring; en klar beskjed om behandling før drikking kan besvare spørsmålet uten å gjenta mekanismen.",
+          "trigger": "Not core scored",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-03/r2",
+          "old_item": 2,
+          "historical_text": "Vann med usikker trygghet bør behandles.",
+          "classification": "required",
+          "criterion": "Behandle det usikre bekkevannet før det drikkes.",
+          "omission_rationale": "Besvarer om vannet kan brukes uten behandling.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-03/r3",
+          "old_item": 3,
+          "historical_text": "For klart vann ved høyder opptil og med 6 500 fot skal vannet fosskoke i ett minutt for å drepe mikroorganismer.",
+          "classification": "required",
+          "criterion": "For klart vann til og med 6500 fot: fosskok i ett minutt; riktig omregning til omtrent 2000 meter godtas.",
+          "omission_rationale": "Metode, varighet og høydegrense er handlingsrelevant, ikke valgfrie detaljer.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-03/r4",
+          "old_item": 4,
+          "historical_text": "Over 6 500 fot skal klart vann fosskoke i tre minutter for å drepe mikroorganismer.",
+          "classification": "required",
+          "criterion": "Over 6500 fot: fosskok klart vann i tre minutter.",
+          "omission_rationale": "Høyde er ikke oppgitt; behold det kildeangitte unntaket uten å anta lav høyde.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-03/r5",
+          "old_item": 5,
+          "historical_text": "Koking/desinfisering gjør ikke vann med skadelige kjemikalier eller giftstoffer trygt; ved mistanke om slik forurensning må en annen vannkilde brukes.",
+          "classification": "conditional",
+          "criterion": "Ved mistanke om kjemikalier/giftstoffer: koking/desinfisering gjør ikke vannet trygt; velg annen kilde.",
+          "omission_rationale": "Viktig begrensning når forurensning diskuteres eller svaret lover generell trygghet; ingen kjemisk mistanke er oppgitt.",
+          "trigger": "Aktiv hvis spørsmålet/svaret omtaler kjemikalier/giftstoffer eller lover vannet trygt mot all forurensning. Ellers not_applicable.",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        }
+      ],
+      "historical_alternatives": [
+        "Passasjer som samlet dekker klart/usikkert vann, begge høydebetingelsene for koking og begrensningen ved kjemisk forurensning.",
+        "CDC er tilstrekkelig uten DOC; en generell oppsummering uten kokeprosedyre og begrensninger er ikke tilstrekkelig.",
+        "Likeverdige opplysninger og korrekte enhetsomregninger kan godtas; eksakt ordlyd eller chunk-identitet kreves ikke."
+      ],
+      "unchanged_optional": [
+        "Avkjøl vannet før bruk for å unngå brannskader.",
+        "Filtrering etterfulgt av desinfisering som alternativ metode.",
+        "Utstyrsanbefalinger fra DOC."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Generell behandling mot mikroorganismer er dekket; faktisk lokal/kjemisk forurensning kan ikke avgjøres.",
+          "Turstedets høyde er ukjent i spørsmålet, ikke en manglende regel i kunnskapsbasen. Retrieval må gi begge reglene; senere LLM må håndtere ukjent høyde."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-21-001",
+          "section": "About Water Treatment Options When Hiking, Camping, or Traveling",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "9432b533cac315cd012621b9820585710f8ee8bad0fd21807f6ac20d0bf9eefb"
+        },
+        {
+          "id": "source-21-002",
+          "section": "Key points",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "97eccc785730cbe864578d3c06be28fa7fe2a3117702524256f7d2a276e53d16"
+        },
+        {
+          "id": "source-21-003",
+          "section": "Overview",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "7656c68ae4e63b1f58a209a32c9eabcf4f4bc4d8a15781d0cfa957dcd1a76745"
+        },
+        {
+          "id": "source-21-004",
+          "section": "Exposure",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "bdf0fb7d89852ab69a7ddd1ba5462772d2036979324f13499f4f0f0df6b0c757"
+        },
+        {
+          "id": "source-21-005",
+          "section": "Exposure / Clear water can be unsafe",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "0acb0e666b939d222816622234ad52577861af91c2edd6849324e325b251e70e"
+        },
+        {
+          "id": "source-21-006",
+          "section": "Who is at risk",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "44cf3ad63f8089d29389509adabe8244366abaad7547b060eec20d6f020fac73"
+        },
+        {
+          "id": "source-21-007",
+          "section": "Symptoms",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "914fa4ca4e23cd71b5817fa985e41851bf49aef8fdebe095e2f9c8d49b6ca236"
+        },
+        {
+          "id": "source-21-008",
+          "section": "Prevention steps and strategies",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "150dc08678ac9a8ce28accc94f436612de48861d7b662caf1ad1b599f7f0effd"
+        },
+        {
+          "id": "source-21-009",
+          "section": "Prevention steps and strategies / Treat your water",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "0ac68abf7182542c2aa088f5bb7988279f5b02dac7673f8ffa0b9b585b2a9c83"
+        },
+        {
+          "id": "source-21-010",
+          "section": "Prevention steps and strategies / Treat your water / Boil",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "c3ee361513f98dc9c99095cb6f57dceb7e01650fb8f486049955b9d19aa8a746"
+        },
+        {
+          "id": "source-21-011",
+          "section": "Prevention steps and strategies / Treat your water / Filter",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "49fc4071c4503881d05debda562195fd5db6c4f8afda0391202caf8d874bf1e4"
+        },
+        {
+          "id": "source-21-012",
+          "section": "Prevention steps and strategies / Treat your water / Disinfect",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "690869701cd48da84519af2a20e7fae7c2284e2253c43b95e5678ff03549e0c4"
+        },
+        {
+          "id": "source-21-013",
+          "section": "Prevention steps and strategies / Treat your water / Using UV light",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "f8cc700b3c0edfbdd8f09f0f48a6427a01b5705498a534c8fa355f29a6a8a9ac"
+        },
+        {
+          "id": "source-21-014",
+          "section": "Prevention steps and strategies / Treat your water / Using MIOX® systems",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "28c43a7db75ecbfac5fab60c87b81fcc478e31975c9a8564deb7565c2ae9733d"
+        },
+        {
+          "id": "source-21-015",
+          "section": "Prevention steps and strategies / Bury your poop",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "d312fed6bb3772b9072c951b83b9867e6e6fc3b5a1a70fc8e6037b25a36502b1"
+        },
+        {
+          "id": "source-21-016",
+          "section": "Prevention steps and strategies / Wash your hands",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "f2e687d084ec6b68735cddda309e06a0177a8a2955bc315c0e96c0f430b07da2"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-04",
+      "question": "Vi har mistet den merkede stien i tåka. Vi er usikre på hvor vi tok feil, og ser ikke noe vi kjenner igjen. Hva bør vi gjøre nå?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-04/r1",
+          "old_item": 1,
+          "historical_text": "Ikke fortsett inn i ukjent terreng i håp om å finne veien.",
+          "classification": "required",
+          "criterion": "Ikke fortsett inn i ukjent terreng for å lete etter veien.",
+          "omission_rationale": "Hindrer fortsatt ukontrollert vandring.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-04/r2",
+          "old_item": 2,
+          "historical_text": "Stopp og vurder situasjonen.",
+          "classification": "required",
+          "criterion": "Stopp og vurder situasjonen.",
+          "omission_rationale": "Gir første handling; kan være dekket av tydelig beskjed om å bli der man er.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-04/r3",
+          "old_item": 3,
+          "historical_text": "Bli der dere er dersom dere ikke er sikre på veien ut.",
+          "classification": "required",
+          "criterion": "Bli der dere er når dere ikke er sikre på veien ut.",
+          "omission_rationale": "Knytt handlingen til den oppgitte usikkerheten.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-04/r4",
+          "old_item": 4,
+          "historical_text": "Ivareta gruppens sikkerhet og varme, og lag ly ved behov.",
+          "classification": "required",
+          "criterion": "Ivareta sikkerhet og varme, og søk eller lag ly ved behov.",
+          "omission_rationale": "Utsatt gruppe må kunne vente uten fortsatt nedkjøling.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-04/r5",
+          "old_item": 5,
+          "historical_text": "Søk hjelp og gjør dere synlige.",
+          "classification": "required",
+          "criterion": "Søk hjelp og gjør dere synlige.",
+          "omission_rationale": "Gir hjelp/synlighet som alternativ til å vandre videre.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        }
+      ],
+      "historical_alternatives": [
+        "If you get lost dekker alle kravene alene; flere kilder er ikke nødvendig.",
+        "Andre geografisk anvendelige passasjer kan kollektivt dekke kravene.",
+        "Land Safety Code, utstyrslister og nødpeilerråd alene erstatter ikke handlinger etter å ha gått seg bort."
+      ],
+      "unchanged_optional": [
+        "Spise og drikke; førstehjelp ved skade.",
+        "Tilgjengelig kart-/navigasjonsutstyr som kan brukes forsvarlig.",
+        "Betinget bruk av nødpeiler.",
+        "Rådet om samlet gruppe finnes i Land Safety Code, men den aktuelle lokale passasjen er merket NZ og er ikke et obligatorisk norsk gold-kriterium."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Innledende handlinger er godt dekket; faktisk posisjon og konkret returvei kan ikke bestemmes.",
+          "Detaljerte teknikker for ruterekonstruksjon/navigasjon tilbake er begrenset."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-09-001",
+          "section": "Maps for walking, tramping and hunting in New Zealand",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+          "sha256": "b2a1f0e651a7df22644cde681a13aef624f400c1a55c4bc360da575d911c5ded"
+        },
+        {
+          "id": "source-09-002",
+          "section": "Navigating with maps",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+          "sha256": "0a7699318f9f6753c40fa35ea46d98a91076e1b7fdede2473da61daa1bbfb602"
+        },
+        {
+          "id": "source-09-003",
+          "section": "DOC maps",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+          "sha256": "3071a07f581beeeef9fa96a197cc257f1a0d57399345f065bebe20dc3d55cbcb"
+        },
+        {
+          "id": "source-09-004",
+          "section": "New Zealand topographic maps",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+          "sha256": "8c94b2724e51eb81a9d91d008f3a151d0e77b721011785bce47294ab25d95642"
+        },
+        {
+          "id": "source-09-005",
+          "section": "Map apps",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+          "sha256": "79745724a7e0222cbcbaba46ca12f7a992ae835ea2a1d65afd79edd065ec6028"
+        },
+        {
+          "id": "source-09-006",
+          "section": "Reduce your risk of getting lost",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+          "sha256": "f88e6274fdd91f890d3472e88482d61dcbfbba94082f5c3b6e04c2bb9362611c"
+        },
+        {
+          "id": "source-09-007",
+          "section": "Reduce your risk of getting lost / If you get lost",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+          "sha256": "aee5d724f283f8e2eb2615bfff53f91f1331c53c66197719dbf40c56627ef476"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-05",
+      "question": "På vei over en fjellrygg begynner det å tordne. Vi ser et lite overheng der vi kan vente, men bilen står nede ved parkeringen. Hva bør vi gjøre?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-05/r1",
+          "old_item": 1,
+          "historical_text": "Hørbar torden betyr at lyn er nær nok til å være farlig.",
+          "classification": "optional",
+          "criterion": "Hørbar torden betyr at farlig lyn er nær nok.",
+          "omission_rationale": "Fareforklaring; kan utelates når umiddelbar, riktig handling allerede gis.",
+          "trigger": "Not core scored",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-05/r2",
+          "old_item": 2,
+          "historical_text": "Ingen utendørsplass skal behandles som trygg under tordenvær.",
+          "classification": "conditional",
+          "criterion": "Utendørstiltak gjør ikke stedet lynsikkert.",
+          "omission_rationale": "Kreves når svaret foreslår å vente/finne sikkerhet utendørs, ikke som ekstra setning etter utelukkende korrekt innendørsråd.",
+          "trigger": "Aktiv når svaret anbefaler utendørs opphold/tiltak som en løsning eller omtaler trygghet utendørs.",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-05/r3",
+          "old_item": 3,
+          "historical_text": "Kom bort fra rygger, topper og annet høyt terreng.",
+          "classification": "required",
+          "criterion": "Forlat rygger/topper og annet eksponert høyt terreng.",
+          "omission_rationale": "Spørsmålet plasserer gruppen på en rygg; den konkrete faren må håndteres.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-05/r4",
+          "old_item": 4,
+          "historical_text": "Et klippeoverheng er ikke trygt ly mot lyn.",
+          "classification": "required",
+          "criterion": "Ikke bruk klippeoverhenget som trygt ly mot lyn.",
+          "omission_rationale": "Besvarer det konkrete foreslåtte lyet; en uttrykkelig universell advarsel som dekker overheng kan også oppfylle behovet.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-05/r5",
+          "old_item": 5,
+          "historical_text": "Ordentlig ly er en egnet solid bygning med elektrisitet/røranlegg eller et lukket kjøretøy med metalltak og vinduene oppe.",
+          "classification": "required",
+          "criterion": "Søk minst ett gyldig ly-alternativ: egnet solid bygning med strøm/røranlegg ELLER lukket bil med metalltak og vinduer oppe.",
+          "omission_rationale": "Én komplett alternativrute er nok. Et annet feilaktig alternativ flagges separat, ikke skjult av positiv dekning.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-05/r6",
+          "old_item": 6,
+          "historical_text": "Hvis ordentlig ly ikke kan nås, reduserer utendørstiltak bare risikoen; de gjør ikke stedet trygt.",
+          "classification": "conditional",
+          "criterion": "Hvis trygt ly ikke kan nås, kan utendørstiltak bare redusere risiko; de garanterer ikke trygghet.",
+          "omission_rationale": "Aktivt hvis svaret gir utendørs reserveløsning. Ikke obligatorisk å beskrive alle hypotetiske reserveplaner.",
+          "trigger": "Aktiv når svaret gir en utendørs reserveplan fordi gyldig ly ikke kan nås.",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        }
+      ],
+      "historical_alternatives": [
+        "De to lynseksjonene dekker kravene samlet uten DOC-støtte.",
+        "Likeverdige passasjer eller kombinasjoner må dekke både handlingene og begrensningene; generelle ly-råd alene er utilstrekkelige."
+      ],
+      "unchanged_optional": [
+        "Vent minst 30 minutter etter siste torden før dere forlater ordentlig ly.",
+        "Ikke ligg flatt; unngå enslige trær.",
+        "Hold avstand til vann og ledende gjenstander der relevant."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Generell lynsikkerhet er dekket; sikreste nedstigningsrute, gjennomførbarhet av å nå bilen nå og tidsbruk til ly kan ikke bestemmes."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-22-001",
+          "section": "Lightning Tips",
+          "source_url": "https://www.weather.gov/safety/lightning-tips",
+          "sha256": "850f7ac40013a25c6095b1f738f2f3e8ed785ea6ce67217f0c0236540739bbdf"
+        },
+        {
+          "id": "source-22-002",
+          "section": "Lightning: What You Need to Know",
+          "source_url": "https://www.weather.gov/safety/lightning-tips",
+          "sha256": "822288502d200aefbe2f11c9b25ca03e162a0b36cc97c1e6673c83df09edd6eb"
+        },
+        {
+          "id": "source-22-003",
+          "section": "Indoor Lightning Safety",
+          "source_url": "https://www.weather.gov/safety/lightning-tips",
+          "sha256": "3227dd1be77789e1370eb939c7723c03ba468ecdd8b79cb47ca7cf83c21c4129"
+        },
+        {
+          "id": "source-22-004",
+          "section": "Last Resort Outdoor Risk Reduction Tips",
+          "source_url": "https://www.weather.gov/safety/lightning-tips",
+          "sha256": "84e83a75b71493710cbb4cc94a550e97333acbc0b3d76c0e4e8bf5a002ee2c9b"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-06",
+      "question": "Turkameraten min skar seg dypt i leggen på en skarp stein. Det blør mye og trekker gjennom tøyet vi har lagt på. Hva skal vi gjøre først?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-06/r1",
+          "old_item": 1,
+          "historical_text": "Ring 113 ved større blødning eller blødning som ikke lar seg stoppe.",
+          "classification": "required",
+          "criterion": "Ring 113 ved den beskrevne store blødningen.",
+          "omission_rationale": "Alvorlig pågående blødning må eskaleres.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-06/r2",
+          "old_item": 2,
+          "historical_text": "Press ren bandasje eller rent tøy direkte mot blødningen med fingrene for å begrense den.",
+          "classification": "required",
+          "criterion": "Press rent tøy/bandasje direkte og hardt mot blødningen.",
+          "omission_rationale": "Den primære umiddelbare handlingen må kunne utføres.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-06/r3",
+          "old_item": 3,
+          "historical_text": "Ved gjennomblødning legges ny bandasje utenpå med større press; den beskrevne handlingen er ikke å fjerne den første bandasjen.",
+          "classification": "required",
+          "criterion": "Ved gjennomblødning: legg ny bandasje utenpå og øk trykket; ikke fjern den første.",
+          "omission_rationale": "Brukeren beskriver gjennomblødning; riktig videre handling er nødvendig.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-06/r4",
+          "old_item": 4,
+          "historical_text": "Hold personen varm og overvåk tilstanden; gi beskjed til 113 ved sløvhet eller andre endringer.",
+          "classification": "required",
+          "criterion": "Hold personen varm og følg med på tilstanden; varsle 113 om forverring.",
+          "omission_rationale": "Behold oppfølging; sløvhet er eksempel, ikke det eneste ordet som godtas.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        }
+      ],
+      "historical_alternatives": [
+        "Passasjer om større ytre blødning, direkte trykk, gjennomblødning og overvåking/varme dekker kravene samlet.",
+        "Helsenorges blødningsartikkel er tilstrekkelig uten støttekilden; tilsvarende kildestøttet informasjon i andre aktuelle passasjer teller.",
+        "Instruksjoner for små sår alene er utilstrekkelige for denne pågående store blødningen."
+      ],
+      "unchanged_optional": [
+        "Legge personen ned og heve den blødende kroppsdelen over hjertehøyde dersom mulig.",
+        "Ikke fjerne fastsittende gjenstander hvis slike finnes i såret.",
+        "Kildens beskrivelse av ekstra trykk med en hard gjenstand på bandasjen."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Innledende håndtering av stor ytre blødning er dekket; detaljert evakuering fra turstedet og turnikéteknikk er ikke dekket."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-02-001",
+          "section": "Førstehjelp ved blødingar og sår",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "39375fd68113a264ad87915a80f976885ad2d1fc0618af3d82765d111c4024e5"
+        },
+        {
+          "id": "source-02-002",
+          "section": "Førstehjelp ved indre blødingar",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "6d941674f20d4ce2804a4a4d19cf48c43c7d78320bf311e249d92ce932cce82d"
+        },
+        {
+          "id": "source-02-003",
+          "section": "Førstehjelp ved indre blødingar / Når skal du ringje 113?",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "c8e84628844e71a97c41f7ac5e83e3b140dc0eb2fe02311894cb166842a90ed0"
+        },
+        {
+          "id": "source-02-004",
+          "section": "Førstehjelp ved indre blødingar / Kva kan du gjere sjølv?",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "f5638eb74488cca565dca9236965c1ca44845e511d5fd92f9b40163ad14afe2a"
+        },
+        {
+          "id": "source-02-005",
+          "section": "Førstehjelp ved ytre blødingar",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "f813d4e350cfb0b69461ea801bb459a1355a3cc75e5433640d60fc5664776692"
+        },
+        {
+          "id": "source-02-006",
+          "section": "Førstehjelp ved ytre blødingar / Når skal du ringje 113?",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "8125e9f729e510be818ee34cf27337da4d4cf7514776d91765c16982ea34f0ae"
+        },
+        {
+          "id": "source-02-007",
+          "section": "Førstehjelp ved ytre blødingar / Kva kan du gjere sjølv? / Avgrens blødinga:",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "ce46d9ad82660255a2b161a305fcbb33a503ef6beaf0097c0751e06e57dcb0fd"
+        },
+        {
+          "id": "source-02-008",
+          "section": "Førstehjelp ved ytre blødingar / Kva kan du gjere sjølv? / Bandasjar med press mot blødinga:",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "216bb2fe9d2a6188d56121c9675dd660b25ee990e271b65f0c3390cbdc09b3a6"
+        },
+        {
+          "id": "source-02-009",
+          "section": "Førstehjelp ved ytre blødingar / Kva kan du gjere sjølv? / Overvak og hald kroppstemperaturen oppe:",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "64c223cb62983fcf9ea2dbdbf00e47f86b6384ec37ac12ea039c5de97bae1ccc"
+        },
+        {
+          "id": "source-02-010",
+          "section": "Behandling av mindre blødingar og sår / Djupe sår og kutt",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "cac4ee32418a72c3b9e5840cc1dd35d7818dc5e8ee85357446f88186d8df5c09"
+        },
+        {
+          "id": "source-02-011",
+          "section": "Behandling av mindre blødingar og sår / Når skal du kontakte lege?",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "af620f225b6919f21c746cd67d87e84604f65334637a77dcc73240f294ff8df3"
+        },
+        {
+          "id": "source-02-012",
+          "section": "Behandling av mindre blødingar og sår / Skrubbsår og rifter",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "71850a326735f258f46154a5b2528f10172f49b978af5895e474eaff1477bf8d"
+        },
+        {
+          "id": "source-02-013",
+          "section": "Behandling av mindre blødingar og sår / Bit frå dyr og menneske",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "136df71faa861cb119af601670d37ca9a2055a32b2af6445e585073795810f32"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-07",
+      "question": "Jeg er voksen og sølte akkurat kokende vann over hånda da vi laget kaffe på tur. Huden er rød og vond, og det begynner å komme blemmer. Hva gjør jeg nå?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-07/r1",
+          "old_item": 1,
+          "historical_text": "Avkjøl skadestedet med rennende, litt kjølig vann omkring 20 grader i inntil 20 minutter for en voksen.",
+          "classification": "required",
+          "criterion": "Avkjøl voksnes skadested med rennende litt kjølig vann, omtrent 20 grader, i inntil 20 minutter.",
+          "omission_rationale": "Beholder kildeangitt metode, temperatur og tidsgrense; ingen klinisk nytolkning.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": true,
+          "uncertainty": "Evaluation convention, not independent clinical validation. Preserve existing source scope; do not certify minimal sufficiency."
+        },
+        {
+          "id": "case-07/r2",
+          "old_item": 2,
+          "historical_text": "Ikke bruk is eller iskaldt vann; is kan skade huden ytterligere.",
+          "classification": "required",
+          "criterion": "Unngå is og iskaldt vann på skaden.",
+          "omission_rationale": "Negasjonen må bevares; forklaring om ytterligere hudskade er utdyping.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": true,
+          "uncertainty": "Evaluation convention, not independent clinical validation. Preserve existing source scope; do not certify minimal sufficiency."
+        },
+        {
+          "id": "case-07/r3",
+          "old_item": 3,
+          "historical_text": "Ikke stikk hull på blemmene.",
+          "classification": "required",
+          "criterion": "Ikke stikk hull på blemmene.",
+          "omission_rationale": "Brukeren har blemmer; en direkte forebyggende instruksjon.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": true,
+          "uncertainty": "Evaluation convention, not independent clinical validation. Preserve existing source scope; do not certify minimal sufficiency."
+        },
+        {
+          "id": "case-07/r4",
+          "old_item": 4,
+          "historical_text": "Kontakt lege når hånden er brannskadet, slik kildens kriterier angir.",
+          "classification": "required",
+          "criterion": "Kontakt lege siden hånden er brannskadet.",
+          "omission_rationale": "Beholder det aktuelle kildekriteriet, ikke et vilkårlig alvorlighetskrav.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": true,
+          "uncertainty": "Evaluation convention, not independent clinical validation. Preserve existing source scope; do not certify minimal sufficiency."
+        }
+      ],
+      "historical_alternatives": [
+        "Passasjer med voksen avkjøling, forbud mot is/å punktere blemmer og kriteriet om lege ved håndskade er samlet tilstrekkelige.",
+        "Behandling og helsehjelp må begge dekkes; ingen ekstra kilder er påkrevd.",
+        "Krem-/salveråd inngår ikke i retrieval-gold. Tilstedeværelse, fravær eller motstrid i slike råd påvirker ikke retrieval-pass/fail; ingen avklaring av kremvalg kreves for pass."
+      ],
+      "unchanged_optional": [
+        "Ikke bruke vått håndkle/klut som avkjøling.",
+        "Etter avkjøling dekke med ren bandasje.",
+        "Ikke dra av klær som sitter fast i huden.",
+        "Smertestillende etter kildens omtale, uten at dette erstatter førstehjelp og legekontakt."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Avkjøling og behov for lege ved håndskade er dekket; tekst alene avgjør ikke faktisk skadedybde eller evakuering.",
+          "Førstehjelpsseksjonen anbefaler bakteriedrepende krem, men sier også at området ikke skal smøres med krem. Entydig kremveiledning mangler i denne teksten; konflikten er utenfor gold og påvirker ikke retrieval-success."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-03-001",
+          "section": "Førstehjelp ved brannskader",
+          "source_url": "https://www.helsenorge.no/forstehjelp/brannskader-overflatiske/",
+          "sha256": "191be2929cdca10a011ab483c3a04aded4a283833abdfba0a4e927fdcbbaeeb1"
+        },
+        {
+          "id": "source-03-002",
+          "section": "Hva er en brannskade?",
+          "source_url": "https://www.helsenorge.no/forstehjelp/brannskader-overflatiske/",
+          "sha256": "4e3ebe15bc81be6ea5d4a924b9711f984c0448fb9d861bfe81aa01b950fb6810"
+        },
+        {
+          "id": "source-03-003",
+          "section": "Hva er en brannskade? / Overfladisk brannskade",
+          "source_url": "https://www.helsenorge.no/forstehjelp/brannskader-overflatiske/",
+          "sha256": "b1147a89e90b43350717a08989920ca4659801ad64974fccc526a1155a4577eb"
+        },
+        {
+          "id": "source-03-004",
+          "section": "Hva er en brannskade? / Dyp/alvorlig brannskade",
+          "source_url": "https://www.helsenorge.no/forstehjelp/brannskader-overflatiske/",
+          "sha256": "2a41076485bef6031b5344b82ed4423a532f2e697e645ae55d370815c3624007"
+        },
+        {
+          "id": "source-03-005",
+          "section": "Symptomer på brannskade",
+          "source_url": "https://www.helsenorge.no/forstehjelp/brannskader-overflatiske/",
+          "sha256": "6d6b3772c3110becb19cac554330c5fb638a2745bdaaa7c549e84e44f41f1dec"
+        },
+        {
+          "id": "source-03-006",
+          "section": "Førstehjelp ved brannskader",
+          "source_url": "https://www.helsenorge.no/forstehjelp/brannskader-overflatiske/",
+          "sha256": "c255ec09d7270e68d9930c092a0e707af0710d7de1c9b1a3fe18a045a0113cb5"
+        },
+        {
+          "id": "source-03-007",
+          "section": "Når bør du oppsøke helsehjelp?",
+          "source_url": "https://www.helsenorge.no/forstehjelp/brannskader-overflatiske/",
+          "sha256": "5374fe57e52bc136b9750b6ab770c3f748539df358264df55c190712d8d52e27"
+        },
+        {
+          "id": "source-03-008",
+          "section": "Når bør du oppsøke helsehjelp? / Akutt medisinsk hjelp",
+          "source_url": "https://www.helsenorge.no/forstehjelp/brannskader-overflatiske/",
+          "sha256": "4eda9b8e3c6c7cf33f8587ee65188d6f31b9f08c5cb7bd2ff9aee55e5bbac315"
+        },
+        {
+          "id": "source-03-009",
+          "section": "Legevakt",
+          "source_url": "https://www.helsenorge.no/forstehjelp/brannskader-overflatiske/",
+          "sha256": "ce8ad7f1a66fd3e2e5dc0325c1b18bc0f59d6f41ebda43bec162df12ed50d089"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-08",
+      "question": "En voksen i turfølget sank plutselig sammen på rasteplassen og svarer ikke når vi snakker til henne. Brystet beveger seg jevnt, men vi er usikre på hva vi skal gjøre. Hvordan hjelper vi henne?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-08/r1",
+          "old_item": 1,
+          "historical_text": "Ring 113 ved bevisstløshet og få veiledning.",
+          "classification": "required",
+          "criterion": "Ring 113 nå for den bevisstløse personen.",
+          "omission_rationale": "Varsling er nødvendig; hjelp/veiledning trenger ikke omtales separat for positiv dekning.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": true,
+          "uncertainty": "Evaluation convention, not independent clinical validation. Preserve existing source scope; do not certify minimal sufficiency."
+        },
+        {
+          "id": "case-08/r2",
+          "old_item": 2,
+          "historical_text": "Gi fri luftvei med haken frem og hodet litt bakover; vurder normal pust ved å se, lytte og føle i inntil 10 sekunder i denne situasjonen uten oppgitt nedkjøling.",
+          "classification": "required",
+          "criterion": "Åpne luftveien med hake frem og hode litt bakover, og vurder normal pust ved brystbevegelser og luftstrøm i inntil 10 sekunder.",
+          "omission_rationale": "Beholder konkret vurdering og tidsgrense. En sammenhengende beskrivelse av kinn nær munn/nese og luftstrøm kan dekke sansevurderingen uten eksakte verb.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": true,
+          "uncertainty": "Evaluation convention, not independent clinical validation. Preserve existing source scope; do not certify minimal sufficiency."
+        },
+        {
+          "id": "case-08/r3",
+          "old_item": 3,
+          "historical_text": "Ved bevisstløshet med normal pust legges personen i stabilt sideleie med fri luftvei og munnen vinklet nedover.",
+          "classification": "required",
+          "criterion": "Ved bevisstløshet med normal pust: sideleie, fri luftvei og munnen vendt nedover.",
+          "omission_rationale": "Beholder munnstilling fordi kilden angir den; utilstrekkelig faglig grunnlag for å erklære den unødvendig.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": true,
+          "uncertainty": "Evaluation convention, not independent clinical validation. Preserve existing source scope; do not certify minimal sufficiency."
+        },
+        {
+          "id": "case-08/r4",
+          "old_item": 4,
+          "historical_text": "Overvåk at pusten forblir normal; manglende eller unormal pust krever HLR, og usikkerhet avklares med 113.",
+          "classification": "required",
+          "criterion": "Overvåk normal pust; ved ingen/unormal pust start HLR.",
+          "omission_rationale": "Beholder overvåking og korrekt forgrening. Egen gjentakelse om usikkerhet til 113 er utdyping når 113 allerede er varslet.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": true,
+          "uncertainty": "Evaluation convention, not independent clinical validation. Preserve existing source scope; do not certify minimal sufficiency."
+        }
+      ],
+      "historical_alternatives": [
+        "Passasjer må samlet dekke varsling, luftvei/pustesjekk, sideleie og betingelsen for HLR.",
+        "Den foretrukne artikkelen kan dekke alt uten støttekilder. Alternative passasjer kan bidra med samme informasjon.",
+        "Generelle HLR-kompresjoner uten pustevurdering/sideleie er ikke tilstrekkelige."
+      ],
+      "unchanged_optional": [
+        "Vurdere egen sikkerhet på stedet.",
+        "Detaljert plassering av armer og knær under vending til sideleie.",
+        "Dekke personen til og isolere mot underlaget.",
+        "Høyttalerfunksjon for å få veiledning med hendene fri."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Første handlinger er dekket; årsaken til kollaps og faktisk pust kan ikke bestemmes fra spørsmålet alene."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-07-001",
+          "section": "Førstehjelp ved bevisstløshet",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/",
+          "sha256": "c09bf68422bc0350db12781fb469eb6a6b30e77eba85f82eb04d9a981412d932"
+        },
+        {
+          "id": "source-07-002",
+          "section": "Slik hjelper du en bevisstløs person",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/",
+          "sha256": "3e4aef4bfe9104ecaa6e3c4521e9abb395da54a819d4eadfb329f1ac454a0613"
+        },
+        {
+          "id": "source-07-003",
+          "section": "Slik hjelper du en bevisstløs person / Undersøk om den skadde lever og puster",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/",
+          "sha256": "a17ec0feffbe32b49e40c4182cd65509c46722f867317a1cbe83c59a50783d7c"
+        },
+        {
+          "id": "source-07-004",
+          "section": "Slik hjelper du en bevisstløs person / Gi fri luftvei",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/",
+          "sha256": "ec9d42660be80120e272a7aa85c60704b5efc097e9cde5e1e6d6e6de5f6408b9"
+        },
+        {
+          "id": "source-07-005",
+          "section": "Slik hjelper du en bevisstløs person / Sjekk for normal pust",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/",
+          "sha256": "25e577d6a22994af4096d373ef2ccec8d749ade9c5d4627850199f61b899d412"
+        },
+        {
+          "id": "source-07-006",
+          "section": "Slik legger du en person i sideleie",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/",
+          "sha256": "da1ae858496641079c39313208797ddd58c372d164273d8678f36e3055457c33"
+        },
+        {
+          "id": "source-07-007",
+          "section": "Slik legger du en person i sideleie",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/",
+          "sha256": "16170bf3e3f399e8a306037153b1dea4734ab24b4f7408494c22105165d81e99"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-09",
+      "question": "Vi skal gå en lang tur midt på en veldig varm sommerdag. Hva bør vi gjøre underveis for å unngå å bli dårlige av varmen?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-09/r1",
+          "old_item": 1,
+          "historical_text": "Drikk rikelig med vann eller annen alkoholfri drikke.",
+          "classification": "required",
+          "criterion": "Drikk godt med vann eller annen alkoholfri drikke.",
+          "omission_rationale": "Besvarer forebygging av varmesykdom.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-09/r2",
+          "old_item": 2,
+          "historical_text": "Reduser fysisk aktivitet i varmen.",
+          "classification": "required",
+          "criterion": "Reduser fysisk aktivitet i varmen.",
+          "omission_rationale": "Aktivitetsendring er en annen handling enn bare å drikke.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-09/r3",
+          "old_item": 3,
+          "historical_text": "Sørg for avkjøling, eksempelvis kjølig vann/våte håndklær eller opphold i kjølige omgivelser når tilgjengelig.",
+          "classification": "required",
+          "criterion": "Sørg for avkjøling eller kjøligere omgivelser.",
+          "omission_rationale": "Én passende kildebeskrevet avkjølingsmåte er nok; alle eksemplene kreves ikke.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        }
+      ],
+      "historical_alternatives": [
+        "Kildens forebyggende tiltaksseksjon dekker kravene alene; symptomer og værplanlegging er valgfri støtte.",
+        "Likeverdige, kildebelagte passasjer om drikke, redusert aktivitet og avkjøling teller samlet."
+      ],
+      "unchanged_optional": [
+        "Lette, luftige og lyse klær.",
+        "Kildens symptomoversikt og råd om helsehjelp ved symptomer, 113 ved alvorlige tilfeller.",
+        "Utsatte grupper kan trenge ekstra oppmerksomhet."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Generelle forebyggende tiltak er dekket; individuelle væskemengder, sikker turbelastning og aktuelle lokale værforhold er ikke bestemt av kilden."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-06-001",
+          "section": "Heteslag og råd ved hetebølgjer",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/heteslag-og-rad-ved-hetebolger/",
+          "sha256": "db314acdf70909a1e15ebba95f1af0c3514f8f1c0c81afa420c38c9a9bf3489f"
+        },
+        {
+          "id": "source-06-002",
+          "section": "Symptom på heteslag (overoppheting) og dehydrering",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/heteslag-og-rad-ved-hetebolger/",
+          "sha256": "e881d1952c98abc49deae657cda9d7dafe3b18b311f13e772956945ec53a777a"
+        },
+        {
+          "id": "source-06-003",
+          "section": "Kva er ei hetebølgje?",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/heteslag-og-rad-ved-hetebolger/",
+          "sha256": "6bcbd51911708686d35b6204975a822a915f1d4af5505e784c2be72fae981541"
+        },
+        {
+          "id": "source-06-004",
+          "section": "Råd for å unngå oppheting og dehydrering",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/heteslag-og-rad-ved-hetebolger/",
+          "sha256": "3b333db13f3454eca5042a11a84b6c33bff06f48c10398c978d98fc0e13d958e"
+        },
+        {
+          "id": "source-06-005",
+          "section": "Desse er spesielt utsette for heteslag",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/heteslag-og-rad-ved-hetebolger/",
+          "sha256": "19b45ce2fd46a7f459846b4ae51dae7e0ee26a24e544b5fd6767b9b80b1a30c0"
+        },
+        {
+          "id": "source-06-006",
+          "section": "Ver merksam på personar med auka risiko",
+          "source_url": "https://www.helsenorge.no/forstehjelp/behandling-av-skader/heteslag-og-rad-ved-hetebolger/",
+          "sha256": "c0ab71f14970fc47161608ce7a3adb52cc6422691b3de8cb1897aa8dec3838b3"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-10",
+      "question": "Hva bør jeg ha i sekken for å holde varmen og få ly hvis en dagstur i fjellet tar så lang tid at jeg må bli ute til neste morgen?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-10/r1",
+          "old_item": 1,
+          "historical_text": "Ha med varmt tøy og forbered deg på dårlig vær/en uventet natt ute.",
+          "classification": "required",
+          "criterion": "Ta med varmt tøy for dårlig vær og uventet natt ute.",
+          "omission_rationale": "Spørsmålet gjelder beredskap, ikke akutt behandling.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-10/r2",
+          "old_item": 2,
+          "historical_text": "Ha med sovepose eller overlevelses-/isoleringsutstyr slik utstyrslisten beskriver.",
+          "classification": "required",
+          "criterion": "Ta med sovepose eller tilsvarende kildebeskrevet isolasjons-/overlevelsesutstyr.",
+          "omission_rationale": "Alternativene er reelle alternativer, ikke en samlet handleliste.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-10/r3",
+          "old_item": 3,
+          "historical_text": "Ha med nødly, telt eller tilsvarende kildebelagt informasjon om ly for beskyttelse.",
+          "classification": "required",
+          "criterion": "Ta med nødly, telt eller tilsvarende kildebeskrevet beskyttelse.",
+          "omission_rationale": "Ingen bestemt produsent eller alle lytyper kreves.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        }
+      ],
+      "historical_alternatives": [
+        "Passasjer som samlet dekker varmt tøy/beredskap for kulde og dårlig vær, sove-/isoleringsutstyr og nødly/telt eller tilsvarende ly er tilstrekkelige.",
+        "Liggeunderlag er valgfri nyttig informasjon; fravær av liggeunderlag eller If camping-seksjonen hindrer ikke pass når de tre must-have-punktene er dekket.",
+        "Ingen bestemt utstyrstype, produsent eller temperaturklassifisering kreves; informasjonen, ikke antallet dokumenter, avgjør.",
+        "Andre anvendelige passasjer kan erstatte deler av primærkombinasjonen. Ekstra hypotermibehandling gir ikke bonus for mer tekst."
+      ],
+      "unchanged_optional": [
+        "Liggeunderlag som nyttig camping-/soveutstyr, omtalt i Personal equipment / If camping.",
+        "Hodelykt og reservebatterier.",
+        "Ekstra mat, vann og vannbehandlingsutstyr.",
+        "Førstehjelpsutstyr, kart/kompass og nødpeiler."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Generelle utstyrskategorier er dekket; et garantert tilstrekkelig minimumssett, temperaturvalg og bygging av improvisert ly er ikke dekket."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-10-001",
+          "section": "Be prepared with the Land Safety Code",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+          "sha256": "925167d383e78e8fac7ccb11a91233f06c350676ca49809c6b2d7cd552d45d3b"
+        },
+        {
+          "id": "source-10-002",
+          "section": "Five simple steps / 1. Choose the right trip for you",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+          "sha256": "05328f482caf97077255a53d40f33c4fbd97706fce8a55e0afda66fe6c2c3b91"
+        },
+        {
+          "id": "source-10-003",
+          "section": "Five simple steps / 2. Understand the weather",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+          "sha256": "835567f81e119a0f921af09056ea1f9bf3ea41699d2c3cd654c3dbb77408f5bd"
+        },
+        {
+          "id": "source-10-004",
+          "section": "Five simple steps / 3. Pack warm clothes and extra food",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+          "sha256": "4efe029c4b2fc94eb2348f0995be62fd29fe849ee45431e72f8b60eb13e354e7"
+        },
+        {
+          "id": "source-10-005",
+          "section": "Five simple steps / 4. Share your plans and take ways to get help",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+          "sha256": "4ee15cc22550d4c16139a8642ec7bfa9ce75a3fa8718fc24944410fe8c705ed7"
+        },
+        {
+          "id": "source-10-006",
+          "section": "Five simple steps / 5. Take care of yourself and each other",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+          "sha256": "dddf46f025ca34330fefe00e60dfb7684cdb9512264598fb0fe1d4ffa09c3fd1"
+        },
+        {
+          "id": "source-10-007",
+          "section": "Caring for New Zealand",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+          "sha256": "d3d9c8fd5fc89b5a7ffd7ea58d5e4e1f9b2d8d805957de73ad7bdd3a240be342"
+        },
+        {
+          "id": "source-12-001",
+          "section": "Overnight and multi-day tramp gear list",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/walking-and-tramping-gear-lists/multi-day-tramp-gear-list/",
+          "sha256": "cdf222049ceb8524e4189c2117c80babc8ef426914a3d1b831af831a1c68cc29"
+        },
+        {
+          "id": "source-12-002",
+          "section": "Personal equipment",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/walking-and-tramping-gear-lists/multi-day-tramp-gear-list/",
+          "sha256": "54882cc194fbb21c952e3411d39fdf99a4da3b3c6dc158bfa8f107158aeee053"
+        },
+        {
+          "id": "source-12-003",
+          "section": "Personal equipment / Cooking and food equipment",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/walking-and-tramping-gear-lists/multi-day-tramp-gear-list/",
+          "sha256": "f7900815f97627de048a1f32972914d0ab305b9341b0931b87e49662ac03124d"
+        },
+        {
+          "id": "source-12-004",
+          "section": "Personal equipment / Toiletries",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/walking-and-tramping-gear-lists/multi-day-tramp-gear-list/",
+          "sha256": "4c0a076770167711f5ac161d75bafae07922f5180882cc573050712a66ffd85b"
+        },
+        {
+          "id": "source-12-005",
+          "section": "Personal equipment / Optional personal equipment",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/walking-and-tramping-gear-lists/multi-day-tramp-gear-list/",
+          "sha256": "38a62f4171f608dcd55cc8d66c60e7545f92d02830f7abb89b2f7c1f1b2e3177"
+        },
+        {
+          "id": "source-12-006",
+          "section": "Personal equipment / If camping",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/walking-and-tramping-gear-lists/multi-day-tramp-gear-list/",
+          "sha256": "c5f4c45d579101a4f9fb3f9f8a9fcbc291e40774be342cb2ef58ed0eb8cdb4b0"
+        },
+        {
+          "id": "source-12-007",
+          "section": "Clothing",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/walking-and-tramping-gear-lists/multi-day-tramp-gear-list/",
+          "sha256": "8f012fa0fbe5d343a967bef19e32ce5e1318caeaa2115d787dd29f9337785961"
+        },
+        {
+          "id": "source-12-008",
+          "section": "Food",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/walking-and-tramping-gear-lists/multi-day-tramp-gear-list/",
+          "sha256": "435cdc7fa0dac8652ecf16ca5be53a74dd269b709fb4aa2b08f8473637a59a17"
+        },
+        {
+          "id": "source-12-009",
+          "section": "More information",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/walking-and-tramping-gear-lists/multi-day-tramp-gear-list/",
+          "sha256": "5e9e1cc5e49eb434084081f64978f573281f1efc7d0cab23821ae2ed7903ec78"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-11",
+      "question": "Vi telter ved et vann uten toalett. Hvordan håndterer vi toalettbesøk uten å forurense vannet vi henter, og hva kan vi bruke på hendene før matlaging når vi mangler såpe og vaskevann?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-11/r1",
+          "old_item": 1,
+          "historical_text": "Ved toalettbesøk uten toalett anbefaler kilden å grave ned avføring i jord, minst 8 tommer dypt og minst 200 fot fra innsjøer, elver og annet naturlig vann.",
+          "classification": "required",
+          "criterion": "Uten toalett: grav ned avføring minst cirka 20 cm dypt og minst cirka 60 m fra naturlig vann, etter den frosne kilden.",
+          "omission_rationale": "Beholder metode/avstander; omtrentlige korrekte enheter godtas.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": true,
+          "uncertainty": "Evaluation convention, not independent clinical validation. Preserve existing source scope; do not certify minimal sufficiency."
+        },
+        {
+          "id": "case-11/r2",
+          "old_item": 2,
+          "historical_text": "Toalettavfall legges nedstrøms stedet der man selv eller andre henter vann.",
+          "classification": "required",
+          "criterion": "Plasser toalettavfall nedstrøms steder der dere eller andre henter vann.",
+          "omission_rationale": "Retningen kan ikke erstattes av bare avstand.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": true,
+          "uncertainty": "Evaluation convention, not independent clinical validation. Preserve existing source scope; do not certify minimal sufficiency."
+        },
+        {
+          "id": "case-11/r3",
+          "old_item": 3,
+          "historical_text": "Håndhygiene før matlaging/spising og etter toalettbesøk er nødvendig; uten såpe og vann brukes hånddesinfeksjon med minst 60 prosent alkohol.",
+          "classification": "required",
+          "criterion": "Før matlaging/spising og etter toalett: håndhygiene; når såpe/vann mangler, hånddesinfeksjon med minst 60 prosent alkohol.",
+          "omission_rationale": "Beholder eksplisitt spørsmål om alternativ til såpe/vann og produktgrense.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": true,
+          "uncertainty": "Evaluation convention, not independent clinical validation. Preserve existing source scope; do not certify minimal sufficiency."
+        }
+      ],
+      "historical_alternatives": [
+        "Passasjer om avfallsdybde, avstand, plassering i forhold til vannhenting og hånddesinfeksjon dekker kravene samlet.",
+        "Korrekte omtrentlige omregninger til cirka 20 cm og 60 m er akseptable; eksakte imperialord kreves ikke.",
+        "CDC dekker alt uten utstyrsstøtte fra DOC; bare en spadeanbefaling eller generell hygieneoppfordring er utilstrekkelig."
+      ],
+      "unchanged_optional": [
+        "Liten spade eller oppsamling av toalettavfall i egnet beholder/pose slik DOC omtaler.",
+        "Ikke bruke såpe eller vaske seg direkte i innsjøer/bekker.",
+        "Generell forklaring på hvordan avføring kan spre mikroorganismer til vann."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Generell smitteforebygging er dekket; lokale regler/områdespesifikke miljøkrav og om stedet egner seg for nedgraving er ikke avgjort."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-21-001",
+          "section": "About Water Treatment Options When Hiking, Camping, or Traveling",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "9432b533cac315cd012621b9820585710f8ee8bad0fd21807f6ac20d0bf9eefb"
+        },
+        {
+          "id": "source-21-002",
+          "section": "Key points",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "97eccc785730cbe864578d3c06be28fa7fe2a3117702524256f7d2a276e53d16"
+        },
+        {
+          "id": "source-21-003",
+          "section": "Overview",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "7656c68ae4e63b1f58a209a32c9eabcf4f4bc4d8a15781d0cfa957dcd1a76745"
+        },
+        {
+          "id": "source-21-004",
+          "section": "Exposure",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "bdf0fb7d89852ab69a7ddd1ba5462772d2036979324f13499f4f0f0df6b0c757"
+        },
+        {
+          "id": "source-21-005",
+          "section": "Exposure / Clear water can be unsafe",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "0acb0e666b939d222816622234ad52577861af91c2edd6849324e325b251e70e"
+        },
+        {
+          "id": "source-21-006",
+          "section": "Who is at risk",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "44cf3ad63f8089d29389509adabe8244366abaad7547b060eec20d6f020fac73"
+        },
+        {
+          "id": "source-21-007",
+          "section": "Symptoms",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "914fa4ca4e23cd71b5817fa985e41851bf49aef8fdebe095e2f9c8d49b6ca236"
+        },
+        {
+          "id": "source-21-008",
+          "section": "Prevention steps and strategies",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "150dc08678ac9a8ce28accc94f436612de48861d7b662caf1ad1b599f7f0effd"
+        },
+        {
+          "id": "source-21-009",
+          "section": "Prevention steps and strategies / Treat your water",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "0ac68abf7182542c2aa088f5bb7988279f5b02dac7673f8ffa0b9b585b2a9c83"
+        },
+        {
+          "id": "source-21-010",
+          "section": "Prevention steps and strategies / Treat your water / Boil",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "c3ee361513f98dc9c99095cb6f57dceb7e01650fb8f486049955b9d19aa8a746"
+        },
+        {
+          "id": "source-21-011",
+          "section": "Prevention steps and strategies / Treat your water / Filter",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "49fc4071c4503881d05debda562195fd5db6c4f8afda0391202caf8d874bf1e4"
+        },
+        {
+          "id": "source-21-012",
+          "section": "Prevention steps and strategies / Treat your water / Disinfect",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "690869701cd48da84519af2a20e7fae7c2284e2253c43b95e5678ff03549e0c4"
+        },
+        {
+          "id": "source-21-013",
+          "section": "Prevention steps and strategies / Treat your water / Using UV light",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "f8cc700b3c0edfbdd8f09f0f48a6427a01b5705498a534c8fa355f29a6a8a9ac"
+        },
+        {
+          "id": "source-21-014",
+          "section": "Prevention steps and strategies / Treat your water / Using MIOX® systems",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "28c43a7db75ecbfac5fab60c87b81fcc478e31975c9a8564deb7565c2ae9733d"
+        },
+        {
+          "id": "source-21-015",
+          "section": "Prevention steps and strategies / Bury your poop",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "d312fed6bb3772b9072c951b83b9867e6e6fc3b5a1a70fc8e6037b25a36502b1"
+        },
+        {
+          "id": "source-21-016",
+          "section": "Prevention steps and strategies / Wash your hands",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "f2e687d084ec6b68735cddda309e06a0177a8a2955bc315c0e96c0f430b07da2"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-12",
+      "question": "Vi kommer ikke videre på stien uten å krysse en elv. Det har regnet hele dagen, elva er høy og brun, og vi har aldri vadet før. Kan vi prøve, eller bør vi gjøre noe annet?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-12/r1",
+          "old_item": 1,
+          "historical_text": "Misfarget/brunt vann er et av kildens tegn på utrygg elv; slike tegn betyr at kryssing ikke skal forsøkes.",
+          "classification": "optional",
+          "criterion": "Brunt/misfarget vann er et faresignal for utrygg elv.",
+          "omission_rationale": "Nyttig begrunnelse; direkte nei til kryssing i situasjonen kan være tilstrekkelig uten å gjenta hvert observert tegn.",
+          "trigger": "Not core scored",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-12/r2",
+          "old_item": 2,
+          "historical_text": "Ikke kryss ved flom, tvil om sikkerheten eller manglende ferdigheter/erfaring for sikker kryssing.",
+          "classification": "required",
+          "criterion": "Ikke forsøk kryssing av denne flomstore elva med oppgitt usikkerhet/manglende erfaring.",
+          "omission_rationale": "Konkret nei i denne situasjonen kan uttrykke vilkårene uten ordrett gjentakelse.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-12/r3",
+          "old_item": 3,
+          "historical_text": "Vær forberedt på å vente eller snu fremfor å presse gjennom kryssingen.",
+          "classification": "required",
+          "criterion": "Vent eller snu i stedet for å presse gjennom kryssingen.",
+          "omission_rationale": "Gir minst ett kildebasert alternativ; begge må ikke listes hvis ett er tydelig anbefalt.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        }
+      ],
+      "historical_alternatives": [
+        "Generelle elvepassasjer som dekker den konkrete advarselen, ferdighetskravet og alternativene vente/snu er samlet tilstrekkelige.",
+        "Norsk flomveiledning kan dekke deler av informasjonen, men er ikke obligatorisk når DOCs generelle primærpassasjer dekker alt.",
+        "En kryssingsteknikk uten kriteriene for ikke å krysse er utilstrekkelig."
+      ],
+      "unchanged_optional": [
+        "Andre faresignaler som rask strøm, drivgods og kraftig lyd.",
+        "Trygge inn-/utgangspunkter som ytterligere betingelse for kryssing.",
+        "Nødly og ekstra mat dersom det blir venting."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Beslutningen om ikke å presse en utrygg kryssing er dekket; konkret alternativ rute, ventetid til trygg elv og detaljert vadeteknikk er ikke dekket."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-14-001",
+          "section": "River crossing safety",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/river-crossing-safety/",
+          "sha256": "2bdac9029fbf7f35008ae63f571d989f0f47a2c2d27f446dba268f188f834e70"
+        },
+        {
+          "id": "source-14-002",
+          "section": "Check if your trip has unbridged crossings",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/river-crossing-safety/",
+          "sha256": "4a49f348c20ce9447a693a0b67c21825069b2dd62d709becf8224e0b2d093ddc"
+        },
+        {
+          "id": "source-14-003",
+          "section": "Check weather and river conditions",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/river-crossing-safety/",
+          "sha256": "2c4a6bcdc33da095189d8b82ad6fe33b46d1ed98419a2ac58168bb42072ab109"
+        },
+        {
+          "id": "source-14-004",
+          "section": "Be ready to wait or turn back",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/river-crossing-safety/",
+          "sha256": "8cada561ff11668c23f9dab49f63e15d762493b52b9f0ea548d048be71606cdf"
+        },
+        {
+          "id": "source-14-005",
+          "section": "Know the signs of an unsafe river",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/river-crossing-safety/",
+          "sha256": "7bc07141b665bc5166c401c3b5aa8697bd756116f4cb4cc80460697e51245696"
+        },
+        {
+          "id": "source-14-006",
+          "section": "Do not cross if there is any doubt",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/river-crossing-safety/",
+          "sha256": "f759802d1d7143f13ace512f88cf9ee189a554b8c3fe3b5510812aa4b43f1b6b"
+        },
+        {
+          "id": "source-14-007",
+          "section": "Crossing safety",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/river-crossing-safety/",
+          "sha256": "c0b533c5c5c7a90de318acc50c6463535def533ed0eaf73fb34802f04514c0e6"
+        },
+        {
+          "id": "source-14-008",
+          "section": "Learn river safety skills",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/river-crossing-safety/",
+          "sha256": "50c48c9608978391d0358dea0cad27688b1d5b541704ed8809db0cc61a8b2d66"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-13",
+      "question": "Turkameraten min er alvorlig skadet etter et fall, og jeg er redd livet er i fare. Vi har ingen mobildekning, men jeg har en nødpeiler. Bør jeg vente og se om det blir bedre før jeg bruker den?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-13/r1",
+          "old_item": 1,
+          "historical_text": "Aktiver nødpeileren ved en livstruende situasjon; forhold kan raskt bli verre, og tidligere aktivering kan gi tidligere hjelp.",
+          "classification": "required",
+          "criterion": "Aktiver nødpeileren nå ved den beskrevne livstruende situasjonen; ikke vent for å se.",
+          "omission_rationale": "Tidlig handling er kjernen; mekanismen om rask forverring/tidligere hjelp er utdyping.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-13/r2",
+          "old_item": 2,
+          "historical_text": "Er man usikker på når nødpeileren skal aktiveres, anbefaler kilden å aktivere og få hjelp fremfor å vente.",
+          "classification": "conditional",
+          "criterion": "Ved uttrykt tvil om aktivering: aktiver og få hjelp fremfor å vente.",
+          "omission_rationale": "Aktiv hvis svaret lar beslutningen avhenge av fortsatt tvil; entydig aktiver nå trenger ikke en ekstra tvilssetning.",
+          "trigger": "Aktiv når svaret gjør aktivering avhengig av ytterligere vurdering/tvil fremfor entydig aktiver nå.",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        }
+      ],
+      "historical_alternatives": [
+        "Den generelle aktiveringsseksjonen er tilstrekkelig alene; tekniske detaljer og andre kilder kreves ikke.",
+        "Passasjer med samme aktiveringsvilkår og anbefaling ved tvil teller; bare en produktbeskrivelse er utilstrekkelig."
+      ],
+      "unchanged_optional": [
+        "Nødpeileren gir redningsmannskapene omtrentlig posisjon via satellittvarsling.",
+        "Ivareta egen sikkerhet på skadestedet."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Når nødpeiler skal brukes er dekket; skadediagnose, modellspesifikk aktivering og norsk redningsorganisering er ikke dekket av denne generelle teksten."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-11-001",
+          "section": "Take a distress beacon – it could save your life",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/distress-beacon/",
+          "sha256": "55bde412904374193db8d557da2a406bba41161e138d95ba92a18936c8d28c4d"
+        },
+        {
+          "id": "source-11-002",
+          "section": "Why you should take one",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/distress-beacon/",
+          "sha256": "d63a7ecc8ac97295b30b682f95be9a503ecf94a9ba78bfc99f4c099aa1f09ca7"
+        },
+        {
+          "id": "source-11-003",
+          "section": "Call for help early",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/distress-beacon/",
+          "sha256": "02f6308185ad0a2ab5e3cd605231576825c600ab894079b9fa3de250509dd8db"
+        },
+        {
+          "id": "source-11-004",
+          "section": "Types of beacon",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/distress-beacon/",
+          "sha256": "f6ebbf093f3eb3a0cb8f42b9ff6cd2ae216a17392a3a1fd403a57f8204dcb77c"
+        },
+        {
+          "id": "source-11-005",
+          "section": "Types of beacon / Difference between a PLB and SEND",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/distress-beacon/",
+          "sha256": "b27da488de77c9f4bb6a058c4b224c530defa8829c65cd358ba964a9e6bc59c9"
+        },
+        {
+          "id": "source-11-006",
+          "section": "Types of beacon / Difference between a PLB and SEND / PLB",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/distress-beacon/",
+          "sha256": "2dca484f79b4051d54670702be372066e665a3f549ec45c6f67ebcf987c06b48"
+        },
+        {
+          "id": "source-11-007",
+          "section": "Types of beacon / Difference between a PLB and SEND / SPOT tracker and Garmin inReach",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/distress-beacon/",
+          "sha256": "e91c1dab5a19c53fe09197c109b9cb1d482088fae54ad7e7c21d2563edac8290"
+        },
+        {
+          "id": "source-11-008",
+          "section": "Types of beacon / Difference between a PLB and SEND / Carrying two devices",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/distress-beacon/",
+          "sha256": "6ee19b48515aa1bc345be13e6f0cf356fa44d85377d178c32b89477a27b63339"
+        },
+        {
+          "id": "source-11-009",
+          "section": "Buy a beacon",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/distress-beacon/",
+          "sha256": "e225c96343054d760fd71e7ddf152cac11787c0ca9833bd736ffafc03adda8cc"
+        },
+        {
+          "id": "source-11-010",
+          "section": "Buy a beacon / Owning a SEND",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/distress-beacon/",
+          "sha256": "f99b3482326ab0715fc0e6f82516cba9e4a734c88476f26f8a2c530934a434a1"
+        },
+        {
+          "id": "source-11-011",
+          "section": "Buy a beacon / Owning a PLB",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/distress-beacon/",
+          "sha256": "33947ffe483a2ad06b93cfb913402c553fa35e31948e8e35d1550b5a0eec5640"
+        },
+        {
+          "id": "source-11-012",
+          "section": "Hire a beacon",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/distress-beacon/",
+          "sha256": "e8896678e229b97f894bf4cdcde4ee8d2ca8617d8a355a0ed296835e15035ab8"
+        },
+        {
+          "id": "source-11-013",
+          "section": "Beacon disposal",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/distress-beacon/",
+          "sha256": "2824e33dd9c705696f22e3f6bd497a5c12ac94354679ddcf5b11fc04e16b2771"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-14",
+      "question": "Vi er på topptur og hørte et kraftig drønn i snøen. Nå ser vi sprekker rundt skiene. Hva betyr det, og hvordan kommer vi oss trygt ut herfra?",
+      "jurisdiction": "NO",
+      "expected_result": "insufficient_coverage",
+      "criteria": [
+        {
+          "id": "case-14/r1",
+          "old_item": 1,
+          "historical_text": "Støttet del av spørsmålet er at faretegn signaliserer skredfare og kan kreve endring av turplanen.",
+          "classification": "required",
+          "criterion": "Faretegn kan bety skredfare og kreve endret plan.",
+          "omission_rationale": "Støttet delinformasjon; dette fyller ikke det konkrete kunnskapshullet om drønn/sprekker og sikker utgang.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": true,
+          "uncertainty": "Evaluation convention, not independent clinical validation. Preserve existing source scope; do not certify minimal sufficiency."
+        },
+        {
+          "id": "case-14/r2",
+          "old_item": 2,
+          "historical_text": "Støttet del er at skredfarevurdering krever kunnskap/erfaring, og at ferdsel i skredterreng bør unngås eller begrenses uten tilstrekkelig kompetanse.",
+          "classification": "required",
+          "criterion": "Unngå/begrens skredterreng uten tilstrekkelig kunnskap og erfaring.",
+          "omission_rationale": "Støttet kompetansebegrensning; ingen sikker returretning kan utledes.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": true,
+          "uncertainty": "Evaluation convention, not independent clinical validation. Preserve existing source scope; do not certify minimal sufficiency."
+        }
+      ],
+      "historical_alternatives": [
+        "De foretrukne passasjene kan dekke den støttede delmengden, men ingen passasjekombinasjon i denne lokale basen dekker hele spørsmålet.",
+        "Registrer insufficient_coverage, ikke full retrieval-pass selv om begge støttede punkter finnes.",
+        "Lenker/overskrifter til faretegn og andre undervisningssider er ikke selve instruksjonen; innhold fra ikke-ingesterte lenker kan ikke regnes som gold."
+      ],
+      "unchanged_optional": [
+        "Regionalt skredvarsel er bare utgangspunkt for lokale vurderinger; forhold kan avvike og endres raskt.",
+        "Skredterreng inkluderer både løsne- og utløpsområder."
+      ],
+      "knowledge_gap": {
+        "status": "insufficient_coverage",
+        "details": [
+          "Drønn og sprekker blir ikke eksplisitt forklart i de ingesterte godkjente tekstene.",
+          "Konkrete handlings-/retrettinstruksjoner for denne situasjonen mangler; tursted og faktisk snø-/terrengsituasjon er også ukjent.",
+          "Generelle faretegn- og planleggingsråd kan ikke erstatte disse manglene. Ikke forvent at LLM fyller dem fra egen kunnskap."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-15-001",
+          "section": "Skredfarevurdering og faretegn",
+          "source_url": "https://www.varsom.no/snoskred/snoskredskolen/skredfarevurdering-og-faretegn/",
+          "sha256": "5938bcc03efd7b6e47c43d47f502c00405bb19c3877066907b02b5cfc59dd6f1"
+        },
+        {
+          "id": "source-15-002",
+          "section": "OBS! Det kan være vanskelig å observere faretegn dersom du ferdes i oppgåtte eller oppkjørte spor.",
+          "source_url": "https://www.varsom.no/snoskred/snoskredskolen/skredfarevurdering-og-faretegn/",
+          "sha256": "c3b9754a12262bf5762c55336a7576e3c282d08be9bc83c4f74449ac9cd76ea7"
+        },
+        {
+          "id": "source-16-001",
+          "section": "Ferdsel i skredterreng",
+          "source_url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+          "sha256": "bee07b2aa0d2e670f11994cfa30c037c66c6ed950cb602968b949c5a4bf308c5"
+        },
+        {
+          "id": "source-16-002",
+          "section": "Turplanleggingen starter hjemme - bruk snøskredvarselet og planlegg turen",
+          "source_url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+          "sha256": "400b660a880970c33db236cf371f4ebcb88de6e3f5adfe877ae863951d5d3024"
+        },
+        {
+          "id": "source-16-003",
+          "section": "Husk å lage reserveplaner.",
+          "source_url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+          "sha256": "05edf678795075a368aa63fe32cbbfe95e3b5d8dee73c4d295c297d4a7412e36"
+        },
+        {
+          "id": "source-16-004",
+          "section": "Før du drar på tur",
+          "source_url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+          "sha256": "0c95ae40109ad379c929dde0887a23029c6f6124e5cae24939f774ea9d8113ac"
+        },
+        {
+          "id": "source-16-005",
+          "section": "Bruk bratthets- og utløpssonekart",
+          "source_url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+          "sha256": "753bcf1cbc299977ba97040ad498c39f846d928c7ad1d144a0f988e5a2b46a99"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-15",
+      "question": "Vi telter ved et vann i Norge i juli og vil lage et lite bål til matlaging. Er det lov her, og hvilke regler gjelder?",
+      "jurisdiction": "NO",
+      "expected_result": "insufficient_coverage",
+      "criteria": [],
+      "historical_alternatives": [
+        "Ingen godkjent geografisk anvendelig passasje dekker norske bålregler/lokal lovlighet; korrekt forventet resultat er insufficient_coverage.",
+        "Den tomme must-have-listen betyr at relevant norsk rettslig informasjon mangler, ikke automatisk pass.",
+        "DOCs Fires on public conservation land er godkjent, men de lokale passasjene er NZ-spesifikke og kan ikke gi norsk gold.",
+        "Generelt kokeutstyr kan være valgfri støtte, men dekker ikke lovligheten og skal ikke gi bonus for flere treff."
+      ],
+      "unchanged_optional": [
+        "Generelle utstyrskategorier som kokeapparat/drivstoff og vannbehandlingsutstyr, uten påstand om tillatt bruk."
+      ],
+      "knowledge_gap": {
+        "status": "insufficient_coverage",
+        "details": [
+          "Norske nasjonale bålregler og unntak er ikke dekket av den godkjente lokale kunnskapsbasen.",
+          "Aktuelle lokale forbud, verne-/grunneierregler, brannfare og nøyaktig tursted er ikke dekket/oppgitt.",
+          "Hele DOC-brannartikkelen er merket NZ i den lokale basen; korrekt geografi må bevares selv om teksten er tematisk relevant."
+        ]
+      },
+      "source_evidence": [],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-16",
+      "question": "Jeg skled på grusen og fikk et skrubbsår på kneet. Det blør nesten ikke, men det sitter sand i såret og vi skal gå videre. Hvordan får jeg det rent og beskytter det?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-16/r1",
+          "old_item": 1,
+          "historical_text": "Vask såret og huden rundt i lunkent vann eller sårvann; ved rusk/skitt kan vann med mild, nøytral og uparfymert såpe brukes.",
+          "classification": "required",
+          "criterion": "Rengjør såret og huden rundt med lunkent vann eller sårvann; hvis såpe anbefales, må den være mild, nøytral og uparfymert.",
+          "omission_rationale": "Vask er obligatorisk. Såpe er en betinget metode, ikke et krav om at hvert godt svar anbefaler såpe.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-16/r2",
+          "old_item": 2,
+          "historical_text": "Bruk plaster eller bandasje når det kan komme skitt i såret.",
+          "classification": "required",
+          "criterion": "Dekk med plaster/bandasje for å beskytte mot ny skitt.",
+          "omission_rationale": "Direkte relevant når turen skal fortsette.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        }
+      ],
+      "historical_alternatives": [
+        "Passasjer som samlet gir rengjøring med nødvendige såpeforbehold og tildekking ved fare for skitt; ingen bestemt chunk eller støttekilde kreves."
+      ],
+      "unchanged_optional": [
+        "Rengjøring med hånddusj eller rent fuktig tøystykke."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Kilden avgjør ikke tetanusstatus eller om det faktisk er dypere skade; spørsmålet gjelder overfladisk skrubbsår."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-02-001",
+          "section": "Førstehjelp ved blødingar og sår",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "39375fd68113a264ad87915a80f976885ad2d1fc0618af3d82765d111c4024e5"
+        },
+        {
+          "id": "source-02-002",
+          "section": "Førstehjelp ved indre blødingar",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "6d941674f20d4ce2804a4a4d19cf48c43c7d78320bf311e249d92ce932cce82d"
+        },
+        {
+          "id": "source-02-003",
+          "section": "Førstehjelp ved indre blødingar / Når skal du ringje 113?",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "c8e84628844e71a97c41f7ac5e83e3b140dc0eb2fe02311894cb166842a90ed0"
+        },
+        {
+          "id": "source-02-004",
+          "section": "Førstehjelp ved indre blødingar / Kva kan du gjere sjølv?",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "f5638eb74488cca565dca9236965c1ca44845e511d5fd92f9b40163ad14afe2a"
+        },
+        {
+          "id": "source-02-005",
+          "section": "Førstehjelp ved ytre blødingar",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "f813d4e350cfb0b69461ea801bb459a1355a3cc75e5433640d60fc5664776692"
+        },
+        {
+          "id": "source-02-006",
+          "section": "Førstehjelp ved ytre blødingar / Når skal du ringje 113?",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "8125e9f729e510be818ee34cf27337da4d4cf7514776d91765c16982ea34f0ae"
+        },
+        {
+          "id": "source-02-007",
+          "section": "Førstehjelp ved ytre blødingar / Kva kan du gjere sjølv? / Avgrens blødinga:",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "ce46d9ad82660255a2b161a305fcbb33a503ef6beaf0097c0751e06e57dcb0fd"
+        },
+        {
+          "id": "source-02-008",
+          "section": "Førstehjelp ved ytre blødingar / Kva kan du gjere sjølv? / Bandasjar med press mot blødinga:",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "216bb2fe9d2a6188d56121c9675dd660b25ee990e271b65f0c3390cbdc09b3a6"
+        },
+        {
+          "id": "source-02-009",
+          "section": "Førstehjelp ved ytre blødingar / Kva kan du gjere sjølv? / Overvak og hald kroppstemperaturen oppe:",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "64c223cb62983fcf9ea2dbdbf00e47f86b6384ec37ac12ea039c5de97bae1ccc"
+        },
+        {
+          "id": "source-02-010",
+          "section": "Behandling av mindre blødingar og sår / Djupe sår og kutt",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "cac4ee32418a72c3b9e5840cc1dd35d7818dc5e8ee85357446f88186d8df5c09"
+        },
+        {
+          "id": "source-02-011",
+          "section": "Behandling av mindre blødingar og sår / Når skal du kontakte lege?",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "af620f225b6919f21c746cd67d87e84604f65334637a77dcc73240f294ff8df3"
+        },
+        {
+          "id": "source-02-012",
+          "section": "Behandling av mindre blødingar og sår / Skrubbsår og rifter",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "71850a326735f258f46154a5b2528f10172f49b978af5895e474eaff1477bf8d"
+        },
+        {
+          "id": "source-02-013",
+          "section": "Behandling av mindre blødingar og sår / Bit frå dyr og menneske",
+          "source_url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-blodninger/",
+          "sha256": "136df71faa861cb119af601670d37ca9a2055a32b2af6445e585073795810f32"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-17",
+      "question": "Etter et vepsestikk har turkameraten fått utslett flere steder, hovne lepper og sier at halsen kjennes trang. Det har kommet raskt. Er det noe vi kan vente med til vi er nede fra fjellet?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-17/r1",
+          "old_item": 1,
+          "historical_text": "Rask reaksjon med hud-/slimhinnehevelse og trang hals/pustebesvær er blant symptomene på anafylaksi; insektstikk kan utløse den.",
+          "classification": "optional",
+          "criterion": "Forklar at rask reaksjon etter stikk med utslett/hevelse/trang hals kan være anafylaksi.",
+          "omission_rationale": "Brukeren spør om det kan vente. Detaljert symptom- og triggergjentakelse er utdyping; en kort mistankebetegnelse kan være nyttig, men erstatter ikke handling.",
+          "trigger": "Not core scored",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-17/r2",
+          "old_item": 2,
+          "historical_text": "Mistanke om anafylaksi krever akutt behandling og umiddelbar kontakt med 113, ikke å vente til turen er ferdig.",
+          "classification": "required",
+          "criterion": "Ring 113 øyeblikkelig for akutt hjelp i denne situasjonen; ikke vent til dere er nede.",
+          "omission_rationale": "Entydig øyeblikkelig 113 er tilstrekkelig handling. En annen feil diagnose/behandling flagges separat.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        }
+      ],
+      "historical_alternatives": [
+        "Anvendelige passasjer må gi både det relevante symptommønsteret/utløseren og umiddelbar varsling ved mistanke; generell allergibeskrivelse alene er utilstrekkelig."
+      ],
+      "unchanged_optional": [
+        "113 gir veiledning.",
+        "Tidligere diagnostiserte personer bør ha med adrenalinpenn og få opplæring fra lege."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Kilden støtter mistanke og eskalering; faktisk diagnose og legemiddel-/pennspesifikk dose er ikke gold."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-08-001",
+          "section": "Allergisk sjokk og anafylaksi",
+          "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+          "sha256": "f7f7406448eefd6087af64b9935c219f8caafa7912dfd85ba784702c7bb56564"
+        },
+        {
+          "id": "source-08-002",
+          "section": "Hva er allergisk sjokk og anafylaksi?",
+          "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+          "sha256": "dd2a46f80b7b32591ec1713411d632dca9bf752b2a91eb5392d59fe6a3b9d90c"
+        },
+        {
+          "id": "source-08-003",
+          "section": "Ring 113 umiddelbart ved allergisjokk",
+          "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+          "sha256": "096f794555ff7d4c25725f145ff6dc997b2a09146c3ab2c1e697cb048abaa914"
+        },
+        {
+          "id": "source-08-004",
+          "section": "Symptomer på allergisk sjokk",
+          "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+          "sha256": "88704945182654f591e583c54a15a0329f5b8950199825e5e838eaaf30eaf0a6"
+        },
+        {
+          "id": "source-08-005",
+          "section": "Årsaker til anafylaksi",
+          "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+          "sha256": "a7817b4f8f372877f0ae230dcd8bca9f7a513c70a654d03860ff5245a2b338a9"
+        },
+        {
+          "id": "source-08-006",
+          "section": "Utredning og diagnose av anafylaksi",
+          "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+          "sha256": "14b1930643b48cfb57da10a0a0122fc2d50887911e634eb60aaaf959cc2e130c"
+        },
+        {
+          "id": "source-08-007",
+          "section": "Behandling av anafylaksi",
+          "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+          "sha256": "79a13226fb2b3b090c339599a43d1e3bdf863007d80c654bf443a46a3f89ddb6"
+        },
+        {
+          "id": "source-08-008",
+          "section": "Behandling av anafylaksi / Forebyggende behandling",
+          "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+          "sha256": "7389650744da21aa97533fc35e0aa69a2c3545f2b65fe63bdaff7e9c65ae755e"
+        },
+        {
+          "id": "source-08-009",
+          "section": "Å leve med kraftig allergi eller anafylaksi",
+          "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+          "sha256": "01c62e9f4cf55d3664d1c753e2d90e25844aa54ae6afb50e71df21d8df286b75"
+        },
+        {
+          "id": "source-08-010",
+          "section": "Å leve med kraftig allergi eller anafylaksi / Akutt medisinsk hjelp",
+          "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+          "sha256": "5d2034622b1149c98a13d14c020707825a8b61e67dc8a1395c002e53099a7ea7"
+        },
+        {
+          "id": "source-08-011",
+          "section": "Legevakt",
+          "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+          "sha256": "1cbaf5df412e44d3b4dbed762899a2f980fb79739110d0ddc39442600c5be309"
+        },
+        {
+          "id": "source-08-012",
+          "section": "Legevakt / LHL Astma og allergi",
+          "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+          "sha256": "fe528df089e80b9aa6e19aac84a545420bf1cabf95a32bcd259ad79b82136496"
+        },
+        {
+          "id": "source-08-013",
+          "section": "Legevakt / Astma- og allergiforbundet",
+          "source_url": "https://www.helsenorge.no/sykdom/astma-og-allergi/allergisjokk/",
+          "sha256": "898b66c25644ccbd65e8490db10bb3156104ae6d7bcc12d73e142ddfd37e7158"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-18",
+      "question": "Jeg har gått gjennom isen på skøyter. Jeg holder meg i hullet og har ispigger, men kanten knekker når jeg prøver å dra meg opp. Hva sier rådene om å komme opp?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-18/r1",
+          "old_item": 1,
+          "historical_text": "Unngå at hodet kommer under vann, snu og prøv opp den veien du kom fra.",
+          "classification": "required",
+          "criterion": "Hold hodet over vann og forsøk opp der du kom fra.",
+          "omission_rationale": "Beholder to kildeangitte egenredningshandlinger.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": true,
+          "uncertainty": "Evaluation convention, not independent clinical validation. Preserve existing source scope; do not certify minimal sufficiency."
+        },
+        {
+          "id": "case-18/r2",
+          "old_item": 2,
+          "historical_text": "Bryt svak kant inn til solid is før du bruker kreftene på å dra deg opp.",
+          "classification": "required",
+          "criterion": "Bryt svak kant inn til solid is før oppstigning.",
+          "omission_rationale": "Håndterer konkret at kanten brister.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": true,
+          "uncertainty": "Evaluation convention, not independent clinical validation. Preserve existing source scope; do not certify minimal sufficiency."
+        },
+        {
+          "id": "case-18/r3",
+          "old_item": 3,
+          "historical_text": "Ved solid kant brukes armene/ispiggene og svømmetak med bena for å trekke/skyve seg inn på isen; minst én av de beskrevne metodene er tilstrekkelig.",
+          "classification": "required",
+          "criterion": "Ved solid kant: én komplett kildebeskrevet oppstigningsmetode med armer/ispigger og ben.",
+          "omission_rationale": "Svømmetak-metoden ELLER den kildebeskrevne albue/kne-metoden godtas; begge kreves ikke.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": true,
+          "uncertainty": "Evaluation convention, not independent clinical validation. Preserve existing source scope; do not certify minimal sufficiency."
+        }
+      ],
+      "historical_alternatives": [
+        "Begge tekstfortsettelsene eller andre kildestøttede kombinasjoner; begge oppstigningsmetodene kreves ikke.",
+        "Metoden med å presse seg opp på albuene og vippe frem til kneet kommer opp er et likeverdig alternativ til sertifikatets svømmestilling."
+      ],
+      "unchanged_optional": [
+        "Etter oppstigning hindre videre nedkjøling med tørt tøy og isolasjon.",
+        "Ispigger hjelper med feste på glatt is."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Instruksjonene finnes; de avgjør ikke faktisk bæreevne eller garanterer vellykket redning."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-19-001",
+          "section": "Redde andre",
+          "source_url": "https://www.varsom.no/is/isskolen/redning/",
+          "sha256": "158e94db88364a442f4b24b4478152feeebb975136d30ebdcfe27ba92242162c"
+        },
+        {
+          "id": "source-19-002",
+          "section": "Redde andre",
+          "source_url": "https://www.varsom.no/is/isskolen/redning/",
+          "sha256": "0a93c9b0c21c566038aa10c909efff84cff153cdd17bee9d98b6a9dbcb889f14"
+        },
+        {
+          "id": "source-19-003",
+          "section": "Redde seg selv",
+          "source_url": "https://www.varsom.no/is/isskolen/redning/",
+          "sha256": "19e022c526992c9e0888ff53de5f01755b2e9b31a1c6540100e6a91d4861e626"
+        },
+        {
+          "id": "source-19-004",
+          "section": "Redde seg selv",
+          "source_url": "https://www.varsom.no/is/isskolen/redning/",
+          "sha256": "ec582f21c5145bc741b6d115ee7b8b35e476cdc26ba18ae1143688f0ec02cd5f"
+        },
+        {
+          "id": "source-19-005",
+          "section": "Etter redningen",
+          "source_url": "https://www.varsom.no/is/isskolen/redning/",
+          "sha256": "d45c850ebe821fe4cabfd0cd33fb539cd70f3b9850e9bf2e5d90806a10a5ce12"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-19",
+      "question": "Vi er fire som vurderer en skitur i skredterreng. Én har sender og mottaker, og vi kan låne en spade. Er det nok fellesutstyr, og bør vi øve først?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-19/r1",
+          "old_item": 1,
+          "historical_text": "Alle i følget skal ha sender/mottaker, spade og søkestang ved ferdsel i skredterreng; én felles enhet/spade er ikke det beskrevne kravet.",
+          "classification": "required",
+          "criterion": "Hver person trenger sender/mottaker, spade og søkestang; det beskrevne fellesutstyret er ikke nok.",
+          "omission_rationale": "Aktør og alle tre utstyrstyper er kjernen i spørsmålet.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-19/r2",
+          "old_item": 2,
+          "historical_text": "Utstyret må kunne brukes også under krevende forhold, og ferdighetene må øves.",
+          "classification": "required",
+          "criterion": "Øv på å bruke utstyret, slik at ferdighetene fungerer i praksis.",
+          "omission_rationale": "Øv til rutinene sitter er en dekkende formulering; egen setning om krevende forhold kreves ikke.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        }
+      ],
+      "historical_alternatives": [
+        "Utstyrssetningen sammen med det faktisk leverte alle-i-følget-budskapet og øving; overskriften teller bare dersom den er levert i konteksten."
+      ],
+      "unchanged_optional": [
+        "Skredkurs gir introduksjon og må følges av videre øving."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Beredskapskrav er dekket; om denne gruppen bør gå denne turen kan ikke fastslås."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-17-001",
+          "section": "Kameratredning",
+          "source_url": "https://www.varsom.no/snoskred/snoskredskolen/kameratredning",
+          "sha256": "d32e548026defed641c114e8b2e77d53bcebd16832eecc57ff0907e165627394"
+        },
+        {
+          "id": "source-17-002",
+          "section": "Det samme gjelder de andre i følget ditt. Alltid!",
+          "source_url": "https://www.varsom.no/snoskred/snoskredskolen/kameratredning",
+          "sha256": "9c0059b7e852b1ae29514c76ab5ea3093f73017ed35b1a5cceeadd58cf625584"
+        },
+        {
+          "id": "source-17-003",
+          "section": "Tiden du har til rådighet",
+          "source_url": "https://www.varsom.no/snoskred/snoskredskolen/kameratredning",
+          "sha256": "ed1fec7ca51a4f9ed879ba4a99cb061a026a39af5c288ff8fbb5a90ecbc9d983"
+        },
+        {
+          "id": "source-17-004",
+          "section": "Podcast-episoder om kameratredning",
+          "source_url": "https://www.varsom.no/snoskred/snoskredskolen/kameratredning",
+          "sha256": "64ce3d800c4a33af0c58734ebd507aed6ceeb715780d156a982273b30aef122f"
+        },
+        {
+          "id": "source-17-005",
+          "section": "Hendelser fra virkeligheten",
+          "source_url": "https://www.varsom.no/snoskred/snoskredskolen/kameratredning",
+          "sha256": "90238a581e6b64802b9670482cf3f0103815189d221fd1d78b04754858aced75"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-20",
+      "question": "Vi vil ta en lengre fjelltur enn vi er vant til, men værmeldingen skifter. Hva bør vi avklare før vi drar, i stedet for å bestemme oss for å gjennomføre uansett?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-20/r1",
+          "old_item": 1,
+          "historical_text": "Undersøk ruten og kontroller at dere har ferdighetene den krever.",
+          "classification": "required",
+          "criterion": "Undersøk ruten og om gruppens ferdigheter er tilstrekkelige.",
+          "omission_rationale": "Rute/ferdigheter må knyttes sammen.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-20/r2",
+          "old_item": 2,
+          "historical_text": "Sjekk værmeldingen og endre planen ved behov; været kan endre seg raskt.",
+          "classification": "required",
+          "criterion": "Sjekk værmeldingen og tilpass/endre planen ved behov.",
+          "omission_rationale": "Rask værendring er forklaring; handlingene må med.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        }
+      ],
+      "historical_alternatives": [
+        "Begge generelle planleggingsbehov må dekkes; andre anvendelige passasjer kan erstatte primærseksjonene."
+      ],
+      "unchanged_optional": [
+        "Varmt tøy og ekstra mat for uventet natt/dårlig vær."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Generell beslutningsramme er dekket; faktisk vær og rutens vanskelighetsgrad må vurderes utenfor KB."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-10-001",
+          "section": "Be prepared with the Land Safety Code",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+          "sha256": "925167d383e78e8fac7ccb11a91233f06c350676ca49809c6b2d7cd552d45d3b"
+        },
+        {
+          "id": "source-10-002",
+          "section": "Five simple steps / 1. Choose the right trip for you",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+          "sha256": "05328f482caf97077255a53d40f33c4fbd97706fce8a55e0afda66fe6c2c3b91"
+        },
+        {
+          "id": "source-10-003",
+          "section": "Five simple steps / 2. Understand the weather",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+          "sha256": "835567f81e119a0f921af09056ea1f9bf3ea41699d2c3cd654c3dbb77408f5bd"
+        },
+        {
+          "id": "source-10-004",
+          "section": "Five simple steps / 3. Pack warm clothes and extra food",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+          "sha256": "4efe029c4b2fc94eb2348f0995be62fd29fe849ee45431e72f8b60eb13e354e7"
+        },
+        {
+          "id": "source-10-005",
+          "section": "Five simple steps / 4. Share your plans and take ways to get help",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+          "sha256": "4ee15cc22550d4c16139a8642ec7bfa9ce75a3fa8718fc24944410fe8c705ed7"
+        },
+        {
+          "id": "source-10-006",
+          "section": "Five simple steps / 5. Take care of yourself and each other",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+          "sha256": "dddf46f025ca34330fefe00e60dfb7684cdb9512264598fb0fe1d4ffa09c3fd1"
+        },
+        {
+          "id": "source-10-007",
+          "section": "Caring for New Zealand",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/land-safety-code",
+          "sha256": "d3d9c8fd5fc89b5a7ffd7ea58d5e4e1f9b2d8d805957de73ad7bdd3a240be342"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-21",
+      "question": "Stormkjøkkenet er ødelagt. Vi har et filter merket absolutt 0,3 mikron og tabletter for desinfisering. Holder filteret alene mot alt som kan gjøre oss syke i bekkevannet, og i hvilken rekkefølge bruker vi utstyret?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-21/r1",
+          "old_item": 1,
+          "historical_text": "Filter med absolutt porestørrelse 0,3 mikron eller mindre fjerner bakterier og parasitter, men ikke virus.",
+          "classification": "required",
+          "criterion": "Det beskrevne filteret fjerner bakterier/parasitter, men ikke virus; det er ikke nok alene mot alle mikrober.",
+          "omission_rationale": "Porestørrelsen er allerede gitt i spørsmålet og trenger ikke gjentas. Virusbegrensningen kan ikke utelates.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-21/r2",
+          "old_item": 2,
+          "historical_text": "Filtrer først og desinfiser det filtrerte vannet; følg produktets bruksanvisning.",
+          "classification": "required",
+          "criterion": "Filtrer først, desinfiser deretter, og følg produktets bruksanvisning.",
+          "omission_rationale": "Rekkefølge og produktavhengighet er nødvendige; dose/virketid må ikke finnes på.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        }
+      ],
+      "historical_alternatives": [
+        "Passasjer som bevarer den oppgitte porestørrelsen/virusbegrensningen og hele sekvensen med produktforbehold; koking alene besvarer ikke spørsmålet."
+      ],
+      "unchanged_optional": [
+        "Koking er beste mikrobetiltak når det er mulig.",
+        "Behandling gir ikke trygghet ved skadelige kjemikalier/giftstoffer.",
+        "Klor og jod virker dårlig mot parasitter og erstatter ikke filtrering."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Generell metode er dekket; konkret tablettdose og tid avhenger av produkt og er ikke gold."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-21-001",
+          "section": "About Water Treatment Options When Hiking, Camping, or Traveling",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "9432b533cac315cd012621b9820585710f8ee8bad0fd21807f6ac20d0bf9eefb"
+        },
+        {
+          "id": "source-21-002",
+          "section": "Key points",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "97eccc785730cbe864578d3c06be28fa7fe2a3117702524256f7d2a276e53d16"
+        },
+        {
+          "id": "source-21-003",
+          "section": "Overview",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "7656c68ae4e63b1f58a209a32c9eabcf4f4bc4d8a15781d0cfa957dcd1a76745"
+        },
+        {
+          "id": "source-21-004",
+          "section": "Exposure",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "bdf0fb7d89852ab69a7ddd1ba5462772d2036979324f13499f4f0f0df6b0c757"
+        },
+        {
+          "id": "source-21-005",
+          "section": "Exposure / Clear water can be unsafe",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "0acb0e666b939d222816622234ad52577861af91c2edd6849324e325b251e70e"
+        },
+        {
+          "id": "source-21-006",
+          "section": "Who is at risk",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "44cf3ad63f8089d29389509adabe8244366abaad7547b060eec20d6f020fac73"
+        },
+        {
+          "id": "source-21-007",
+          "section": "Symptoms",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "914fa4ca4e23cd71b5817fa985e41851bf49aef8fdebe095e2f9c8d49b6ca236"
+        },
+        {
+          "id": "source-21-008",
+          "section": "Prevention steps and strategies",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "150dc08678ac9a8ce28accc94f436612de48861d7b662caf1ad1b599f7f0effd"
+        },
+        {
+          "id": "source-21-009",
+          "section": "Prevention steps and strategies / Treat your water",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "0ac68abf7182542c2aa088f5bb7988279f5b02dac7673f8ffa0b9b585b2a9c83"
+        },
+        {
+          "id": "source-21-010",
+          "section": "Prevention steps and strategies / Treat your water / Boil",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "c3ee361513f98dc9c99095cb6f57dceb7e01650fb8f486049955b9d19aa8a746"
+        },
+        {
+          "id": "source-21-011",
+          "section": "Prevention steps and strategies / Treat your water / Filter",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "49fc4071c4503881d05debda562195fd5db6c4f8afda0391202caf8d874bf1e4"
+        },
+        {
+          "id": "source-21-012",
+          "section": "Prevention steps and strategies / Treat your water / Disinfect",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "690869701cd48da84519af2a20e7fae7c2284e2253c43b95e5678ff03549e0c4"
+        },
+        {
+          "id": "source-21-013",
+          "section": "Prevention steps and strategies / Treat your water / Using UV light",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "f8cc700b3c0edfbdd8f09f0f48a6427a01b5705498a534c8fa355f29a6a8a9ac"
+        },
+        {
+          "id": "source-21-014",
+          "section": "Prevention steps and strategies / Treat your water / Using MIOX® systems",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "28c43a7db75ecbfac5fab60c87b81fcc478e31975c9a8564deb7565c2ae9733d"
+        },
+        {
+          "id": "source-21-015",
+          "section": "Prevention steps and strategies / Bury your poop",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "d312fed6bb3772b9072c951b83b9867e6e6fc3b5a1a70fc8e6037b25a36502b1"
+        },
+        {
+          "id": "source-21-016",
+          "section": "Prevention steps and strategies / Wash your hands",
+          "source_url": "https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html",
+          "sha256": "f2e687d084ec6b68735cddda309e06a0177a8a2955bc315c0e96c0f430b07da2"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-22",
+      "question": "Jeg skal på flerdagerstur i New Zealand og vil bruke mobilen som kart. Hva må jeg ordne før avreise hvis det ikke er dekning og batteriet kan gå tomt?",
+      "jurisdiction": "NZ",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-22/r1",
+          "old_item": 1,
+          "historical_text": "Bruk egnet kartapp med offlinefunksjon, topografisk visning og dekning av New Zealands turområder/stier og terreng.",
+          "classification": "required",
+          "criterion": "Bruk egnet offline topografisk kartapp som dekker NZ-terreng og stier.",
+          "omission_rationale": "Rett karttype og geografisk dekning er nødvendige; ikke bare ordet kart.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-22/r2",
+          "old_item": 2,
+          "historical_text": "Last ned kart og kontroller at de virker offline før turen.",
+          "classification": "required",
+          "criterion": "Last ned kart og sjekk at de virker offline før avreise.",
+          "omission_rationale": "Nedlasting alene dokumenterer ikke at offlinefunksjonen er kontrollert.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-22/r3",
+          "old_item": 3,
+          "historical_text": "Sørg for nok batteritid og ha papirkart som reserve dersom telefonen skades eller går tom.",
+          "classification": "required",
+          "criterion": "Sørg for batteritid og papirkart som reserve.",
+          "omission_rationale": "To ulike sårbarheter må håndteres; hvorfor telefonen kan svikte er allerede gitt.",
+          "trigger": "Always for this question",
+          "safety_significance": "not_declared_critical",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        }
+      ],
+      "historical_alternatives": [
+        "Anvendelig NZ-kontekst med alle informasjonsbehov; passagegeografi skal følge eksplisitt NZ-spørsmål og ikke fast default NO."
+      ],
+      "unchanged_optional": [
+        "Detaljerte Topo50-papirkart omtalt i NZ-kilden.",
+        "Navigasjonsutstyr må kunne brukes."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Planlegging er dekket; lokale appvalg/priser og rutens aktuelle forhold er ikke gold."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-09-001",
+          "section": "Maps for walking, tramping and hunting in New Zealand",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+          "sha256": "b2a1f0e651a7df22644cde681a13aef624f400c1a55c4bc360da575d911c5ded"
+        },
+        {
+          "id": "source-09-002",
+          "section": "Navigating with maps",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+          "sha256": "0a7699318f9f6753c40fa35ea46d98a91076e1b7fdede2473da61daa1bbfb602"
+        },
+        {
+          "id": "source-09-003",
+          "section": "DOC maps",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+          "sha256": "3071a07f581beeeef9fa96a197cc257f1a0d57399345f065bebe20dc3d55cbcb"
+        },
+        {
+          "id": "source-09-004",
+          "section": "New Zealand topographic maps",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+          "sha256": "8c94b2724e51eb81a9d91d008f3a151d0e77b721011785bce47294ab25d95642"
+        },
+        {
+          "id": "source-09-005",
+          "section": "Map apps",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+          "sha256": "79745724a7e0222cbcbaba46ca12f7a992ae835ea2a1d65afd79edd065ec6028"
+        },
+        {
+          "id": "source-09-006",
+          "section": "Reduce your risk of getting lost",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+          "sha256": "f88e6274fdd91f890d3472e88482d61dcbfbba94082f5c3b6e04c2bb9362611c"
+        },
+        {
+          "id": "source-09-007",
+          "section": "Reduce your risk of getting lost / If you get lost",
+          "source_url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/maps/",
+          "sha256": "aee5d724f283f8e2eb2615bfff53f91f1331c53c66197719dbf40c56627ef476"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-23",
+      "question": "Vi har søkt inn i en solid bygning med strøm og vann etter tordenvær. Det har vært stille i ti minutter. Kan vi gå ut igjen, og er det noe inne vi bør holde oss unna mens vi venter?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-23/r1",
+          "old_item": 1,
+          "historical_text": "Bli i ordentlig ly minst 30 minutter etter siste hørbare torden.",
+          "classification": "required",
+          "criterion": "Vent i ordentlig ly minst 30 minutter etter siste hørbare torden; ti minutter er ikke nok.",
+          "omission_rationale": "Tidsgrense og startpunkt er avgjørende.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-23/r2",
+          "old_item": 2,
+          "historical_text": "Unngå ledningstelefon og elektrisk utstyr som gir direkte elektrisk kontakt.",
+          "classification": "required",
+          "criterion": "Unngå ledningstilkoblet elektrisk utstyr som gir direkte kontakt med elektrisitet.",
+          "omission_rationale": "En klar overordnet kategori kan dekke telefon/datamaskin-eksemplene uten uttømmende liste.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-23/r3",
+          "old_item": 3,
+          "historical_text": "Unngå røranlegg som vasker, badekar og kraner mens uværet pågår.",
+          "classification": "required",
+          "criterion": "Unngå kontakt med røranlegg/rørført vann, for eksempel vask, bad og kraner.",
+          "omission_rationale": "Kategorien må være tydelig; de tre illustrerende objektene trenger ikke alle gjentas.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        }
+      ],
+      "historical_alternatives": [
+        "Ventetid med korrekt startpunkt og innendørs risikoinstruksjoner må leveres; utendørs rygg/overheng alene er utilstrekkelig."
+      ],
+      "unchanged_optional": [
+        "Unngå vinduer/dører/veranda og betonggulv/-vegger slik kilden beskriver."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Generelle råd er dekket; faktisk værutvikling kan ikke fastslås fra KB."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-22-001",
+          "section": "Lightning Tips",
+          "source_url": "https://www.weather.gov/safety/lightning-tips",
+          "sha256": "850f7ac40013a25c6095b1f738f2f3e8ed785ea6ce67217f0c0236540739bbdf"
+        },
+        {
+          "id": "source-22-002",
+          "section": "Lightning: What You Need to Know",
+          "source_url": "https://www.weather.gov/safety/lightning-tips",
+          "sha256": "822288502d200aefbe2f11c9b25ca03e162a0b36cc97c1e6673c83df09edd6eb"
+        },
+        {
+          "id": "source-22-003",
+          "section": "Indoor Lightning Safety",
+          "source_url": "https://www.weather.gov/safety/lightning-tips",
+          "sha256": "3227dd1be77789e1370eb939c7723c03ba468ecdd8b79cb47ca7cf83c21c4129"
+        },
+        {
+          "id": "source-22-004",
+          "section": "Last Resort Outdoor Risk Reduction Tips",
+          "source_url": "https://www.weather.gov/safety/lightning-tips",
+          "sha256": "84e83a75b71493710cbb4cc94a550e97333acbc0b3d76c0e4e8bf5a002ee2c9b"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-24",
+      "question": "Etter kraftig regn går stien langs en bratt skråning med løs jord helt inntil bekken. Vannet har gravd ut kanten og strømmer kraftig. Hvilke farer bør vi holde oss unna på denne delen av turen?",
+      "jurisdiction": "NO",
+      "expected_result": "supported_context",
+      "criteria": [
+        {
+          "id": "case-24/r1",
+          "old_item": 1,
+          "historical_text": "Unngå å oppholde dere nær elver/bekker med stor vannføring.",
+          "classification": "required",
+          "criterion": "Hold avstand fra elver/bekker med stor vannføring.",
+          "omission_rationale": "Relevant unngåelseshandling.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        },
+        {
+          "id": "case-24/r2",
+          "old_item": 2,
+          "historical_text": "Unngå bratte skråninger med løsmasser; erosjon langs elve-/bekkeløp kan utløse skred.",
+          "classification": "required",
+          "criterion": "Hold avstand fra bratte skråninger med løsmasser ved den eroderte bekken.",
+          "omission_rationale": "Unngåelsen er obligatorisk; årsaksforklaring om erosjon/skred er utdyping.",
+          "trigger": "Always for this question",
+          "safety_significance": "source_grounded_high_consequence",
+          "reviewer": "current workspace agent; model/effort not programmatically exposed",
+          "review_needed": false,
+          "uncertainty": "Necessity is an author judgment supported by the stated omission consequence, not a measured fact."
+        }
+      ],
+      "historical_alternatives": [
+        "Aktuell fare-/unngåelsesinformasjon må finnes; husholdningsflomsikring dekker ikke behovet."
+      ],
+      "unchanged_optional": [
+        "Følg oppdatert lokal myndighetsinformasjon og farevarsel når tilgjengelig",
+        "uten å behandle lenker som aktuelt varsel."
+      ],
+      "knowledge_gap": {
+        "status": "bounded_limitations",
+        "details": [
+          "Generelle farer er dekket; faktisk skredstabilitet og sikker alternativ tursti kan ikke bestemmes."
+        ]
+      },
+      "source_evidence": [
+        {
+          "id": "source-20-001",
+          "section": "Forebygg skader - råd til privatpersoner",
+          "source_url": "https://www.varsom.no/flom-og-jordskred/om-flom-og-jordskred/rad-og-forebygging/rad-til-privatpersoner/",
+          "sha256": "0cd4f8bbd2e30b992e17fc356983e7d5285963264c44fb7b71231fc8632e4243"
+        },
+        {
+          "id": "source-20-002",
+          "section": "Informasjon om flom og skred",
+          "source_url": "https://www.varsom.no/flom-og-jordskred/om-flom-og-jordskred/rad-og-forebygging/rad-til-privatpersoner/",
+          "sha256": "ea73d3ba010e7e07d4b669f169f5db0ccb021c5ea616b689e5e8973084807ced"
+        },
+        {
+          "id": "source-20-003",
+          "section": "Forebygg og begrens skader",
+          "source_url": "https://www.varsom.no/flom-og-jordskred/om-flom-og-jordskred/rad-og-forebygging/rad-til-privatpersoner/",
+          "sha256": "2e664aff9eb5b0fe8e9155c2a5e98d4d516c68b25f0a22999a676f553b810571"
+        },
+        {
+          "id": "source-20-004",
+          "section": "Forebygg og begrens skader",
+          "source_url": "https://www.varsom.no/flom-og-jordskred/om-flom-og-jordskred/rad-og-forebygging/rad-til-privatpersoner/",
+          "sha256": "934b44daa17bc53a1ed2a60fcc938c66cbc56a32535e83c589447d0fa66e4310"
+        },
+        {
+          "id": "source-20-005",
+          "section": "Under en flom eller et skred",
+          "source_url": "https://www.varsom.no/flom-og-jordskred/om-flom-og-jordskred/rad-og-forebygging/rad-til-privatpersoner/",
+          "sha256": "27442269f4f24621a964dde9da60d45d162a3564ffc426ac03d9136d8a7cbc6c"
+        },
+        {
+          "id": "source-20-006",
+          "section": "Ansvarsfordeling",
+          "source_url": "https://www.varsom.no/flom-og-jordskred/om-flom-og-jordskred/rad-og-forebygging/rad-til-privatpersoner/",
+          "sha256": "737cf4fb1ceea800e7b9db7c9b03d6da40958206f318b9892f1cad5a82c79358"
+        }
+      ],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    },
+    {
+      "id": "case-25",
+      "question": "Jeg har ingen teltduk og må overnatte i skogen. Hvordan bygger jeg et ly av greiner, steg for steg, som holder regnet ute og er stabilt nok til natta?",
+      "jurisdiction": "NO",
+      "expected_result": "insufficient_coverage",
+      "criteria": [],
+      "historical_alternatives": [
+        "Ingen lokal kilde gir bygge-/stabilitets-/regntettingsprosedyren; dette er et kunnskapshull",
+        "ikke en tom-listen-pass."
+      ],
+      "unchanged_optional": [
+        "Generelt behov for å holde varmen og lage ly.",
+        "Nødly og sovepose omtalt som beredskap."
+      ],
+      "knowledge_gap": {
+        "status": "insufficient_coverage",
+        "details": [
+          "Ingen av de 22 godkjente tekstene gir trinnvis bygging av improvisert greinely eller stabilitets-/regntettingskriterier.",
+          "Utstyrslenker og generelle ly-råd fyller ikke dette gapet."
+        ]
+      },
+      "source_evidence": [],
+      "authored_at": "2026-10-24T18:00:16.309696+00:00",
+      "decision_status": "owner-authorized retrospective development convention; not safety approval"
+    }
+  ]
+}

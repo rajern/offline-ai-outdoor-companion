@@ -1,0 +1,40 @@
+[
+  {
+    "case_id": "case-19",
+    "answer_path": "knowledge/local/diagnostics/local-generation-eligible-2026-10-24/responses/qwen-2b/case-19/answer.txt",
+    "answer_sha256": "bbc9d78701a3fbd32ac2c2f5453ac2c4bba37a8b8e3c83bfb3d633f13421f1db",
+    "context_sha256": "75c0385eccfd89c5d151543ca869f947e92de9ed938df3667b28b2affeec637a",
+    "excerpt_ids": [
+      "source-15-002",
+      "source-17-002",
+      "source-19-001",
+      "source-19-002",
+      "source-16-002",
+      "source-16-001",
+      "source-16-003",
+      "source-17-001",
+      "source-16-004",
+      "source-07-004",
+      "source-01-028"
+    ],
+    "reuse_basis": "knowledge/manifests/approved-sources.json approved2026-10-06; text only, credit original and content owner; no third-party media"
+  },
+  {
+    "case_id": "case-23",
+    "answer_path": "knowledge/local/diagnostics/local-generation-eligible-2026-10-24/responses/qwen-2b/case-23/answer.txt",
+    "answer_sha256": "0ec7b68f82e53e3bf99f544520cb00ab6d2627cb7efdae9947d636caab5697b7",
+    "context_sha256": "49e854e197459c99804bbfd32438ae3d7eb55d7528492203a007ab0f4e8bfc1a",
+    "excerpt_ids": [
+      "source-22-002",
+      "source-20-003",
+      "source-20-004",
+      "source-14-004",
+      "source-20-005",
+      "source-17-003",
+      "source-19-001",
+      "source-19-002",
+      "source-22-003"
+    ],
+    "reuse_basis": "knowledge/manifests/approved-sources.json approved2026-10-06; text only, credit original and content owner; no third-party media"
+  }
+]

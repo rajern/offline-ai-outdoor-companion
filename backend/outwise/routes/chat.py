@@ -34,11 +34,21 @@ class ChatSource(BaseModel):
     retrieved_at: str | None = None
     source_updated_at: str | None = None
     notice: str | None = None
+    excerpts: list["ChatExcerpt"] = Field(default_factory=list)
+
+
+class ChatExcerpt(BaseModel):
+    id: str
+    text: str
+    section: str | None = None
+    language: str
 
 
 class ChatResponse(BaseModel):
     answer: str
     sources: list[ChatSource] = Field(default_factory=list)
+    generation_error: str | None = None
+    context_notice: str | None = None
 
 
 router = APIRouter(prefix="/api", tags=["chat"])
@@ -51,10 +61,12 @@ def get_orchestrator(request: Request) -> Orchestrator:
 @router.post("/chat", response_model=ChatResponse, response_model_exclude_none=True)
 def chat(
     request: ChatRequest,
+    http_request: Request,
     orchestrator: Orchestrator = Depends(get_orchestrator),
 ) -> ChatResponse:
     try:
-        result = orchestrator.answer(request.message)
+        with http_request.app.state.request_lock:
+            result = orchestrator.answer(request.message)
     except KnowledgeAssetsError as exc:
         raise HTTPException(status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
                             detail="Den lokale kunnskapsbasen er ikke klar. Kjør scripts/setup-knowledge.ps1 og start backend på nytt.") from exc
@@ -82,6 +94,8 @@ def chat(
 
     return ChatResponse(
         answer=result.answer,
+        generation_error=result.generation_error,
+        context_notice=result.context_notice,
         sources=[
             ChatSource(
                 title=source.title,
@@ -93,6 +107,8 @@ def chat(
                 retrieved_at=source.retrieved_at,
                 source_updated_at=source.source_updated_at,
                 notice=source.notice,
+                excerpts=[ChatExcerpt(id=e.id, text=e.text, section=e.section, language=e.language)
+                          for e in source.excerpts],
             )
             for source in result.sources
         ],

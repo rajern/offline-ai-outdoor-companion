@@ -1,0 +1,181 @@
+{
+  "type": "object",
+  "properties": {
+    "answers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "answer_id": {
+            "type": "string"
+          },
+          "historical": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "decision": {
+                  "type": "string",
+                  "enum": [
+                    "full",
+                    "partial",
+                    "absent",
+                    "uncertain",
+                    "not_applicable"
+                  ]
+                },
+                "answer_quote": {
+                  "type": "string"
+                },
+                "reason": {
+                  "type": "string"
+                },
+                "support": {
+                  "type": "string",
+                  "enum": [
+                    "full",
+                    "partial",
+                    "absent",
+                    "uncertain",
+                    "not_assessed"
+                  ]
+                },
+                "source_block": {
+                  "type": "integer"
+                },
+                "source_quote": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "decision",
+                "answer_quote",
+                "reason",
+                "support",
+                "source_block",
+                "source_quote"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "revised": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "decision": {
+                  "type": "string",
+                  "enum": [
+                    "full",
+                    "partial",
+                    "absent",
+                    "uncertain",
+                    "not_applicable"
+                  ]
+                },
+                "answer_quote": {
+                  "type": "string"
+                },
+                "reason": {
+                  "type": "string"
+                },
+                "support": {
+                  "type": "string",
+                  "enum": [
+                    "full",
+                    "partial",
+                    "absent",
+                    "uncertain",
+                    "not_assessed"
+                  ]
+                },
+                "source_block": {
+                  "type": "integer"
+                },
+                "source_quote": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "decision",
+                "answer_quote",
+                "reason",
+                "support",
+                "source_block",
+                "source_quote"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "findings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "unsupported",
+                    "irrelevant",
+                    "direct_conflict",
+                    "critical_omission",
+                    "requires_review"
+                  ]
+                },
+                "answer_quote": {
+                  "type": "string"
+                },
+                "source_block": {
+                  "type": "integer"
+                },
+                "source_quote": {
+                  "type": "string"
+                },
+                "reason": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "type",
+                "answer_quote",
+                "source_block",
+                "source_quote",
+                "reason"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "gap_behavior": {
+            "type": "string",
+            "enum": [
+              "not_gap",
+              "safe_abstention",
+              "unsafe_or_missing_abstention",
+              "uncertain"
+            ]
+          }
+        },
+        "required": [
+          "answer_id",
+          "historical",
+          "revised",
+          "findings",
+          "gap_behavior"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "answers"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,278 @@
+[
+  {
+    "id": "case-19",
+    "label": "Utstyr og øving",
+    "question": "Vi er fire som vurderer en skitur i skredterreng. Én har sender og mottaker, og vi kan låne en spade. Er det nok fellesutstyr, og bør vi øve først?",
+    "note": "Svaret gjengir sentralt utstyr og øving, men legger også til udokumenterte vilkår og blander inn isredning. Dekning alene betyr ikke at hele svaret er godt.",
+    "response": {
+      "answer": "1. **Kameratredning er obligatorisk:** Du må alltid med deg en sender/mottaker, en spade og en søkestang, selv om du kan låne utstyr.\n2. **Øving er nødvendig:** Du må øve med utstyret ditt selv, ikke bare ta kursen, for å sikre at rutinen sitter i ryggmargen.\n3. **Planlegging er viktig:** Planlegg turen med hensyn til faregradene og skredproblemene, og unngå områder som er i det varslet terreng.\n4. **Ring 113 før redning:** Hvis du ikke har 100 % kontroll over situasjonen, må du ringe 113 før du begynner redning.\n5. **Unngå vann:** Hold avstand og bruk hjelpemidler som gjør at redningsmannskapene ikke trenger å være på farlig tynn is.\n6. **Reserveplaner:** Endre turen dersom faretegn eller skredfarevurderinger forteller deg at den planlagte turen bør endres.",
+      "sources": [
+        {
+          "title": "Skredfarevurdering og faretegn",
+          "name": "Varsom / NVE",
+          "url": "https://www.varsom.no/snoskred/snoskredskolen/skredfarevurdering-og-faretegn/",
+          "license": "Varsom credited text reuse",
+          "excerpts": [
+            {
+              "id": "source-15-002",
+              "text": "Skredfarevurdering krever erfaring og kunnskap\nVi anbefaler at du tar et skredkurs for å lære mer om skredfarevurdering. Unngå eller begrens ferdsel i skredterreng hvis du ikke har tilstrekkelig med kunnskap og erfaring.\nSkavlterreng\nFaretegn",
+              "section": "OBS! Det kan være vanskelig å observere faretegn dersom du ferdes i oppgåtte eller oppkjørte spor.",
+              "language": "nb"
+            }
+          ],
+          "content_owner": "Varsom / NVE",
+          "licence_url": "https://www.varsom.no/om-varsom/tilgjengelighetserklaering/",
+          "retrieved_at": "2026-10-06T18:16:01.200424+00:00",
+          "notice": "Ordrette tekstutdrag fra originalkilden, normalisert og delt opp. AI-tolkningen er laget av Outwise; kilden har ikke godkjent den."
+        },
+        {
+          "title": "Kameratredning",
+          "name": "Varsom / NVE",
+          "url": "https://www.varsom.no/snoskred/snoskredskolen/kameratredning",
+          "license": "Varsom credited text reuse",
+          "excerpts": [
+            {
+              "id": "source-17-002",
+              "text": "Men du må kunne bruke utstyret også, selv under de verst tenkelige forhold.\nDerfor må du øve med utstyret ditt.\nEt skredkurs gir deg en fin introduksjon til hvordan utstyret skal brukes, og så er det opp til deg å øve videre helt til rutinene sitter i ryggmargen.",
+              "section": "Det samme gjelder de andre i følget ditt. Alltid!",
+              "language": "nb"
+            },
+            {
+              "id": "source-17-001",
+              "text": "Når du drar ut i skredterreng tar du alltid med deg sender/mottager, spade og søkestang. Alltid!",
+              "section": "Kameratredning",
+              "language": "nb"
+            }
+          ],
+          "content_owner": "Varsom / NVE",
+          "licence_url": "https://www.varsom.no/om-varsom/tilgjengelighetserklaering/",
+          "retrieved_at": "2026-10-06T18:16:01.478923+00:00",
+          "notice": "Ordrette tekstutdrag fra originalkilden, normalisert og delt opp. AI-tolkningen er laget av Outwise; kilden har ikke godkjent den."
+        },
+        {
+          "title": "Redning",
+          "name": "Varsom / NVE",
+          "url": "https://www.varsom.no/is/isskolen/redning/",
+          "license": "Varsom credited text reuse",
+          "excerpts": [
+            {
+              "id": "source-19-001",
+              "text": "Utstyret som brukes under redning er beskrevet under kapittelet om Sikkerhetsutstyr. I tillegg til utstyr man har med seg kan man brekke løs greiner på ulykkesstedet.\nHvis man ikke har 100 % kontroll på situasjonen må man (om mulig) ringe 113 (ambulanse/kommunikasjonssentralen) før man begynner redningen.\nDet viktigste å huske på er at man må prøve å unngå at enda en person havner i vannet, noe som gjør situasjonen mye mer uoversiktlig. Hold derfor avstand og bruk hjelpemidler som gjør at redningsmannskapene ikke trenger å være på farlig tynn is. Det betyr ikke at man må stå på land. Redningsmannskapene kan gå så langt ut som isen bærer godt. Dette kan man sjekke med en turøks, isbor, en kraftig stokk, stor stein og lignende. På klar stålis kan man se etter sprekker eller luftbobler i isen som indikerer hvor tykk isen minst er. Har man tau med kan man binde en person godt fast med tau under armene og la personen gå foran og sjekke isen.\nMetoder for å nå frem det siste stykket fra sterk is til bruddstedet er:\nKast ut et tau (kasteline eller tau med kraftig pinne i enden).",
+              "section": "Redde andre",
+              "language": "nb"
+            },
+            {
+              "id": "source-19-002",
+              "text": "Strekk ut en lang grein eller stige.\nSiste utvei er å fordele vekten ved å ligge på magen og danne kjede av mennesker slik at man når frem. Dette er risikabelt.\nFår man varslet er nedfiring av redningsmann fra helikopter den sikreste metoden, men det kan ta for lang tid før de når frem.",
+              "section": "Redde andre",
+              "language": "nb"
+            }
+          ],
+          "content_owner": "Varsom / NVE",
+          "licence_url": "https://www.varsom.no/om-varsom/tilgjengelighetserklaering/",
+          "retrieved_at": "2026-10-06T18:16:01.779639+00:00",
+          "notice": "Ordrette tekstutdrag fra originalkilden, normalisert og delt opp. AI-tolkningen er laget av Outwise; kilden har ikke godkjent den."
+        },
+        {
+          "title": "Ferdsel i skredterreng",
+          "name": "Varsom / NVE",
+          "url": "https://www.varsom.no/snoskred/snoskredskolen/ferdsel-i-skredterreng/",
+          "license": "Varsom credited text reuse",
+          "excerpts": [
+            {
+              "id": "source-16-002",
+              "text": "Sett deg inn i hva faregradene og skredproblemene vil bety for din ferdsel.\nVær forberedt på å vurdere skredfaren selv. Varsom.no publiserer et regionalt varsel. Du må bruke dette som utgangspunkt for lokale vurderinger. Husk at forholdene kan skifte raskt og være annerledes enn varslet. Noen områder mangler skredvarsel.\nForbered deg godt – skaff deg kart, forstå terrenget, forstå utviklingen av snødekket, og les rapporter fra andre på www.regobs.no.\nLag deg en turplan på forhånd\nHvilken tur lar seg gjennomføre under disse forholdene med denne gruppen?\nSjekk om de delene av turen som er i skredterreng (løsne og utløpsområder) også er i det som blir varslet som mest utsatt terreng. Hvis ja: gå en annen vei og unngå skredterreng.\nDiskuter mål, begrensninger og kritiske punkter ut fra vær- og skredforhold og gruppens ønsker og evner. Vær sikker på at alle forstår og er enig i planen.\nMeld fra hvor du går og når du planlegger å være tilbake.\nLes mer om turplanlegging her .",
+              "section": "Turplanleggingen starter hjemme - bruk snøskredvarselet og planlegg turen",
+              "language": "nb"
+            },
+            {
+              "id": "source-16-001",
+              "text": "Det første du gjør er å planlegge turen din godt. God planlegging er god risikohåndtering. Husk at helt sikker på å unngå snøskred er du kun når du unngår alt skredterreng.",
+              "section": "Ferdsel i skredterreng",
+              "language": "nb"
+            },
+            {
+              "id": "source-16-003",
+              "text": "Dersom faretegn og skredfarevurderinger forteller deg at den planlagte turen bør endres så er dette en enklere beslutning å ta dersom du og turfølget ditt allerede har planlagt og snakket sammen om dette.\nGlideskred\nGode ferdselsrutiner",
+              "section": "Husk å lage reserveplaner.",
+              "language": "nb"
+            },
+            {
+              "id": "source-16-004",
+              "text": "Illustrasjon: NVE\nGode ferdselsrutiner\nMåle bratthet\nSkredkortet",
+              "section": "Før du drar på tur",
+              "language": "nb"
+            }
+          ],
+          "content_owner": "Varsom / NVE",
+          "licence_url": "https://www.varsom.no/om-varsom/tilgjengelighetserklaering/",
+          "retrieved_at": "2026-10-06T18:16:01.340145+00:00",
+          "notice": "Ordrette tekstutdrag fra originalkilden, normalisert og delt opp. AI-tolkningen er laget av Outwise; kilden har ikke godkjent den."
+        },
+        {
+          "title": "Førstehjelp ved bevisstløshet",
+          "name": "Helsenorge",
+          "url": "https://www.helsenorge.no/forstehjelp/forstehjelp-ved-bevisstloshet/",
+          "license": "Helsenorge text reuse with attribution",
+          "excerpts": [
+            {
+              "id": "source-07-004",
+              "text": "Å gi fri luftvei er det viktigste, uansett årsak til at personen er bevisstløs. En bevisstløs person er ikke i stand til å holde luftveien åpen selv.\nSlik lager du fri luftvei:\nDra personens hake fremover i et underbitt\nBøy hodet litt bakover og hold grepet (hodet og haken)\nDu lager med dette en passasje bak tungen, hvor luft kan passere. Hold grepet og sjekk om personen puster normalt.\nHar den bevisstløse vært involvert i en ulykke med mye fart eller kraft og nakken kan være skadet, bøyer du hodet til normal posisjon, ikke bakover. Dra haken tydeligere frem i underbitt for å få fri luftvei. Fri luftvei er det viktigste for at personen ikke skal bli kvalt.",
+              "section": "Slik hjelper du en bevisstløs person / Gi fri luftvei",
+              "language": "no"
+            }
+          ],
+          "content_owner": "Nasjonalt senter for prehospital akuttmedisin (NAKOS)",
+          "licence_url": "https://www.nhn.no/tjenester/helsenorge/helseinformasjon/vil-du-bruka-innhaldet-pa-helsenorge",
+          "retrieved_at": "2026-10-06T18:15:58.077982+00:00",
+          "source_updated_at": "2026-04-14",
+          "notice": "Ordrette tekstutdrag fra originalkilden, normalisert og delt opp. AI-tolkningen er laget av Outwise; kilden har ikke godkjent den."
+        },
+        {
+          "title": "Hjerte- og lungeredning (HLR)",
+          "name": "Helsenorge",
+          "url": "https://www.helsenorge.no/forstehjelp/hjerte-og-lungeredning/",
+          "license": "Helsenorge text reuse with attribution",
+          "excerpts": [
+            {
+              "id": "source-01-028",
+              "text": "116 117\nRing legevakten når det haster å få hjelp eller hvis fastlegen ikke er tilgjengelig.\nDøgnåpent",
+              "section": "Legevakt",
+              "language": "no"
+            }
+          ],
+          "content_owner": "Nasjonalt senter for prehospital akuttmedisin (NAKOS)",
+          "licence_url": "https://www.nhn.no/tjenester/helsenorge/helseinformasjon/vil-du-bruka-innhaldet-pa-helsenorge",
+          "retrieved_at": "2026-10-06T18:14:42.254034+00:00",
+          "source_updated_at": "2026-04-14",
+          "notice": "Ordrette tekstutdrag fra originalkilden, normalisert og delt opp. AI-tolkningen er laget av Outwise; kilden har ikke godkjent den."
+        }
+      ]
+    }
+  },
+  {
+    "id": "case-23",
+    "label": "En tydelig feil i tolkningen",
+    "question": "Vi har søkt inn i en solid bygning med strøm og vann etter tordenvær. Det har vært stille i ti minutter. Kan vi gå ut igjen, og er det noe inne vi bør holde oss unna mens vi venter?",
+    "note": "Kilden sier å vente minst 30 minutter etter siste torden. Modellen svarer likevel ja til å gå ut, blander inn is og gjentar seg. Dette er et faktisk feilaktig testsvar, ikke en anbefaling.",
+    "response": {
+      "answer": "**Ja, du kan gå ut igjen.**\n\n**Hva du bør holde deg unna:**\n*   **Vann og elektrisitet:** Hold deg unna vann, elektriske apparater, stikkontakter, sikringer, dører, vinduer og porer.\n*   **Is og tynn is:** Hold deg unna is, isbor, stein og andre hardgods som kan bryte isen.\n*   **Kraftige greiner:** Hold deg unna kraftige greiner, trær og løse gjenstander som kan falle.\n*   **Kryssing av vann:** Hold deg unna å kryssere bekker eller elver med stor vannføring.\n\n**Viktig tidspunkt:**\n*   Hold deg unna å stå på isen. Hvis du må gå ut for å sjekke om isen er tynn nok, bruk en turøks, isbor, kraftig stokk, stein eller tau for å sjekke isens tykkelse.\n*   Hold deg unna å ligge på isen eller stå på den.\n*   Hold deg unna å bruke telefoner, computere eller andre elektriske apparater som krever direkte kontakt med strøm.\n*   Hold deg unna å ligge på betonggulv eller stå mot betongvegger.\n\n**Hvorfor:**\n*   Tordenvær og tordenvåpen kan nå inn i bygninger, selv om det er stille.\n*   Is kan bryte og spre skade, og tynn is er farlig å stå på.\n*   Elektrisitet og vann kan være farlige selv om det ikke er direkte kontakt.\n*   Is kan bryte og spre skade, og tynn is er farlig å stå på.\n*   Tordenvåpen kan nå inn i bygninger, selv om det er stille.\n*   Is kan bryte og spre skade, og tynn is er farlig å stå på.\n*   Tordenvåpen kan nå inn i bygninger, selv om det er stille.\n*   Is kan bryte og spre skade, og tynn is er farlig å stå på.\n*   Tordenvåpen kan nå inn i bygninger, selv om det er stille.\n*   Is kan bryte og spre",
+      "sources": [
+        {
+          "title": "Lightning Tips",
+          "name": "NOAA/National Weather Service",
+          "url": "https://www.weather.gov/safety/lightning-tips",
+          "license": "NWS public domain subject to reuse terms",
+          "excerpts": [
+            {
+              "id": "source-22-002",
+              "text": "NO PLACE outside is safe when thunderstorms are in the area!!\nIf you hear thunder, lightning is close enough to strike you.\nWhen you hear thunder, immediately move to safe shelter: a substantial building with electricity or plumbing or an enclosed, metal-topped vehicle with windows up.\nStay in safe shelter at least 30 minutes after you hear the last sound of thunder.",
+              "section": "Lightning: What You Need to Know",
+              "language": "en"
+            },
+            {
+              "id": "source-22-003",
+              "text": "Stay off corded phones, computers and other electrical equipment that put you in direct contact with electricity.\nAvoid plumbing, including sinks, baths and faucets.\nStay away from windows and doors, and stay off porches.\nDo not lie on concrete floors, and do not lean against concrete walls.",
+              "section": "Indoor Lightning Safety",
+              "language": "en"
+            }
+          ],
+          "content_owner": "NOAA/National Weather Service",
+          "licence_url": "https://www.weather.gov/disclaimer",
+          "retrieved_at": "2026-10-06T18:16:02.977173+00:00",
+          "notice": "Ordrette tekstutdrag fra originalkilden, normalisert og delt opp. AI-tolkningen er laget av Outwise; kilden har ikke godkjent den. Source: NOAA/National Weather Service. No endorsement by NOAA/NWS; this is not official NWS content."
+        },
+        {
+          "title": "Forebygg skader - råd til privatpersoner",
+          "name": "Varsom / NVE",
+          "url": "https://www.varsom.no/flom-og-jordskred/om-flom-og-jordskred/rad-og-forebygging/rad-til-privatpersoner/",
+          "license": "Varsom credited text reuse",
+          "excerpts": [
+            {
+              "id": "source-20-003",
+              "text": "Gi plass til vannet: Rydd opp i nærområdet og rens sluk, grøfter og rør hvor vannet kan samle seg opp frie for is, kvist og løv, slik at vannet kan renne unna. Vann vil alltid gå til det laveste punktet. Sørg for at det får renne fritt ved å eventuelt lage dreneringskanaler.\nRydd hagen: Flytt verdisaker som møbler, grill og løse gjenstander/materialer. Disse kan bli tatt av flomvannet og utgjøre en fare for andre.\nRydd kjeller, garasje og første etasje : Flytt gjenstander opp fra gulv, dersom det er en risiko for at vann kan komme inn. Lukk dører og vinduer.\nTett lister og vinduer: Dekk til med sandsekker om nødvendig. Sekkene skal være trekvart fulle. Skaff deg eventuelt en pumpe.\nNøytraliser elektriske apparater: Dra ut stikkontakter og trekk ut sikringer av elektriske apparater.\nFlytt verdigjenstander : Båt, bil, campingvogn eller verdisaker som står i nærheten av en elv, innsjø eller bekk bør flyttes til et mindre utsatt område.",
+              "section": "Forebygg og begrens skader",
+              "language": "nb"
+            },
+            {
+              "id": "source-20-004",
+              "text": "Sjekk nærområdet: Sørg for at nærliggende bekker, veigrøfter, kulverter og rister er åpne. Dette vil bidra til å redusere skade på din og naboens eiendom.\nFlytt rundballer: Rundballer bør ryddes bort fra områder som er flomutsatte.\nEgenberedskap: Du har ansvar for din egen beredskap. Ved flom- og skredhendelser kan det oppstå utfall av strøm, drikkevann, internett og telefon. Veier kan bli stengt. Tips til egenberedskap finner på www.sikkerhverdag.no .",
+              "section": "Forebygg og begrens skader",
+              "language": "nb"
+            },
+            {
+              "id": "source-20-005",
+              "text": "Frarådes det å oppholde seg i nærheten av og kryssing av elver og bekker med stor vannføring eller isgang.\nUnngå bratte skråninger med løsmasser, og elver og bekker med stor vannføring, fordi erosjon langs elve- og bekkeløp kan utløse skred.\nUnngå båtkjøring i elver med flomvannføring. Det kan flyte trær, rundballer og løse gjenstander i som har blitt tatt av flomvannet.\nUnngå bilkjøring i områder med oransje og rødt farevarsel. Veger kan stenges pga. flom og jordskred.\nVed behov for hjelp kontakt nødetatene og kommune hvis behov for akutt hjelp ved flomfare eller skredfare mot eget hjem.",
+              "section": "Under en flom eller et skred",
+              "language": "nb"
+            }
+          ],
+          "content_owner": "Varsom / NVE",
+          "licence_url": "https://www.varsom.no/om-varsom/tilgjengelighetserklaering/",
+          "retrieved_at": "2026-10-06T18:16:02.058859+00:00",
+          "notice": "Ordrette tekstutdrag fra originalkilden, normalisert og delt opp. AI-tolkningen er laget av Outwise; kilden har ikke godkjent den."
+        },
+        {
+          "title": "River crossing safety",
+          "name": "Department of Conservation (NZ)",
+          "url": "https://www.doc.govt.nz/parks-and-recreation/know-before-you-go/river-crossing-safety/",
+          "license": "CC-BY-4.0",
+          "excerpts": [
+            {
+              "id": "source-14-004",
+              "text": "You may encounter a dangerous river and need to turn back or wait until the river is safe to cross.\nPlan ahead by:\nBuilding flexibility and extra time into your trip plans.\nHaving a backup route or plan identified before you go.\nPacking an emergency shelter and extra food.\nCarrying a two-way communications device and a distress beacon ( learn more about communications device options ).",
+              "section": "Be ready to wait or turn back",
+              "language": "en"
+            }
+          ],
+          "content_owner": "Department of Conservation (NZ)",
+          "licence_url": "https://www.doc.govt.nz/footer-links/copyright/",
+          "retrieved_at": "2026-10-06T18:16:01.058969+00:00",
+          "notice": "Ordrette tekstutdrag fra originalkilden, normalisert og delt opp. AI-tolkningen er laget av Outwise; kilden har ikke godkjent den. Source: Department of Conservation (NZ). CC BY 4.0; extracted and chunked."
+        },
+        {
+          "title": "Kameratredning",
+          "name": "Varsom / NVE",
+          "url": "https://www.varsom.no/snoskred/snoskredskolen/kameratredning",
+          "license": "Varsom credited text reuse",
+          "excerpts": [
+            {
+              "id": "source-17-003",
+              "text": "Det er de første 15 minuttene etter at noen har blitt tatt av et snøskred som er kritiske. Sannsynligheten for å bli funnet i live synker betydelig dersom det går mer enn 15 minutter før du er funnet.\nDersom du er alene om å kunne søke etter den eller de som er tatt av skred, skal du lete før du bruker tid på å varsle om skredet.\nEr dere flere som kan søke etter skredtatte, kan en person godt varsle om skredhendelser, mens de andre søker.\nSlik bruker du sender/mottager\nUtgraving av skredtatte\nDe fleste som blir funnet i live i et snøskred, ligger i overflaten og ned til 1,5 meters dyp.\nLette ting som er synlige på overflaten flyter som regel lenger enn en person. Det vil si at en person vil ligge høyere opp i henget enn for eksempel en vott!",
+              "section": "Tiden du har til rådighet",
+              "language": "nb"
+            }
+          ],
+          "content_owner": "Varsom / NVE",
+          "licence_url": "https://www.varsom.no/om-varsom/tilgjengelighetserklaering/",
+          "retrieved_at": "2026-10-06T18:16:01.478923+00:00",
+          "notice": "Ordrette tekstutdrag fra originalkilden, normalisert og delt opp. AI-tolkningen er laget av Outwise; kilden har ikke godkjent den."
+        },
+        {
+          "title": "Redning",
+          "name": "Varsom / NVE",
+          "url": "https://www.varsom.no/is/isskolen/redning/",
+          "license": "Varsom credited text reuse",
+          "excerpts": [
+            {
+              "id": "source-19-001",
+              "text": "Utstyret som brukes under redning er beskrevet under kapittelet om Sikkerhetsutstyr. I tillegg til utstyr man har med seg kan man brekke løs greiner på ulykkesstedet.\nHvis man ikke har 100 % kontroll på situasjonen må man (om mulig) ringe 113 (ambulanse/kommunikasjonssentralen) før man begynner redningen.\nDet viktigste å huske på er at man må prøve å unngå at enda en person havner i vannet, noe som gjør situasjonen mye mer uoversiktlig. Hold derfor avstand og bruk hjelpemidler som gjør at redningsmannskapene ikke trenger å være på farlig tynn is. Det betyr ikke at man må stå på land. Redningsmannskapene kan gå så langt ut som isen bærer godt. Dette kan man sjekke med en turøks, isbor, en kraftig stokk, stor stein og lignende. På klar stålis kan man se etter sprekker eller luftbobler i isen som indikerer hvor tykk isen minst er. Har man tau med kan man binde en person godt fast med tau under armene og la personen gå foran og sjekke isen.\nMetoder for å nå frem det siste stykket fra sterk is til bruddstedet er:\nKast ut et tau (kasteline eller tau med kraftig pinne i enden).",
+              "section": "Redde andre",
+              "language": "nb"
+            },
+            {
+              "id": "source-19-002",
+              "text": "Strekk ut en lang grein eller stige.\nSiste utvei er å fordele vekten ved å ligge på magen og danne kjede av mennesker slik at man når frem. Dette er risikabelt.\nFår man varslet er nedfiring av redningsmann fra helikopter den sikreste metoden, men det kan ta for lang tid før de når frem.",
+              "section": "Redde andre",
+              "language": "nb"
+            }
+          ],
+          "content_owner": "Varsom / NVE",
+          "licence_url": "https://www.varsom.no/om-varsom/tilgjengelighetserklaering/",
+          "retrieved_at": "2026-10-06T18:16:01.779639+00:00",
+          "notice": "Ordrette tekstutdrag fra originalkilden, normalisert og delt opp. AI-tolkningen er laget av Outwise; kilden har ikke godkjent den."
+        }
+      ]
+    }
+  }
+]

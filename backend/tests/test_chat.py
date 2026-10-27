@@ -74,6 +74,7 @@ def test_chat_endpoint_returns_model_answer() -> None:
                 "name": "Stored fixture source",
                 "url": "fixture://outwise/navigation/lost",
                 "license": "CC0-1.0",
+                "excerpts": [{"id": "fixture-lost", "text": "Stop moving and assess your last known location.", "language": "en"}],
             }
         ],
     }

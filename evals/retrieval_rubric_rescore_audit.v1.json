@@ -1,0 +1,183 @@
+{
+  "at": "2026-10-25T09:13:15.184385+00:00",
+  "complete": true,
+  "frozen_and_parent_checks_passed": true,
+  "historical_artifacts_preserved": 486,
+  "call_checks": [
+    {
+      "context_id": "control-basic",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "control-scope",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "control-conflict",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R01",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R02",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R03",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R04",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R05",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R06",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R07",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R08",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R09",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R10",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R11",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R12",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R13",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R14",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R15",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R16",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R17",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R18",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R19",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R20",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R21",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R22",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R23",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R24",
+      "success": true,
+      "errors": []
+    },
+    {
+      "context_id": "R25",
+      "success": true,
+      "errors": []
+    }
+  ],
+  "core_counts": {
+    "absent": 4,
+    "partial": 4,
+    "full": 55
+  },
+  "conditional_counts": {
+    "full": 3,
+    "absent": 1
+  },
+  "quote_occurrence_and_schema_checks": true,
+  "semantic_entailment_automatically_proven": false,
+  "serialized_stdin_byte_match": true,
+  "independent_summary_recomputation": true,
+  "independent_per_criterion_linkage_checks": 34,
+  "M3_unchanged": true,
+  "active_judge_processes": [],
+  "new_search_calls": 0,
+  "new_product_answers": 0,
+  "paid_api_calls": 0,
+  "free_resets_consumed": 0,
+  "holdout_accessed": false,
+  "requested_model": "gpt-6.1-sol",
+  "requested_effort": "medium",
+  "actual_server_revision_verified": false,
+  "known_usage": {
+    "input_tokens": 223119,
+    "cached_input_tokens": 11520,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 27495,
+    "reasoning_output_tokens": 4569,
+    "total_tokens": 250614
+  },
+  "freeze_sha256": "63002ba61c6a60b2a04501a4cc024f47b9584b80a3c6412e503fee8a4faaa108",
+  "summary_sha256": "e0d94c374a16e9e7e880c33d13ff2a32824030ca31690b4c4a3226d4576fa9c2",
+  "audit_code_sha256": "f20f64162a7d3807546d99e05248307840c81647e8474df3bab4d7fd13fdf38f"
+}

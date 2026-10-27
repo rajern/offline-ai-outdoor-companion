@@ -1,100 +1,155 @@
 # Outwise
 
-**Offline AI Outdoor Companion**
+**A small local AI, an offline knowledge base, and an honest look at where RAG breaks down.**
 
-Outwise is a local-first AI project exploring whether a small language model combined with a curated knowledge base can provide useful outdoor guidance entirely offline.
+Outwise is a learning prototype for asking outdoor questions in Norwegian without
+sending them to a cloud AI. It runs on a Windows PC and has a phone-sized web
+interface. The original aim was a useful offline outdoor assistant. Testing showed
+that the small models often lost important information or gave incorrect advice.
 
-The first MVP runs locally on Windows with a mobile-first interface.
+**The technical pipeline works. Reliable emergency guidance has not been demonstrated.**
 
-## What it does
+![Outwise: local questions, source excerpts and AI interpretation](docs/images/outwise-overview.png)
 
-Outwise is designed for situations where internet access is unavailable and the user needs practical information quickly.
+## Understand it in one minute
 
-Initial use cases include:
+1. You ask a question.
+2. A small search model finds text in the local knowledge base.
+3. A local language model tries to turn that text into a short answer.
+4. The app automatically shows **source excerpts** and **the model's interpretation** separately.
 
-- basic first aid and injuries
-- getting lost
-- cold exposure and sudden weather changes
-- shelter and warmth
-- water and hygiene
-- emergency signalling
-- other basic outdoor emergency situations
+The distinction matters: a useful source can sit next to an incorrect AI answer.
+Showing sources makes the experiment inspectable; it does not make the answer safe.
 
-The user describes the situation in natural language. Outwise retrieves relevant local knowledge and generates a concise, source-grounded response.
+```mermaid
+flowchart LR
+    Q[Your question] --> R[MiniLM: find local text]
+    K[Local knowledge base] --> R
+    R --> C[Selected source excerpts]
+    C --> M[Qwen 2B: generate an answer]
+    C --> U[Source text + AI interpretation]
+    M --> U
+```
 
-## Stack
+No account or paid AI API is needed to run the application. Models and knowledge
+must be installed first locally. The interface looks like a chat, but each question is
+processed independently; it has no conversation memory.
 
-- **Frontend:** Expo, React Native, TypeScript
-- **Backend:** Python, FastAPI
-- **Local model:** Qwen3.5-2B, Q4_K_M, GGUF
-- **Inference:** llama.cpp
-- **Knowledge:** local RAG with source metadata
-- **Cloud dependency:** none for the core product flow
+## See it without installing a model
 
-## Project status
+![Recorded walkthrough of the actual application and a known failure](docs/images/outwise-walkthrough.gif)
 
-Milestone 1 is complete: the mobile-first web UI, FastAPI backend and local Qwen
-inference work end to end. The project owner approved 22 real knowledge URLs
-on 2026-10-06. Their text is ingested locally with frozen snapshots, provenance,
-licence metadata and multilingual retrieval. The normal RAG flow uses these
-assets; synthetic fixtures remain available for tests.
+The demo replays two **real saved Qwen tests**, with the source excerpts the model
+received. It is clearly labeled: no model runs in replay mode. One example shows
+useful details alongside unsupported additions; the other shows an incorrect
+answer despite a clear source instruction. The recorded walkthrough uses that replay.
 
-M2-05 is complete. M2-06 integration is implemented, but answer-quality checks
-found irrelevant context and unsupported or garbled Norwegian advice. It is
-not complete or suitable for real outdoor decisions. Milestone 2 also requires
-an owner quality review before Milestone 3. Safety policy, final product
-messaging and release approval remain separate checkpoints.
+[How the demo works and where its data came from](docs/PROTOTYPE.md#demonstration-and-reuse)
 
-The Codex-only judge validation is complete: 15 synthetic stress examples and
-45 saved historical contexts, with no API calls or retrieval changes. See the
-[v2 validation report](evals/retrieval_judge_validation_report.v2.md) and
-[reproducible workflow](evals/JUDGE_VALIDATION.md). Judge approval and retrieval
-optimization remain pending owner review.
+## What did the tests show?
 
-The owner then authorized conditional optimization. Targeted V3 scoring
-corrections passed, but local Qwen Q4 embedding repeatability blocked the model
-preflight before any configuration ran. See the
-[optimization preflight report](evals/retrieval_optimization_report.v1.md).
+We measured whether specific required facts, actions and conditions were fully
+present. These are **information-coverage scores**, not percentages of safe answers.
 
-The bounded follow-up fixed Qwen repeatability with explicit CPU isolation;
-the unchanged original check passes. See the
-[stability report](evals/qwen_embedding_stability_report.v1.md).
-The owner authorized resuming the 31-configuration plan. Orchestration is now
-implemented and technically tested, but execution stopped at the available-RAM
-preflight before any configuration ran. See the
-[resumed report](evals/retrieval_optimization_report.v2.md).
+**Full development set: 25 questions, 22 supported situations and 3 knowledge gaps**
 
-## Local setup
+| Stage | Required information fully present |
+|---|---:|
+| Retrieved source context | 55/63 (87.3%) |
+| Historical Qwen answers on the same set | 13/63 (20.6%) |
 
-Follow `backend/README.md`, `frontend/README.md` and `docs/MODEL_SETUP.md`.
-Then run `.\scripts\setup-knowledge.ps1` from the repository root to prepare
-the approved offline knowledge assets. `docs/KNOWLEDGE_SETUP.md` explains
-offline rebuilds, source reuse requirements and quality review.
+That historical answer run used the earlier prompt/output configuration. Do not
+compare it directly with the later screening results below.
 
-The project is planned in three milestones:
+**Later comparison: the same 8 questions, including 6 supported situations with 15 requirements**
 
-1. Foundation + Local AI
-2. RAG + Real Knowledge Base
-3. Safety + Finished MVP
+| Generator | Fully covered requirements | Correct abstention on 2 knowledge gaps |
+|---|---:|---:|
+| Local Qwen3.5-2B baseline | 8/15 | 0/2 |
+| Local Gemma4 E2B baseline | 6/15 | 2/2 |
+| GPT-6.1 reference | 13/15 | 2/2 |
 
-## Documentation
+The supplied context fully contained 13 of those 15 requirements. GPT preserved all 13;
+local models omitted supplied details, mixed situations and changed conditions.
+GPT was only an evaluation reference through the existing subscription, not part
+of the offline app. Reasoning effort and runtime differed, so this does not isolate
+model size. Eight reused development questions are not broad validation.
 
-- [`docs/PRODUCT.md`](docs/PRODUCT.md) — product scope
-- [`docs/DECISIONS.md`](docs/DECISIONS.md) — locked decisions
-- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — system architecture
-- [`docs/DATA.md`](docs/DATA.md) — knowledge and data strategy
-- [`docs/PLAN.md`](docs/PLAN.md) — milestone plan
-- [`docs/MODEL_SETUP.md`](docs/MODEL_SETUP.md) — local model installation and prompt test
-- [`docs/KNOWLEDGE_SETUP.md`](docs/KNOWLEDGE_SETUP.md) — approved sources, ingestion and offline retrieval
-- [`TASKS.md`](TASKS.md) — implementation tasks
-- [`AGENTS.md`](AGENTS.md) — instructions for coding agents
+We also checked the rubric and judge effort, compared embeddings and search/packing
+settings, and tested a bounded prompt/sampling improvement round. Those generation
+changes produced **no clear overall improvement**. We stopped general optimization
+as a project-scope decision, not because better small-model RAG is impossible.
 
-## Safety
+[Simple explanation of the rubric, data, results and limitations →](docs/RESULTS.md)
 
-Outwise is an information and preparedness tool.
+## What did we learn from research?
 
-It is not a replacement for emergency services, professional medical care or expert judgement.
+Other projects report high scores, but often for multiple-choice questions, short
+factual answers, prepared FAQ content or specially trained models. Those results
+cannot be equated with complete, free-form first-aid procedures. Similar survival
+apps describe local AI and citations; we did not find a publicly documented
+quality benchmark directly comparable to ours in the sources reviewed.
 
-## Mobile
+Prepared, source-checked answer cards and more specialized models are plausible
+alternatives. We did not implement or validate them. A list of source excerpts
+plus an interpretation remains an experimental presentation, not a safety fix.
 
-The first MVP runs locally on PC, but the interface is designed for phone-sized screens using React Native so the project can later be adapted for iOS or Android.
+[Studies, similar apps and what their scores actually mean →](docs/RESEARCH.md)
+
+## How it is built
+
+| Part | Technology and role |
+|---|---|
+| Interface | Expo, React Native, TypeScript; runs in a local browser |
+| API | Python, FastAPI; coordinates one question |
+| Search | Local multilingual MiniLM embeddings and NumPy index |
+| Context | Full-body window ranking, top-16 seeds, source-preserving P3 packing |
+| Answer | Qwen3.5-2B Q4_K_M GGUF through llama.cpp, native prompt, thinking off |
+| Knowledge | 22 approved URLs; 190 local text chunks in the frozen collection |
+
+The API returns source text and metadata from storage, never model-invented links.
+The application profile was checked against24 saved Norway/general cases: seed
+ranking and packed excerpts match. The NZ-specific case was excluded because the
+app currently uses Norway/general jurisdiction. This is an input parity check,
+not a new answer-quality evaluation. Native prompt/tokenization also matched a
+saved baseline input. [Exact profile and scope](docs/PROTOTYPE.md)
+
+## Run locally
+
+Requires Windows, Python 3.11+ and Node/pnpm. Initial dependency/model/source setup
+needs internet. Model binaries and the full private knowledge collection are not
+stored in Git. See [model setup](docs/MODEL_SETUP.md) and
+[knowledge setup and reuse terms](docs/KNOWLEDGE_SETUP.md).
+
+```powershell
+python -m venv backend/.venv
+backend/.venv/Scripts/python.exe -m pip install -e './backend[dev]'
+pnpm --dir frontend install --frozen-lockfile
+.\scripts\setup-local-model.ps1
+.\scripts\setup-knowledge.ps1
+.\scripts\start-outwise.ps1
+```
+
+Open **http://127.0.0.1:8000**. Choose **Se demo** to inspect the saved examples.
+The startup script builds the web interface if needed and serves it from the
+local API. The demo itself needs no model/knowledge installation: skip the two
+setup scripts when only viewing replay. Browser source links need internet;
+the displayed excerpts and core inference are local.
+
+For development and checks: [backend](backend/README.md), [frontend](frontend/README.md).
+For the final checks performed and remaining manual review: [verification](docs/VERIFICATION.md).
+
+## Scope and evidence
+
+This is a **learning prototype**, not a completed safety-approved MVP or a native
+mobile app. Known errors include critical omissions, incorrect conditions,
+unsupported additions and unreliable abstention. Warnings do not correct those
+errors. It must not be relied on for medical or emergency decisions.
+
+The original safety layer, independent clinical validation, physical offline
+sign-off and final owner approval remain unfinished. [Current work](TASKS.md)
+
+The key methods, result files and research links remain accessible through the
+[evidence guide](docs/EVIDENCE.md). Obsolete development files are in a verified,
+restorable [historical archive](evals/README.md). Original private raw logs and
+source snapshots are preserved locally. [Data and licensing](docs/DATA.md)

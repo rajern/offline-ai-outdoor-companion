@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-25T11:10:11.722947+00:00",
+  "passed": true,
+  "checks": [
+    "32 exact requests/raw responses/native inputs/effective sampler fields and sealed answer texts",
+    "Eight complete no-tools raw judge streams independently parsed; all decisions/usage/schema/quotes match",
+    "Exactly32 product dispatches and8 sequential judge dispatches; both old startup attempts zero",
+    "All32 new answers/criterion decisions/findings source-reviewed; caveats separate from raw scores",
+    "Both preflight and generation groups and all judge guards within unchanged sampled RAM limits",
+    "Protected historical hashes unchanged; only allowed tracked progress documents differ; no remaining local lock"
+  ],
+  "definitions_sha256": "2347ca8a0b87a618678078012d8facff1cd951a1b8acd0cf579757c05fb2cd75",
+  "runtime_freeze_sha256": "b2f24a5a85c46232f4a3bfe0937f3736ba69f220b23f048b6393183898bf5cf1",
+  "judge_freeze_sha256": "81685abba39334c181103fcf2357d696f73c8aeeb8716ae0c9c84fd4a9572f65",
+  "protected_historical_files": 745,
+  "native_input_tokens_min": 2103,
+  "native_input_tokens_max": 2239,
+  "new_output_tokens": 8596,
+  "judge_seconds": 442.76499999989755,
+  "known_judge_usage": {
+    "input_tokens": 74410,
+    "cached_input_tokens": 3968,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 26048,
+    "reasoning_output_tokens": 2586,
+    "total_tokens": 100458
+  },
+  "new_answers": 32,
+  "judge_calls": 8,
+  "automatic_completion_retries": 0,
+  "paid_api_calls": 0,
+  "reset_credits_used": 0,
+  "independent_clinical_review": false,
+  "holdout_accessed": false
+}

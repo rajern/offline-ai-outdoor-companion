@@ -1,0 +1,2449 @@
+{
+  "version": 1,
+  "at": "2026-10-25T11:08:53.899616+00:00",
+  "complete": true,
+  "groups": {
+    "qwen-2b|baseline": {
+      "answers": 8,
+      "supported_cases": 6,
+      "core_denominator": 15,
+      "core_counts": {
+        "partial": 3,
+        "full": 8,
+        "absent": 4
+      },
+      "available": 13,
+      "retained": 8,
+      "core_complete_cases": 2,
+      "fully_supported_full": 7,
+      "answers_with_finding": {
+        "critical_omission": 3,
+        "irrelevant": 6,
+        "unsupported": 7,
+        "direct_conflict": 2,
+        "requires_review": 2
+      },
+      "gap_behavior": {
+        "unsafe_or_missing_abstention": 2
+      },
+      "conditional": {
+        "absent": 2
+      },
+      "output_tokens": 2828,
+      "median_output_tokens": 347.5,
+      "stops": {
+        "eos": 6,
+        "limit": 2
+      }
+    },
+    "qwen-2b|A": {
+      "answers": 8,
+      "supported_cases": 6,
+      "core_denominator": 15,
+      "core_counts": {
+        "absent": 8,
+        "partial": 4,
+        "full": 2,
+        "uncertain": 1
+      },
+      "available": 13,
+      "retained": 2,
+      "core_complete_cases": 0,
+      "fully_supported_full": 2,
+      "answers_with_finding": {
+        "critical_omission": 6,
+        "direct_conflict": 5,
+        "irrelevant": 5,
+        "requires_review": 4,
+        "unsupported": 7
+      },
+      "gap_behavior": {
+        "unsafe_or_missing_abstention": 2
+      },
+      "conditional": {
+        "absent": 2
+      },
+      "output_tokens": 3250,
+      "median_output_tokens": 375.5,
+      "stops": {
+        "eos": 6,
+        "limit": 2
+      },
+      "gained_full_ids": [],
+      "lost_full_ids": [
+        "case-19/r2",
+        "case-05/r3",
+        "case-05/r4",
+        "case-17/r2",
+        "case-23/r2",
+        "case-23/r3"
+      ]
+    },
+    "qwen-2b|B": {
+      "answers": 8,
+      "supported_cases": 6,
+      "core_denominator": 15,
+      "core_counts": {
+        "absent": 9,
+        "full": 3,
+        "partial": 3
+      },
+      "available": 13,
+      "retained": 3,
+      "core_complete_cases": 0,
+      "fully_supported_full": 3,
+      "answers_with_finding": {
+        "critical_omission": 6,
+        "direct_conflict": 3,
+        "irrelevant": 6,
+        "unsupported": 6,
+        "requires_review": 1
+      },
+      "gap_behavior": {
+        "unsafe_or_missing_abstention": 1,
+        "safe_abstention": 1
+      },
+      "conditional": {
+        "absent": 1,
+        "not_applicable": 1
+      },
+      "output_tokens": 3146,
+      "median_output_tokens": 512.0,
+      "stops": {
+        "limit": 5,
+        "eos": 3
+      },
+      "gained_full_ids": [
+        "case-23/r1"
+      ],
+      "lost_full_ids": [
+        "case-05/r3",
+        "case-05/r4",
+        "case-05/r5",
+        "case-17/r2",
+        "case-23/r2",
+        "case-23/r3"
+      ]
+    },
+    "gemma-e2b|baseline": {
+      "answers": 8,
+      "supported_cases": 6,
+      "core_denominator": 15,
+      "core_counts": {
+        "partial": 4,
+        "full": 6,
+        "absent": 5
+      },
+      "available": 13,
+      "retained": 6,
+      "core_complete_cases": 1,
+      "fully_supported_full": 6,
+      "answers_with_finding": {
+        "critical_omission": 5,
+        "direct_conflict": 1,
+        "requires_review": 1,
+        "unsupported": 1
+      },
+      "gap_behavior": {
+        "safe_abstention": 2
+      },
+      "conditional": {
+        "not_applicable": 2
+      },
+      "output_tokens": 684,
+      "median_output_tokens": 71.0,
+      "stops": {
+        "eos": 8
+      }
+    },
+    "gemma-e2b|A": {
+      "answers": 8,
+      "supported_cases": 6,
+      "core_denominator": 15,
+      "core_counts": {
+        "partial": 6,
+        "full": 6,
+        "absent": 3
+      },
+      "available": 13,
+      "retained": 6,
+      "core_complete_cases": 0,
+      "fully_supported_full": 6,
+      "answers_with_finding": {
+        "critical_omission": 5,
+        "unsupported": 2,
+        "requires_review": 1
+      },
+      "gap_behavior": {
+        "safe_abstention": 2
+      },
+      "conditional": {
+        "not_applicable": 2
+      },
+      "output_tokens": 1227,
+      "median_output_tokens": 128.5,
+      "stops": {
+        "eos": 8
+      },
+      "gained_full_ids": [
+        "case-21/r1"
+      ],
+      "lost_full_ids": [
+        "case-23/r2"
+      ]
+    },
+    "gemma-e2b|B": {
+      "answers": 8,
+      "supported_cases": 6,
+      "core_denominator": 15,
+      "core_counts": {
+        "partial": 6,
+        "full": 6,
+        "absent": 3
+      },
+      "available": 13,
+      "retained": 6,
+      "core_complete_cases": 0,
+      "fully_supported_full": 6,
+      "answers_with_finding": {
+        "critical_omission": 6,
+        "direct_conflict": 2,
+        "unsupported": 1,
+        "irrelevant": 1,
+        "requires_review": 1
+      },
+      "gap_behavior": {
+        "unsafe_or_missing_abstention": 2
+      },
+      "conditional": {
+        "not_applicable": 2
+      },
+      "output_tokens": 973,
+      "median_output_tokens": 77.5,
+      "stops": {
+        "eos": 8
+      },
+      "gained_full_ids": [
+        "case-08/r2"
+      ],
+      "lost_full_ids": [
+        "case-23/r1"
+      ]
+    }
+  },
+  "rows": [
+    {
+      "model": "qwen-2b",
+      "arm": "baseline",
+      "case_id": "case-19",
+      "core_denominator": 2,
+      "core_counts": {
+        "partial": 1,
+        "full": 1
+      },
+      "full_ids": [
+        "case-19/r2"
+      ],
+      "available_ids": [
+        "case-19/r1",
+        "case-19/r2"
+      ],
+      "retained_ids": [
+        "case-19/r2"
+      ],
+      "fully_supported_full_ids": [
+        "case-19/r2"
+      ],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission",
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 244,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-19/r1",
+          "decision": "partial",
+          "support": "full"
+        },
+        {
+          "id": "case-19/r2",
+          "decision": "full",
+          "support": "full"
+        }
+      ],
+      "response_sha256": "cc9aed871d6f746f19a809dff77c06ff4205c4254a1dc7e775ffec73e277a143"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "baseline",
+      "case_id": "case-05",
+      "core_denominator": 3,
+      "core_counts": {
+        "full": 3
+      },
+      "full_ids": [
+        "case-05/r3",
+        "case-05/r4",
+        "case-05/r5"
+      ],
+      "available_ids": [
+        "case-05/r3",
+        "case-05/r4",
+        "case-05/r5"
+      ],
+      "retained_ids": [
+        "case-05/r3",
+        "case-05/r4",
+        "case-05/r5"
+      ],
+      "fully_supported_full_ids": [
+        "case-05/r3",
+        "case-05/r4",
+        "case-05/r5"
+      ],
+      "core_complete": true,
+      "conditional": [
+        {
+          "id": "case-05/r2",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r6",
+          "decision": "absent",
+          "support": "not_assessed"
+        }
+      ],
+      "finding_types": [
+        "critical_omission",
+        "direct_conflict",
+        "irrelevant",
+        "requires_review",
+        "unsupported"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 425,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-05/r2",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r3",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-05/r4",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-05/r5",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-05/r6",
+          "decision": "absent",
+          "support": "not_assessed"
+        }
+      ],
+      "response_sha256": "590145c997353ef592531d06c873419985bd51d3ae45b4d6c08a676666942859"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "baseline",
+      "case_id": "case-08",
+      "core_denominator": 4,
+      "core_counts": {
+        "full": 1,
+        "absent": 3
+      },
+      "full_ids": [
+        "case-08/r1"
+      ],
+      "available_ids": [
+        "case-08/r1",
+        "case-08/r2",
+        "case-08/r3"
+      ],
+      "retained_ids": [
+        "case-08/r1"
+      ],
+      "fully_supported_full_ids": [
+        "case-08/r1"
+      ],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission",
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 512,
+      "stop_type": "limit",
+      "decisions": [
+        {
+          "id": "case-08/r1",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-08/r2",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-08/r3",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-08/r4",
+          "decision": "absent",
+          "support": "not_assessed"
+        }
+      ],
+      "response_sha256": "8bdfe11b2678eb79ac7a767c6db2ea0222bb00a283c0e250b0e8b219eeb1fb93"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "baseline",
+      "case_id": "case-17",
+      "core_denominator": 1,
+      "core_counts": {
+        "full": 1
+      },
+      "full_ids": [
+        "case-17/r2"
+      ],
+      "available_ids": [
+        "case-17/r2"
+      ],
+      "retained_ids": [
+        "case-17/r2"
+      ],
+      "fully_supported_full_ids": [
+        "case-17/r2"
+      ],
+      "core_complete": true,
+      "conditional": [],
+      "finding_types": [
+        "unsupported"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 310,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-17/r2",
+          "decision": "full",
+          "support": "full"
+        }
+      ],
+      "response_sha256": "435447fa3f06dba7c5c38e2588ede95e5445007c00c9791c2e614acc5ba34d2e"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "baseline",
+      "case_id": "case-21",
+      "core_denominator": 2,
+      "core_counts": {
+        "partial": 2
+      },
+      "full_ids": [],
+      "available_ids": [
+        "case-21/r1"
+      ],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "unsupported"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 130,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-21/r1",
+          "decision": "partial",
+          "support": "full"
+        },
+        {
+          "id": "case-21/r2",
+          "decision": "partial",
+          "support": "full"
+        }
+      ],
+      "response_sha256": "a11133b468b7bdf05a11022dd74948362d99d474d0329dbd8f448294dfbadccd"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "baseline",
+      "case_id": "case-23",
+      "core_denominator": 3,
+      "core_counts": {
+        "absent": 1,
+        "full": 2
+      },
+      "full_ids": [
+        "case-23/r2",
+        "case-23/r3"
+      ],
+      "available_ids": [
+        "case-23/r1",
+        "case-23/r2",
+        "case-23/r3"
+      ],
+      "retained_ids": [
+        "case-23/r2",
+        "case-23/r3"
+      ],
+      "fully_supported_full_ids": [
+        "case-23/r2"
+      ],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "direct_conflict",
+        "irrelevant",
+        "requires_review"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 512,
+      "stop_type": "limit",
+      "decisions": [
+        {
+          "id": "case-23/r1",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-23/r2",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-23/r3",
+          "decision": "full",
+          "support": "partial"
+        }
+      ],
+      "response_sha256": "d0173116c512112d7d242288c6e70fa98987831beab8484629dd161a712756d3"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "baseline",
+      "case_id": "case-15",
+      "core_denominator": 0,
+      "core_counts": {},
+      "full_ids": [],
+      "available_ids": [],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_behavior": "unsafe_or_missing_abstention",
+      "output_tokens": 332,
+      "stop_type": "eos",
+      "decisions": [],
+      "response_sha256": "b8a602aab7712f482bf0ddaeed499e202ef59d9e48e4fa0d9f2de960b9e04519"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "baseline",
+      "case_id": "case-25",
+      "core_denominator": 0,
+      "core_counts": {},
+      "full_ids": [],
+      "available_ids": [],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_behavior": "unsafe_or_missing_abstention",
+      "output_tokens": 363,
+      "stop_type": "eos",
+      "decisions": [],
+      "response_sha256": "c4cd47a3b1e47452f974cb2818a71cb7a94483862db5971c27176e92d8a679b3"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "A",
+      "case_id": "case-19",
+      "core_denominator": 2,
+      "core_counts": {
+        "absent": 1,
+        "partial": 1
+      },
+      "full_ids": [],
+      "available_ids": [
+        "case-19/r1",
+        "case-19/r2"
+      ],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission",
+        "direct_conflict",
+        "irrelevant",
+        "requires_review",
+        "unsupported"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 370,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-19/r1",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-19/r2",
+          "decision": "partial",
+          "support": "partial"
+        }
+      ],
+      "response_sha256": "202fc74089724ebf54cb8039399efac94dd6dcfa505e6d5519b1db7a19ad60dd"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "A",
+      "case_id": "case-05",
+      "core_denominator": 3,
+      "core_counts": {
+        "absent": 2,
+        "full": 1
+      },
+      "full_ids": [
+        "case-05/r5"
+      ],
+      "available_ids": [
+        "case-05/r3",
+        "case-05/r4",
+        "case-05/r5"
+      ],
+      "retained_ids": [
+        "case-05/r5"
+      ],
+      "fully_supported_full_ids": [
+        "case-05/r5"
+      ],
+      "core_complete": false,
+      "conditional": [
+        {
+          "id": "case-05/r2",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r6",
+          "decision": "absent",
+          "support": "not_assessed"
+        }
+      ],
+      "finding_types": [
+        "critical_omission",
+        "direct_conflict",
+        "requires_review",
+        "unsupported"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 379,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-05/r2",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r3",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r4",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r5",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-05/r6",
+          "decision": "absent",
+          "support": "not_assessed"
+        }
+      ],
+      "response_sha256": "54c0c8b7bb85cca2abda6e4bf5a4e16bed4366cfe00bc4b4aa659b5875be411f"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "A",
+      "case_id": "case-08",
+      "core_denominator": 4,
+      "core_counts": {
+        "full": 1,
+        "partial": 3
+      },
+      "full_ids": [
+        "case-08/r1"
+      ],
+      "available_ids": [
+        "case-08/r1",
+        "case-08/r2",
+        "case-08/r3"
+      ],
+      "retained_ids": [
+        "case-08/r1"
+      ],
+      "fully_supported_full_ids": [
+        "case-08/r1"
+      ],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission",
+        "direct_conflict",
+        "unsupported"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 287,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-08/r1",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-08/r2",
+          "decision": "partial",
+          "support": "partial"
+        },
+        {
+          "id": "case-08/r3",
+          "decision": "partial",
+          "support": "partial"
+        },
+        {
+          "id": "case-08/r4",
+          "decision": "partial",
+          "support": "full"
+        }
+      ],
+      "response_sha256": "f3450ded09705ae89c15053a87bbaaf0a2c64ffc6073487ad450a097b84d0a43"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "A",
+      "case_id": "case-17",
+      "core_denominator": 1,
+      "core_counts": {
+        "absent": 1
+      },
+      "full_ids": [],
+      "available_ids": [
+        "case-17/r2"
+      ],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission",
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 512,
+      "stop_type": "limit",
+      "decisions": [
+        {
+          "id": "case-17/r2",
+          "decision": "absent",
+          "support": "not_assessed"
+        }
+      ],
+      "response_sha256": "3acfa3d6393323c2ea883eecf43b12b1df13386aec086f08b9f6ae3dce4e5645"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "A",
+      "case_id": "case-21",
+      "core_denominator": 2,
+      "core_counts": {
+        "absent": 1,
+        "uncertain": 1
+      },
+      "full_ids": [],
+      "available_ids": [
+        "case-21/r1"
+      ],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission",
+        "irrelevant",
+        "requires_review"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 512,
+      "stop_type": "limit",
+      "decisions": [
+        {
+          "id": "case-21/r1",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-21/r2",
+          "decision": "uncertain",
+          "support": "not_assessed"
+        }
+      ],
+      "response_sha256": "cb3a733d9b542693d48b255c371266da2be7c1c40d879dcab24b7a56b695236f"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "A",
+      "case_id": "case-23",
+      "core_denominator": 3,
+      "core_counts": {
+        "absent": 3
+      },
+      "full_ids": [],
+      "available_ids": [
+        "case-23/r1",
+        "case-23/r2",
+        "case-23/r3"
+      ],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission",
+        "direct_conflict",
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 325,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-23/r1",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-23/r2",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-23/r3",
+          "decision": "absent",
+          "support": "not_assessed"
+        }
+      ],
+      "response_sha256": "218308fa55e87b580b358f57a1241a6135aa0a7c8ebc67f33a17fab9c106b2f8"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "A",
+      "case_id": "case-15",
+      "core_denominator": 0,
+      "core_counts": {},
+      "full_ids": [],
+      "available_ids": [],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_behavior": "unsafe_or_missing_abstention",
+      "output_tokens": 372,
+      "stop_type": "eos",
+      "decisions": [],
+      "response_sha256": "f25ee2999d61105cf732ed289b5b91aa273af77a69daf1a3f7210c7568bac7c4"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "A",
+      "case_id": "case-25",
+      "core_denominator": 0,
+      "core_counts": {},
+      "full_ids": [],
+      "available_ids": [],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "direct_conflict",
+        "requires_review",
+        "unsupported"
+      ],
+      "gap_behavior": "unsafe_or_missing_abstention",
+      "output_tokens": 493,
+      "stop_type": "eos",
+      "decisions": [],
+      "response_sha256": "614891cb7ac218d3089f013c345659861834fea47eafc7eea14be6752b05c204"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "B",
+      "case_id": "case-19",
+      "core_denominator": 2,
+      "core_counts": {
+        "absent": 1,
+        "full": 1
+      },
+      "full_ids": [
+        "case-19/r2"
+      ],
+      "available_ids": [
+        "case-19/r1",
+        "case-19/r2"
+      ],
+      "retained_ids": [
+        "case-19/r2"
+      ],
+      "fully_supported_full_ids": [
+        "case-19/r2"
+      ],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission",
+        "direct_conflict",
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 512,
+      "stop_type": "limit",
+      "decisions": [
+        {
+          "id": "case-19/r1",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-19/r2",
+          "decision": "full",
+          "support": "full"
+        }
+      ],
+      "response_sha256": "7ac4ab1a890777598036a061f9473e6ff3058596517320cb7091e6efb0f970e8"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "B",
+      "case_id": "case-05",
+      "core_denominator": 3,
+      "core_counts": {
+        "absent": 3
+      },
+      "full_ids": [],
+      "available_ids": [
+        "case-05/r3",
+        "case-05/r4",
+        "case-05/r5"
+      ],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [
+        {
+          "id": "case-05/r2",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r6",
+          "decision": "not_applicable",
+          "support": "not_assessed"
+        }
+      ],
+      "finding_types": [
+        "critical_omission",
+        "irrelevant"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 512,
+      "stop_type": "limit",
+      "decisions": [
+        {
+          "id": "case-05/r2",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r3",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r4",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r5",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r6",
+          "decision": "not_applicable",
+          "support": "not_assessed"
+        }
+      ],
+      "response_sha256": "83dfac8f4e76d61104bab59d76767632f27204a9c2aec911d4acb121c2f0e481"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "B",
+      "case_id": "case-08",
+      "core_denominator": 4,
+      "core_counts": {
+        "full": 1,
+        "partial": 1,
+        "absent": 2
+      },
+      "full_ids": [
+        "case-08/r1"
+      ],
+      "available_ids": [
+        "case-08/r1",
+        "case-08/r2",
+        "case-08/r3"
+      ],
+      "retained_ids": [
+        "case-08/r1"
+      ],
+      "fully_supported_full_ids": [
+        "case-08/r1"
+      ],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission",
+        "direct_conflict",
+        "unsupported"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 321,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-08/r1",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-08/r2",
+          "decision": "partial",
+          "support": "full"
+        },
+        {
+          "id": "case-08/r3",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-08/r4",
+          "decision": "absent",
+          "support": "not_assessed"
+        }
+      ],
+      "response_sha256": "2f058900c047f4e4d451cc1014860893fa3a789009c5a5c9e3cc1ebf9b3e022f"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "B",
+      "case_id": "case-17",
+      "core_denominator": 1,
+      "core_counts": {
+        "partial": 1
+      },
+      "full_ids": [],
+      "available_ids": [
+        "case-17/r2"
+      ],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission",
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 512,
+      "stop_type": "limit",
+      "decisions": [
+        {
+          "id": "case-17/r2",
+          "decision": "partial",
+          "support": "full"
+        }
+      ],
+      "response_sha256": "0548c43fd16dab11e713aa5165b41d0b545eb36d4c1ad047dd8dec773263a013"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "B",
+      "case_id": "case-21",
+      "core_denominator": 2,
+      "core_counts": {
+        "absent": 1,
+        "partial": 1
+      },
+      "full_ids": [],
+      "available_ids": [
+        "case-21/r1"
+      ],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission",
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 94,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-21/r1",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-21/r2",
+          "decision": "partial",
+          "support": "full"
+        }
+      ],
+      "response_sha256": "2f3d3c2a5aace5e3477932ad2ef9596f24c63a01e4d09bc78fdde4f42cff656e"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "B",
+      "case_id": "case-23",
+      "core_denominator": 3,
+      "core_counts": {
+        "full": 1,
+        "absent": 2
+      },
+      "full_ids": [
+        "case-23/r1"
+      ],
+      "available_ids": [
+        "case-23/r1",
+        "case-23/r2",
+        "case-23/r3"
+      ],
+      "retained_ids": [
+        "case-23/r1"
+      ],
+      "fully_supported_full_ids": [
+        "case-23/r1"
+      ],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission",
+        "direct_conflict",
+        "requires_review"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 512,
+      "stop_type": "limit",
+      "decisions": [
+        {
+          "id": "case-23/r1",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-23/r2",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-23/r3",
+          "decision": "absent",
+          "support": "not_assessed"
+        }
+      ],
+      "response_sha256": "446e4fc9ab20518222c5c8f79ebb1de9a63bc79c13f34539ecaac0fba8edb6d5"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "B",
+      "case_id": "case-15",
+      "core_denominator": 0,
+      "core_counts": {},
+      "full_ids": [],
+      "available_ids": [],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_behavior": "unsafe_or_missing_abstention",
+      "output_tokens": 171,
+      "stop_type": "eos",
+      "decisions": [],
+      "response_sha256": "ee7b248d68c6f2b4e1128a53c484a603d659e1880be72e97017341d8b1223426"
+    },
+    {
+      "model": "qwen-2b",
+      "arm": "B",
+      "case_id": "case-25",
+      "core_denominator": 0,
+      "core_counts": {},
+      "full_ids": [],
+      "available_ids": [],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "irrelevant",
+        "unsupported"
+      ],
+      "gap_behavior": "safe_abstention",
+      "output_tokens": 512,
+      "stop_type": "limit",
+      "decisions": [],
+      "response_sha256": "aead3e8c8d8c7894eb667d55fe2500070af679642d56f2905a5e70641c2d4b91"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "baseline",
+      "case_id": "case-19",
+      "core_denominator": 2,
+      "core_counts": {
+        "partial": 1,
+        "full": 1
+      },
+      "full_ids": [
+        "case-19/r2"
+      ],
+      "available_ids": [
+        "case-19/r1",
+        "case-19/r2"
+      ],
+      "retained_ids": [
+        "case-19/r2"
+      ],
+      "fully_supported_full_ids": [
+        "case-19/r2"
+      ],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 74,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-19/r1",
+          "decision": "partial",
+          "support": "partial"
+        },
+        {
+          "id": "case-19/r2",
+          "decision": "full",
+          "support": "full"
+        }
+      ],
+      "response_sha256": "0c876605757edf6239f0ba4f3fe7cf1535b549cf15ea3dcbd34c4d97e673e769"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "baseline",
+      "case_id": "case-05",
+      "core_denominator": 3,
+      "core_counts": {
+        "absent": 2,
+        "full": 1
+      },
+      "full_ids": [
+        "case-05/r5"
+      ],
+      "available_ids": [
+        "case-05/r3",
+        "case-05/r4",
+        "case-05/r5"
+      ],
+      "retained_ids": [
+        "case-05/r5"
+      ],
+      "fully_supported_full_ids": [
+        "case-05/r5"
+      ],
+      "core_complete": false,
+      "conditional": [
+        {
+          "id": "case-05/r2",
+          "decision": "not_applicable",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r6",
+          "decision": "not_applicable",
+          "support": "not_assessed"
+        }
+      ],
+      "finding_types": [
+        "critical_omission",
+        "direct_conflict"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 78,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-05/r2",
+          "decision": "not_applicable",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r3",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r4",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r5",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-05/r6",
+          "decision": "not_applicable",
+          "support": "not_assessed"
+        }
+      ],
+      "response_sha256": "152ecb7f8a1d33658db377fb1b5026b0a77a98c0e4eafc75c3f0140629d7f899"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "baseline",
+      "case_id": "case-08",
+      "core_denominator": 4,
+      "core_counts": {
+        "full": 1,
+        "partial": 2,
+        "absent": 1
+      },
+      "full_ids": [
+        "case-08/r1"
+      ],
+      "available_ids": [
+        "case-08/r1",
+        "case-08/r2",
+        "case-08/r3"
+      ],
+      "retained_ids": [
+        "case-08/r1"
+      ],
+      "fully_supported_full_ids": [
+        "case-08/r1"
+      ],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 218,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-08/r1",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-08/r2",
+          "decision": "partial",
+          "support": "full"
+        },
+        {
+          "id": "case-08/r3",
+          "decision": "partial",
+          "support": "full"
+        },
+        {
+          "id": "case-08/r4",
+          "decision": "absent",
+          "support": "not_assessed"
+        }
+      ],
+      "response_sha256": "66ad3bccb975d73526b8945203ac073c5bbab647ba3d6275077056c8918e6fd4"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "baseline",
+      "case_id": "case-17",
+      "core_denominator": 1,
+      "core_counts": {
+        "absent": 1
+      },
+      "full_ids": [],
+      "available_ids": [
+        "case-17/r2"
+      ],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission",
+        "requires_review"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 68,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-17/r2",
+          "decision": "absent",
+          "support": "not_assessed"
+        }
+      ],
+      "response_sha256": "e8fb7d9f08c94543ae3b4362fd3cddd294462cbce992eff65d1b31a9d669b8dd"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "baseline",
+      "case_id": "case-21",
+      "core_denominator": 2,
+      "core_counts": {
+        "absent": 1,
+        "partial": 1
+      },
+      "full_ids": [],
+      "available_ids": [
+        "case-21/r1"
+      ],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 24,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-21/r1",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-21/r2",
+          "decision": "partial",
+          "support": "full"
+        }
+      ],
+      "response_sha256": "cbe880582953dbf974f0e44af8c8a96761f8e689f0030615f6a80d5c4e40b096"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "baseline",
+      "case_id": "case-23",
+      "core_denominator": 3,
+      "core_counts": {
+        "full": 3
+      },
+      "full_ids": [
+        "case-23/r1",
+        "case-23/r2",
+        "case-23/r3"
+      ],
+      "available_ids": [
+        "case-23/r1",
+        "case-23/r2",
+        "case-23/r3"
+      ],
+      "retained_ids": [
+        "case-23/r1",
+        "case-23/r2",
+        "case-23/r3"
+      ],
+      "fully_supported_full_ids": [
+        "case-23/r1",
+        "case-23/r2",
+        "case-23/r3"
+      ],
+      "core_complete": true,
+      "conditional": [],
+      "finding_types": [
+        "unsupported"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 142,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-23/r1",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-23/r2",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-23/r3",
+          "decision": "full",
+          "support": "full"
+        }
+      ],
+      "response_sha256": "39f97edfa2d00d669bc3320b4e7bc23d2c2d830c73e1b47b3d4ae8230354aad8"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "baseline",
+      "case_id": "case-15",
+      "core_denominator": 0,
+      "core_counts": {},
+      "full_ids": [],
+      "available_ids": [],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [],
+      "gap_behavior": "safe_abstention",
+      "output_tokens": 41,
+      "stop_type": "eos",
+      "decisions": [],
+      "response_sha256": "aa19a25c7d662e4e44db1fffe3369e5e5e3a4e5b73d379508a5ccf083f178926"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "baseline",
+      "case_id": "case-25",
+      "core_denominator": 0,
+      "core_counts": {},
+      "full_ids": [],
+      "available_ids": [],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [],
+      "gap_behavior": "safe_abstention",
+      "output_tokens": 39,
+      "stop_type": "eos",
+      "decisions": [],
+      "response_sha256": "55e35a5b5fa4cc836cbab8253ad4659674a45815eb6f10a810c05238932d4e7b"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "A",
+      "case_id": "case-19",
+      "core_denominator": 2,
+      "core_counts": {
+        "partial": 1,
+        "full": 1
+      },
+      "full_ids": [
+        "case-19/r2"
+      ],
+      "available_ids": [
+        "case-19/r1",
+        "case-19/r2"
+      ],
+      "retained_ids": [
+        "case-19/r2"
+      ],
+      "fully_supported_full_ids": [
+        "case-19/r2"
+      ],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 303,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-19/r1",
+          "decision": "partial",
+          "support": "full"
+        },
+        {
+          "id": "case-19/r2",
+          "decision": "full",
+          "support": "full"
+        }
+      ],
+      "response_sha256": "9bf9a2494cd28494ba24fd347a680101ad5844257d9897dd03f878c89ef909a9"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "A",
+      "case_id": "case-05",
+      "core_denominator": 3,
+      "core_counts": {
+        "absent": 2,
+        "full": 1
+      },
+      "full_ids": [
+        "case-05/r5"
+      ],
+      "available_ids": [
+        "case-05/r3",
+        "case-05/r4",
+        "case-05/r5"
+      ],
+      "retained_ids": [
+        "case-05/r5"
+      ],
+      "fully_supported_full_ids": [
+        "case-05/r5"
+      ],
+      "core_complete": false,
+      "conditional": [
+        {
+          "id": "case-05/r2",
+          "decision": "not_applicable",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r6",
+          "decision": "not_applicable",
+          "support": "not_assessed"
+        }
+      ],
+      "finding_types": [
+        "critical_omission",
+        "unsupported"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 71,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-05/r2",
+          "decision": "not_applicable",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r3",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r4",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r5",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-05/r6",
+          "decision": "not_applicable",
+          "support": "not_assessed"
+        }
+      ],
+      "response_sha256": "404ca73fb446aa55b14dee8a2b0ccbb7fafdf89f1c8d9f944c502ec76246a7f4"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "A",
+      "case_id": "case-08",
+      "core_denominator": 4,
+      "core_counts": {
+        "full": 1,
+        "partial": 3
+      },
+      "full_ids": [
+        "case-08/r1"
+      ],
+      "available_ids": [
+        "case-08/r1",
+        "case-08/r2",
+        "case-08/r3"
+      ],
+      "retained_ids": [
+        "case-08/r1"
+      ],
+      "fully_supported_full_ids": [
+        "case-08/r1"
+      ],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 369,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-08/r1",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-08/r2",
+          "decision": "partial",
+          "support": "full"
+        },
+        {
+          "id": "case-08/r3",
+          "decision": "partial",
+          "support": "full"
+        },
+        {
+          "id": "case-08/r4",
+          "decision": "partial",
+          "support": "full"
+        }
+      ],
+      "response_sha256": "868dce286f7d45b6441da6784c51afe480d8c282f3a34141d055b719989e208e"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "A",
+      "case_id": "case-17",
+      "core_denominator": 1,
+      "core_counts": {
+        "partial": 1
+      },
+      "full_ids": [],
+      "available_ids": [
+        "case-17/r2"
+      ],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission",
+        "requires_review"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 160,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-17/r2",
+          "decision": "partial",
+          "support": "full"
+        }
+      ],
+      "response_sha256": "0573d5b5e1dda298a593289d7d807ab01ba07507dc2e628d1fdb6015a1166a9b"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "A",
+      "case_id": "case-21",
+      "core_denominator": 2,
+      "core_counts": {
+        "full": 1,
+        "partial": 1
+      },
+      "full_ids": [
+        "case-21/r1"
+      ],
+      "available_ids": [
+        "case-21/r1"
+      ],
+      "retained_ids": [
+        "case-21/r1"
+      ],
+      "fully_supported_full_ids": [
+        "case-21/r1"
+      ],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [],
+      "gap_behavior": "not_gap",
+      "output_tokens": 145,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-21/r1",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-21/r2",
+          "decision": "partial",
+          "support": "full"
+        }
+      ],
+      "response_sha256": "e008f2fed22961da250973544eaa63d3a44cf5b051afe49d8948c6f8fc75e7c1"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "A",
+      "case_id": "case-23",
+      "core_denominator": 3,
+      "core_counts": {
+        "full": 2,
+        "absent": 1
+      },
+      "full_ids": [
+        "case-23/r1",
+        "case-23/r3"
+      ],
+      "available_ids": [
+        "case-23/r1",
+        "case-23/r2",
+        "case-23/r3"
+      ],
+      "retained_ids": [
+        "case-23/r1",
+        "case-23/r3"
+      ],
+      "fully_supported_full_ids": [
+        "case-23/r1",
+        "case-23/r3"
+      ],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission",
+        "unsupported"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 112,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-23/r1",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-23/r2",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-23/r3",
+          "decision": "full",
+          "support": "full"
+        }
+      ],
+      "response_sha256": "7ec30cb80e2e67fe6f634645c2b9f2b7696036de2948976fdd9bf90a4139792e"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "A",
+      "case_id": "case-15",
+      "core_denominator": 0,
+      "core_counts": {},
+      "full_ids": [],
+      "available_ids": [],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [],
+      "gap_behavior": "safe_abstention",
+      "output_tokens": 22,
+      "stop_type": "eos",
+      "decisions": [],
+      "response_sha256": "55946467b2aa419ec5a0722edb16e54349f9856ab5fe6ce6ecd6333df77e9c8e"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "A",
+      "case_id": "case-25",
+      "core_denominator": 0,
+      "core_counts": {},
+      "full_ids": [],
+      "available_ids": [],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [],
+      "gap_behavior": "safe_abstention",
+      "output_tokens": 45,
+      "stop_type": "eos",
+      "decisions": [],
+      "response_sha256": "33b5a6d163c64b012676f8f98370fb56644c436ba5c66a225c905254c645d0a5"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "B",
+      "case_id": "case-19",
+      "core_denominator": 2,
+      "core_counts": {
+        "partial": 1,
+        "full": 1
+      },
+      "full_ids": [
+        "case-19/r2"
+      ],
+      "available_ids": [
+        "case-19/r1",
+        "case-19/r2"
+      ],
+      "retained_ids": [
+        "case-19/r2"
+      ],
+      "fully_supported_full_ids": [
+        "case-19/r2"
+      ],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 62,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-19/r1",
+          "decision": "partial",
+          "support": "full"
+        },
+        {
+          "id": "case-19/r2",
+          "decision": "full",
+          "support": "full"
+        }
+      ],
+      "response_sha256": "34f69117b171c85466fabdaff30c1dbf46d40fd56af904610b1090a527fc7ff1"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "B",
+      "case_id": "case-05",
+      "core_denominator": 3,
+      "core_counts": {
+        "absent": 2,
+        "full": 1
+      },
+      "full_ids": [
+        "case-05/r5"
+      ],
+      "available_ids": [
+        "case-05/r3",
+        "case-05/r4",
+        "case-05/r5"
+      ],
+      "retained_ids": [
+        "case-05/r5"
+      ],
+      "fully_supported_full_ids": [
+        "case-05/r5"
+      ],
+      "core_complete": false,
+      "conditional": [
+        {
+          "id": "case-05/r2",
+          "decision": "not_applicable",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r6",
+          "decision": "not_applicable",
+          "support": "not_assessed"
+        }
+      ],
+      "finding_types": [
+        "critical_omission"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 63,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-05/r2",
+          "decision": "not_applicable",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r3",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r4",
+          "decision": "absent",
+          "support": "not_assessed"
+        },
+        {
+          "id": "case-05/r5",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-05/r6",
+          "decision": "not_applicable",
+          "support": "not_assessed"
+        }
+      ],
+      "response_sha256": "23a04b4c2fcaccd930bfee59c48564dea5fee2737487dc7cc631086b7de5c7fc"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "B",
+      "case_id": "case-08",
+      "core_denominator": 4,
+      "core_counts": {
+        "full": 2,
+        "partial": 1,
+        "absent": 1
+      },
+      "full_ids": [
+        "case-08/r1",
+        "case-08/r2"
+      ],
+      "available_ids": [
+        "case-08/r1",
+        "case-08/r2",
+        "case-08/r3"
+      ],
+      "retained_ids": [
+        "case-08/r1",
+        "case-08/r2"
+      ],
+      "fully_supported_full_ids": [
+        "case-08/r1",
+        "case-08/r2"
+      ],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission",
+        "direct_conflict"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 396,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-08/r1",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-08/r2",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-08/r3",
+          "decision": "partial",
+          "support": "full"
+        },
+        {
+          "id": "case-08/r4",
+          "decision": "absent",
+          "support": "not_assessed"
+        }
+      ],
+      "response_sha256": "d4ac9123b80610c60ba35fc30a8a15959393565c51832c0222257f661d9704e1"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "B",
+      "case_id": "case-17",
+      "core_denominator": 1,
+      "core_counts": {
+        "partial": 1
+      },
+      "full_ids": [],
+      "available_ids": [
+        "case-17/r2"
+      ],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 129,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-17/r2",
+          "decision": "partial",
+          "support": "full"
+        }
+      ],
+      "response_sha256": "3011054e673c457c0058aff410286eb59fbb82513b8595fcaed154018583b45c"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "B",
+      "case_id": "case-21",
+      "core_denominator": 2,
+      "core_counts": {
+        "partial": 2
+      },
+      "full_ids": [],
+      "available_ids": [
+        "case-21/r1"
+      ],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 53,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-21/r1",
+          "decision": "partial",
+          "support": "full"
+        },
+        {
+          "id": "case-21/r2",
+          "decision": "partial",
+          "support": "full"
+        }
+      ],
+      "response_sha256": "54668b5773993c4f88bad2a882b58b3bdc75bf5d2da81d1c3794fa052b09fe88"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "B",
+      "case_id": "case-23",
+      "core_denominator": 3,
+      "core_counts": {
+        "partial": 1,
+        "full": 2
+      },
+      "full_ids": [
+        "case-23/r2",
+        "case-23/r3"
+      ],
+      "available_ids": [
+        "case-23/r1",
+        "case-23/r2",
+        "case-23/r3"
+      ],
+      "retained_ids": [
+        "case-23/r2",
+        "case-23/r3"
+      ],
+      "fully_supported_full_ids": [
+        "case-23/r2",
+        "case-23/r3"
+      ],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "critical_omission",
+        "direct_conflict",
+        "unsupported"
+      ],
+      "gap_behavior": "not_gap",
+      "output_tokens": 142,
+      "stop_type": "eos",
+      "decisions": [
+        {
+          "id": "case-23/r1",
+          "decision": "partial",
+          "support": "partial"
+        },
+        {
+          "id": "case-23/r2",
+          "decision": "full",
+          "support": "full"
+        },
+        {
+          "id": "case-23/r3",
+          "decision": "full",
+          "support": "full"
+        }
+      ],
+      "response_sha256": "44abd96a3f75df3257b8c6626af127a7e65aa09930d3c1ef1f7aa7f96cb5e73f"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "B",
+      "case_id": "case-15",
+      "core_denominator": 0,
+      "core_counts": {},
+      "full_ids": [],
+      "available_ids": [],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "irrelevant"
+      ],
+      "gap_behavior": "unsafe_or_missing_abstention",
+      "output_tokens": 92,
+      "stop_type": "eos",
+      "decisions": [],
+      "response_sha256": "01c0545d79e2337f6ce70b4e22e823956062de4a67a566b3ec333cf8ede34b54"
+    },
+    {
+      "model": "gemma-e2b",
+      "arm": "B",
+      "case_id": "case-25",
+      "core_denominator": 0,
+      "core_counts": {},
+      "full_ids": [],
+      "available_ids": [],
+      "retained_ids": [],
+      "fully_supported_full_ids": [],
+      "core_complete": false,
+      "conditional": [],
+      "finding_types": [
+        "requires_review"
+      ],
+      "gap_behavior": "unsafe_or_missing_abstention",
+      "output_tokens": 36,
+      "stop_type": "eos",
+      "decisions": [],
+      "response_sha256": "be4f6dd949fe58f40ae681858fbebc2271f16a32b016d37530156135b4242f9d"
+    }
+  ],
+  "new_product_answers": 32,
+  "new_judge_calls": 8,
+  "reused_baseline_answers": 16,
+  "judge_model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "known_judge_usage": {
+    "input_tokens": 74410,
+    "cached_input_tokens": 3968,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 26048,
+    "reasoning_output_tokens": 2586,
+    "total_tokens": 100458
+  },
+  "judge_calls": [
+    {
+      "case_id": "case-19",
+      "usage": {
+        "input_tokens": 9362,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 4450,
+        "reasoning_output_tokens": 516,
+        "total_tokens": 13812
+      },
+      "resources": {
+        "elapsed_seconds": 77.46799999999348,
+        "peak_rss": 127275008,
+        "minimum_available_ram": 5074259968
+      },
+      "record_sha256": "b4a910803836e5c833debf7b204fd17330e65d541de151b8cb0e4647e27d4592"
+    },
+    {
+      "case_id": "case-05",
+      "usage": {
+        "input_tokens": 9637,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 4025,
+        "reasoning_output_tokens": 359,
+        "total_tokens": 13662
+      },
+      "resources": {
+        "elapsed_seconds": 55.67200000002049,
+        "peak_rss": 139571200,
+        "minimum_available_ram": 3999096832
+      },
+      "record_sha256": "a2e8afb8f2c92bd2c654b6952604a86bd29508e522df6f1658d1342b59938272"
+    },
+    {
+      "case_id": "case-08",
+      "usage": {
+        "input_tokens": 9765,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5895,
+        "reasoning_output_tokens": 516,
+        "total_tokens": 15660
+      },
+      "resources": {
+        "elapsed_seconds": 94.51500000001397,
+        "peak_rss": 139653120,
+        "minimum_available_ram": 2725892096
+      },
+      "record_sha256": "553d36426c521a3ea0af99bdd62bb7460cf1f4fd1b71b44b40fd7c733d16b1a6"
+    },
+    {
+      "case_id": "case-17",
+      "usage": {
+        "input_tokens": 9491,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2581,
+        "reasoning_output_tokens": 308,
+        "total_tokens": 12072
+      },
+      "resources": {
+        "elapsed_seconds": 53.40599999995902,
+        "peak_rss": 184012800,
+        "minimum_available_ram": 2668597248
+      },
+      "record_sha256": "83fc99e0e0f8e8a527ad3127a7de3e35e0627a5fd2ce1d9ba640080c4f81bcfe"
+    },
+    {
+      "case_id": "case-21",
+      "usage": {
+        "input_tokens": 8975,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2758,
+        "reasoning_output_tokens": 332,
+        "total_tokens": 11733
+      },
+      "resources": {
+        "elapsed_seconds": 53.14099999994505,
+        "peak_rss": 164642816,
+        "minimum_available_ram": 2407108608
+      },
+      "record_sha256": "bf7a434ac1773e40198f628870aabc69bff9d0647959f983078311a20dabcb41"
+    },
+    {
+      "case_id": "case-23",
+      "usage": {
+        "input_tokens": 9365,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 4100,
+        "reasoning_output_tokens": 145,
+        "total_tokens": 13465
+      },
+      "resources": {
+        "elapsed_seconds": 59.15599999995902,
+        "peak_rss": 191967232,
+        "minimum_available_ram": 2319515648
+      },
+      "record_sha256": "fbf71e261c0dca490d0806c5a763a19e9171b011740495a44ecc142cd0aeb700"
+    },
+    {
+      "case_id": "case-15",
+      "usage": {
+        "input_tokens": 8753,
+        "cached_input_tokens": 3968,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 984,
+        "reasoning_output_tokens": 193,
+        "total_tokens": 9737
+      },
+      "resources": {
+        "elapsed_seconds": 25.32799999997951,
+        "peak_rss": 189890560,
+        "minimum_available_ram": 2473996288
+      },
+      "record_sha256": "cefb527f9ca5a7c94a4627cc1fa66d51b15df4572325ca6ec131ec3f597050f3"
+    },
+    {
+      "case_id": "case-25",
+      "usage": {
+        "input_tokens": 9062,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1255,
+        "reasoning_output_tokens": 217,
+        "total_tokens": 10317
+      },
+      "resources": {
+        "elapsed_seconds": 24.07900000002701,
+        "peak_rss": 187908096,
+        "minimum_available_ram": 1975914496
+      },
+      "record_sha256": "0c920b245303ca222198dd596a0bba622997ed362dfce3e33fa16dae4b7d9344"
+    }
+  ],
+  "local_resources": {
+    "qwen-2b": {
+      "elapsed_seconds": 516.7223991999635,
+      "peak_process_tree_rss_bytes": 2801180672,
+      "minimum_available_ram_bytes": 1884991488,
+      "cpu_seconds": 4144.1875,
+      "sample_interval_seconds": 0.1,
+      "memory_method": "sampled simultaneous process-tree RSS"
+    },
+    "gemma-e2b": {
+      "elapsed_seconds": 423.7865249000024,
+      "peak_process_tree_rss_bytes": 3448397824,
+      "minimum_available_ram_bytes": 709836800,
+      "cpu_seconds": 3394.953125,
+      "sample_interval_seconds": 0.1,
+      "memory_method": "sampled simultaneous process-tree RSS"
+    }
+  },
+  "rubric_sha256": "6333f84d343c529009b0f319a1119edb9437f8b6a047c07325bd4201658b5d1f",
+  "limitations": [
+    "selected development eight; one seed; no independent clinical gold",
+    "baseline judges previously grouped up to three versus four new answers",
+    "B is a prompt package; individual wording effects and A+B interaction unmeasured",
+    "generation order differs by model; not a causal latency comparison"
+  ]
+}

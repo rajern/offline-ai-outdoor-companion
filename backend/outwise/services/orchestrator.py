@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Protocol
 
 from outwise.knowledge.models import RetrievedKnowledgeItem
+from outwise.services.model import ModelServiceError, ModelGenerationError
 
 
 DEFAULT_KNOWLEDGE_PATH = (
@@ -34,6 +35,14 @@ class KnowledgeRetriever(Protocol):
 
 
 @dataclass(frozen=True)
+class SourceExcerpt:
+    id: str
+    text: str
+    section: str | None
+    language: str
+
+
+@dataclass(frozen=True)
 class AnswerSource:
     title: str
     source_name: str
@@ -44,12 +53,15 @@ class AnswerSource:
     retrieved_at: str | None = None
     source_updated_at: str | None = None
     notice: str | None = None
+    excerpts: tuple[SourceExcerpt, ...] = ()
 
 
 @dataclass(frozen=True)
 class GroundedAnswer:
     answer: str
     sources: tuple[AnswerSource, ...]
+    generation_error: str | None = None
+    context_notice: str | None = None
 
 
 class Orchestrator:
@@ -61,20 +73,41 @@ class Orchestrator:
         model_service: ModelGenerator,
         *,
         top_k: int = 3,
+        prototype: bool = False,
     ) -> None:
         if top_k <= 0:
             raise ValueError("top_k must be positive")
         self._retrieval_service = retrieval_service
         self._model_service = model_service
         self._top_k = top_k
+        self._prototype = prototype
 
     def answer(self, message: str) -> GroundedAnswer:
         results = self._retrieval_service.retrieve(message, top_k=self._top_k)
         if not results:
             return GroundedAnswer(answer=NO_GROUNDED_ANSWER, sources=())
-
-        prompt = _build_grounded_prompt(message, results)
-        answer = self._model_service.generate(prompt)
+        seeds = results
+        packed = not self._prototype
+        try:
+            if self._prototype:
+                from outwise.services.context import pack_context
+                results = pack_context(message, seeds, self._retrieval_service.items, self._model_service.count)
+                if not results:
+                    raise ModelGenerationError('No context packet fits the fixed input budget')
+                packed = True
+            prompt = _build_grounded_prompt(message, results)
+            if self._prototype:
+                from outwise.services.native_model import user_message
+                prompt = user_message(message, results)
+            answer = self._model_service.generate(prompt)
+        except ModelServiceError:
+            if not self._prototype:
+                raise
+            return GroundedAnswer(
+                answer='AI-tolkningen er utilgjengelig. Du kan fortsatt lese kildeutdragene.',
+                sources=_sources_from(results if packed else seeds),
+                context_notice=None if packed else 'Viser rå søketreff. Konteksten kunne ikke klargjøres innenfor oppsettet eller tokenrammen; modellen ble ikke kjørt.',
+                generation_error='Den lokale modellen kunne ikke lage en tolkning. Kontroller modelloppsettet og prøv igjen.')
         return GroundedAnswer(answer=answer, sources=_sources_from(results))
 
 
@@ -135,6 +168,8 @@ def _sources_from(
                 retrieved_at=item.metadata.get("retrieved_at"),
                 source_updated_at=item.metadata.get("source_updated_at"),
                 notice=_reuse_notice(item.metadata.get("licence_url", "")),
+                excerpts=tuple(SourceExcerpt(r.item.id, r.item.text, r.item.section, r.item.language)
+                               for r in results if (r.item.source_name, r.item.source_url) == identity),
             )
         )
     return tuple(sources)
